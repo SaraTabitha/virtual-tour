@@ -211,7 +211,7 @@
       <div class="mdl-layout__drawer">
         <!--header inside drawer-->
           <div class="mdl-layout__header-row mdl-color--yellow-A700 main">
-            <img class="mdl-layout-title watermark" src="images/wordmark-large.png">
+            <img class="mdl-layout-title watermark" src="http://www.uwosh.edu/img/parts/wordmark-large.png">
           </div>
           <!--contents of drawer-->
           <!--black strip-->
@@ -489,24 +489,21 @@
     <!--start of js/jq-->
     <script>
 
-    // info bulding card slide in from left (when blue link is clicked)
-    // academic facilities show and slide out
-    $("#accFText").click(function(){
-      $("#accFCard").show();
-
+    // function for hiding all of the cards
+    function hideAll(){
       $("#athCard").hide();
       $("#accSCard").hide();
       $("#campSCard").hide();
+      $("#accFCard").hide();
+    }
 
-
+    // info bulding card slide in from left (when blue link is clicked)
+    // academic facilities show and slide out
+    $("#accFText").click(function(){
+      hideAll();
+      $("#accFCard").show();
       $("#accFCard").animate(
         {left: "377px"});
-        // determining overlap of others (sets other cards to 0 z-index)
-        // others (total should be 6)
-
-      // sets it's own z-index to top
-      // self
-      // $("#accFCard").css("z-index", 1);
     });
     // click x button on academic facilities card and it will disappear again
     $("#accFClose").click(function(){
@@ -517,18 +514,10 @@
     //
     // athletics show and slide out
     $("#athText").click(function(){
+      hideAll();
       $("#athCard").show();
-
-      $("#accFCard").hide();
-      $("#accSCard").hide();
-      $("#campSCard").hide();
-
       $("#athCard").animate(
         {left: "377px"});
-        // others (total should be 6)
-
-        // self
-        // $("#athCard").css("z-index", 1);
     });
     // athletics x button hide
     $("#athClose").click(function(){
@@ -539,18 +528,10 @@
     //
     // start academic services
     $("#accSText").click(function(){
+      hideAll();
       $("#accSCard").show();
-
-      $("#accFCard").hide();
-      $("#athCard").hide();
-      $("#campSCard").hide();
-
       $("#accSCard").animate(
         {left: "377px"});
-        // others (total should be 6)
-
-        // self
-        // $("#accSCard").css("z-index", 1);
     });
     // academic services x button hide
     $("#accSClose").click(function(){
@@ -561,19 +542,10 @@
     //
     // start campus services
     $("#campSText").click(function(){
-
-      $("#accSCard").hide();
-      $("#athCard").hide();
-      $("#accFCard").hide();
-
+      hideAll();
       $("#campSCard").show();
-
       $("#campSCard").animate(
         {left: "377px"});
-        // others (total should be 6)
-
-        // self
-        // $("#campSCard").css("z-index", 1);
     });
     // academic services x button hide
     $("#campSClose").click(function(){
@@ -713,61 +685,6 @@
       $("#stuRLabel").removeClass("is-checked");
     }
   });
-
-    // function clickingTwo(){
-    //
-    //   var checkTwo = document.getElementById("selectAllTwo").classList.contains("is-checked");
-    //   if(checkTwo == true){
-
-        // academic facilities
-        // document.getElementById("accaF").removeAttribute("checked", "checked");
-        // document.getElementById("accaFLabel").classList.remove("is-checked");
-        // athletics
-    //     document.getElementById("ath").removeAttribute("checked", "checked");
-    //     document.getElementById("athLabel").classList.remove("is-checked");
-    //     // academic services
-    //     document.getElementById("accS").removeAttribute("checked", "checked");
-    //     document.getElementById("accSLabel").classList.remove("is-checked");
-    //     // campus services
-    //     document.getElementById("campS").removeAttribute("checked", "checked");
-    //     document.getElementById("campSLabel").classList.remove("is-checked");
-    //     // residence halls
-    //     document.getElementById("resH").removeAttribute("checked", "checked");
-    //     document.getElementById("resHLabel").classList.remove("is-checked");
-    //     // dining
-    //     document.getElementById("dining").removeAttribute("checked", "checked");
-    //     document.getElementById("diningLabel").classList.remove("is-checked");
-    //     // student recreation
-    //     document.getElementById("stuR").removeAttribute("checked", "checked");
-    //     document.getElementById("stuRLabel").classList.remove("is-checked");
-    //
-    //   } else {
-    //     // academic facilities
-    //     document.getElementById("accaF").setAttribute("checked", "checked");
-    //     document.getElementById("accaFLabel").classList.add("is-checked");
-    //     // athletics
-    //     document.getElementById("ath").setAttribute("checked", "checked");
-    //     document.getElementById("athLabel").classList.add("is-checked");
-    //     // academic services
-    //     document.getElementById("accS").setAttribute("checked", "checked");
-    //     document.getElementById("accSLabel").classList.add("is-checked");
-    //     // campus services
-    //     document.getElementById("campS").setAttribute("checked", "checked");
-    //     document.getElementById("campSLabel").classList.add("is-checked");
-    //     // residence halls
-    //     document.getElementById("resH").setAttribute("checked", "checked");
-    //     document.getElementById("resHLabel").classList.add("is-checked");
-    //     // dining
-    //     document.getElementById("dining").setAttribute("checked", "checked");
-    //     document.getElementById("diningLabel").classList.add("is-checked");
-    //     // student recreation
-    //     document.getElementById("stuR").setAttribute("checked", "checked");
-    //     document.getElementById("stuRLabel").classList.add("is-checked");
-    //
-    //
-    //   }
-    //
-    // };
     // End second Select All
 
     </script>
