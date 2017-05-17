@@ -1,0 +1,793 @@
+<!doctype html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+
+    <!-- Disable tap highlight on IE -->
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <!-- Web Application Manifest -->
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Web Starter Kit">
+    <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Web Starter Kit">
+    <link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#2F3BA2">
+
+    <!-- Color the status bar on mobile devices -->
+    <meta name="theme-color" content="#2F3BA2">
+
+    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+    <!--
+    <link rel="canonical" href="http://www.example.com/">
+    -->
+
+    <!-- Material Design icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
+    <!-- Material Design Lite page styles:
+    You can choose other color schemes from the CDN, more info here http://www.getmdl.io/customize/index.html
+    Format: material.color1-color2.min.css, some examples:
+    material.red-teal.min.css
+    material.blue-orange.min.css
+    material.purple-indigo.min.css
+    -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue-yellow.min.css" />
+
+    <!-- Your styles -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!--jquery link from Google-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!--open sans font-->
+    <!--style-->
+    <style>
+    /*entire left menu*/
+
+    .mdl-layout__drawer {
+      width: 380px;
+    }
+    /*yellow portion of header*/
+    .mdl-layout__header-row.main {
+      height: 109px;
+      border-top: 5px solid white;
+      padding: 0px 0px 20px 0px;
+      margin: 0;
+    }
+    /*uwo watermark picture*/
+    .mdl-layout-title.watermark {
+      height: 109px;
+      width: 223px;
+      padding-top: 10px;
+    }
+    /*black space for virtual tour*/
+    .mdl-layout__header-row.drawer{
+      padding: 0px 0px 0px 20px;
+      width: 100%;
+      height: 30px;
+    }
+    /*grey coloring*/
+    .background666{
+      background-color: #666766;
+    }
+    .color666{
+      color: #666766;
+    }
+    a.link{
+      color: rgb(33,150,243);
+    }
+    /*all layout titles*/
+    .mdl-layout-title {
+      font-size: 16px;
+
+    }
+    /*class for styling all text*/
+    .text {
+      font-family: 'Open Sans', sans-serif;
+    }
+    /*360 grey styling*/
+    .mdl-layout-title.threeSixty{
+      color: #d0cece;
+      /*position: relative;
+      left: 25px;*/
+    }
+    /*all checkbox lines*/
+     .mdl-checkbox__label {
+      font-size: 16px;
+
+    }
+    /*grey for select all checkbox lines*/
+    .mdl-checkbox__label.selectAll{
+      color:  #d0cece;
+    }
+    .options{
+      padding: 0px 0px 0px 20px;
+      list-style: none;
+      margin: 0;
+    }
+    /*icons*/
+    .material-icons{
+      position: relative;
+      top: 4px;
+      padding-right: 4px;
+    }
+    /*janky changing the background colors of the checkbox*/
+    .mdl-checkbox__focus-helper{
+      background-color: #FFF;
+      color: #FFF;
+    }
+    .mdl-checkbox__box-outline{
+      border: 2px solid #666766;
+    }
+    /*repositioning the text for the checkbox lines*/
+    span.check{
+      position: relative;
+      bottom: 6px;
+    }
+    /*changing lists to hide overflow*/
+    ul{
+      display: block;
+      overflow: hidden;
+      list-style-type: none;
+    }
+    li{
+      padding: 4px;
+      padding-left: 0px;
+      list-style-position: inside;
+      overflow:hidden;
+    }
+    /*360 tour lists styling*/
+    ul.noPad{
+      margin: 0px;
+      padding: 0px;
+
+    }
+    li.tourItem{
+      border-bottom: 1px solid grey;
+      text-align: center;
+    }
+    li.tourItem:hover{
+      background-color: grey;
+    }
+    span.mdl-navigation__link{
+      border-bottom: 1px solid grey;
+    }
+    /*hide list items for 360 tour*/
+    .tourDrop{
+      display: none;
+    }
+    /*forcing no padding on navigation*/
+    .mdl-navigation.mine{
+      padding: 0px;
+    }
+    .optionsBox{
+    padding: 6px 0px;
+    }
+    /*positioning of + symbols for 360 navigation*/
+    i.add{
+    position: relative;
+    top: 0px;
+    left: 75%;
+    }
+    /*pullout card under menu*/
+    .demo-card-wide{
+      position: fixed;
+      width: 377px;
+      height: 110%;
+      display: none;
+      /*curve for slide out/in*/
+      transition: left .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+    }
+    /*#menu{
+      position: fixed;
+      z-index: 1;
+    }*/
+  }
+}
+
+
+    </style>
+    <!--end style-->
+</head>
+
+<header>
+    <!--start of header -->
+    <div id="menu"class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-drawer">
+      <div class="mdl-layout__drawer">
+        <!--header inside drawer-->
+          <div class="mdl-layout__header-row mdl-color--yellow-A700 main">
+            <img class="mdl-layout-title watermark" src="images/wordmark-large.png">
+          </div>
+          <!--contents of drawer-->
+          <!--black strip-->
+            <div class="mdl-layout__header-row mdl-color--black drawer">
+              <span class="mdl-layout-title mdl-color-text--white text">UW Oshkosh Virtual Tour</span>
+            </div>
+
+            <!--select all-->
+            <div class="mdl-layout__header-row background666 drawer">
+
+              <!--select all checkbox and title-->
+            <label for="selectallcheck" id="selectAllOne" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+              <input type="checkbox" id="selectallcheck" class="mdl-checkbox__input">
+              <span id="selectAllOneLabel" class="mdl-checkbox__label selectAll text">Select All</span>
+            </label>
+            </div>
+            <!--options-->
+            <div class="optionsBox">
+            <ul class="options">
+                <!--Buildings-->
+              <li> <label for="buildings" id= "buildLabel" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                    <input type="checkbox" id="buildings" class="mdl-checkbox__input">
+                    <span class="mdl-checkbox__label color666 check text"><i class="material-icons color666">location_city</i>Buildings</span>
+                  </label>
+              </li>
+            <!--Parking Lots-->
+              <li> <label for="parkingLots" id="parkingLabel" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                    <input type="checkbox" id="parkingLots" class="mdl-checkbox__input ">
+                    <span class="mdl-checkbox__label color666 check text"><i class="material-icons color666">directions_car</i>Parking Lots</span>
+                  </label>
+              </li>
+            <!--Accessible Entries-->
+              <li> <label for="accEnt" id="accEntLabel" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                    <input type="checkbox" id="accEnt" class="mdl-checkbox__input">
+                    <span class="mdl-checkbox__label color666 check text"><i class="material-icons color666">accessible</i>Accessible Entries</span>
+                  </label>
+              </li>
+            <!--Accessible Parking-->
+                <li> <label for="accPar" id="accParLabel" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                      <input type="checkbox" id="accPar" class="mdl-checkbox__input">
+                      <span class="mdl-checkbox__label color666 check text"><i class="material-icons color666">accessible</i>Accessible Parking</span>
+                    </label>
+                </li>
+            <!--Emergency Phones-->
+                <li> <label for="emergency" id="emergencyLabel" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                      <input type="checkbox" id="emergency" class="mdl-checkbox__input">
+                      <span class="mdl-checkbox__label color666 check text"><i class="material-icons color666">phone</i>Emergency Phones</span>
+                    </label>
+                </li>
+            <!--Sustainability Points of Interest-->
+              <li> <label for="sust" id="sustLabel" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                    <input type="checkbox" id="sust" class="mdl-checkbox__input">
+                    <span class="mdl-checkbox__label color666 check text"><i class="material-icons color666">nature_people</i>Sustainability Points of Interest</span>
+                  </label>
+              </li>
+            <!--Gender Neutral and Family Restrooms-->
+              <li> <label for="gender" id="genderLabel" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                    <input type="checkbox" id="gender" class="mdl-checkbox__input">
+                    <span class="mdl-checkbox__label color666 check text"><i class="material-icons color666">child_friendly</i>Gender Neutral and Family Restrooms</span>
+                  </label>
+              </li>
+            </ul>
+          </div>
+        <!--Categories strip-->
+
+            <div class="mdl-layout__header-row mdl-color--black drawer">
+              <span class="mdl-layout-title mdl-color-text--white text">Categories</span>
+            </div>
+            <!--select all2-->
+            <div class="mdl-layout__header-row background666 drawer">
+              <!--select all checkbox and title-->
+              <label for="selectallcheck2" id="selectAllTwo" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                <input type="checkbox" id="selectallcheck2" class="mdl-checkbox__input">
+                <span class="mdl-checkbox__label selectAll text">Select All</span>
+              </label>
+
+            </div>
+          <!--Categories-->
+          <div class="optionsBox">
+            <ul class="options">
+              <!--Academic Facilities-->
+              <li> <label for="accaF" id="accaFLabel" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                    <input type="checkbox" id="accaF" class="mdl-checkbox__input">
+                    <span class="mdl-checkbox__label check one"><i class="material-icons color666">school</i><a href="#" id="accFText" class="link text">Academic Facilities</a></span>
+                  </label>
+              </li>
+              <!--  Athletics -->
+              <li> <label for="ath" id="athLabel" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                    <input type="checkbox" id="ath" class="mdl-checkbox__input">
+                    <span class="mdl-checkbox__label check one"><i class="material-icons color666">directions_run</i><a href="#" id="athText" class="link text">Athletics</a></span>
+                  </label>
+              </li>
+              <!-- Academic services -->
+              <li> <label for="accS" id="accSLabel" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                    <input type="checkbox" id="accS" class="mdl-checkbox__input">
+                    <span class="mdl-checkbox__label check one"><i class="material-icons color666">mode_edit</i><a href="#" id="accSText" class="link text">Academic Services</a></span>
+                  </label>
+              </li>
+              <!-- Campus Services -->
+              <li> <label for="campS" id="campSLabel" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                    <input type="checkbox" id="campS" class="mdl-checkbox__input">
+                    <span class="mdl-checkbox__label check one"><i class="material-icons color666">accessibility</i><a href="#" id="campSText" class="link text">Campus Services</a></span>
+                  </label>
+              </li>
+              <!-- Residence halls -->
+              <li> <label for="resH" id="resHLabel" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                    <input type="checkbox" id="resH" class="mdl-checkbox__input">
+                    <span class="mdl-checkbox__label check one"><i class="material-icons color666">hotel</i><a href="#" id="cresHText" class="link text">Residence Halls</a></span>
+                  </label>
+              </li>
+              <!-- Dining -->
+              <li> <label for="dining" id="diningLabel" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                    <input type="checkbox" id="dining" class="mdl-checkbox__input">
+                    <span class="mdl-checkbox__label check one"><i class="material-icons color666">restaurant</i><a href="#" id="diningText" class="link text">Dining</a></span>
+                  </label>
+              </li>
+               <!-- Student Recreation -->
+              <li> <label for="stuR" id="stuRLabel" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                    <input type="checkbox" id="stuR" class="mdl-checkbox__input">
+                    <span class="mdl-checkbox__label check one"><i class="material-icons color666">fitness_center</i><a href="#"id="stuRText" class="link text">Student Recreation</a></span>
+                  </label>
+              </li>
+
+            </ul>
+          </div>
+            <!--black strip-->
+              <div class="mdl-layout__header-row mdl-color--black drawer">
+                <span class="mdl-layout-title mdl-color-text--white text">Virtual Tours</span>
+              </div>
+            <!-- 360 grey -->
+            <div class="mdl-layout__header-row background666 drawer">
+              <span class="mdl-layout-title threeSixty text">360 Tours</span>
+            </div>
+            <!-- placeholder nav -->
+            <div id="linkOne" class="mdl-navigation mine">
+                  <span class="mdl-navigation__link text" href="">Building<i id="addOne"class="material-icons color666 add">add</i></span></div>
+                  <div id="linkOneOptions"  class="tourDrop"><ul class="noPad" >
+                      <li class="tourItem text">VR</li>
+                      <li class="tourItem text">VR</li>
+                      <li class="tourItem text">VR</li>
+                    </ul></div>
+            <div id="linkTwo" class="mdl-navigation mine">
+                      <span  class="mdl-navigation__link text" href="">Building<i id="addTwo" class="material-icons color666 add">add</i></span></div>
+                      <div id="linkTwoOptions"   class="tourDrop"><ul class="noPad">
+                          <li class="tourItem text">VR</li>
+                          <li class="tourItem text">VR</li>
+                          <li class="tourItem text">VR</li>
+                      </ul></div>
+
+            <div id="linkThree" class="mdl-navigation mine">
+                      <span  class="mdl-navigation__link text" href="">Building<i id="addThree"class="material-icons color666 add">add</i></span></div>
+                      <div id="linkThreeOptions" class="tourDrop">  <ul class="noPad">
+                          <li class="tourItem text">VR</li>
+                          <li class="tourItem text">VR</li>
+                          <li class="tourItem text">VR</li>
+                      </ul></div>
+      </div>
+
+
+
+
+
+      </div>
+    </div>
+
+    <!--end of header-->
+
+</header>
+<body>
+  <!-- academic facilities card -->
+    <div id="accFCard" class="demo-card-wide mdl-card mdl-shadow--2dp">
+      <div class="mdl-card__title">
+        <h2 class="mdl-card__title-text color666 text">Academic Facilities</h2>
+      </div>
+      <div>
+        <iframe width="400" height="315" src="https://www.youtube.com/embed/V4404T_b5No" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="mdl-card__supporting-text color666 text">
+
+        Nationally and regionally accredited, UW Oshkosh is among the
+        largest public universities in the state and is committed to
+        providing students with a high-quality affordable education.
+        The University features state-of-the-art academic buildings with
+        modest class sizes that foster one-on-one and collaborative learning
+        with professors.
+      </div>
+      <div class="mdl-card__actions mdl-card--border">
+        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect text link"> Learn More </a>
+      </div>
+      <div class="mdl-card__menu">
+        <button id="accFClose" class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
+          <i  class="material-icons">clear</i>
+        </button>
+      </div>
+    </div>
+    <!-- end of academic facilities card -->
+    <!-- start Athletics card -->
+      <div id="athCard" class="demo-card-wide mdl-card mdl-shadow--2dp">
+        <div class="mdl-card__title">
+          <h2 class="mdl-card__title-text color666 text">Athletics</h2>
+        </div>
+        <div>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/EFlUSVWCA-k" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="mdl-card__supporting-text color666 text">
+          The UW Oshkosh Athletics department supports 21 teams for male and
+          female student-athletes, and has won 54 titles in the last 10 years.
+          Students can participate in baseball, basketball, cross country, football,
+           soccer, swimming and diving, tennis, track and field, wrestling, gymnastics,
+           softball and volleyball.
+        </div>
+        <div class="mdl-card__actions mdl-card--border">
+          <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect text link"> Learn More </a>
+        </div>
+        <div class="mdl-card__menu">
+          <button id="athClose" class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
+            <i  class="material-icons">clear</i>
+          </button>
+        </div>
+      </div>
+      <!-- end Athletics card  -->
+      <!-- start Academic Services card -->
+        <div id="accSCard" class="demo-card-wide mdl-card mdl-shadow--2dp">
+          <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text color666 text">Academic Support Services</h2>
+          </div>
+          <div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/f-KdeyV-_dA" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <div class="mdl-card__supporting-text color666 text">
+            Academic support and services are offered to UW Oshkosh students
+            throughout the year, including Center for Academic Resources,
+            English Language Services, Writing Center, Mathematics Lab and
+            Reading Study Center.
+          </div>
+          <div class="mdl-card__actions mdl-card--border">
+            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect text link"> Learn More </a>
+          </div>
+          <div class="mdl-card__menu">
+            <button id="accSClose" class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
+              <i  class="material-icons">clear</i>
+            </button>
+          </div>
+        </div>
+        <!-- end Academic Services card  -->
+        <!-- start Campus Services card -->
+          <div id="campSCard" class="demo-card-wide mdl-card mdl-shadow--2dp">
+            <div class="mdl-card__title">
+              <h2 class="mdl-card__title-text color666 text">Campus Services</h2>
+            </div>
+            <div>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/6e59ycgCTi4" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="mdl-card__supporting-text color666 text">
+              UW Oshkosh offers a number of services dedicated to meeting
+              the needs of the diverse campus population. These services
+              include Center for Academic Support and Diversity, Disability Services,
+              LGBTQ Resource Center, Office of International Education,
+              Veterans Resource Center, Student Recreation and Wellness Center (SRWC)
+              and Student Success Center.
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+              <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect text link"> Learn More </a>
+            </div>
+            <div class="mdl-card__menu">
+              <button id="campSClose" class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
+                <i  class="material-icons">clear</i>
+              </button>
+            </div>
+          </div>
+          <!-- end Campus Services card  -->
+
+</body>
+<footer>
+    <!--start of js/jq-->
+    <script>
+
+    // info bulding card slide in from left (when blue link is clicked)
+    // academic facilities show and slide out
+    $("#accFText").click(function(){
+      $("#accFCard").show();
+
+      $("#athCard").hide();
+      $("#accSCard").hide();
+      $("#campSCard").hide();
+
+
+      $("#accFCard").animate(
+        {left: "377px"});
+        // determining overlap of others (sets other cards to 0 z-index)
+        // others (total should be 6)
+
+      // sets it's own z-index to top
+      // self
+      // $("#accFCard").css("z-index", 1);
+    });
+    // click x button on academic facilities card and it will disappear again
+    $("#accFClose").click(function(){
+      $("#accFCard").animate(
+        {left:"0px"});
+    });
+    // end academic facilities
+    //
+    // athletics show and slide out
+    $("#athText").click(function(){
+      $("#athCard").show();
+
+      $("#accFCard").hide();
+      $("#accSCard").hide();
+      $("#campSCard").hide();
+
+      $("#athCard").animate(
+        {left: "377px"});
+        // others (total should be 6)
+
+        // self
+        // $("#athCard").css("z-index", 1);
+    });
+    // athletics x button hide
+    $("#athClose").click(function(){
+      $("#athCard").animate(
+        {left:"0px"});
+    });
+    // end athletics
+    //
+    // start academic services
+    $("#accSText").click(function(){
+      $("#accSCard").show();
+
+      $("#accFCard").hide();
+      $("#athCard").hide();
+      $("#campSCard").hide();
+
+      $("#accSCard").animate(
+        {left: "377px"});
+        // others (total should be 6)
+
+        // self
+        // $("#accSCard").css("z-index", 1);
+    });
+    // academic services x button hide
+    $("#accSClose").click(function(){
+      $("#accSCard").animate(
+        {left:"0px"});
+    });
+    // end accademic services
+    //
+    // start campus services
+    $("#campSText").click(function(){
+
+      $("#accSCard").hide();
+      $("#athCard").hide();
+      $("#accFCard").hide();
+
+      $("#campSCard").show();
+
+      $("#campSCard").animate(
+        {left: "377px"});
+        // others (total should be 6)
+
+        // self
+        // $("#campSCard").css("z-index", 1);
+    });
+    // academic services x button hide
+    $("#campSClose").click(function(){
+      $("#campSCard").animate(
+        {left:"0px"});
+    });
+    // end campus services
+    //
+
+
+
+
+    // Start hide/show 360 navigation items
+    $("#linkOne").click(function(){
+      // div toggle
+      $("#linkOneOptions").toggle("slow");
+      // + symbol toggle
+      $("#addOne").toggle();
+    });
+    $("#linkTwo").click(function(){
+      $("#linkTwoOptions").toggle("slow");
+      $("#addTwo").toggle();
+    });
+    $("#linkThree").click(function(){
+      $("#linkThreeOptions").toggle("slow");
+      $("#addThree").toggle();
+    });
+    // End hide/show 360 navigation items
+
+
+        // event listener for the select all button attached to function clicking
+      $("#selectallcheck").click(function(){
+
+        //checks the input for the checked property (! = not checked)
+        var check = !$("#selectallcheck").prop("checked");
+      // because it looks at whether or not the property is checked BEFORE The click is put into effect,
+      //it has to do the opposite of what the state of the click is ex. If check was false before click
+      // do: check everything (and then the select all with check as the very last step (and become true))
+        if(check === false){
+        // buildings
+        $("#buildings").prop("checked", true);
+        $("#buildLabel").addClass("is-checked");
+        // parking lots
+        $("#parkingLots").prop("checked", true);
+        $("#parkingLabel").addClass("is-checked");
+        // accessible entries
+        $("#accEnt").prop("checked", true);
+        $("#accEntLabel").addClass("is-checked");
+        // Accessible Parking
+        $("#accPar").prop("checked", true);
+        $("#accParLabel").addClass("is-checked");
+        // Emergency Phones
+        $("#emergency").prop("checked", true);
+        $("#emergencyLabel").addClass("is-checked");
+        // sustainability points of interest
+        $("#sust").prop("checked", true);
+        $("#sustLabel").addClass("is-checked");
+        // gender neutral and family bathrooms
+        $("#gender").prop("checked", true);
+        $("#genderLabel").addClass("is-checked");
+
+        } else if (check === true) {
+
+        // buildings
+        $("#buildings").removeProp("checked", true);
+        $("#buildLabel").removeClass("is-checked");
+        // parking lots
+        $("#parkingLots").removeProp("checked", true);
+        $("#parkingLabel").removeClass("is-checked");
+        // Accessible entries
+        $("#accEnt").removeProp("checked", true);
+        $("#accEntLabel").removeClass("is-checked");
+        // Accessible Parking
+        $("#accPar").removeProp("checked", true);
+        $("#accParLabel").removeClass("is-checked");
+        // Emergency Phones
+        $("#emergency").removeProp("checked", true);
+        $("#emergencyLabel").removeClass("is-checked");
+        // sustainability points of interest
+        $("#sust").removeProp("checked", true);
+        $("#sustLabel").removeClass("is-checked");
+        // gender neutral and family bathrooms
+        $("#gender").removeProp("checked", true);
+        $("#genderLabel").removeClass("is-checked");
+
+        }
+      });
+
+
+    // Start second Select All (identical to above so I will omit comments explaining functionality)
+
+    $("#selectallcheck2").click(function(){
+      var checkTwo = !$("#selectallcheck2").prop("checked");
+      if(checkTwo === false){
+        // academic facilities
+        $("#accaF").prop("checked",true);
+        $("#accaFLabel").addClass("is-checked");
+        // athletics
+        $("#ath").prop("checked",true);
+        $("#athLabel").addClass("is-checked");
+        // academic services
+        $("#accS").prop("checked",true);
+        $("#accSLabel").addClass("is-checked");
+        // campus services
+        $("#campS").prop("checked",true);
+        $("#campSLabel").addClass("is-checked");
+        // residence halls
+        $("#resH").prop("checked",true);
+        $("#resHLabel").addClass("is-checked");
+        // dining
+        $("#dining").prop("checked",true);
+        $("#diningLabel").addClass("is-checked");
+        // student recreation
+        $("#stuR").prop("checked",true);
+        $("#stuRLabel").addClass("is-checked");
+    } else if (checkTwo === true) {
+      // academic facilities
+      $("#accaF").removeProp("checked", true);
+      $("#accaFLabel").removeClass("is-checked");
+      // athletics
+      $("#ath").removeProp("checked", true);
+      $("#athLabel").removeClass("is-checked");
+      // academic services
+      $("#accS").removeProp("checked", true);
+      $("#accSLabel").removeClass("is-checked");
+      // campus services
+      $("#campS").removeProp("checked", true);
+      $("#campSLabel").removeClass("is-checked");
+      // residence halls
+      $("#resH").removeProp("checked", true);
+      $("#resHLabel").removeClass("is-checked");
+      // dining
+      $("#dining").removeProp("checked", true);
+      $("#diningLabel").removeClass("is-checked");
+      // student recreation
+      $("#stuR").removeProp("checked", true);
+      $("#stuRLabel").removeClass("is-checked");
+    }
+  });
+
+    // function clickingTwo(){
+    //
+    //   var checkTwo = document.getElementById("selectAllTwo").classList.contains("is-checked");
+    //   if(checkTwo == true){
+
+        // academic facilities
+        // document.getElementById("accaF").removeAttribute("checked", "checked");
+        // document.getElementById("accaFLabel").classList.remove("is-checked");
+        // athletics
+    //     document.getElementById("ath").removeAttribute("checked", "checked");
+    //     document.getElementById("athLabel").classList.remove("is-checked");
+    //     // academic services
+    //     document.getElementById("accS").removeAttribute("checked", "checked");
+    //     document.getElementById("accSLabel").classList.remove("is-checked");
+    //     // campus services
+    //     document.getElementById("campS").removeAttribute("checked", "checked");
+    //     document.getElementById("campSLabel").classList.remove("is-checked");
+    //     // residence halls
+    //     document.getElementById("resH").removeAttribute("checked", "checked");
+    //     document.getElementById("resHLabel").classList.remove("is-checked");
+    //     // dining
+    //     document.getElementById("dining").removeAttribute("checked", "checked");
+    //     document.getElementById("diningLabel").classList.remove("is-checked");
+    //     // student recreation
+    //     document.getElementById("stuR").removeAttribute("checked", "checked");
+    //     document.getElementById("stuRLabel").classList.remove("is-checked");
+    //
+    //   } else {
+    //     // academic facilities
+    //     document.getElementById("accaF").setAttribute("checked", "checked");
+    //     document.getElementById("accaFLabel").classList.add("is-checked");
+    //     // athletics
+    //     document.getElementById("ath").setAttribute("checked", "checked");
+    //     document.getElementById("athLabel").classList.add("is-checked");
+    //     // academic services
+    //     document.getElementById("accS").setAttribute("checked", "checked");
+    //     document.getElementById("accSLabel").classList.add("is-checked");
+    //     // campus services
+    //     document.getElementById("campS").setAttribute("checked", "checked");
+    //     document.getElementById("campSLabel").classList.add("is-checked");
+    //     // residence halls
+    //     document.getElementById("resH").setAttribute("checked", "checked");
+    //     document.getElementById("resHLabel").classList.add("is-checked");
+    //     // dining
+    //     document.getElementById("dining").setAttribute("checked", "checked");
+    //     document.getElementById("diningLabel").classList.add("is-checked");
+    //     // student recreation
+    //     document.getElementById("stuR").setAttribute("checked", "checked");
+    //     document.getElementById("stuRLabel").classList.add("is-checked");
+    //
+    //
+    //   }
+    //
+    // };
+    // End second Select All
+
+    </script>
+    <!--end js/jq-->
+      <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+      <!-- build:js scripts/main.min.js -->
+      <script src="scripts/main.js"></script>
+
+      <!-- endbuild -->
+
+      <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+      <!-- <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-XXXXX-X', 'auto');
+        ga('send', 'pageview');
+      </script> -->
+      <!-- Built with love using Web Starter Kit -->
+    </body>
+  </footer>
+</html>
