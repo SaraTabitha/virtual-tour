@@ -193,9 +193,8 @@
       /*curve for slide out/in*/
       transition: left .3s cubic-bezier(0.0, 0.0, 0.2, 1);
     }
-    /*#menu{
-      position: fixed;
-      z-index: 1;
+    /*header{
+      opacity: .5;
     }*/
   }
 }
@@ -319,7 +318,7 @@
               <!-- Residence halls -->
               <li> <label for="resH" id="resHLabel" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
                     <input type="checkbox" id="resH" class="mdl-checkbox__input">
-                    <span class="mdl-checkbox__label check one"><i class="material-icons color666">hotel</i><a href="#" id="cresHText" class="link text">Residence Halls</a></span>
+                    <span class="mdl-checkbox__label check one"><i class="material-icons color666">hotel</i><a href="#" id="resHText" class="link text">Residence Halls</a></span>
                   </label>
               </li>
               <!-- Dining -->
@@ -483,7 +482,87 @@
             </div>
           </div>
           <!-- end Campus Services card  -->
+          <!-- start Residence Halls card -->
+            <div id="resHCard" class="demo-card-wide mdl-card mdl-shadow--2dp">
+              <div class="mdl-card__title">
+                <h2 class="mdl-card__title-text color666 text">Residence Halls</h2>
+              </div>
+              <div>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/R5RVenezdgM" frameborder="0" allowfullscreen></iframe>
+              </div>
+              <div class="mdl-card__supporting-text color666 text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore
+                magna aliqua. Ut enim ad minim veniam, quis nostrud
+                exercitation ullamco laboris nisi ut aliquip ex ea
+                commodo consequat. Duis aute irure dolor in reprehenderit
+                in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 
+              </div>
+              <div class="mdl-card__actions mdl-card--border">
+                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect text link"> Learn More </a>
+              </div>
+              <div class="mdl-card__menu">
+                <button id="resHClose" class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
+                  <i  class="material-icons">clear</i>
+                </button>
+              </div>
+            </div>
+            <!-- end Residence Halls card  -->
+            <!-- start Dining card -->
+              <div id="diningCard" class="demo-card-wide mdl-card mdl-shadow--2dp">
+                <div class="mdl-card__title">
+                  <h2 class="mdl-card__title-text color666 text">Dining</h2>
+                </div>
+                <div>
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/QBXee6U14FQ" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="mdl-card__supporting-text color666 text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                  sed do eiusmod tempor incididunt ut labore et dolore
+                  magna aliqua. Ut enim ad minim veniam, quis nostrud
+                  exercitation ullamco laboris nisi ut aliquip ex ea
+                  commodo consequat. Duis aute irure dolor in reprehenderit
+                  in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+
+                </div>
+                <div class="mdl-card__actions mdl-card--border">
+                  <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect text link"> Learn More </a>
+                </div>
+                <div class="mdl-card__menu">
+                  <button id="diningClose" class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
+                    <i  class="material-icons">clear</i>
+                  </button>
+                </div>
+              </div>
+              <!-- end Dining card  -->
+              <!-- start Student Recreation card -->
+                <div id="stuRCard" class="demo-card-wide mdl-card mdl-shadow--2dp">
+                  <div class="mdl-card__title">
+                    <h2 class="mdl-card__title-text color666 text">Student Recreation</h2>
+                  </div>
+                  <div>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Fi7OiNe2TnU" frameborder="0" allowfullscreen></iframe>
+                  </div>
+                  <div class="mdl-card__supporting-text color666 text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore
+                    magna aliqua. Ut enim ad minim veniam, quis nostrud
+                    exercitation ullamco laboris nisi ut aliquip ex ea
+                    commodo consequat. Duis aute irure dolor in reprehenderit
+                    in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+
+                  </div>
+                  <div class="mdl-card__actions mdl-card--border">
+                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect text link"> Learn More </a>
+                  </div>
+                  <div class="mdl-card__menu">
+                    <button id="stuRClose" class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
+                      <i  class="material-icons">clear</i>
+                    </button>
+                  </div>
+                </div>
+                <!-- end Student Recreation card  -->
 </body>
 <footer>
     <!--start of js/jq-->
@@ -495,6 +574,9 @@
       $("#accSCard").hide();
       $("#campSCard").hide();
       $("#accFCard").hide();
+      $("#resHCard").hide();
+      $("#diningCard").hide();
+      $("#stuRCard").hide();
     }
 
     // info bulding card slide in from left (when blue link is clicked)
@@ -508,7 +590,8 @@
     // click x button on academic facilities card and it will disappear again
     $("#accFClose").click(function(){
       $("#accFCard").animate(
-        {left:"0px"});
+        {left:"-377px"});
+
     });
     // end academic facilities
     //
@@ -522,7 +605,7 @@
     // athletics x button hide
     $("#athClose").click(function(){
       $("#athCard").animate(
-        {left:"0px"});
+        {left:"-377px"});
     });
     // end athletics
     //
@@ -536,7 +619,7 @@
     // academic services x button hide
     $("#accSClose").click(function(){
       $("#accSCard").animate(
-        {left:"0px"});
+        {left:"-377px"});
     });
     // end accademic services
     //
@@ -547,15 +630,55 @@
       $("#campSCard").animate(
         {left: "377px"});
     });
-    // academic services x button hide
+    //  campus services x button hide
     $("#campSClose").click(function(){
       $("#campSCard").animate(
-        {left:"0px"});
+        {left:"-377px"});
     });
     // end campus services
     //
-
-
+    // start Residence halls
+    $("#resHText").click(function(){
+      hideAll();
+      $("#resHCard").show();
+      $("#resHCard").animate(
+        {left: "377px"});
+    });
+    // Residence halls x button hide
+    $("#resHClose").click(function(){
+      $("#resHCard").animate(
+        {left:"-377px"});
+    });
+    // end residence halls
+    //
+    // start Dining
+    $("#diningText").click(function(){
+      hideAll();
+      $("#diningCard").show();
+      $("#diningCard").animate(
+        {left: "377px"});
+    });
+    // Dining x button hide
+    $("#diningClose").click(function(){
+      $("#diningCard").animate(
+        {left:"-377px"});
+    });
+    // end Dining
+    //
+    // start Student Recreation
+    $("#stuRText").click(function(){
+      hideAll();
+      $("#stuRCard").show();
+      $("#stuRCard").animate(
+        {left: "377px"});
+    });
+    // Student Recreation x button hide
+    $("#stuRClose").click(function(){
+      $("#stuRCard").animate(
+        {left:"-377px"});
+    });
+    // end Student Recreation
+    //
 
 
     // Start hide/show 360 navigation items
