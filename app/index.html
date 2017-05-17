@@ -160,12 +160,16 @@
     li.tourItem{
       border-bottom: 1px solid grey;
       text-align: center;
+      color: #a2a1a2;
     }
     li.tourItem:hover{
-      background-color: grey;
+      background-color: #d0cece;
     }
     span.mdl-navigation__link{
       border-bottom: 1px solid grey;
+    }
+    span.mdl-navigation__link.color666.text{
+      color: #666766;
     }
     /*hide list items for 360 tour*/
     .tourDrop{
@@ -174,6 +178,9 @@
     /*forcing no padding on navigation*/
     .mdl-navigation.mine{
       padding: 0px;
+    }
+    .mdl-navigation.mine:hover{
+      background-color: #a2a1a2;
     }
     .optionsBox{
     padding: 6px 0px;
@@ -346,14 +353,14 @@
             </div>
             <!-- placeholder nav -->
             <div id="linkOne" class="mdl-navigation mine">
-                  <span class="mdl-navigation__link text" href="">Building<i id="addOne"class="material-icons color666 add">add</i></span></div>
+                  <span class="mdl-navigation__link color666 text" href="">Building<i id="addOne"class="material-icons color666 add">add</i></span></div>
                   <div id="linkOneOptions"  class="tourDrop"><ul class="noPad" >
                       <li class="tourItem text">VR</li>
                       <li class="tourItem text">VR</li>
                       <li class="tourItem text">VR</li>
                     </ul></div>
             <div id="linkTwo" class="mdl-navigation mine">
-                      <span  class="mdl-navigation__link text" href="">Building<i id="addTwo" class="material-icons color666 add">add</i></span></div>
+                      <span  class="mdl-navigation__link color666 text" href="">Building<i id="addTwo" class="material-icons color666 add">add</i></span></div>
                       <div id="linkTwoOptions"   class="tourDrop"><ul class="noPad">
                           <li class="tourItem text">VR</li>
                           <li class="tourItem text">VR</li>
@@ -361,18 +368,13 @@
                       </ul></div>
 
             <div id="linkThree" class="mdl-navigation mine">
-                      <span  class="mdl-navigation__link text" href="">Building<i id="addThree"class="material-icons color666 add">add</i></span></div>
+                      <span  class="mdl-navigation__link  color666 text" href="">Building<i id="addThree"class="material-icons color666 add">add</i></span></div>
                       <div id="linkThreeOptions" class="tourDrop">  <ul class="noPad">
                           <li class="tourItem text">VR</li>
                           <li class="tourItem text">VR</li>
                           <li class="tourItem text">VR</li>
                       </ul></div>
-      </div>
-
-
-
-
-
+          </div>
       </div>
     </div>
 
@@ -609,7 +611,7 @@
     });
     // end athletics
     //
-    // start academic services
+    // start academic services show and slide out
     $("#accSText").click(function(){
       hideAll();
       $("#accSCard").show();
@@ -623,7 +625,7 @@
     });
     // end accademic services
     //
-    // start campus services
+    // start campus services show and slide out
     $("#campSText").click(function(){
       hideAll();
       $("#campSCard").show();
@@ -637,7 +639,7 @@
     });
     // end campus services
     //
-    // start Residence halls
+    // start Residence halls show and slide out
     $("#resHText").click(function(){
       hideAll();
       $("#resHCard").show();
@@ -651,7 +653,7 @@
     });
     // end residence halls
     //
-    // start Dining
+    // start Dining show and slide out
     $("#diningText").click(function(){
       hideAll();
       $("#diningCard").show();
@@ -665,7 +667,7 @@
     });
     // end Dining
     //
-    // start Student Recreation
+    // start Student Recreation show and slide out
     $("#stuRText").click(function(){
       hideAll();
       $("#stuRCard").show();
