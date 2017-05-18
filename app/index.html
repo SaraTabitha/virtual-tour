@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Practice</title>
+    <title>UWO Virtual Tour 2.0</title>
 
     <!-- Disable tap highlight on IE -->
     <meta name="msapplication-tap-highlight" content="no">
@@ -68,6 +68,25 @@
       border-top: 5px solid white;
       padding: 0px 0px 20px 0px;
       margin: 0;
+    }
+    /*styling for search*/
+    #search{
+      height: 30px;
+      margin: 0px;
+    }
+    .mdl-textfield{
+      top: 0px;
+      bottom: 0px;
+      left: 0px;
+      right: 0px;
+      padding: 0px 10px;
+    }
+    .searchLabel.mdl-button.mdl-js-button.mdl-button--icon{
+      top: 0px;
+      bottom: 0px;
+      left: 10px;
+      right: 0px;
+      padding: 0px;
     }
     /*uwo watermark picture*/
     .mdl-layout-title.watermark {
@@ -218,7 +237,19 @@
         <!--header inside drawer-->
           <div class="mdl-layout__header-row mdl-color--yellow-A700 main">
             <img class="mdl-layout-title watermark" src="http://www.uwosh.edu/img/parts/wordmark-large.png">
+
           </div>
+          <div id="search" class="mdl-color--yellow-A700">
+          <div  class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+            <label  class=" searchLabel mdl-button mdl-js-button mdl-button--icon" for="sample6">
+              <i class="material-icons searchLabel">search</i>
+            </label>
+            <div class="mdl-textfield__expandable-holder">
+              <input class="mdl-textfield__input" type="text" id="sample6">
+              <label class=" searchLabel mdl-textfield__label" for="sample-expandable">Expandable Input</label>
+            </div>
+          </div>
+        </div>
           <!--contents of drawer-->
           <!--black strip-->
             <div class="mdl-layout__header-row mdl-color--black drawer">
