@@ -219,9 +219,24 @@
       /*curve for slide out/in*/
       transition: left .3s cubic-bezier(0.0, 0.0, 0.2, 1);
     }
-    /*header{
+    /*.mdl-layout__container{
       opacity: .5;
+      width: 380px;
     }*/
+    /*map styling*/
+    main{
+      height: 100%;
+      width: 100%;
+    }
+      #map {
+       height: 1000px;
+       width: 100%;
+       position: relative;
+       left: 377px;
+       right: 0px;
+       background-color: black;
+       z-index: 0px;
+      }
   }
 }
 
@@ -229,7 +244,7 @@
     </style>
     <!--end style-->
 </head>
-
+<body>
 <header>
     <!--start of header -->
     <div id="menu"class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-drawer">
@@ -406,201 +421,222 @@
                           <li class="tourItem text">VR</li>
                       </ul></div>
           </div>
+          <!-- academic facilities card -->
+            <div id="accFCard" class="demo-card-wide mdl-card mdl-shadow--2dp">
+              <div class="mdl-card__title">
+                <h2 class="mdl-card__title-text color666 text">Academic Facilities</h2>
+              </div>
+              <div>
+                <iframe width="400" height="315" src="https://www.youtube.com/embed/V4404T_b5No" frameborder="0" allowfullscreen></iframe>
+              </div>
+              <div class="mdl-card__supporting-text color666 text">
+
+                Nationally and regionally accredited, UW Oshkosh is among the
+                largest public universities in the state and is committed to
+                providing students with a high-quality affordable education.
+                The University features state-of-the-art academic buildings with
+                modest class sizes that foster one-on-one and collaborative learning
+                with professors.
+              </div>
+              <div class="mdl-card__actions mdl-card--border">
+                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect text link"> Learn More </a>
+              </div>
+              <div class="mdl-card__menu">
+                <button id="accFClose" class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
+                  <i  class="material-icons">clear</i>
+                </button>
+              </div>
+            </div>
+            <!-- end of academic facilities card -->
+            <!-- start Athletics card -->
+              <div id="athCard" class="demo-card-wide mdl-card mdl-shadow--2dp">
+                <div class="mdl-card__title">
+                  <h2 class="mdl-card__title-text color666 text">Athletics</h2>
+                </div>
+                <div>
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/EFlUSVWCA-k" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="mdl-card__supporting-text color666 text">
+                  The UW Oshkosh Athletics department supports 21 teams for male and
+                  female student-athletes, and has won 54 titles in the last 10 years.
+                  Students can participate in baseball, basketball, cross country, football,
+                   soccer, swimming and diving, tennis, track and field, wrestling, gymnastics,
+                   softball and volleyball.
+                </div>
+                <div class="mdl-card__actions mdl-card--border">
+                  <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect text link"> Learn More </a>
+                </div>
+                <div class="mdl-card__menu">
+                  <button id="athClose" class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
+                    <i  class="material-icons">clear</i>
+                  </button>
+                </div>
+              </div>
+              <!-- end Athletics card  -->
+              <!-- start Academic Services card -->
+                <div id="accSCard" class="demo-card-wide mdl-card mdl-shadow--2dp">
+                  <div class="mdl-card__title">
+                    <h2 class="mdl-card__title-text color666 text">Academic Support Services</h2>
+                  </div>
+                  <div>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/f-KdeyV-_dA" frameborder="0" allowfullscreen></iframe>
+                  </div>
+                  <div class="mdl-card__supporting-text color666 text">
+                    Academic support and services are offered to UW Oshkosh students
+                    throughout the year, including Center for Academic Resources,
+                    English Language Services, Writing Center, Mathematics Lab and
+                    Reading Study Center.
+                  </div>
+                  <div class="mdl-card__actions mdl-card--border">
+                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect text link"> Learn More </a>
+                  </div>
+                  <div class="mdl-card__menu">
+                    <button id="accSClose" class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
+                      <i  class="material-icons">clear</i>
+                    </button>
+                  </div>
+                </div>
+                <!-- end Academic Services card  -->
+                <!-- start Campus Services card -->
+                  <div id="campSCard" class="demo-card-wide mdl-card mdl-shadow--2dp">
+                    <div class="mdl-card__title">
+                      <h2 class="mdl-card__title-text color666 text">Campus Services</h2>
+                    </div>
+                    <div>
+                      <iframe width="560" height="315" src="https://www.youtube.com/embed/6e59ycgCTi4" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="mdl-card__supporting-text color666 text">
+                      UW Oshkosh offers a number of services dedicated to meeting
+                      the needs of the diverse campus population. These services
+                      include Center for Academic Support and Diversity, Disability Services,
+                      LGBTQ Resource Center, Office of International Education,
+                      Veterans Resource Center, Student Recreation and Wellness Center (SRWC)
+                      and Student Success Center.
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect text link"> Learn More </a>
+                    </div>
+                    <div class="mdl-card__menu">
+                      <button id="campSClose" class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
+                        <i  class="material-icons">clear</i>
+                      </button>
+                    </div>
+                  </div>
+                  <!-- end Campus Services card  -->
+                  <!-- start Residence Halls card -->
+                    <div id="resHCard" class="demo-card-wide mdl-card mdl-shadow--2dp">
+                      <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text color666 text">Residence Halls</h2>
+                      </div>
+                      <div>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/R5RVenezdgM" frameborder="0" allowfullscreen></iframe>
+                      </div>
+                      <div class="mdl-card__supporting-text color666 text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation ullamco laboris nisi ut aliquip ex ea
+                        commodo consequat. Duis aute irure dolor in reprehenderit
+                        in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+
+                      </div>
+                      <div class="mdl-card__actions mdl-card--border">
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect text link"> Learn More </a>
+                      </div>
+                      <div class="mdl-card__menu">
+                        <button id="resHClose" class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
+                          <i  class="material-icons">clear</i>
+                        </button>
+                      </div>
+                    </div>
+                    <!-- end Residence Halls card  -->
+                    <!-- start Dining card -->
+                      <div id="diningCard" class="demo-card-wide mdl-card mdl-shadow--2dp">
+                        <div class="mdl-card__title">
+                          <h2 class="mdl-card__title-text color666 text">Dining</h2>
+                        </div>
+                        <div>
+                          <iframe width="560" height="315" src="https://www.youtube.com/embed/QBXee6U14FQ" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="mdl-card__supporting-text color666 text">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                          sed do eiusmod tempor incididunt ut labore et dolore
+                          magna aliqua. Ut enim ad minim veniam, quis nostrud
+                          exercitation ullamco laboris nisi ut aliquip ex ea
+                          commodo consequat. Duis aute irure dolor in reprehenderit
+                          in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+
+                        </div>
+                        <div class="mdl-card__actions mdl-card--border">
+                          <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect text link"> Learn More </a>
+                        </div>
+                        <div class="mdl-card__menu">
+                          <button id="diningClose" class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
+                            <i  class="material-icons">clear</i>
+                          </button>
+                        </div>
+                      </div>
+                      <!-- end Dining card  -->
+                      <!-- start Student Recreation card -->
+                        <div id="stuRCard" class="demo-card-wide mdl-card mdl-shadow--2dp">
+                          <div class="mdl-card__title">
+                            <h2 class="mdl-card__title-text color666 text">Student Recreation</h2>
+                          </div>
+                          <div>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/Fi7OiNe2TnU" frameborder="0" allowfullscreen></iframe>
+                          </div>
+                          <div class="mdl-card__supporting-text color666 text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore
+                            magna aliqua. Ut enim ad minim veniam, quis nostrud
+                            exercitation ullamco laboris nisi ut aliquip ex ea
+                            commodo consequat. Duis aute irure dolor in reprehenderit
+                            in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+
+                          </div>
+                          <div class="mdl-card__actions mdl-card--border">
+                            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect text link"> Learn More </a>
+                          </div>
+                          <div class="mdl-card__menu">
+                            <button id="stuRClose" class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
+                              <i  class="material-icons">clear</i>
+                            </button>
+                          </div>
+                        </div>
+                        <!-- end Student Recreation card  -->
       </div>
     </div>
 
     <!--end of header-->
 
 </header>
-<body>
-  <!-- academic facilities card -->
-    <div id="accFCard" class="demo-card-wide mdl-card mdl-shadow--2dp">
-      <div class="mdl-card__title">
-        <h2 class="mdl-card__title-text color666 text">Academic Facilities</h2>
-      </div>
-      <div>
-        <iframe width="400" height="315" src="https://www.youtube.com/embed/V4404T_b5No" frameborder="0" allowfullscreen></iframe>
-      </div>
-      <div class="mdl-card__supporting-text color666 text">
-
-        Nationally and regionally accredited, UW Oshkosh is among the
-        largest public universities in the state and is committed to
-        providing students with a high-quality affordable education.
-        The University features state-of-the-art academic buildings with
-        modest class sizes that foster one-on-one and collaborative learning
-        with professors.
-      </div>
-      <div class="mdl-card__actions mdl-card--border">
-        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect text link"> Learn More </a>
-      </div>
-      <div class="mdl-card__menu">
-        <button id="accFClose" class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
-          <i  class="material-icons">clear</i>
-        </button>
-      </div>
+  <main class="mdl-layout__content">
+    <div class="page-content">
+      <!-- google map!! -->
+      <div id="map"></div>
+      <!-- end google map -->
     </div>
-    <!-- end of academic facilities card -->
-    <!-- start Athletics card -->
-      <div id="athCard" class="demo-card-wide mdl-card mdl-shadow--2dp">
-        <div class="mdl-card__title">
-          <h2 class="mdl-card__title-text color666 text">Athletics</h2>
-        </div>
-        <div>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/EFlUSVWCA-k" frameborder="0" allowfullscreen></iframe>
-        </div>
-        <div class="mdl-card__supporting-text color666 text">
-          The UW Oshkosh Athletics department supports 21 teams for male and
-          female student-athletes, and has won 54 titles in the last 10 years.
-          Students can participate in baseball, basketball, cross country, football,
-           soccer, swimming and diving, tennis, track and field, wrestling, gymnastics,
-           softball and volleyball.
-        </div>
-        <div class="mdl-card__actions mdl-card--border">
-          <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect text link"> Learn More </a>
-        </div>
-        <div class="mdl-card__menu">
-          <button id="athClose" class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
-            <i  class="material-icons">clear</i>
-          </button>
-        </div>
-      </div>
-      <!-- end Athletics card  -->
-      <!-- start Academic Services card -->
-        <div id="accSCard" class="demo-card-wide mdl-card mdl-shadow--2dp">
-          <div class="mdl-card__title">
-            <h2 class="mdl-card__title-text color666 text">Academic Support Services</h2>
-          </div>
-          <div>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/f-KdeyV-_dA" frameborder="0" allowfullscreen></iframe>
-          </div>
-          <div class="mdl-card__supporting-text color666 text">
-            Academic support and services are offered to UW Oshkosh students
-            throughout the year, including Center for Academic Resources,
-            English Language Services, Writing Center, Mathematics Lab and
-            Reading Study Center.
-          </div>
-          <div class="mdl-card__actions mdl-card--border">
-            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect text link"> Learn More </a>
-          </div>
-          <div class="mdl-card__menu">
-            <button id="accSClose" class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
-              <i  class="material-icons">clear</i>
-            </button>
-          </div>
-        </div>
-        <!-- end Academic Services card  -->
-        <!-- start Campus Services card -->
-          <div id="campSCard" class="demo-card-wide mdl-card mdl-shadow--2dp">
-            <div class="mdl-card__title">
-              <h2 class="mdl-card__title-text color666 text">Campus Services</h2>
-            </div>
-            <div>
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/6e59ycgCTi4" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <div class="mdl-card__supporting-text color666 text">
-              UW Oshkosh offers a number of services dedicated to meeting
-              the needs of the diverse campus population. These services
-              include Center for Academic Support and Diversity, Disability Services,
-              LGBTQ Resource Center, Office of International Education,
-              Veterans Resource Center, Student Recreation and Wellness Center (SRWC)
-              and Student Success Center.
-            </div>
-            <div class="mdl-card__actions mdl-card--border">
-              <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect text link"> Learn More </a>
-            </div>
-            <div class="mdl-card__menu">
-              <button id="campSClose" class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
-                <i  class="material-icons">clear</i>
-              </button>
-            </div>
-          </div>
-          <!-- end Campus Services card  -->
-          <!-- start Residence Halls card -->
-            <div id="resHCard" class="demo-card-wide mdl-card mdl-shadow--2dp">
-              <div class="mdl-card__title">
-                <h2 class="mdl-card__title-text color666 text">Residence Halls</h2>
-              </div>
-              <div>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/R5RVenezdgM" frameborder="0" allowfullscreen></iframe>
-              </div>
-              <div class="mdl-card__supporting-text color666 text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua. Ut enim ad minim veniam, quis nostrud
-                exercitation ullamco laboris nisi ut aliquip ex ea
-                commodo consequat. Duis aute irure dolor in reprehenderit
-                in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-
-              </div>
-              <div class="mdl-card__actions mdl-card--border">
-                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect text link"> Learn More </a>
-              </div>
-              <div class="mdl-card__menu">
-                <button id="resHClose" class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
-                  <i  class="material-icons">clear</i>
-                </button>
-              </div>
-            </div>
-            <!-- end Residence Halls card  -->
-            <!-- start Dining card -->
-              <div id="diningCard" class="demo-card-wide mdl-card mdl-shadow--2dp">
-                <div class="mdl-card__title">
-                  <h2 class="mdl-card__title-text color666 text">Dining</h2>
-                </div>
-                <div>
-                  <iframe width="560" height="315" src="https://www.youtube.com/embed/QBXee6U14FQ" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="mdl-card__supporting-text color666 text">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                  sed do eiusmod tempor incididunt ut labore et dolore
-                  magna aliqua. Ut enim ad minim veniam, quis nostrud
-                  exercitation ullamco laboris nisi ut aliquip ex ea
-                  commodo consequat. Duis aute irure dolor in reprehenderit
-                  in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-
-                </div>
-                <div class="mdl-card__actions mdl-card--border">
-                  <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect text link"> Learn More </a>
-                </div>
-                <div class="mdl-card__menu">
-                  <button id="diningClose" class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
-                    <i  class="material-icons">clear</i>
-                  </button>
-                </div>
-              </div>
-              <!-- end Dining card  -->
-              <!-- start Student Recreation card -->
-                <div id="stuRCard" class="demo-card-wide mdl-card mdl-shadow--2dp">
-                  <div class="mdl-card__title">
-                    <h2 class="mdl-card__title-text color666 text">Student Recreation</h2>
-                  </div>
-                  <div>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Fi7OiNe2TnU" frameborder="0" allowfullscreen></iframe>
-                  </div>
-                  <div class="mdl-card__supporting-text color666 text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore
-                    magna aliqua. Ut enim ad minim veniam, quis nostrud
-                    exercitation ullamco laboris nisi ut aliquip ex ea
-                    commodo consequat. Duis aute irure dolor in reprehenderit
-                    in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-
-                  </div>
-                  <div class="mdl-card__actions mdl-card--border">
-                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect text link"> Learn More </a>
-                  </div>
-                  <div class="mdl-card__menu">
-                    <button id="stuRClose" class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
-                      <i  class="material-icons">clear</i>
-                    </button>
-                  </div>
-                </div>
-                <!-- end Student Recreation card  -->
+  </main>
 </body>
 <footer>
     <!--start of js/jq-->
-    <script>
+<script>
+// google map!
+function initMap() {
+        var uluru = {lat: 44.025319, lng: -88.551021};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 17,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_4zQ9m4LdUjtmEOJG4g05xf2oipMUDuU&callback=initMap"></script>
 
+<script>
     // function for hiding all of the cards
     function hideAll(){
       $("#athCard").hide();
@@ -624,7 +660,7 @@
     $("#accFClose").click(function(){
       $("#accFCard").animate(
         {left:"-377px"});
-
+        $("#accFCard").css("z-index", 1);
     });
     // end academic facilities
     //
