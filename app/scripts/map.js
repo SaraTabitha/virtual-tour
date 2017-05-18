@@ -27,13 +27,14 @@ function initMap() {
           icon: image
 
         });
-
-        // function buildingsClicked(){
-        //   gruenhagenMarker.setMap(map);
-        //   }
-        //   function buildingsEmpty(){
-        //     gruenhagenMarker.setMap(null);
-        // }
+        $("#selectallcheck").click(function(){
+          var checkSelect = !$("#selectallcheck").prop("checked");
+          if (checkSelect === false){
+            gruenhagenMarker.setMap(map);
+          } else if (checkSelect === true){
+            gruenhagenMarker.setMap(null);
+          }
+        })
 
         $("#buildLabel").click(function(){
         var check = $("#buildLabel").hasClass("is-checked");
