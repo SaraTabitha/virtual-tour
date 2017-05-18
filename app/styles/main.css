@@ -24,8 +24,18 @@ html, body {
   margin: 0;
   padding: 0;
 }
-.mdl-demo .mdl-layout__header-row {
-  padding-left: 40px;
+/*yellow portion of header*/
+.mdl-layout__header-row.main {
+  height: 109px;
+  border-top: 5px solid white;
+  padding: 0px 0px 20px 0px;
+  margin: 0;
+}
+/*black space for virtual tour*/
+.mdl-layout__header-row.drawer{
+  padding: 0px 0px 0px 20px;
+  width: 100%;
+  height: 30px;
 }
 .mdl-demo .mdl-layout.is-small-screen .mdl-layout__header-row h3 {
   font-size: inherit;
@@ -210,4 +220,170 @@ html, body {
 }
 .mdl-demo .mdl-menu__container {
   z-index: 99;
+}
+/*entire left menu*/
+.mdl-layout__drawer {
+  width: 380px;
+}
+
+/*styling for search*/
+#search{
+  height: 30px;
+  margin: 0px;
+}
+.mdl-textfield{
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  padding: 0px 10px;
+}
+.searchLabel.mdl-button.mdl-js-button.mdl-button--icon{
+  top: 0px;
+  bottom: 0px;
+  left: 10px;
+  right: 0px;
+  padding: 0px;
+}
+/*uwo watermark picture*/
+.mdl-layout-title.watermark {
+  height: 109px;
+  width: 223px;
+  padding-top: 10px;
+}
+
+/*grey coloring*/
+.background666{
+  background-color: #666766;
+}
+.color666{
+  color: #666766;
+}
+a.link{
+  color: rgb(33,150,243);
+}
+/*all layout titles*/
+.mdl-layout-title {
+  font-size: 16px;
+
+}
+/*class for styling all text*/
+.text {
+  font-family: 'Open Sans', sans-serif;
+}
+/*360 grey styling*/
+.mdl-layout-title.threeSixty{
+  color: #d0cece;
+  /*position: relative;
+  left: 25px;*/
+}
+/*all checkbox lines*/
+ .mdl-checkbox__label {
+  font-size: 16px;
+
+}
+/*grey for select all checkbox lines*/
+.mdl-checkbox__label.selectAll{
+  color:  #d0cece;
+}
+.options{
+  padding: 0px 0px 0px 20px;
+  list-style: none;
+  margin: 0;
+}
+/*icons*/
+.material-icons{
+  position: relative;
+  top: 4px;
+  padding-right: 4px;
+}
+/*janky changing the background colors of the checkbox*/
+.mdl-checkbox__focus-helper{
+  background-color: #FFF;
+  color: #FFF;
+}
+.mdl-checkbox__box-outline{
+  border: 2px solid #666766;
+}
+/*repositioning the text for the checkbox lines*/
+span.check{
+  position: relative;
+  bottom: 6px;
+}
+/*changing lists to hide overflow*/
+ul{
+  display: block;
+  overflow: hidden;
+  list-style-type: none;
+}
+li{
+  padding: 4px;
+  padding-left: 0px;
+  list-style-position: inside;
+  overflow:hidden;
+}
+/*360 tour lists styling*/
+ul.noPad{
+  margin: 0px;
+  padding: 0px;
+
+}
+li.tourItem{
+  border-bottom: 1px solid grey;
+  text-align: center;
+  color: #a2a1a2;
+}
+li.tourItem:hover{
+  background-color: #d0cece;
+}
+span.mdl-navigation__link{
+  border-bottom: 1px solid grey;
+}
+span.mdl-navigation__link.color666.text{
+  color: #666766;
+}
+/*hide list items for 360 tour*/
+.tourDrop{
+  display: none;
+}
+/*forcing no padding on navigation*/
+.mdl-navigation.mine{
+  padding: 0px;
+}
+.mdl-navigation.mine:hover{
+  background-color: #a2a1a2;
+}
+.optionsBox{
+padding: 6px 0px;
+}
+/*positioning of + symbols for 360 navigation*/
+i.add{
+position: relative;
+top: 0px;
+left: 75%;
+}
+/*pullout card under menu*/
+.demo-card-wide{
+  position: relative;
+  width: 377px;
+  height: 110%;
+  display: none;
+  /*curve for slide out/in*/
+  transition: left .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+  z-index: 1;
+}
+
+/*map styling*/
+html, body, main, .mdl-layout__content, .page-content, #map {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    z-index: 0;
+}
+#map {
+    position: relative;
+    left: 377px;
+    right: 0px;
+
 }
