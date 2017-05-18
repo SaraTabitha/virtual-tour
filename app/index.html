@@ -610,7 +610,7 @@
 </header>
   <main class="mdl-layout__content">
     <div class="page-content">
-      <!-- google map!! -->
+      <!-- google map!! (meat of it in map.js)-->
       <div id="map"></div>
       <!-- end google map -->
     </div>
@@ -618,22 +618,12 @@
 </body>
 <footer>
     <!--start of js/jq-->
-<script>
-// google map!
-function initMap() {
-        var uluru = {lat: 44.025319, lng: -88.551021};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 17,
-          center: uluru
-        });
-        var marker = new google.maps.Marker({
-          position: uluru,
-          map: map
-        });
-      }
-</script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_4zQ9m4LdUjtmEOJG4g05xf2oipMUDuU&callback=initMap"></script>
+<!-- google map -->
 
+
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_4zQ9m4LdUjtmEOJG4g05xf2oipMUDuU&callback=initMap"></script>
+<script src="scripts/map.js"></script>
 <script>
     // function for hiding all of the cards
     function hideAll(){
@@ -658,7 +648,6 @@ function initMap() {
     $("#accFClose").click(function(){
       $("#accFCard").animate(
         {left:"-377px"});
-        // $("#accFCard").css("z-index", 1);
     });
     // end academic facilities
     //
@@ -765,8 +754,7 @@ function initMap() {
     });
     // End hide/show 360 navigation items
 
-
-        // event listener for the select all button attached to function clicking
+      // event listener for the select all button attached to function clicking
       $("#selectallcheck").click(function(){
 
         //checks the input for the checked property (! = not checked)
