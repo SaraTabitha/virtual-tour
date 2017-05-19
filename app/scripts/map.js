@@ -1,7 +1,5 @@
 // google map!
 // function for intitial map load (what appears when the page first loads)
-var gruenhagenMarker;
-var map;
 function initMap() {
         // center of map (UWO coordinates)
         var uwo = {lat: 44.025319, lng: -88.551021};
@@ -20,29 +18,36 @@ function initMap() {
           // sets it to the image variable defined above
           icon: image
         });
-
+        // defining gruenhagen's location and creating a marker for it
         var gruenhagen = {lat: 44.022405, lng:  -88.548824};
         var gruenhagenMarker = new google.maps.Marker({
           position: gruenhagen,
           icon: image
-
         });
+        // declaring set and remove functions for BUILDING
+        function setBuilding(){
+          gruenhagenMarker.setMap(map);
+        }
+        function removeBuilding(){
+          gruenhagenMarker.setMap(null);
+        }
+        // on click function for selecting the first select all checkbox
         $("#selectallcheck").click(function(){
           var checkSelect = !$("#selectallcheck").prop("checked");
           if (checkSelect === false){
-            gruenhagenMarker.setMap(map);
+            setBuilding();
           } else if (checkSelect === true){
-            gruenhagenMarker.setMap(null);
+            removeBuilding();
           }
         })
-
+        // on click function for selecting the Building checkbox
         $("#buildLabel").click(function(){
         var check = $("#buildLabel").hasClass("is-checked");
         if (check === false){
-          gruenhagenMarker.setMap(map);
+          setBuilding();
 
         } else if (check === true){
-          gruenhagenMarker.setMap(null);
+          removeBuilding();
         }
         });
 

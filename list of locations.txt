@@ -1,0 +1,364 @@
+buildings: (44)
+	1.East Hall
+	⁃	lat 44.031217
+	⁃	lng -88.543806
+	2.A &C
+	⁃	lat 44.029640
+	⁃	lng -88.552137
+	3.Fredric March Theater
+	⁃	lat 44.029000
+	⁃lng -88.552919
+	4.	Heating Plant
+	⁃	lat 44.028235
+	⁃	lng -88.554312
+	5.Buck staff Planetarium
+	⁃	lat 44.028428
+	⁃	lng -88.551581
+	6.Halsey Science Center
+	⁃	lat 44.028497
+	⁃	lng -88.551027
+	7.Swart Hall
+	⁃	lat 44.027872
+	⁃	lng -88.551962
+	8.Harrington Hall
+	⁃	lat 44.027736
+	⁃	lng -88.550172
+	9.Oviatt House
+	⁃	lat 44.027156
+	⁃	lng -88.551466
+	10.Nursing and Education Building
+	⁃	lat 44.027051
+	⁃	lng -88.552813
+	12. clow
+	-	lat 44.026306
+	- 	lng -88.552268
+	11.Dempsey hall
+	⁃	lat 44.026603
+	⁃	lng -88.550707
+	12.polk library
+	⁃	lat 44.026379
+	⁃	lng -88.549602
+	13.albee hall
+	⁃	lat 44.025729
+	⁃	lng -88.550248
+	15.sage hall
+	⁃	lat 44.025720
+	⁃	lng -88.553770
+	16.ceramics laboratory
+	⁃	lat 44.025559
+	⁃	lng -88.555515
+	17.environmental science and research center
+	⁃	lat 44.023518
+	⁃	lng -88.553851
+	18.radford hall & student health center 
+	⁃	lat 44.025671
+	⁃	lng -88.551561
+	19.donner hall
+	⁃	lat
+	⁃	lng
+	20.kolf sports center
+	⁃	lat
+	⁃	lng
+	21.webster hall
+	⁃	lat
+	⁃	lng
+	22. taylor hall
+	⁃	lat
+	⁃	lng
+	23.multicultural education center
+	⁃	lat
+	⁃	lng
+	24.university police
+	⁃	lat
+	⁃	lng
+	25.high avenue parking ramp
+	⁃	lat
+	⁃	lng
+	26.blackhawk commons
+	⁃	lat
+	⁃	lng
+	27.gruenhagen conference center
+	⁃	lat
+	⁃	lng
+	28.student recreation and wellness center
+	⁃	lat
+	⁃	lng
+	29.reeve memorial union
+	⁃	lat
+	⁃	lng
+	30.student success center
+	⁃	lat
+	⁃	lng
+	31.evans hall
+	⁃	lat
+	⁃	lng
+	32.stewart hall
+	⁃	lat
+	⁃	lng
+	33.fletcher hall
+	⁃	lat
+	⁃	lng
+	34.campus center for equity and diversity
+	⁃	lat
+	⁃	lng
+	35.horizon village
+	⁃	lat
+	⁃	lng
+	36.scott hall
+	⁃	lat
+	⁃	lng
+	37.lincoln hall
+	⁃	lat
+	⁃	lng
+	38.alumni welcome and conference center
+	⁃	lat
+	⁃	lng
+	39.community gardens
+	⁃	lat
+	⁃	lng
+	40.campus services
+	⁃	lat
+	⁃	lng
+	41.biodigester
+	⁃	lat
+	⁃	lng
+	42.athletic service building
+	⁃	lat
+	⁃	lng
+	43.alumni baseball stadium
+	⁃	lat
+	⁃	lng
+	44.titan stadium 
+	⁃	lat
+	⁃	lng
+
+Parking Lots (35)
+	1.11
+	⁃	lat
+	⁃	lng
+	2.35
+	⁃	lat
+	⁃	lng
+	3.27
+	⁃	lat
+	⁃	lng
+	4.21
+	⁃	lat
+	⁃	lng
+	5.26
+	⁃	lat
+	⁃	lng
+	6.4
+	⁃	lat
+	⁃	lng
+	7.4a
+	⁃	lat
+	⁃	lng
+	8.16
+	⁃	lat
+	⁃	lng
+	9.17
+	⁃	lat
+	⁃	lng
+	10.29
+	⁃	lat
+	⁃	lng
+	11.25
+	⁃	lat
+	⁃	lng
+	12.8
+	⁃	lat
+	⁃	lng
+	13.33
+	⁃	lat
+	⁃	lng
+	14.34
+	⁃	lat
+	⁃	lng
+	15.28
+	⁃	lat
+	⁃	lng
+	16.23
+	⁃	lat
+	⁃	lng
+	17.14a
+	⁃	lat
+	⁃	lng
+	18.14b
+	⁃	lat
+	⁃	lng
+	19.14c
+	⁃	lat
+	⁃	lng
+	20.7
+	⁃	lat
+	⁃	lng
+	21.5a
+	⁃	lat
+	⁃	lng
+	22.5
+	⁃	lat
+	⁃	lng
+	23.7a
+	⁃	lat
+	⁃	lng
+	24.15
+	⁃	lat
+	⁃	lng
+	25.32
+	⁃	lat
+	⁃	lng
+	26.13
+	⁃	lat
+	⁃	lng
+	27.12
+	⁃	lat
+	⁃	lng
+	28.6a
+	⁃	lat
+	⁃	lng
+	29.6
+	⁃	lat
+	⁃	lng
+	30.10
+	⁃	lat
+	⁃	lng
+	31.9a
+	⁃	lat
+	⁃	lng
+	32.9
+	⁃	lat
+	⁃	lng
+	33.18
+	⁃	lat
+	⁃	lng
+	34.30
+	⁃	lat
+	⁃	lng
+	35.39
+	⁃	lat
+	⁃	lng
+
+Accessible Parking (34)
+	-attach to parking lot
+Accessible Entries (35)
+	-attach to building
+Emergency Phones (28)
+	-building/ address?
+	1.Lot 35
+	⁃	lat : 44.029568
+	⁃	lng : -88.557150
+	2.Lot 40
+	⁃	lat 44.029075
+	⁃	lng -88.558184
+	3.lot 27
+	⁃	lat 44.028831
+	⁃	lng -88.555125
+	4.heating plant
+	⁃	lat 44.028514
+	⁃	lng -88.554386
+	5. behind a & c
+	⁃	lat 44.029626
+	⁃	lng -88.552936
+	6. in between halsey and swart
+	⁃	lat 44.028456
+	⁃	lng -88.551907
+	7. lot 25 
+	⁃	lat 44.027457	
+	⁃	lng -88.553422
+	8.lot 17
+	⁃	lat 44.028501
+	⁃	lng -88.549911
+	9. Wiouwash Trail Oshkosh, WI 54901
+	⁃	lat 44.025255
+	⁃	lng -88.555618
+	10. in front of slow
+	⁃	lat 44.026028
+	⁃	lng -88.552211
+	11. behind dempsey
+	⁃	lat 44.026556
+	⁃	lng -88.550250
+	12. lot 34
+	⁃	lat 44.026670
+	⁃	lng -88.547795
+	13. in between fletcher, stewart and evans 
+	⁃	lat 44.025771
+	⁃	lng -88.547412
+	14. center for equity and diversity 
+	⁃	lat 44.024777
+	⁃	lng -88.546711
+	15. in between reeve and horizon
+	⁃	lat 44.024921
+	⁃	lng -88.548533
+	16. lot 7 
+	⁃	lat 44.024921
+	⁃	lng -88.548533
+	17. lot 5
+	⁃	lat 44.023941
+	⁃	lng -88.554160
+	18. environmental research and innovation center
+	⁃	lat 44.023489
+	⁃	lng -88.553277
+	19. behind student recreation and wellness center
+	⁃	lat 44.022102
+	⁃	lng -88.552487
+	20. path to student rec center 
+	⁃	lat 44.023313
+	⁃	lng -88.551255
+	21. between taylor and webster
+	⁃	lat 44.024791
+	⁃	lng -88.551402
+	22. lot 15
+	⁃	lat 44.024395
+	⁃	lng  -88.550325
+	23. behind blackhawk
+	⁃	lat 44.023321
+	⁃	lng  -88.548516
+	24. wellness center front 
+	⁃	lat 44.021428
+	⁃	lng -88.550672
+	25.wellness center  behind
+	⁃	lat 44.021057
+	⁃	lng -88.551801
+	26. lot 30 
+	⁃	lat 44.021727
+	⁃	lng -88.548169
+	27. lot 18 
+	⁃	lat 44.022676
+	⁃	lng  -88.546843
+	28. lot 39
+	⁃	lat 44.018830
+	⁃	lng -88.556802
+
+
+Sustainability Points of Interest (12)
+	1.	heating plant
+	2.	sage hall
+	3.	albee hall
+	4.	student success center
+	5.	reeve memorial union
+	6.	blackhawk commons
+	7.	taylor hall
+	8.	horizon village
+	9.	alumni welcome and conference center
+	10.	student recreation and wellness center
+	11.	titan stadium
+	12.	biodigester
+
+gender neutral + family bathrooms (14)
+	1.	a & c 
+	2.	halsey science center
+	3.	swart hall
+	4.	harrington hall
+	5.	nursing and ed building
+	6.	sage hall
+	7.	dempsey hall
+	8.	student success center
+	9.	reeve memorial union
+	10.	campus center for equity and diversity
+	11.	kolf sports center
+	12.	university police
+	13.	blackhawk commons
+	14.	student recreation and wellness center
+
+
