@@ -54,195 +54,269 @@ buildings: (44)
 	⁃	lat 44.025671
 	⁃	lng -88.551561
 	19.donner hall
-	⁃	lat
-	⁃	lng
+	⁃	lat 44.025420
+	⁃	lng -88.552287
 	20.kolf sports center
-	⁃	lat
-	⁃	lng
+	⁃	lat 44.024323
+	⁃	lng -88.552214
 	21.webster hall
-	⁃	lat
-	⁃	lng
+	⁃	lat 44.025002
+	⁃	lng -88.551681
 	22. taylor hall
-	⁃	lat
-	⁃	lng
+	⁃	lat 44.024577
+	⁃	lng -88.551215
 	23.multicultural education center
-	⁃	lat
-	⁃	lng
+	⁃	lat 44.024842
+	⁃	lng -88.550613
 	24.university police
-	⁃	lat
-	⁃	lng
+	⁃	lat 44.023763
+	⁃	lng -88.549972
 	25.high avenue parking ramp
-	⁃	lat
-	⁃	lng
+	⁃	lat 44.022960
+	⁃	lng -88.549791
 	26.blackhawk commons
-	⁃	lat
-	⁃	lng
+	⁃	lat 44.023591
+	⁃	lng -88.549157 
 	27.gruenhagen conference center
-	⁃	lat
-	⁃	lng
+	⁃	lat 44.022147
+	⁃	lng -88.548769
 	28.student recreation and wellness center
-	⁃	lat
-	⁃	lng
+	⁃	lat 44.021752
+	⁃	lng -88.551694
 	29.reeve memorial union
-	⁃	lat
-	⁃	lng
+	⁃	lat 44.024934
+	⁃	lng -88.549448
 	30.student success center
-	⁃	lat
-	⁃	lng
+	⁃	lat 44.026205
+	⁃	lng -88.548163
 	31.evans hall
-	⁃	lat
-	⁃	lng
+	⁃	lat 44.026168
+	⁃	lng -88.547397
 	32.stewart hall
-	⁃	lat
-	⁃	lng
+	⁃	lat 44.026060
+	⁃	lng -88.546952
 	33.fletcher hall
-	⁃	lat
-	⁃	lng
+	⁃	lat 44.025332
+	⁃	lng -88.547240
 	34.campus center for equity and diversity
-	⁃	lat
-	⁃	lng
+	⁃	lat 44.024655
+	⁃	lng -88.547217
 	35.horizon village
-	⁃	lat
-	⁃	lng
+	⁃	lat 44.024363
+	⁃	lng -88.547972
 	36.scott hall
-	⁃	lat
-	⁃	lng
+	⁃	lat 44.022556
+	⁃	lng -88.547344
 	37.lincoln hall
-	⁃	lat
-	⁃	lng
+	⁃	lat 44.023204
+	⁃	lng -88.546359
 	38.alumni welcome and conference center
-	⁃	lat
-	⁃	lng
+	⁃	lat 44.020528
+	⁃	lng -88.550432
 	39.community gardens
-	⁃	lat
-	⁃	lng
+	⁃	lat 44.015573
+	⁃	lng -88.555929
 	40.campus services
-	⁃	lat
-	⁃	lng
+	⁃	lat 44.017782
+	⁃	lng -88.556446
 	41.biodigester
-	⁃	lat
-	⁃	lng
+	⁃	lat 44.018897
+	⁃	lng -88.558015
 	42.athletic service building
-	⁃	lat
-	⁃	lng
+	⁃	lat 44.023077
+	⁃	lng -88.561081
 	43.alumni baseball stadium
-	⁃	lat
-	⁃	lng
+	⁃	lat 44.023042
+	⁃	lng -88.561892
 	44.titan stadium 
-	⁃	lat
-	⁃	lng
+	⁃	lat 44.023671
+	⁃	lng -88.562917
+	45. pollock house
+	- 	lat 44.025227
+	- 	lng -88.551292
 
 Parking Lots (35)
 	1.11
-	⁃	lat
-	⁃	lng
+	⁃	lat 44.030449
+	⁃	lng -88.552415
 	2.35
-	⁃	lat
-	⁃	lng
+	⁃	lat 44.029428
+	⁃	lng -88.558183
 	3.27
-	⁃	lat
-	⁃	lng
+	⁃	lat 44.029026
+	⁃	lng -88.554960
 	4.21
-	⁃	lat
-	⁃	lng
+	⁃	lat 44.029123
+	⁃	lng -88.553173
 	5.26
-	⁃	lat
-	⁃	lng
+	⁃	lat 44.029838
+	⁃	lng  -88.551684
 	6.4
-	⁃	lat
-	⁃	lng
-	7.4a
-	⁃	lat
-	⁃	lng
+	⁃	lat 44.029100
+	⁃	lng -88.551581
+	7.4a 
+	⁃	lat 44.028586
+	⁃	lng -88.552649
 	8.16
-	⁃	lat
-	⁃	lng
+	⁃	lat 44.028822
+	⁃	lng -88.550956
 	9.17
-	⁃	lat
-	⁃	lng
+	⁃	lat 44.028648
+	⁃	lng -88.549711
 	10.29
-	⁃	lat
-	⁃	lng
+	⁃	lat 44.027825
+	⁃	lng -88.553434
 	11.25
-	⁃	lat
-	⁃	lng
+	⁃	lat 44.027233
+	⁃	lng -88.553602
 	12.8
-	⁃	lat
-	⁃	lng
+	⁃	lat 44.026371
+	⁃	lng -88.554322
 	13.33
-	⁃	lat
-	⁃	lng
+	⁃	lat 44.025668
+	⁃	lng -88.555558
 	14.34
-	⁃	lat
-	⁃	lng
+	⁃	lat 44.027133
+	⁃	lng -88.548009
 	15.28
-	⁃	lat
-	⁃	lng
+	⁃	lat 44.025858
+	⁃	lng -88.548893
 	16.23
-	⁃	lat
-	⁃	lng
+	⁃	lat 44.025511
+	⁃	lng -88.546748
 	17.14a
-	⁃	lat
-	⁃	lng
+	⁃	lat 44.025828
+	⁃	lng -88.552416
 	18.14b
-	⁃	lat
-	⁃	lng
+	⁃	lat 44.025673
+	⁃	lng -88.551929
 	19.14c
-	⁃	lat
-	⁃	lng
+	⁃	lat 44.025302
+	⁃	lng -88.551711
 	20.7
-	⁃	lat
-	⁃	lng
+	⁃	lat 44.025023
+	⁃	lng -88.553519
 	21.5a
-	⁃	lat
-	⁃	lng
+	⁃	lat 44.024150
+	⁃	lng -88.554291
 	22.5
-	⁃	lat
-	⁃	lng
+	⁃	lat 44.023717
+	⁃	lng -88.553693
 	23.7a
-	⁃	lat
-	⁃	lng
+	⁃	lat 44.023897
+	⁃	lng -88.552670
 	24.15
-	⁃	lat
-	⁃	lng
+	⁃	lat 44.024142
+	⁃	lng -88.549694
 	25.32
-	⁃	lat
-	⁃	lng
+	⁃	lat 44.023912
+	⁃	lng -88.550031
 	26.13
-	⁃	lat
-	⁃	lng
+	⁃	lat 44.023505
+	⁃	lng -88.551579
 	27.12
-	⁃	lat
-	⁃	lng
+	⁃	lat 44.022135
+	⁃	lng -88.551702
 	28.6a
-	⁃	lat
-	⁃	lng
+	⁃	lat 44.021216
+	⁃	lng -88.551093
 	29.6
-	⁃	lat
-	⁃	lng
+	⁃	lat 44.020887
+	⁃	lng -88.549848
 	30.10
-	⁃	lat
-	⁃	lng
+	⁃	lat 44.021857
+	⁃	lng -88.548831
 	31.9a
-	⁃	lat
-	⁃	lng
+	⁃	lat 44.022435
+	⁃	lng -88.548564
 	32.9
-	⁃	lat
-	⁃	lng
+	⁃	lat 44.021955
+	⁃	lng  -88.548167
 	33.18
-	⁃	lat
-	⁃	lng
+	⁃	lat 44.022368
+	⁃	lng -88.546827
 	34.30
-	⁃	lat
-	⁃	lng
+	⁃	lat 44.021440
+	⁃	lng -88.547947
 	35.39
-	⁃	lat
-	⁃	lng
+	⁃	lat 44.018367
+	⁃	lng -88.556821
 
 Accessible Parking (34)
 	-attach to parking lot
+1. lot 11
+2. lot 4
+3. lot 4
+4. lot 4a
+5. lot 16
+6. lot 17
+7. lot 29
+8. lot 29
+9. lot 29
+10. lot 25
+11. lot 25
+12. lot 25
+13. lot 33
+14. lot 14a
+15. lot 7a 
+16. lot 13
+17. lot 13 
+18. lot 34
+19. lot 34 
+20. lot 28
+21. lot 23
+22. women center parking 
+23. lot 15
+24. lot 15
+25. lot 32
+26. parking ramp
+27. lot 10
+28. lot 12
+29. lot 12
+30. lot 6a
+31. lot 6
+32. lot 18
+33. stadium lot
+34. stadium lot 
+
 Accessible Entries (35)
 	-attach to building
+1. a &c 
+2. a &c 
+3. fredric theater
+4. fredric theater
+5. halsey
+6. halsey
+7. swart
+8. harrington
+9. nursing
+10. nursing
+11. nursing
+12. clow
+13. clow
+14. dempsey
+15. dempsey
+16. dempsey
+17. polk 
+18. albee
+19. reeve
+20. reeve
+21. reeve
+22. student success
+23. stewart hall 
+24. fletcher hall 
+25. equity and diversity
+26. radford 
+27. donner 
+28. webster
+29. taylor
+30. blackhawk
+31.  blackhawk
+32. gruenhagen 
+33. scott 
+34. kolf 
+35. kolf
+
 Emergency Phones (28)
 	-building/ address?
 	1.Lot 35
