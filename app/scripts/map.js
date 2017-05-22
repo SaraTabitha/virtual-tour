@@ -1185,6 +1185,7 @@ var titanTwoMarker = new google.maps.Marker({
             removeGender();
           }
         });
+
         // functions for categories select/remove markers
         function setAccaF(){
           acMarker.setMap(map);
@@ -1226,6 +1227,7 @@ var titanTwoMarker = new google.maps.Marker({
             removeAccaF();
           }
         });
+
         function setAth(){
           eastMarker.setMap(map);
           albeeMarker.setMap(map);
@@ -1250,6 +1252,7 @@ var titanTwoMarker = new google.maps.Marker({
             removeAth();
           }
         });
+
         function setAccaS(){
           equityMarker.setMap(map);
           successMarker.setMap(map);
@@ -1270,6 +1273,7 @@ var titanTwoMarker = new google.maps.Marker({
             removeAccaS();
           }
         });
+
         function setCampS(){
           campusMarker.setMap(map);
           recreationMarker.setMap(map);
@@ -1300,6 +1304,7 @@ var titanTwoMarker = new google.maps.Marker({
             removeCampS();
           }
         });
+
         function setResH(){
           gruenhagenMarker.setMap(map);
           donnerMarker.setMap(map);
@@ -1330,6 +1335,7 @@ var titanTwoMarker = new google.maps.Marker({
             removeResH();
           }
         });
+
         function setDining(){
           reeveMarker.setMap(map);
           blackhawkMarker.setMap(map);
@@ -1354,6 +1360,7 @@ var titanTwoMarker = new google.maps.Marker({
             removeDining();
           }
         });
+
         function setStuR(){
           recreationMarker.setMap(map);
           reeveMarker.setMap(map);
@@ -1370,6 +1377,7 @@ var titanTwoMarker = new google.maps.Marker({
             removeStuR();
           }
         });
+
         // categories select all, setting all/removing all markers
         $("#selectallcheck2").click(function(){
           var checkSelect = !$("#selectallcheck2").prop("checked");
@@ -1391,6 +1399,19 @@ var titanTwoMarker = new google.maps.Marker({
             removeStuR();
           }
         });
+        // adding gruenhagen card for gruenhagen marker
+        // document.getElementById('gruenhagenHover');
+        var gruenhagenHover = '<div class="generalHover">' +
+        '<h1 class="headHover text">Gruenhagen Conference Center</h1>' +
+        '<p class="paraHover text"> 208 Osceola Avenue</p>' +
+        '<p class="paraHover text">Oshkosh, WI 54901</p>' +
+        '</div>';
+        var gruenhagenHoverCard = new google.maps.InfoWindow({
+          content: gruenhagenHover,
 
 
+        });
+        gruenhagenMarker.addListener('mouseover', function(){
+          gruenhagenHoverCard.open(map,gruenhagenMarker);
+        });
   }

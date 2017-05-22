@@ -221,7 +221,10 @@ html, body {
 .mdl-demo .mdl-menu__container {
   z-index: 99;
 }
+/**/
+/*START MY CSS*/
 /*entire left menu*/
+/**/
 .mdl-layout__drawer {
   width: 380px;
 }
@@ -385,5 +388,19 @@ html, body, main, .mdl-layout__content, .page-content, #map {
     position: relative;
     left: 377px;
     right: 0px;
+  }
+    /*gruenhagen hover*/
+   .generalHover{
+      height: 100px;
+      width: 200px;
 
-}
+    }
+    h1.headHover{
+      font-size: 14px;
+      margin: 0px;
+      margin-bottom: 20px;
+    }
+    p.paraHover{
+      font-size: 12px;
+      margin: 0px;
+    }
