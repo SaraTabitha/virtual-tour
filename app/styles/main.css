@@ -395,12 +395,24 @@ html, body, main, .mdl-layout__content, .page-content, #map {
       width: 200px;
 
     }
+
+    img{
+      position: relative;
+      width: 50px;
+      height: 100%;
+      
+    }
+
     h1.headHover{
+      position: relative;
+      left: 52px;
       font-size: 14px;
       margin: 0px;
       margin-bottom: 20px;
+
     }
     p.paraHover{
       font-size: 12px;
       margin: 0px;
+
     }

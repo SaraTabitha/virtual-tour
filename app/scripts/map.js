@@ -1402,9 +1402,13 @@ var titanTwoMarker = new google.maps.Marker({
         // adding gruenhagen card for gruenhagen marker
         // document.getElementById('gruenhagenHover');
         var gruenhagenHover = '<div class="generalHover">' +
+
+        '<img src="images/campuspictures/gruenhagen.jpeg">' +
+
         '<h1 class="headHover text">Gruenhagen Conference Center</h1>' +
         '<p class="paraHover text"> 208 Osceola Avenue</p>' +
         '<p class="paraHover text">Oshkosh, WI 54901</p>' +
+      
         '</div>';
         var gruenhagenHoverCard = new google.maps.InfoWindow({
           content: gruenhagenHover,
