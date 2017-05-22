@@ -1227,13 +1227,23 @@ var titanTwoMarker = new google.maps.Marker({
           }
         });
         function setAth(){
-
+          eastMarker.setMap(map);
+          albeeMarker.setMap(map);
+          kolfMarker.setMap(map);
+          athleticMarker.setMap(map);
+          baseballMarker.setMap(map);
+          titanMarker.setMap(map);
         }
         function removeAth(){
-
+          eastMarker.setMap(null);
+          albeeMarker.setMap(null);
+          kolfMarker.setMap(null);
+          athleticMarker.setMap(null);
+          baseballMarker.setMap(null);
+          titanMarker.setMap(null);
         }
-        $("#athFLabel").click(function(){
-          var checkParking = !$("#athFLabel").hasClass("is-checked");
+        $("#athLabel").click(function(){
+          var checkParking = !$("#athLabel").hasClass("is-checked");
           if (checkParking === false){
             setAth();
           } else if (checkParking === true){
@@ -1241,10 +1251,16 @@ var titanTwoMarker = new google.maps.Marker({
           }
         });
         function setAccaS(){
-
+          equityMarker.setMap(map);
+          successMarker.setMap(map);
+          swartMarker.setMap(map);
+          nursingMarker.setMap(map);
         }
         function removeAccaS(){
-
+          equityMarker.setMap(null);
+          successMarker.setMap(null);
+          swartMarker.setMap(null);
+          nursingMarker.setMap(null);
         }
         $("#accSLabel").click(function(){
           var checkParking = !$("#accSLabel").hasClass("is-checked");
@@ -1255,10 +1271,26 @@ var titanTwoMarker = new google.maps.Marker({
           }
         });
         function setCampS(){
-
+          campusMarker.setMap(map);
+          recreationMarker.setMap(map);
+          equityMarker.setMap(map);
+          successMarker.setMap(map);
+          reeveMarker.setMap(map);
+          multiculturalMarker.setMap(map);
+          pollockMarker.setMap(map);
+          radfordMarker.setMap(map);
+          dempseyMarker.setMap(map);
         }
         function removeCampS(){
-
+          campusMarker.setMap(null);
+          recreationMarker.setMap(null);
+          equityMarker.setMap(null);
+          successMarker.setMap(null);
+          reeveMarker.setMap(null);
+          multiculturalMarker.setMap(null);
+          pollockMarker.setMap(null);
+          radfordMarker.setMap(null);
+          dempseyMarker.setMap(null);
         }
         $("#campSLabel").click(function(){
           var checkParking = !$("#campSLabel").hasClass("is-checked");
@@ -1269,10 +1301,26 @@ var titanTwoMarker = new google.maps.Marker({
           }
         });
         function setResH(){
-
+          gruenhagenMarker.setMap(map);
+          donnerMarker.setMap(map);
+          websterMarker.setMap(map);
+          taylorMarker.setMap(map);
+          evansMarker.setMap(map);
+          stewartMarker.setMap(map);
+          fletcherMarker.setMap(map);
+          horizonMarker.setMap(map);
+          scottMarker.setMap(map);
         }
         function removeResH(){
-
+          gruenhagenMarker.setMap(null);
+          donnerMarker.setMap(null);
+          websterMarker.setMap(null);
+          taylorMarker.setMap(null);
+          evansMarker.setMap(null);
+          stewartMarker.setMap(null);
+          fletcherMarker.setMap(null);
+          horizonMarker.setMap(null);
+          scottMarker.setMap(null);
         }
         $("#resHLabel").click(function(){
           var checkParking = !$("#resHLabel").hasClass("is-checked");
@@ -1283,10 +1331,20 @@ var titanTwoMarker = new google.maps.Marker({
           }
         });
         function setDining(){
-
+          reeveMarker.setMap(map);
+          blackhawkMarker.setMap(map);
+          scottMarker.setMap(map);
+          sageMarker.setMap(map);
+          clowMarker.setMap(map);
+          halseyMarker.setMap(map);
         }
         function removeDining(){
-
+          reeveMarker.setMap(null);
+          blackhawkMarker.setMap(null);
+          scottMarker.setMap(null);
+          sageMarker.setMap(null);
+          clowMarker.setMap(null);
+          halseyMarker.setMap(null);
         }
         $("#diningLabel").click(function(){
           var checkParking = !$("#diningLabel").hasClass("is-checked");
@@ -1297,10 +1355,12 @@ var titanTwoMarker = new google.maps.Marker({
           }
         });
         function setStuR(){
-
+          recreationMarker.setMap(map);
+          reeveMarker.setMap(map);
         }
         function removeStuR(){
-
+          recreationMarker.setMap(null);
+          reeveMarker.setMap(null);
         }
         $("#stuRLabel").click(function(){
           var checkParking = !$("#stuRLabel").hasClass("is-checked");
