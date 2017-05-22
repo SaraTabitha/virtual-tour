@@ -186,7 +186,6 @@
   // end Student Recreation
   //
 
-
   // Start hide/show 360 navigation items
   $("#linkOne").click(function(){
     // div toggle
@@ -204,6 +203,79 @@
   });
   // End hide/show 360 navigation items
 
+    // NEED FOLLOWING because without it after using the select all,
+    // the user cannot recheck the individual boxes properly
+    // building on click/off check box
+    $("#buildings").click(function(){
+    var check = $("#buildLabel").hasClass("is-checked");
+    if (check === false){
+      $("#buildings").prop("checked", true);
+      $("#buildLabel").addClass("is-checked");
+    } else if (check === true){
+      $("#buildings").removeProp("checked", true);
+      $("#buildLabel").removeClass("is-checked");
+    }
+    });
+    $("#parkingLots").click(function(){
+    var check = $("#parkingLabel").hasClass("is-checked");
+    if (check === false){
+      $("#parkingLots").prop("checked", true);
+      $("#parkingLabel").addClass("is-checked");
+    } else if (check === true){
+      $("#parkingLots").removeProp("checked", true);
+      $("#parkingLabel").removeClass("is-checked");
+    }
+    });
+    $("#accEnt").click(function(){
+    var check = $("#accEntLabel").hasClass("is-checked");
+    if (check === false){
+      $("#accEnt").prop("checked", true);
+      $("#accEntLabel").addClass("is-checked");
+    } else if (check === true){
+      $("#accEnt").removeProp("checked", true);
+      $("#accEntLabel").removeClass("is-checked");
+    }
+    });
+    $("#accPar").click(function(){
+    var check = $("#accParLabel").hasClass("is-checked");
+    if (check === false){
+      $("#accPar").prop("checked", true);
+      $("#accParLabel").addClass("is-checked");
+    } else if (check === true){
+      $("#accPar").removeProp("checked", true);
+      $("#accParLabel").removeClass("is-checked");
+    }
+    });
+    $("#emergency").click(function(){
+    var check = $("#emergencyLabel").hasClass("is-checked");
+    if (check === false){
+      $("#emergency").prop("checked", true);
+      $("#emergencyLabel").addClass("is-checked");
+    } else if (check === true){
+      $("#emergency").removeProp("checked", true);
+      $("#emergencyLabel").removeClass("is-checked");
+    }
+    });
+    $("#sust").click(function(){
+    var check = $("#sustLabel").hasClass("is-checked");
+    if (check === false){
+      $("#sust").prop("checked", true);
+      $("#sustLabel").addClass("is-checked");
+    } else if (check === true){
+      $("#sust").removeProp("checked", true);
+      $("#sustLabel").removeClass("is-checked");
+    }
+    });
+    $("#gender").click(function(){
+    var check = $("#genderLabel").hasClass("is-checked");
+    if (check === false){
+      $("#gender").prop("checked", true);
+      $("#genderLabel").addClass("is-checked");
+    } else if (check === true){
+      $("#gender").removeProp("checked", true);
+      $("#genderLabel").removeClass("is-checked");
+    }
+    });
     // event listener for the select all button attached to function clicking
     $("#selectallcheck").click(function(){
 
@@ -264,7 +336,77 @@
       }
     });
 
-
+  // listeners with same disclaimer as lines 206-208
+  $("#accaF").click(function(){
+  var check = $("#accaFLabel").hasClass("is-checked");
+  if (check === false){
+    $("#accaF").prop("checked", true);
+    $("#accaFLabel").addClass("is-checked");
+  } else if (check === true){
+    $("#accaF").removeProp("checked", true);
+    $("#accaFLabel").removeClass("is-checked");
+  }
+  });
+  $("#ath").click(function(){
+  var check = $("#athLabel").hasClass("is-checked");
+  if (check === false){
+    $("#ath").prop("checked", true);
+    $("#athLabel").addClass("is-checked");
+  } else if (check === true){
+    $("#ath").removeProp("checked", true);
+    $("#athLabel").removeClass("is-checked");
+  }
+  });
+  $("#accS").click(function(){
+  var check = $("#accSLabel").hasClass("is-checked");
+  if (check === false){
+    $("#accS").prop("checked", true);
+    $("#accSLabel").addClass("is-checked");
+  } else if (check === true){
+    $("#accS").removeProp("checked", true);
+    $("#accSLabel").removeClass("is-checked");
+  }
+  });
+  $("#campS").click(function(){
+  var check = $("#campSLabel").hasClass("is-checked");
+  if (check === false){
+    $("#campS").prop("checked", true);
+    $("#campSLabel").addClass("is-checked");
+  } else if (check === true){
+    $("#campS").removeProp("checked", true);
+    $("#campSLabel").removeClass("is-checked");
+  }
+  });
+  $("#resH").click(function(){
+  var check = $("#resHLabel").hasClass("is-checked");
+  if (check === false){
+    $("#resH").prop("checked", true);
+    $("#resHLabel").addClass("is-checked");
+  } else if (check === true){
+    $("#resH").removeProp("checked", true);
+    $("#resHLabel").removeClass("is-checked");
+  }
+  });
+  $("#dining").click(function(){
+  var check = $("#diningLabel").hasClass("is-checked");
+  if (check === false){
+    $("#dining").prop("checked", true);
+    $("#diningLabel").addClass("is-checked");
+  } else if (check === true){
+    $("#dining").removeProp("checked", true);
+    $("#diningLabel").removeClass("is-checked");
+  }
+  });
+  $("#stuR").click(function(){
+  var check = $("#stuRLabel").hasClass("is-checked");
+  if (check === false){
+    $("#stuR").prop("checked", true);
+    $("#stuRLabel").addClass("is-checked");
+  } else if (check === true){
+    $("#stuR").removeProp("checked", true);
+    $("#stuRLabel").removeClass("is-checked");
+  }
+  });
   // Start second Select All (identical to above so I will omit comments explaining functionality)
 
   $("#selectallcheck2").click(function(){
