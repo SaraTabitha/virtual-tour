@@ -1401,23 +1401,43 @@ var titanTwoMarker = new google.maps.Marker({
             removeStuR();
           }
         });
-        // adding gruenhagen card for gruenhagen marker
-        // document.getElementById('gruenhagenHover');
+
+        // adding gruenhagen hover for gruenhagen marker
         var gruenhagenHover = '<div class="generalHover">' +
         '<img src="images/campuspictures/gruenhagen.jpeg">' +
         '<div class="hoverDiv">' +
         '<h1 class="headHover text">Gruenhagen Conference Center</h1>' +
         '<p class="paraHover text"> 208 Osceola Avenue</p>' +
         '<p class="paraHover text"> Oshkosh, WI 54901</p>' +
-        '<a href="#" class="text link">Click to View More</a>'+
+        '<a href="#" class="text link">Click for more info</a>'+
         '</div>'+
         '</div>';
         var gruenhagenHoverCard = new google.maps.InfoWindow({
           content: gruenhagenHover,
-
-
         });
-        gruenhagenMarker.addListener('mouseover', function(){
+        // if this is put inside of the setBuildings function it creates a bug
+        // where if you spam click "buildings" it creates a bunch
+        // of gruenhagen hover popups
+        gruenhagenMarker.addListener('click', function(){
           gruenhagenHoverCard.open(map,gruenhagenMarker);
         });
+
+        // a&c hover
+        var acHover = '<div class="generalHover">' +
+        '<img src="images/campuspictures/artscommunications.jpeg">' +
+        '<div class="hoverDiv">' +
+        '<h1 class="headHover text">Arts &amp; Communications Center</h1>' +
+        '<p class="paraHover text"> 1001 Elmwood Avenue</p>' +
+        '<p class="paraHover text"> Oshkosh, WI 54901</p>' +
+        '<a href="#" class="text link">Click for more info</a>'+
+        '</div>'+
+        '</div>';
+        var acHoverCard = new google.maps.InfoWindow({
+          content: acHover,
+        });
+        acMarker.addListener('click', function(){
+          acHoverCard.open(map,acMarker);
+        });
+
+
   }
