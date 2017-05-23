@@ -391,26 +391,27 @@ html, body, main, .mdl-layout__content, .page-content, #map {
   }
     /*gruenhagen hover*/
    .generalHover{
-      height: 100px;
-      width: 208px;
+      height: 105px;
+      width: 248px;
 
     }
 
     img{
 
-      width: 50px;
-      height: 104px;
+      width: 70px;
+      height: 105px;
       display: inline-block;
       float: left;
+
 
 
     }
     .hoverDiv{
       display: inline-block;
       height: 100px;
-      width: 150px;
+      width: 170px;
       float: right;
-      padding: 2px;
+      padding: 4px;
 
 
     }
@@ -427,7 +428,7 @@ html, body, main, .mdl-layout__content, .page-content, #map {
       position: relative;
       display: block;
       font-size: 12px;
-      width: 150px;
+      width: 155px;
       margin: 0px;
 
     }

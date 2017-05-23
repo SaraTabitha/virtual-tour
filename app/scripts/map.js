@@ -119,7 +119,7 @@ function initMap() {
           position: buildings[2],
           icon: image
         });
-        var fredericMarker = new google.maps.Marker({
+        var fredricMarker = new google.maps.Marker({
           position: buildings[3],
           icon: image
         });
@@ -293,7 +293,7 @@ function initMap() {
           gruenhagenMarker.setMap(map);
           acMarker.setMap(map);
           eastMarker.setMap(map);
-          fredericMarker.setMap(map);
+          fredricMarker.setMap(map);
           heatingMarker.setMap(map);
           buckstaffMarker.setMap(map);
           halseyMarker.setMap(map);
@@ -341,7 +341,7 @@ function initMap() {
           gruenhagenMarker.setMap(null);
           acMarker.setMap(null);
           eastMarker.setMap(null);
-          fredericMarker.setMap(null);
+          fredricMarker.setMap(null);
           heatingMarker.setMap(null);
           buckstaffMarker.setMap(null);
           halseyMarker.setMap(null);
@@ -698,7 +698,7 @@ function initMap() {
         // accessible entries (buildings)
         function setAccEnt(){
           acMarker.setMap(map);
-          fredericMarker.setMap(map);
+          fredricMarker.setMap(map);
           halseyMarker.setMap(map);
           swartMarker.setMap(map);
           harringtonMarker.setMap(map);
@@ -723,7 +723,7 @@ function initMap() {
         }
         function removeAccEnt(){
           acMarker.setMap(null);
-          fredericMarker.setMap(null);
+          fredricMarker.setMap(null);
           halseyMarker.setMap(null);
           swartMarker.setMap(null);
           harringtonMarker.setMap(null);
@@ -1191,7 +1191,7 @@ var titanTwoMarker = new google.maps.Marker({
         // functions for categories select/remove markers
         function setAccaF(){
           acMarker.setMap(map);
-          fredericMarker.setMap(map);
+          fredricMarker.setMap(map);
           halseyMarker.setMap(map);
           harringtonMarker.setMap(map);
           swartMarker.setMap(map);
@@ -1207,7 +1207,7 @@ var titanTwoMarker = new google.maps.Marker({
         }
         function removeAccaF(){
           acMarker.setMap(null);
-          fredericMarker.setMap(null);
+          fredricMarker.setMap(null);
           halseyMarker.setMap(null);
           harringtonMarker.setMap(null);
           swartMarker.setMap(null);
@@ -1439,5 +1439,52 @@ var titanTwoMarker = new google.maps.Marker({
           acHoverCard.open(map,acMarker);
         });
 
-
+        var eastHover = '<div class="generalHover">' +
+        '<img src="images/campuspictures/easthall.jpg">' +
+        '<div class="hoverDiv">' +
+        '<h1 class="headHover text">East Hall</h1>' +
+        '<p class="paraHover text"> New York Ave. & Jackson St.</p>' +
+        '<p class="paraHover text"> Oshkosh, WI 54901</p>' +
+        '<br>'+
+        '<a href="#" class="text link">Click for more info</a>'+
+        '</div>'+
+        '</div>';
+        var eastHoverCard = new google.maps.InfoWindow({
+          content: eastHover,
+        });
+        eastMarker.addListener('click', function(){
+          eastHoverCard.open(map,eastMarker);
+        });
+        var fredricHover = '<div class="generalHover">' +
+        '<img src="images/campuspictures/fredricmarch.jpeg">' +
+        '<div class="hoverDiv">' +
+        '<h1 class="headHover text">Fredric March Theatre</h1>' +
+        '<p class="paraHover text"> 926 Woodland Avenue</p>' +
+        '<p class="paraHover text"> Oshkosh, WI 54901</p>' +
+        '<br>'+
+        '<a href="#" class="text link">Click for more info</a>'+
+        '</div>'+
+        '</div>';
+        var fredricHoverCard = new google.maps.InfoWindow({
+          content: fredricHover,
+        });
+        fredricMarker.addListener('click', function(){
+          fredricHoverCard.open(map,fredricMarker);
+        });
+        var heatingHover = '<div class="generalHover">' +
+        '<img src="images/campuspictures/heatingplant.jpeg">' +
+        '<div class="hoverDiv">' +
+        '<h1 class="headHover text">Heating Plant</h1>' +
+        '<p class="paraHover text"> 1010 Woodland Avenue</p>' +
+        '<p class="paraHover text"> Oshkosh, WI 54901</p>' +
+        '<br>'+
+        '<a href="#" class="text link">Click for more info</a>'+
+        '</div>'+
+        '</div>';
+        var heatingHoverCard = new google.maps.InfoWindow({
+          content: heatingHover,
+        });
+        heatingMarker.addListener('click', function(){
+          heatingHoverCard.open(map,heatingMarker);
+        });
   }
