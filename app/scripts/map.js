@@ -1819,4 +1819,83 @@ var titanTwoMarker = new google.maps.Marker({
         parkingRampMarker.addListener('click', function(){
           parkingRampHoverCard.open(map, parkingRampMarker);
         });
+        var blackhawkHover = '<div class="generalHover">' +
+        '<img src="images/campuspictures/blackhawk.jpeg">' +
+        '<div class="hoverDiv">' +
+        '<h1 class="headHover text">Blackhawk Commons</h1>' +
+        '<p class="paraHover text"> 725 Algoma Boulevard</p>' +
+        '<p class="paraHover text"> Oshkosh, WI 54901</p>' +
+        '<br>' +
+        '<a href="#" class="text link">Click for more info</a>'+
+        '</div>'+
+        '</div>';
+        var blackhawkHoverCard = new google.maps.InfoWindow({
+          content: blackhawkHover,
+        });
+        blackhawkMarker.addListener('click', function(){
+          blackhawkHoverCard.open(map, blackhawkMarker);
+        });
+        var recreationHover = '<div class="generalHover">' +
+        '<img src="images/campuspictures/srwc.jpeg">' +
+        '<div class="hoverDiv">' +
+        '<h1 class="headHover text">Student Recreation &amp; Wellness Center</h1>' +
+        '<p class="paraHover text"> 735 Pearl Avenue</p>' +
+        '<p class="paraHover text"> Oshkosh, WI 54901</p>' +
+        '<a href="#" class="text link">Click for more info</a>'+
+        '</div>'+
+        '</div>';
+        var recreationHoverCard = new google.maps.InfoWindow({
+          content: recreationHover,
+        });
+        recreationMarker.addListener('click', function(){
+          recreationHoverCard.open(map, recreationMarker);
+        });
+        var reeveHover = '<div class="generalHover">' +
+        '<img src="images/campuspictures/reeve.jpeg">' +
+        '<div class="hoverDiv">' +
+        '<h1 class="headHover text">Reeve Memorial Union</h1>' +
+        '<p class="paraHover text"> 748 Algoma Boulevard</p>' +
+        '<p class="paraHover text"> Oshkosh, WI 54901</p>' +
+        '<br>' +
+        '<a href="#" class="text link">Click for more info</a>'+
+        '</div>'+
+        '</div>';
+        var reeveHoverCard = new google.maps.InfoWindow({
+          content: reeveHover,
+        });
+          reeveMarker.addListener('click', function(){
+          reeveHoverCard.open(map, reeveMarker);
+        });
+        var successHover = '<div class="generalHover">' +
+        '<img src="images/campuspictures/studentsuccess.jpeg">' +
+        '<div class="hoverDiv">' +
+        '<h1 class="headHover text">Student Success Center</h1>' +
+        '<p class="paraHover text"> 750 Elmwood Avenue</p>' +
+        '<p class="paraHover text"> Oshkosh, WI 54901</p>' +
+        '<br>' +
+        '<a href="#" class="text link">Click for more info</a>'+
+        '</div>'+
+        '</div>';
+        var successHoverCard = new google.maps.InfoWindow({
+          content: successHover,
+        });
+          successMarker.addListener('click', function(){
+          successHoverCard.open(map, successMarker);
+        });
+        var evansHover = '<div class="generalHover">' +
+        '<img src="images/campuspictures/evans.jpeg">' +
+        '<div class="hoverDiv">' +
+        '<h1 class="headHover text">Evans Hall</h1>' +
+        '<p class="paraHover text"> 727 W. Lincoln Avenue</p>' +
+        '<p class="paraHover text"> Oshkosh, WI 54901</p>' +
+        '<br>' +
+        '<a href="#" class="text link">Click for more info</a>'+
+        '</div>'+
+        '</div>';
+        var evansHoverCard = new google.maps.InfoWindow({
+          content: evansHover,
+        });
+          evansMarker.addListener('click', function(){
+          evansHoverCard.open(map, evansMarker);
+        });
   }
