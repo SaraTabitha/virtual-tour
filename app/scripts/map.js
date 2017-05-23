@@ -1678,4 +1678,145 @@ var titanTwoMarker = new google.maps.Marker({
         ceramicsMarker.addListener('click', function(){
           ceramicsHoverCard.open(map, ceramicsMarker);
         });
+        var environmentalHover = '<div class="generalHover">' +
+        '<img src="images/campuspictures/aquaticstudiescenter.jpeg">' +
+        '<div class="hoverDiv">' +
+        '<h1 class="headHover text">Environmental Research and Innovation Center</h1>' +
+        '<p class="paraHover text"> 83 Pearl Avenue</p>' +
+        '<p class="paraHover text"> Oshkosh, WI 54901</p>' +
+        '<a href="#" class="text link">Click for more info</a>'+
+        '</div>'+
+        '</div>';
+        var environmentalHoverCard = new google.maps.InfoWindow({
+          content: environmentalHover,
+        });
+        environmentalMarker.addListener('click', function(){
+          environmentalHoverCard.open(map, environmentalMarker);
+        });
+        var radfordHover = '<div class="generalHover">' +
+        '<img src="images/campuspictures/radford.jpeg">' +
+        '<div class="hoverDiv">' +
+        '<h1 class="headHover text">Radford Hall</h1>' +
+        '<p class="paraHover text"> 777 Algoma Boulevard</p>' +
+        '<p class="paraHover text"> Oshkosh, WI 54901</p>' +
+        '<br>'+
+        '<a href="#" class="text link">Click for more info</a>'+
+        '</div>'+
+        '</div>';
+        var radfordHoverCard = new google.maps.InfoWindow({
+          content: radfordHover,
+        });
+        radfordMarker.addListener('click', function(){
+          radfordHoverCard.open(map, radfordMarker);
+        });
+        var donnerHover = '<div class="generalHover">' +
+        '<img src="images/campuspictures/donner.jpeg">' +
+        '<div class="hoverDiv">' +
+        '<h1 class="headHover text">Donner Hall</h1>' +
+        '<p class="paraHover text"> 820 High Avenue</p>' +
+        '<p class="paraHover text"> Oshkosh, WI 54901</p>' +
+        '<br>'+
+        '<a href="#" class="text link">Click for more info</a>'+
+        '</div>'+
+        '</div>';
+        var donnerHoverCard = new google.maps.InfoWindow({
+          content: donnerHover,
+        });
+        donnerMarker.addListener('click', function(){
+          donnerHoverCard.open(map, donnerMarker);
+        });
+        var kolfHover = '<div class="generalHover">' +
+        '<img src="images/campuspictures/kolf.jpeg">' +
+        '<div class="hoverDiv">' +
+        '<h1 class="headHover text">Kolf Sports Center</h1>' +
+        '<p class="paraHover text"> 785 High Avenue</p>' +
+        '<p class="paraHover text"> Oshkosh, WI 54901</p>' +
+        '<br>'+
+        '<a href="#" class="text link">Click for more info</a>'+
+        '</div>'+
+        '</div>';
+        var kolfHoverCard = new google.maps.InfoWindow({
+          content: kolfHover,
+        });
+        kolfMarker.addListener('click', function(){
+          kolfHoverCard.open(map, kolfMarker);
+        });
+        var websterHover = '<div class="generalHover">' +
+        '<img src="images/campuspictures/webster.jpeg">' +
+        '<div class="hoverDiv">' +
+        '<h1 class="headHover text">Webster Hall</h1>' +
+        '<p class="paraHover text"> 810 High Avenue</p>' +
+        '<p class="paraHover text"> Oshkosh, WI 54901</p>' +
+        '<br>'+
+        '<a href="#" class="text link">Click for more info</a>'+
+        '</div>'+
+        '</div>';
+        var websterHoverCard = new google.maps.InfoWindow({
+          content: websterHover,
+        });
+        websterMarker.addListener('click', function(){
+          websterHoverCard.open(map, websterMarker);
+        });
+        var taylorHover = '<div class="generalHover">' +
+        '<img src="images/campuspictures/taylor.jpeg">' +
+        '<div class="hoverDiv">' +
+        '<h1 class="headHover text">Taylor Hall</h1>' +
+        '<p class="paraHover text"> 780 High Avenue</p>' +
+        '<p class="paraHover text"> Oshkosh, WI 54901</p>' +
+        '<br>'+
+        '<a href="#" class="text link">Click for more info</a>'+
+        '</div>'+
+        '</div>';
+        var taylorHoverCard = new google.maps.InfoWindow({
+          content: taylorHover,
+        });
+        taylorMarker.addListener('click', function(){
+          taylorHoverCard.open(map, taylorMarker);
+        });
+        var multiculturalHover = '<div class="generalHover">' +
+        '<img src="images/campuspictures/multiculturaleducation.jpeg">' +
+        '<div class="hoverDiv">' +
+        '<h1 class="headHover text">Multicultural Education Center</h1>' +
+        '<p class="paraHover text"> 751 Algoma Boulevard</p>' +
+        '<p class="paraHover text"> Oshkosh, WI 54901</p>' +
+        '<a href="#" class="text link">Click for more info</a>'+
+        '</div>'+
+        '</div>';
+        var multiculturalHoverCard = new google.maps.InfoWindow({
+          content: multiculturalHover,
+        });
+        multiculturalMarker.addListener('click', function(){
+          multiculturalHoverCard.open(map, multiculturalMarker);
+        });
+        var policeHover = '<div class="generalHover">' +
+        '<img src="images/campuspictures/universitypolice.jpeg">' +
+        '<div class="hoverDiv">' +
+        '<h1 class="headHover text">University Police</h1>' +
+        '<p class="paraHover text"> 738 High Avenue</p>' +
+        '<p class="paraHover text"> Oshkosh, WI 54901</p>' +
+        '<br>' +
+        '<a href="#" class="text link">Click for more info</a>'+
+        '</div>'+
+        '</div>';
+        var policeHoverCard = new google.maps.InfoWindow({
+          content: policeHover,
+        });
+        policeMarker.addListener('click', function(){
+          policeHoverCard.open(map, policeMarker);
+        });
+        var parkingRampHover = '<div class="generalHover">' +
+        '<img src="images/campuspictures/parkingramp.jpeg">' +
+        '<div class="hoverDiv">' +
+        '<h1 class="headHover text">High Avenue Parking Ramp</h1>' +
+        '<p class="paraHover text"> 725 High Avenue</p>' +
+        '<p class="paraHover text"> Oshkosh, WI 54901</p>' +
+        '<a href="#" class="text link">Click for more info</a>'+
+        '</div>'+
+        '</div>';
+        var parkingRampHoverCard = new google.maps.InfoWindow({
+          content: parkingRampHover,
+        });
+        parkingRampMarker.addListener('click', function(){
+          parkingRampHoverCard.open(map, parkingRampMarker);
+        });
   }
