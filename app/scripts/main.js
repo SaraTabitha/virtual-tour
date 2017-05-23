@@ -267,7 +267,7 @@
     }
     });
     $("#gender").click(function(){
-    var check = $("#genderLabel").prop("checked");
+    var check = !$("#gender").prop("checked");
     if (check === false){
       $("#gender").prop("checked", true);
       $("#genderLabel").addClass("is-checked");
@@ -338,7 +338,7 @@
 
   // listeners with same disclaimer as lines 206-208
   $("#accaF").click(function(){
-  var check = $("#accaFLabel").hasClass("is-checked");
+  var check = !$("#accaF").prop("checked");
   if (check === false){
     $("#accaF").prop("checked", true);
     $("#accaFLabel").addClass("is-checked");
@@ -348,7 +348,7 @@
   }
   });
   $("#ath").click(function(){
-  var check = $("#athLabel").hasClass("is-checked");
+  var check = !$("#ath").prop("checked");
   if (check === false){
     $("#ath").prop("checked", true);
     $("#athLabel").addClass("is-checked");
@@ -358,7 +358,7 @@
   }
   });
   $("#accS").click(function(){
-  var check = $("#accSLabel").hasClass("is-checked");
+  var check = !$("#accS").prop("checked");
   if (check === false){
     $("#accS").prop("checked", true);
     $("#accSLabel").addClass("is-checked");
@@ -368,7 +368,7 @@
   }
   });
   $("#campS").click(function(){
-  var check = $("#campSLabel").hasClass("is-checked");
+  var check = !$("#campS").prop("checked");
   if (check === false){
     $("#campS").prop("checked", true);
     $("#campSLabel").addClass("is-checked");
@@ -378,7 +378,7 @@
   }
   });
   $("#resH").click(function(){
-  var check = $("#resHLabel").hasClass("is-checked");
+  var check = !$("#resH").prop("checked");
   if (check === false){
     $("#resH").prop("checked", true);
     $("#resHLabel").addClass("is-checked");
@@ -388,7 +388,7 @@
   }
   });
   $("#dining").click(function(){
-  var check = $("#diningLabel").hasClass("is-checked");
+  var check = !$("#dining").prop("checked");
   if (check === false){
     $("#dining").prop("checked", true);
     $("#diningLabel").addClass("is-checked");
@@ -398,7 +398,7 @@
   }
   });
   $("#stuR").click(function(){
-  var check = $("#stuRLabel").hasClass("is-checked");
+  var check = !$("#stuR").prop("checked");
   if (check === false){
     $("#stuR").prop("checked", true);
     $("#stuRLabel").addClass("is-checked");

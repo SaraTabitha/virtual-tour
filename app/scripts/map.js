@@ -1222,7 +1222,7 @@ var titanTwoMarker = new google.maps.Marker({
           ceramicsMarker.setMap(null);
         }
         $("#accaFLabel").click(function(){
-          var checkParking = !$("#accaFLabel").hasClass("is-checked");
+          var checkParking = !$("#accaF").prop("checked");
           if (checkParking === false){
             setAccaF();
           } else if (checkParking === true){
@@ -1247,7 +1247,7 @@ var titanTwoMarker = new google.maps.Marker({
           titanMarker.setMap(null);
         }
         $("#athLabel").click(function(){
-          var checkParking = !$("#athLabel").hasClass("is-checked");
+          var checkParking = !$("#ath").prop("checked");
           if (checkParking === false){
             setAth();
           } else if (checkParking === true){
@@ -1268,7 +1268,7 @@ var titanTwoMarker = new google.maps.Marker({
           nursingMarker.setMap(null);
         }
         $("#accSLabel").click(function(){
-          var checkParking = !$("#accSLabel").hasClass("is-checked");
+          var checkParking = !$("#accS").prop("checked");
           if (checkParking === false){
             setAccaS();
           } else if (checkParking === true){
@@ -1299,7 +1299,7 @@ var titanTwoMarker = new google.maps.Marker({
           dempseyMarker.setMap(null);
         }
         $("#campSLabel").click(function(){
-          var checkParking = !$("#campSLabel").hasClass("is-checked");
+          var checkParking = !$("#campS").prop("checked");
           if (checkParking === false){
             setCampS();
           } else if (checkParking === true){
@@ -1330,7 +1330,7 @@ var titanTwoMarker = new google.maps.Marker({
           scottMarker.setMap(null);
         }
         $("#resHLabel").click(function(){
-          var checkParking = !$("#resHLabel").hasClass("is-checked");
+          var checkParking = !$("#resH").prop("checked");
           if (checkParking === false){
             setResH();
           } else if (checkParking === true){
@@ -1355,7 +1355,7 @@ var titanTwoMarker = new google.maps.Marker({
           halseyMarker.setMap(null);
         }
         $("#diningLabel").click(function(){
-          var checkParking = !$("#diningLabel").hasClass("is-checked");
+          var checkParking = !$("#dining").prop("checked");
           if (checkParking === false){
             setDining();
           } else if (checkParking === true){
@@ -1372,7 +1372,7 @@ var titanTwoMarker = new google.maps.Marker({
           reeveMarker.setMap(null);
         }
         $("#stuRLabel").click(function(){
-          var checkParking = !$("#stuRLabel").hasClass("is-checked");
+          var checkParking = !$("#stuR").prop("checked");
           if (checkParking === false){
             setStuR();
           } else if (checkParking === true){
