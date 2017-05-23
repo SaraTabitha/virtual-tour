@@ -106,6 +106,7 @@ function initMap() {
 
         ];
         // create markers for buildings
+
         var gruenhagenMarker = new google.maps.Marker({
           position: buildings[0],
           icon: image
@@ -286,6 +287,7 @@ function initMap() {
           position: buildings[44],
           icon: image
         });
+
         // declaring set and remove functions for buildings
         function setBuilding(){
           gruenhagenMarker.setMap(map);
@@ -384,7 +386,7 @@ function initMap() {
         }
         // on click function for selecting the Building checkbox
         $("#buildLabel").click(function(){
-        var check = !$("#buildLabel").hasClass("is-checked");
+        var check = !$("#buildings").prop("checked");
         if (check === false){
           setBuilding();
         } else if (check === true){
@@ -684,7 +686,7 @@ function initMap() {
         }
         // on click function for setting and removing markers
         $("#parkingLabel").click(function(){
-          var checkParking = !$("#parkingLabel").hasClass("is-checked");
+          var checkParking = !$("#parkingLots").prop("checked");
           if (checkParking === false){
             setParkingLots();
           } else if (checkParking === true){
@@ -746,7 +748,7 @@ function initMap() {
         }
         // on click function for accessible entries
         $("#accEntLabel").click(function(){
-          var checkParking = !$("#accEntLabel").hasClass("is-checked");
+          var checkParking = !$("#accEnt").prop("checked");
           if (checkParking === false){
             setAccEnt();
           } else if (checkParking === true){
@@ -830,7 +832,7 @@ var titanTwoMarker = new google.maps.Marker({
         }
         // on click function for accessible parking markers
         $("#accParLabel").click(function(){
-          var checkParking = !$("#accParLabel").hasClass("is-checked");
+          var checkParking = !$("#accPar").prop("checked");
           if (checkParking === false){
             setAccPar();
           } else if (checkParking === true){
@@ -1073,7 +1075,7 @@ var titanTwoMarker = new google.maps.Marker({
           }
           // on click function for setting emergency phone markers
           $("#emergencyLabel").click(function(){
-            var checkParking = !$("#emergencyLabel").hasClass("is-checked");
+            var checkParking = !$("#emergency").prop("checked");
             if (checkParking === false){
               setEmergencyPhones();
             } else if (checkParking === true){
@@ -1112,7 +1114,7 @@ var titanTwoMarker = new google.maps.Marker({
         }
         // on click function for sustainability
         $("#sustLabel").click(function(){
-          var checkParking = !$("#sustLabel").hasClass("is-checked");
+          var checkParking = !$("#sust").prop("checked");
           if (checkParking === false){
             setSust();
           } else if (checkParking === true){
@@ -1155,7 +1157,7 @@ var titanTwoMarker = new google.maps.Marker({
         }
         // on click function for gender markers
         $("#genderLabel").click(function(){
-          var checkParking = !$("#genderLabel").hasClass("is-checked");
+          var checkParking = !$("#gender").prop("checked");
           if (checkParking === false){
             setGender();
           } else if (checkParking === true){
@@ -1402,13 +1404,11 @@ var titanTwoMarker = new google.maps.Marker({
         // adding gruenhagen card for gruenhagen marker
         // document.getElementById('gruenhagenHover');
         var gruenhagenHover = '<div class="generalHover">' +
-
         '<img src="images/campuspictures/gruenhagen.jpeg">' +
-
         '<h1 class="headHover text">Gruenhagen Conference Center</h1>' +
         '<p class="paraHover text"> 208 Osceola Avenue</p>' +
         '<p class="paraHover text">Oshkosh, WI 54901</p>' +
-      
+
         '</div>';
         var gruenhagenHoverCard = new google.maps.InfoWindow({
           content: gruenhagenHover,

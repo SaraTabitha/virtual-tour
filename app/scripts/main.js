@@ -207,7 +207,7 @@
     // the user cannot recheck the individual boxes properly
     // building on click/off check box
     $("#buildings").click(function(){
-    var check = $("#buildLabel").hasClass("is-checked");
+    var check = !$("#buildings").prop("checked");
     if (check === false){
       $("#buildings").prop("checked", true);
       $("#buildLabel").addClass("is-checked");
@@ -217,7 +217,7 @@
     }
     });
     $("#parkingLots").click(function(){
-    var check = $("#parkingLabel").hasClass("is-checked");
+    var check = !$("#parkingLots").prop("checked");
     if (check === false){
       $("#parkingLots").prop("checked", true);
       $("#parkingLabel").addClass("is-checked");
@@ -227,7 +227,7 @@
     }
     });
     $("#accEnt").click(function(){
-    var check = $("#accEntLabel").hasClass("is-checked");
+    var check = !$("#accEnt").prop("checked");
     if (check === false){
       $("#accEnt").prop("checked", true);
       $("#accEntLabel").addClass("is-checked");
@@ -237,7 +237,7 @@
     }
     });
     $("#accPar").click(function(){
-    var check = $("#accParLabel").hasClass("is-checked");
+    var check = !$("#accPar").prop("checked");
     if (check === false){
       $("#accPar").prop("checked", true);
       $("#accParLabel").addClass("is-checked");
@@ -247,7 +247,7 @@
     }
     });
     $("#emergency").click(function(){
-    var check = $("#emergencyLabel").hasClass("is-checked");
+    var check = !$("#emergency").prop("checked");
     if (check === false){
       $("#emergency").prop("checked", true);
       $("#emergencyLabel").addClass("is-checked");
@@ -257,7 +257,7 @@
     }
     });
     $("#sust").click(function(){
-    var check = $("#sustLabel").hasClass("is-checked");
+    var check = !$("#sust").prop("checked");
     if (check === false){
       $("#sust").prop("checked", true);
       $("#sustLabel").addClass("is-checked");
@@ -267,7 +267,7 @@
     }
     });
     $("#gender").click(function(){
-    var check = $("#genderLabel").hasClass("is-checked");
+    var check = $("#genderLabel").prop("checked");
     if (check === false){
       $("#gender").prop("checked", true);
       $("#genderLabel").addClass("is-checked");
