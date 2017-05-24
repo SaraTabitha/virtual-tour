@@ -1619,7 +1619,7 @@ function initMap() {
             removeAccEnt();
           }
         });
-// creating extra markers for accessible parking locations
+// markers for accessible parking locations
 var womensCenter = {lat: 44.024816, lng: -88.546638};
 var womensCenterMarker = new google.maps.Marker({
   position: womensCenter,
@@ -1637,60 +1637,146 @@ var titanTwoMarker = new google.maps.Marker({
   position: titanTwo,
   icon: image
 });
+var elevenAccParMarker = new google.maps.Marker({
+  position: parkingLots[0],
+  icon: image
+});
+var fourAccParMarker = new google.maps.Marker({
+  position: parkingLots[5],
+  icon: image
+});
+var fouraAccParMarker = new google.maps.Marker({
+  position: parkingLots[6],
+  icon: image
+});
+var sixteenAccParMarker = new google.maps.Marker({
+  position: parkingLots[7],
+  icon: image
+});
+var seventeenAccParMarker = new google.maps.Marker({
+  position: parkingLots[8],
+  icon: image
+});
+var twentynineAccParMarker = new google.maps.Marker({
+  position: parkingLots[9],
+  icon: image
+});
+var twentyfiveAccParMarker = new google.maps.Marker({
+  position: parkingLots[10],
+  icon: image
+});
+var thirtythreeAccParMarker = new google.maps.Marker({
+  position: parkingLots[12],
+  icon: image
+});
+var fourteenaAccParMarker = new google.maps.Marker({
+  position: parkingLots[16],
+  icon: image
+});
+var sevenaAccParMarker = new google.maps.Marker({
+  position: parkingLots[22],
+  icon: image
+});
+var thirteenAccParMarker = new google.maps.Marker({
+  position: parkingLots[25],
+  icon: image
+});
+var thirtyfourAccParMarker = new google.maps.Marker({
+  position: parkingLots[13],
+  icon: image
+});
+var twentyeightAccParMarker = new google.maps.Marker({
+  position: parkingLots[14],
+  icon: image
+});
+var twentythreeAccParMarker = new google.maps.Marker({
+  position: parkingLots[15],
+  icon: image
+});
+var fifteenAccParMarker = new google.maps.Marker({
+  position: parkingLots[23],
+  icon: image
+});
+var thirtytwoAccParMarker = new google.maps.Marker({
+  position: parkingLots[24],
+  icon: image
+});
+var tenAccParMarker = new google.maps.Marker({
+  position: parkingLots[29],
+  icon: image
+});
+var twelveAccParMarker = new google.maps.Marker({
+  position: parkingLots[26],
+  icon: image
+});
+var sixaAccParMarker = new google.maps.Marker({
+  position: parkingLots[27],
+  icon: image
+});
+var sixAccParMarker = new google.maps.Marker({
+  position: parkingLots[28],
+  icon: image
+});
+var eighteenAccParMarker = new google.maps.Marker({
+  position: parkingLots[32],
+  icon: image
+});
+// will need to put hover for parking here
+
 // accessible parking set markers
         function setAccPar(){
-          elevenMarker.setMap(map);
-          fourMarker.setMap(map);
-          fouraMarker.setMap(map);
-          sixteenMarker.setMap(map);
-          seventeenMarker.setMap(map);
-          twentynineMarker.setMap(map);
-          twentyfiveMarker.setMap(map);
-          thirtythreeMarker.setMap(map);
-          fourteenaMarker.setMap(map);
-          sevenaMarker.setMap(map);
-          thirteenMarker.setMap(map);
-          thirtyfourMarker.setMap(map);
-          twentyeightMarker.setMap(map);
-          twentythreeMarker.setMap(map);
+          elevenAccParMarker.setMap(map);
+          fourAccParMarker.setMap(map);
+          fouraAccParMarker.setMap(map);
+          sixteenAccParMarker.setMap(map);
+          seventeenAccParMarker.setMap(map);
+          twentynineAccParMarker.setMap(map);
+          twentyfiveAccParMarker.setMap(map);
+          thirtythreeAccParMarker.setMap(map);
+          fourteenaAccParMarker.setMap(map);
+          sevenaAccParMarker.setMap(map);
+          thirteenAccParMarker.setMap(map);
+          thirtyfourAccParMarker.setMap(map);
+          twentyeightAccParMarker.setMap(map);
+          twentythreeAccParMarker.setMap(map);
           womensCenterMarker.setMap(map);
-          fifteenMarker.setMap(map);
-          thirtytwoMarker.setMap(map);
+          fifteenAccParMarker.setMap(map);
+          thirtytwoAccParMarker.setMap(map);
           parkingRampMarker.setMap(map);
-          tenMarker.setMap(map);
-          twelveMarker.setMap(map);
-          sixaMarker.setMap(map);
-          sixMarker.setMap(map);
-          eighteenMarker.setMap(map);
+          tenAccParMarker.setMap(map);
+          twelveAccParMarker.setMap(map);
+          sixaAccParMarker.setMap(map);
+          sixAccParMarker.setMap(map);
+          eighteenAccParMarker.setMap(map);
           titanOneMarker.setMap(map);
           titanTwoMarker.setMap(map);
 
         }
         // remove accessible parking markers
         function removeAccPar(){
-          elevenMarker.setMap(null);
-          fourMarker.setMap(null);
-          fouraMarker.setMap(null);
-          sixteenMarker.setMap(null);
-          seventeenMarker.setMap(null);
-          twentynineMarker.setMap(null);
-          twentyfiveMarker.setMap(null);
-          thirtythreeMarker.setMap(null);
-          fourteenaMarker.setMap(null);
-          sevenaMarker.setMap(null);
-          thirteenMarker.setMap(null);
-          thirtyfourMarker.setMap(null);
-          twentyeightMarker.setMap(null);
-          twentythreeMarker.setMap(null);
+          elevenAccParMarker.setMap(null);
+          fourAccParMarker.setMap(null);
+          fouraAccParMarker.setMap(null);
+          sixteenAccParMarker.setMap(null);
+          seventeenAccParMarker.setMap(null);
+          twentynineAccParMarker.setMap(null);
+          twentyfiveAccParMarker.setMap(null);
+          thirtythreeAccParMarker.setMap(null);
+          fourteenaAccParMarker.setMap(null);
+          sevenaAccParMarker.setMap(null);
+          thirteenAccParMarker.setMap(null);
+          thirtyfourAccParMarker.setMap(null);
+          twentyeightAccParMarker.setMap(null);
+          twentythreeAccParMarker.setMap(null);
           womensCenterMarker.setMap(null);
-          fifteenMarker.setMap(null);
-          thirtytwoMarker.setMap(null);
+          fifteenAccParMarker.setMap(null);
+          thirtytwoAccParMarker.setMap(null);
           parkingRampMarker.setMap(null);
-          tenMarker.setMap(null);
-          twelveMarker.setMap(null);
-          sixaMarker.setMap(null);
-          sixMarker.setMap(null);
-          eighteenMarker.setMap(null);
+          tenAccParMarker.setMap(null);
+          twelveAccParMarker.setMap(null);
+          sixaAccParMarker.setMap(null);
+          sixAccParMarker.setMap(null);
+          eighteenAccParMarker.setMap(null);
           titanOneMarker.setMap(null);
           titanTwoMarker.setMap(null);
         }
@@ -1946,35 +2032,122 @@ var titanTwoMarker = new google.maps.Marker({
               removeEmergencyPhones();
             }
           });
-          // setting sustainability markers
+
+  // creating sust markers
+  var heatingSustMarker = new google.maps.Marker({
+    position: buildings[4],
+    icon: image
+  });
+  var sageSustMarker = new google.maps.Marker({
+    position: buildings[15],
+    icon: image
+  });
+  var albeeSustMarker = new google.maps.Marker({
+    position: buildings[14],
+    icon: image
+  });
+  var successSustMarker = new google.maps.Marker({
+    position: buildings[29],
+    icon: image
+  });
+  var reeveSustMarker = new google.maps.Marker({
+    position: buildings[28],
+    icon: image
+  });
+  var blackhawkSustMarker = new google.maps.Marker({
+    position: buildings[26],
+    icon: image
+  });
+  var taylorSustMarker = new google.maps.Marker({
+    position: buildings[22],
+    icon: image
+  });
+  var horizonSustMarker = new google.maps.Marker({
+    position: buildings[34],
+    icon: image
+  });
+  var alumniSustMarker = new google.maps.Marker({
+    position: buildings[37],
+    icon: image
+  });
+  var recreationSustMarker = new google.maps.Marker({
+    position: buildings[27],
+    icon: image
+  });
+  var titanSustMarker = new google.maps.Marker({
+    position: buildings[43],
+    icon: image
+  });
+  var biodigesterSustMarker = new google.maps.Marker({
+    position: buildings[40],
+    icon: image
+  });
+  // sust hovers
+  heatingSustMarker.addListener('click', function(){
+    heatingHoverCard.open(map,heatingSustMarker);
+  });
+  sageSustMarker.addListener('click', function(){
+    sageHoverCard.open(map, sageSustMarker);
+  });
+  albeeSustMarker.addListener('click', function(){
+    albeeHoverCard.open(map, albeeSustMarker);
+  });
+  successSustMarker.addListener('click', function(){
+  successHoverCard.open(map, successSustMarker);
+  });
+  reeveSustMarker.addListener('click', function(){
+  reeveHoverCard.open(map, reeveSustMarker);
+  });
+  blackhawkSustMarker.addListener('click', function(){
+    blackhawkHoverCard.open(map, blackhawkSustMarker);
+  });
+  taylorSustMarker.addListener('click', function(){
+    taylorHoverCard.open(map, taylorSustMarker);
+  });
+  horizonSustMarker.addListener('click', function(){
+    horizonHoverCard.open(map, horizonSustMarker);
+  });
+  alumniSustMarker.addListener('click', function(){
+    alumniHoverCard.open(map, alumniSustMarker);
+  });
+  recreationSustMarker.addListener('click', function(){
+    recreationHoverCard.open(map, recreationSustMarker);
+  });
+  titanSustMarker.addListener('click', function(){
+    titanHoverCard.open(map, titanSustMarker);
+  });
+  biodigesterSustMarker.addListener('click', function(){
+    biodigesterHoverCard.open(map, biodigesterSustMarker);
+  });
+        // setting sustainability markers
         function setSust(){
-          heatingMarker.setMap(map);
-          sageMarker.setMap(map);
-          albeeMarker.setMap(map);
-          successMarker.setMap(map);
-          reeveMarker.setMap(map);
-          blackhawkMarker.setMap(map);
-          taylorMarker.setMap(map);
-          horizonMarker.setMap(map);
-          alumniMarker.setMap(map);
-          recreationMarker.setMap(map);
-          titanMarker.setMap(map);
-          biodigesterMarker.setMap(map);
+          heatingSustMarker.setMap(map);
+          sageSustMarker.setMap(map);
+          albeeSustMarker.setMap(map);
+          successSustMarker.setMap(map);
+          reeveSustMarker.setMap(map);
+          blackhawkSustMarker.setMap(map);
+          taylorSustMarker.setMap(map);
+          horizonSustMarker.setMap(map);
+          alumniSustMarker.setMap(map);
+          recreationSustMarker.setMap(map);
+          titanSustMarker.setMap(map);
+          biodigesterSustMarker.setMap(map);
         }
         // remove sustainability markers
         function removeSust(){
-          heatingMarker.setMap(null);
-          sageMarker.setMap(null);
-          albeeMarker.setMap(null);
-          successMarker.setMap(null);
-          reeveMarker.setMap(null);
-          blackhawkMarker.setMap(null);
-          taylorMarker.setMap(null);
-          horizonMarker.setMap(null);
-          alumniMarker.setMap(null);
-          recreationMarker.setMap(null);
-          titanMarker.setMap(null);
-          biodigesterMarker.setMap(null);
+          heatingSustMarker.setMap(null);
+          sageSustMarker.setMap(null);
+          albeeSustMarker.setMap(null);
+          successSustMarker.setMap(null);
+          reeveSustMarker.setMap(null);
+          blackhawkSustMarker.setMap(null);
+          taylorSustMarker.setMap(null);
+          horizonSustMarker.setMap(null);
+          alumniSustMarker.setMap(null);
+          recreationSustMarker.setMap(null);
+          titanSustMarker.setMap(null);
+          biodigesterSustMarker.setMap(null);
         }
         // on click function for sustainability
         $("#sustLabel").click(function(){
