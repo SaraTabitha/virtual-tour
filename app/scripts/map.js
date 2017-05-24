@@ -387,11 +387,21 @@ function initMap() {
         // on click function for selecting the Building checkbox
         $("#buildLabel").click(function(){
         var check = !$("#buildings").prop("checked");
+        var checkAccEnt = !$("#accEnt").prop("checked");
+        var checkSust = !$("#sust").prop("checked");
         if (check === false){
           setBuilding();
-        } else if (check === true){
+        } else if (check === true && checkAccEnt === false ){
           removeBuilding();
+          setAccEnt();
+        } else if (check === true && checkSust === false){
+          removeBuilding();
+          setSust();
+        } else if (check === true ){
+          removeBuilding();
+
         }
+
         });
 
         // array for parking lots
@@ -748,10 +758,10 @@ function initMap() {
         }
         // on click function for accessible entries
         $("#accEntLabel").click(function(){
-          var checkParking = !$("#accEnt").prop("checked");
-          if (checkParking === false){
+          var checkAccEnt = !$("#accEnt").prop("checked");
+          if (checkAccEnt === false){
             setAccEnt();
-          } else if (checkParking === true){
+          } else if (checkAccEnt === true){
             removeAccEnt();
           }
         });
@@ -832,10 +842,10 @@ var titanTwoMarker = new google.maps.Marker({
         }
         // on click function for accessible parking markers
         $("#accParLabel").click(function(){
-          var checkParking = !$("#accPar").prop("checked");
-          if (checkParking === false){
+          var checkAccPar = !$("#accPar").prop("checked");
+          if (checkAccPar  === false){
             setAccPar();
-          } else if (checkParking === true){
+          } else if (checkAccPar  === true){
             removeAccPar();
           }
         });
@@ -1075,10 +1085,10 @@ var titanTwoMarker = new google.maps.Marker({
           }
           // on click function for setting emergency phone markers
           $("#emergencyLabel").click(function(){
-            var checkParking = !$("#emergency").prop("checked");
-            if (checkParking === false){
+            var checkEmergency = !$("#emergency").prop("checked");
+            if (checkEmergency === false){
               setEmergencyPhones();
-            } else if (checkParking === true){
+            } else if (checkEmergency === true){
               removeEmergencyPhones();
             }
           });
@@ -1114,10 +1124,10 @@ var titanTwoMarker = new google.maps.Marker({
         }
         // on click function for sustainability
         $("#sustLabel").click(function(){
-          var checkParking = !$("#sust").prop("checked");
-          if (checkParking === false){
+          var checkSust = !$("#sust").prop("checked");
+          if (checkSust === false){
             setSust();
-          } else if (checkParking === true){
+          } else if (checkSust === true){
             removeSust();
           }
         });
@@ -1157,10 +1167,10 @@ var titanTwoMarker = new google.maps.Marker({
         }
         // on click function for gender markers
         $("#genderLabel").click(function(){
-          var checkParking = !$("#gender").prop("checked");
-          if (checkParking === false){
+          var checkGender = !$("#gender").prop("checked");
+          if (checkGender === false){
             setGender();
-          } else if (checkParking === true){
+          } else if (checkGender === true){
             removeGender();
           }
         });
@@ -1222,10 +1232,10 @@ var titanTwoMarker = new google.maps.Marker({
           ceramicsMarker.setMap(null);
         }
         $("#accaFLabel").click(function(){
-          var checkParking = !$("#accaF").prop("checked");
-          if (checkParking === false){
+          var checkAccF = !$("#accaF").prop("checked");
+          if (checkAccF === false){
             setAccaF();
-          } else if (checkParking === true){
+          } else if (checkAccF === true){
             removeAccaF();
           }
         });
@@ -1247,10 +1257,10 @@ var titanTwoMarker = new google.maps.Marker({
           titanMarker.setMap(null);
         }
         $("#athLabel").click(function(){
-          var checkParking = !$("#ath").prop("checked");
-          if (checkParking === false){
+          var checkAth = !$("#ath").prop("checked");
+          if (checkAth === false){
             setAth();
-          } else if (checkParking === true){
+          } else if (checkAth === true){
             removeAth();
           }
         });
@@ -1268,10 +1278,10 @@ var titanTwoMarker = new google.maps.Marker({
           nursingMarker.setMap(null);
         }
         $("#accSLabel").click(function(){
-          var checkParking = !$("#accS").prop("checked");
-          if (checkParking === false){
+          var checkAccS = !$("#accS").prop("checked");
+          if (checkAccS === false){
             setAccaS();
-          } else if (checkParking === true){
+          } else if (checkAccS === true){
             removeAccaS();
           }
         });
@@ -1299,10 +1309,10 @@ var titanTwoMarker = new google.maps.Marker({
           dempseyMarker.setMap(null);
         }
         $("#campSLabel").click(function(){
-          var checkParking = !$("#campS").prop("checked");
-          if (checkParking === false){
+          var checkCampS = !$("#campS").prop("checked");
+          if (checkCampS === false){
             setCampS();
-          } else if (checkParking === true){
+          } else if (checkCampS === true){
             removeCampS();
           }
         });
@@ -1330,10 +1340,10 @@ var titanTwoMarker = new google.maps.Marker({
           scottMarker.setMap(null);
         }
         $("#resHLabel").click(function(){
-          var checkParking = !$("#resH").prop("checked");
-          if (checkParking === false){
+          var checkResH = !$("#resH").prop("checked");
+          if (checkResH === false){
             setResH();
-          } else if (checkParking === true){
+          } else if (checkResH === true){
             removeResH();
           }
         });
@@ -1355,10 +1365,10 @@ var titanTwoMarker = new google.maps.Marker({
           halseyMarker.setMap(null);
         }
         $("#diningLabel").click(function(){
-          var checkParking = !$("#dining").prop("checked");
-          if (checkParking === false){
+          var checkDining = !$("#dining").prop("checked");
+          if (checkDining === false){
             setDining();
-          } else if (checkParking === true){
+          } else if (checkDining === true){
             removeDining();
           }
         });
@@ -1372,10 +1382,10 @@ var titanTwoMarker = new google.maps.Marker({
           reeveMarker.setMap(null);
         }
         $("#stuRLabel").click(function(){
-          var checkParking = !$("#stuR").prop("checked");
-          if (checkParking === false){
+          var checkStuR = !$("#stuR").prop("checked");
+          if (checkStuR === false){
             setStuR();
-          } else if (checkParking === true){
+          } else if (checkStuR === true){
             removeStuR();
           }
         });
