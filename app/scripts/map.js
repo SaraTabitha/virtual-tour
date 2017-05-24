@@ -2040,4 +2040,84 @@ var titanTwoMarker = new google.maps.Marker({
           campusMarker.addListener('click', function(){
             campusHoverCard.open(map, campusMarker);
         });
+        var biodigesterHover = '<div class="generalHover">' +
+        '<img src="images/campuspictures/biodigester.jpg">' +
+        '<div class="hoverDiv">' +
+        '<h1 class="headHover text">Biodigester</h1>' +
+        '<p class="paraHover text"> 755 Dempsey Trail</p>' +
+        '<p class="paraHover text"> Oshkosh, WI 54901</p>' +
+        '<br>' +
+        '<a href="#" class="text link">Click for more info</a>'+
+        '</div>'+
+        '</div>';
+        var biodigesterHoverCard = new google.maps.InfoWindow({
+          content: biodigesterHover,
+        });
+          biodigesterMarker.addListener('click', function(){
+            biodigesterHoverCard.open(map, biodigesterMarker);
+        });
+        var athleticHover = '<div class="generalHover">' +
+        '<img src="images/campuspictures/athleticservice.jpeg">' +
+        '<div class="hoverDiv">' +
+        '<h1 class="headHover text">Athletic Service Building</h1>' +
+        '<p class="paraHover text"> 450 Josslyn Street</p>' +
+        '<p class="paraHover text"> Oshkosh, WI 54901</p>' +
+        '<br>' +
+        '<a href="#" class="text link">Click for more info</a>'+
+        '</div>'+
+        '</div>';
+        var athleticHoverCard = new google.maps.InfoWindow({
+          content: athleticHover,
+        });
+          athleticMarker.addListener('click', function(){
+            athleticHoverCard.open(map, athleticMarker);
+        });
+        var baseballHover = '<div class="generalHover">' +
+        '<img src="#">' +
+        '<div class="hoverDiv">' +
+        '<h1 class="headHover text">Alumni Baseball Stadium</h1>' +
+        '<p class="paraHover text"> 450 Josslyn Street</p>' +
+        '<p class="paraHover text"> Oshkosh, WI 54901</p>' +
+        '<br>' +
+        '<a href="#" class="text link">Click for more info</a>'+
+        '</div>'+
+        '</div>';
+        var baseballHoverCard = new google.maps.InfoWindow({
+          content: baseballHover,
+        });
+          baseballMarker.addListener('click', function(){
+            baseballHoverCard.open(map, baseballMarker);
+        });
+        var titanHover = '<div class="generalHover">' +
+        '<img src="images/campuspictures/titanstadium.jpeg">' +
+        '<div class="hoverDiv">' +
+        '<h1 class="headHover text">Titan Stadium</h1>' +
+        '<p class="paraHover text"> 450 Josslyn Street</p>' +
+        '<p class="paraHover text"> Oshkosh, WI 54901</p>' +
+        '<br>' +
+        '<a href="#" class="text link">Click for more info</a>'+
+        '</div>'+
+        '</div>';
+        var titanHoverCard = new google.maps.InfoWindow({
+          content: titanHover,
+        });
+          titanMarker.addListener('click', function(){
+            titanHoverCard.open(map, titanMarker);
+        });
+        var pollockHover = '<div class="generalHover">' +
+        '<img src="images/campuspictures/pollock.jpeg">' +
+        '<div class="hoverDiv">' +
+        '<h1 class="headHover text">Pollock Alumni House</h1>' +
+        '<p class="paraHover text"> 765 Algoma Boulevard</p>' +
+        '<p class="paraHover text"> Oshkosh, WI 54901</p>' +
+        '<br>' +
+        '<a href="#" class="text link">Click for more info</a>'+
+        '</div>'+
+        '</div>';
+        var pollockHoverCard = new google.maps.InfoWindow({
+          content: pollockHover,
+        });
+          pollockMarker.addListener('click', function(){
+            pollockHoverCard.open(map, pollockMarker);
+        });
   }
