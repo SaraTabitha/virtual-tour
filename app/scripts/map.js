@@ -2158,40 +2158,141 @@ var eighteenAccParMarker = new google.maps.Marker({
             removeSust();
           }
         });
+        // create gender markers
+        var acGenderMarker = new google.maps.Marker({
+          position: buildings[1],
+          icon: image
+        });
+        var halseyGenderMarker = new google.maps.Marker({
+          position: buildings[6],
+          icon: image
+        });
+        var swartGenderMarker = new google.maps.Marker({
+          position: buildings[7],
+          icon: image
+        });
+        var harringtonGenderMarker = new google.maps.Marker({
+          position: buildings[8],
+          icon: image
+        });
+        var nursingGenderMarker = new google.maps.Marker({
+          position: buildings[10],
+          icon: image
+        });
+        var sageGenderMarker = new google.maps.Marker({
+          position: buildings[15],
+          icon: image
+        });
+        var dempseyGenderMarker = new google.maps.Marker({
+          position: buildings[12],
+          icon: image
+        });
+        var successGenderMarker = new google.maps.Marker({
+          position: buildings[29],
+          icon: image
+        });
+        var reeveGenderMarker = new google.maps.Marker({
+          position: buildings[28],
+          icon: image
+        });
+        var campusGenderMarker = new google.maps.Marker({
+          position: buildings[39],
+          icon: image
+        });
+        var kolfGenderMarker = new google.maps.Marker({
+          position: buildings[20],
+          icon: image
+        });
+        var policeGenderMarker = new google.maps.Marker({
+          position: buildings[24],
+          icon: image
+        });
+        var blackhawkGenderMarker = new google.maps.Marker({
+          position: buildings[26],
+          icon: image
+        });
+        var recreationGenderMarker = new google.maps.Marker({
+          position: buildings[27],
+          icon: image
+        });
+        // gender hover
+        acGenderMarker.addListener('click', function(){
+          acHoverCard.open(map,acGenderMarker);
+        });
+        halseyGenderMarker.addListener('click', function(){
+          halseyHoverCard.open(map, halseyGenderMarker);
+        });
+        swartGenderMarker.addListener('click', function(){
+          swartHoverCard.open(map, swartGenderMarker);
+        });
+        harringtonGenderMarker.addListener('click', function(){
+          harringtonHoverCard.open(map, harringtonGenderMarker);
+        });
+        nursingGenderMarker.addListener('click', function(){
+          nursingHoverCard.open(map, nursingGenderMarker);
+        });
+        sageGenderMarker.addListener('click', function(){
+          sageHoverCard.open(map, sageGenderMarker);
+        });
+        dempseyGenderMarker.addListener('click', function(){
+          dempseyHoverCard.open(map, dempseyGenderMarker);
+        });
+        successGenderMarker.addListener('click', function(){
+        successHoverCard.open(map, successGenderMarker);
+        });
+        reeveGenderMarker.addListener('click', function(){
+        reeveHoverCard.open(map, reeveGenderMarker);
+        });
+        campusGenderMarker.addListener('click', function(){
+        campusHoverCard.open(map, campusGenderMarker);
+        });
+        kolfGenderMarker.addListener('click', function(){
+          kolfHoverCard.open(map, kolfGenderMarker);
+        });
+        policeGenderMarker.addListener('click', function(){
+          policeHoverCard.open(map, policeGenderMarker);
+        });
+        blackhawkGenderMarker.addListener('click', function(){
+          blackhawkHoverCard.open(map, blackhawkGenderMarker);
+        });
+        recreationGenderMarker.addListener('click', function(){
+          recreationHoverCard.open(map, recreationGenderMarker);
+        });
         // setting gender markers
         function setGender(){
-          acMarker.setMap(map);
-          halseyMarker.setMap(map);
-          swartMarker.setMap(map);
-          harringtonMarker.setMap(map);
-          nursingMarker.setMap(map);
-          sageMarker.setMap(map);
-          dempseyMarker.setMap(map);
-          successMarker.setMap(map);
-          reeveMarker.setMap(map);
-          campusMarker.setMap(map);
-          kolfMarker.setMap(map);
-          policeMarker.setMap(map);
-          blackhawkMarker.setMap(map);
-          recreationMarker.setMap(map);
+          acGenderMarker.setMap(map);
+          halseyGenderMarker.setMap(map);
+          swartGenderMarker.setMap(map);
+          harringtonGenderMarker.setMap(map);
+          nursingGenderMarker.setMap(map);
+          sageGenderMarker.setMap(map);
+          dempseyGenderMarker.setMap(map);
+          successGenderMarker.setMap(map);
+          reeveGenderMarker.setMap(map);
+          campusGenderMarker.setMap(map);
+          kolfGenderMarker.setMap(map);
+          policeGenderMarker.setMap(map);
+          blackhawkGenderMarker.setMap(map);
+          recreationGenderMarker.setMap(map);
         }
         // removing gender markers
         function removeGender(){
-          acMarker.setMap(null);
-          halseyMarker.setMap(null);
-          swartMarker.setMap(null);
-          harringtonMarker.setMap(null);
-          nursingMarker.setMap(null);
-          sageMarker.setMap(null);
-          dempseyMarker.setMap(null);
-          successMarker.setMap(null);
-          reeveMarker.setMap(null);
-          campusMarker.setMap(null);
-          kolfMarker.setMap(null);
-          policeMarker.setMap(null);
-          blackhawkMarker.setMap(null);
-          recreationMarker.setMap(null);
+          acGenderMarker.setMap(null);
+          halseyGenderMarker.setMap(null);
+          swartGenderMarker.setMap(null);
+          harringtonGenderMarker.setMap(null);
+          nursingGenderMarker.setMap(null);
+          sageGenderMarker.setMap(null);
+          dempseyGenderMarker.setMap(null);
+          successGenderMarker.setMap(null);
+          reeveGenderMarker.setMap(null);
+          campusGenderMarker.setMap(null);
+          kolfGenderMarker.setMap(null);
+          policeGenderMarker.setMap(null);
+          blackhawkGenderMarker.setMap(null);
+          recreationGenderMarker.setMap(null);
         }
+
         // on click function for gender markers
         $("#genderLabel").click(function(){
           var checkGender = !$("#gender").prop("checked");
