@@ -389,22 +389,17 @@ html, body, main, .mdl-layout__content, .page-content, #map {
     left: 377px;
     right: 0px;
   }
-    /*gruenhagen hover*/
+    /*hover for markers*/
    .generalHover{
       height: 105px;
       width: 248px;
-
     }
 
     img{
-
       width: 70px;
       height: 105px;
       display: inline-block;
       float: left;
-
-
-
     }
     .hoverDiv{
       display: inline-block;
@@ -412,8 +407,6 @@ html, body, main, .mdl-layout__content, .page-content, #map {
       width: 170px;
       float: right;
       padding: 4px;
-
-
     }
     h1.headHover{
       position: relative;
@@ -422,7 +415,6 @@ html, body, main, .mdl-layout__content, .page-content, #map {
       font-size: 14px;
       font-weight: 900;
       text-decoration: underline;
-
     }
     p.paraHover{
       position: relative;
@@ -430,5 +422,4 @@ html, body, main, .mdl-layout__content, .page-content, #map {
       font-size: 12px;
       width: 155px;
       margin: 0px;
-
     }
