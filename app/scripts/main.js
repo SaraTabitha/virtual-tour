@@ -88,12 +88,35 @@
 
   // info bulding card slide in from left (when blue link is clicked)
   // academic facilities show and slide out
+
   $("#accFText").click(function(){
+  var check = $("#accFCard").hasClass("checked");
+  debugger;
+  if (check === false){
+    $("#accFCard").addClass("cardPresent");
     hideAll();
     $("#accFCard").show();
     $("#accFCard").animate(
       {left: "377px"});
+  } else if (check === true){
+    $("#accFCard").removeClass("cardPresent");
+    $("#accFCard").animate(
+        {left:"-377px"});
+  }
   });
+
+  // $("#accFText").click(function(){
+  //   hideAll();
+  //   $("#accFCard").show();
+  //   $("#accFCard").animate(
+  //     {left: "377px"});
+  // });
+
+  // $("#accFText").click(function(){
+  //
+  //   $("#accFCard").animate(
+  //     {left:"-377px"});
+  // });
   // click x button on academic facilities card and it will disappear again
   $("#accFClose").click(function(){
     $("#accFCard").animate(
