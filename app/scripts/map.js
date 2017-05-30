@@ -1412,98 +1412,111 @@ function initMap() {
         });
 
         // accEnt markers
+        var albeeAccEntMarker = new google.maps.Marker({
+                  position: buildings[0],
+                  icon: image
+          });
         var acAccEntMarker = new google.maps.Marker({
           position: buildings[3],
+          icon: image
+        });
+        var blackhawkAccEntMarker = new google.maps.Marker({
+          position: buildings[5],
+          icon: image
+        });
+        var equityAccEntMarker = new google.maps.Marker({
+          position: buildings[8],
+          icon: image
+        });
+        var clowAccEntMarker = new google.maps.Marker({
+          position: buildings[11],
+          icon: image
+        });
+        var dempseyAccEntMarker = new google.maps.Marker({
+          position: buildings[13],
+          icon: image
+        });
+        var donnerAccEntMarker = new google.maps.Marker({
+          position: buildings[14],
+          icon: image
+        });
+        var fletcherAccEntMarker = new google.maps.Marker({
+          position: buildings[18],
           icon: image
         });
         var fredricAccEntMarker = new google.maps.Marker({
           position: buildings[19],
           icon: image
         });
+        var gruenhagenAccEntMarker = new google.maps.Marker({
+          position: buildings[20],
+          icon: image
+        });
         var halseyAccEntMarker = new google.maps.Marker({
           position: buildings[21],
-          icon: image
-        });var swartAccEntMarker = new google.maps.Marker({
-          position: buildings[40],
           icon: image
         });
         var harringtonAccEntMarker = new google.maps.Marker({
           position: buildings[22],
           icon: image
-        });var nursingAccEntMarker = new google.maps.Marker({
-          position: buildings[29],
-          icon: image
         });
-        var clowAccEntMarker = new google.maps.Marker({
-          position: buildings[11],
-          icon: image
-        });var dempseyAccEntMarker = new google.maps.Marker({
-          position: buildings[13],
-          icon: image
-        });var polkAccEntMarker = new google.maps.Marker({
-          position: buildings[32],
-          icon: image
-        });var albeeAccEntMarker = new google.maps.Marker({
-          position: buildings[0],
-          icon: image
-        });var reeveAccEntMarker = new google.maps.Marker({
-          position: buildings[34],
-          icon: image
-        });var successAccEntMarker = new google.maps.Marker({
-          position: buildings[39],
-          icon: image
-        });var stewartAccEntMarker = new google.maps.Marker({
-          position: buildings[37],
-          icon: image
-        });var fletcherAccEntMarker = new google.maps.Marker({
-          position: buildings[18],
-          icon: image
-        });var equityAccEntMarker = new google.maps.Marker({
-          position: buildings[8],
-          icon: image
-        });var radfordAccEntMarker = new google.maps.Marker({
-          position: buildings[33],
-          icon: image
-        });var donnerAccEntMarker = new google.maps.Marker({
-          position: buildings[14],
-          icon: image
-        });var websterAccEntMarker = new google.maps.Marker({
-          position: buildings[44],
-          icon: image
-        });var taylorAccEntMarker = new google.maps.Marker({
-          position: buildings[41],
-          icon: image
-        });var blackhawkAccEntMarker = new google.maps.Marker({
-          position: buildings[5],
-          icon: image
-        });var gruenhagenAccEntMarker = new google.maps.Marker({
-          position: buildings[20],
-          icon: image
-        });var scottAccEntMarker = new google.maps.Marker({
-          position: buildings[36],
-          icon: image
-        });var kolfAccEntMarker = new google.maps.Marker({
+        var kolfAccEntMarker = new google.maps.Marker({
           position: buildings[26],
           icon: image
         });
+        var nursingAccEntMarker = new google.maps.Marker({
+          position: buildings[29],
+          icon: image
+        });
+        var polkAccEntMarker = new google.maps.Marker({
+          position: buildings[32],
+          icon: image
+        });
+        var radfordAccEntMarker = new google.maps.Marker({
+          position: buildings[33],
+          icon: image
+        });
+        var reeveAccEntMarker = new google.maps.Marker({
+          position: buildings[34],
+          icon: image
+        });
+        var scottAccEntMarker = new google.maps.Marker({
+          position: buildings[36],
+          icon: image
+        });
+        var stewartAccEntMarker = new google.maps.Marker({
+          position: buildings[37],
+          icon: image
+        });
+        var successAccEntMarker = new google.maps.Marker({
+          position: buildings[39],
+          icon: image
+        });
+        var swartAccEntMarker = new google.maps.Marker({
+          position: buildings[40],
+          icon: image
+        });
+        var taylorAccEntMarker = new google.maps.Marker({
+          position: buildings[41],
+          icon: image
+        });
+        var websterAccEntMarker = new google.maps.Marker({
+          position: buildings[44],
+          icon: image
+        });
+
         // accEnt hover cards for markers
+        albeeAccEntMarker.addListener('click', function(){
+          albeeHoverCard.open(map, albeeAccEntMarker);
+        });
         acAccEntMarker.addListener('click', function(){
           acHoverCard.open(map,acAccEntMarker);
         });
-        fredricAccEntMarker.addListener('click', function(){
-          fredricHoverCard.open(map,fredricAccEntMarker);
+        blackhawkAccEntMarker.addListener('click', function(){
+          blackhawkHoverCard.open(map, blackhawkAccEntMarker);
         });
-        halseyAccEntMarker.addListener('click', function(){
-          halseyHoverCard.open(map, halseyAccEntMarker);
-        });
-        swartAccEntMarker.addListener('click', function(){
-          swartHoverCard.open(map, swartAccEntMarker);
-        });
-        harringtonAccEntMarker.addListener('click', function(){
-          harringtonHoverCard.open(map, harringtonAccEntMarker);
-        });
-        nursingAccEntMarker.addListener('click', function(){
-          nursingHoverCard.open(map, nursingAccEntMarker);
+        equityAccEntMarker.addListener('click', function(){
+        equityHoverCard.open(map, equityAccEntMarker);
         });
         clowAccEntMarker.addListener('click', function(){
           clowHoverCard.open(map, clowAccEntMarker);
@@ -1511,101 +1524,108 @@ function initMap() {
         dempseyAccEntMarker.addListener('click', function(){
           dempseyHoverCard.open(map, dempseyAccEntMarker);
         });
-        polkAccEntMarker.addListener('click', function(){
-          polkHoverCard.open(map, polkAccEntMarker);
-        });
-        albeeAccEntMarker.addListener('click', function(){
-          albeeHoverCard.open(map, albeeAccEntMarker);
-        });
-        reeveAccEntMarker.addListener('click', function(){
-        reeveHoverCard.open(map, reeveAccEntMarker);
-        });
-        successAccEntMarker.addListener('click', function(){
-        successHoverCard.open(map, successAccEntMarker);
-        });
-        stewartAccEntMarker.addListener('click', function(){
-        stewartHoverCard.open(map, stewartAccEntMarker);
+        donnerAccEntMarker.addListener('click', function(){
+        donnerHoverCard.open(map, donnerAccEntMarker);
         });
         fletcherAccEntMarker.addListener('click', function(){
         fletcherHoverCard.open(map, fletcherAccEntMarker);
         });
-        equityAccEntMarker.addListener('click', function(){
-        equityHoverCard.open(map, equityAccEntMarker);
-        });
-        radfordAccEntMarker.addListener('click', function(){
-        radfordHoverCard.open(map, radfordAccEntMarker);
-        });
-        donnerAccEntMarker.addListener('click', function(){
-        donnerHoverCard.open(map, donnerAccEntMarker);
-        });
-        websterAccEntMarker.addListener('click', function(){
-        websterHoverCard.open(map, websterAccEntMarker);
-        });
-        taylorAccEntMarker.addListener('click', function(){
-        taylorHoverCard.open(map, taylorAccEntMarker);
-        });
-        blackhawkAccEntMarker.addListener('click', function(){
-          blackhawkHoverCard.open(map, blackhawkAccEntMarker);
+        fredricAccEntMarker.addListener('click', function(){
+          fredricHoverCard.open(map,fredricAccEntMarker);
         });
         gruenhagenAccEntMarker.addListener('click', function(){
           gruenhagenHoverCard.open(map,gruenhagenAccEntMarker);
         });
-        scottAccEntMarker.addListener('click', function(){
-          scottHoverCard.open(map, scottAccEntMarker);
+        halseyAccEntMarker.addListener('click', function(){
+          halseyHoverCard.open(map, halseyAccEntMarker);
+        });
+        harringtonAccEntMarker.addListener('click', function(){
+          harringtonHoverCard.open(map, harringtonAccEntMarker);
         });
         kolfAccEntMarker.addListener('click', function(){
           kolfHoverCard.open(map, kolfAccEntMarker);
         });
+        nursingAccEntMarker.addListener('click', function(){
+          nursingHoverCard.open(map, nursingAccEntMarker);
+        });
+        polkAccEntMarker.addListener('click', function(){
+          polkHoverCard.open(map, polkAccEntMarker);
+        });
+        radfordAccEntMarker.addListener('click', function(){
+        radfordHoverCard.open(map, radfordAccEntMarker);
+        });
+        reeveAccEntMarker.addListener('click', function(){
+        reeveHoverCard.open(map, reeveAccEntMarker);
+        });
+        scottAccEntMarker.addListener('click', function(){
+          scottHoverCard.open(map, scottAccEntMarker);
+        });
+        stewartAccEntMarker.addListener('click', function(){
+        stewartHoverCard.open(map, stewartAccEntMarker);
+        });
+        successAccEntMarker.addListener('click', function(){
+        successHoverCard.open(map, successAccEntMarker);
+        });
+        swartAccEntMarker.addListener('click', function(){
+          swartHoverCard.open(map, swartAccEntMarker);
+        });
+        taylorAccEntMarker.addListener('click', function(){
+        taylorHoverCard.open(map, taylorAccEntMarker);
+        });
+        websterAccEntMarker.addListener('click', function(){
+        websterHoverCard.open(map, websterAccEntMarker);
+        });
+
         // accessible entries (buildings)
         function setAccEnt(){
+          albeeAccEntMarker.setMap(map);
           acAccEntMarker.setMap(map);
-          fredricAccEntMarker.setMap(map);
-          halseyAccEntMarker.setMap(map);
-          swartAccEntMarker.setMap(map);
-          harringtonAccEntMarker.setMap(map);
-          nursingAccEntMarker.setMap(map);
+          blackhawkAccEntMarker.setMap(map);
+          equityAccEntMarker.setMap(map);
           clowAccEntMarker.setMap(map);
           dempseyAccEntMarker.setMap(map);
-          polkAccEntMarker.setMap(map);
-          albeeAccEntMarker.setMap(map);
-          reeveAccEntMarker.setMap(map);
-          successAccEntMarker.setMap(map);
-          stewartAccEntMarker.setMap(map);
-          fletcherAccEntMarker.setMap(map);
-          equityAccEntMarker.setMap(map);
-          radfordAccEntMarker.setMap(map);
           donnerAccEntMarker.setMap(map);
-          websterAccEntMarker.setMap(map);
-          taylorAccEntMarker.setMap(map);
-          blackhawkAccEntMarker.setMap(map);
+          fletcherAccEntMarker.setMap(map);
+          fredricAccEntMarker.setMap(map);
           gruenhagenAccEntMarker.setMap(map);
-          scottAccEntMarker.setMap(map);
+          halseyAccEntMarker.setMap(map);
+          harringtonAccEntMarker.setMap(map);
           kolfAccEntMarker.setMap(map);
+          nursingAccEntMarker.setMap(map);
+          polkAccEntMarker.setMap(map);
+          radfordAccEntMarker.setMap(map);
+          reeveAccEntMarker.setMap(map);
+          scottAccEntMarker.setMap(map);
+          stewartAccEntMarker.setMap(map);
+          successAccEntMarker.setMap(map);
+          swartAccEntMarker.setMap(map);
+          taylorAccEntMarker.setMap(map);
+          websterAccEntMarker.setMap(map);
         }
         function removeAccEnt(){
+          albeeAccEntMarker.setMap(null);
           acAccEntMarker.setMap(null);
-          fredricAccEntMarker.setMap(null);
-          halseyAccEntMarker.setMap(null);
-          swartAccEntMarker.setMap(null);
-          harringtonAccEntMarker.setMap(null);
-          nursingAccEntMarker.setMap(null);
+          blackhawkAccEntMarker.setMap(null);
+          equityAccEntMarker.setMap(null);
           clowAccEntMarker.setMap(null);
           dempseyAccEntMarker.setMap(null);
-          polkAccEntMarker.setMap(null);
-          albeeAccEntMarker.setMap(null);
-          reeveAccEntMarker.setMap(null);
-          successAccEntMarker.setMap(null);
-          stewartAccEntMarker.setMap(null);
-          fletcherAccEntMarker.setMap(null);
-          equityAccEntMarker.setMap(null);
-          radfordAccEntMarker.setMap(null);
           donnerAccEntMarker.setMap(null);
-          websterAccEntMarker.setMap(null);
-          taylorAccEntMarker.setMap(null);
-          blackhawkAccEntMarker.setMap(null);
+          fletcherAccEntMarker.setMap(null);
+          fredricAccEntMarker.setMap(null);
           gruenhagenAccEntMarker.setMap(null);
-          scottAccEntMarker.setMap(null);
+          halseyAccEntMarker.setMap(null);
+          harringtonAccEntMarker.setMap(null);
           kolfAccEntMarker.setMap(null);
+          nursingAccEntMarker.setMap(null);
+          polkAccEntMarker.setMap(null);
+          radfordAccEntMarker.setMap(null);
+          reeveAccEntMarker.setMap(null);
+          scottAccEntMarker.setMap(null);
+          stewartAccEntMarker.setMap(null);
+          successAccEntMarker.setMap(null);
+          swartAccEntMarker.setMap(null);
+          taylorAccEntMarker.setMap(null);
+          websterAccEntMarker.setMap(null);
         }
         // on click function for accessible entries
         $("#accEntLabel").click(function(){
@@ -2031,120 +2051,122 @@ var eighteenAccParMarker = new google.maps.Marker({
           });
 
   // creating sust markers
-  var heatingSustMarker = new google.maps.Marker({
-    position: buildings[23],
-    icon: image
-  });
-  var sageSustMarker = new google.maps.Marker({
-    position: buildings[35],
-    icon: image
-  });
   var albeeSustMarker = new google.maps.Marker({
     position: buildings[0],
     icon: image
   });
-  var successSustMarker = new google.maps.Marker({
-    position: buildings[39],
-    icon: image
-  });
-  var reeveSustMarker = new google.maps.Marker({
-    position: buildings[34],
-    icon: image
-  });
+  var alumniSustMarker = new google.maps.Marker({
+      position: buildings[2],
+      icon: image
+    });
   var blackhawkSustMarker = new google.maps.Marker({
     position: buildings[5],
-    icon: image
-  });
-  var taylorSustMarker = new google.maps.Marker({
-    position: buildings[41],
-    icon: image
-  });
-  var horizonSustMarker = new google.maps.Marker({
-    position: buildings[25],
-    icon: image
-  });
-  var alumniSustMarker = new google.maps.Marker({
-    position: buildings[2],
-    icon: image
-  });
-  var recreationSustMarker = new google.maps.Marker({
-    position: buildings[38],
-    icon: image
-  });
-  var titanSustMarker = new google.maps.Marker({
-    position: buildings[42],
     icon: image
   });
   var biodigesterSustMarker = new google.maps.Marker({
     position: buildings[6],
     icon: image
   });
+  var heatingSustMarker = new google.maps.Marker({
+    position: buildings[23],
+    icon: image
+  });
+  var horizonSustMarker = new google.maps.Marker({
+    position: buildings[25],
+    icon: image
+  });
+  var reeveSustMarker = new google.maps.Marker({
+    position: buildings[34],
+    icon: image
+  });
+  var sageSustMarker = new google.maps.Marker({
+    position: buildings[35],
+    icon: image
+  });
+  var recreationSustMarker = new google.maps.Marker({
+    position: buildings[38],
+    icon: image
+  });
+  var successSustMarker = new google.maps.Marker({
+    position: buildings[39],
+    icon: image
+  });
+  var taylorSustMarker = new google.maps.Marker({
+    position: buildings[41],
+    icon: image
+  });
+  var titanSustMarker = new google.maps.Marker({
+    position: buildings[42],
+    icon: image
+  });
+
   // sust hovers
-  heatingSustMarker.addListener('click', function(){
-    heatingHoverCard.open(map,heatingSustMarker);
-  });
-  sageSustMarker.addListener('click', function(){
-    sageHoverCard.open(map, sageSustMarker);
-  });
   albeeSustMarker.addListener('click', function(){
     albeeHoverCard.open(map, albeeSustMarker);
-  });
-  successSustMarker.addListener('click', function(){
-  successHoverCard.open(map, successSustMarker);
-  });
-  reeveSustMarker.addListener('click', function(){
-  reeveHoverCard.open(map, reeveSustMarker);
-  });
-  blackhawkSustMarker.addListener('click', function(){
-    blackhawkHoverCard.open(map, blackhawkSustMarker);
-  });
-  taylorSustMarker.addListener('click', function(){
-    taylorHoverCard.open(map, taylorSustMarker);
-  });
-  horizonSustMarker.addListener('click', function(){
-    horizonHoverCard.open(map, horizonSustMarker);
   });
   alumniSustMarker.addListener('click', function(){
     alumniHoverCard.open(map, alumniSustMarker);
   });
-  recreationSustMarker.addListener('click', function(){
-    recreationHoverCard.open(map, recreationSustMarker);
-  });
-  titanSustMarker.addListener('click', function(){
-    titanHoverCard.open(map, titanSustMarker);
+  blackhawkSustMarker.addListener('click', function(){
+    blackhawkHoverCard.open(map, blackhawkSustMarker);
   });
   biodigesterSustMarker.addListener('click', function(){
     biodigesterHoverCard.open(map, biodigesterSustMarker);
   });
+  heatingSustMarker.addListener('click', function(){
+    heatingHoverCard.open(map,heatingSustMarker);
+  });
+  horizonSustMarker.addListener('click', function(){
+    horizonHoverCard.open(map, horizonSustMarker);
+  });
+  reeveSustMarker.addListener('click', function(){
+  reeveHoverCard.open(map, reeveSustMarker);
+  });
+  sageSustMarker.addListener('click', function(){
+    sageHoverCard.open(map, sageSustMarker);
+  });
+  recreationSustMarker.addListener('click', function(){
+    recreationHoverCard.open(map, recreationSustMarker);
+  });
+  successSustMarker.addListener('click', function(){
+  successHoverCard.open(map, successSustMarker);
+  });
+  taylorSustMarker.addListener('click', function(){
+    taylorHoverCard.open(map, taylorSustMarker);
+  });
+  titanSustMarker.addListener('click', function(){
+    titanHoverCard.open(map, titanSustMarker);
+  });
+
         // setting sustainability markers
         function setSust(){
-          heatingSustMarker.setMap(map);
-          sageSustMarker.setMap(map);
           albeeSustMarker.setMap(map);
-          successSustMarker.setMap(map);
-          reeveSustMarker.setMap(map);
-          blackhawkSustMarker.setMap(map);
-          taylorSustMarker.setMap(map);
-          horizonSustMarker.setMap(map);
           alumniSustMarker.setMap(map);
-          recreationSustMarker.setMap(map);
-          titanSustMarker.setMap(map);
+          blackhawkSustMarker.setMap(map);
           biodigesterSustMarker.setMap(map);
+          heatingSustMarker.setMap(map);
+          horizonSustMarker.setMap(map);
+          reeveSustMarker.setMap(map);
+          sageSustMarker.setMap(map);
+          recreationSustMarker.setMap(map);
+          successSustMarker.setMap(map);
+          taylorSustMarker.setMap(map);
+          titanSustMarker.setMap(map);
         }
         // remove sustainability markers
         function removeSust(){
-          heatingSustMarker.setMap(null);
-          sageSustMarker.setMap(null);
           albeeSustMarker.setMap(null);
-          successSustMarker.setMap(null);
-          reeveSustMarker.setMap(null);
-          blackhawkSustMarker.setMap(null);
-          taylorSustMarker.setMap(null);
-          horizonSustMarker.setMap(null);
           alumniSustMarker.setMap(null);
-          recreationSustMarker.setMap(null);
-          titanSustMarker.setMap(null);
+          blackhawkSustMarker.setMap(null);
           biodigesterSustMarker.setMap(null);
+          heatingSustMarker.setMap(null);
+          horizonSustMarker.setMap(null);
+          reeveSustMarker.setMap(null);
+          sageSustMarker.setMap(null);
+          recreationSustMarker.setMap(null);
+          successSustMarker.setMap(null);
+          taylorSustMarker.setMap(null);
+          titanSustMarker.setMap(null);
         }
         // on click function for sustainability
         $("#sustLabel").click(function(){
@@ -2160,134 +2182,138 @@ var eighteenAccParMarker = new google.maps.Marker({
           position: buildings[3],
           icon: image
         });
-        var halseyGenderMarker = new google.maps.Marker({
-          position: buildings[21],
-          icon: image
-        });
-        var swartGenderMarker = new google.maps.Marker({
-          position: buildings[40],
-          icon: image
-        });
-        var harringtonGenderMarker = new google.maps.Marker({
-          position: buildings[22],
-          icon: image
-        });
-        var nursingGenderMarker = new google.maps.Marker({
-          position: buildings[29],
-          icon: image
-        });
-        var sageGenderMarker = new google.maps.Marker({
-          position: buildings[35],
-          icon: image
-        });
-        var dempseyGenderMarker = new google.maps.Marker({
-          position: buildings[13],
-          icon: image
-        });
-        var successGenderMarker = new google.maps.Marker({
-          position: buildings[39],
-          icon: image
-        });
-        var reeveGenderMarker = new google.maps.Marker({
-          position: buildings[34],
+        var blackhawkGenderMarker = new google.maps.Marker({
+          position: buildings[5],
           icon: image
         });
         var campusGenderMarker = new google.maps.Marker({
           position: buildings[9],
           icon: image
         });
+        var dempseyGenderMarker = new google.maps.Marker({
+          position: buildings[13],
+          icon: image
+        });
+        var halseyGenderMarker = new google.maps.Marker({
+          position: buildings[21],
+          icon: image
+        });
+        var harringtonGenderMarker = new google.maps.Marker({
+          position: buildings[22],
+          icon: image
+        });
         var kolfGenderMarker = new google.maps.Marker({
           position: buildings[26],
           icon: image
         });
-        var policeGenderMarker = new google.maps.Marker({
-          position: buildings[43],
+        var nursingGenderMarker = new google.maps.Marker({
+          position: buildings[29],
           icon: image
         });
-        var blackhawkGenderMarker = new google.maps.Marker({
-          position: buildings[5],
+        var reeveGenderMarker = new google.maps.Marker({
+          position: buildings[34],
+          icon: image
+        });
+        var sageGenderMarker = new google.maps.Marker({
+          position: buildings[35],
           icon: image
         });
         var recreationGenderMarker = new google.maps.Marker({
           position: buildings[38],
           icon: image
         });
+        var successGenderMarker = new google.maps.Marker({
+          position: buildings[39],
+          icon: image
+        });
+        var swartGenderMarker = new google.maps.Marker({
+          position: buildings[40],
+          icon: image
+        });
+        var policeGenderMarker = new google.maps.Marker({
+          position: buildings[43],
+          icon: image
+        });
+
+
         // gender hover
         acGenderMarker.addListener('click', function(){
           acHoverCard.open(map,acGenderMarker);
         });
-        halseyGenderMarker.addListener('click', function(){
-          halseyHoverCard.open(map, halseyGenderMarker);
-        });
-        swartGenderMarker.addListener('click', function(){
-          swartHoverCard.open(map, swartGenderMarker);
-        });
-        harringtonGenderMarker.addListener('click', function(){
-          harringtonHoverCard.open(map, harringtonGenderMarker);
-        });
-        nursingGenderMarker.addListener('click', function(){
-          nursingHoverCard.open(map, nursingGenderMarker);
-        });
-        sageGenderMarker.addListener('click', function(){
-          sageHoverCard.open(map, sageGenderMarker);
-        });
-        dempseyGenderMarker.addListener('click', function(){
-          dempseyHoverCard.open(map, dempseyGenderMarker);
-        });
-        successGenderMarker.addListener('click', function(){
-        successHoverCard.open(map, successGenderMarker);
-        });
-        reeveGenderMarker.addListener('click', function(){
-        reeveHoverCard.open(map, reeveGenderMarker);
+        blackhawkGenderMarker.addListener('click', function(){
+          blackhawkHoverCard.open(map, blackhawkGenderMarker);
         });
         campusGenderMarker.addListener('click', function(){
         campusHoverCard.open(map, campusGenderMarker);
         });
+        dempseyGenderMarker.addListener('click', function(){
+          dempseyHoverCard.open(map, dempseyGenderMarker);
+        });
+        halseyGenderMarker.addListener('click', function(){
+          halseyHoverCard.open(map, halseyGenderMarker);
+        });
+        harringtonGenderMarker.addListener('click', function(){
+          harringtonHoverCard.open(map, harringtonGenderMarker);
+        });
         kolfGenderMarker.addListener('click', function(){
           kolfHoverCard.open(map, kolfGenderMarker);
         });
-        policeGenderMarker.addListener('click', function(){
-          policeHoverCard.open(map, policeGenderMarker);
+        nursingGenderMarker.addListener('click', function(){
+          nursingHoverCard.open(map, nursingGenderMarker);
         });
-        blackhawkGenderMarker.addListener('click', function(){
-          blackhawkHoverCard.open(map, blackhawkGenderMarker);
+        reeveGenderMarker.addListener('click', function(){
+        reeveHoverCard.open(map, reeveGenderMarker);
+        });
+        sageGenderMarker.addListener('click', function(){
+          sageHoverCard.open(map, sageGenderMarker);
         });
         recreationGenderMarker.addListener('click', function(){
           recreationHoverCard.open(map, recreationGenderMarker);
         });
+        successGenderMarker.addListener('click', function(){
+        successHoverCard.open(map, successGenderMarker);
+        });
+        swartGenderMarker.addListener('click', function(){
+          swartHoverCard.open(map, swartGenderMarker);
+        });
+        policeGenderMarker.addListener('click', function(){
+          policeHoverCard.open(map, policeGenderMarker);
+        });
+
         // setting gender markers
         function setGender(){
           acGenderMarker.setMap(map);
-          halseyGenderMarker.setMap(map);
-          swartGenderMarker.setMap(map);
-          harringtonGenderMarker.setMap(map);
-          nursingGenderMarker.setMap(map);
-          sageGenderMarker.setMap(map);
-          dempseyGenderMarker.setMap(map);
-          successGenderMarker.setMap(map);
-          reeveGenderMarker.setMap(map);
-          campusGenderMarker.setMap(map);
-          kolfGenderMarker.setMap(map);
-          policeGenderMarker.setMap(map);
           blackhawkGenderMarker.setMap(map);
+          campusGenderMarker.setMap(map);
+          dempseyGenderMarker.setMap(map);
+          halseyGenderMarker.setMap(map);
+          harringtonGenderMarker.setMap(map);
+          kolfGenderMarker.setMap(map);
+          nursingGenderMarker.setMap(map);
+          reeveGenderMarker.setMap(map);
+          sageGenderMarker.setMap(map);
           recreationGenderMarker.setMap(map);
+          successGenderMarker.setMap(map);
+          swartGenderMarker.setMap(map);
+          policeGenderMarker.setMap(map);
+
         }
         // removing gender markers
         function removeGender(){
           acGenderMarker.setMap(null);
-          halseyGenderMarker.setMap(null);
-          swartGenderMarker.setMap(null);
-          harringtonGenderMarker.setMap(null);
-          nursingGenderMarker.setMap(null);
-          sageGenderMarker.setMap(null);
-          dempseyGenderMarker.setMap(null);
-          successGenderMarker.setMap(null);
-          reeveGenderMarker.setMap(null);
-          campusGenderMarker.setMap(null);
-          kolfGenderMarker.setMap(null);
-          policeGenderMarker.setMap(null);
           blackhawkGenderMarker.setMap(null);
+          campusGenderMarker.setMap(null);
+          dempseyGenderMarker.setMap(null);
+          halseyGenderMarker.setMap(null);
+          harringtonGenderMarker.setMap(null);
+          kolfGenderMarker.setMap(null);
+          nursingGenderMarker.setMap(null);
+          reeveGenderMarker.setMap(null);
+          sageGenderMarker.setMap(null);
           recreationGenderMarker.setMap(null);
+          successGenderMarker.setMap(null);
+          swartGenderMarker.setMap(null);
+          policeGenderMarker.setMap(null);
         }
 
         // on click function for gender markers
@@ -2323,8 +2349,24 @@ var eighteenAccParMarker = new google.maps.Marker({
           }
         });
       // AccaF markers
+      var albeeAccaFMarker = new google.maps.Marker({
+        position: buildings[0],
+        icon: image
+      });
       var acAccaFMarker = new google.maps.Marker({
         position: buildings[3],
+        icon: image
+      });
+      var ceramicsAccaFMarker = new google.maps.Marker({
+          position: buildings[10],
+          icon: image
+      });
+      var clowAccaFMarker = new google.maps.Marker({
+        position: buildings[11],
+        icon: image
+      });
+      var environmentalAccaFMarker = new google.maps.Marker({
+        position: buildings[16],
         icon: image
       });
       var fredricAccaFMarker = new google.maps.Marker({
@@ -2339,24 +2381,16 @@ var eighteenAccParMarker = new google.maps.Marker({
         position: buildings[22],
         icon: image
       });
-      var swartAccaFMarker = new google.maps.Marker({
-        position: buildings[40],
+      var kolfAccaFMarker = new google.maps.Marker({
+        position: buildings[26],
         icon: image
       });
       var nursingAccaFMarker = new google.maps.Marker({
         position: buildings[29],
         icon: image
       });
-      var clowAccaFMarker = new google.maps.Marker({
-        position: buildings[11],
-        icon: image
-      });
       var polkAccaFMarker = new google.maps.Marker({
         position: buildings[32],
-        icon: image
-      });
-      var albeeAccaFMarker = new google.maps.Marker({
-        position: buildings[0],
         icon: image
       });
       var radfordAccaFMarker = new google.maps.Marker({
@@ -2367,21 +2401,26 @@ var eighteenAccParMarker = new google.maps.Marker({
         position: buildings[35],
         icon: image
       });
-      var kolfAccaFMarker = new google.maps.Marker({
-        position: buildings[26],
+      var swartAccaFMarker = new google.maps.Marker({
+        position: buildings[40],
         icon: image
       });
-      var environmentalAccaFMarker = new google.maps.Marker({
-        position: buildings[16],
-        icon: image
-      });
-      var ceramicsAccaFMarker = new google.maps.Marker({
-        position: buildings[10],
-        icon: image
-      });
+
       // hover for AccaF
+      albeeAccaFMarker.addListener('click', function(){
+        albeeHoverCard.open(map, albeeAccaFMarker);
+      });
       acAccaFMarker.addListener('click', function(){
         acHoverCard.open(map,acAccaFMarker);
+      });
+      ceramicsAccaFMarker.addListener('click', function(){
+        ceramicsHoverCard.open(map, ceramicsAccaFMarker);
+      });
+      clowAccaFMarker.addListener('click', function(){
+        clowHoverCard.open(map, clowAccaFMarker);
+      });
+      environmentalAccaFMarker.addListener('click', function(){
+        environmentalHoverCard.open(map, environmentalAccaFMarker);
       });
       fredricAccaFMarker.addListener('click', function(){
         fredricHoverCard.open(map,fredricAccaFMarker);
@@ -2392,20 +2431,17 @@ var eighteenAccParMarker = new google.maps.Marker({
       harringtonAccaFMarker.addListener('click', function(){
         harringtonHoverCard.open(map, harringtonAccaFMarker);
       });
+      kolfAccaFMarker.addListener('click', function(){
+        kolfHoverCard.open(map, kolfAccaFMarker);
+      });
       swartAccaFMarker.addListener('click', function(){
         swartHoverCard.open(map, swartAccaFMarker);
       });
       nursingAccaFMarker.addListener('click', function(){
         nursingHoverCard.open(map, nursingAccaFMarker);
       });
-      clowAccaFMarker.addListener('click', function(){
-        clowHoverCard.open(map, clowAccaFMarker);
-      });
       polkAccaFMarker.addListener('click', function(){
         polkHoverCard.open(map, polkAccaFMarker);
-      });
-      albeeAccaFMarker.addListener('click', function(){
-        albeeHoverCard.open(map, albeeAccaFMarker);
       });
       radfordAccaFMarker.addListener('click', function(){
         radfordHoverCard.open(map, radfordAccaFMarker);
@@ -2413,47 +2449,42 @@ var eighteenAccParMarker = new google.maps.Marker({
       sageAccaFMarker.addListener('click', function(){
         sageHoverCard.open(map, sageAccaFMarker);
       });
-      kolfAccaFMarker.addListener('click', function(){
-        kolfHoverCard.open(map, kolfAccaFMarker);
-      });
-      environmentalAccaFMarker.addListener('click', function(){
-        environmentalHoverCard.open(map, environmentalAccaFMarker);
-      });
-      ceramicsAccaFMarker.addListener('click', function(){
-        ceramicsHoverCard.open(map, ceramicsAccaFMarker);
-      });
+
+
+
         // functions for categories select/remove markers
         function setAccaF(){
           acAccaFMarker.setMap(map);
+          albeeAccaFMarker.setMap(map);
+          ceramicsAccaFMarker.setMap(map);
+          clowAccaFMarker.setMap(map);
+          environmentalAccaFMarker.setMap(map);
           fredricAccaFMarker.setMap(map);
           halseyAccaFMarker.setMap(map);
           harringtonAccaFMarker.setMap(map);
+          kolfAccaFMarker.setMap(map);
           swartAccaFMarker.setMap(map);
           nursingAccaFMarker.setMap(map);
-          clowAccaFMarker.setMap(map);
           polkAccaFMarker.setMap(map);
-          albeeAccaFMarker.setMap(map);
           radfordAccaFMarker.setMap(map);
           sageAccaFMarker.setMap(map);
-          kolfAccaFMarker.setMap(map);
-          environmentalAccaFMarker.setMap(map);
-          ceramicsAccaFMarker.setMap(map);
+
         }
         function removeAccaF(){
           acAccaFMarker.setMap(null);
+          albeeAccaFMarker.setMap(null);
+          ceramicsAccaFMarker.setMap(null);
+          clowAccaFMarker.setMap(null);
+          environmentalAccaFMarker.setMap(null);
           fredricAccaFMarker.setMap(null);
           halseyAccaFMarker.setMap(null);
           harringtonAccaFMarker.setMap(null);
+          kolfAccaFMarker.setMap(null);
           swartAccaFMarker.setMap(null);
           nursingAccaFMarker.setMap(null);
-          clowAccaFMarker.setMap(null);
           polkAccaFMarker.setMap(null);
-          albeeAccaFMarker.setMap(null);
           radfordAccaFMarker.setMap(null);
           sageAccaFMarker.setMap(null);
-          kolfAccaFMarker.setMap(null);
-          environmentalAccaFMarker.setMap(null);
-          ceramicsAccaFMarker.setMap(null);
         }
         $("#accaFLabel").click(function(){
           var checkAccF = !$("#accaF").prop("checked");
@@ -2464,39 +2495,34 @@ var eighteenAccParMarker = new google.maps.Marker({
           }
         });
       // create markers for athletics
-      var eastAthMarker = new google.maps.Marker({
-        position: buildings[15],
-        icon: image
-      });
       var albeeAthMarker = new google.maps.Marker({
         position: buildings[0],
-        icon: image
-      });
-      var kolfAthMarker = new google.maps.Marker({
-        position: buildings[26],
-        icon: image
-      });
-      var athleticAthMarker = new google.maps.Marker({
-        position: buildings[4],
         icon: image
       });
       var baseballAthMarker = new google.maps.Marker({
         position: buildings[1],
         icon: image
       });
+      var athleticAthMarker = new google.maps.Marker({
+        position: buildings[4],
+        icon: image
+      });
+      var eastAthMarker = new google.maps.Marker({
+        position: buildings[15],
+        icon: image
+      });
+      var kolfAthMarker = new google.maps.Marker({
+        position: buildings[26],
+        icon: image
+      });
+
       var titanAthMarker = new google.maps.Marker({
         position: buildings[42],
         icon: image
       });
       // athletics marker hover
-      eastAthMarker.addListener('click', function(){
-        eastHoverCard.open(map,eastAthMarker);
-      });
       albeeAthMarker.addListener('click', function(){
         albeeHoverCard.open(map, albeeAthMarker);
-      });
-      kolfAthMarker.addListener('click', function(){
-        kolfHoverCard.open(map, kolfAthMarker);
       });
       athleticAthMarker.addListener('click', function(){
           athleticHoverCard.open(map, athleticAthMarker);
@@ -2504,23 +2530,31 @@ var eighteenAccParMarker = new google.maps.Marker({
       baseballAthMarker.addListener('click', function(){
           baseballHoverCard.open(map, baseballAthMarker);
       });
+      eastAthMarker.addListener('click', function(){
+        eastHoverCard.open(map,eastAthMarker);
+      });
+
+      kolfAthMarker.addListener('click', function(){
+        kolfHoverCard.open(map, kolfAthMarker);
+      });
       titanAthMarker.addListener('click', function(){
           titanHoverCard.open(map, titanAthMarker);
       });
+
         function setAth(){
-          eastAthMarker.setMap(map);
           albeeAthMarker.setMap(map);
-          kolfAthMarker.setMap(map);
           athleticAthMarker.setMap(map);
           baseballAthMarker.setMap(map);
+          eastAthMarker.setMap(map);
+          kolfAthMarker.setMap(map);
           titanAthMarker.setMap(map);
         }
         function removeAth(){
-          eastAthMarker.setMap(null);
           albeeAthMarker.setMap(null);
-          kolfAthMarker.setMap(null);
           athleticAthMarker.setMap(null);
           baseballAthMarker.setMap(null);
+          eastAthMarker.setMap(null);
+          kolfAthMarker.setMap(null);
           titanAthMarker.setMap(null);
         }
         $("#athLabel").click(function(){
@@ -2532,8 +2566,8 @@ var eighteenAccParMarker = new google.maps.Marker({
           }
         });
       // AccaS markers
-      var swartAccaSMarker = new google.maps.Marker({
-        position: buildings[40],
+      var equityAccaSMarker = new google.maps.Marker({
+        position: buildings[8],
         icon: image
       });
       var nursingAccaSMarker = new google.maps.Marker({
@@ -2544,13 +2578,14 @@ var eighteenAccParMarker = new google.maps.Marker({
         position: buildings[39],
         icon: image
       });
-      var equityAccaSMarker = new google.maps.Marker({
-        position: buildings[8],
+      var swartAccaSMarker = new google.maps.Marker({
+        position: buildings[40],
         icon: image
       });
+
       // AccaS hover
-      swartAccaSMarker.addListener('click', function(){
-        swartHoverCard.open(map, swartAccaSMarker);
+      equityAccaSMarker.addListener('click', function(){
+        equityHoverCard.open(map, equityAccaSMarker);
       });
       nursingAccaSMarker.addListener('click', function(){
         nursingHoverCard.open(map, nursingAccaSMarker);
@@ -2558,21 +2593,24 @@ var eighteenAccParMarker = new google.maps.Marker({
       successAccaSMarker.addListener('click', function(){
         successHoverCard.open(map, successAccaSMarker);
       });
-      equityAccaSMarker.addListener('click', function(){
-        equityHoverCard.open(map, equityAccaSMarker);
+      swartAccaSMarker.addListener('click', function(){
+        swartHoverCard.open(map, swartAccaSMarker);
       });
+
       // set/remove AccaS
         function setAccaS(){
           equityAccaSMarker.setMap(map);
+          nursingAccaSMarker.setMap(map);
           successAccaSMarker.setMap(map);
           swartAccaSMarker.setMap(map);
-          nursingAccaSMarker.setMap(map);
+
         }
         function removeAccaS(){
           equityAccaSMarker.setMap(null);
+          nursingAccaSMarker.setMap(null);
           successAccaSMarker.setMap(null);
           swartAccaSMarker.setMap(null);
-          nursingAccaSMarker.setMap(null);
+
         }
         $("#accSLabel").click(function(){
           var checkAccS = !$("#accS").prop("checked");
@@ -2583,30 +2621,6 @@ var eighteenAccParMarker = new google.maps.Marker({
           }
         });
       // CampS markers
-      var dempseyCampSMarker = new google.maps.Marker({
-        position: buildings[13],
-        icon: image
-      });
-      var radfordCampSMarker = new google.maps.Marker({
-        position: buildings[33],
-        icon: image
-      });
-      var multiculturalCampSMarker = new google.maps.Marker({
-        position: buildings[28],
-        icon: image
-      });
-      var recreationCampSMarker = new google.maps.Marker({
-        position: buildings[38],
-        icon: image
-      });
-      var reeveCampSMarker = new google.maps.Marker({
-        position: buildings[34],
-        icon: image
-      });
-      var successCampSMarker = new google.maps.Marker({
-        position: buildings[39],
-        icon: image
-      });
       var equityCampSMarker = new google.maps.Marker({
         position: buildings[8],
         icon: image
@@ -2615,61 +2629,90 @@ var eighteenAccParMarker = new google.maps.Marker({
         position: buildings[9],
         icon: image
       });
-      var pollockCampSMarker = new google.maps.Marker({
-        position: buildings[31],
+      var dempseyCampSMarker = new google.maps.Marker({
+        position: buildings[13],
         icon: image
       });
+      var multiculturalCampSMarker = new google.maps.Marker({
+        position: buildings[28],
+        icon: image
+      });
+      var pollockCampSMarker = new google.maps.Marker({
+          position: buildings[31],
+          icon: image
+      });
+      var radfordCampSMarker = new google.maps.Marker({
+        position: buildings[33],
+        icon: image
+      });
+      var reeveCampSMarker = new google.maps.Marker({
+        position: buildings[34],
+        icon: image
+      });
+      var recreationCampSMarker = new google.maps.Marker({
+        position: buildings[38],
+        icon: image
+      });
+      var successCampSMarker = new google.maps.Marker({
+        position: buildings[39],
+        icon: image
+      });
+
+
       // CampS hover
-      dempseyCampSMarker.addListener('click', function(){
-        dempseyHoverCard.open(map, dempseyCampSMarker);
-      });
-      radfordCampSMarker.addListener('click', function(){
-        radfordHoverCard.open(map, radfordCampSMarker);
-      });
-      multiculturalCampSMarker.addListener('click', function(){
-        multiculturalHoverCard.open(map, multiculturalCampSMarker);
-      });
-      recreationCampSMarker.addListener('click', function(){
-        recreationHoverCard.open(map, recreationCampSMarker);
-      });
-      reeveCampSMarker.addListener('click', function(){
-        reeveHoverCard.open(map, reeveCampSMarker);
-      });
-      successCampSMarker.addListener('click', function(){
-        successHoverCard.open(map, successCampSMarker);
-      });
       equityCampSMarker.addListener('click', function(){
         equityHoverCard.open(map, equityCampSMarker);
       });
       campusCampSMarker.addListener('click', function(){
           campusHoverCard.open(map, campusCampSMarker);
       });
+      dempseyCampSMarker.addListener('click', function(){
+        dempseyHoverCard.open(map, dempseyCampSMarker);
+      });
+      multiculturalCampSMarker.addListener('click', function(){
+        multiculturalHoverCard.open(map, multiculturalCampSMarker);
+      });
       pollockCampSMarker.addListener('click', function(){
           pollockHoverCard.open(map, pollockCampSMarker);
       });
+      radfordCampSMarker.addListener('click', function(){
+        radfordHoverCard.open(map, radfordCampSMarker);
+      });
+      reeveCampSMarker.addListener('click', function(){
+        reeveHoverCard.open(map, reeveCampSMarker);
+      });
+      recreationCampSMarker.addListener('click', function(){
+        recreationHoverCard.open(map, recreationCampSMarker);
+      });
+      successCampSMarker.addListener('click', function(){
+        successHoverCard.open(map, successCampSMarker);
+      });
+
+
       // set/remove CampS
 
         function setCampS(){
-          campusCampSMarker.setMap(map);
-          recreationCampSMarker.setMap(map);
           equityCampSMarker.setMap(map);
-          successCampSMarker.setMap(map);
-          reeveCampSMarker.setMap(map);
+          campusCampSMarker.setMap(map);
+          dempseyCampSMarker.setMap(map);
           multiculturalCampSMarker.setMap(map);
           pollockCampSMarker.setMap(map);
+          recreationCampSMarker.setMap(map);
           radfordCampSMarker.setMap(map);
-          dempseyCampSMarker.setMap(map);
+          reeveCampSMarker.setMap(map);
+          successCampSMarker.setMap(map);
+
         }
         function removeCampS(){
-          campusCampSMarker.setMap(null);
-          recreationCampSMarker.setMap(null);
           equityCampSMarker.setMap(null);
-          successCampSMarker.setMap(null);
-          reeveCampSMarker.setMap(null);
+          campusCampSMarker.setMap(null);
+          dempseyCampSMarker.setMap(null);
           multiculturalCampSMarker.setMap(null);
           pollockCampSMarker.setMap(null);
+          recreationCampSMarker.setMap(null);
           radfordCampSMarker.setMap(null);
-          dempseyCampSMarker.setMap(null);
+          reeveCampSMarker.setMap(null);
+          successCampSMarker.setMap(null);
         }
         $("#campSLabel").click(function(){
           var checkCampS = !$("#campS").prop("checked");
@@ -2680,92 +2723,95 @@ var eighteenAccParMarker = new google.maps.Marker({
           }
         });
       // ResH markers
+      var donnerResHMarker = new google.maps.Marker({
+        position: buildings[14],
+        icon: image
+      });
+      var evansResHMarker = new google.maps.Marker({
+          position: buildings[17],
+          icon: image
+      });
+      var fletcherResHMarker = new google.maps.Marker({
+              position: buildings[18],
+              icon: image
+      });
       var gruenhagenResHMarker = new google.maps.Marker({
         position: buildings[20],
         icon: image
       });
-      var donnerResHMarker = new google.maps.Marker({
-              position: buildings[14],
-              icon: image
-            });
-      var websterResHMarker = new google.maps.Marker({
-              position: buildings[44],
-              icon: image
-            });
-      var taylorResHMarker = new google.maps.Marker({
-              position: buildings[41],
-              icon: image
-            });
-      var evansResHMarker = new google.maps.Marker({
-              position: buildings[17],
-              icon: image
-            });
-      var stewartResHMarker = new google.maps.Marker({
-              position: buildings[37],
-              icon: image
-            });
-      var fletcherResHMarker = new google.maps.Marker({
-              position: buildings[18],
-              icon: image
-            });
       var horizonResHMarker = new google.maps.Marker({
               position: buildings[25],
               icon: image
-            });
+      });
+      var stewartResHMarker = new google.maps.Marker({
+              position: buildings[37],
+              icon: image
+      });
       var scottResHMarker = new google.maps.Marker({
               position: buildings[36],
               icon: image
-            });
-      // ResH hover
-      gruenhagenResHMarker.addListener('click', function(){
-        gruenhagenHoverCard.open(map,gruenhagenResHMarker);
       });
+      var taylorResHMarker = new google.maps.Marker({
+              position: buildings[41],
+              icon: image
+      });
+      var websterResHMarker = new google.maps.Marker({
+              position: buildings[44],
+              icon: image
+      });
+
+      // ResH hover
       donnerResHMarker.addListener('click', function(){
         donnerHoverCard.open(map, donnerResHMarker);
-      });
-      websterResHMarker.addListener('click', function(){
-        websterHoverCard.open(map, websterResHMarker);
-      });
-      taylorResHMarker.addListener('click', function(){
-        taylorHoverCard.open(map, taylorResHMarker);
       });
       evansResHMarker.addListener('click', function(){
         evansHoverCard.open(map, evansResHMarker);
       });
-      stewartResHMarker.addListener('click', function(){
-        stewartHoverCard.open(map, stewartResHMarker);
-      });
       fletcherResHMarker.addListener('click', function(){
           fletcherHoverCard.open(map, fletcherResHMarker);
+      });
+      gruenhagenResHMarker.addListener('click', function(){
+        gruenhagenHoverCard.open(map,gruenhagenResHMarker);
       });
       horizonResHMarker.addListener('click', function(){
           horizonHoverCard.open(map, horizonResHMarker);
       });
+      stewartResHMarker.addListener('click', function(){
+        stewartHoverCard.open(map, stewartResHMarker);
+      });
       scottResHMarker.addListener('click', function(){
           scottHoverCard.open(map, scottResHMarker);
       });
+      taylorResHMarker.addListener('click', function(){
+        taylorHoverCard.open(map, taylorResHMarker);
+      });
+      websterResHMarker.addListener('click', function(){
+        websterHoverCard.open(map, websterResHMarker);
+      });
+
       // ResH set/remove
         function setResH(){
-          gruenhagenResHMarker.setMap(map);
           donnerResHMarker.setMap(map);
-          websterResHMarker.setMap(map);
-          taylorResHMarker.setMap(map);
           evansResHMarker.setMap(map);
-          stewartResHMarker.setMap(map);
           fletcherResHMarker.setMap(map);
+          gruenhagenResHMarker.setMap(map);
           horizonResHMarker.setMap(map);
+          stewartResHMarker.setMap(map);
           scottResHMarker.setMap(map);
+          taylorResHMarker.setMap(map);
+          websterResHMarker.setMap(map);
+
         }
         function removeResH(){
-          gruenhagenResHMarker.setMap(null);
           donnerResHMarker.setMap(null);
-          websterResHMarker.setMap(null);
-          taylorResHMarker.setMap(null);
           evansResHMarker.setMap(null);
-          stewartResHMarker.setMap(null);
           fletcherResHMarker.setMap(null);
+          gruenhagenResHMarker.setMap(null);
           horizonResHMarker.setMap(null);
+          stewartResHMarker.setMap(null);
           scottResHMarker.setMap(null);
+          taylorResHMarker.setMap(null);
+          websterResHMarker.setMap(null);
         }
         $("#resHLabel").click(function(){
           var checkResH = !$("#resH").prop("checked");
@@ -2776,89 +2822,67 @@ var eighteenAccParMarker = new google.maps.Marker({
           }
         });
       // dining markers
-      var halseyDiningMarker = new google.maps.Marker({
-        position: buildings[21],
+      var blackhawkDiningMarker = new google.maps.Marker({
+        position: buildings[5],
         icon: image
       });
       var clowDiningMarker = new google.maps.Marker({
         position: buildings[11],
         icon: image
       });
-      var sageDiningMarker = new google.maps.Marker({
-        position: buildings[35],
-        icon: image
-      });
-      var blackhawkDiningMarker = new google.maps.Marker({
-        position: buildings[5],
-        icon: image
-      });
-      var reeveDiningMarker = new google.maps.Marker({
-        position: buildings[34],
-        icon: image
-      });
-      var scottDiningMarker = new google.maps.Marker({
-        position: buildings[36],
-        icon: image
-      });
       var halseyDiningMarker = new google.maps.Marker({
         position: buildings[21],
         icon: image
       });
-      var clowDiningMarker = new google.maps.Marker({
-        position: buildings[11],
+      var reeveDiningMarker = new google.maps.Marker({
+        position: buildings[34],
         icon: image
       });
       var sageDiningMarker = new google.maps.Marker({
         position: buildings[35],
         icon: image
       });
-      var blackhawkDiningMarker = new google.maps.Marker({
-        position: buildings[5],
-        icon: image
-      });
-      var reeveDiningMarker = new google.maps.Marker({
-        position: buildings[34],
-        icon: image
-      });
       var scottDiningMarker = new google.maps.Marker({
         position: buildings[36],
         icon: image
       });
+
       // dining hover
-      halseyDiningMarker.addListener('click', function(){
-        halseyHoverCard.open(map, halseyDiningMarker);
+      blackhawkDiningMarker.addListener('click', function(){
+        blackhawkHoverCard.open(map, blackhawkDiningMarker);
       });
       clowDiningMarker.addListener('click', function(){
         clowHoverCard.open(map, clowDiningMarker);
       });
-      sageDiningMarker.addListener('click', function(){
-        sageHoverCard.open(map, sageDiningMarker);
-      });
-      blackhawkDiningMarker.addListener('click', function(){
-        blackhawkHoverCard.open(map, blackhawkDiningMarker);
+      halseyDiningMarker.addListener('click', function(){
+        halseyHoverCard.open(map, halseyDiningMarker);
       });
       reeveDiningMarker.addListener('click', function(){
         reeveHoverCard.open(map, reeveDiningMarker);
+      });
+      sageDiningMarker.addListener('click', function(){
+        sageHoverCard.open(map, sageDiningMarker);
       });
       scottDiningMarker.addListener('click', function(){
           scottHoverCard.open(map, scottDiningMarker);
       });
       // set/remove dining
         function setDining(){
-          reeveDiningMarker.setMap(map);
           blackhawkDiningMarker.setMap(map);
-          scottDiningMarker.setMap(map);
-          sageDiningMarker.setMap(map);
           clowDiningMarker.setMap(map);
           halseyDiningMarker.setMap(map);
+          reeveDiningMarker.setMap(map);
+          sageDiningMarker.setMap(map);
+          scottDiningMarker.setMap(map);
+
         }
         function removeDining(){
-          reeveDiningMarker.setMap(null);
           blackhawkDiningMarker.setMap(null);
-          scottDiningMarker.setMap(null);
-          sageDiningMarker.setMap(null);
           clowDiningMarker.setMap(null);
           halseyDiningMarker.setMap(null);
+          reeveDiningMarker.setMap(null);
+          sageDiningMarker.setMap(null);
+          scottDiningMarker.setMap(null);
         }
         $("#diningLabel").click(function(){
           var checkDining = !$("#dining").prop("checked");
@@ -2869,14 +2893,15 @@ var eighteenAccParMarker = new google.maps.Marker({
           }
         });
     // StuR markers
-    var recreationStuRMarker = new google.maps.Marker({
-      position: buildings[38],
-      icon: image
-    });
     var reeveStuRMarker = new google.maps.Marker({
       position: buildings[34],
       icon: image
     });
+    var recreationStuRMarker = new google.maps.Marker({
+      position: buildings[38],
+      icon: image
+    });
+
     // StuR hover
     recreationStuRMarker.addListener('click', function(){
       recreationHoverCard.open(map, recreationStuRMarker);
@@ -2886,12 +2911,12 @@ var eighteenAccParMarker = new google.maps.Marker({
     });
     // StuR set/remove
         function setStuR(){
-          recreationStuRMarker.setMap(map);
           reeveStuRMarker.setMap(map);
+          recreationStuRMarker.setMap(map);
         }
         function removeStuR(){
-          recreationStuRMarker.setMap(null);
           reeveStuRMarker.setMap(null);
+          recreationStuRMarker.setMap(null);
         }
         $("#stuRLabel").click(function(){
           var checkStuR = !$("#stuR").prop("checked");
