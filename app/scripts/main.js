@@ -87,14 +87,21 @@
   }
 
   // info bulding card slide in from left (when blue link is clicked)
-  // academic facilities show and slide out
+  // academic facilities show and slide out (if clicked again, slides back in)
 
   $("#accFText").click(function(){
   var check = $("#accFCard").hasClass("cardPresent");
-  
   if (check === false){
     $("#accFCard").addClass("cardPresent");
+
     hideAll();
+    $("#athCard").removeClass("cardPresent");
+    $("#accSCard").removeClass("cardPresent");
+    $("#campSCard").removeClass("cardPresent");
+    $("#resHCard").removeClass("cardPresent");
+    $("#diningCard").removeClass("cardPresent");
+    $("#stuRCard").removeClass("cardPresent");
+
     $("#accFCard").show();
     $("#accFCard").animate(
       {left: "377px"});
@@ -105,18 +112,6 @@
   }
   });
 
-  // $("#accFText").click(function(){
-  //   hideAll();
-  //   $("#accFCard").show();
-  //   $("#accFCard").animate(
-  //     {left: "377px"});
-  // });
-
-  // $("#accFText").click(function(){
-  //
-  //   $("#accFCard").animate(
-  //     {left:"-377px"});
-  // });
   // click x button on academic facilities card and it will disappear again
   $("#accFClose").click(function(){
     $("#accFCard").animate(
@@ -125,11 +120,28 @@
   // end academic facilities
   //
   // athletics show and slide out
+
   $("#athText").click(function(){
+  var check = $("#athCard").hasClass("cardPresent");
+  if (check === false){
+    $("#athCard").addClass("cardPresent");
+
     hideAll();
+    $("#accFCard").removeClass("cardPresent");
+    $("#accSCard").removeClass("cardPresent");
+    $("#campSCard").removeClass("cardPresent");
+    $("#resHCard").removeClass("cardPresent");
+    $("#diningCard").removeClass("cardPresent");
+    $("#stuRCard").removeClass("cardPresent");
+
     $("#athCard").show();
     $("#athCard").animate(
       {left: "377px"});
+  } else if (check === true){
+    $("#athCard").removeClass("cardPresent");
+    $("#athCard").animate(
+        {left:"-377px"});
+  }
   });
   // athletics x button hide
   $("#athClose").click(function(){
@@ -139,11 +151,28 @@
   // end athletics
   //
   // start academic services show and slide out
+
   $("#accSText").click(function(){
+  var check = $("#accSCard").hasClass("cardPresent");
+  if (check === false){
+    $("#accSCard").addClass("cardPresent");
+
     hideAll();
+    $("#accFCard").removeClass("cardPresent");
+    $("#athCard").removeClass("cardPresent");
+    $("#campSCard").removeClass("cardPresent");
+    $("#resHCard").removeClass("cardPresent");
+    $("#diningCard").removeClass("cardPresent");
+    $("#stuRCard").removeClass("cardPresent");
+
     $("#accSCard").show();
     $("#accSCard").animate(
       {left: "377px"});
+  } else if (check === true){
+    $("#accSCard").removeClass("cardPresent");
+    $("#accSCard").animate(
+        {left:"-377px"});
+  }
   });
   // academic services x button hide
   $("#accSClose").click(function(){
@@ -153,11 +182,28 @@
   // end accademic services
   //
   // start campus services show and slide out
+
   $("#campSText").click(function(){
+  var check = $("#campSCard").hasClass("cardPresent");
+  if (check === false){
+    $("#campSCard").addClass("cardPresent");
+
     hideAll();
+    $("#accFCard").removeClass("cardPresent");
+    $("#athCard").removeClass("cardPresent");
+    $("#accSCard").removeClass("cardPresent");
+    $("#resHCard").removeClass("cardPresent");
+    $("#diningCard").removeClass("cardPresent");
+    $("#stuRCard").removeClass("cardPresent");
+
     $("#campSCard").show();
     $("#campSCard").animate(
       {left: "377px"});
+  } else if (check === true){
+    $("#campSCard").removeClass("cardPresent");
+    $("#campSCard").animate(
+        {left:"-377px"});
+  }
   });
   //  campus services x button hide
   $("#campSClose").click(function(){
@@ -167,11 +213,28 @@
   // end campus services
   //
   // start Residence halls show and slide out
+
   $("#resHText").click(function(){
+  var check = $("#resHCard").hasClass("cardPresent");
+  if (check === false){
+    $("#resHCard").addClass("cardPresent");
+
     hideAll();
+    $("#accFCard").removeClass("cardPresent");
+    $("#athCard").removeClass("cardPresent");
+    $("#accSCard").removeClass("cardPresent");
+    $("#campSCard").removeClass("cardPresent");
+    $("#diningCard").removeClass("cardPresent");
+    $("#stuRCard").removeClass("cardPresent");
+
     $("#resHCard").show();
     $("#resHCard").animate(
       {left: "377px"});
+  } else if (check === true){
+    $("#resHCard").removeClass("cardPresent");
+    $("#resHCard").animate(
+        {left:"-377px"});
+  }
   });
   // Residence halls x button hide
   $("#resHClose").click(function(){
@@ -181,11 +244,28 @@
   // end residence halls
   //
   // start Dining show and slide out
+
   $("#diningText").click(function(){
+  var check = $("#diningCard").hasClass("cardPresent");
+  if (check === false){
+    $("#diningCard").addClass("cardPresent");
+
     hideAll();
+    $("#accFCard").removeClass("cardPresent");
+    $("#athCard").removeClass("cardPresent");
+    $("#accSCard").removeClass("cardPresent");
+    $("#campSCard").removeClass("cardPresent");
+    $("#resHCard").removeClass("cardPresent");
+    $("#stuRCard").removeClass("cardPresent");
+
     $("#diningCard").show();
     $("#diningCard").animate(
       {left: "377px"});
+  } else if (check === true){
+    $("#diningCard").removeClass("cardPresent");
+    $("#diningCard").animate(
+        {left:"-377px"});
+  }
   });
   // Dining x button hide
   $("#diningClose").click(function(){
@@ -195,11 +275,28 @@
   // end Dining
   //
   // start Student Recreation show and slide out
+
   $("#stuRText").click(function(){
+  var check = $("#stuRCard").hasClass("cardPresent");
+  if (check === false){
+    $("#stuRCard").addClass("cardPresent");
+
     hideAll();
+    $("#accFCard").removeClass("cardPresent");
+    $("#athCard").removeClass("cardPresent");
+    $("#accSCard").removeClass("cardPresent");
+    $("#campSCard").removeClass("cardPresent");
+    $("#resHCard").removeClass("cardPresent");
+    $("#diningCard").removeClass("cardPresent");
+
     $("#stuRCard").show();
     $("#stuRCard").animate(
       {left: "377px"});
+  } else if (check === true){
+    $("#stuRCard").removeClass("cardPresent");
+    $("#stuRCard").animate(
+        {left:"-377px"});
+  }
   });
   // Student Recreation x button hide
   $("#stuRClose").click(function(){
