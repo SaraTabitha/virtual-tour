@@ -90,8 +90,8 @@
   // academic facilities show and slide out
 
   $("#accFText").click(function(){
-  var check = $("#accFCard").hasClass("checked");
-  debugger;
+  var check = $("#accFCard").hasClass("cardPresent");
+  
   if (check === false){
     $("#accFCard").addClass("cardPresent");
     hideAll();
