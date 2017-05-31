@@ -24,6 +24,7 @@ html, body {
   margin: 0;
   padding: 0;
 }
+
 /*yellow portion of header*/
 .mdl-layout__header-row.main {
   height: 109px;
@@ -442,4 +443,6 @@ html, body, main, .mdl-layout__content, .page-content, #map {
       background-color: white;
       color: black;
       z-index: 2;
+      padding: 10px;
+      border-radius: 10px;
     }
