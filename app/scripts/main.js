@@ -94,6 +94,9 @@
   if (check === false){
     $("#accFCard").addClass("cardPresent");
 
+    // hide + removeClass for others is so that if they leave
+    // one open and click on another/click between category links
+    // they will open/close properly
     hideAll();
     $("#athCard").removeClass("cardPresent");
     $("#accSCard").removeClass("cardPresent");
@@ -114,6 +117,10 @@
 
   // click x button on academic facilities card and it will disappear again
   $("#accFClose").click(function(){
+    // remove class when x is clicked so that
+    // it will open again on the first click when they
+    // click the link (now that it depends on whether cardPresent is there)
+    $("#accFCard").removeClass("cardPresent");
     $("#accFCard").animate(
       {left:"-377px"});
   });
@@ -145,6 +152,7 @@
   });
   // athletics x button hide
   $("#athClose").click(function(){
+    $("#athCard").removeClass("cardPresent");
     $("#athCard").animate(
       {left:"-377px"});
   });
@@ -176,6 +184,7 @@
   });
   // academic services x button hide
   $("#accSClose").click(function(){
+    $("#accSCard").removeClass("cardPresent");
     $("#accSCard").animate(
       {left:"-377px"});
   });
@@ -207,6 +216,7 @@
   });
   //  campus services x button hide
   $("#campSClose").click(function(){
+    $("#campSCard").removeClass("cardPresent");
     $("#campSCard").animate(
       {left:"-377px"});
   });
@@ -238,6 +248,7 @@
   });
   // Residence halls x button hide
   $("#resHClose").click(function(){
+    $("#resHCard").removeClass("cardPresent");
     $("#resHCard").animate(
       {left:"-377px"});
   });
@@ -269,6 +280,7 @@
   });
   // Dining x button hide
   $("#diningClose").click(function(){
+    $("#diningCard").removeClass("cardPresent");
     $("#diningCard").animate(
       {left:"-377px"});
   });
@@ -300,6 +312,7 @@
   });
   // Student Recreation x button hide
   $("#stuRClose").click(function(){
+    $("#stuRCard").removeClass("cardPresent");
     $("#stuRCard").animate(
       {left:"-377px"});
   });

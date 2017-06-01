@@ -463,7 +463,7 @@ html, body, main, .mdl-layout__content, .page-content, #map {
     .white{
       color: #FFF;
     }
-    .popupButton{
+    .closeButton{
       float: right;
-      margin: 10px;
+      margin: 5px;
     }
