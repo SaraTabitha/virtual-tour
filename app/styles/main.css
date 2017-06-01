@@ -369,7 +369,7 @@ left: 75%;
 .demo-card-wide{
   position: relative;
   width: 377px;
-  height: 110%;
+  height: 100%;
   display: none;
   /*curve for slide out/in*/
   transition: left .3s cubic-bezier(0.0, 0.0, 0.2, 1);
@@ -383,9 +383,11 @@ html, body, main, .mdl-layout__content, .page-content, #map {
     margin: 0;
     padding: 0;
     z-index: 0;
+    overflow: hidden;
 }
 #map {
     position: relative;
+    height: 100%;
   }
     /*hover for markers*/
    .generalHover{
@@ -427,13 +429,14 @@ html, body, main, .mdl-layout__content, .page-content, #map {
       height: 100%;
       background-color: black;
       z-index: 1;
-      opacity: 0.2;
+      opacity: 0.3;
+      
     }
     .popup{
       position: fixed;
       left: 40%;
       top: 20%;
-      heigth: 400px;
+
       width: 715px;
       background-color: white;
       color: black;
