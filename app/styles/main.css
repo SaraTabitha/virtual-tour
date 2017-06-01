@@ -393,7 +393,7 @@ html, body, main, .mdl-layout__content, .page-content, #map {
       width: 248px;
     }
 
-    img{
+    .imageHover{
       width: 70px;
       height: 105px;
       display: inline-block;
@@ -434,7 +434,7 @@ html, body, main, .mdl-layout__content, .page-content, #map {
       left: 40%;
       top: 20%;
       heigth: 400px;
-      width: 500px;
+      width: 715px;
       background-color: white;
       color: black;
       z-index: 2;
@@ -447,7 +447,7 @@ html, body, main, .mdl-layout__content, .page-content, #map {
       position: relative;
       left: -10px;
       top: -10px;
-      width: 520px;
+      width: 735px;
       height: 100px;
       border-radius: 10px 10px 0px 0px;
     }
@@ -455,7 +455,6 @@ html, body, main, .mdl-layout__content, .page-content, #map {
       position: relative;
       top: 50%;
       left: 10px;
-      margin: 0px;
       font-size: 2em;
     }
     .white{
@@ -464,4 +463,17 @@ html, body, main, .mdl-layout__content, .page-content, #map {
     .closeButton{
       float: right;
       margin: 5px;
+    }
+    .popupText{
+      float: right;
+      width: 300px;
+    }
+    .heading{
+      margin: 0px;
+    }
+    .imagePopup{
+      float: left;
+    }
+    .address{
+      text-align: center;
     }

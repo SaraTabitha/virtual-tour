@@ -385,7 +385,7 @@ function initMap() {
         }
         // adding hover cards for building markers
         var albeeHover = '<div class="generalHover">' +
-        '<img src="images/campuspictures/albeehall.jpeg">' +
+        '<img class="imageHover" src="images/campuspictures/albeehall.jpeg">' +
         '<div class="hoverDiv">' +
         '<h1 class="headHover text">Albee Hall</h1>' +
         '<p class="paraHover text"> 776 Algoma Boulevard</p>' +
@@ -404,7 +404,7 @@ function initMap() {
           albeeHoverCard.open(map, albeeMarker);
         });
         var baseballHover = '<div class="generalHover">' +
-        '<img src="#">' +
+        '<img class="imageHover" src="#">' +
         '<div class="hoverDiv">' +
         '<h1 class="headHover text">Alumni Baseball Stadium</h1>' +
         '<p class="paraHover text"> 450 Josslyn Street</p>' +
@@ -420,7 +420,7 @@ function initMap() {
             baseballHoverCard.open(map, baseballMarker);
         });
         var alumniHover = '<div class="generalHover">' +
-        '<img src="images/campuspictures/awcc-building.jpg">' +
+        '<img class="imageHover" src="images/campuspictures/awcc-building.jpg">' +
         '<div class="hoverDiv">' +
         '<h1 class="headHover text">Alumni Welcome and Conference Center</h1>' +
         '<p class="paraHover text"> 625 Pearl Ave.</p>' +
@@ -436,7 +436,7 @@ function initMap() {
         });
         // a&c hover
         var acHover = '<div class="generalHover">' +
-        '<img src="images/campuspictures/artscommunications.jpeg">' +
+        '<img class="imageHover" src="images/campuspictures/artscommunications.jpeg">' +
         '<div class="hoverDiv">' +
         '<h1 class="headHover text">Arts &amp; Communications Center</h1>' +
         '<p class="paraHover text"> 1001 Elmwood Avenue</p>' +
@@ -451,7 +451,7 @@ function initMap() {
           acHoverCard.open(map,acMarker);
         });
         var athleticHover = '<div class="generalHover">' +
-        '<img src="images/campuspictures/athleticservice.jpeg">' +
+        '<img class="imageHover" src="images/campuspictures/athleticservice.jpeg">' +
         '<div class="hoverDiv">' +
         '<h1 class="headHover text">Athletic Service Building</h1>' +
         '<p class="paraHover text"> 450 Josslyn Street</p>' +
@@ -467,7 +467,7 @@ function initMap() {
             athleticHoverCard.open(map, athleticMarker);
         });
         var blackhawkHover = '<div class="generalHover">' +
-        '<img src="images/campuspictures/blackhawk.jpeg">' +
+        '<img class="imageHover" src="images/campuspictures/blackhawk.jpeg">' +
         '<div class="hoverDiv">' +
         '<h1 class="headHover text">Blackhawk Commons</h1>' +
         '<p class="paraHover text"> 725 Algoma Boulevard</p>' +
@@ -483,7 +483,7 @@ function initMap() {
           blackhawkHoverCard.open(map, blackhawkMarker);
         });
         var biodigesterHover = '<div class="generalHover">' +
-        '<img src="images/campuspictures/biodigester.jpg">' +
+        '<img class="imageHover" src="images/campuspictures/biodigester.jpg">' +
         '<div class="hoverDiv">' +
         '<h1 class="headHover text">Biodigester</h1>' +
         '<p class="paraHover text"> 755 Dempsey Trail</p>' +
@@ -499,7 +499,7 @@ function initMap() {
             biodigesterHoverCard.open(map, biodigesterMarker);
         });
         var buckstaffHover = '<div class="generalHover">' +
-        '<img src="images/campuspictures/buckstaff.jpeg">' +
+        '<img class="imageHover" src="images/campuspictures/buckstaff.jpeg">' +
         '<div class="hoverDiv">' +
         '<h1 class="headHover text">Buckstaff Planetarium</h1>' +
         '<p class="paraHover text"> 921 Elmwood Avenue</p>' +
@@ -515,7 +515,7 @@ function initMap() {
           buckstaffHoverCard.open(map,buckstaffMarker);
         });
         var equityHover = '<div class="generalHover">' +
-        '<img src="images/campuspictures/centerforequity.jpeg">' +
+        '<img class="imageHover" src="images/campuspictures/centerforequity.jpeg">' +
         '<div class="hoverDiv">' +
         '<h1 class="headHover text">Campus Center for Equity &amp; Diversity</h1>' +
         '<p class="paraHover text"> 717 W. Irving Street</p>' +
@@ -530,7 +530,7 @@ function initMap() {
           equityHoverCard.open(map, equityMarker);
         });
         var campusHover = '<div class="generalHover">' +
-        '<img src="images/campuspictures/campus-services.jpg">' +
+        '<img class="imageHover" src="images/campuspictures/campus-services.jpg">' +
         '<div class="hoverDiv">' +
         '<h1 class="headHover text">Campus Services</h1>' +
         '<p class="paraHover text"> 650 Witzel Ave.</p>' +
@@ -546,7 +546,7 @@ function initMap() {
             campusHoverCard.open(map, campusMarker);
         });
         var ceramicsHover = '<div class="generalHover">' +
-        '<img src="images/campuspictures/ceramicslab.jpeg">' +
+        '<img class="imageHover" src="images/campuspictures/ceramicslab.jpeg">' +
         '<div class="hoverDiv">' +
         '<h1 class="headHover text">Ceramics Laboratory</h1>' +
         '<p class="paraHover text"> 1165 Rockwell Avenue</p>' +
@@ -562,7 +562,7 @@ function initMap() {
           ceramicsHoverCard.open(map, ceramicsMarker);
         });
         var clowHover = '<div class="generalHover">' +
-        '<img src="images/campuspictures/clow.jpeg">' +
+        '<img class="imageHover" src="images/campuspictures/clow.jpeg">' +
         '<div class="hoverDiv">' +
         '<h1 class="headHover text">Clow Social Science Center</h1>' +
         '<p class="paraHover text"> 805 Algoma Boulevard</p>' +
@@ -578,7 +578,7 @@ function initMap() {
           clowHoverCard.open(map, clowMarker);
         });
         var gardensHover = '<div class="generalHover">' +
-        '<img src="images/campuspictures/community-gardens.jpg">' +
+        '<img class="imageHover" src="images/campuspictures/community-gardens.jpg">' +
         '<div class="hoverDiv">' +
         '<h1 class="headHover text">Community Gardens</h1>' +
         '<p class="paraHover text"> 663 W. 3rd Avenue</p>' +
@@ -594,7 +594,7 @@ function initMap() {
             gardensHoverCard.open(map, gardensMarker);
         });
         var dempseyHover = '<div class="generalHover">' +
-        '<img src="images/campuspictures/dempsey.jpeg">' +
+        '<img class="imageHover" src="images/campuspictures/dempsey.jpeg">' +
         '<div class="hoverDiv">' +
         '<h1 class="headHover text">Dempsey Hall</h1>' +
         '<p class="paraHover text"> 800 Algoma Boulevard</p>' +
@@ -610,7 +610,7 @@ function initMap() {
           dempseyHoverCard.open(map, dempseyMarker);
         });
         var donnerHover = '<div class="generalHover">' +
-        '<img src="images/campuspictures/donner.jpeg">' +
+        '<img class="imageHover" src="images/campuspictures/donner.jpeg">' +
         '<div class="hoverDiv">' +
         '<h1 class="headHover text">Donner Hall</h1>' +
         '<p class="paraHover text"> 820 High Avenue</p>' +
@@ -626,7 +626,7 @@ function initMap() {
           donnerHoverCard.open(map, donnerMarker);
         });
         var eastHover = '<div class="generalHover">' +
-        '<img src="images/campuspictures/easthall.jpg">' +
+        '<img class="imageHover" src="images/campuspictures/easthall.jpg">' +
         '<div class="hoverDiv">' +
         '<h1 class="headHover text">East Hall</h1>' +
         '<p class="paraHover text"> New York Ave. &amp; Jackson St.</p>' +
@@ -642,7 +642,7 @@ function initMap() {
           eastHoverCard.open(map,eastMarker);
         });
         var environmentalHover = '<div class="generalHover">' +
-        '<img src="images/campuspictures/aquaticstudiescenter.jpeg">' +
+        '<img class="imageHover" src="images/campuspictures/aquaticstudiescenter.jpeg">' +
         '<div class="hoverDiv">' +
         '<h1 class="headHover text">Environmental Research and Innovation Center</h1>' +
         '<p class="paraHover text"> 83 Pearl Avenue</p>' +
@@ -657,7 +657,7 @@ function initMap() {
           environmentalHoverCard.open(map, environmentalMarker);
         });
         var evansHover = '<div class="generalHover">' +
-        '<img src="images/campuspictures/evans.jpeg">' +
+        '<img class="imageHover" src="images/campuspictures/evans.jpeg">' +
         '<div class="hoverDiv">' +
         '<h1 class="headHover text">Evans Hall</h1>' +
         '<p class="paraHover text"> 727 W. Lincoln Avenue</p>' +
@@ -673,7 +673,7 @@ function initMap() {
           evansHoverCard.open(map, evansMarker);
         });
         var fletcherHover = '<div class="generalHover">' +
-        '<img src="images/campuspictures/fletcher.jpeg">' +
+        '<img class="imageHover" src="images/campuspictures/fletcher.jpeg">' +
         '<div class="hoverDiv">' +
         '<h1 class="headHover text">Fletcher Hall</h1>' +
         '<p class="paraHover text"> 712 Elmwood Avenue</p>' +
@@ -689,7 +689,7 @@ function initMap() {
             fletcherHoverCard.open(map, fletcherMarker);
         });
         var fredricHover = '<div class="generalHover">' +
-        '<img src="images/campuspictures/fredricmarch.jpeg">' +
+        '<img class="imageHover" src="images/campuspictures/fredricmarch.jpeg">' +
         '<div class="hoverDiv">' +
         '<h1 class="headHover text">Fredric March Theatre</h1>' +
         '<p class="paraHover text"> 926 Woodland Avenue</p>' +
@@ -705,7 +705,7 @@ function initMap() {
           fredricHoverCard.open(map,fredricMarker);
         });
         var gruenhagenHover = '<div class="generalHover">' +
-        '<img src="images/campuspictures/gruenhagen.jpeg">' +
+        '<img class="imageHover" src="images/campuspictures/gruenhagen.jpeg">' +
         '<div class="hoverDiv">' +
         '<h1 class="headHover text">Gruenhagen Conference Center</h1>' +
         '<p class="paraHover text"> 208 Osceola Avenue</p>' +
@@ -720,7 +720,7 @@ function initMap() {
           gruenhagenHoverCard.open(map,gruenhagenMarker);
         });
         var halseyHover = '<div class="generalHover">' +
-        '<img src="images/campuspictures/halsey.jpeg">' +
+        '<img class="imageHover" src="images/campuspictures/halsey.jpeg">' +
         '<div class="hoverDiv">' +
         '<h1 class="headHover text">Halsey Science Center</h1>' +
         '<p class="paraHover text"> 921 Elmwood Avenue</p>' +
@@ -736,7 +736,7 @@ function initMap() {
           halseyHoverCard.open(map, halseyMarker);
         });
         var harringtonHover = '<div class="generalHover">' +
-        '<img src="images/campuspictures/harrington.jpeg">' +
+        '<img class="imageHover" src="images/campuspictures/harrington.jpeg">' +
         '<div class="hoverDiv">' +
         '<h1 class="headHover text">Harrington Hall</h1>' +
         '<p class="paraHover text"> 845 Elmwood Avenue</p>' +
@@ -752,7 +752,7 @@ function initMap() {
           harringtonHoverCard.open(map, harringtonMarker);
         });
         var heatingHover = '<div class="generalHover">' +
-        '<img src="images/campuspictures/heatingplant.jpeg">' +
+        '<img class="imageHover" src="images/campuspictures/heatingplant.jpeg">' +
         '<div class="hoverDiv">' +
         '<h1 class="headHover text">Heating Plant</h1>' +
         '<p class="paraHover text"> 1010 Woodland Avenue</p>' +
@@ -768,7 +768,7 @@ function initMap() {
           heatingHoverCard.open(map,heatingMarker);
         });
         var parkingRampHover = '<div class="generalHover">' +
-        '<img src="images/campuspictures/parkingramp.jpeg">' +
+        '<img class="imageHover" src="images/campuspictures/parkingramp.jpeg">' +
         '<div class="hoverDiv">' +
         '<h1 class="headHover text">High Avenue Parking Ramp</h1>' +
         '<p class="paraHover text"> 725 High Avenue</p>' +
@@ -783,7 +783,7 @@ function initMap() {
           parkingRampHoverCard.open(map, parkingRampMarker);
         });
         var horizonHover = '<div class="generalHover">' +
-        '<img src="images/campuspictures/horizon.jpeg">' +
+        '<img class="imageHover" src="images/campuspictures/horizon.jpeg">' +
         '<div class="hoverDiv">' +
         '<h1 class="headHover text">Horizon Village</h1>' +
         '<p class="paraHover text"> 700 Algoma Boulevard</p>' +
@@ -799,7 +799,7 @@ function initMap() {
             horizonHoverCard.open(map, horizonMarker);
         });
         var kolfHover = '<div class="generalHover">' +
-        '<img src="images/campuspictures/kolf.jpeg">' +
+        '<img class="imageHover" src="images/campuspictures/kolf.jpeg">' +
         '<div class="hoverDiv">' +
         '<h1 class="headHover text">Kolf Sports Center</h1>' +
         '<p class="paraHover text"> 785 High Avenue</p>' +
@@ -815,7 +815,7 @@ function initMap() {
           kolfHoverCard.open(map, kolfMarker);
         });
         var lincolnHover = '<div class="generalHover">' +
-        '<img src="images/campuspictures/lincoln-hall.jpg">' +
+        '<img class="imageHover" src="images/campuspictures/lincoln-hall.jpg">' +
         '<div class="hoverDiv">' +
         '<h1 class="headHover text">Lincoln Hall</h1>' +
         '<p class="paraHover text"> 608 Algoma Boulevard</p>' +
@@ -831,7 +831,7 @@ function initMap() {
             lincolnHoverCard.open(map, lincolnMarker);
         });
         var multiculturalHover = '<div class="generalHover">' +
-        '<img src="images/campuspictures/multiculturaleducation.jpeg">' +
+        '<img class="imageHover" src="images/campuspictures/multiculturaleducation.jpeg">' +
         '<div class="hoverDiv">' +
         '<h1 class="headHover text">Multicultural Education Center</h1>' +
         '<p class="paraHover text"> 751 Algoma Boulevard</p>' +
@@ -846,7 +846,7 @@ function initMap() {
           multiculturalHoverCard.open(map, multiculturalMarker);
         });
         var nursingHover = '<div class="generalHover">' +
-        '<img src="images/campuspictures/nursingeducation.jpeg">' +
+        '<img class="imageHover" src="images/campuspictures/nursingeducation.jpeg">' +
         '<div class="hoverDiv">' +
         '<h1 class="headHover text">Nursing &amp; Education Building</h1>' +
         '<p class="paraHover text"> 845 Algoma Boulevard</p>' +
@@ -861,7 +861,7 @@ function initMap() {
           nursingHoverCard.open(map, nursingMarker);
         });
         var oviattHover = '<div class="generalHover">' +
-        '<img src="images/campuspictures/oviatt.jpeg">' +
+        '<img class="imageHover" src="images/campuspictures/oviatt.jpeg">' +
         '<div class="hoverDiv">' +
         '<h1 class="headHover text">Oviatt House</h1>' +
         '<p class="paraHover text"> 842 Algoma Boulevard</p>' +
@@ -877,7 +877,7 @@ function initMap() {
           oviattHoverCard.open(map, oviattMarker);
         });
         var pollockHover = '<div class="generalHover">' +
-        '<img src="images/campuspictures/pollock.jpeg">' +
+        '<img class="imageHover" src="images/campuspictures/pollock.jpeg">' +
         '<div class="hoverDiv">' +
         '<h1 class="headHover text">Pollock Alumni House</h1>' +
         '<p class="paraHover text"> 765 Algoma Boulevard</p>' +
@@ -893,7 +893,7 @@ function initMap() {
             pollockHoverCard.open(map, pollockMarker);
         });
         var polkHover = '<div class="generalHover">' +
-        '<img src="images/campuspictures/polk.jpeg">' +
+        '<img class="imageHover" src="images/campuspictures/polk.jpeg">' +
         '<div class="hoverDiv">' +
         '<h1 class="headHover text">Polk Library</h1>' +
         '<p class="paraHover text"> 801 Elmwood Avenue</p>' +
@@ -909,7 +909,7 @@ function initMap() {
           polkHoverCard.open(map, polkMarker);
         });
         var radfordHover = '<div class="generalHover">' +
-        '<img src="images/campuspictures/radford.jpeg">' +
+        '<img class="imageHover" src="images/campuspictures/radford.jpeg">' +
         '<div class="hoverDiv">' +
         '<h1 class="headHover text">Radford Hall</h1>' +
         '<p class="paraHover text"> 777 Algoma Boulevard</p>' +
@@ -925,7 +925,7 @@ function initMap() {
           radfordHoverCard.open(map, radfordMarker);
         });
         var reeveHover = '<div class="generalHover">' +
-        '<img src="images/campuspictures/reeve.jpeg">' +
+        '<img class="imageHover" src="images/campuspictures/reeve.jpeg">' +
         '<div class="hoverDiv">' +
         '<h1 class="headHover text">Reeve Memorial Union</h1>' +
         '<p class="paraHover text"> 748 Algoma Boulevard</p>' +
@@ -941,7 +941,7 @@ function initMap() {
           reeveHoverCard.open(map, reeveMarker);
         });
         var sageHover = '<div class="generalHover">' +
-        '<img src="images/campuspictures/sage.jpeg">' +
+        '<img class="imageHover" src="images/campuspictures/sage.jpeg">' +
         '<div class="hoverDiv">' +
         '<h1 class="headHover text">Sage Hall</h1>' +
         '<p class="paraHover text"> 845 High Avenue</p>' +
@@ -957,7 +957,7 @@ function initMap() {
           sageHoverCard.open(map, sageMarker);
         });
         var scottHover = '<div class="generalHover">' +
-        '<img src="images/campuspictures/scott.jpeg">' +
+        '<img class="imageHover" src="images/campuspictures/scott.jpeg">' +
         '<div class="hoverDiv">' +
         '<h1 class="headHover text">Scott Hall</h1>' +
         '<p class="paraHover text"> 625 Algoma Boulevard</p>' +
@@ -973,7 +973,7 @@ function initMap() {
             scottHoverCard.open(map, scottMarker);
         });
         var stewartHover = '<div class="generalHover">' +
-        '<img src="images/campuspictures/stewart.jpeg">' +
+        '<img class="imageHover" src="images/campuspictures/stewart.jpeg">' +
         '<div class="hoverDiv">' +
         '<h1 class="headHover text">Stewart Hall</h1>' +
         '<p class="paraHover text"> 723 W. Lincoln Avenue</p>' +
@@ -989,7 +989,7 @@ function initMap() {
           stewartHoverCard.open(map, stewartMarker);
         });
         var recreationHover = '<div class="generalHover">' +
-        '<img src="images/campuspictures/srwc.jpeg">' +
+        '<img class="imageHover" src="images/campuspictures/srwc.jpeg">' +
         '<div class="hoverDiv">' +
         '<h1 class="headHover text">Student Recreation &amp; Wellness Center</h1>' +
         '<p class="paraHover text"> 735 Pearl Avenue</p>' +
@@ -1004,7 +1004,7 @@ function initMap() {
           recreationHoverCard.open(map, recreationMarker);
         });
         var successHover = '<div class="generalHover">' +
-        '<img src="images/campuspictures/studentsuccess.jpeg">' +
+        '<img class="imageHover" src="images/campuspictures/studentsuccess.jpeg">' +
         '<div class="hoverDiv">' +
         '<h1 class="headHover text">Student Success Center</h1>' +
         '<p class="paraHover text"> 750 Elmwood Avenue</p>' +
@@ -1020,7 +1020,7 @@ function initMap() {
           successHoverCard.open(map, successMarker);
         });
         var swartHover = '<div class="generalHover">' +
-        '<img src="images/campuspictures/swart.jpeg">' +
+        '<img class="imageHover" src="images/campuspictures/swart.jpeg">' +
         '<div class="hoverDiv">' +
         '<h1 class="headHover text">Swart Hall</h1>' +
         '<p class="paraHover text"> 912 Algoma Boulevard</p>' +
@@ -1036,7 +1036,7 @@ function initMap() {
           swartHoverCard.open(map, swartMarker);
         });
         var taylorHover = '<div class="generalHover">' +
-        '<img src="images/campuspictures/taylor.jpeg">' +
+        '<img class="imageHover" src="images/campuspictures/taylor.jpeg">' +
         '<div class="hoverDiv">' +
         '<h1 class="headHover text">Taylor Hall</h1>' +
         '<p class="paraHover text"> 780 High Avenue</p>' +
@@ -1052,7 +1052,7 @@ function initMap() {
           taylorHoverCard.open(map, taylorMarker);
         });
         var titanHover = '<div class="generalHover">' +
-        '<img src="images/campuspictures/titanstadium.jpeg">' +
+        '<img class="imageHover" src="images/campuspictures/titanstadium.jpeg">' +
         '<div class="hoverDiv">' +
         '<h1 class="headHover text">Titan Stadium</h1>' +
         '<p class="paraHover text"> 450 Josslyn Street</p>' +
@@ -1068,7 +1068,7 @@ function initMap() {
             titanHoverCard.open(map, titanMarker);
         });
         var policeHover = '<div class="generalHover">' +
-        '<img src="images/campuspictures/universitypolice.jpeg">' +
+        '<img class="imageHover" src="images/campuspictures/universitypolice.jpeg">' +
         '<div class="hoverDiv">' +
         '<h1 class="headHover text">University Police</h1>' +
         '<p class="paraHover text"> 738 High Avenue</p>' +
@@ -1084,7 +1084,7 @@ function initMap() {
           policeHoverCard.open(map, policeMarker);
         });
         var websterHover = '<div class="generalHover">' +
-        '<img src="images/campuspictures/webster.jpeg">' +
+        '< src="images/campuspictures/webster.jpeg">' +
         '<div class="hoverDiv">' +
         '<h1 class="headHover text">Webster Hall</h1>' +
         '<p class="paraHover text"> 810 High Avenue</p>' +
