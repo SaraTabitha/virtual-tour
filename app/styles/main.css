@@ -424,6 +424,7 @@ html, body, main, .mdl-layout__content, .page-content, #map {
       width: 155px;
       margin: 0px;
     }
+    /*overlay + info popup styling*/
     #overlay{
       position: fixed;
       width: 100%;
@@ -432,12 +433,14 @@ html, body, main, .mdl-layout__content, .page-content, #map {
       z-index: 1;
       opacity: 0.3;
 
+      display: none;
     }
     .popup{
+      display: none;
+
       position: fixed;
       left: 40%;
       top: 20%;
-
       width: 715px;
       background-color: white;
       color: black;
@@ -481,13 +484,14 @@ html, body, main, .mdl-layout__content, .page-content, #map {
     .address{
       text-align: center;
     }
-    /*moves the google logo into view on the map*/
+    /*moves the google logo n' stuff into view on the map*/
     #map > div > div > div:nth-child(2){
       margin-left: 385px !important;
     }
     #map > div > div > div:nth-child(10){
       left: 385px !important;
     }
+    /*mobile message*/
     #mobile{
       display: none;
     }

@@ -710,7 +710,7 @@ function initMap() {
         '<h1 class="headHover text">Gruenhagen Conference Center</h1>' +
         '<p class="paraHover text"> 208 Osceola Avenue</p>' +
         '<p class="paraHover text"> Oshkosh, WI 54901</p>' +
-        '<a href="#" class="text link">Click for more info</a>'+
+        '<a href="#" id="gruenhagenLink"class="text link">Click for more info</a>'+
         '</div>'+
         '</div>';
         var gruenhagenHoverCard = new google.maps.InfoWindow({
@@ -719,6 +719,9 @@ function initMap() {
         gruenhagenMarker.addListener('click', function(){
           gruenhagenHoverCard.open(map,gruenhagenMarker);
         });
+
+
+
         var halseyHover = '<div class="generalHover">' +
         '<img class="imageHover" src="images/campuspictures/halsey.jpeg">' +
         '<div class="hoverDiv">' +
