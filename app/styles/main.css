@@ -388,6 +388,7 @@ html, body, main, .mdl-layout__content, .page-content, #map {
 #map {
     position: relative;
     height: 100%;
+
   }
     /*hover for markers*/
    .generalHover{
@@ -430,7 +431,7 @@ html, body, main, .mdl-layout__content, .page-content, #map {
       background-color: black;
       z-index: 1;
       opacity: 0.3;
-      
+
     }
     .popup{
       position: fixed;
@@ -479,4 +480,11 @@ html, body, main, .mdl-layout__content, .page-content, #map {
     }
     .address{
       text-align: center;
+    }
+    /*moves the google logo into view on the map*/
+    #map > div > div > div:nth-child(2){
+      margin-left: 385px !important;
+    }
+    #map > div > div > div:nth-child(10){
+      left: 385px !important;
     }
