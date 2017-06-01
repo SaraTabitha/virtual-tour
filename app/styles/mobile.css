@@ -2,6 +2,9 @@
 body{
   background-color: black;
 }
+header{
+  display: none;
+}
 h1{
   color: white;
 }
@@ -24,5 +27,8 @@ div#diningCard{
   display: none;
 }
 div#stuRCard{
+  display: none;
+}
+div.popup{
   display: none;
 }
