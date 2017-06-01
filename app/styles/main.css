@@ -386,8 +386,6 @@ html, body, main, .mdl-layout__content, .page-content, #map {
 }
 #map {
     position: relative;
-    left: 377px;
-    right: 0px;
   }
     /*hover for markers*/
    .generalHover{
@@ -433,7 +431,7 @@ html, body, main, .mdl-layout__content, .page-content, #map {
     }
     .popup{
       position: fixed;
-      left: 50%;
+      left: 40%;
       top: 20%;
       heigth: 400px;
       width: 500px;
