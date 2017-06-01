@@ -488,3 +488,28 @@ html, body, main, .mdl-layout__content, .page-content, #map {
     #map > div > div > div:nth-child(10){
       left: 385px !important;
     }
+    #mobile{
+      display: none;
+    }
+    /*should not load until told to D:<*/
+    div#accFCard{
+      display: none;
+    }
+    div#athCard{
+      display: none;
+    }
+    div#accSCard{
+      display: none;
+    }
+    div#campSCard{
+      display: none;
+    }
+    div#resHCard{
+      display: none;
+    }
+    div#diningCard{
+      display: none;
+    }
+    div#stuRCard{
+      display: none;
+    }

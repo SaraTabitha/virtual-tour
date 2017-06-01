@@ -1,0 +1,28 @@
+
+body{
+  background-color: black;
+}
+h1{
+  color: white;
+}
+div#accFCard{
+  display: none;
+}
+div#athCard{
+  display: none;
+}
+div#accSCard{
+  display: none;
+}
+div#campSCard{
+  display: none;
+}
+div#resHCard{
+  display: none;
+}
+div#diningCard{
+  display: none;
+}
+div#stuRCard{
+  display: none;
+}
