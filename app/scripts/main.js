@@ -72,12 +72,11 @@
     });
   }
 
-  // Your custom JavaScript goes here
+// Your custom JavaScript goes here
 
-// trying to add onclick for gruenhagen link
-$("#gruenhagenLink").click(function(){
-  $(".popup").css('display', 'auto');
-});
+
+
+
   // function for hiding all of the cards
   function hideAll(){
     $("#athCard").hide();

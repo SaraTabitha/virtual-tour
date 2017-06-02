@@ -704,15 +704,7 @@ function initMap() {
         fredricMarker.addListener('click', function(){
           fredricHoverCard.open(map,fredricMarker);
         });
-        var gruenhagenHover = '<div class="generalHover">' +
-        '<img class="imageHover" src="images/campuspictures/gruenhagen.jpeg">' +
-        '<div class="hoverDiv">' +
-        '<h1 class="headHover text">Gruenhagen Conference Center</h1>' +
-        '<p class="paraHover text"> 208 Osceola Avenue</p>' +
-        '<p class="paraHover text"> Oshkosh, WI 54901</p>' +
-        '<a href="#" id="gruenhagenLink"class="text link">Click for more info</a>'+
-        '</div>'+
-        '</div>';
+        var gruenhagenHover = document.getElementById('gruenhagenHover');
         var gruenhagenHoverCard = new google.maps.InfoWindow({
           content: gruenhagenHover,
         });
@@ -720,6 +712,15 @@ function initMap() {
           gruenhagenHoverCard.open(map,gruenhagenMarker);
         });
 
+        // trying to add onclick for gruenhagen link
+        $("#gruenhagenLink").click(function(){
+          $('#overlay').css('visibility', 'visible');
+          $("#gruenhagenPopup").css('visibility', 'visible');
+        });
+        $("#gruenhagenPopupClose").click(function(){
+          $('#overlay').css('visibility', 'hidden');
+          $("#gruenhagenPopup").css('visibility', 'hidden');
+        });
 
 
         var halseyHover = '<div class="generalHover">' +

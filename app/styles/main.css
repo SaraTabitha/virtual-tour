@@ -433,10 +433,10 @@ html, body, main, .mdl-layout__content, .page-content, #map {
       z-index: 1;
       opacity: 0.3;
 
-      display: none;
+      visibility: hidden;
     }
     .popup{
-      display: none;
+      visibility: hidden;
 
       position: fixed;
       left: 40%;
