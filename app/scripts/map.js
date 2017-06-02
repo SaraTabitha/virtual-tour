@@ -704,19 +704,30 @@ function initMap() {
         fredricMarker.addListener('click', function(){
           fredricHoverCard.open(map,fredricMarker);
         });
+
+        // GRUENHAGEN
+        // declare variable
         var gruenhagenHover = document.getElementById('gruenhagenHover');
+        // create variable as content card
         var gruenhagenHoverCard = new google.maps.InfoWindow({
           content: gruenhagenHover,
         });
+        // open ^this when Marker is clicked
         gruenhagenMarker.addListener('click', function(){
           gruenhagenHoverCard.open(map,gruenhagenMarker);
         });
 
-        // trying to add onclick for gruenhagen link
+        // when "click for more info" is selected,
+        // make corresponding overlay and popup visible
+        // +animate to fade in
         $("#gruenhagenLink").click(function(){
           $('#overlay').css('visibility', 'visible');
+          $('#overlay').animate({"opacity": "0.3"}, "slow");
+
           $("#gruenhagenPopup").css('visibility', 'visible');
+          $('#gruenhagenPopup').animate({"opacity": "1"}, "slow");
         });
+        // when x on popup is clicked, close popup
         $("#gruenhagenPopupClose").click(function(){
           $('#overlay').css('visibility', 'hidden');
           $("#gruenhagenPopup").css('visibility', 'hidden');
