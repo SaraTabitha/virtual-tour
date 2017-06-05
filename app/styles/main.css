@@ -475,6 +475,16 @@ html, body, main, .mdl-layout__content, .page-content, #map {
       width: 735px;
       height: 30px;
     }
+    ul#popupNav {
+      margin: 0px;
+      padding: 0px;
+    }
+    ul#popupNav li{
+      position: relative;
+      display: inline;
+      padding-left: 20px;
+      top: 3px;
+    }
     .closeButton{
       float: right;
       margin: 5px;
