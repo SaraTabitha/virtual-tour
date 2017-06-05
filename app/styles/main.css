@@ -489,6 +489,9 @@ html, body, main, .mdl-layout__content, .page-content, #map {
       top: 5px;
       font-family: 'Open Sans', sans-serif;
     }
+    ul#popupNav li.about{
+      padding-left: 10px;
+    }
     ul#popupNav li:hover{
       text-decoration: underline;
     }
