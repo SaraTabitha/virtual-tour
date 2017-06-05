@@ -440,31 +440,15 @@ function initMap() {
           $("#albeeSustainability ").css('display', "initial");
         });
 
-        var baseballHover = '<div class="generalHover">' +
-        '<img class="imageHover" src="#">' +
-        '<div class="hoverDiv">' +
-        '<h1 class="headHover text">Alumni Baseball Stadium</h1>' +
-        '<p class="paraHover text"> 450 Josslyn Street</p>' +
-        '<p class="paraHover text"> Oshkosh, WI 54901</p>' +
-        '<br>' +
-        '<a href="#" class="text link">Click for more info</a>'+
-        '</div>'+
-        '</div>';
+        var baseballHover = document.getElementById('baseballHover');
         var baseballHoverCard = new google.maps.InfoWindow({
           content: baseballHover,
         });
           baseballMarker.addListener('click', function(){
             baseballHoverCard.open(map, baseballMarker);
         });
-        var alumniHover = '<div class="generalHover">' +
-        '<img class="imageHover" src="images/campuspictures/awcc-building.jpg">' +
-        '<div class="hoverDiv">' +
-        '<h1 class="headHover text">Alumni Welcome and Conference Center</h1>' +
-        '<p class="paraHover text"> 625 Pearl Ave.</p>' +
-        '<p class="paraHover text"> Oshkosh, WI 54901</p>' +
-        '<a href="#" class="text link">Click for more info</a>'+
-        '</div>'+
-        '</div>';
+
+        var alumniHover = document.getElementById('alumniHover');
         var alumniHoverCard = new google.maps.InfoWindow({
           content: alumniHover,
         });
@@ -472,237 +456,105 @@ function initMap() {
             alumniHoverCard.open(map, alumniMarker);
         });
         // a&c hover
-        var acHover = '<div class="generalHover">' +
-        '<img class="imageHover" src="images/campuspictures/artscommunications.jpeg">' +
-        '<div class="hoverDiv">' +
-        '<h1 class="headHover text">Arts &amp; Communications Center</h1>' +
-        '<p class="paraHover text"> 1001 Elmwood Avenue</p>' +
-        '<p class="paraHover text"> Oshkosh, WI 54901</p>' +
-        '<a href="#" class="text link">Click for more info</a>'+
-        '</div>'+
-        '</div>';
+        var acHover = document.getElementById('acHover');
         var acHoverCard = new google.maps.InfoWindow({
           content: acHover,
         });
         acMarker.addListener('click', function(){
           acHoverCard.open(map,acMarker);
         });
-        var athleticHover = '<div class="generalHover">' +
-        '<img class="imageHover" src="images/campuspictures/athleticservice.jpeg">' +
-        '<div class="hoverDiv">' +
-        '<h1 class="headHover text">Athletic Service Building</h1>' +
-        '<p class="paraHover text"> 450 Josslyn Street</p>' +
-        '<p class="paraHover text"> Oshkosh, WI 54901</p>' +
-        '<br>' +
-        '<a href="#" class="text link">Click for more info</a>'+
-        '</div>'+
-        '</div>';
+        var athleticHover = document.getElementById('athleticHover');
         var athleticHoverCard = new google.maps.InfoWindow({
           content: athleticHover,
         });
           athleticMarker.addListener('click', function(){
             athleticHoverCard.open(map, athleticMarker);
         });
-        var blackhawkHover = '<div class="generalHover">' +
-        '<img class="imageHover" src="images/campuspictures/blackhawk.jpeg">' +
-        '<div class="hoverDiv">' +
-        '<h1 class="headHover text">Blackhawk Commons</h1>' +
-        '<p class="paraHover text"> 725 Algoma Boulevard</p>' +
-        '<p class="paraHover text"> Oshkosh, WI 54901</p>' +
-        '<br>' +
-        '<a href="#" class="text link">Click for more info</a>'+
-        '</div>'+
-        '</div>';
+        var blackhawkHover = document.getElementById('blackhawkHover');
         var blackhawkHoverCard = new google.maps.InfoWindow({
           content: blackhawkHover,
         });
         blackhawkMarker.addListener('click', function(){
           blackhawkHoverCard.open(map, blackhawkMarker);
         });
-        var biodigesterHover = '<div class="generalHover">' +
-        '<img class="imageHover" src="images/campuspictures/biodigester.jpg">' +
-        '<div class="hoverDiv">' +
-        '<h1 class="headHover text">Biodigester</h1>' +
-        '<p class="paraHover text"> 755 Dempsey Trail</p>' +
-        '<p class="paraHover text"> Oshkosh, WI 54901</p>' +
-        '<br>' +
-        '<a href="#" class="text link">Click for more info</a>'+
-        '</div>'+
-        '</div>';
+        var biodigesterHover = document.getElementById('biodigesterHover');
         var biodigesterHoverCard = new google.maps.InfoWindow({
           content: biodigesterHover,
         });
           biodigesterMarker.addListener('click', function(){
             biodigesterHoverCard.open(map, biodigesterMarker);
         });
-        var buckstaffHover = '<div class="generalHover">' +
-        '<img class="imageHover" src="images/campuspictures/buckstaff.jpeg">' +
-        '<div class="hoverDiv">' +
-        '<h1 class="headHover text">Buckstaff Planetarium</h1>' +
-        '<p class="paraHover text"> 921 Elmwood Avenue</p>' +
-        '<p class="paraHover text"> Oshkosh, WI 54901</p>' +
-        '<br>'+
-        '<a href="#" class="text link">Click for more info</a>'+
-        '</div>'+
-        '</div>';
+        var buckstaffHover = document.getElementById('buckstaffHover');
         var buckstaffHoverCard = new google.maps.InfoWindow({
           content: buckstaffHover,
         });
         buckstaffMarker.addListener('click', function(){
           buckstaffHoverCard.open(map,buckstaffMarker);
         });
-        var equityHover = '<div class="generalHover">' +
-        '<img class="imageHover" src="images/campuspictures/centerforequity.jpeg">' +
-        '<div class="hoverDiv">' +
-        '<h1 class="headHover text">Campus Center for Equity &amp; Diversity</h1>' +
-        '<p class="paraHover text"> 717 W. Irving Street</p>' +
-        '<p class="paraHover text"> Oshkosh, WI 54901</p>' +
-        '<a href="#" class="text link">Click for more info</a>'+
-        '</div>'+
-        '</div>';
+        var equityHover = document.getElementById('equityHover');
         var equityHoverCard = new google.maps.InfoWindow({
           content: equityHover,
         });
           equityMarker.addListener('click', function(){
           equityHoverCard.open(map, equityMarker);
         });
-        var campusHover = '<div class="generalHover">' +
-        '<img class="imageHover" src="images/campuspictures/campus-services.jpg">' +
-        '<div class="hoverDiv">' +
-        '<h1 class="headHover text">Campus Services</h1>' +
-        '<p class="paraHover text"> 650 Witzel Ave.</p>' +
-        '<p class="paraHover text"> Oshkosh, WI 54901</p>' +
-        '<br>' +
-        '<a href="#" class="text link">Click for more info</a>'+
-        '</div>'+
-        '</div>';
+        var campusHover = document.getElementById('campusHover');
         var campusHoverCard = new google.maps.InfoWindow({
           content: campusHover,
         });
           campusMarker.addListener('click', function(){
             campusHoverCard.open(map, campusMarker);
         });
-        var ceramicsHover = '<div class="generalHover">' +
-        '<img class="imageHover" src="images/campuspictures/ceramicslab.jpeg">' +
-        '<div class="hoverDiv">' +
-        '<h1 class="headHover text">Ceramics Laboratory</h1>' +
-        '<p class="paraHover text"> 1165 Rockwell Avenue</p>' +
-        '<p class="paraHover text"> Oshkosh, WI 54901</p>' +
-        '<br>'+
-        '<a href="#" class="text link">Click for more info</a>'+
-        '</div>'+
-        '</div>';
+        var ceramicsHover = document.getElementById('ceramicsHover');
         var ceramicsHoverCard = new google.maps.InfoWindow({
           content: ceramicsHover,
         });
         ceramicsMarker.addListener('click', function(){
           ceramicsHoverCard.open(map, ceramicsMarker);
         });
-        var clowHover = '<div class="generalHover">' +
-        '<img class="imageHover" src="images/campuspictures/clow.jpeg">' +
-        '<div class="hoverDiv">' +
-        '<h1 class="headHover text">Clow Social Science Center</h1>' +
-        '<p class="paraHover text"> 805 Algoma Boulevard</p>' +
-        '<p class="paraHover text"> Oshkosh, WI 54901</p>' +
-        '<br>'+
-        '<a href="#" class="text link">Click for more info</a>'+
-        '</div>'+
-        '</div>';
+        var clowHover = document.getElementById('clowHover');
         var clowHoverCard = new google.maps.InfoWindow({
           content: clowHover,
         });
         clowMarker.addListener('click', function(){
           clowHoverCard.open(map, clowMarker);
         });
-        var gardensHover = '<div class="generalHover">' +
-        '<img class="imageHover" src="images/campuspictures/community-gardens.jpg">' +
-        '<div class="hoverDiv">' +
-        '<h1 class="headHover text">Community Gardens</h1>' +
-        '<p class="paraHover text"> 663 W. 3rd Avenue</p>' +
-        '<p class="paraHover text"> Oshkosh, WI 54901</p>' +
-        '<br>' +
-        '<a href="#" class="text link">Click for more info</a>'+
-        '</div>'+
-        '</div>';
+        var gardensHover = document.getElementById('gardensHover');
         var gardensHoverCard = new google.maps.InfoWindow({
           content: gardensHover,
         });
           gardensMarker.addListener('click', function(){
             gardensHoverCard.open(map, gardensMarker);
         });
-        var dempseyHover = '<div class="generalHover">' +
-        '<img class="imageHover" src="images/campuspictures/dempsey.jpeg">' +
-        '<div class="hoverDiv">' +
-        '<h1 class="headHover text">Dempsey Hall</h1>' +
-        '<p class="paraHover text"> 800 Algoma Boulevard</p>' +
-        '<p class="paraHover text"> Oshkosh, WI 54901</p>' +
-        '<br>'+
-        '<a href="#" class="text link">Click for more info</a>'+
-        '</div>'+
-        '</div>';
+        var dempseyHover = document.getElementById('dempseyHover');
         var dempseyHoverCard = new google.maps.InfoWindow({
           content: dempseyHover,
         });
         dempseyMarker.addListener('click', function(){
           dempseyHoverCard.open(map, dempseyMarker);
         });
-        var donnerHover = '<div class="generalHover">' +
-        '<img class="imageHover" src="images/campuspictures/donner.jpeg">' +
-        '<div class="hoverDiv">' +
-        '<h1 class="headHover text">Donner Hall</h1>' +
-        '<p class="paraHover text"> 820 High Avenue</p>' +
-        '<p class="paraHover text"> Oshkosh, WI 54901</p>' +
-        '<br>'+
-        '<a href="#" class="text link">Click for more info</a>'+
-        '</div>'+
-        '</div>';
+        var donnerHover = document.getElementById('donnerHover');
         var donnerHoverCard = new google.maps.InfoWindow({
           content: donnerHover,
         });
         donnerMarker.addListener('click', function(){
           donnerHoverCard.open(map, donnerMarker);
         });
-        var eastHover = '<div class="generalHover">' +
-        '<img class="imageHover" src="images/campuspictures/easthall.jpg">' +
-        '<div class="hoverDiv">' +
-        '<h1 class="headHover text">East Hall</h1>' +
-        '<p class="paraHover text"> New York Ave. &amp; Jackson St.</p>' +
-        '<p class="paraHover text"> Oshkosh, WI 54901</p>' +
-        '<br>'+
-        '<a href="#" class="text link">Click for more info</a>'+
-        '</div>'+
-        '</div>';
+        var eastHover = document.getElementById('eastHover');
         var eastHoverCard = new google.maps.InfoWindow({
           content: eastHover,
         });
         eastMarker.addListener('click', function(){
           eastHoverCard.open(map,eastMarker);
         });
-        var environmentalHover = '<div class="generalHover">' +
-        '<img class="imageHover" src="images/campuspictures/aquaticstudiescenter.jpeg">' +
-        '<div class="hoverDiv">' +
-        '<h1 class="headHover text">Environmental Research and Innovation Center</h1>' +
-        '<p class="paraHover text"> 83 Pearl Avenue</p>' +
-        '<p class="paraHover text"> Oshkosh, WI 54901</p>' +
-        '<a href="#" class="text link">Click for more info</a>'+
-        '</div>'+
-        '</div>';
+        var environmentalHover = document.getElementById('environmentalHover');
         var environmentalHoverCard = new google.maps.InfoWindow({
           content: environmentalHover,
         });
         environmentalMarker.addListener('click', function(){
           environmentalHoverCard.open(map, environmentalMarker);
         });
-        var evansHover = '<div class="generalHover">' +
-        '<img class="imageHover" src="images/campuspictures/evans.jpeg">' +
-        '<div class="hoverDiv">' +
-        '<h1 class="headHover text">Evans Hall</h1>' +
-        '<p class="paraHover text"> 727 W. Lincoln Avenue</p>' +
-        '<p class="paraHover text"> Oshkosh, WI 54901</p>' +
-        '<br>' +
-        '<a href="#" class="text link">Click for more info</a>'+
-        '</div>'+
-        '</div>';
+        var evansHover = document.getElementById('evansHover');
         var evansHoverCard = new google.maps.InfoWindow({
           content: evansHover,
         });
@@ -1139,7 +991,7 @@ function initMap() {
           policeHoverCard.open(map, policeMarker);
         });
         var websterHover = '<div class="generalHover">' +
-        '< src="images/campuspictures/webster.jpeg">' +
+        '<img class="imageHover"src="images/campuspictures/webster.jpeg">' +
         '<div class="hoverDiv">' +
         '<h1 class="headHover text">Webster Hall</h1>' +
         '<p class="paraHover text"> 810 High Avenue</p>' +
