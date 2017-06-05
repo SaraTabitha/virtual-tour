@@ -384,25 +384,62 @@ function initMap() {
           websterMarker.setMap(null);
         }
         // adding hover cards for building markers
-        var albeeHover = '<div class="generalHover">' +
-        '<img class="imageHover" src="images/campuspictures/albeehall.jpeg">' +
-        '<div class="hoverDiv">' +
-        '<h1 class="headHover text">Albee Hall</h1>' +
-        '<p class="paraHover text"> 776 Algoma Boulevard</p>' +
-        '<p class="paraHover text"> Oshkosh, WI 54901</p>' +
-        '<br>'+
-        '<a href="#" class="text link">Click for more info</a>'+
-        '</div>'+
-        '</div>';
+        var albeeHover = document.getElementById('albeeHover');
         var albeeHoverCard = new google.maps.InfoWindow({
           content: albeeHover,
         });
+
         // if this is put inside of the setBuildings function it creates a bug
         // where if you spam click "buildings" it creates a bunch
         // of  hover popups
         albeeMarker.addListener('click', function(){
           albeeHoverCard.open(map, albeeMarker);
         });
+        // when "click for more info" is selected,
+        // make corresponding overlay and popup visible
+        // +animate to fade in
+        $("#albeeLink").click(function(){
+          $('#overlay').css('visibility', 'visible');
+          $('#overlay').animate({"opacity": "0.3"}, "slow");
+
+          $("#albeePopup").css('visibility', 'visible');
+          $('#albeePopup').animate({"opacity": "1"}, "slow");
+        });
+        // when x on popup is clicked, close popup
+        $("#albeePopupClose").click(function(){
+          $('#overlay').animate({"opacity": "0"}, "slow");
+          $('#overlay').css('visibility', 'hidden');
+
+          $('#albeePopup').animate({"opacity": "0"}, "slow");
+          $("#albeePopup").css('visibility', 'hidden');
+        });
+        // behavior for when tabs are clicked on the popups
+        // show content for tab, hide content for other tabs
+        $("#albeeAboutLi").click(function(){
+          $("#albeeTourVideo").css('display', "none");
+          $("#albeeTourText").css('display', "none");
+          $("#albeeSustainability").css('display', "none");
+
+          $("#albeeAboutImage").css('display', "initial");
+          $("#albeeAboutText").css('display', "initial");
+        });
+        $("#albeeTourLi").click(function(){
+          $("#albeeAboutImage").css('display', "none");
+          $("#albeeAboutText").css('display', "none");
+          $("#albeeSustainability").css('display', "none");
+
+          $("#albeeTourVideo").css('display', "initial");
+          $("#albeeTourText").css('display', "initial");
+        });
+        $("#albeeSustainabilityLi").click(function(){
+          $("#albeeAboutImage").css('display', "none");
+          $("#albeeAboutText").css('display', "none");
+          $("#albeeTourVideo").css('display', "none");
+          $("#albeeTourText").css('display', "none");
+
+          $("#albeeSustainability ").css('display', "initial");
+        });
+
         var baseballHover = '<div class="generalHover">' +
         '<img class="imageHover" src="#">' +
         '<div class="hoverDiv">' +

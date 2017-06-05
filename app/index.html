@@ -422,21 +422,46 @@
                   <button id="albeePopupClose" class="closeButton mdl-color-text--white mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
                     <i  class="material-icons">close</i>
                   </button>
-                  <h1 class="text white heading">Albee Hall</h1>
+                  <h1 class="text yellow heading">Albee Hall</h1>
               </div>
-              <div class="imagePopup">
+              <nav class="popupNav">
+                <ul id="popupNav">
+                  <li id="albeeAboutLi"> About</li>
+                  <li id="albeeTourLi"> Tour</li>
+                  <li id="albeeSustainabilityLi">Sustainability </li>
+                  <li>
+                </ul>
+              </nav>
+              <!-- Albee About Content -->
+              <div id="albeeAboutImage" class="imagePopup">
                   <img  src="images/campuspictures/albeehallFull.jpeg">
                   <p class="address text">
                   776 Algoma Boulevard, Oshkosh, WI, 54901</p>
               </div>
-              <div class="popupText">
-                <h5 class="heading">About This Building</h5>
-                    <p class="text">Built in 1956 and named after the
+              <div id="albeeAboutText" class="popupText">
+                <h5 class="heading">About Albee Hall</h5>
+                    <p class=" subText text">Built in 1956 and named after the
                       first president of the University, Albee Hall is
                       one of two physical education buildings on campus.
                       It houses a swimming pool, diving pool, weight-lifting
                       center, women's athletic coaches offices and a few classrooms.</p>
-             </div>
+              </div>
+              <!-- Albee Tour Contents -->
+              <div id="albeeTourText" class="tourText">
+                <h5 class="heading">Tour Snapshot</h5>
+                <p class="subText text">Nick takes us through Albee Hall and even takes a quick swim in the pool. </p>
+                <p class="subText text">Find more information here: </p>
+                <a class="subText link" href="https://recreation.uwosh.edu/facilities-and-hours/albee-hall-and-pool/">Albee Hall and Pool</a>
+              </div>
+              <div id="albeeTourVideo"class="videoPopup">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/AW5cpKVsXWA" frameborder="0" allowfullscreen></iframe>
+              </div>
+
+              <!-- Albee Sustainability Contents -->
+              <div id="albeeSustainability" class="popupTextNoImage">
+                <h5 class="sustHeading"> Sustainability Point of Interest</h5>
+                <p class="subText text">Albee Hall houses the University pool which uses 64 solar thermal panels producing an estimated 7,692 therms annually to generate hot water.</p>
+              </div>
            </div>
           <!--  GRUENHAGEN POPUP-->
            <div id="gruenhagenPopup" class="popup">
@@ -449,8 +474,6 @@
                   <nav class="popupNav">
                     <ul id="popupNav">
                       <li> About</li>
-                      <li> Tour</li>
-                      <li><i class="material-icons">nature_people</i></li>
                       <li>
                     </ul>
                   </nav>
@@ -478,13 +501,25 @@
       <!-- google map!! (meat of it in map.js)-->
 
       <div id="map"></div>
+      <!-- hover boxes for when markers are clicked -->
+      <div id="albeeHover" class="generalHover">
+      <img class="imageHover" src="images/campuspictures/albeehall.jpeg">
+      <div class="hoverDiv">
+      <h1 class="headHover text">Albee Hall</h1>
+      <p class="paraHover text"> 776 Algoma Boulevard</p>
+      <p class="paraHover text"> Oshkosh, WI 54901</p>
+      <br>
+      <a href="#" id="albeeLink" class="text link">Click for more info</a>
+      </div>
+      </div>
+
       <div id="gruenhagenHover" class="generalHover">
       <img class="imageHover" src="images/campuspictures/gruenhagen.jpeg">
       <div class="hoverDiv">
       <h1 class="headHover text">Gruenhagen Conference Center</h1>
       <p class="paraHover text"> 208 Osceola Avenue</p>
       <p class="paraHover text"> Oshkosh, WI 54901</p>
-      <a href="#" id="gruenhagenLink"class="text link">Click for more info</a>
+      <a href="#" id="gruenhagenLink" class="text link">Click for more info</a>
       </div>
       </div>
       <!-- end google map -->
