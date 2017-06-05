@@ -458,13 +458,13 @@ html, body, main, .mdl-layout__content, .page-content, #map {
       height: 100px;
       border-radius: 10px 10px 0px 0px;
     }
-    h1.text.white{
+    h1.text.yellow{
       position: relative;
       top: 50%;
       left: 10px;
       font-size: 2em;
     }
-    .white{
+    .yellow{
       color: #444;
     }
     .popupNav{
@@ -483,7 +483,12 @@ html, body, main, .mdl-layout__content, .page-content, #map {
       position: relative;
       display: inline;
       padding-left: 20px;
-      top: 3px;
+      color: #444;
+      top: -2px;
+      font-family: 'Open Sans', sans-serif;
+    }
+    ul#popupNav li:hover{
+      text-decoration: underline;
     }
     .closeButton{
       float: right;
