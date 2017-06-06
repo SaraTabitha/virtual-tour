@@ -473,6 +473,9 @@ html, body, main, .mdl-layout__content, .page-content, #map {
     #pollockPopup{
       height: 380px;
     }
+    #successPopup{
+      height: 490px;
+    }
     /*popup stuff continued*/
     .popupBlack{
       background-color: #fdb515;
@@ -580,7 +583,6 @@ html, body, main, .mdl-layout__content, .page-content, #map {
     #albeeSustainability{
       display: none;
     }
-
     #alumniSustainability{
       display: none;
     }
@@ -635,6 +637,37 @@ html, body, main, .mdl-layout__content, .page-content, #map {
     #reeveBathrooms{
       display: none;
     }
+    #sageTourText{
+      display: none;
+    }
+    #sageTourVideo{
+      display: none;
+    }
+    #sageSustainability{
+      display: none;
+    }
+    #sageBathrooms{
+      display: none;
+    }
+    #recreationSustainability{
+      display: none;
+    }
+    #recreationBathrooms{
+      display: none;
+    }
+    #successTourText{
+      display: none;
+    }
+    #successTourVideo{
+      display: none;
+    }
+    #successSustainability{
+      display: none;
+    }
+    #successBathrooms{
+      display: none;
+    }
+
     /*moves the google logo n' stuff into view on the map*/
     #map > div > div > div:nth-child(2){
       margin-left: 385px !important;

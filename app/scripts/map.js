@@ -1567,8 +1567,63 @@ function initMap() {
         sageMarker.addListener('click', function(){
           sageHoverCard.open(map, sageMarker);
         });
+        // when "click for more info" is selected,
+        // make corresponding overlay and popup visible
+        // +animate to fade in
+        $("#sageLink").click(function(){
+          $('#overlay').css('visibility', 'visible');
+          $('#overlay').animate({"opacity": "0.3"}, "slow");
 
-        
+          $("#sagePopup").css('visibility', 'visible');
+          $('#sagePopup').animate({"opacity": "1"}, "slow");
+        });
+        // when x on popup is clicked, close popup
+        $("#sagePopupClose").click(function(){
+          $('#overlay').animate({"opacity": "0"}, "slow");
+          $('#overlay').css('visibility', 'hidden');
+
+          $('#sagePopup').animate({"opacity": "0"}, "slow");
+          $("#sagePopup").css('visibility', 'hidden');
+        });
+        // behavior for when tabs are clicked on the popups
+        // show content for tab, hide content for other tabs
+        $("#sageAboutLi").click(function(){
+          $("#sageTourVideo").css('display', "none");
+          $("#sageTourText").css('display', "none");
+          $("#sageSustainability").css('display', "none");
+          $("#sageBathrooms").css('display', "none");
+
+          $("#sageAboutImage").css('display', "initial");
+          $("#sageAboutText").css('display', "initial");
+        });
+        $("#sageTourLi").click(function(){
+          $("#sageAboutImage").css('display', "none");
+          $("#sageAboutText").css('display', "none");
+          $("#sageSustainability").css('display', "none");
+          $("#sageBathrooms").css('display', "none");
+
+          $("#sageTourText").css('display', "initial");
+          $("#sageTourVideo").css('display', "initial");
+        });
+        $("#sageSustainabilityLi").click(function(){
+          $("#sageAboutImage").css('display', "none");
+          $("#sageAboutText").css('display', "none");
+          $("#sageTourVideo").css('display', "none");
+          $("#sageTourText").css('display', "none");
+          $("#sageBathrooms").css('display', "none");
+
+          $("#sageSustainability").css('display', "initial");
+        });
+        $("#sageBathroomsLi").click(function(){
+          $("#sageAboutImage").css('display', "none");
+          $("#sageAboutText").css('display', "none");
+          $("#sageTourVideo").css('display', "none");
+          $("#sageTourText").css('display', "none");
+          $("#sageSustainability").css('display', "none");
+
+          $("#sageBathrooms").css('display', "initial");
+        });
+
         var scottHover = document.getElementById('scottHover');
         var scottHoverCard = new google.maps.InfoWindow({
           content: scottHover,
@@ -1576,6 +1631,25 @@ function initMap() {
           scottMarker.addListener('click', function(){
             scottHoverCard.open(map, scottMarker);
         });
+        // when "click for more info" is selected,
+        // make corresponding overlay and popup visible
+        // +animate to fade in
+        $("#scottLink").click(function(){
+          $('#overlay').css('visibility', 'visible');
+          $('#overlay').animate({"opacity": "0.3"}, "slow");
+
+          $("#scottPopup").css('visibility', 'visible');
+          $('#scottPopup').animate({"opacity": "1"}, "slow");
+        });
+        // when x on popup is clicked, close popup
+        $("#scottPopupClose").click(function(){
+          $('#overlay').animate({"opacity": "0"}, "slow");
+          $('#overlay').css('visibility', 'hidden');
+
+          $('#scottPopup').animate({"opacity": "0"}, "slow");
+          $("#scottPopup").css('visibility', 'hidden');
+        });
+
         var stewartHover = document.getElementById('stewartHover');
         var stewartHoverCard = new google.maps.InfoWindow({
           content: stewartHover,
@@ -1583,6 +1657,26 @@ function initMap() {
           stewartMarker.addListener('click', function(){
           stewartHoverCard.open(map, stewartMarker);
         });
+        // when "click for more info" is selected,
+        // make corresponding overlay and popup visible
+        // +animate to fade in
+        $("#stewartLink").click(function(){
+          $('#overlay').css('visibility', 'visible');
+          $('#overlay').animate({"opacity": "0.3"}, "slow");
+
+          $("#stewartPopup").css('visibility', 'visible');
+          $('#stewartPopup').animate({"opacity": "1"}, "slow");
+        });
+        // when x on popup is clicked, close popup
+        $("#stewartPopupClose").click(function(){
+          $('#overlay').animate({"opacity": "0"}, "slow");
+          $('#overlay').css('visibility', 'hidden');
+
+          $('#stewartPopup').animate({"opacity": "0"}, "slow");
+          $("#stewartPopup").css('visibility', 'hidden');
+        });
+
+
         var recreationHover = document.getElementById('recreationHover');
         var recreationHoverCard = new google.maps.InfoWindow({
           content: recreationHover,
@@ -1590,6 +1684,48 @@ function initMap() {
         recreationMarker.addListener('click', function(){
           recreationHoverCard.open(map, recreationMarker);
         });
+        // when "click for more info" is selected,
+        // make corresponding overlay and popup visible
+        // +animate to fade in
+        $("#recreationLink").click(function(){
+          $('#overlay').css('visibility', 'visible');
+          $('#overlay').animate({"opacity": "0.3"}, "slow");
+
+          $("#recreationPopup").css('visibility', 'visible');
+          $('#recreationPopup').animate({"opacity": "1"}, "slow");
+        });
+        // when x on popup is clicked, close popup
+        $("#recreationPopupClose").click(function(){
+          $('#overlay').animate({"opacity": "0"}, "slow");
+          $('#overlay').css('visibility', 'hidden');
+
+          $('#recreationPopup').animate({"opacity": "0"}, "slow");
+          $("#recreationPopup").css('visibility', 'hidden');
+        });
+        // behavior for when tabs are clicked on the popups
+        // show content for tab, hide content for other tabs
+        $("#recreationAboutLi").click(function(){
+          $("#recreationSustainability").css('display', "none");
+          $("#recreationBathrooms").css('display', "none");
+
+          $("#recreationAboutImage").css('display', "initial");
+          $("#recreationAboutText").css('display', "initial");
+        });
+        $("#recreationSustainabilityLi").click(function(){
+          $("#recreationAboutImage").css('display', "none");
+          $("#recreationAboutText").css('display', "none");
+          $("#recreationBathrooms").css('display', "none");
+
+          $("#recreationSustainability").css('display', "initial");
+        });
+        $("#recreationBathroomsLi").click(function(){
+          $("#recreationAboutImage").css('display', "none");
+          $("#recreationAboutText").css('display', "none");
+          $("#recreationSustainability").css('display', "none");
+
+          $("#recreationBathrooms").css('display', "initial");
+        });
+
         var successHover = document.getElementById('successHover');
         var successHoverCard = new google.maps.InfoWindow({
           content: successHover,
@@ -1597,6 +1733,64 @@ function initMap() {
           successMarker.addListener('click', function(){
           successHoverCard.open(map, successMarker);
         });
+        // when "click for more info" is selected,
+        // make corresponding overlay and popup visible
+        // +animate to fade in
+        $("#successLink").click(function(){
+          $('#overlay').css('visibility', 'visible');
+          $('#overlay').animate({"opacity": "0.3"}, "slow");
+
+          $("#successPopup").css('visibility', 'visible');
+          $('#successPopup').animate({"opacity": "1"}, "slow");
+        });
+        // when x on popup is clicked, close popup
+        $("#successPopupClose").click(function(){
+          $('#overlay').animate({"opacity": "0"}, "slow");
+          $('#overlay').css('visibility', 'hidden');
+
+          $('#successPopup').animate({"opacity": "0"}, "slow");
+          $("#successPopup").css('visibility', 'hidden');
+        });
+        // behavior for when tabs are clicked on the popups
+        // show content for tab, hide content for other tabs
+        $("#successAboutLi").click(function(){
+          $("#successSustainability").css('display', "none");
+          $("#successBathrooms").css('display', "none");
+          $("#successTourText").css('display', "none");
+          $("#successTourVideo").css('display', "none");
+
+          $("#successAboutImage").css('display', "initial");
+          $("#successAboutText").css('display', "initial");
+        });
+        $("#successTourLi").click(function(){
+          $("#successAboutImage").css('display', "none");
+          $("#successAboutText").css('display', "none");
+          $("#successBathrooms").css('display', "none");
+          $("#successSustainability").css('display', "none");
+
+          $("#successTourVideo").css('display', "initial");
+          $("#successTourText").css('display', "initial");
+        });
+        $("#successSustainabilityLi").click(function(){
+          $("#successAboutImage").css('display', "none");
+          $("#successAboutText").css('display', "none");
+          $("#successBathrooms").css('display', "none");
+          $("#successTourText").css('display', "none");
+          $("#successTourVideo").css('display', "none");
+
+          $("#successSustainability").css('display', "initial");
+        });
+        $("#successBathroomsLi").click(function(){
+          $("#successAboutImage").css('display', "none");
+          $("#successAboutText").css('display', "none");
+          $("#successSustainability").css('display', "none");
+          $("#successTourText").css('display', "none");
+          $("#successTourVideo").css('display', "none");
+
+          $("#successBathrooms").css('display', "initial");
+        });
+
+
         var swartHover = document.getElementById('swartHover');
         var swartHoverCard = new google.maps.InfoWindow({
           content: swartHover,
