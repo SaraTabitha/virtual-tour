@@ -442,7 +442,7 @@ html, body, main, .mdl-layout__content, .page-content, #map {
       left: 40%;
       top: 20%;
       width: 715px;
-      height: 415px;
+      height: 420px;
       background-color: white;
       color: black;
       z-index: 2;
@@ -467,8 +467,11 @@ html, body, main, .mdl-layout__content, .page-content, #map {
     #horizonPopup{
       height: 515px;
     }
-    #nursingPopup{
-      height: 420px;
+    #oviattPopup{
+      height: 430px;
+    }
+    #pollockPopup{
+      height: 380px;
     }
     /*popup stuff continued*/
     .popupBlack{
@@ -614,7 +617,24 @@ html, body, main, .mdl-layout__content, .page-content, #map {
     #nursingBathrooms{
       display: none;
     }
-
+    #polkTourText{
+      display: none;
+    }
+    #polkTourVideo{
+      display: none;
+    }
+    #reeveTourText{
+      display: none;
+    }
+    #reeveTourVideo{
+      display: none;
+    }
+    #reeveSustainability{
+      display: none;
+    }
+    #reeveBathrooms{
+      display: none;
+    }
     /*moves the google logo n' stuff into view on the map*/
     #map > div > div > div:nth-child(2){
       margin-left: 385px !important;
