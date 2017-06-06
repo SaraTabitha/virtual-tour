@@ -514,6 +514,39 @@ function initMap() {
         acMarker.addListener('click', function(){
           acHoverCard.open(map,acMarker);
         });
+        // when "click for more info" is selected,
+        // make corresponding overlay and popup visible
+        // +animate to fade in
+        $("#acLink").click(function(){
+          $('#overlay').css('visibility', 'visible');
+          $('#overlay').animate({"opacity": "0.3"}, "slow");
+
+          $("#acPopup").css('visibility', 'visible');
+          $('#acPopup').animate({"opacity": "1"}, "slow");
+        });
+        // when x on popup is clicked, close popup
+        $("#acPopupClose").click(function(){
+          $('#overlay').animate({"opacity": "0"}, "slow");
+          $('#overlay').css('visibility', 'hidden');
+
+          $('#acPopup').animate({"opacity": "0"}, "slow");
+          $("#acPopup").css('visibility', 'hidden');
+        });
+        // behavior for when tabs are clicked on the popups
+        // show content for tab, hide content for other tabs
+        $("#acAboutLi").click(function(){
+          $("#acBathrooms").css('display', "none");
+
+          $("#acAboutImage").css('display', "initial");
+          $("#acAboutText").css('display', "initial");
+        });
+        $("#acBathroomsLi").click(function(){
+          $("#acAboutImage").css('display', "none");
+          $("#acAboutText").css('display', "none");
+
+          $("#acBathrooms").css('display', "initial");
+        });
+
         var athleticHover = document.getElementById('athleticHover');
         var athleticHoverCard = new google.maps.InfoWindow({
           content: athleticHover,
@@ -521,6 +554,25 @@ function initMap() {
           athleticMarker.addListener('click', function(){
             athleticHoverCard.open(map, athleticMarker);
         });
+        // when "click for more info" is selected,
+        // make corresponding overlay and popup visible
+        // +animate to fade in
+        $("#athleticLink").click(function(){
+          $('#overlay').css('visibility', 'visible');
+          $('#overlay').animate({"opacity": "0.3"}, "slow");
+
+          $("#athleticPopup").css('visibility', 'visible');
+          $('#athleticPopup').animate({"opacity": "1"}, "slow");
+        });
+        // when x on popup is clicked, close popup
+        $("#athleticPopupClose").click(function(){
+          $('#overlay').animate({"opacity": "0"}, "slow");
+          $('#overlay').css('visibility', 'hidden');
+
+          $('#athleticPopup').animate({"opacity": "0"}, "slow");
+          $("#athleticPopup").css('visibility', 'hidden');
+        });
+
         var blackhawkHover = document.getElementById('blackhawkHover');
         var blackhawkHoverCard = new google.maps.InfoWindow({
           content: blackhawkHover,
@@ -528,6 +580,48 @@ function initMap() {
         blackhawkMarker.addListener('click', function(){
           blackhawkHoverCard.open(map, blackhawkMarker);
         });
+        // when "click for more info" is selected,
+        // make corresponding overlay and popup visible
+        // +animate to fade in
+        $("#blackhawkLink").click(function(){
+          $('#overlay').css('visibility', 'visible');
+          $('#overlay').animate({"opacity": "0.3"}, "slow");
+
+          $("#blackhawkPopup").css('visibility', 'visible');
+          $('#blackhawkPopup').animate({"opacity": "1"}, "slow");
+        });
+        // when x on popup is clicked, close popup
+        $("#blackhawkPopupClose").click(function(){
+          $('#overlay').animate({"opacity": "0"}, "slow");
+          $('#overlay').css('visibility', 'hidden');
+
+          $('#blackhawkPopup').animate({"opacity": "0"}, "slow");
+          $("#blackhawkPopup").css('visibility', 'hidden');
+        });
+        // behavior for when tabs are clicked on the popups
+        // show content for tab, hide content for other tabs
+        $("#blackhawkAboutLi").click(function(){
+          $("#blackhawkBathrooms").css('display', "none");
+          $("#blackhawkSustainability").css('display', "none");
+
+          $("#blackhawkAboutImage").css('display', "initial");
+          $("#blackhawkAboutText").css('display', "initial");
+        });
+        $("#blackhawkSustainabilityLi").click(function(){
+          $("#blackhawkAboutImage").css('display', "none");
+          $("#blackhawkAboutText").css('display', "none");
+          $("#blackhawkBathrooms").css('display', "none");
+
+          $("#blackhawkSustainability ").css('display', "initial");
+        });
+        $("#blackhawkBathroomsLi").click(function(){
+          $("#blackhawkAboutImage").css('display', "none");
+          $("#blackhawkAboutText").css('display', "none");
+          $("#blackhawkSustainability").css('display', "none");
+
+          $("#blackhawkBathrooms").css('display', "initial");
+        });
+
         var biodigesterHover = document.getElementById('biodigesterHover');
         var biodigesterHoverCard = new google.maps.InfoWindow({
           content: biodigesterHover,
@@ -535,6 +629,25 @@ function initMap() {
           biodigesterMarker.addListener('click', function(){
             biodigesterHoverCard.open(map, biodigesterMarker);
         });
+        // when "click for more info" is selected,
+        // make corresponding overlay and popup visible
+        // +animate to fade in
+        $("#biodigesterLink").click(function(){
+          $('#overlay').css('visibility', 'visible');
+          $('#overlay').animate({"opacity": "0.3"}, "slow");
+
+          $("#biodigesterPopup").css('visibility', 'visible');
+          $('#biodigesterPopup').animate({"opacity": "1"}, "slow");
+        });
+        // when x on popup is clicked, close popup
+        $("#biodigesterPopupClose").click(function(){
+          $('#overlay').animate({"opacity": "0"}, "slow");
+          $('#overlay').css('visibility', 'hidden');
+
+          $('#biodigesterPopup').animate({"opacity": "0"}, "slow");
+          $("#biodigesterPopup").css('visibility', 'hidden');
+        });
+
         var buckstaffHover = document.getElementById('buckstaffHover');
         var buckstaffHoverCard = new google.maps.InfoWindow({
           content: buckstaffHover,
@@ -542,6 +655,25 @@ function initMap() {
         buckstaffMarker.addListener('click', function(){
           buckstaffHoverCard.open(map,buckstaffMarker);
         });
+        // when "click for more info" is selected,
+        // make corresponding overlay and popup visible
+        // +animate to fade in
+        $("#buckstaffLink").click(function(){
+          $('#overlay').css('visibility', 'visible');
+          $('#overlay').animate({"opacity": "0.3"}, "slow");
+
+          $("#buckstaffPopup").css('visibility', 'visible');
+          $('#buckstaffPopup').animate({"opacity": "1"}, "slow");
+        });
+        // when x on popup is clicked, close popup
+        $("#buckstaffPopupClose").click(function(){
+          $('#overlay').animate({"opacity": "0"}, "slow");
+          $('#overlay').css('visibility', 'hidden');
+
+          $('#buckstaffPopup').animate({"opacity": "0"}, "slow");
+          $("#buckstaffPopup").css('visibility', 'hidden');
+        });
+
         var equityHover = document.getElementById('equityHover');
         var equityHoverCard = new google.maps.InfoWindow({
           content: equityHover,
@@ -549,6 +681,39 @@ function initMap() {
           equityMarker.addListener('click', function(){
           equityHoverCard.open(map, equityMarker);
         });
+        // when "click for more info" is selected,
+        // make corresponding overlay and popup visible
+        // +animate to fade in
+        $("#equityLink").click(function(){
+          $('#overlay').css('visibility', 'visible');
+          $('#overlay').animate({"opacity": "0.3"}, "slow");
+
+          $("#equityPopup").css('visibility', 'visible');
+          $('#equityPopup').animate({"opacity": "1"}, "slow");
+        });
+        // when x on popup is clicked, close popup
+        $("#equityPopupClose").click(function(){
+          $('#overlay').animate({"opacity": "0"}, "slow");
+          $('#overlay').css('visibility', 'hidden');
+
+          $('#equityPopup').animate({"opacity": "0"}, "slow");
+          $("#equityPopup").css('visibility', 'hidden');
+        });
+        // behavior for when tabs are clicked on the popups
+        // show content for tab, hide content for other tabs
+        $("#equityAboutLi").click(function(){
+          $("#equityBathrooms").css('display', "none");
+
+          $("#equityAboutImage").css('display', "initial");
+          $("#equityAboutText").css('display', "initial");
+        });
+        $("#equityBathroomsLi").click(function(){
+          $("#equityAboutImage").css('display', "none");
+          $("#equityAboutText").css('display', "none");
+
+          $("#equityBathrooms").css('display', "initial");
+        });
+
         var campusHover = document.getElementById('campusHover');
         var campusHoverCard = new google.maps.InfoWindow({
           content: campusHover,

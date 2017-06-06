@@ -451,6 +451,9 @@ html, body, main, .mdl-layout__content, .page-content, #map {
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
     }
+    #acPopup{
+      height: 450px;
+    }
     .popupBlack{
       background-color: #fdb515;
       position: relative;
@@ -513,11 +516,20 @@ html, body, main, .mdl-layout__content, .page-content, #map {
     .imagePopup{
       float: left;
     }
+    .imagePopup img{
+      width: 400px;
+      height: 250px;
+    }
     .videoPopup{
       float: right;
     }
     .address{
       text-align: center;
+      margin: 0px;
+    }
+    a.address{
+      position: relative;
+      left: 40%;
     }
     .videoPopup iframe{
       width: 400px;
@@ -553,7 +565,18 @@ html, body, main, .mdl-layout__content, .page-content, #map {
     #alumniSustainability{
       display: none;
     }
-
+    #acBathrooms{
+      display: none;
+    }
+    #blackhawkSustainability{
+      display: none;
+    }
+    #blackhawkBathrooms{
+      display: none;
+    }
+    #equityBathrooms{
+      display: none;
+    }
     /*moves the google logo n' stuff into view on the map*/
     #map > div > div > div:nth-child(2){
       margin-left: 385px !important;
