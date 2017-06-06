@@ -896,6 +896,25 @@ function initMap() {
         eastMarker.addListener('click', function(){
           eastHoverCard.open(map,eastMarker);
         });
+        // when "click for more info" is selected,
+        // make corresponding overlay and popup visible
+        // +animate to fade in
+        $("#eastLink").click(function(){
+          $('#overlay').css('visibility', 'visible');
+          $('#overlay').animate({"opacity": "0.3"}, "slow");
+
+          $("#eastPopup").css('visibility', 'visible');
+          $('#eastPopup').animate({"opacity": "1"}, "slow");
+        });
+        // when x on popup is clicked, close popup
+        $("#eastPopupClose").click(function(){
+          $('#overlay').animate({"opacity": "0"}, "slow");
+          $('#overlay').css('visibility', 'hidden');
+
+          $('#eastPopup').animate({"opacity": "0"}, "slow");
+          $("#eastPopup").css('visibility', 'hidden');
+        });
+
         var environmentalHover = document.getElementById('environmentalHover');
         var environmentalHoverCard = new google.maps.InfoWindow({
           content: environmentalHover,
@@ -903,13 +922,51 @@ function initMap() {
         environmentalMarker.addListener('click', function(){
           environmentalHoverCard.open(map, environmentalMarker);
         });
+        // when "click for more info" is selected,
+        // make corresponding overlay and popup visible
+        // +animate to fade in
+        $("#environmentalLink").click(function(){
+          $('#overlay').css('visibility', 'visible');
+          $('#overlay').animate({"opacity": "0.3"}, "slow");
+
+          $("#environmentalPopup").css('visibility', 'visible');
+          $('#environmentalPopup').animate({"opacity": "1"}, "slow");
+        });
+        // when x on popup is clicked, close popup
+        $("#environmentalPopupClose").click(function(){
+          $('#overlay').animate({"opacity": "0"}, "slow");
+          $('#overlay').css('visibility', 'hidden');
+
+          $('#environmentalPopup').animate({"opacity": "0"}, "slow");
+          $("#environmentalPopup").css('visibility', 'hidden');
+        });
+
         var evansHover = document.getElementById('evansHover');
         var evansHoverCard = new google.maps.InfoWindow({
           content: evansHover,
         });
-          evansMarker.addListener('click', function(){
-          evansHoverCard.open(map, evansMarker);
+        evansMarker.addListener('click', function(){
+        evansHoverCard.open(map, evansMarker);
+      });
+        // when "click for more info" is selected,
+        // make corresponding overlay and popup visible
+        // +animate to fade in
+        $("#evansLink").click(function(){
+          $('#overlay').css('visibility', 'visible');
+          $('#overlay').animate({"opacity": "0.3"}, "slow");
+
+          $("#evansPopup").css('visibility', 'visible');
+          $('#evansPopup').animate({"opacity": "1"}, "slow");
         });
+        // when x on popup is clicked, close popup
+        $("#evansPopupClose").click(function(){
+          $('#overlay').animate({"opacity": "0"}, "slow");
+          $('#overlay').css('visibility', 'hidden');
+
+          $('#evansPopup').animate({"opacity": "0"}, "slow");
+          $("#evansPopup").css('visibility', 'hidden');
+        });
+
         var fletcherHover = document.getElementById('fletcherHover');
         var fletcherHoverCard = new google.maps.InfoWindow({
           content: fletcherHover,
@@ -917,12 +974,49 @@ function initMap() {
           fletcherMarker.addListener('click', function(){
             fletcherHoverCard.open(map, fletcherMarker);
         });
+        // when "click for more info" is selected,
+        // make corresponding overlay and popup visible
+        // +animate to fade in
+        $("#fletcherLink").click(function(){
+          $('#overlay').css('visibility', 'visible');
+          $('#overlay').animate({"opacity": "0.3"}, "slow");
+
+          $("#fletcherPopup").css('visibility', 'visible');
+          $('#fletcherPopup').animate({"opacity": "1"}, "slow");
+        });
+        // when x on popup is clicked, close popup
+        $("#fletcherPopupClose").click(function(){
+          $('#overlay').animate({"opacity": "0"}, "slow");
+          $('#overlay').css('visibility', 'hidden');
+
+          $('#fletcherPopup').animate({"opacity": "0"}, "slow");
+          $("#fletcherPopup").css('visibility', 'hidden');
+        });
+
         var fredricHover = document.getElementById('fredricHover');
         var fredricHoverCard = new google.maps.InfoWindow({
           content: fredricHover,
         });
         fredricMarker.addListener('click', function(){
           fredricHoverCard.open(map,fredricMarker);
+        });
+        // when "click for more info" is selected,
+        // make corresponding overlay and popup visible
+        // +animate to fade in
+        $("#fredricLink").click(function(){
+          $('#overlay').css('visibility', 'visible');
+          $('#overlay').animate({"opacity": "0.3"}, "slow");
+
+          $("#fredricPopup").css('visibility', 'visible');
+          $('#fredricPopup').animate({"opacity": "1"}, "slow");
+        });
+        // when x on popup is clicked, close popup
+        $("#fredricPopupClose").click(function(){
+          $('#overlay').animate({"opacity": "0"}, "slow");
+          $('#overlay').css('visibility', 'hidden');
+
+          $('#fredricPopup').animate({"opacity": "0"}, "slow");
+          $("#fredricPopup").css('visibility', 'hidden');
         });
 
         // GRUENHAGEN
@@ -964,6 +1058,40 @@ function initMap() {
         halseyMarker.addListener('click', function(){
           halseyHoverCard.open(map, halseyMarker);
         });
+        // when "click for more info" is selected,
+        // make corresponding overlay and popup visible
+        // +animate to fade in
+        $("#halseyLink").click(function(){
+          $('#overlay').css('visibility', 'visible');
+          $('#overlay').animate({"opacity": "0.3"}, "slow");
+
+          $("#halseyPopup").css('visibility', 'visible');
+          $('#halseyPopup').animate({"opacity": "1"}, "slow");
+        });
+        // when x on popup is clicked, close popup
+        $("#halseyPopupClose").click(function(){
+          $('#overlay').animate({"opacity": "0"}, "slow");
+          $('#overlay').css('visibility', 'hidden');
+
+          $('#halseyPopup').animate({"opacity": "0"}, "slow");
+          $("#halseyPopup").css('visibility', 'hidden');
+        });
+        // behavior for when tabs are clicked on the popups
+        // show content for tab, hide content for other tabs
+        $("#halseyAboutLi").click(function(){
+          $("#halseyBathrooms").css('display', "none");
+
+          $("#halseyAboutImage").css('display', "initial");
+          $("#halseyAboutText").css('display', "initial");
+        });
+        $("#halseyBathroomsLi").click(function(){
+          $("#halseyAboutImage").css('display', "none");
+          $("#halseyAboutText").css('display', "none");
+
+          $("#halseyBathrooms").css('display', "initial");
+        });
+
+
         var harringtonHover = document.getElementById('harringtonHover');
         var harringtonHoverCard = new google.maps.InfoWindow({
           content: harringtonHover,
@@ -971,6 +1099,39 @@ function initMap() {
         harringtonMarker.addListener('click', function(){
           harringtonHoverCard.open(map, harringtonMarker);
         });
+        // when "click for more info" is selected,
+        // make corresponding overlay and popup visible
+        // +animate to fade in
+        $("#harringtonLink").click(function(){
+          $('#overlay').css('visibility', 'visible');
+          $('#overlay').animate({"opacity": "0.3"}, "slow");
+
+          $("#harringtonPopup").css('visibility', 'visible');
+          $('#harringtonPopup').animate({"opacity": "1"}, "slow");
+        });
+        // when x on popup is clicked, close popup
+        $("#harringtonPopupClose").click(function(){
+          $('#overlay').animate({"opacity": "0"}, "slow");
+          $('#overlay').css('visibility', 'hidden');
+
+          $('#harringtonPopup').animate({"opacity": "0"}, "slow");
+          $("#harringtonPopup").css('visibility', 'hidden');
+        });
+        // behavior for when tabs are clicked on the popups
+        // show content for tab, hide content for other tabs
+        $("#harringtonAboutLi").click(function(){
+          $("#harringtonBathrooms").css('display', "none");
+
+          $("#harringtonAboutImage").css('display', "initial");
+          $("#harringtonAboutText").css('display', "initial");
+        });
+        $("#harringtonBathroomsLi").click(function(){
+          $("#harringtonAboutImage").css('display', "none");
+          $("#harringtonAboutText").css('display', "none");
+
+          $("#harringtonBathrooms").css('display', "initial");
+        });
+
         var heatingHover = document.getElementById('heatingHover');
         var heatingHoverCard = new google.maps.InfoWindow({
           content: heatingHover,
@@ -978,6 +1139,40 @@ function initMap() {
         heatingMarker.addListener('click', function(){
           heatingHoverCard.open(map,heatingMarker);
         });
+        // when "click for more info" is selected,
+        // make corresponding overlay and popup visible
+        // +animate to fade in
+        $("#heatingLink").click(function(){
+          $('#overlay').css('visibility', 'visible');
+          $('#overlay').animate({"opacity": "0.3"}, "slow");
+
+          $("#heatingPopup").css('visibility', 'visible');
+          $('#heatingPopup').animate({"opacity": "1"}, "slow");
+        });
+        // when x on popup is clicked, close popup
+        $("#heatingPopupClose").click(function(){
+          $('#overlay').animate({"opacity": "0"}, "slow");
+          $('#overlay').css('visibility', 'hidden');
+
+          $('#heatingPopup').animate({"opacity": "0"}, "slow");
+          $("#heatingPopup").css('visibility', 'hidden');
+        });
+        // behavior for when tabs are clicked on the popups
+        // show content for tab, hide content for other tabs
+        $("#heatingAboutLi").click(function(){
+          $("#heatingSustainability").css('display', "none");
+
+          $("#heatingAboutImage").css('display', "initial");
+          $("#heatingAboutText").css('display', "initial");
+        });
+        $("#heatingSustainabilityLi").click(function(){
+          $("#heatingAboutImage").css('display', "none");
+          $("#heatingAboutText").css('display', "none");
+
+          $("#heatingSustainability").css('display', "initial");
+        });
+
+
         var parkingRampHover = document.getElementById('parkingRampHover');
         var parkingRampHoverCard = new google.maps.InfoWindow({
           content: parkingRampHover,
@@ -985,6 +1180,26 @@ function initMap() {
         parkingRampMarker.addListener('click', function(){
           parkingRampHoverCard.open(map, parkingRampMarker);
         });
+        // when "click for more info" is selected,
+        // make corresponding overlay and popup visible
+        // +animate to fade in
+        $("#parkingRampLink").click(function(){
+          $('#overlay').css('visibility', 'visible');
+          $('#overlay').animate({"opacity": "0.3"}, "slow");
+
+          $("#parkingRampPopup").css('visibility', 'visible');
+          $('#parkingRampPopup').animate({"opacity": "1"}, "slow");
+        });
+        // when x on popup is clicked, close popup
+        $("#parkingRampPopupClose").click(function(){
+          $('#overlay').animate({"opacity": "0"}, "slow");
+          $('#overlay').css('visibility', 'hidden');
+
+          $('#parkingRampPopup').animate({"opacity": "0"}, "slow");
+          $("#parkingRampPopup").css('visibility', 'hidden');
+        });
+
+
         var horizonHover = document.getElementById('horizonHover');
         var horizonHoverCard = new google.maps.InfoWindow({
           content: horizonHover,
@@ -992,6 +1207,39 @@ function initMap() {
           horizonMarker.addListener('click', function(){
             horizonHoverCard.open(map, horizonMarker);
         });
+        // when "click for more info" is selected,
+        // make corresponding overlay and popup visible
+        // +animate to fade in
+        $("#horizonLink").click(function(){
+          $('#overlay').css('visibility', 'visible');
+          $('#overlay').animate({"opacity": "0.3"}, "slow");
+
+          $("#horizonPopup").css('visibility', 'visible');
+          $('#horizonPopup').animate({"opacity": "1"}, "slow");
+        });
+        // when x on popup is clicked, close popup
+        $("#horizonPopupClose").click(function(){
+          $('#overlay').animate({"opacity": "0"}, "slow");
+          $('#overlay').css('visibility', 'hidden');
+
+          $('#horizonPopup').animate({"opacity": "0"}, "slow");
+          $("#horizonPopup").css('visibility', 'hidden');
+        });
+        // behavior for when tabs are clicked on the popups
+        // show content for tab, hide content for other tabs
+        $("#horizonAboutLi").click(function(){
+          $("#horizonSustainability").css('display', "none");
+
+          $("#horizonAboutImage").css('display', "initial");
+          $("#horizonAboutText").css('display', "initial");
+        });
+        $("#horizonSustainabilityLi").click(function(){
+          $("#horizonAboutImage").css('display', "none");
+          $("#horizonAboutText").css('display', "none");
+
+          $("#horizonSustainability").css('display', "initial");
+        });
+
         var kolfHover = document.getElementById('kolfHover');
         var kolfHoverCard = new google.maps.InfoWindow({
           content: kolfHover,
@@ -999,6 +1247,39 @@ function initMap() {
         kolfMarker.addListener('click', function(){
           kolfHoverCard.open(map, kolfMarker);
         });
+        // when "click for more info" is selected,
+        // make corresponding overlay and popup visible
+        // +animate to fade in
+        $("#kolfLink").click(function(){
+          $('#overlay').css('visibility', 'visible');
+          $('#overlay').animate({"opacity": "0.3"}, "slow");
+
+          $("#kolfPopup").css('visibility', 'visible');
+          $('#kolfPopup').animate({"opacity": "1"}, "slow");
+        });
+        // when x on popup is clicked, close popup
+        $("#kolfPopupClose").click(function(){
+          $('#overlay').animate({"opacity": "0"}, "slow");
+          $('#overlay').css('visibility', 'hidden');
+
+          $('#kolfPopup').animate({"opacity": "0"}, "slow");
+          $("#kolfPopup").css('visibility', 'hidden');
+        });
+        // behavior for when tabs are clicked on the popups
+        // show content for tab, hide content for other tabs
+        $("#kolfAboutLi").click(function(){
+          $("#kolfBathrooms").css('display', "none");
+
+          $("#kolfAboutImage").css('display', "initial");
+          $("#kolfAboutText").css('display', "initial");
+        });
+        $("#kolfBathroomsLi").click(function(){
+          $("#kolfAboutImage").css('display', "none");
+          $("#kolfAboutText").css('display', "none");
+
+          $("#kolfBathrooms").css('display', "initial");
+        });
+
         var lincolnHover = document.getElementById('lincolnHover');
         var lincolnHoverCard = new google.maps.InfoWindow({
           content: lincolnHover,
@@ -1006,6 +1287,25 @@ function initMap() {
           lincolnMarker.addListener('click', function(){
             lincolnHoverCard.open(map, lincolnMarker);
         });
+        // when "click for more info" is selected,
+        // make corresponding overlay and popup visible
+        // +animate to fade in
+        $("#lincolnLink").click(function(){
+          $('#overlay').css('visibility', 'visible');
+          $('#overlay').animate({"opacity": "0.3"}, "slow");
+
+          $("#lincolnPopup").css('visibility', 'visible');
+          $('#lincolnPopup').animate({"opacity": "1"}, "slow");
+        });
+        // when x on popup is clicked, close popup
+        $("#lincolnPopupClose").click(function(){
+          $('#overlay').animate({"opacity": "0"}, "slow");
+          $('#overlay').css('visibility', 'hidden');
+
+          $('#lincolnPopup').animate({"opacity": "0"}, "slow");
+          $("#lincolnPopup").css('visibility', 'hidden');
+        });
+
         var multiculturalHover = document.getElementById('multiculturalHover');
         var multiculturalHoverCard = new google.maps.InfoWindow({
           content: multiculturalHover,
@@ -1013,6 +1313,25 @@ function initMap() {
         multiculturalMarker.addListener('click', function(){
           multiculturalHoverCard.open(map, multiculturalMarker);
         });
+        // when "click for more info" is selected,
+        // make corresponding overlay and popup visible
+        // +animate to fade in
+        $("#multiculturalLink").click(function(){
+          $('#overlay').css('visibility', 'visible');
+          $('#overlay').animate({"opacity": "0.3"}, "slow");
+
+          $("#multiculturalPopup").css('visibility', 'visible');
+          $('#multiculturalPopup').animate({"opacity": "1"}, "slow");
+        });
+        // when x on popup is clicked, close popup
+        $("#multiculturalPopupClose").click(function(){
+          $('#overlay').animate({"opacity": "0"}, "slow");
+          $('#overlay').css('visibility', 'hidden');
+
+          $('#multiculturalPopup').animate({"opacity": "0"}, "slow");
+          $("#multiculturalPopup").css('visibility', 'hidden');
+        });
+
         var nursingHover = document.getElementById('nursingHover');
         var nursingHoverCard = new google.maps.InfoWindow({
           content: nursingHover,
@@ -1020,6 +1339,40 @@ function initMap() {
         nursingMarker.addListener('click', function(){
           nursingHoverCard.open(map, nursingMarker);
         });
+        // when "click for more info" is selected,
+        // make corresponding overlay and popup visible
+        // +animate to fade in
+        $("#nursingLink").click(function(){
+          $('#overlay').css('visibility', 'visible');
+          $('#overlay').animate({"opacity": "0.3"}, "slow");
+
+          $("#nursingPopup").css('visibility', 'visible');
+          $('#nursingPopup').animate({"opacity": "1"}, "slow");
+        });
+        // when x on popup is clicked, close popup
+        $("#nursingPopupClose").click(function(){
+          $('#overlay').animate({"opacity": "0"}, "slow");
+          $('#overlay').css('visibility', 'hidden');
+
+          $('#nursingPopup').animate({"opacity": "0"}, "slow");
+          $("#nursingPopup").css('visibility', 'hidden');
+        });
+        // behavior for when tabs are clicked on the popups
+        // show content for tab, hide content for other tabs
+        $("#nursingAboutLi").click(function(){
+          $("#nursingBathrooms").css('display', "none");
+
+          $("#nursingAboutImage").css('display', "initial");
+          $("#nursingAboutText").css('display', "initial");
+        });
+        $("#nursingBathroomsLi").click(function(){
+          $("#nursingAboutImage").css('display', "none");
+          $("#nursingAboutText").css('display', "none");
+
+          $("#nursingBathrooms").css('display', "initial");
+        });
+
+
         var oviattHover = document.getElementById('oviattHover');
         var oviattHoverCard = new google.maps.InfoWindow({
           content: oviattHover,
