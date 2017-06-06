@@ -442,7 +442,7 @@ html, body, main, .mdl-layout__content, .page-content, #map {
       left: 40%;
       top: 20%;
       width: 715px;
-      height: 450px;
+      height: 415px;
       background-color: white;
       color: black;
       z-index: 2;
@@ -521,6 +521,7 @@ html, body, main, .mdl-layout__content, .page-content, #map {
     }
     .videoPopup iframe{
       width: 400px;
+      height: 250px;
 
     }
     .tourText{
@@ -546,6 +547,10 @@ html, body, main, .mdl-layout__content, .page-content, #map {
       display: none;
     }
     #albeeSustainability{
+      display: none;
+    }
+
+    #alumniSustainability{
       display: none;
     }
 

@@ -447,6 +447,24 @@ function initMap() {
           baseballMarker.addListener('click', function(){
             baseballHoverCard.open(map, baseballMarker);
         });
+        // when "click for more info" is selected,
+        // make corresponding overlay and popup visible
+        // +animate to fade in
+        $("#baseballLink").click(function(){
+          $('#overlay').css('visibility', 'visible');
+          $('#overlay').animate({"opacity": "0.3"}, "slow");
+
+          $("#baseballPopup").css('visibility', 'visible');
+          $('#baseballPopup').animate({"opacity": "1"}, "slow");
+        });
+        // when x on popup is clicked, close popup
+        $("#baseballPopupClose").click(function(){
+          $('#overlay').animate({"opacity": "0"}, "slow");
+          $('#overlay').css('visibility', 'hidden');
+
+          $('#baseballPopup').animate({"opacity": "0"}, "slow");
+          $("#baseballPopup").css('visibility', 'hidden');
+        });
 
         var alumniHover = document.getElementById('alumniHover');
         var alumniHoverCard = new google.maps.InfoWindow({
@@ -455,6 +473,39 @@ function initMap() {
           alumniMarker.addListener('click', function(){
             alumniHoverCard.open(map, alumniMarker);
         });
+        // when "click for more info" is selected,
+        // make corresponding overlay and popup visible
+        // +animate to fade in
+        $("#alumniLink").click(function(){
+          $('#overlay').css('visibility', 'visible');
+          $('#overlay').animate({"opacity": "0.3"}, "slow");
+
+          $("#alumniPopup").css('visibility', 'visible');
+          $('#alumniPopup').animate({"opacity": "1"}, "slow");
+        });
+        // when x on popup is clicked, close popup
+        $("#alumniPopupClose").click(function(){
+          $('#overlay').animate({"opacity": "0"}, "slow");
+          $('#overlay').css('visibility', 'hidden');
+
+          $('#alumniPopup').animate({"opacity": "0"}, "slow");
+          $("#alumniPopup").css('visibility', 'hidden');
+        });
+        // behavior for when tabs are clicked on the popups
+        // show content for tab, hide content for other tabs
+        $("#alumniAboutLi").click(function(){
+          $("#alumniSustainability").css('display', "none");
+
+          $("#alumniAboutImage").css('display', "initial");
+          $("#alumniAboutText").css('display', "initial");
+        });
+        $("#alumniSustainabilityLi").click(function(){
+          $("#alumniAboutImage").css('display', "none");
+          $("#alumniAboutText").css('display', "none");
+
+          $("#alumniSustainability ").css('display', "initial");
+        });
+
         // a&c hover
         var acHover = document.getElementById('acHover');
         var acHoverCard = new google.maps.InfoWindow({

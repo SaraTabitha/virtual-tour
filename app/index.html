@@ -463,6 +463,73 @@
                 <p class="subText text">Albee Hall houses the University pool which uses 64 solar thermal panels producing an estimated 7,692 therms annually to generate hot water.</p>
               </div>
            </div>
+
+          <!-- BASEBALL POPUP -->
+          <div id="baseballPopup" class="popup">
+                 <div class="popupBlack">
+                     <button id="baseballPopupClose" class="closeButton mdl-color-text--white mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
+                       <i  class="material-icons">close</i>
+                     </button>
+                     <h1 class="text yellow heading">Alumni Baseball Stadium</h1>
+                 </div>
+                 <!-- <nav class="popupNav">
+                   <ul id="popupNav">
+                     <li class="about"> About</li>
+                   </ul>
+                 </nav> -->
+                 <div class="imagePopup">
+                     <img  src="#">
+                     <p class="address text">
+                     450 Josslyn Street, Oshkosh, WI, 54901</p>
+                 </div>
+                 <div class="popupText">
+                   <h5 class="heading">About This Building</h5>
+                       <p class="text">Also known as Tiedemann Field,
+                          the Alumni Baseball Stadium is part of the Oshkosh
+                          Sports Complex located along Josslyn Street, west
+                          of the Fox River.</p>
+                </div>
+              </div>
+          <!-- ALUMNI WELCOME AND CONFERENCE CENTER POPUP -->
+          <div id="alumniPopup" class="popup">
+                 <div class="popupBlack">
+                     <button id="alumniPopupClose" class="closeButton mdl-color-text--white mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
+                       <i  class="material-icons">close</i>
+                     </button>
+                     <h1 class="text yellow heading">Alumni Welcome and Conference Center</h1>
+                 </div>
+                 <nav class="popupNav">
+                   <ul id="popupNav">
+                     <li id="alumniAboutLi" class="about"> About</li>
+                     <li id="alumniSustainabilityLi">Sustainability </li>
+                     <li>
+                   </ul>
+                 </nav>
+                 <!-- ALUMNI About Content -->
+                 <div id="alumniAboutImage" class="imagePopup">
+                     <img  src="images/campuspictures/awcc-buildingFull.jpg">
+                     <p class="address text">
+                     776 Algoma Boulevard, Oshkosh, WI, 54901</p>
+                 </div>
+                 <div id="alumniAboutText" class="popupText">
+                   <h5 class="heading">About Alumni Welcome and Conference Center</h5>
+                       <p class=" subText text">The UW Oshkosh Alumni Welcome and Conference
+                         Center opened in 2014 and serves as the Univeristy’s new “front door.”
+                         The 22,000-square-foot facility is home to Alumni Relations, Business
+                         Success Center and the UW Oshkosh Foundation, as well as two satellite
+                          offices, a visitor’s concierge and a high-quality conference center.
+                          The AWCC is located on the Fox River and includes a ballroom, board
+                           room and breakout rooms.</p>
+                 </div>
+
+
+                 <!-- ALUMNI Sustainability Contents -->
+                 <div id="alumniSustainability" class="popupTextNoImage">
+                   <h5 class="sustHeading"> Sustainability Point of Interest</h5>
+                   <p class="subText text">The Alumni Welcome and Conference Center was built to LEED certification standards and opened in 2014.</p>
+                 </div>
+              </div>
+
           <!--  GRUENHAGEN POPUP-->
            <div id="gruenhagenPopup" class="popup">
                   <div class="popupBlack">
@@ -519,7 +586,7 @@
       <p class="paraHover text"> 450 Josslyn Street</p>
       <p class="paraHover text"> Oshkosh, WI 54901</p>
       <br>
-      <a href="#" class="text link">Click for more info</a>
+      <a href="#" id="baseballLink" class="text link">Click for more info</a>
       </div>
       </div>
 
@@ -529,7 +596,7 @@
       <h1 class="headHover text">Alumni Welcome and Conference Center</h1>
       <p class="paraHover text"> 625 Pearl Ave.</p>
       <p class="paraHover text"> Oshkosh, WI 54901</p>
-      <a href="#" class="text link">Click for more info</a>
+      <a href="#" id="alumniLink" class="text link">Click for more info</a>
       </div>
       </div>
 
@@ -539,7 +606,7 @@
       <h1 class="headHover text">Arts &amp; Communications Center</h1>
       <p class="paraHover text"> 1001 Elmwood Avenue</p>
       <p class="paraHover text"> Oshkosh, WI 54901</p>
-      <a href="#" class="text link">Click for more info</a>
+      <a href="#" id="acLink" class="text link">Click for more info</a>
       </div>
       </div>
 
@@ -550,7 +617,7 @@
       <p class="paraHover text"> 450 Josslyn Street</p>
       <p class="paraHover text"> Oshkosh, WI 54901</p>
       <br>
-      <a href="#" class="text link">Click for more info</a>
+      <a href="#" id="athleticLink" class="text link">Click for more info</a>
       </div>
       </div>
 
@@ -561,7 +628,7 @@
       <p class="paraHover text"> 725 Algoma Boulevard</p>
       <p class="paraHover text"> Oshkosh, WI 54901</p>
       <br>
-      <a href="#" class="text link">Click for more info</a>
+      <a href="#" id="blackhawkLink" class="text link">Click for more info</a>
       </div>
       </div>
 
@@ -572,7 +639,7 @@
       <p class="paraHover text"> 755 Dempsey Trail</p>
       <p class="paraHover text"> Oshkosh, WI 54901</p>
       <br>
-      <a href="#" class="text link">Click for more info</a>
+      <a href="#" id="biodigesterLink" class="text link">Click for more info</a>
       </div>
       </div>
 
@@ -583,7 +650,7 @@
       <p class="paraHover text"> 921 Elmwood Avenue</p>
       <p class="paraHover text"> Oshkosh, WI 54901</p>
       <br>
-      <a href="#" class="text link">Click for more info</a>
+      <a href="#" id="buckstaffLink" class="text link">Click for more info</a>
       </div>
       </div>
 
@@ -593,7 +660,7 @@
       <h1 class="headHover text">Campus Center for Equity &amp; Diversity</h1>
       <p class="paraHover text"> 717 W. Irving Street</p>
       <p class="paraHover text"> Oshkosh, WI 54901</p>
-      <a href="#" class="text link">Click for more info</a>
+      <a href="#" id="equityLink" class="text link">Click for more info</a>
       </div>
       </div>
 
@@ -604,7 +671,7 @@
       <p class="paraHover text"> 650 Witzel Ave.</p>
       <p class="paraHover text"> Oshkosh, WI 54901</p>
       <br>
-      <a href="#" class="text link">Click for more info</a>
+      <a href="#" id="campusLink" class="text link">Click for more info</a>
       </div>
       </div>
 
@@ -615,7 +682,7 @@
       <p class="paraHover text"> 1165 Rockwell Avenue</p>
       <p class="paraHover text"> Oshkosh, WI 54901</p>
       <br>
-      <a href="#" class="text link">Click for more info</a>
+      <a href="#" id="ceramicsLink" class="text link">Click for more info</a>
       </div>
       </div>
 
@@ -626,7 +693,7 @@
       <p class="paraHover text"> 805 Algoma Boulevard</p>
       <p class="paraHover text"> Oshkosh, WI 54901</p>
       <br>
-      <a href="#" class="text link">Click for more info</a>
+      <a href="#" id="clowLink" class="text link">Click for more info</a>
       </div>
       </div>
 
@@ -637,7 +704,7 @@
       <p class="paraHover text"> 663 W. 3rd Avenue</p>
       <p class="paraHover text"> Oshkosh, WI 54901</p>
       <br>
-      <a href="#" class="text link">Click for more info</a>
+      <a href="#" id="gardensLink"  class="text link">Click for more info</a>
       </div>
       </div>
 
@@ -648,7 +715,7 @@
       <p class="paraHover text"> 800 Algoma Boulevard</p>
       <p class="paraHover text"> Oshkosh, WI 54901</p>
       <br>
-      <a href="#" class="text link">Click for more info</a>
+      <a href="#" id="dempseyLink"  class="text link">Click for more info</a>
       </div>
       </div>
 
@@ -659,7 +726,7 @@
       <p class="paraHover text"> 820 High Avenue</p>
       <p class="paraHover text"> Oshkosh, WI 54901</p>
       <br>
-      <a href="#" class="text link">Click for more info</a>
+      <a href="#" id="donnerLink"  class="text link">Click for more info</a>
       </div>
       </div>
 
@@ -670,7 +737,7 @@
       <p class="paraHover text"> New York Ave. &amp; Jackson St.</p>
       <p class="paraHover text"> Oshkosh, WI 54901</p>
       <br>
-      <a href="#" class="text link">Click for more info</a>
+      <a href="#" id="eastLink"  class="text link">Click for more info</a>
       </div>
       </div>
 
@@ -680,7 +747,7 @@
       <h1 class="headHover text">Environmental Research and Innovation Center</h1>
       <p class="paraHover text"> 83 Pearl Avenue</p>
       <p class="paraHover text"> Oshkosh, WI 54901</p>
-      <a href="#" class="text link">Click for more info</a>
+      <a href="#" id="environmentalLink" class="text link">Click for more info</a>
       </div>
       </div>
 
@@ -691,7 +758,7 @@
       <p class="paraHover text"> 727 W. Lincoln Avenue</p>
       <p class="paraHover text"> Oshkosh, WI 54901</p>
       <br>
-      <a href="#" class="text link">Click for more info</a>
+      <a href="#" id="evansLink" class="text link">Click for more info</a>
       </div>
       </div>
 
@@ -702,7 +769,7 @@
       <p class="paraHover text"> 712 Elmwood Avenue</p>
       <p class="paraHover text"> Oshkosh, WI 54901</p>
       <br>
-      <a href="#" class="text link">Click for more info</a>
+      <a href="#" id="fletcherLink" class="text link">Click for more info</a>
       </div>
       </div>
 
@@ -713,7 +780,7 @@
       <p class="paraHover text"> 926 Woodland Avenue</p>
       <p class="paraHover text"> Oshkosh, WI 54901</p>
       <br>
-      <a href="#" class="text link">Click for more info</a>
+      <a href="#" id="fredricLink" class="text link">Click for more info</a>
       </div>
       </div>
 
@@ -734,7 +801,7 @@
       <p class="paraHover text"> 921 Elmwood Avenue</p>
       <p class="paraHover text"> Oshkosh, WI 54901</p>
       <br>
-      <a href="#" class="text link">Click for more info</a>
+      <a href="#" id="halseyLink" class="text link">Click for more info</a>
       </div>
       </div>
 
@@ -745,7 +812,7 @@
       <p class="paraHover text"> 845 Elmwood Avenue</p>
       <p class="paraHover text"> Oshkosh, WI 54901</p>
       <br>
-      <a href="#" class="text link">Click for more info</a>
+      <a href="#" id="harringtonLink" class="text link">Click for more info</a>
       </div>
       </div>
 
@@ -756,7 +823,7 @@
       <p class="paraHover text"> 1010 Woodland Avenue</p>
       <p class="paraHover text"> Oshkosh, WI 54901</p>
       <br>
-      <a href="#" class="text link">Click for more info</a>
+      <a href="#" id="heatingLink" class="text link">Click for more info</a>
       </div>
       </div>
 
@@ -766,7 +833,7 @@
       <h1 class="headHover text">High Avenue Parking Ramp</h1>
       <p class="paraHover text"> 725 High Avenue</p>
       <p class="paraHover text"> Oshkosh, WI 54901</p>
-      <a href="#" class="text link">Click for more info</a>
+      <a href="#" id="parkingRampLink" class="text link">Click for more info</a>
       </div>
       </div>
 
@@ -777,7 +844,7 @@
       <p class="paraHover text"> 700 Algoma Boulevard</p>
       <p class="paraHover text"> Oshkosh, WI 54901</p>
       <br>
-      <a href="#" class="text link">Click for more info</a>
+      <a href="#" id="horizonLink" class="text link">Click for more info</a>
       </div>
       </div>
 
@@ -788,7 +855,7 @@
       <p class="paraHover text"> 785 High Avenue</p>
       <p class="paraHover text"> Oshkosh, WI 54901</p>
       <br>
-      <a href="#" class="text link">Click for more info</a>
+      <a href="#" id="kolfLink" class="text link">Click for more info</a>
       </div>
       </div>
 
@@ -799,7 +866,7 @@
       <p class="paraHover text"> 608 Algoma Boulevard</p>
       <p class="paraHover text"> Oshkosh, WI 54901</p>
       <br>
-      <a href="#" class="text link">Click for more info</a>
+      <a href="#" id="lincolnLink" class="text link">Click for more info</a>
       </div>
       </div>
 
@@ -809,7 +876,7 @@
       <h1 class="headHover text">Multicultural Education Center</h1>
       <p class="paraHover text"> 751 Algoma Boulevard</p>
       <p class="paraHover text"> Oshkosh, WI 54901</p>
-      <a href="#" class="text link">Click for more info</a>
+      <a href="#" id="multiculturalLink" class="text link">Click for more info</a>
       </div>
       </div>
 
@@ -819,7 +886,7 @@
       <h1 class="headHover text">Nursing &amp; Education Building</h1>
       <p class="paraHover text"> 845 Algoma Boulevard</p>
       <p class="paraHover text"> Oshkosh, WI 54901</p>
-      <a href="#" class="text link">Click for more info</a>
+      <a href="#" id="nursingLink" class="text link">Click for more info</a>
       </div>
       </div>
 
@@ -830,7 +897,7 @@
       <p class="paraHover text"> 842 Algoma Boulevard</p>
       <p class="paraHover text"> Oshkosh, WI 54901</p>
       <br>
-      <a href="#" class="text link">Click for more info</a>
+      <a href="#" id="oviattLink" class="text link">Click for more info</a>
       </div>
       </div>
 
@@ -841,7 +908,7 @@
       <p class="paraHover text"> 765 Algoma Boulevard</p>
       <p class="paraHover text"> Oshkosh, WI 54901</p>
       <br>
-      <a href="#" class="text link">Click for more info</a>
+      <a href="#" id="pollockLink" class="text link">Click for more info</a>
       </div>
       </div>
 
@@ -852,7 +919,7 @@
       <p class="paraHover text"> 801 Elmwood Avenue</p>
       <p class="paraHover text"> Oshkosh, WI 54901</p>
       <br>
-      <a href="#" class="text link">Click for more info</a>
+      <a href="#" id="polkLink" class="text link">Click for more info</a>
       </div>
       </div>
 
@@ -863,7 +930,7 @@
       <p class="paraHover text"> 777 Algoma Boulevard</p>
       <p class="paraHover text"> Oshkosh, WI 54901</p>
       <br>
-      <a href="#" class="text link">Click for more info</a>
+      <a href="#" id="radfordLink" class="text link">Click for more info</a>
       </div>
       </div>
 
@@ -874,7 +941,7 @@
       <p class="paraHover text"> 748 Algoma Boulevard</p>
       <p class="paraHover text"> Oshkosh, WI 54901</p>
       <br>
-      <a href="#" class="text link">Click for more info</a>
+      <a href="#" id="reeveLink" class="text link">Click for more info</a>
       </div>
       </div>
 
@@ -885,7 +952,7 @@
       <p class="paraHover text"> 845 High Avenue</p>
       <p class="paraHover text"> Oshkosh, WI 54901</p>
       <br>
-      <a href="#" class="text link">Click for more info</a>
+      <a href="#" id="sageLink" class="text link">Click for more info</a>
       </div>
       </div>
 
@@ -896,7 +963,7 @@
       <p class="paraHover text"> 625 Algoma Boulevard</p>
       <p class="paraHover text"> Oshkosh, WI 54901</p>
       <br>
-      <a href="#" class="text link">Click for more info</a>
+      <a href="#" id="scottLink" class="text link">Click for more info</a>
       </div>
       </div>
 
@@ -907,7 +974,7 @@
       <p class="paraHover text"> 723 W. Lincoln Avenue</p>
       <p class="paraHover text"> Oshkosh, WI 54901</p>
       <br>
-      <a href="#" class="text link">Click for more info</a>
+      <a href="#" id="stewartLink" class="text link">Click for more info</a>
       </div>
       </div>
 
@@ -917,7 +984,7 @@
       <h1 class="headHover text">Student Recreation &amp; Wellness Center</h1>
       <p class="paraHover text"> 735 Pearl Avenue</p>
       <p class="paraHover text"> Oshkosh, WI 54901</p>
-      <a href="#" class="text link">Click for more info</a>
+      <a href="#" id="recreationLink" class="text link">Click for more info</a>
       </div>
       </div>
 
@@ -928,7 +995,7 @@
       <p class="paraHover text"> 750 Elmwood Avenue</p>
       <p class="paraHover text"> Oshkosh, WI 54901</p>
       <br>
-      <a href="#" class="text link">Click for more info</a>
+      <a href="#" id="successLink" class="text link">Click for more info</a>
       </div>
       </div>
 
@@ -939,7 +1006,7 @@
       <p class="paraHover text"> 912 Algoma Boulevard</p>
       <p class="paraHover text"> Oshkosh, WI 54901</p>
       <br>
-      <a href="#" class="text link">Click for more info</a>
+      <a href="#" id="swartLink" class="text link">Click for more info</a>
       </div>
       </div>
 
@@ -950,7 +1017,7 @@
       <p class="paraHover text"> 780 High Avenue</p>
       <p class="paraHover text"> Oshkosh, WI 54901</p>
       <br>
-      <a href="#" class="text link">Click for more info</a>
+      <a href="#" id="taylorLink" class="text link">Click for more info</a>
       </div>
       </div>
 
@@ -961,7 +1028,7 @@
       <p class="paraHover text"> 450 Josslyn Street</p>
       <p class="paraHover text"> Oshkosh, WI 54901</p>
       <br>
-      <a href="#" class="text link">Click for more info</a>
+      <a href="#" id="titanLink" class="text link">Click for more info</a>
       </div>
       </div>
 
@@ -972,7 +1039,7 @@
       <p class="paraHover text"> 738 High Avenue</p>
       <p class="paraHover text"> Oshkosh, WI 54901</p>
       <br>
-      <a href="#" class="text link">Click for more info</a>
+      <a href="#" id="policeLink" class="text link">Click for more info</a>
       </div>
       </div>
 
@@ -983,7 +1050,7 @@
       <p class="paraHover text"> 810 High Avenue</p>
       <p class="paraHover text"> Oshkosh, WI 54901</p>
       <br>
-      <a href="#" class="text link">Click for more info</a>
+      <a href="#" id="websterLink" class="text link">Click for more info</a>
       </div>
       </div>
 
