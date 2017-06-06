@@ -451,9 +451,17 @@ html, body, main, .mdl-layout__content, .page-content, #map {
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
     }
+    /*specific popup modifications*/
     #acPopup{
       height: 450px;
     }
+    #dempseyPopup{
+      height: 440px;
+    }
+    #donnerPopup{
+      height: 400px;
+    }
+    /*popup stuff continued*/
     .popupBlack{
       background-color: #fdb515;
       position: relative;
@@ -534,7 +542,6 @@ html, body, main, .mdl-layout__content, .page-content, #map {
     .videoPopup iframe{
       width: 400px;
       height: 250px;
-
     }
     .tourText{
       width: 300px;
@@ -577,6 +584,10 @@ html, body, main, .mdl-layout__content, .page-content, #map {
     #equityBathrooms{
       display: none;
     }
+    #dempseyBathrooms{
+      display: none;
+    }
+
     /*moves the google logo n' stuff into view on the map*/
     #map > div > div > div:nth-child(2){
       margin-left: 385px !important;

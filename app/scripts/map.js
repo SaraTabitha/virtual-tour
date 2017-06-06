@@ -721,6 +721,25 @@ function initMap() {
           campusMarker.addListener('click', function(){
             campusHoverCard.open(map, campusMarker);
         });
+        // when "click for more info" is selected,
+        // make corresponding overlay and popup visible
+        // +animate to fade in
+        $("#campusLink").click(function(){
+          $('#overlay').css('visibility', 'visible');
+          $('#overlay').animate({"opacity": "0.3"}, "slow");
+
+          $("#campusPopup").css('visibility', 'visible');
+          $('#campusPopup').animate({"opacity": "1"}, "slow");
+        });
+        // when x on popup is clicked, close popup
+        $("#campusPopupClose").click(function(){
+          $('#overlay').animate({"opacity": "0"}, "slow");
+          $('#overlay').css('visibility', 'hidden');
+
+          $('#campusPopup').animate({"opacity": "0"}, "slow");
+          $("#campusPopup").css('visibility', 'hidden');
+        });
+
         var ceramicsHover = document.getElementById('ceramicsHover');
         var ceramicsHoverCard = new google.maps.InfoWindow({
           content: ceramicsHover,
@@ -728,6 +747,26 @@ function initMap() {
         ceramicsMarker.addListener('click', function(){
           ceramicsHoverCard.open(map, ceramicsMarker);
         });
+        // when "click for more info" is selected,
+        // make corresponding overlay and popup visible
+        // +animate to fade in
+        $("#ceramicsLink").click(function(){
+          $('#overlay').css('visibility', 'visible');
+          $('#overlay').animate({"opacity": "0.3"}, "slow");
+
+          $("#ceramicsPopup").css('visibility', 'visible');
+          $('#ceramicsPopup').animate({"opacity": "1"}, "slow");
+        });
+        // when x on popup is clicked, close popup
+        $("#ceramicsPopupClose").click(function(){
+          $('#overlay').animate({"opacity": "0"}, "slow");
+          $('#overlay').css('visibility', 'hidden');
+
+          $('#ceramicsPopup').animate({"opacity": "0"}, "slow");
+          $("#ceramicsPopup").css('visibility', 'hidden');
+        });
+
+
         var clowHover = document.getElementById('clowHover');
         var clowHoverCard = new google.maps.InfoWindow({
           content: clowHover,
@@ -735,6 +774,26 @@ function initMap() {
         clowMarker.addListener('click', function(){
           clowHoverCard.open(map, clowMarker);
         });
+        // when "click for more info" is selected,
+        // make corresponding overlay and popup visible
+        // +animate to fade in
+        $("#clowLink").click(function(){
+          $('#overlay').css('visibility', 'visible');
+          $('#overlay').animate({"opacity": "0.3"}, "slow");
+
+          $("#clowPopup").css('visibility', 'visible');
+          $('#clowPopup').animate({"opacity": "1"}, "slow");
+        });
+        // when x on popup is clicked, close popup
+        $("#clowPopupClose").click(function(){
+          $('#overlay').animate({"opacity": "0"}, "slow");
+          $('#overlay').css('visibility', 'hidden');
+
+          $('#clowPopup').animate({"opacity": "0"}, "slow");
+          $("#clowPopup").css('visibility', 'hidden');
+        });
+
+
         var gardensHover = document.getElementById('gardensHover');
         var gardensHoverCard = new google.maps.InfoWindow({
           content: gardensHover,
@@ -742,6 +801,26 @@ function initMap() {
           gardensMarker.addListener('click', function(){
             gardensHoverCard.open(map, gardensMarker);
         });
+        // when "click for more info" is selected,
+        // make corresponding overlay and popup visible
+        // +animate to fade in
+        $("#gardensLink").click(function(){
+          $('#overlay').css('visibility', 'visible');
+          $('#overlay').animate({"opacity": "0.3"}, "slow");
+
+          $("#gardensPopup").css('visibility', 'visible');
+          $('#gardensPopup').animate({"opacity": "1"}, "slow");
+        });
+        // when x on popup is clicked, close popup
+        $("#gardensPopupClose").click(function(){
+          $('#overlay').animate({"opacity": "0"}, "slow");
+          $('#overlay').css('visibility', 'hidden');
+
+          $('#gardensPopup').animate({"opacity": "0"}, "slow");
+          $("#gardensPopup").css('visibility', 'hidden');
+        });
+
+
         var dempseyHover = document.getElementById('dempseyHover');
         var dempseyHoverCard = new google.maps.InfoWindow({
           content: dempseyHover,
@@ -749,6 +828,40 @@ function initMap() {
         dempseyMarker.addListener('click', function(){
           dempseyHoverCard.open(map, dempseyMarker);
         });
+        // when "click for more info" is selected,
+        // make corresponding overlay and popup visible
+        // +animate to fade in
+        $("#dempseyLink").click(function(){
+          $('#overlay').css('visibility', 'visible');
+          $('#overlay').animate({"opacity": "0.3"}, "slow");
+
+          $("#dempseyPopup").css('visibility', 'visible');
+          $('#dempseyPopup').animate({"opacity": "1"}, "slow");
+        });
+        // when x on popup is clicked, close popup
+        $("#dempseyPopupClose").click(function(){
+          $('#overlay').animate({"opacity": "0"}, "slow");
+          $('#overlay').css('visibility', 'hidden');
+
+          $('#dempseyPopup').animate({"opacity": "0"}, "slow");
+          $("#dempseyPopup").css('visibility', 'hidden');
+        });
+        // behavior for when tabs are clicked on the popups
+        // show content for tab, hide content for other tabs
+        $("#dempseyAboutLi").click(function(){
+          $("#dempseyBathrooms").css('display', "none");
+
+          $("#dempseyAboutImage").css('display', "initial");
+          $("#dempseyAboutText").css('display', "initial");
+        });
+        $("#dempseyBathroomsLi").click(function(){
+          $("#dempseyAboutImage").css('display', "none");
+          $("#dempseyAboutText").css('display', "none");
+
+          $("#dempseyBathrooms").css('display', "initial");
+        });
+
+
         var donnerHover = document.getElementById('donnerHover');
         var donnerHoverCard = new google.maps.InfoWindow({
           content: donnerHover,
@@ -756,6 +869,26 @@ function initMap() {
         donnerMarker.addListener('click', function(){
           donnerHoverCard.open(map, donnerMarker);
         });
+        // when "click for more info" is selected,
+        // make corresponding overlay and popup visible
+        // +animate to fade in
+        $("#donnerLink").click(function(){
+          $('#overlay').css('visibility', 'visible');
+          $('#overlay').animate({"opacity": "0.3"}, "slow");
+
+          $("#donnerPopup").css('visibility', 'visible');
+          $('#donnerPopup').animate({"opacity": "1"}, "slow");
+        });
+        // when x on popup is clicked, close popup
+        $("#donnerPopupClose").click(function(){
+          $('#overlay').animate({"opacity": "0"}, "slow");
+          $('#overlay').css('visibility', 'hidden');
+
+          $('#donnerPopup').animate({"opacity": "0"}, "slow");
+          $("#donnerPopup").css('visibility', 'hidden');
+        });
+
+
         var eastHover = document.getElementById('eastHover');
         var eastHoverCard = new google.maps.InfoWindow({
           content: eastHover,
