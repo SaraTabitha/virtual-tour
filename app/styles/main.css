@@ -476,6 +476,9 @@ html, body, main, .mdl-layout__content, .page-content, #map {
     #successPopup{
       height: 490px;
     }
+    #taylorPopup{
+      height: 445px;
+    }
     /*popup stuff continued*/
     .popupBlack{
       background-color: #fdb515;
@@ -667,7 +670,18 @@ html, body, main, .mdl-layout__content, .page-content, #map {
     #successBathrooms{
       display: none;
     }
-
+    #swartBathrooms{
+      display: none;
+    }
+    #taylorSustainability{
+      display: none;
+    }
+    #titanSustainability{
+      display: none;
+    }
+    #policeBathrooms{
+      display: none;
+    }
     /*moves the google logo n' stuff into view on the map*/
     #map > div > div > div:nth-child(2){
       margin-left: 385px !important;
