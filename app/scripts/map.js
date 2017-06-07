@@ -2146,17 +2146,13 @@ function initMap() {
           content: swartHover,
         });
         swartMarker.addListener('click', function(){
-          closeAllHover();
-          swartHoverCard.open(map, swartMarker);
-        });
-        albeeMarker.addListener('click', function(){
-          var check = $("#albeeHover").hasClass("hoverOpen");
+          var check = $("#swartHover").hasClass("hoverOpen");
           if (check === false){
           closeAllHover();
-          albeeHoverCard.open(map, albeeMarker);
-          $("#albeeHover").addClass("hoverOpen");
+          swartHoverCard.open(map, swartMarker);
+          $("#swartHover").addClass("hoverOpen");
         } else if (check === true){
-          $("#albeeHover").removeClass("hoverOpen");
+          $("#swartHover").removeClass("hoverOpen");
           closeAllHover();
           }
         });
@@ -2198,17 +2194,13 @@ function initMap() {
           content: taylorHover,
         });
         taylorMarker.addListener('click', function(){
-          closeAllHover();
-          taylorHoverCard.open(map, taylorMarker);
-        });
-        albeeMarker.addListener('click', function(){
-          var check = $("#albeeHover").hasClass("hoverOpen");
+          var check = $("#taylorHover").hasClass("hoverOpen");
           if (check === false){
           closeAllHover();
-          albeeHoverCard.open(map, albeeMarker);
-          $("#albeeHover").addClass("hoverOpen");
+          taylorHoverCard.open(map, taylorMarker);
+          $("#taylorHover").addClass("hoverOpen");
         } else if (check === true){
-          $("#albeeHover").removeClass("hoverOpen");
+          $("#taylorHover").removeClass("hoverOpen");
           closeAllHover();
           }
         });
@@ -2249,18 +2241,14 @@ function initMap() {
         var titanHoverCard = new google.maps.InfoWindow({
           content: titanHover,
         });
-          titanMarker.addListener('click', function(){
-            closeAllHover();
-            titanHoverCard.open(map, titanMarker);
-        });
-        albeeMarker.addListener('click', function(){
-          var check = $("#albeeHover").hasClass("hoverOpen");
+        titanMarker.addListener('click', function(){
+          var check = $("#titanHover").hasClass("hoverOpen");
           if (check === false){
           closeAllHover();
-          albeeHoverCard.open(map, albeeMarker);
-          $("#albeeHover").addClass("hoverOpen");
+          titanHoverCard.open(map, titanMarker);
+          $("#titanHover").addClass("hoverOpen");
         } else if (check === true){
-          $("#albeeHover").removeClass("hoverOpen");
+          $("#titanHover").removeClass("hoverOpen");
           closeAllHover();
           }
         });
@@ -2303,17 +2291,13 @@ function initMap() {
           content: policeHover,
         });
         policeMarker.addListener('click', function(){
-          closeAllHover();
-          policeHoverCard.open(map, policeMarker);
-        });
-        albeeMarker.addListener('click', function(){
-          var check = $("#albeeHover").hasClass("hoverOpen");
+          var check = $("#policeHover").hasClass("hoverOpen");
           if (check === false){
           closeAllHover();
-          albeeHoverCard.open(map, albeeMarker);
-          $("#albeeHover").addClass("hoverOpen");
+          policeHoverCard.open(map, policeMarker);
+          $("#policeHover").addClass("hoverOpen");
         } else if (check === true){
-          $("#albeeHover").removeClass("hoverOpen");
+          $("#policeHover").removeClass("hoverOpen");
           closeAllHover();
           }
         });
@@ -2356,17 +2340,13 @@ function initMap() {
           content: websterHover,
         });
         websterMarker.addListener('click', function(){
-          closeAllHover();
-          websterHoverCard.open(map, websterMarker);
-        });
-        albeeMarker.addListener('click', function(){
-          var check = $("#albeeHover").hasClass("hoverOpen");
+          var check = $("#websterHover").hasClass("hoverOpen");
           if (check === false){
           closeAllHover();
-          albeeHoverCard.open(map, albeeMarker);
-          $("#albeeHover").addClass("hoverOpen");
+          websterHoverCard.open(map, websterMarker);
+          $("#websterHover").addClass("hoverOpen");
         } else if (check === true){
-          $("#albeeHover").removeClass("hoverOpen");
+          $("#websterHover").removeClass("hoverOpen");
           closeAllHover();
           }
         });
@@ -2800,347 +2780,117 @@ function initMap() {
           closeAllHover();
           albeeHoverCard.open(map, albeeAccEntMarker);
         });
-        albeeMarker.addListener('click', function(){
-          var check = $("#albeeHover").hasClass("hoverOpen");
-          if (check === false){
-          closeAllHover();
-          albeeHoverCard.open(map, albeeMarker);
-          $("#albeeHover").addClass("hoverOpen");
-        } else if (check === true){
-          $("#albeeHover").removeClass("hoverOpen");
-          closeAllHover();
-          }
-        });
+
         acAccEntMarker.addListener('click', function(){
           closeAllHover();
           acHoverCard.open(map,acAccEntMarker);
         });
-        albeeMarker.addListener('click', function(){
-          var check = $("#albeeHover").hasClass("hoverOpen");
-          if (check === false){
-          closeAllHover();
-          albeeHoverCard.open(map, albeeMarker);
-          $("#albeeHover").addClass("hoverOpen");
-        } else if (check === true){
-          $("#albeeHover").removeClass("hoverOpen");
-          closeAllHover();
-          }
-        });
+
         blackhawkAccEntMarker.addListener('click', function(){
           closeAllHover();
           blackhawkHoverCard.open(map, blackhawkAccEntMarker);
         });
-        albeeMarker.addListener('click', function(){
-          var check = $("#albeeHover").hasClass("hoverOpen");
-          if (check === false){
-          closeAllHover();
-          albeeHoverCard.open(map, albeeMarker);
-          $("#albeeHover").addClass("hoverOpen");
-        } else if (check === true){
-          $("#albeeHover").removeClass("hoverOpen");
-          closeAllHover();
-          }
-        });
+
         equityAccEntMarker.addListener('click', function(){
           closeAllHover();
         equityHoverCard.open(map, equityAccEntMarker);
         });
-        albeeMarker.addListener('click', function(){
-          var check = $("#albeeHover").hasClass("hoverOpen");
-          if (check === false){
-          closeAllHover();
-          albeeHoverCard.open(map, albeeMarker);
-          $("#albeeHover").addClass("hoverOpen");
-        } else if (check === true){
-          $("#albeeHover").removeClass("hoverOpen");
-          closeAllHover();
-          }
-        });
+
         clowAccEntMarker.addListener('click', function(){
           closeAllHover();
           clowHoverCard.open(map, clowAccEntMarker);
         });
-        albeeMarker.addListener('click', function(){
-          var check = $("#albeeHover").hasClass("hoverOpen");
-          if (check === false){
-          closeAllHover();
-          albeeHoverCard.open(map, albeeMarker);
-          $("#albeeHover").addClass("hoverOpen");
-        } else if (check === true){
-          $("#albeeHover").removeClass("hoverOpen");
-          closeAllHover();
-          }
-        });
+
         dempseyAccEntMarker.addListener('click', function(){
           closeAllHover();
           dempseyHoverCard.open(map, dempseyAccEntMarker);
         });
-        albeeMarker.addListener('click', function(){
-          var check = $("#albeeHover").hasClass("hoverOpen");
-          if (check === false){
-          closeAllHover();
-          albeeHoverCard.open(map, albeeMarker);
-          $("#albeeHover").addClass("hoverOpen");
-        } else if (check === true){
-          $("#albeeHover").removeClass("hoverOpen");
-          closeAllHover();
-          }
-        });
+
         donnerAccEntMarker.addListener('click', function(){
           closeAllHover();
         donnerHoverCard.open(map, donnerAccEntMarker);
         });
-        albeeMarker.addListener('click', function(){
-          var check = $("#albeeHover").hasClass("hoverOpen");
-          if (check === false){
-          closeAllHover();
-          albeeHoverCard.open(map, albeeMarker);
-          $("#albeeHover").addClass("hoverOpen");
-        } else if (check === true){
-          $("#albeeHover").removeClass("hoverOpen");
-          closeAllHover();
-          }
-        });
+
         fletcherAccEntMarker.addListener('click', function(){
           closeAllHover();
         fletcherHoverCard.open(map, fletcherAccEntMarker);
         });
-        albeeMarker.addListener('click', function(){
-          var check = $("#albeeHover").hasClass("hoverOpen");
-          if (check === false){
-          closeAllHover();
-          albeeHoverCard.open(map, albeeMarker);
-          $("#albeeHover").addClass("hoverOpen");
-        } else if (check === true){
-          $("#albeeHover").removeClass("hoverOpen");
-          closeAllHover();
-          }
-        });
+
         fredricAccEntMarker.addListener('click', function(){
           closeAllHover();
           fredricHoverCard.open(map,fredricAccEntMarker);
         });
-        albeeMarker.addListener('click', function(){
-          var check = $("#albeeHover").hasClass("hoverOpen");
-          if (check === false){
-          closeAllHover();
-          albeeHoverCard.open(map, albeeMarker);
-          $("#albeeHover").addClass("hoverOpen");
-        } else if (check === true){
-          $("#albeeHover").removeClass("hoverOpen");
-          closeAllHover();
-          }
-        });
+
         gruenhagenAccEntMarker.addListener('click', function(){
           closeAllHover();
           gruenhagenHoverCard.open(map,gruenhagenAccEntMarker);
         });
-        albeeMarker.addListener('click', function(){
-          var check = $("#albeeHover").hasClass("hoverOpen");
-          if (check === false){
-          closeAllHover();
-          albeeHoverCard.open(map, albeeMarker);
-          $("#albeeHover").addClass("hoverOpen");
-        } else if (check === true){
-          $("#albeeHover").removeClass("hoverOpen");
-          closeAllHover();
-          }
-        });
+
         halseyAccEntMarker.addListener('click', function(){
           closeAllHover();
           halseyHoverCard.open(map, halseyAccEntMarker);
         });
-        albeeMarker.addListener('click', function(){
-          var check = $("#albeeHover").hasClass("hoverOpen");
-          if (check === false){
-          closeAllHover();
-          albeeHoverCard.open(map, albeeMarker);
-          $("#albeeHover").addClass("hoverOpen");
-        } else if (check === true){
-          $("#albeeHover").removeClass("hoverOpen");
-          closeAllHover();
-          }
-        });
+
         harringtonAccEntMarker.addListener('click', function(){
           closeAllHover();
           harringtonHoverCard.open(map, harringtonAccEntMarker);
         });
-        albeeMarker.addListener('click', function(){
-          var check = $("#albeeHover").hasClass("hoverOpen");
-          if (check === false){
-          closeAllHover();
-          albeeHoverCard.open(map, albeeMarker);
-          $("#albeeHover").addClass("hoverOpen");
-        } else if (check === true){
-          $("#albeeHover").removeClass("hoverOpen");
-          closeAllHover();
-          }
-        });
+
         kolfAccEntMarker.addListener('click', function(){
           closeAllHover();
           kolfHoverCard.open(map, kolfAccEntMarker);
         });
-        albeeMarker.addListener('click', function(){
-          var check = $("#albeeHover").hasClass("hoverOpen");
-          if (check === false){
-          closeAllHover();
-          albeeHoverCard.open(map, albeeMarker);
-          $("#albeeHover").addClass("hoverOpen");
-        } else if (check === true){
-          $("#albeeHover").removeClass("hoverOpen");
-          closeAllHover();
-          }
-        });
+
         nursingAccEntMarker.addListener('click', function(){
           closeAllHover();
           nursingHoverCard.open(map, nursingAccEntMarker);
         });
-        albeeMarker.addListener('click', function(){
-          var check = $("#albeeHover").hasClass("hoverOpen");
-          if (check === false){
-          closeAllHover();
-          albeeHoverCard.open(map, albeeMarker);
-          $("#albeeHover").addClass("hoverOpen");
-        } else if (check === true){
-          $("#albeeHover").removeClass("hoverOpen");
-          closeAllHover();
-          }
-        });
+
         polkAccEntMarker.addListener('click', function(){
           closeAllHover();
           polkHoverCard.open(map, polkAccEntMarker);
         });
-        albeeMarker.addListener('click', function(){
-          var check = $("#albeeHover").hasClass("hoverOpen");
-          if (check === false){
-          closeAllHover();
-          albeeHoverCard.open(map, albeeMarker);
-          $("#albeeHover").addClass("hoverOpen");
-        } else if (check === true){
-          $("#albeeHover").removeClass("hoverOpen");
-          closeAllHover();
-          }
-        });
+
         radfordAccEntMarker.addListener('click', function(){
           closeAllHover();
         radfordHoverCard.open(map, radfordAccEntMarker);
         });
-        albeeMarker.addListener('click', function(){
-          var check = $("#albeeHover").hasClass("hoverOpen");
-          if (check === false){
-          closeAllHover();
-          albeeHoverCard.open(map, albeeMarker);
-          $("#albeeHover").addClass("hoverOpen");
-        } else if (check === true){
-          $("#albeeHover").removeClass("hoverOpen");
-          closeAllHover();
-          }
-        });
+
         reeveAccEntMarker.addListener('click', function(){
           closeAllHover();
         reeveHoverCard.open(map, reeveAccEntMarker);
         });
-        albeeMarker.addListener('click', function(){
-          var check = $("#albeeHover").hasClass("hoverOpen");
-          if (check === false){
-          closeAllHover();
-          albeeHoverCard.open(map, albeeMarker);
-          $("#albeeHover").addClass("hoverOpen");
-        } else if (check === true){
-          $("#albeeHover").removeClass("hoverOpen");
-          closeAllHover();
-          }
-        });
+
         scottAccEntMarker.addListener('click', function(){
           closeAllHover();
           scottHoverCard.open(map, scottAccEntMarker);
         });
-        albeeMarker.addListener('click', function(){
-          var check = $("#albeeHover").hasClass("hoverOpen");
-          if (check === false){
-          closeAllHover();
-          albeeHoverCard.open(map, albeeMarker);
-          $("#albeeHover").addClass("hoverOpen");
-        } else if (check === true){
-          $("#albeeHover").removeClass("hoverOpen");
-          closeAllHover();
-          }
-        });
+
         stewartAccEntMarker.addListener('click', function(){
           closeAllHover();
         stewartHoverCard.open(map, stewartAccEntMarker);
         });
-        albeeMarker.addListener('click', function(){
-          var check = $("#albeeHover").hasClass("hoverOpen");
-          if (check === false){
-          closeAllHover();
-          albeeHoverCard.open(map, albeeMarker);
-          $("#albeeHover").addClass("hoverOpen");
-        } else if (check === true){
-          $("#albeeHover").removeClass("hoverOpen");
-          closeAllHover();
-          }
-        });
+
         successAccEntMarker.addListener('click', function(){
           closeAllHover();
         successHoverCard.open(map, successAccEntMarker);
         });
-        albeeMarker.addListener('click', function(){
-          var check = $("#albeeHover").hasClass("hoverOpen");
-          if (check === false){
-          closeAllHover();
-          albeeHoverCard.open(map, albeeMarker);
-          $("#albeeHover").addClass("hoverOpen");
-        } else if (check === true){
-          $("#albeeHover").removeClass("hoverOpen");
-          closeAllHover();
-          }
-        });
+
         swartAccEntMarker.addListener('click', function(){
           closeAllHover();
           swartHoverCard.open(map, swartAccEntMarker);
         });
-        albeeMarker.addListener('click', function(){
-          var check = $("#albeeHover").hasClass("hoverOpen");
-          if (check === false){
-          closeAllHover();
-          albeeHoverCard.open(map, albeeMarker);
-          $("#albeeHover").addClass("hoverOpen");
-        } else if (check === true){
-          $("#albeeHover").removeClass("hoverOpen");
-          closeAllHover();
-          }
-        });
+
         taylorAccEntMarker.addListener('click', function(){
           closeAllHover();
         taylorHoverCard.open(map, taylorAccEntMarker);
         });
-        albeeMarker.addListener('click', function(){
-          var check = $("#albeeHover").hasClass("hoverOpen");
-          if (check === false){
-          closeAllHover();
-          albeeHoverCard.open(map, albeeMarker);
-          $("#albeeHover").addClass("hoverOpen");
-        } else if (check === true){
-          $("#albeeHover").removeClass("hoverOpen");
-          closeAllHover();
-          }
-        });
+
         websterAccEntMarker.addListener('click', function(){
           closeAllHover();
         websterHoverCard.open(map, websterAccEntMarker);
         });
-        albeeMarker.addListener('click', function(){
-          var check = $("#albeeHover").hasClass("hoverOpen");
-          if (check === false){
-          closeAllHover();
-          albeeHoverCard.open(map, albeeMarker);
-          $("#albeeHover").addClass("hoverOpen");
-        } else if (check === true){
-          $("#albeeHover").removeClass("hoverOpen");
-          closeAllHover();
-          }
-        });
+
 
         // accessible entries (buildings)
         function setAccEnt(){
@@ -3671,182 +3421,62 @@ var eighteenAccParMarker = new google.maps.Marker({
     closeAllHover();
     albeeHoverCard.open(map, albeeSustMarker);
   });
-  albeeMarker.addListener('click', function(){
-    var check = $("#albeeHover").hasClass("hoverOpen");
-    if (check === false){
-    closeAllHover();
-    albeeHoverCard.open(map, albeeMarker);
-    $("#albeeHover").addClass("hoverOpen");
-  } else if (check === true){
-    $("#albeeHover").removeClass("hoverOpen");
-    closeAllHover();
-    }
-  });
+
   alumniSustMarker.addListener('click', function(){
     closeAllHover();
     alumniHoverCard.open(map, alumniSustMarker);
   });
-  albeeMarker.addListener('click', function(){
-    var check = $("#albeeHover").hasClass("hoverOpen");
-    if (check === false){
-    closeAllHover();
-    albeeHoverCard.open(map, albeeMarker);
-    $("#albeeHover").addClass("hoverOpen");
-  } else if (check === true){
-    $("#albeeHover").removeClass("hoverOpen");
-    closeAllHover();
-    }
-  });
+
   blackhawkSustMarker.addListener('click', function(){
     closeAllHover();
     blackhawkHoverCard.open(map, blackhawkSustMarker);
   });
-  albeeMarker.addListener('click', function(){
-    var check = $("#albeeHover").hasClass("hoverOpen");
-    if (check === false){
-    closeAllHover();
-    albeeHoverCard.open(map, albeeMarker);
-    $("#albeeHover").addClass("hoverOpen");
-  } else if (check === true){
-    $("#albeeHover").removeClass("hoverOpen");
-    closeAllHover();
-    }
-  });
+
   biodigesterSustMarker.addListener('click', function(){
     closeAllHover();
     biodigesterHoverCard.open(map, biodigesterSustMarker);
   });
-  albeeMarker.addListener('click', function(){
-    var check = $("#albeeHover").hasClass("hoverOpen");
-    if (check === false){
-    closeAllHover();
-    albeeHoverCard.open(map, albeeMarker);
-    $("#albeeHover").addClass("hoverOpen");
-  } else if (check === true){
-    $("#albeeHover").removeClass("hoverOpen");
-    closeAllHover();
-    }
-  });
+
   heatingSustMarker.addListener('click', function(){
     closeAllHover();
     heatingHoverCard.open(map,heatingSustMarker);
   });
-  albeeMarker.addListener('click', function(){
-    var check = $("#albeeHover").hasClass("hoverOpen");
-    if (check === false){
-    closeAllHover();
-    albeeHoverCard.open(map, albeeMarker);
-    $("#albeeHover").addClass("hoverOpen");
-  } else if (check === true){
-    $("#albeeHover").removeClass("hoverOpen");
-    closeAllHover();
-    }
-  });
+
   horizonSustMarker.addListener('click', function(){
     closeAllHover();
     horizonHoverCard.open(map, horizonSustMarker);
   });
-  albeeMarker.addListener('click', function(){
-    var check = $("#albeeHover").hasClass("hoverOpen");
-    if (check === false){
-    closeAllHover();
-    albeeHoverCard.open(map, albeeMarker);
-    $("#albeeHover").addClass("hoverOpen");
-  } else if (check === true){
-    $("#albeeHover").removeClass("hoverOpen");
-    closeAllHover();
-    }
-  });
+
   reeveSustMarker.addListener('click', function(){
     closeAllHover();
   reeveHoverCard.open(map, reeveSustMarker);
   });
-  albeeMarker.addListener('click', function(){
-    var check = $("#albeeHover").hasClass("hoverOpen");
-    if (check === false){
-    closeAllHover();
-    albeeHoverCard.open(map, albeeMarker);
-    $("#albeeHover").addClass("hoverOpen");
-  } else if (check === true){
-    $("#albeeHover").removeClass("hoverOpen");
-    closeAllHover();
-    }
-  });
+
   sageSustMarker.addListener('click', function(){
     closeAllHover();
     sageHoverCard.open(map, sageSustMarker);
   });
-  albeeMarker.addListener('click', function(){
-    var check = $("#albeeHover").hasClass("hoverOpen");
-    if (check === false){
-    closeAllHover();
-    albeeHoverCard.open(map, albeeMarker);
-    $("#albeeHover").addClass("hoverOpen");
-  } else if (check === true){
-    $("#albeeHover").removeClass("hoverOpen");
-    closeAllHover();
-    }
-  });
+
   recreationSustMarker.addListener('click', function(){
     closeAllHover();
     recreationHoverCard.open(map, recreationSustMarker);
   });
-  albeeMarker.addListener('click', function(){
-    var check = $("#albeeHover").hasClass("hoverOpen");
-    if (check === false){
-    closeAllHover();
-    albeeHoverCard.open(map, albeeMarker);
-    $("#albeeHover").addClass("hoverOpen");
-  } else if (check === true){
-    $("#albeeHover").removeClass("hoverOpen");
-    closeAllHover();
-    }
-  });
+
   successSustMarker.addListener('click', function(){
     closeAllHover();
   successHoverCard.open(map, successSustMarker);
   });
-  albeeMarker.addListener('click', function(){
-    var check = $("#albeeHover").hasClass("hoverOpen");
-    if (check === false){
-    closeAllHover();
-    albeeHoverCard.open(map, albeeMarker);
-    $("#albeeHover").addClass("hoverOpen");
-  } else if (check === true){
-    $("#albeeHover").removeClass("hoverOpen");
-    closeAllHover();
-    }
-  });
+
   taylorSustMarker.addListener('click', function(){
     closeAllHover();
     taylorHoverCard.open(map, taylorSustMarker);
   });
-  albeeMarker.addListener('click', function(){
-    var check = $("#albeeHover").hasClass("hoverOpen");
-    if (check === false){
-    closeAllHover();
-    albeeHoverCard.open(map, albeeMarker);
-    $("#albeeHover").addClass("hoverOpen");
-  } else if (check === true){
-    $("#albeeHover").removeClass("hoverOpen");
-    closeAllHover();
-    }
-  });
+
   titanSustMarker.addListener('click', function(){
     closeAllHover();
     titanHoverCard.open(map, titanSustMarker);
   });
-  albeeMarker.addListener('click', function(){
-    var check = $("#albeeHover").hasClass("hoverOpen");
-    if (check === false){
-    closeAllHover();
-    albeeHoverCard.open(map, albeeMarker);
-    $("#albeeHover").addClass("hoverOpen");
-  } else if (check === true){
-    $("#albeeHover").removeClass("hoverOpen");
-    closeAllHover();
-    }
-  });
+
 
         // setting sustainability markers
         function setSust(){
@@ -3951,211 +3581,70 @@ var eighteenAccParMarker = new google.maps.Marker({
           closeAllHover();
           acHoverCard.open(map,acGenderMarker);
         });
-        albeeMarker.addListener('click', function(){
-          var check = $("#albeeHover").hasClass("hoverOpen");
-          if (check === false){
-          closeAllHover();
-          albeeHoverCard.open(map, albeeMarker);
-          $("#albeeHover").addClass("hoverOpen");
-        } else if (check === true){
-          $("#albeeHover").removeClass("hoverOpen");
-          closeAllHover();
-          }
-        });
+
         blackhawkGenderMarker.addListener('click', function(){
           closeAllHover();
           blackhawkHoverCard.open(map, blackhawkGenderMarker);
         });
-        albeeMarker.addListener('click', function(){
-          var check = $("#albeeHover").hasClass("hoverOpen");
-          if (check === false){
-          closeAllHover();
-          albeeHoverCard.open(map, albeeMarker);
-          $("#albeeHover").addClass("hoverOpen");
-        } else if (check === true){
-          $("#albeeHover").removeClass("hoverOpen");
-          closeAllHover();
-          }
-        });
+
         campusGenderMarker.addListener('click', function(){
           closeAllHover();
         campusHoverCard.open(map, campusGenderMarker);
         });
-        albeeMarker.addListener('click', function(){
-          var check = $("#albeeHover").hasClass("hoverOpen");
-          if (check === false){
-          closeAllHover();
-          albeeHoverCard.open(map, albeeMarker);
-          $("#albeeHover").addClass("hoverOpen");
-        } else if (check === true){
-          $("#albeeHover").removeClass("hoverOpen");
-          closeAllHover();
-          }
-        });
+
         dempseyGenderMarker.addListener('click', function(){
           closeAllHover();
           dempseyHoverCard.open(map, dempseyGenderMarker);
         });
-        albeeMarker.addListener('click', function(){
-          var check = $("#albeeHover").hasClass("hoverOpen");
-          if (check === false){
-          closeAllHover();
-          albeeHoverCard.open(map, albeeMarker);
-          $("#albeeHover").addClass("hoverOpen");
-        } else if (check === true){
-          $("#albeeHover").removeClass("hoverOpen");
-          closeAllHover();
-          }
-        });
+
         halseyGenderMarker.addListener('click', function(){
           closeAllHover();
           halseyHoverCard.open(map, halseyGenderMarker);
         });
-        albeeMarker.addListener('click', function(){
-          var check = $("#albeeHover").hasClass("hoverOpen");
-          if (check === false){
-          closeAllHover();
-          albeeHoverCard.open(map, albeeMarker);
-          $("#albeeHover").addClass("hoverOpen");
-        } else if (check === true){
-          $("#albeeHover").removeClass("hoverOpen");
-          closeAllHover();
-          }
-        });
+
         harringtonGenderMarker.addListener('click', function(){
           closeAllHover();
           harringtonHoverCard.open(map, harringtonGenderMarker);
         });
-        albeeMarker.addListener('click', function(){
-          var check = $("#albeeHover").hasClass("hoverOpen");
-          if (check === false){
-          closeAllHover();
-          albeeHoverCard.open(map, albeeMarker);
-          $("#albeeHover").addClass("hoverOpen");
-        } else if (check === true){
-          $("#albeeHover").removeClass("hoverOpen");
-          closeAllHover();
-          }
-        });
+
         kolfGenderMarker.addListener('click', function(){
           closeAllHover();
           kolfHoverCard.open(map, kolfGenderMarker);
         });
-        albeeMarker.addListener('click', function(){
-          var check = $("#albeeHover").hasClass("hoverOpen");
-          if (check === false){
-          closeAllHover();
-          albeeHoverCard.open(map, albeeMarker);
-          $("#albeeHover").addClass("hoverOpen");
-        } else if (check === true){
-          $("#albeeHover").removeClass("hoverOpen");
-          closeAllHover();
-          }
-        });
+
         nursingGenderMarker.addListener('click', function(){
           closeAllHover();
           nursingHoverCard.open(map, nursingGenderMarker);
         });
-        albeeMarker.addListener('click', function(){
-          var check = $("#albeeHover").hasClass("hoverOpen");
-          if (check === false){
-          closeAllHover();
-          albeeHoverCard.open(map, albeeMarker);
-          $("#albeeHover").addClass("hoverOpen");
-        } else if (check === true){
-          $("#albeeHover").removeClass("hoverOpen");
-          closeAllHover();
-          }
-        });
+
         reeveGenderMarker.addListener('click', function(){
           closeAllHover();
         reeveHoverCard.open(map, reeveGenderMarker);
         });
-        albeeMarker.addListener('click', function(){
-          var check = $("#albeeHover").hasClass("hoverOpen");
-          if (check === false){
-          closeAllHover();
-          albeeHoverCard.open(map, albeeMarker);
-          $("#albeeHover").addClass("hoverOpen");
-        } else if (check === true){
-          $("#albeeHover").removeClass("hoverOpen");
-          closeAllHover();
-          }
-        });
+
         sageGenderMarker.addListener('click', function(){
           closeAllHover();
           sageHoverCard.open(map, sageGenderMarker);
         });
-        albeeMarker.addListener('click', function(){
-          var check = $("#albeeHover").hasClass("hoverOpen");
-          if (check === false){
-          closeAllHover();
-          albeeHoverCard.open(map, albeeMarker);
-          $("#albeeHover").addClass("hoverOpen");
-        } else if (check === true){
-          $("#albeeHover").removeClass("hoverOpen");
-          closeAllHover();
-          }
-        });
+
         recreationGenderMarker.addListener('click', function(){
           closeAllHover();
           recreationHoverCard.open(map, recreationGenderMarker);
         });
-        albeeMarker.addListener('click', function(){
-          var check = $("#albeeHover").hasClass("hoverOpen");
-          if (check === false){
-          closeAllHover();
-          albeeHoverCard.open(map, albeeMarker);
-          $("#albeeHover").addClass("hoverOpen");
-        } else if (check === true){
-          $("#albeeHover").removeClass("hoverOpen");
-          closeAllHover();
-          }
-        });
+
         successGenderMarker.addListener('click', function(){
           closeAllHover();
         successHoverCard.open(map, successGenderMarker);
         });
-        albeeMarker.addListener('click', function(){
-          var check = $("#albeeHover").hasClass("hoverOpen");
-          if (check === false){
-          closeAllHover();
-          albeeHoverCard.open(map, albeeMarker);
-          $("#albeeHover").addClass("hoverOpen");
-        } else if (check === true){
-          $("#albeeHover").removeClass("hoverOpen");
-          closeAllHover();
-          }
-        });
+
         swartGenderMarker.addListener('click', function(){
           closeAllHover();
           swartHoverCard.open(map, swartGenderMarker);
         });
-        albeeMarker.addListener('click', function(){
-          var check = $("#albeeHover").hasClass("hoverOpen");
-          if (check === false){
-          closeAllHover();
-          albeeHoverCard.open(map, albeeMarker);
-          $("#albeeHover").addClass("hoverOpen");
-        } else if (check === true){
-          $("#albeeHover").removeClass("hoverOpen");
-          closeAllHover();
-          }
-        });
+
         policeGenderMarker.addListener('click', function(){
           closeAllHover();
           policeHoverCard.open(map, policeGenderMarker);
-        });
-        albeeMarker.addListener('click', function(){
-          var check = $("#albeeHover").hasClass("hoverOpen");
-          if (check === false){
-          closeAllHover();
-          albeeHoverCard.open(map, albeeMarker);
-          $("#albeeHover").addClass("hoverOpen");
-        } else if (check === true){
-          $("#albeeHover").removeClass("hoverOpen");
-          closeAllHover();
-          }
         });
 
         // setting gender markers
@@ -4289,211 +3778,68 @@ var eighteenAccParMarker = new google.maps.Marker({
         closeAllHover();
         albeeHoverCard.open(map, albeeAccaFMarker);
       });
-      albeeMarker.addListener('click', function(){
-        var check = $("#albeeHover").hasClass("hoverOpen");
-        if (check === false){
-        closeAllHover();
-        albeeHoverCard.open(map, albeeMarker);
-        $("#albeeHover").addClass("hoverOpen");
-      } else if (check === true){
-        $("#albeeHover").removeClass("hoverOpen");
-        closeAllHover();
-        }
-      });
+
       acAccaFMarker.addListener('click', function(){
         closeAllHover();
         acHoverCard.open(map,acAccaFMarker);
       });
-      albeeMarker.addListener('click', function(){
-        var check = $("#albeeHover").hasClass("hoverOpen");
-        if (check === false){
-        closeAllHover();
-        albeeHoverCard.open(map, albeeMarker);
-        $("#albeeHover").addClass("hoverOpen");
-      } else if (check === true){
-        $("#albeeHover").removeClass("hoverOpen");
-        closeAllHover();
-        }
-      });
+
       ceramicsAccaFMarker.addListener('click', function(){
         closeAllHover();
         ceramicsHoverCard.open(map, ceramicsAccaFMarker);
       });
-      albeeMarker.addListener('click', function(){
-        var check = $("#albeeHover").hasClass("hoverOpen");
-        if (check === false){
-        closeAllHover();
-        albeeHoverCard.open(map, albeeMarker);
-        $("#albeeHover").addClass("hoverOpen");
-      } else if (check === true){
-        $("#albeeHover").removeClass("hoverOpen");
-        closeAllHover();
-        }
-      });
+
       clowAccaFMarker.addListener('click', function(){
         closeAllHover();
         clowHoverCard.open(map, clowAccaFMarker);
       });
-      albeeMarker.addListener('click', function(){
-        var check = $("#albeeHover").hasClass("hoverOpen");
-        if (check === false){
-        closeAllHover();
-        albeeHoverCard.open(map, albeeMarker);
-        $("#albeeHover").addClass("hoverOpen");
-      } else if (check === true){
-        $("#albeeHover").removeClass("hoverOpen");
-        closeAllHover();
-        }
-      });
+
       environmentalAccaFMarker.addListener('click', function(){
         closeAllHover();
         environmentalHoverCard.open(map, environmentalAccaFMarker);
       });
-      albeeMarker.addListener('click', function(){
-        var check = $("#albeeHover").hasClass("hoverOpen");
-        if (check === false){
-        closeAllHover();
-        albeeHoverCard.open(map, albeeMarker);
-        $("#albeeHover").addClass("hoverOpen");
-      } else if (check === true){
-        $("#albeeHover").removeClass("hoverOpen");
-        closeAllHover();
-        }
-      });
+
       fredricAccaFMarker.addListener('click', function(){
         closeAllHover();
         fredricHoverCard.open(map,fredricAccaFMarker);
       });
-      albeeMarker.addListener('click', function(){
-        var check = $("#albeeHover").hasClass("hoverOpen");
-        if (check === false){
-        closeAllHover();
-        albeeHoverCard.open(map, albeeMarker);
-        $("#albeeHover").addClass("hoverOpen");
-      } else if (check === true){
-        $("#albeeHover").removeClass("hoverOpen");
-        closeAllHover();
-        }
-      });
+
       halseyAccaFMarker.addListener('click', function(){
         closeAllHover();
         halseyHoverCard.open(map, halseyAccaFMarker);
       });
-      albeeMarker.addListener('click', function(){
-        var check = $("#albeeHover").hasClass("hoverOpen");
-        if (check === false){
-        closeAllHover();
-        albeeHoverCard.open(map, albeeMarker);
-        $("#albeeHover").addClass("hoverOpen");
-      } else if (check === true){
-        $("#albeeHover").removeClass("hoverOpen");
-        closeAllHover();
-        }
-      });
+
       harringtonAccaFMarker.addListener('click', function(){
         closeAllHover();
         harringtonHoverCard.open(map, harringtonAccaFMarker);
       });
-      albeeMarker.addListener('click', function(){
-        var check = $("#albeeHover").hasClass("hoverOpen");
-        if (check === false){
-        closeAllHover();
-        albeeHoverCard.open(map, albeeMarker);
-        $("#albeeHover").addClass("hoverOpen");
-      } else if (check === true){
-        $("#albeeHover").removeClass("hoverOpen");
-        closeAllHover();
-        }
-      });
+
       kolfAccaFMarker.addListener('click', function(){
         closeAllHover();
         kolfHoverCard.open(map, kolfAccaFMarker);
       });
-      albeeMarker.addListener('click', function(){
-        var check = $("#albeeHover").hasClass("hoverOpen");
-        if (check === false){
-        closeAllHover();
-        albeeHoverCard.open(map, albeeMarker);
-        $("#albeeHover").addClass("hoverOpen");
-      } else if (check === true){
-        $("#albeeHover").removeClass("hoverOpen");
-        closeAllHover();
-        }
-      });
+
       swartAccaFMarker.addListener('click', function(){
         closeAllHover();
         swartHoverCard.open(map, swartAccaFMarker);
       });
-      albeeMarker.addListener('click', function(){
-        var check = $("#albeeHover").hasClass("hoverOpen");
-        if (check === false){
-        closeAllHover();
-        albeeHoverCard.open(map, albeeMarker);
-        $("#albeeHover").addClass("hoverOpen");
-      } else if (check === true){
-        $("#albeeHover").removeClass("hoverOpen");
-        closeAllHover();
-        }
-      });
+
       nursingAccaFMarker.addListener('click', function(){
         closeAllHover();
         nursingHoverCard.open(map, nursingAccaFMarker);
       });
-      albeeMarker.addListener('click', function(){
-        var check = $("#albeeHover").hasClass("hoverOpen");
-        if (check === false){
-        closeAllHover();
-        albeeHoverCard.open(map, albeeMarker);
-        $("#albeeHover").addClass("hoverOpen");
-      } else if (check === true){
-        $("#albeeHover").removeClass("hoverOpen");
-        closeAllHover();
-        }
-      });
+
       polkAccaFMarker.addListener('click', function(){
         closeAllHover();
         polkHoverCard.open(map, polkAccaFMarker);
-      });
-      albeeMarker.addListener('click', function(){
-        var check = $("#albeeHover").hasClass("hoverOpen");
-        if (check === false){
-        closeAllHover();
-        albeeHoverCard.open(map, albeeMarker);
-        $("#albeeHover").addClass("hoverOpen");
-      } else if (check === true){
-        $("#albeeHover").removeClass("hoverOpen");
-        closeAllHover();
-        }
       });
       radfordAccaFMarker.addListener('click', function(){
         closeAllHover();
         radfordHoverCard.open(map, radfordAccaFMarker);
       });
-      albeeMarker.addListener('click', function(){
-        var check = $("#albeeHover").hasClass("hoverOpen");
-        if (check === false){
-        closeAllHover();
-        albeeHoverCard.open(map, albeeMarker);
-        $("#albeeHover").addClass("hoverOpen");
-      } else if (check === true){
-        $("#albeeHover").removeClass("hoverOpen");
-        closeAllHover();
-        }
-      });
       sageAccaFMarker.addListener('click', function(){
         closeAllHover();
         sageHoverCard.open(map, sageAccaFMarker);
-      });
-      albeeMarker.addListener('click', function(){
-        var check = $("#albeeHover").hasClass("hoverOpen");
-        if (check === false){
-        closeAllHover();
-        albeeHoverCard.open(map, albeeMarker);
-        $("#albeeHover").addClass("hoverOpen");
-      } else if (check === true){
-        $("#albeeHover").removeClass("hoverOpen");
-        closeAllHover();
-        }
       });
 
 
@@ -4571,93 +3917,33 @@ var eighteenAccParMarker = new google.maps.Marker({
         closeAllHover();
         albeeHoverCard.open(map, albeeAthMarker);
       });
-      albeeMarker.addListener('click', function(){
-        var check = $("#albeeHover").hasClass("hoverOpen");
-        if (check === false){
-        closeAllHover();
-        albeeHoverCard.open(map, albeeMarker);
-        $("#albeeHover").addClass("hoverOpen");
-      } else if (check === true){
-        $("#albeeHover").removeClass("hoverOpen");
-        closeAllHover();
-        }
-      });
+
       athleticAthMarker.addListener('click', function(){
         closeAllHover();
           athleticHoverCard.open(map, athleticAthMarker);
       });
-      albeeMarker.addListener('click', function(){
-        var check = $("#albeeHover").hasClass("hoverOpen");
-        if (check === false){
-        closeAllHover();
-        albeeHoverCard.open(map, albeeMarker);
-        $("#albeeHover").addClass("hoverOpen");
-      } else if (check === true){
-        $("#albeeHover").removeClass("hoverOpen");
-        closeAllHover();
-        }
-      });
+
       baseballAthMarker.addListener('click', function(){
         closeAllHover();
           baseballHoverCard.open(map, baseballAthMarker);
       });
-      albeeMarker.addListener('click', function(){
-        var check = $("#albeeHover").hasClass("hoverOpen");
-        if (check === false){
-        closeAllHover();
-        albeeHoverCard.open(map, albeeMarker);
-        $("#albeeHover").addClass("hoverOpen");
-      } else if (check === true){
-        $("#albeeHover").removeClass("hoverOpen");
-        closeAllHover();
-        }
-      });
+
       eastAthMarker.addListener('click', function(){
         closeAllHover();
         eastHoverCard.open(map,eastAthMarker);
       });
-      albeeMarker.addListener('click', function(){
-        var check = $("#albeeHover").hasClass("hoverOpen");
-        if (check === false){
-        closeAllHover();
-        albeeHoverCard.open(map, albeeMarker);
-        $("#albeeHover").addClass("hoverOpen");
-      } else if (check === true){
-        $("#albeeHover").removeClass("hoverOpen");
-        closeAllHover();
-        }
-      });
+
 
       kolfAthMarker.addListener('click', function(){
         closeAllHover();
         kolfHoverCard.open(map, kolfAthMarker);
       });
-      albeeMarker.addListener('click', function(){
-        var check = $("#albeeHover").hasClass("hoverOpen");
-        if (check === false){
-        closeAllHover();
-        albeeHoverCard.open(map, albeeMarker);
-        $("#albeeHover").addClass("hoverOpen");
-      } else if (check === true){
-        $("#albeeHover").removeClass("hoverOpen");
-        closeAllHover();
-        }
-      });
+
       titanAthMarker.addListener('click', function(){
         closeAllHover();
           titanHoverCard.open(map, titanAthMarker);
       });
-      albeeMarker.addListener('click', function(){
-        var check = $("#albeeHover").hasClass("hoverOpen");
-        if (check === false){
-        closeAllHover();
-        albeeHoverCard.open(map, albeeMarker);
-        $("#albeeHover").addClass("hoverOpen");
-      } else if (check === true){
-        $("#albeeHover").removeClass("hoverOpen");
-        closeAllHover();
-        }
-      });
+
 
         function setAth(){
           albeeAthMarker.setMap(map);
@@ -4706,62 +3992,22 @@ var eighteenAccParMarker = new google.maps.Marker({
         closeAllHover();
         equityHoverCard.open(map, equityAccaSMarker);
       });
-      albeeMarker.addListener('click', function(){
-        var check = $("#albeeHover").hasClass("hoverOpen");
-        if (check === false){
-        closeAllHover();
-        albeeHoverCard.open(map, albeeMarker);
-        $("#albeeHover").addClass("hoverOpen");
-      } else if (check === true){
-        $("#albeeHover").removeClass("hoverOpen");
-        closeAllHover();
-        }
-      });
+
       nursingAccaSMarker.addListener('click', function(){
         closeAllHover();
         nursingHoverCard.open(map, nursingAccaSMarker);
       });
-      albeeMarker.addListener('click', function(){
-        var check = $("#albeeHover").hasClass("hoverOpen");
-        if (check === false){
-        closeAllHover();
-        albeeHoverCard.open(map, albeeMarker);
-        $("#albeeHover").addClass("hoverOpen");
-      } else if (check === true){
-        $("#albeeHover").removeClass("hoverOpen");
-        closeAllHover();
-        }
-      });
+
       successAccaSMarker.addListener('click', function(){
         closeAllHover();
         successHoverCard.open(map, successAccaSMarker);
       });
-      albeeMarker.addListener('click', function(){
-        var check = $("#albeeHover").hasClass("hoverOpen");
-        if (check === false){
-        closeAllHover();
-        albeeHoverCard.open(map, albeeMarker);
-        $("#albeeHover").addClass("hoverOpen");
-      } else if (check === true){
-        $("#albeeHover").removeClass("hoverOpen");
-        closeAllHover();
-        }
-      });
+
       swartAccaSMarker.addListener('click', function(){
         closeAllHover();
         swartHoverCard.open(map, swartAccaSMarker);
       });
-      albeeMarker.addListener('click', function(){
-        var check = $("#albeeHover").hasClass("hoverOpen");
-        if (check === false){
-        closeAllHover();
-        albeeHoverCard.open(map, albeeMarker);
-        $("#albeeHover").addClass("hoverOpen");
-      } else if (check === true){
-        $("#albeeHover").removeClass("hoverOpen");
-        closeAllHover();
-        }
-      });
+
 
       // set/remove AccaS
         function setAccaS(){
@@ -4830,137 +4076,47 @@ var eighteenAccParMarker = new google.maps.Marker({
         closeAllHover();
         equityHoverCard.open(map, equityCampSMarker);
       });
-      albeeMarker.addListener('click', function(){
-        var check = $("#albeeHover").hasClass("hoverOpen");
-        if (check === false){
-        closeAllHover();
-        albeeHoverCard.open(map, albeeMarker);
-        $("#albeeHover").addClass("hoverOpen");
-      } else if (check === true){
-        $("#albeeHover").removeClass("hoverOpen");
-        closeAllHover();
-        }
-      });
+
       campusCampSMarker.addListener('click', function(){
         closeAllHover();
           campusHoverCard.open(map, campusCampSMarker);
       });
-      albeeMarker.addListener('click', function(){
-        var check = $("#albeeHover").hasClass("hoverOpen");
-        if (check === false){
-        closeAllHover();
-        albeeHoverCard.open(map, albeeMarker);
-        $("#albeeHover").addClass("hoverOpen");
-      } else if (check === true){
-        $("#albeeHover").removeClass("hoverOpen");
-        closeAllHover();
-        }
-      });
+
       dempseyCampSMarker.addListener('click', function(){
         closeAllHover();
         dempseyHoverCard.open(map, dempseyCampSMarker);
       });
-      albeeMarker.addListener('click', function(){
-        var check = $("#albeeHover").hasClass("hoverOpen");
-        if (check === false){
-        closeAllHover();
-        albeeHoverCard.open(map, albeeMarker);
-        $("#albeeHover").addClass("hoverOpen");
-      } else if (check === true){
-        $("#albeeHover").removeClass("hoverOpen");
-        closeAllHover();
-        }
-      });
+
       multiculturalCampSMarker.addListener('click', function(){
         closeAllHover();
         multiculturalHoverCard.open(map, multiculturalCampSMarker);
       });
-      albeeMarker.addListener('click', function(){
-        var check = $("#albeeHover").hasClass("hoverOpen");
-        if (check === false){
-        closeAllHover();
-        albeeHoverCard.open(map, albeeMarker);
-        $("#albeeHover").addClass("hoverOpen");
-      } else if (check === true){
-        $("#albeeHover").removeClass("hoverOpen");
-        closeAllHover();
-        }
-      });
+
       pollockCampSMarker.addListener('click', function(){
         closeAllHover();
           pollockHoverCard.open(map, pollockCampSMarker);
       });
-      albeeMarker.addListener('click', function(){
-        var check = $("#albeeHover").hasClass("hoverOpen");
-        if (check === false){
-        closeAllHover();
-        albeeHoverCard.open(map, albeeMarker);
-        $("#albeeHover").addClass("hoverOpen");
-      } else if (check === true){
-        $("#albeeHover").removeClass("hoverOpen");
-        closeAllHover();
-        }
-      });
+
       radfordCampSMarker.addListener('click', function(){
         closeAllHover();
         radfordHoverCard.open(map, radfordCampSMarker);
       });
-      albeeMarker.addListener('click', function(){
-        var check = $("#albeeHover").hasClass("hoverOpen");
-        if (check === false){
-        closeAllHover();
-        albeeHoverCard.open(map, albeeMarker);
-        $("#albeeHover").addClass("hoverOpen");
-      } else if (check === true){
-        $("#albeeHover").removeClass("hoverOpen");
-        closeAllHover();
-        }
-      });
+
       reeveCampSMarker.addListener('click', function(){
         closeAllHover();
         reeveHoverCard.open(map, reeveCampSMarker);
       });
-      albeeMarker.addListener('click', function(){
-        var check = $("#albeeHover").hasClass("hoverOpen");
-        if (check === false){
-        closeAllHover();
-        albeeHoverCard.open(map, albeeMarker);
-        $("#albeeHover").addClass("hoverOpen");
-      } else if (check === true){
-        $("#albeeHover").removeClass("hoverOpen");
-        closeAllHover();
-        }
-      });
+
       recreationCampSMarker.addListener('click', function(){
         closeAllHover();
         recreationHoverCard.open(map, recreationCampSMarker);
       });
-      albeeMarker.addListener('click', function(){
-        var check = $("#albeeHover").hasClass("hoverOpen");
-        if (check === false){
-        closeAllHover();
-        albeeHoverCard.open(map, albeeMarker);
-        $("#albeeHover").addClass("hoverOpen");
-      } else if (check === true){
-        $("#albeeHover").removeClass("hoverOpen");
-        closeAllHover();
-        }
-      });
+
       successCampSMarker.addListener('click', function(){
         closeAllHover();
         successHoverCard.open(map, successCampSMarker);
       });
-      albeeMarker.addListener('click', function(){
-        var check = $("#albeeHover").hasClass("hoverOpen");
-        if (check === false){
-        closeAllHover();
-        albeeHoverCard.open(map, albeeMarker);
-        $("#albeeHover").addClass("hoverOpen");
-      } else if (check === true){
-        $("#albeeHover").removeClass("hoverOpen");
-        closeAllHover();
-        }
-      });
+
 
 
       // set/remove CampS
@@ -5039,137 +4195,47 @@ var eighteenAccParMarker = new google.maps.Marker({
         closeAllHover();
         donnerHoverCard.open(map, donnerResHMarker);
       });
-      albeeMarker.addListener('click', function(){
-        var check = $("#albeeHover").hasClass("hoverOpen");
-        if (check === false){
-        closeAllHover();
-        albeeHoverCard.open(map, albeeMarker);
-        $("#albeeHover").addClass("hoverOpen");
-      } else if (check === true){
-        $("#albeeHover").removeClass("hoverOpen");
-        closeAllHover();
-        }
-      });
+
       evansResHMarker.addListener('click', function(){
         closeAllHover();
         evansHoverCard.open(map, evansResHMarker);
       });
-      albeeMarker.addListener('click', function(){
-        var check = $("#albeeHover").hasClass("hoverOpen");
-        if (check === false){
-        closeAllHover();
-        albeeHoverCard.open(map, albeeMarker);
-        $("#albeeHover").addClass("hoverOpen");
-      } else if (check === true){
-        $("#albeeHover").removeClass("hoverOpen");
-        closeAllHover();
-        }
-      });
+
       fletcherResHMarker.addListener('click', function(){
         closeAllHover();
           fletcherHoverCard.open(map, fletcherResHMarker);
       });
-      albeeMarker.addListener('click', function(){
-        var check = $("#albeeHover").hasClass("hoverOpen");
-        if (check === false){
-        closeAllHover();
-        albeeHoverCard.open(map, albeeMarker);
-        $("#albeeHover").addClass("hoverOpen");
-      } else if (check === true){
-        $("#albeeHover").removeClass("hoverOpen");
-        closeAllHover();
-        }
-      });
+
       gruenhagenResHMarker.addListener('click', function(){
         closeAllHover();
         gruenhagenHoverCard.open(map,gruenhagenResHMarker);
       });
-      albeeMarker.addListener('click', function(){
-        var check = $("#albeeHover").hasClass("hoverOpen");
-        if (check === false){
-        closeAllHover();
-        albeeHoverCard.open(map, albeeMarker);
-        $("#albeeHover").addClass("hoverOpen");
-      } else if (check === true){
-        $("#albeeHover").removeClass("hoverOpen");
-        closeAllHover();
-        }
-      });
+
       horizonResHMarker.addListener('click', function(){
         closeAllHover();
           horizonHoverCard.open(map, horizonResHMarker);
       });
-      albeeMarker.addListener('click', function(){
-        var check = $("#albeeHover").hasClass("hoverOpen");
-        if (check === false){
-        closeAllHover();
-        albeeHoverCard.open(map, albeeMarker);
-        $("#albeeHover").addClass("hoverOpen");
-      } else if (check === true){
-        $("#albeeHover").removeClass("hoverOpen");
-        closeAllHover();
-        }
-      });
+
       stewartResHMarker.addListener('click', function(){
         closeAllHover();
         stewartHoverCard.open(map, stewartResHMarker);
       });
-      albeeMarker.addListener('click', function(){
-        var check = $("#albeeHover").hasClass("hoverOpen");
-        if (check === false){
-        closeAllHover();
-        albeeHoverCard.open(map, albeeMarker);
-        $("#albeeHover").addClass("hoverOpen");
-      } else if (check === true){
-        $("#albeeHover").removeClass("hoverOpen");
-        closeAllHover();
-        }
-      });
+
       scottResHMarker.addListener('click', function(){
         closeAllHover();
           scottHoverCard.open(map, scottResHMarker);
       });
-      albeeMarker.addListener('click', function(){
-        var check = $("#albeeHover").hasClass("hoverOpen");
-        if (check === false){
-        closeAllHover();
-        albeeHoverCard.open(map, albeeMarker);
-        $("#albeeHover").addClass("hoverOpen");
-      } else if (check === true){
-        $("#albeeHover").removeClass("hoverOpen");
-        closeAllHover();
-        }
-      });
+
       taylorResHMarker.addListener('click', function(){
         closeAllHover();
         taylorHoverCard.open(map, taylorResHMarker);
       });
-      albeeMarker.addListener('click', function(){
-        var check = $("#albeeHover").hasClass("hoverOpen");
-        if (check === false){
-        closeAllHover();
-        albeeHoverCard.open(map, albeeMarker);
-        $("#albeeHover").addClass("hoverOpen");
-      } else if (check === true){
-        $("#albeeHover").removeClass("hoverOpen");
-        closeAllHover();
-        }
-      });
+
       websterResHMarker.addListener('click', function(){
         closeAllHover();
         websterHoverCard.open(map, websterResHMarker);
       });
-      albeeMarker.addListener('click', function(){
-        var check = $("#albeeHover").hasClass("hoverOpen");
-        if (check === false){
-        closeAllHover();
-        albeeHoverCard.open(map, albeeMarker);
-        $("#albeeHover").addClass("hoverOpen");
-      } else if (check === true){
-        $("#albeeHover").removeClass("hoverOpen");
-        closeAllHover();
-        }
-      });
+
 
       // ResH set/remove
         function setResH(){
@@ -5234,92 +4300,32 @@ var eighteenAccParMarker = new google.maps.Marker({
         closeAllHover();
         blackhawkHoverCard.open(map, blackhawkDiningMarker);
       });
-      albeeMarker.addListener('click', function(){
-        var check = $("#albeeHover").hasClass("hoverOpen");
-        if (check === false){
-        closeAllHover();
-        albeeHoverCard.open(map, albeeMarker);
-        $("#albeeHover").addClass("hoverOpen");
-      } else if (check === true){
-        $("#albeeHover").removeClass("hoverOpen");
-        closeAllHover();
-        }
-      });
+
       clowDiningMarker.addListener('click', function(){
         closeAllHover();
         clowHoverCard.open(map, clowDiningMarker);
       });
-      albeeMarker.addListener('click', function(){
-        var check = $("#albeeHover").hasClass("hoverOpen");
-        if (check === false){
-        closeAllHover();
-        albeeHoverCard.open(map, albeeMarker);
-        $("#albeeHover").addClass("hoverOpen");
-      } else if (check === true){
-        $("#albeeHover").removeClass("hoverOpen");
-        closeAllHover();
-        }
-      });
+
       halseyDiningMarker.addListener('click', function(){
         closeAllHover();
         halseyHoverCard.open(map, halseyDiningMarker);
       });
-      albeeMarker.addListener('click', function(){
-        var check = $("#albeeHover").hasClass("hoverOpen");
-        if (check === false){
-        closeAllHover();
-        albeeHoverCard.open(map, albeeMarker);
-        $("#albeeHover").addClass("hoverOpen");
-      } else if (check === true){
-        $("#albeeHover").removeClass("hoverOpen");
-        closeAllHover();
-        }
-      });
+
       reeveDiningMarker.addListener('click', function(){
         closeAllHover();
         reeveHoverCard.open(map, reeveDiningMarker);
       });
-      albeeMarker.addListener('click', function(){
-        var check = $("#albeeHover").hasClass("hoverOpen");
-        if (check === false){
-        closeAllHover();
-        albeeHoverCard.open(map, albeeMarker);
-        $("#albeeHover").addClass("hoverOpen");
-      } else if (check === true){
-        $("#albeeHover").removeClass("hoverOpen");
-        closeAllHover();
-        }
-      });
+
       sageDiningMarker.addListener('click', function(){
         closeAllHover();
         sageHoverCard.open(map, sageDiningMarker);
       });
-      albeeMarker.addListener('click', function(){
-        var check = $("#albeeHover").hasClass("hoverOpen");
-        if (check === false){
-        closeAllHover();
-        albeeHoverCard.open(map, albeeMarker);
-        $("#albeeHover").addClass("hoverOpen");
-      } else if (check === true){
-        $("#albeeHover").removeClass("hoverOpen");
-        closeAllHover();
-        }
-      });
+
       scottDiningMarker.addListener('click', function(){
         closeAllHover();
           scottHoverCard.open(map, scottDiningMarker);
       });
-      albeeMarker.addListener('click', function(){
-        var check = $("#albeeHover").hasClass("hoverOpen");
-        if (check === false){
-        closeAllHover();
-        albeeHoverCard.open(map, albeeMarker);
-        $("#albeeHover").addClass("hoverOpen");
-      } else if (check === true){
-        $("#albeeHover").removeClass("hoverOpen");
-        closeAllHover();
-        }
-      });
+
       // set/remove dining
         function setDining(){
           blackhawkDiningMarker.setMap(map);
@@ -5361,32 +4367,12 @@ var eighteenAccParMarker = new google.maps.Marker({
       closeAllHover();
       recreationHoverCard.open(map, recreationStuRMarker);
     });
-    albeeMarker.addListener('click', function(){
-      var check = $("#albeeHover").hasClass("hoverOpen");
-      if (check === false){
-      closeAllHover();
-      albeeHoverCard.open(map, albeeMarker);
-      $("#albeeHover").addClass("hoverOpen");
-    } else if (check === true){
-      $("#albeeHover").removeClass("hoverOpen");
-      closeAllHover();
-      }
-    });
+
     reeveStuRMarker.addListener('click', function(){
       closeAllHover();
       reeveHoverCard.open(map, reeveStuRMarker);
     });
-    albeeMarker.addListener('click', function(){
-      var check = $("#albeeHover").hasClass("hoverOpen");
-      if (check === false){
-      closeAllHover();
-      albeeHoverCard.open(map, albeeMarker);
-      $("#albeeHover").addClass("hoverOpen");
-    } else if (check === true){
-      $("#albeeHover").removeClass("hoverOpen");
-      closeAllHover();
-      }
-    });
+
     // StuR set/remove
         function setStuR(){
           reeveStuRMarker.setMap(map);
