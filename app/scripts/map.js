@@ -389,12 +389,22 @@ function initMap() {
           content: albeeHover,
         });
 
-        // if this is put inside of the setBuildings function it creates a bug
-        // where if you spam click "buildings" it creates a bunch
-        // of  hover popups
+
+        // listener, allows user to open and close marker by clicking on it
+        // also closes all other markers so that only the clicked marker is open
+        // at one time
+        // also is the click function for the marker opening any hover popup at all
+        // so that's important
         albeeMarker.addListener('click', function(){
+          var check = $("#albeeHover").hasClass("hoverOpen");
+          if (check === false){
           closeAllHover();
           albeeHoverCard.open(map, albeeMarker);
+          $("#albeeHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#albeeHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
