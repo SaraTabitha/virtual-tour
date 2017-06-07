@@ -107,6 +107,7 @@
     $("#diningCard").removeClass("cardPresent");
     $("#stuRCard").removeClass("cardPresent");
 
+    $("#accFiframe").attr("src", "https://www.youtube.com/embed/V4404T_b5No");
     $("#accFCard").show();
     $("#accFCard").animate(
       {left: "377px"});
@@ -143,6 +144,7 @@
     $("#diningCard").removeClass("cardPresent");
     $("#stuRCard").removeClass("cardPresent");
 
+    $("#athiframe").attr("src", "https://www.youtube.com/embed/EFlUSVWCA-k");
     $("#athCard").show();
     $("#athCard").animate(
       {left: "377px"});
@@ -175,6 +177,7 @@
     $("#diningCard").removeClass("cardPresent");
     $("#stuRCard").removeClass("cardPresent");
 
+    $("#accSiframe").attr("src", "https://www.youtube.com/embed/f-KdeyV-_dA");
     $("#accSCard").show();
     $("#accSCard").animate(
       {left: "377px"});
@@ -207,6 +210,7 @@
     $("#diningCard").removeClass("cardPresent");
     $("#stuRCard").removeClass("cardPresent");
 
+    $("#campSiframe").attr("src", "https://www.youtube.com/embed/6e59ycgCTi4");
     $("#campSCard").show();
     $("#campSCard").animate(
       {left: "377px"});
@@ -239,6 +243,7 @@
     $("#diningCard").removeClass("cardPresent");
     $("#stuRCard").removeClass("cardPresent");
 
+    $("#resHiframe").attr("src", "https://www.youtube.com/embed/R5RVenezdgM");
     $("#resHCard").show();
     $("#resHCard").animate(
       {left: "377px"});
@@ -271,6 +276,7 @@
     $("#resHCard").removeClass("cardPresent");
     $("#stuRCard").removeClass("cardPresent");
 
+    $("#diningiframe").attr("src", "https://www.youtube.com/embed/QBXee6U14FQ");
     $("#diningCard").show();
     $("#diningCard").animate(
       {left: "377px"});
@@ -303,6 +309,7 @@
     $("#resHCard").removeClass("cardPresent");
     $("#diningCard").removeClass("cardPresent");
 
+    $("#stuRiframe").attr("src", "https://www.youtube.com/embed/Fi7OiNe2TnU");
     $("#stuRCard").show();
     $("#stuRCard").animate(
       {left: "377px"});

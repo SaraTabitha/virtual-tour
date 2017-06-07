@@ -412,6 +412,7 @@ function initMap() {
         $("#albeeLink").click(function(){
           $('#overlay').css('visibility', 'visible');
           $('#overlay').animate({"opacity": "0.3"}, "slow");
+          $('#albeeiframe').attr('src',"https://www.youtube.com/embed/AW5cpKVsXWA");
 
           $("#albeePopup").css('visibility', 'visible');
           $('#albeePopup').animate({"opacity": "1"}, "slow");
@@ -455,9 +456,16 @@ function initMap() {
         var baseballHoverCard = new google.maps.InfoWindow({
           content: baseballHover,
         });
-          baseballMarker.addListener('click', function(){
-            closeAllHover();
-            baseballHoverCard.open(map, baseballMarker);
+        baseballMarker.addListener('click', function(){
+          var check = $("#baseballHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          baseballHoverCard.open(map, baseballMarker);
+          $("#baseballHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#baseballHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
@@ -482,9 +490,16 @@ function initMap() {
         var alumniHoverCard = new google.maps.InfoWindow({
           content: alumniHover,
         });
-          alumniMarker.addListener('click', function(){
-            closeAllHover();
-            alumniHoverCard.open(map, alumniMarker);
+        alumniMarker.addListener('click', function(){
+          var check = $("#alumniHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          alumniHoverCard.open(map, alumniMarker);
+          $("#alumniHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#alumniHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
@@ -525,8 +540,15 @@ function initMap() {
           content: acHover,
         });
         acMarker.addListener('click', function(){
+          var check = $("#acHover").hasClass("hoverOpen");
+          if (check === false){
           closeAllHover();
-          acHoverCard.open(map,acMarker);
+          acHoverCard.open(map, acMarker);
+          $("#acHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#acHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
@@ -565,9 +587,16 @@ function initMap() {
         var athleticHoverCard = new google.maps.InfoWindow({
           content: athleticHover,
         });
-          athleticMarker.addListener('click', function(){
-            closeAllHover();
-            athleticHoverCard.open(map, athleticMarker);
+        athleticMarker.addListener('click', function(){
+          var check = $("#athleticHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          athleticHoverCard.open(map, athleticMarker);
+          $("#athleticHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#athleticHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
@@ -593,8 +622,15 @@ function initMap() {
           content: blackhawkHover,
         });
         blackhawkMarker.addListener('click', function(){
+          var check = $("#blackhawkHover").hasClass("hoverOpen");
+          if (check === false){
           closeAllHover();
           blackhawkHoverCard.open(map, blackhawkMarker);
+          $("#blackhawkHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#blackhawkHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
@@ -642,9 +678,17 @@ function initMap() {
         var biodigesterHoverCard = new google.maps.InfoWindow({
           content: biodigesterHover,
         });
-          biodigesterMarker.addListener('click', function(){
-            closeAllHover();
-            biodigesterHoverCard.open(map, biodigesterMarker);
+
+        biodigesterMarker.addListener('click', function(){
+          var check = $("#biodigesterHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          biodigesterHoverCard.open(map, biodigesterMarker);
+          $("#biodigesterHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#biodigesterHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
@@ -670,8 +714,15 @@ function initMap() {
           content: buckstaffHover,
         });
         buckstaffMarker.addListener('click', function(){
+          var check = $("#buckstaffHover").hasClass("hoverOpen");
+          if (check === false){
           closeAllHover();
-          buckstaffHoverCard.open(map,buckstaffMarker);
+          buckstaffHoverCard.open(map, buckstaffMarker);
+          $("#buckstaffHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#buckstaffHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
@@ -696,9 +747,17 @@ function initMap() {
         var equityHoverCard = new google.maps.InfoWindow({
           content: equityHover,
         });
-          equityMarker.addListener('click', function(){
+
+        equityMarker.addListener('click', function(){
+          var check = $("#equityHover").hasClass("hoverOpen");
+          if (check === false){
           closeAllHover();
           equityHoverCard.open(map, equityMarker);
+          $("#equityHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#equityHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
@@ -737,9 +796,16 @@ function initMap() {
         var campusHoverCard = new google.maps.InfoWindow({
           content: campusHover,
         });
-          campusMarker.addListener('click', function(){
-            closeAllHover();
-            campusHoverCard.open(map, campusMarker);
+        campusMarker.addListener('click', function(){
+          var check = $("#campusHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          campusHoverCard.open(map, campusMarker);
+          $("#campusHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#campusHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
@@ -764,9 +830,17 @@ function initMap() {
         var ceramicsHoverCard = new google.maps.InfoWindow({
           content: ceramicsHover,
         });
+
         ceramicsMarker.addListener('click', function(){
+          var check = $("#ceramicsHover").hasClass("hoverOpen");
+          if (check === false){
           closeAllHover();
-          ceramicsHoverCard.open(map, ceramicsMarker);
+        ceramicsHoverCard.open(map, ceramicsMarker);
+          $("#ceramicsHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#ceramicsHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
@@ -787,14 +861,21 @@ function initMap() {
           $("#ceramicsPopup").css('visibility', 'hidden');
         });
 
-
         var clowHover = document.getElementById('clowHover');
         var clowHoverCard = new google.maps.InfoWindow({
           content: clowHover,
         });
+
         clowMarker.addListener('click', function(){
+          var check = $("#clowHover").hasClass("hoverOpen");
+          if (check === false){
           closeAllHover();
           clowHoverCard.open(map, clowMarker);
+          $("#clowHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#clowHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
@@ -820,9 +901,17 @@ function initMap() {
         var gardensHoverCard = new google.maps.InfoWindow({
           content: gardensHover,
         });
-          gardensMarker.addListener('click', function(){
-            closeAllHover();
-            gardensHoverCard.open(map, gardensMarker);
+
+        gardensMarker.addListener('click', function(){
+          var check = $("#gardensHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          gardensHoverCard.open(map, gardensMarker);
+          $("#gardensHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("gardensHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
@@ -848,9 +937,17 @@ function initMap() {
         var dempseyHoverCard = new google.maps.InfoWindow({
           content: dempseyHover,
         });
+
         dempseyMarker.addListener('click', function(){
+          var check = $("#dempseyHover").hasClass("hoverOpen");
+          if (check === false){
           closeAllHover();
           dempseyHoverCard.open(map, dempseyMarker);
+          $("#dempseyHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#dempseyHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
@@ -891,8 +988,15 @@ function initMap() {
           content: donnerHover,
         });
         donnerMarker.addListener('click', function(){
+          var check = $("#donnerHover").hasClass("hoverOpen");
+          if (check === false){
           closeAllHover();
           donnerHoverCard.open(map, donnerMarker);
+          $("#donnerHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#donnerHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
@@ -919,8 +1023,15 @@ function initMap() {
           content: eastHover,
         });
         eastMarker.addListener('click', function(){
+          var check = $("#eastHover").hasClass("hoverOpen");
+          if (check === false){
           closeAllHover();
-          eastHoverCard.open(map,eastMarker);
+          eastHoverCard.open(map, eastMarker);
+          $("#eastHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#eastHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
@@ -945,9 +1056,17 @@ function initMap() {
         var environmentalHoverCard = new google.maps.InfoWindow({
           content: environmentalHover,
         });
+
         environmentalMarker.addListener('click', function(){
+          var check = $("#environmentalHover").hasClass("hoverOpen");
+          if (check === false){
           closeAllHover();
           environmentalHoverCard.open(map, environmentalMarker);
+          $("#environmentalHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#environmentalHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
@@ -972,9 +1091,17 @@ function initMap() {
         var evansHoverCard = new google.maps.InfoWindow({
           content: evansHover,
         });
-        evansMarker.addListener('click', function(){
-          closeAllHover();
+
+      evansMarker.addListener('click', function(){
+        var check = $("#evansHover").hasClass("hoverOpen");
+        if (check === false){
+        closeAllHover();
         evansHoverCard.open(map, evansMarker);
+        $("#evansHover").addClass("hoverOpen");
+      } else if (check === true){
+        $("#evansHover").removeClass("hoverOpen");
+        closeAllHover();
+        }
       });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
@@ -999,9 +1126,17 @@ function initMap() {
         var fletcherHoverCard = new google.maps.InfoWindow({
           content: fletcherHover,
         });
-          fletcherMarker.addListener('click', function(){
-            closeAllHover();
-            fletcherHoverCard.open(map, fletcherMarker);
+
+        fletcherMarker.addListener('click', function(){
+          var check = $("#fletcherHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          fletcherHoverCard.open(map, fletcherMarker);
+          $("#fletcherHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#fletcherHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
@@ -1026,9 +1161,17 @@ function initMap() {
         var fredricHoverCard = new google.maps.InfoWindow({
           content: fredricHover,
         });
+
         fredricMarker.addListener('click', function(){
+          var check = $("#fredricHover").hasClass("hoverOpen");
+          if (check === false){
           closeAllHover();
-          fredricHoverCard.open(map,fredricMarker);
+          fredricHoverCard.open(map, fredricMarker);
+          $("#fredricHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#fredricHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
@@ -1057,11 +1200,18 @@ function initMap() {
           content: gruenhagenHover,
         });
         // open ^this when Marker is clicked
-        gruenhagenMarker.addListener('click', function(){
-          closeAllHover();
-          gruenhagenHoverCard.open(map,gruenhagenMarker);
-        });
 
+        gruenhagenMarker.addListener('click', function(){
+          var check = $("#gruenhagenHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          gruenhagenHoverCard.open(map, gruenhagenMarker);
+          $("#gruenhagenHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#gruenhagenHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
+        });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
         // +animate to fade in
@@ -1086,9 +1236,17 @@ function initMap() {
         var halseyHoverCard = new google.maps.InfoWindow({
           content: halseyHover,
         });
+
         halseyMarker.addListener('click', function(){
+          var check = $("#halseyHover").hasClass("hoverOpen");
+          if (check === false){
           closeAllHover();
           halseyHoverCard.open(map, halseyMarker);
+          $("#halseyHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#halseyHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
@@ -1128,9 +1286,17 @@ function initMap() {
         var harringtonHoverCard = new google.maps.InfoWindow({
           content: harringtonHover,
         });
+
         harringtonMarker.addListener('click', function(){
+          var check = $("#harringtonHover").hasClass("hoverOpen");
+          if (check === false){
           closeAllHover();
           harringtonHoverCard.open(map, harringtonMarker);
+          $("#harringtonHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#harringtonHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
@@ -1169,9 +1335,17 @@ function initMap() {
         var heatingHoverCard = new google.maps.InfoWindow({
           content: heatingHover,
         });
+
         heatingMarker.addListener('click', function(){
+          var check = $("#heatingHover").hasClass("hoverOpen");
+          if (check === false){
           closeAllHover();
-          heatingHoverCard.open(map,heatingMarker);
+          heatingHoverCard.open(map, heatingMarker);
+          $("#heatingHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#heatingHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
@@ -1211,9 +1385,17 @@ function initMap() {
         var parkingRampHoverCard = new google.maps.InfoWindow({
           content: parkingRampHover,
         });
+
         parkingRampMarker.addListener('click', function(){
+          var check = $("#parkingRampHover").hasClass("hoverOpen");
+          if (check === false){
           closeAllHover();
           parkingRampHoverCard.open(map, parkingRampMarker);
+          $("#parkingRampHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#parkingRampHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
@@ -1239,9 +1421,17 @@ function initMap() {
         var horizonHoverCard = new google.maps.InfoWindow({
           content: horizonHover,
         });
-          horizonMarker.addListener('click', function(){
-            closeAllHover();
-            horizonHoverCard.open(map, horizonMarker);
+
+        horizonMarker.addListener('click', function(){
+          var check = $("#horizonHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          horizonHoverCard.open(map, horizonMarker);
+          $("#horizonHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#horizonHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
@@ -1281,8 +1471,15 @@ function initMap() {
           content: kolfHover,
         });
         kolfMarker.addListener('click', function(){
+          var check = $("#kolfHover").hasClass("hoverOpen");
+          if (check === false){
           closeAllHover();
           kolfHoverCard.open(map, kolfMarker);
+          $("#kolfHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#kolfHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
@@ -1321,9 +1518,16 @@ function initMap() {
         var lincolnHoverCard = new google.maps.InfoWindow({
           content: lincolnHover,
         });
-          lincolnMarker.addListener('click', function(){
-            closeAllHover();
-            lincolnHoverCard.open(map, lincolnMarker);
+        lincolnMarker.addListener('click', function(){
+          var check = $("#lincolnHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          lincolnHoverCard.open(map, lincolnMarker);
+          $("#lincolnHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#lincolnHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
@@ -1349,8 +1553,15 @@ function initMap() {
           content: multiculturalHover,
         });
         multiculturalMarker.addListener('click', function(){
+          var check = $("#multiculturalHover").hasClass("hoverOpen");
+          if (check === false){
           closeAllHover();
           multiculturalHoverCard.open(map, multiculturalMarker);
+          $("#multiculturalHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#multiculturalHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
@@ -1376,8 +1587,15 @@ function initMap() {
           content: nursingHover,
         });
         nursingMarker.addListener('click', function(){
+          var check = $("#nursingHover").hasClass("hoverOpen");
+          if (check === false){
           closeAllHover();
           nursingHoverCard.open(map, nursingMarker);
+          $("#nursingHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#nursingHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
@@ -1418,8 +1636,15 @@ function initMap() {
           content: oviattHover,
         });
         oviattMarker.addListener('click', function(){
+          var check = $("#oviattHover").hasClass("hoverOpen");
+          if (check === false){
           closeAllHover();
           oviattHoverCard.open(map, oviattMarker);
+          $("#oviattHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#oviattHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
@@ -1444,9 +1669,16 @@ function initMap() {
         var pollockHoverCard = new google.maps.InfoWindow({
           content: pollockHover,
         });
-          pollockMarker.addListener('click', function(){
-            closeAllHover();
-            pollockHoverCard.open(map, pollockMarker);
+        pollockMarker.addListener('click', function(){
+          var check = $("#pollockHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          pollockHoverCard.open(map, pollockMarker);
+          $("#pollockHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#pollockHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
@@ -1473,8 +1705,15 @@ function initMap() {
           content: polkHover,
         });
         polkMarker.addListener('click', function(){
+          var check = $("#polkHover").hasClass("hoverOpen");
+          if (check === false){
           closeAllHover();
           polkHoverCard.open(map, polkMarker);
+          $("#polkHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#polkHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
@@ -1482,6 +1721,7 @@ function initMap() {
         $("#polkLink").click(function(){
           $('#overlay').css('visibility', 'visible');
           $('#overlay').animate({"opacity": "0.3"}, "slow");
+          $('#polkiframe').attr('src',"https://www.youtube.com/embed/iHPdc89AD_c");
 
           $("#polkPopup").css('visibility', 'visible');
           $('#polkPopup').animate({"opacity": "1"}, "slow");
@@ -1516,9 +1756,17 @@ function initMap() {
         var radfordHoverCard = new google.maps.InfoWindow({
           content: radfordHover,
         });
+
         radfordMarker.addListener('click', function(){
+          var check = $("#radfordHover").hasClass("hoverOpen");
+          if (check === false){
           closeAllHover();
           radfordHoverCard.open(map, radfordMarker);
+          $("#radfordHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#radfordHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
@@ -1543,9 +1791,17 @@ function initMap() {
         var reeveHoverCard = new google.maps.InfoWindow({
           content: reeveHover,
         });
-          reeveMarker.addListener('click', function(){
+
+        reeveMarker.addListener('click', function(){
+          var check = $("#reeveHover").hasClass("hoverOpen");
+          if (check === false){
           closeAllHover();
           reeveHoverCard.open(map, reeveMarker);
+          $("#reeveHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#reeveHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
@@ -1553,6 +1809,7 @@ function initMap() {
         $("#reeveLink").click(function(){
           $('#overlay').css('visibility', 'visible');
           $('#overlay').animate({"opacity": "0.3"}, "slow");
+          $('#reeveiframe').attr('src',"https://www.youtube.com/embed/QAtW972K3cQ");
 
           $("#reevePopup").css('visibility', 'visible');
           $('#reevePopup').animate({"opacity": "1"}, "slow");
@@ -1609,9 +1866,17 @@ function initMap() {
         var sageHoverCard = new google.maps.InfoWindow({
           content: sageHover,
         });
+
         sageMarker.addListener('click', function(){
+          var check = $("#sageHover").hasClass("hoverOpen");
+          if (check === false){
           closeAllHover();
           sageHoverCard.open(map, sageMarker);
+          $("#sageHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#sageHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
@@ -1619,6 +1884,7 @@ function initMap() {
         $("#sageLink").click(function(){
           $('#overlay').css('visibility', 'visible');
           $('#overlay').animate({"opacity": "0.3"}, "slow");
+          $('#sageiframe').attr('src',"https://www.youtube.com/embed/DVRbh2fCCZ0");
 
           $("#sagePopup").css('visibility', 'visible');
           $('#sagePopup').animate({"opacity": "1"}, "slow");
@@ -1674,9 +1940,17 @@ function initMap() {
         var scottHoverCard = new google.maps.InfoWindow({
           content: scottHover,
         });
-          scottMarker.addListener('click', function(){
-            closeAllHover();
-            scottHoverCard.open(map, scottMarker);
+
+        scottMarker.addListener('click', function(){
+          var check = $("#scottHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          scottHoverCard.open(map, scottMarker);
+          $("#scottHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#scottHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
@@ -1684,6 +1958,7 @@ function initMap() {
         $("#scottLink").click(function(){
           $('#overlay').css('visibility', 'visible');
           $('#overlay').animate({"opacity": "0.3"}, "slow");
+
 
           $("#scottPopup").css('visibility', 'visible');
           $('#scottPopup').animate({"opacity": "1"}, "slow");
@@ -1701,9 +1976,17 @@ function initMap() {
         var stewartHoverCard = new google.maps.InfoWindow({
           content: stewartHover,
         });
-          stewartMarker.addListener('click', function(){
+
+        stewartMarker.addListener('click', function(){
+          var check = $("#stewartHover").hasClass("hoverOpen");
+          if (check === false){
           closeAllHover();
           stewartHoverCard.open(map, stewartMarker);
+          $("#stewartHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#stewartHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
@@ -1729,9 +2012,17 @@ function initMap() {
         var recreationHoverCard = new google.maps.InfoWindow({
           content: recreationHover,
         });
+
         recreationMarker.addListener('click', function(){
+          var check = $("#recreationHover").hasClass("hoverOpen");
+          if (check === false){
           closeAllHover();
           recreationHoverCard.open(map, recreationMarker);
+          $("#recreationHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#recreationHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
@@ -1779,9 +2070,17 @@ function initMap() {
         var successHoverCard = new google.maps.InfoWindow({
           content: successHover,
         });
-          successMarker.addListener('click', function(){
+
+        successMarker.addListener('click', function(){
+          var check = $("#successHover").hasClass("hoverOpen");
+          if (check === false){
           closeAllHover();
           successHoverCard.open(map, successMarker);
+          $("#successHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#successHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
@@ -1789,6 +2088,7 @@ function initMap() {
         $("#successLink").click(function(){
           $('#overlay').css('visibility', 'visible');
           $('#overlay').animate({"opacity": "0.3"}, "slow");
+          $('#successiframe').attr('src',"https://www.youtube.com/embed/NjZjuqM7SBg");
 
           $("#successPopup").css('visibility', 'visible');
           $('#successPopup').animate({"opacity": "1"}, "slow");
@@ -1849,6 +2149,17 @@ function initMap() {
           closeAllHover();
           swartHoverCard.open(map, swartMarker);
         });
+        albeeMarker.addListener('click', function(){
+          var check = $("#albeeHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          albeeHoverCard.open(map, albeeMarker);
+          $("#albeeHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#albeeHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
+        });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
         // +animate to fade in
@@ -1890,6 +2201,17 @@ function initMap() {
           closeAllHover();
           taylorHoverCard.open(map, taylorMarker);
         });
+        albeeMarker.addListener('click', function(){
+          var check = $("#albeeHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          albeeHoverCard.open(map, albeeMarker);
+          $("#albeeHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#albeeHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
+        });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
         // +animate to fade in
@@ -1930,6 +2252,17 @@ function initMap() {
           titanMarker.addListener('click', function(){
             closeAllHover();
             titanHoverCard.open(map, titanMarker);
+        });
+        albeeMarker.addListener('click', function(){
+          var check = $("#albeeHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          albeeHoverCard.open(map, albeeMarker);
+          $("#albeeHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#albeeHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
@@ -1973,6 +2306,17 @@ function initMap() {
           closeAllHover();
           policeHoverCard.open(map, policeMarker);
         });
+        albeeMarker.addListener('click', function(){
+          var check = $("#albeeHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          albeeHoverCard.open(map, albeeMarker);
+          $("#albeeHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#albeeHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
+        });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
         // +animate to fade in
@@ -2014,6 +2358,17 @@ function initMap() {
         websterMarker.addListener('click', function(){
           closeAllHover();
           websterHoverCard.open(map, websterMarker);
+        });
+        albeeMarker.addListener('click', function(){
+          var check = $("#albeeHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          albeeHoverCard.open(map, albeeMarker);
+          $("#albeeHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#albeeHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
@@ -2445,93 +2800,346 @@ function initMap() {
           closeAllHover();
           albeeHoverCard.open(map, albeeAccEntMarker);
         });
+        albeeMarker.addListener('click', function(){
+          var check = $("#albeeHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          albeeHoverCard.open(map, albeeMarker);
+          $("#albeeHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#albeeHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
+        });
         acAccEntMarker.addListener('click', function(){
           closeAllHover();
           acHoverCard.open(map,acAccEntMarker);
+        });
+        albeeMarker.addListener('click', function(){
+          var check = $("#albeeHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          albeeHoverCard.open(map, albeeMarker);
+          $("#albeeHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#albeeHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
         blackhawkAccEntMarker.addListener('click', function(){
           closeAllHover();
           blackhawkHoverCard.open(map, blackhawkAccEntMarker);
         });
+        albeeMarker.addListener('click', function(){
+          var check = $("#albeeHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          albeeHoverCard.open(map, albeeMarker);
+          $("#albeeHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#albeeHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
+        });
         equityAccEntMarker.addListener('click', function(){
           closeAllHover();
         equityHoverCard.open(map, equityAccEntMarker);
+        });
+        albeeMarker.addListener('click', function(){
+          var check = $("#albeeHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          albeeHoverCard.open(map, albeeMarker);
+          $("#albeeHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#albeeHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
         clowAccEntMarker.addListener('click', function(){
           closeAllHover();
           clowHoverCard.open(map, clowAccEntMarker);
         });
+        albeeMarker.addListener('click', function(){
+          var check = $("#albeeHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          albeeHoverCard.open(map, albeeMarker);
+          $("#albeeHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#albeeHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
+        });
         dempseyAccEntMarker.addListener('click', function(){
           closeAllHover();
           dempseyHoverCard.open(map, dempseyAccEntMarker);
+        });
+        albeeMarker.addListener('click', function(){
+          var check = $("#albeeHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          albeeHoverCard.open(map, albeeMarker);
+          $("#albeeHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#albeeHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
         donnerAccEntMarker.addListener('click', function(){
           closeAllHover();
         donnerHoverCard.open(map, donnerAccEntMarker);
         });
+        albeeMarker.addListener('click', function(){
+          var check = $("#albeeHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          albeeHoverCard.open(map, albeeMarker);
+          $("#albeeHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#albeeHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
+        });
         fletcherAccEntMarker.addListener('click', function(){
           closeAllHover();
         fletcherHoverCard.open(map, fletcherAccEntMarker);
+        });
+        albeeMarker.addListener('click', function(){
+          var check = $("#albeeHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          albeeHoverCard.open(map, albeeMarker);
+          $("#albeeHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#albeeHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
         fredricAccEntMarker.addListener('click', function(){
           closeAllHover();
           fredricHoverCard.open(map,fredricAccEntMarker);
         });
+        albeeMarker.addListener('click', function(){
+          var check = $("#albeeHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          albeeHoverCard.open(map, albeeMarker);
+          $("#albeeHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#albeeHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
+        });
         gruenhagenAccEntMarker.addListener('click', function(){
           closeAllHover();
           gruenhagenHoverCard.open(map,gruenhagenAccEntMarker);
+        });
+        albeeMarker.addListener('click', function(){
+          var check = $("#albeeHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          albeeHoverCard.open(map, albeeMarker);
+          $("#albeeHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#albeeHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
         halseyAccEntMarker.addListener('click', function(){
           closeAllHover();
           halseyHoverCard.open(map, halseyAccEntMarker);
         });
+        albeeMarker.addListener('click', function(){
+          var check = $("#albeeHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          albeeHoverCard.open(map, albeeMarker);
+          $("#albeeHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#albeeHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
+        });
         harringtonAccEntMarker.addListener('click', function(){
           closeAllHover();
           harringtonHoverCard.open(map, harringtonAccEntMarker);
+        });
+        albeeMarker.addListener('click', function(){
+          var check = $("#albeeHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          albeeHoverCard.open(map, albeeMarker);
+          $("#albeeHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#albeeHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
         kolfAccEntMarker.addListener('click', function(){
           closeAllHover();
           kolfHoverCard.open(map, kolfAccEntMarker);
         });
+        albeeMarker.addListener('click', function(){
+          var check = $("#albeeHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          albeeHoverCard.open(map, albeeMarker);
+          $("#albeeHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#albeeHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
+        });
         nursingAccEntMarker.addListener('click', function(){
           closeAllHover();
           nursingHoverCard.open(map, nursingAccEntMarker);
+        });
+        albeeMarker.addListener('click', function(){
+          var check = $("#albeeHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          albeeHoverCard.open(map, albeeMarker);
+          $("#albeeHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#albeeHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
         polkAccEntMarker.addListener('click', function(){
           closeAllHover();
           polkHoverCard.open(map, polkAccEntMarker);
         });
+        albeeMarker.addListener('click', function(){
+          var check = $("#albeeHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          albeeHoverCard.open(map, albeeMarker);
+          $("#albeeHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#albeeHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
+        });
         radfordAccEntMarker.addListener('click', function(){
           closeAllHover();
         radfordHoverCard.open(map, radfordAccEntMarker);
+        });
+        albeeMarker.addListener('click', function(){
+          var check = $("#albeeHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          albeeHoverCard.open(map, albeeMarker);
+          $("#albeeHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#albeeHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
         reeveAccEntMarker.addListener('click', function(){
           closeAllHover();
         reeveHoverCard.open(map, reeveAccEntMarker);
         });
+        albeeMarker.addListener('click', function(){
+          var check = $("#albeeHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          albeeHoverCard.open(map, albeeMarker);
+          $("#albeeHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#albeeHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
+        });
         scottAccEntMarker.addListener('click', function(){
           closeAllHover();
           scottHoverCard.open(map, scottAccEntMarker);
+        });
+        albeeMarker.addListener('click', function(){
+          var check = $("#albeeHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          albeeHoverCard.open(map, albeeMarker);
+          $("#albeeHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#albeeHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
         stewartAccEntMarker.addListener('click', function(){
           closeAllHover();
         stewartHoverCard.open(map, stewartAccEntMarker);
         });
+        albeeMarker.addListener('click', function(){
+          var check = $("#albeeHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          albeeHoverCard.open(map, albeeMarker);
+          $("#albeeHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#albeeHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
+        });
         successAccEntMarker.addListener('click', function(){
           closeAllHover();
         successHoverCard.open(map, successAccEntMarker);
+        });
+        albeeMarker.addListener('click', function(){
+          var check = $("#albeeHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          albeeHoverCard.open(map, albeeMarker);
+          $("#albeeHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#albeeHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
         swartAccEntMarker.addListener('click', function(){
           closeAllHover();
           swartHoverCard.open(map, swartAccEntMarker);
         });
+        albeeMarker.addListener('click', function(){
+          var check = $("#albeeHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          albeeHoverCard.open(map, albeeMarker);
+          $("#albeeHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#albeeHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
+        });
         taylorAccEntMarker.addListener('click', function(){
           closeAllHover();
         taylorHoverCard.open(map, taylorAccEntMarker);
         });
+        albeeMarker.addListener('click', function(){
+          var check = $("#albeeHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          albeeHoverCard.open(map, albeeMarker);
+          $("#albeeHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#albeeHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
+        });
         websterAccEntMarker.addListener('click', function(){
           closeAllHover();
         websterHoverCard.open(map, websterAccEntMarker);
+        });
+        albeeMarker.addListener('click', function(){
+          var check = $("#albeeHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          albeeHoverCard.open(map, albeeMarker);
+          $("#albeeHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#albeeHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
 
         // accessible entries (buildings)
@@ -3063,49 +3671,181 @@ var eighteenAccParMarker = new google.maps.Marker({
     closeAllHover();
     albeeHoverCard.open(map, albeeSustMarker);
   });
+  albeeMarker.addListener('click', function(){
+    var check = $("#albeeHover").hasClass("hoverOpen");
+    if (check === false){
+    closeAllHover();
+    albeeHoverCard.open(map, albeeMarker);
+    $("#albeeHover").addClass("hoverOpen");
+  } else if (check === true){
+    $("#albeeHover").removeClass("hoverOpen");
+    closeAllHover();
+    }
+  });
   alumniSustMarker.addListener('click', function(){
     closeAllHover();
     alumniHoverCard.open(map, alumniSustMarker);
+  });
+  albeeMarker.addListener('click', function(){
+    var check = $("#albeeHover").hasClass("hoverOpen");
+    if (check === false){
+    closeAllHover();
+    albeeHoverCard.open(map, albeeMarker);
+    $("#albeeHover").addClass("hoverOpen");
+  } else if (check === true){
+    $("#albeeHover").removeClass("hoverOpen");
+    closeAllHover();
+    }
   });
   blackhawkSustMarker.addListener('click', function(){
     closeAllHover();
     blackhawkHoverCard.open(map, blackhawkSustMarker);
   });
+  albeeMarker.addListener('click', function(){
+    var check = $("#albeeHover").hasClass("hoverOpen");
+    if (check === false){
+    closeAllHover();
+    albeeHoverCard.open(map, albeeMarker);
+    $("#albeeHover").addClass("hoverOpen");
+  } else if (check === true){
+    $("#albeeHover").removeClass("hoverOpen");
+    closeAllHover();
+    }
+  });
   biodigesterSustMarker.addListener('click', function(){
     closeAllHover();
     biodigesterHoverCard.open(map, biodigesterSustMarker);
+  });
+  albeeMarker.addListener('click', function(){
+    var check = $("#albeeHover").hasClass("hoverOpen");
+    if (check === false){
+    closeAllHover();
+    albeeHoverCard.open(map, albeeMarker);
+    $("#albeeHover").addClass("hoverOpen");
+  } else if (check === true){
+    $("#albeeHover").removeClass("hoverOpen");
+    closeAllHover();
+    }
   });
   heatingSustMarker.addListener('click', function(){
     closeAllHover();
     heatingHoverCard.open(map,heatingSustMarker);
   });
+  albeeMarker.addListener('click', function(){
+    var check = $("#albeeHover").hasClass("hoverOpen");
+    if (check === false){
+    closeAllHover();
+    albeeHoverCard.open(map, albeeMarker);
+    $("#albeeHover").addClass("hoverOpen");
+  } else if (check === true){
+    $("#albeeHover").removeClass("hoverOpen");
+    closeAllHover();
+    }
+  });
   horizonSustMarker.addListener('click', function(){
     closeAllHover();
     horizonHoverCard.open(map, horizonSustMarker);
+  });
+  albeeMarker.addListener('click', function(){
+    var check = $("#albeeHover").hasClass("hoverOpen");
+    if (check === false){
+    closeAllHover();
+    albeeHoverCard.open(map, albeeMarker);
+    $("#albeeHover").addClass("hoverOpen");
+  } else if (check === true){
+    $("#albeeHover").removeClass("hoverOpen");
+    closeAllHover();
+    }
   });
   reeveSustMarker.addListener('click', function(){
     closeAllHover();
   reeveHoverCard.open(map, reeveSustMarker);
   });
+  albeeMarker.addListener('click', function(){
+    var check = $("#albeeHover").hasClass("hoverOpen");
+    if (check === false){
+    closeAllHover();
+    albeeHoverCard.open(map, albeeMarker);
+    $("#albeeHover").addClass("hoverOpen");
+  } else if (check === true){
+    $("#albeeHover").removeClass("hoverOpen");
+    closeAllHover();
+    }
+  });
   sageSustMarker.addListener('click', function(){
     closeAllHover();
     sageHoverCard.open(map, sageSustMarker);
+  });
+  albeeMarker.addListener('click', function(){
+    var check = $("#albeeHover").hasClass("hoverOpen");
+    if (check === false){
+    closeAllHover();
+    albeeHoverCard.open(map, albeeMarker);
+    $("#albeeHover").addClass("hoverOpen");
+  } else if (check === true){
+    $("#albeeHover").removeClass("hoverOpen");
+    closeAllHover();
+    }
   });
   recreationSustMarker.addListener('click', function(){
     closeAllHover();
     recreationHoverCard.open(map, recreationSustMarker);
   });
+  albeeMarker.addListener('click', function(){
+    var check = $("#albeeHover").hasClass("hoverOpen");
+    if (check === false){
+    closeAllHover();
+    albeeHoverCard.open(map, albeeMarker);
+    $("#albeeHover").addClass("hoverOpen");
+  } else if (check === true){
+    $("#albeeHover").removeClass("hoverOpen");
+    closeAllHover();
+    }
+  });
   successSustMarker.addListener('click', function(){
     closeAllHover();
   successHoverCard.open(map, successSustMarker);
+  });
+  albeeMarker.addListener('click', function(){
+    var check = $("#albeeHover").hasClass("hoverOpen");
+    if (check === false){
+    closeAllHover();
+    albeeHoverCard.open(map, albeeMarker);
+    $("#albeeHover").addClass("hoverOpen");
+  } else if (check === true){
+    $("#albeeHover").removeClass("hoverOpen");
+    closeAllHover();
+    }
   });
   taylorSustMarker.addListener('click', function(){
     closeAllHover();
     taylorHoverCard.open(map, taylorSustMarker);
   });
+  albeeMarker.addListener('click', function(){
+    var check = $("#albeeHover").hasClass("hoverOpen");
+    if (check === false){
+    closeAllHover();
+    albeeHoverCard.open(map, albeeMarker);
+    $("#albeeHover").addClass("hoverOpen");
+  } else if (check === true){
+    $("#albeeHover").removeClass("hoverOpen");
+    closeAllHover();
+    }
+  });
   titanSustMarker.addListener('click', function(){
     closeAllHover();
     titanHoverCard.open(map, titanSustMarker);
+  });
+  albeeMarker.addListener('click', function(){
+    var check = $("#albeeHover").hasClass("hoverOpen");
+    if (check === false){
+    closeAllHover();
+    albeeHoverCard.open(map, albeeMarker);
+    $("#albeeHover").addClass("hoverOpen");
+  } else if (check === true){
+    $("#albeeHover").removeClass("hoverOpen");
+    closeAllHover();
+    }
   });
 
         // setting sustainability markers
@@ -3211,57 +3951,211 @@ var eighteenAccParMarker = new google.maps.Marker({
           closeAllHover();
           acHoverCard.open(map,acGenderMarker);
         });
+        albeeMarker.addListener('click', function(){
+          var check = $("#albeeHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          albeeHoverCard.open(map, albeeMarker);
+          $("#albeeHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#albeeHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
+        });
         blackhawkGenderMarker.addListener('click', function(){
           closeAllHover();
           blackhawkHoverCard.open(map, blackhawkGenderMarker);
+        });
+        albeeMarker.addListener('click', function(){
+          var check = $("#albeeHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          albeeHoverCard.open(map, albeeMarker);
+          $("#albeeHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#albeeHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
         campusGenderMarker.addListener('click', function(){
           closeAllHover();
         campusHoverCard.open(map, campusGenderMarker);
         });
+        albeeMarker.addListener('click', function(){
+          var check = $("#albeeHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          albeeHoverCard.open(map, albeeMarker);
+          $("#albeeHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#albeeHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
+        });
         dempseyGenderMarker.addListener('click', function(){
           closeAllHover();
           dempseyHoverCard.open(map, dempseyGenderMarker);
+        });
+        albeeMarker.addListener('click', function(){
+          var check = $("#albeeHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          albeeHoverCard.open(map, albeeMarker);
+          $("#albeeHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#albeeHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
         halseyGenderMarker.addListener('click', function(){
           closeAllHover();
           halseyHoverCard.open(map, halseyGenderMarker);
         });
+        albeeMarker.addListener('click', function(){
+          var check = $("#albeeHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          albeeHoverCard.open(map, albeeMarker);
+          $("#albeeHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#albeeHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
+        });
         harringtonGenderMarker.addListener('click', function(){
           closeAllHover();
           harringtonHoverCard.open(map, harringtonGenderMarker);
+        });
+        albeeMarker.addListener('click', function(){
+          var check = $("#albeeHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          albeeHoverCard.open(map, albeeMarker);
+          $("#albeeHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#albeeHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
         kolfGenderMarker.addListener('click', function(){
           closeAllHover();
           kolfHoverCard.open(map, kolfGenderMarker);
         });
+        albeeMarker.addListener('click', function(){
+          var check = $("#albeeHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          albeeHoverCard.open(map, albeeMarker);
+          $("#albeeHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#albeeHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
+        });
         nursingGenderMarker.addListener('click', function(){
           closeAllHover();
           nursingHoverCard.open(map, nursingGenderMarker);
+        });
+        albeeMarker.addListener('click', function(){
+          var check = $("#albeeHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          albeeHoverCard.open(map, albeeMarker);
+          $("#albeeHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#albeeHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
         reeveGenderMarker.addListener('click', function(){
           closeAllHover();
         reeveHoverCard.open(map, reeveGenderMarker);
         });
+        albeeMarker.addListener('click', function(){
+          var check = $("#albeeHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          albeeHoverCard.open(map, albeeMarker);
+          $("#albeeHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#albeeHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
+        });
         sageGenderMarker.addListener('click', function(){
           closeAllHover();
           sageHoverCard.open(map, sageGenderMarker);
+        });
+        albeeMarker.addListener('click', function(){
+          var check = $("#albeeHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          albeeHoverCard.open(map, albeeMarker);
+          $("#albeeHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#albeeHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
         recreationGenderMarker.addListener('click', function(){
           closeAllHover();
           recreationHoverCard.open(map, recreationGenderMarker);
         });
+        albeeMarker.addListener('click', function(){
+          var check = $("#albeeHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          albeeHoverCard.open(map, albeeMarker);
+          $("#albeeHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#albeeHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
+        });
         successGenderMarker.addListener('click', function(){
           closeAllHover();
         successHoverCard.open(map, successGenderMarker);
+        });
+        albeeMarker.addListener('click', function(){
+          var check = $("#albeeHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          albeeHoverCard.open(map, albeeMarker);
+          $("#albeeHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#albeeHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
         swartGenderMarker.addListener('click', function(){
           closeAllHover();
           swartHoverCard.open(map, swartGenderMarker);
         });
+        albeeMarker.addListener('click', function(){
+          var check = $("#albeeHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          albeeHoverCard.open(map, albeeMarker);
+          $("#albeeHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#albeeHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
+        });
         policeGenderMarker.addListener('click', function(){
           closeAllHover();
           policeHoverCard.open(map, policeGenderMarker);
+        });
+        albeeMarker.addListener('click', function(){
+          var check = $("#albeeHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          albeeHoverCard.open(map, albeeMarker);
+          $("#albeeHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#albeeHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
 
         // setting gender markers
@@ -3395,57 +4289,211 @@ var eighteenAccParMarker = new google.maps.Marker({
         closeAllHover();
         albeeHoverCard.open(map, albeeAccaFMarker);
       });
+      albeeMarker.addListener('click', function(){
+        var check = $("#albeeHover").hasClass("hoverOpen");
+        if (check === false){
+        closeAllHover();
+        albeeHoverCard.open(map, albeeMarker);
+        $("#albeeHover").addClass("hoverOpen");
+      } else if (check === true){
+        $("#albeeHover").removeClass("hoverOpen");
+        closeAllHover();
+        }
+      });
       acAccaFMarker.addListener('click', function(){
         closeAllHover();
         acHoverCard.open(map,acAccaFMarker);
+      });
+      albeeMarker.addListener('click', function(){
+        var check = $("#albeeHover").hasClass("hoverOpen");
+        if (check === false){
+        closeAllHover();
+        albeeHoverCard.open(map, albeeMarker);
+        $("#albeeHover").addClass("hoverOpen");
+      } else if (check === true){
+        $("#albeeHover").removeClass("hoverOpen");
+        closeAllHover();
+        }
       });
       ceramicsAccaFMarker.addListener('click', function(){
         closeAllHover();
         ceramicsHoverCard.open(map, ceramicsAccaFMarker);
       });
+      albeeMarker.addListener('click', function(){
+        var check = $("#albeeHover").hasClass("hoverOpen");
+        if (check === false){
+        closeAllHover();
+        albeeHoverCard.open(map, albeeMarker);
+        $("#albeeHover").addClass("hoverOpen");
+      } else if (check === true){
+        $("#albeeHover").removeClass("hoverOpen");
+        closeAllHover();
+        }
+      });
       clowAccaFMarker.addListener('click', function(){
         closeAllHover();
         clowHoverCard.open(map, clowAccaFMarker);
+      });
+      albeeMarker.addListener('click', function(){
+        var check = $("#albeeHover").hasClass("hoverOpen");
+        if (check === false){
+        closeAllHover();
+        albeeHoverCard.open(map, albeeMarker);
+        $("#albeeHover").addClass("hoverOpen");
+      } else if (check === true){
+        $("#albeeHover").removeClass("hoverOpen");
+        closeAllHover();
+        }
       });
       environmentalAccaFMarker.addListener('click', function(){
         closeAllHover();
         environmentalHoverCard.open(map, environmentalAccaFMarker);
       });
+      albeeMarker.addListener('click', function(){
+        var check = $("#albeeHover").hasClass("hoverOpen");
+        if (check === false){
+        closeAllHover();
+        albeeHoverCard.open(map, albeeMarker);
+        $("#albeeHover").addClass("hoverOpen");
+      } else if (check === true){
+        $("#albeeHover").removeClass("hoverOpen");
+        closeAllHover();
+        }
+      });
       fredricAccaFMarker.addListener('click', function(){
         closeAllHover();
         fredricHoverCard.open(map,fredricAccaFMarker);
+      });
+      albeeMarker.addListener('click', function(){
+        var check = $("#albeeHover").hasClass("hoverOpen");
+        if (check === false){
+        closeAllHover();
+        albeeHoverCard.open(map, albeeMarker);
+        $("#albeeHover").addClass("hoverOpen");
+      } else if (check === true){
+        $("#albeeHover").removeClass("hoverOpen");
+        closeAllHover();
+        }
       });
       halseyAccaFMarker.addListener('click', function(){
         closeAllHover();
         halseyHoverCard.open(map, halseyAccaFMarker);
       });
+      albeeMarker.addListener('click', function(){
+        var check = $("#albeeHover").hasClass("hoverOpen");
+        if (check === false){
+        closeAllHover();
+        albeeHoverCard.open(map, albeeMarker);
+        $("#albeeHover").addClass("hoverOpen");
+      } else if (check === true){
+        $("#albeeHover").removeClass("hoverOpen");
+        closeAllHover();
+        }
+      });
       harringtonAccaFMarker.addListener('click', function(){
         closeAllHover();
         harringtonHoverCard.open(map, harringtonAccaFMarker);
+      });
+      albeeMarker.addListener('click', function(){
+        var check = $("#albeeHover").hasClass("hoverOpen");
+        if (check === false){
+        closeAllHover();
+        albeeHoverCard.open(map, albeeMarker);
+        $("#albeeHover").addClass("hoverOpen");
+      } else if (check === true){
+        $("#albeeHover").removeClass("hoverOpen");
+        closeAllHover();
+        }
       });
       kolfAccaFMarker.addListener('click', function(){
         closeAllHover();
         kolfHoverCard.open(map, kolfAccaFMarker);
       });
+      albeeMarker.addListener('click', function(){
+        var check = $("#albeeHover").hasClass("hoverOpen");
+        if (check === false){
+        closeAllHover();
+        albeeHoverCard.open(map, albeeMarker);
+        $("#albeeHover").addClass("hoverOpen");
+      } else if (check === true){
+        $("#albeeHover").removeClass("hoverOpen");
+        closeAllHover();
+        }
+      });
       swartAccaFMarker.addListener('click', function(){
         closeAllHover();
         swartHoverCard.open(map, swartAccaFMarker);
+      });
+      albeeMarker.addListener('click', function(){
+        var check = $("#albeeHover").hasClass("hoverOpen");
+        if (check === false){
+        closeAllHover();
+        albeeHoverCard.open(map, albeeMarker);
+        $("#albeeHover").addClass("hoverOpen");
+      } else if (check === true){
+        $("#albeeHover").removeClass("hoverOpen");
+        closeAllHover();
+        }
       });
       nursingAccaFMarker.addListener('click', function(){
         closeAllHover();
         nursingHoverCard.open(map, nursingAccaFMarker);
       });
+      albeeMarker.addListener('click', function(){
+        var check = $("#albeeHover").hasClass("hoverOpen");
+        if (check === false){
+        closeAllHover();
+        albeeHoverCard.open(map, albeeMarker);
+        $("#albeeHover").addClass("hoverOpen");
+      } else if (check === true){
+        $("#albeeHover").removeClass("hoverOpen");
+        closeAllHover();
+        }
+      });
       polkAccaFMarker.addListener('click', function(){
         closeAllHover();
         polkHoverCard.open(map, polkAccaFMarker);
+      });
+      albeeMarker.addListener('click', function(){
+        var check = $("#albeeHover").hasClass("hoverOpen");
+        if (check === false){
+        closeAllHover();
+        albeeHoverCard.open(map, albeeMarker);
+        $("#albeeHover").addClass("hoverOpen");
+      } else if (check === true){
+        $("#albeeHover").removeClass("hoverOpen");
+        closeAllHover();
+        }
       });
       radfordAccaFMarker.addListener('click', function(){
         closeAllHover();
         radfordHoverCard.open(map, radfordAccaFMarker);
       });
+      albeeMarker.addListener('click', function(){
+        var check = $("#albeeHover").hasClass("hoverOpen");
+        if (check === false){
+        closeAllHover();
+        albeeHoverCard.open(map, albeeMarker);
+        $("#albeeHover").addClass("hoverOpen");
+      } else if (check === true){
+        $("#albeeHover").removeClass("hoverOpen");
+        closeAllHover();
+        }
+      });
       sageAccaFMarker.addListener('click', function(){
         closeAllHover();
         sageHoverCard.open(map, sageAccaFMarker);
+      });
+      albeeMarker.addListener('click', function(){
+        var check = $("#albeeHover").hasClass("hoverOpen");
+        if (check === false){
+        closeAllHover();
+        albeeHoverCard.open(map, albeeMarker);
+        $("#albeeHover").addClass("hoverOpen");
+      } else if (check === true){
+        $("#albeeHover").removeClass("hoverOpen");
+        closeAllHover();
+        }
       });
 
 
@@ -3523,26 +4571,92 @@ var eighteenAccParMarker = new google.maps.Marker({
         closeAllHover();
         albeeHoverCard.open(map, albeeAthMarker);
       });
+      albeeMarker.addListener('click', function(){
+        var check = $("#albeeHover").hasClass("hoverOpen");
+        if (check === false){
+        closeAllHover();
+        albeeHoverCard.open(map, albeeMarker);
+        $("#albeeHover").addClass("hoverOpen");
+      } else if (check === true){
+        $("#albeeHover").removeClass("hoverOpen");
+        closeAllHover();
+        }
+      });
       athleticAthMarker.addListener('click', function(){
         closeAllHover();
           athleticHoverCard.open(map, athleticAthMarker);
+      });
+      albeeMarker.addListener('click', function(){
+        var check = $("#albeeHover").hasClass("hoverOpen");
+        if (check === false){
+        closeAllHover();
+        albeeHoverCard.open(map, albeeMarker);
+        $("#albeeHover").addClass("hoverOpen");
+      } else if (check === true){
+        $("#albeeHover").removeClass("hoverOpen");
+        closeAllHover();
+        }
       });
       baseballAthMarker.addListener('click', function(){
         closeAllHover();
           baseballHoverCard.open(map, baseballAthMarker);
       });
+      albeeMarker.addListener('click', function(){
+        var check = $("#albeeHover").hasClass("hoverOpen");
+        if (check === false){
+        closeAllHover();
+        albeeHoverCard.open(map, albeeMarker);
+        $("#albeeHover").addClass("hoverOpen");
+      } else if (check === true){
+        $("#albeeHover").removeClass("hoverOpen");
+        closeAllHover();
+        }
+      });
       eastAthMarker.addListener('click', function(){
         closeAllHover();
         eastHoverCard.open(map,eastAthMarker);
+      });
+      albeeMarker.addListener('click', function(){
+        var check = $("#albeeHover").hasClass("hoverOpen");
+        if (check === false){
+        closeAllHover();
+        albeeHoverCard.open(map, albeeMarker);
+        $("#albeeHover").addClass("hoverOpen");
+      } else if (check === true){
+        $("#albeeHover").removeClass("hoverOpen");
+        closeAllHover();
+        }
       });
 
       kolfAthMarker.addListener('click', function(){
         closeAllHover();
         kolfHoverCard.open(map, kolfAthMarker);
       });
+      albeeMarker.addListener('click', function(){
+        var check = $("#albeeHover").hasClass("hoverOpen");
+        if (check === false){
+        closeAllHover();
+        albeeHoverCard.open(map, albeeMarker);
+        $("#albeeHover").addClass("hoverOpen");
+      } else if (check === true){
+        $("#albeeHover").removeClass("hoverOpen");
+        closeAllHover();
+        }
+      });
       titanAthMarker.addListener('click', function(){
         closeAllHover();
           titanHoverCard.open(map, titanAthMarker);
+      });
+      albeeMarker.addListener('click', function(){
+        var check = $("#albeeHover").hasClass("hoverOpen");
+        if (check === false){
+        closeAllHover();
+        albeeHoverCard.open(map, albeeMarker);
+        $("#albeeHover").addClass("hoverOpen");
+      } else if (check === true){
+        $("#albeeHover").removeClass("hoverOpen");
+        closeAllHover();
+        }
       });
 
         function setAth(){
@@ -3592,17 +4706,61 @@ var eighteenAccParMarker = new google.maps.Marker({
         closeAllHover();
         equityHoverCard.open(map, equityAccaSMarker);
       });
+      albeeMarker.addListener('click', function(){
+        var check = $("#albeeHover").hasClass("hoverOpen");
+        if (check === false){
+        closeAllHover();
+        albeeHoverCard.open(map, albeeMarker);
+        $("#albeeHover").addClass("hoverOpen");
+      } else if (check === true){
+        $("#albeeHover").removeClass("hoverOpen");
+        closeAllHover();
+        }
+      });
       nursingAccaSMarker.addListener('click', function(){
         closeAllHover();
         nursingHoverCard.open(map, nursingAccaSMarker);
+      });
+      albeeMarker.addListener('click', function(){
+        var check = $("#albeeHover").hasClass("hoverOpen");
+        if (check === false){
+        closeAllHover();
+        albeeHoverCard.open(map, albeeMarker);
+        $("#albeeHover").addClass("hoverOpen");
+      } else if (check === true){
+        $("#albeeHover").removeClass("hoverOpen");
+        closeAllHover();
+        }
       });
       successAccaSMarker.addListener('click', function(){
         closeAllHover();
         successHoverCard.open(map, successAccaSMarker);
       });
+      albeeMarker.addListener('click', function(){
+        var check = $("#albeeHover").hasClass("hoverOpen");
+        if (check === false){
+        closeAllHover();
+        albeeHoverCard.open(map, albeeMarker);
+        $("#albeeHover").addClass("hoverOpen");
+      } else if (check === true){
+        $("#albeeHover").removeClass("hoverOpen");
+        closeAllHover();
+        }
+      });
       swartAccaSMarker.addListener('click', function(){
         closeAllHover();
         swartHoverCard.open(map, swartAccaSMarker);
+      });
+      albeeMarker.addListener('click', function(){
+        var check = $("#albeeHover").hasClass("hoverOpen");
+        if (check === false){
+        closeAllHover();
+        albeeHoverCard.open(map, albeeMarker);
+        $("#albeeHover").addClass("hoverOpen");
+      } else if (check === true){
+        $("#albeeHover").removeClass("hoverOpen");
+        closeAllHover();
+        }
       });
 
       // set/remove AccaS
@@ -3672,37 +4830,136 @@ var eighteenAccParMarker = new google.maps.Marker({
         closeAllHover();
         equityHoverCard.open(map, equityCampSMarker);
       });
+      albeeMarker.addListener('click', function(){
+        var check = $("#albeeHover").hasClass("hoverOpen");
+        if (check === false){
+        closeAllHover();
+        albeeHoverCard.open(map, albeeMarker);
+        $("#albeeHover").addClass("hoverOpen");
+      } else if (check === true){
+        $("#albeeHover").removeClass("hoverOpen");
+        closeAllHover();
+        }
+      });
       campusCampSMarker.addListener('click', function(){
         closeAllHover();
           campusHoverCard.open(map, campusCampSMarker);
+      });
+      albeeMarker.addListener('click', function(){
+        var check = $("#albeeHover").hasClass("hoverOpen");
+        if (check === false){
+        closeAllHover();
+        albeeHoverCard.open(map, albeeMarker);
+        $("#albeeHover").addClass("hoverOpen");
+      } else if (check === true){
+        $("#albeeHover").removeClass("hoverOpen");
+        closeAllHover();
+        }
       });
       dempseyCampSMarker.addListener('click', function(){
         closeAllHover();
         dempseyHoverCard.open(map, dempseyCampSMarker);
       });
+      albeeMarker.addListener('click', function(){
+        var check = $("#albeeHover").hasClass("hoverOpen");
+        if (check === false){
+        closeAllHover();
+        albeeHoverCard.open(map, albeeMarker);
+        $("#albeeHover").addClass("hoverOpen");
+      } else if (check === true){
+        $("#albeeHover").removeClass("hoverOpen");
+        closeAllHover();
+        }
+      });
       multiculturalCampSMarker.addListener('click', function(){
         closeAllHover();
         multiculturalHoverCard.open(map, multiculturalCampSMarker);
+      });
+      albeeMarker.addListener('click', function(){
+        var check = $("#albeeHover").hasClass("hoverOpen");
+        if (check === false){
+        closeAllHover();
+        albeeHoverCard.open(map, albeeMarker);
+        $("#albeeHover").addClass("hoverOpen");
+      } else if (check === true){
+        $("#albeeHover").removeClass("hoverOpen");
+        closeAllHover();
+        }
       });
       pollockCampSMarker.addListener('click', function(){
         closeAllHover();
           pollockHoverCard.open(map, pollockCampSMarker);
       });
+      albeeMarker.addListener('click', function(){
+        var check = $("#albeeHover").hasClass("hoverOpen");
+        if (check === false){
+        closeAllHover();
+        albeeHoverCard.open(map, albeeMarker);
+        $("#albeeHover").addClass("hoverOpen");
+      } else if (check === true){
+        $("#albeeHover").removeClass("hoverOpen");
+        closeAllHover();
+        }
+      });
       radfordCampSMarker.addListener('click', function(){
         closeAllHover();
         radfordHoverCard.open(map, radfordCampSMarker);
+      });
+      albeeMarker.addListener('click', function(){
+        var check = $("#albeeHover").hasClass("hoverOpen");
+        if (check === false){
+        closeAllHover();
+        albeeHoverCard.open(map, albeeMarker);
+        $("#albeeHover").addClass("hoverOpen");
+      } else if (check === true){
+        $("#albeeHover").removeClass("hoverOpen");
+        closeAllHover();
+        }
       });
       reeveCampSMarker.addListener('click', function(){
         closeAllHover();
         reeveHoverCard.open(map, reeveCampSMarker);
       });
+      albeeMarker.addListener('click', function(){
+        var check = $("#albeeHover").hasClass("hoverOpen");
+        if (check === false){
+        closeAllHover();
+        albeeHoverCard.open(map, albeeMarker);
+        $("#albeeHover").addClass("hoverOpen");
+      } else if (check === true){
+        $("#albeeHover").removeClass("hoverOpen");
+        closeAllHover();
+        }
+      });
       recreationCampSMarker.addListener('click', function(){
         closeAllHover();
         recreationHoverCard.open(map, recreationCampSMarker);
       });
+      albeeMarker.addListener('click', function(){
+        var check = $("#albeeHover").hasClass("hoverOpen");
+        if (check === false){
+        closeAllHover();
+        albeeHoverCard.open(map, albeeMarker);
+        $("#albeeHover").addClass("hoverOpen");
+      } else if (check === true){
+        $("#albeeHover").removeClass("hoverOpen");
+        closeAllHover();
+        }
+      });
       successCampSMarker.addListener('click', function(){
         closeAllHover();
         successHoverCard.open(map, successCampSMarker);
+      });
+      albeeMarker.addListener('click', function(){
+        var check = $("#albeeHover").hasClass("hoverOpen");
+        if (check === false){
+        closeAllHover();
+        albeeHoverCard.open(map, albeeMarker);
+        $("#albeeHover").addClass("hoverOpen");
+      } else if (check === true){
+        $("#albeeHover").removeClass("hoverOpen");
+        closeAllHover();
+        }
       });
 
 
@@ -3782,37 +5039,136 @@ var eighteenAccParMarker = new google.maps.Marker({
         closeAllHover();
         donnerHoverCard.open(map, donnerResHMarker);
       });
+      albeeMarker.addListener('click', function(){
+        var check = $("#albeeHover").hasClass("hoverOpen");
+        if (check === false){
+        closeAllHover();
+        albeeHoverCard.open(map, albeeMarker);
+        $("#albeeHover").addClass("hoverOpen");
+      } else if (check === true){
+        $("#albeeHover").removeClass("hoverOpen");
+        closeAllHover();
+        }
+      });
       evansResHMarker.addListener('click', function(){
         closeAllHover();
         evansHoverCard.open(map, evansResHMarker);
+      });
+      albeeMarker.addListener('click', function(){
+        var check = $("#albeeHover").hasClass("hoverOpen");
+        if (check === false){
+        closeAllHover();
+        albeeHoverCard.open(map, albeeMarker);
+        $("#albeeHover").addClass("hoverOpen");
+      } else if (check === true){
+        $("#albeeHover").removeClass("hoverOpen");
+        closeAllHover();
+        }
       });
       fletcherResHMarker.addListener('click', function(){
         closeAllHover();
           fletcherHoverCard.open(map, fletcherResHMarker);
       });
+      albeeMarker.addListener('click', function(){
+        var check = $("#albeeHover").hasClass("hoverOpen");
+        if (check === false){
+        closeAllHover();
+        albeeHoverCard.open(map, albeeMarker);
+        $("#albeeHover").addClass("hoverOpen");
+      } else if (check === true){
+        $("#albeeHover").removeClass("hoverOpen");
+        closeAllHover();
+        }
+      });
       gruenhagenResHMarker.addListener('click', function(){
         closeAllHover();
         gruenhagenHoverCard.open(map,gruenhagenResHMarker);
+      });
+      albeeMarker.addListener('click', function(){
+        var check = $("#albeeHover").hasClass("hoverOpen");
+        if (check === false){
+        closeAllHover();
+        albeeHoverCard.open(map, albeeMarker);
+        $("#albeeHover").addClass("hoverOpen");
+      } else if (check === true){
+        $("#albeeHover").removeClass("hoverOpen");
+        closeAllHover();
+        }
       });
       horizonResHMarker.addListener('click', function(){
         closeAllHover();
           horizonHoverCard.open(map, horizonResHMarker);
       });
+      albeeMarker.addListener('click', function(){
+        var check = $("#albeeHover").hasClass("hoverOpen");
+        if (check === false){
+        closeAllHover();
+        albeeHoverCard.open(map, albeeMarker);
+        $("#albeeHover").addClass("hoverOpen");
+      } else if (check === true){
+        $("#albeeHover").removeClass("hoverOpen");
+        closeAllHover();
+        }
+      });
       stewartResHMarker.addListener('click', function(){
         closeAllHover();
         stewartHoverCard.open(map, stewartResHMarker);
+      });
+      albeeMarker.addListener('click', function(){
+        var check = $("#albeeHover").hasClass("hoverOpen");
+        if (check === false){
+        closeAllHover();
+        albeeHoverCard.open(map, albeeMarker);
+        $("#albeeHover").addClass("hoverOpen");
+      } else if (check === true){
+        $("#albeeHover").removeClass("hoverOpen");
+        closeAllHover();
+        }
       });
       scottResHMarker.addListener('click', function(){
         closeAllHover();
           scottHoverCard.open(map, scottResHMarker);
       });
+      albeeMarker.addListener('click', function(){
+        var check = $("#albeeHover").hasClass("hoverOpen");
+        if (check === false){
+        closeAllHover();
+        albeeHoverCard.open(map, albeeMarker);
+        $("#albeeHover").addClass("hoverOpen");
+      } else if (check === true){
+        $("#albeeHover").removeClass("hoverOpen");
+        closeAllHover();
+        }
+      });
       taylorResHMarker.addListener('click', function(){
         closeAllHover();
         taylorHoverCard.open(map, taylorResHMarker);
       });
+      albeeMarker.addListener('click', function(){
+        var check = $("#albeeHover").hasClass("hoverOpen");
+        if (check === false){
+        closeAllHover();
+        albeeHoverCard.open(map, albeeMarker);
+        $("#albeeHover").addClass("hoverOpen");
+      } else if (check === true){
+        $("#albeeHover").removeClass("hoverOpen");
+        closeAllHover();
+        }
+      });
       websterResHMarker.addListener('click', function(){
         closeAllHover();
         websterHoverCard.open(map, websterResHMarker);
+      });
+      albeeMarker.addListener('click', function(){
+        var check = $("#albeeHover").hasClass("hoverOpen");
+        if (check === false){
+        closeAllHover();
+        albeeHoverCard.open(map, albeeMarker);
+        $("#albeeHover").addClass("hoverOpen");
+      } else if (check === true){
+        $("#albeeHover").removeClass("hoverOpen");
+        closeAllHover();
+        }
       });
 
       // ResH set/remove
@@ -3878,25 +5234,91 @@ var eighteenAccParMarker = new google.maps.Marker({
         closeAllHover();
         blackhawkHoverCard.open(map, blackhawkDiningMarker);
       });
+      albeeMarker.addListener('click', function(){
+        var check = $("#albeeHover").hasClass("hoverOpen");
+        if (check === false){
+        closeAllHover();
+        albeeHoverCard.open(map, albeeMarker);
+        $("#albeeHover").addClass("hoverOpen");
+      } else if (check === true){
+        $("#albeeHover").removeClass("hoverOpen");
+        closeAllHover();
+        }
+      });
       clowDiningMarker.addListener('click', function(){
         closeAllHover();
         clowHoverCard.open(map, clowDiningMarker);
+      });
+      albeeMarker.addListener('click', function(){
+        var check = $("#albeeHover").hasClass("hoverOpen");
+        if (check === false){
+        closeAllHover();
+        albeeHoverCard.open(map, albeeMarker);
+        $("#albeeHover").addClass("hoverOpen");
+      } else if (check === true){
+        $("#albeeHover").removeClass("hoverOpen");
+        closeAllHover();
+        }
       });
       halseyDiningMarker.addListener('click', function(){
         closeAllHover();
         halseyHoverCard.open(map, halseyDiningMarker);
       });
+      albeeMarker.addListener('click', function(){
+        var check = $("#albeeHover").hasClass("hoverOpen");
+        if (check === false){
+        closeAllHover();
+        albeeHoverCard.open(map, albeeMarker);
+        $("#albeeHover").addClass("hoverOpen");
+      } else if (check === true){
+        $("#albeeHover").removeClass("hoverOpen");
+        closeAllHover();
+        }
+      });
       reeveDiningMarker.addListener('click', function(){
         closeAllHover();
         reeveHoverCard.open(map, reeveDiningMarker);
+      });
+      albeeMarker.addListener('click', function(){
+        var check = $("#albeeHover").hasClass("hoverOpen");
+        if (check === false){
+        closeAllHover();
+        albeeHoverCard.open(map, albeeMarker);
+        $("#albeeHover").addClass("hoverOpen");
+      } else if (check === true){
+        $("#albeeHover").removeClass("hoverOpen");
+        closeAllHover();
+        }
       });
       sageDiningMarker.addListener('click', function(){
         closeAllHover();
         sageHoverCard.open(map, sageDiningMarker);
       });
+      albeeMarker.addListener('click', function(){
+        var check = $("#albeeHover").hasClass("hoverOpen");
+        if (check === false){
+        closeAllHover();
+        albeeHoverCard.open(map, albeeMarker);
+        $("#albeeHover").addClass("hoverOpen");
+      } else if (check === true){
+        $("#albeeHover").removeClass("hoverOpen");
+        closeAllHover();
+        }
+      });
       scottDiningMarker.addListener('click', function(){
         closeAllHover();
           scottHoverCard.open(map, scottDiningMarker);
+      });
+      albeeMarker.addListener('click', function(){
+        var check = $("#albeeHover").hasClass("hoverOpen");
+        if (check === false){
+        closeAllHover();
+        albeeHoverCard.open(map, albeeMarker);
+        $("#albeeHover").addClass("hoverOpen");
+      } else if (check === true){
+        $("#albeeHover").removeClass("hoverOpen");
+        closeAllHover();
+        }
       });
       // set/remove dining
         function setDining(){
@@ -3939,9 +5361,31 @@ var eighteenAccParMarker = new google.maps.Marker({
       closeAllHover();
       recreationHoverCard.open(map, recreationStuRMarker);
     });
+    albeeMarker.addListener('click', function(){
+      var check = $("#albeeHover").hasClass("hoverOpen");
+      if (check === false){
+      closeAllHover();
+      albeeHoverCard.open(map, albeeMarker);
+      $("#albeeHover").addClass("hoverOpen");
+    } else if (check === true){
+      $("#albeeHover").removeClass("hoverOpen");
+      closeAllHover();
+      }
+    });
     reeveStuRMarker.addListener('click', function(){
       closeAllHover();
       reeveHoverCard.open(map, reeveStuRMarker);
+    });
+    albeeMarker.addListener('click', function(){
+      var check = $("#albeeHover").hasClass("hoverOpen");
+      if (check === false){
+      closeAllHover();
+      albeeHoverCard.open(map, albeeMarker);
+      $("#albeeHover").addClass("hoverOpen");
+    } else if (check === true){
+      $("#albeeHover").removeClass("hoverOpen");
+      closeAllHover();
+      }
     });
     // StuR set/remove
         function setStuR(){
