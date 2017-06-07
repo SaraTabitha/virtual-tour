@@ -393,6 +393,7 @@ function initMap() {
         // where if you spam click "buildings" it creates a bunch
         // of  hover popups
         albeeMarker.addListener('click', function(){
+          closeAllHover();
           albeeHoverCard.open(map, albeeMarker);
         });
         // when "click for more info" is selected,
@@ -445,6 +446,7 @@ function initMap() {
           content: baseballHover,
         });
           baseballMarker.addListener('click', function(){
+            closeAllHover();
             baseballHoverCard.open(map, baseballMarker);
         });
         // when "click for more info" is selected,
@@ -471,6 +473,7 @@ function initMap() {
           content: alumniHover,
         });
           alumniMarker.addListener('click', function(){
+            closeAllHover();
             alumniHoverCard.open(map, alumniMarker);
         });
         // when "click for more info" is selected,
@@ -512,6 +515,7 @@ function initMap() {
           content: acHover,
         });
         acMarker.addListener('click', function(){
+          closeAllHover();
           acHoverCard.open(map,acMarker);
         });
         // when "click for more info" is selected,
@@ -552,6 +556,7 @@ function initMap() {
           content: athleticHover,
         });
           athleticMarker.addListener('click', function(){
+            closeAllHover();
             athleticHoverCard.open(map, athleticMarker);
         });
         // when "click for more info" is selected,
@@ -578,6 +583,7 @@ function initMap() {
           content: blackhawkHover,
         });
         blackhawkMarker.addListener('click', function(){
+          closeAllHover();
           blackhawkHoverCard.open(map, blackhawkMarker);
         });
         // when "click for more info" is selected,
@@ -627,6 +633,7 @@ function initMap() {
           content: biodigesterHover,
         });
           biodigesterMarker.addListener('click', function(){
+            closeAllHover();
             biodigesterHoverCard.open(map, biodigesterMarker);
         });
         // when "click for more info" is selected,
@@ -653,6 +660,7 @@ function initMap() {
           content: buckstaffHover,
         });
         buckstaffMarker.addListener('click', function(){
+          closeAllHover();
           buckstaffHoverCard.open(map,buckstaffMarker);
         });
         // when "click for more info" is selected,
@@ -679,6 +687,7 @@ function initMap() {
           content: equityHover,
         });
           equityMarker.addListener('click', function(){
+          closeAllHover();
           equityHoverCard.open(map, equityMarker);
         });
         // when "click for more info" is selected,
@@ -719,6 +728,7 @@ function initMap() {
           content: campusHover,
         });
           campusMarker.addListener('click', function(){
+            closeAllHover();
             campusHoverCard.open(map, campusMarker);
         });
         // when "click for more info" is selected,
@@ -745,6 +755,7 @@ function initMap() {
           content: ceramicsHover,
         });
         ceramicsMarker.addListener('click', function(){
+          closeAllHover();
           ceramicsHoverCard.open(map, ceramicsMarker);
         });
         // when "click for more info" is selected,
@@ -772,6 +783,7 @@ function initMap() {
           content: clowHover,
         });
         clowMarker.addListener('click', function(){
+          closeAllHover();
           clowHoverCard.open(map, clowMarker);
         });
         // when "click for more info" is selected,
@@ -799,6 +811,7 @@ function initMap() {
           content: gardensHover,
         });
           gardensMarker.addListener('click', function(){
+            closeAllHover();
             gardensHoverCard.open(map, gardensMarker);
         });
         // when "click for more info" is selected,
@@ -826,6 +839,7 @@ function initMap() {
           content: dempseyHover,
         });
         dempseyMarker.addListener('click', function(){
+          closeAllHover();
           dempseyHoverCard.open(map, dempseyMarker);
         });
         // when "click for more info" is selected,
@@ -867,6 +881,7 @@ function initMap() {
           content: donnerHover,
         });
         donnerMarker.addListener('click', function(){
+          closeAllHover();
           donnerHoverCard.open(map, donnerMarker);
         });
         // when "click for more info" is selected,
@@ -894,6 +909,7 @@ function initMap() {
           content: eastHover,
         });
         eastMarker.addListener('click', function(){
+          closeAllHover();
           eastHoverCard.open(map,eastMarker);
         });
         // when "click for more info" is selected,
@@ -920,6 +936,7 @@ function initMap() {
           content: environmentalHover,
         });
         environmentalMarker.addListener('click', function(){
+          closeAllHover();
           environmentalHoverCard.open(map, environmentalMarker);
         });
         // when "click for more info" is selected,
@@ -946,6 +963,7 @@ function initMap() {
           content: evansHover,
         });
         evansMarker.addListener('click', function(){
+          closeAllHover();
         evansHoverCard.open(map, evansMarker);
       });
         // when "click for more info" is selected,
@@ -972,6 +990,7 @@ function initMap() {
           content: fletcherHover,
         });
           fletcherMarker.addListener('click', function(){
+            closeAllHover();
             fletcherHoverCard.open(map, fletcherMarker);
         });
         // when "click for more info" is selected,
@@ -998,6 +1017,7 @@ function initMap() {
           content: fredricHover,
         });
         fredricMarker.addListener('click', function(){
+          closeAllHover();
           fredricHoverCard.open(map,fredricMarker);
         });
         // when "click for more info" is selected,
@@ -1028,6 +1048,7 @@ function initMap() {
         });
         // open ^this when Marker is clicked
         gruenhagenMarker.addListener('click', function(){
+          closeAllHover();
           gruenhagenHoverCard.open(map,gruenhagenMarker);
         });
 
@@ -1056,6 +1077,7 @@ function initMap() {
           content: halseyHover,
         });
         halseyMarker.addListener('click', function(){
+          closeAllHover();
           halseyHoverCard.open(map, halseyMarker);
         });
         // when "click for more info" is selected,
@@ -1097,6 +1119,7 @@ function initMap() {
           content: harringtonHover,
         });
         harringtonMarker.addListener('click', function(){
+          closeAllHover();
           harringtonHoverCard.open(map, harringtonMarker);
         });
         // when "click for more info" is selected,
@@ -1137,6 +1160,7 @@ function initMap() {
           content: heatingHover,
         });
         heatingMarker.addListener('click', function(){
+          closeAllHover();
           heatingHoverCard.open(map,heatingMarker);
         });
         // when "click for more info" is selected,
@@ -1178,6 +1202,7 @@ function initMap() {
           content: parkingRampHover,
         });
         parkingRampMarker.addListener('click', function(){
+          closeAllHover();
           parkingRampHoverCard.open(map, parkingRampMarker);
         });
         // when "click for more info" is selected,
@@ -1205,6 +1230,7 @@ function initMap() {
           content: horizonHover,
         });
           horizonMarker.addListener('click', function(){
+            closeAllHover();
             horizonHoverCard.open(map, horizonMarker);
         });
         // when "click for more info" is selected,
@@ -1245,6 +1271,7 @@ function initMap() {
           content: kolfHover,
         });
         kolfMarker.addListener('click', function(){
+          closeAllHover();
           kolfHoverCard.open(map, kolfMarker);
         });
         // when "click for more info" is selected,
@@ -1285,6 +1312,7 @@ function initMap() {
           content: lincolnHover,
         });
           lincolnMarker.addListener('click', function(){
+            closeAllHover();
             lincolnHoverCard.open(map, lincolnMarker);
         });
         // when "click for more info" is selected,
@@ -1311,6 +1339,7 @@ function initMap() {
           content: multiculturalHover,
         });
         multiculturalMarker.addListener('click', function(){
+          closeAllHover();
           multiculturalHoverCard.open(map, multiculturalMarker);
         });
         // when "click for more info" is selected,
@@ -1337,6 +1366,7 @@ function initMap() {
           content: nursingHover,
         });
         nursingMarker.addListener('click', function(){
+          closeAllHover();
           nursingHoverCard.open(map, nursingMarker);
         });
         // when "click for more info" is selected,
@@ -1378,6 +1408,7 @@ function initMap() {
           content: oviattHover,
         });
         oviattMarker.addListener('click', function(){
+          closeAllHover();
           oviattHoverCard.open(map, oviattMarker);
         });
         // when "click for more info" is selected,
@@ -1404,6 +1435,7 @@ function initMap() {
           content: pollockHover,
         });
           pollockMarker.addListener('click', function(){
+            closeAllHover();
             pollockHoverCard.open(map, pollockMarker);
         });
         // when "click for more info" is selected,
@@ -1431,6 +1463,7 @@ function initMap() {
           content: polkHover,
         });
         polkMarker.addListener('click', function(){
+          closeAllHover();
           polkHoverCard.open(map, polkMarker);
         });
         // when "click for more info" is selected,
@@ -1474,6 +1507,7 @@ function initMap() {
           content: radfordHover,
         });
         radfordMarker.addListener('click', function(){
+          closeAllHover();
           radfordHoverCard.open(map, radfordMarker);
         });
         // when "click for more info" is selected,
@@ -1500,6 +1534,7 @@ function initMap() {
           content: reeveHover,
         });
           reeveMarker.addListener('click', function(){
+          closeAllHover();
           reeveHoverCard.open(map, reeveMarker);
         });
         // when "click for more info" is selected,
@@ -1565,6 +1600,7 @@ function initMap() {
           content: sageHover,
         });
         sageMarker.addListener('click', function(){
+          closeAllHover();
           sageHoverCard.open(map, sageMarker);
         });
         // when "click for more info" is selected,
@@ -1629,6 +1665,7 @@ function initMap() {
           content: scottHover,
         });
           scottMarker.addListener('click', function(){
+            closeAllHover();
             scottHoverCard.open(map, scottMarker);
         });
         // when "click for more info" is selected,
@@ -1655,6 +1692,7 @@ function initMap() {
           content: stewartHover,
         });
           stewartMarker.addListener('click', function(){
+          closeAllHover();
           stewartHoverCard.open(map, stewartMarker);
         });
         // when "click for more info" is selected,
@@ -1682,6 +1720,7 @@ function initMap() {
           content: recreationHover,
         });
         recreationMarker.addListener('click', function(){
+          closeAllHover();
           recreationHoverCard.open(map, recreationMarker);
         });
         // when "click for more info" is selected,
@@ -1731,6 +1770,7 @@ function initMap() {
           content: successHover,
         });
           successMarker.addListener('click', function(){
+          closeAllHover();
           successHoverCard.open(map, successMarker);
         });
         // when "click for more info" is selected,
@@ -1796,6 +1836,7 @@ function initMap() {
           content: swartHover,
         });
         swartMarker.addListener('click', function(){
+          closeAllHover();
           swartHoverCard.open(map, swartMarker);
         });
         // when "click for more info" is selected,
@@ -1836,6 +1877,7 @@ function initMap() {
           content: taylorHover,
         });
         taylorMarker.addListener('click', function(){
+          closeAllHover();
           taylorHoverCard.open(map, taylorMarker);
         });
         // when "click for more info" is selected,
@@ -1876,6 +1918,7 @@ function initMap() {
           content: titanHover,
         });
           titanMarker.addListener('click', function(){
+            closeAllHover();
             titanHoverCard.open(map, titanMarker);
         });
         // when "click for more info" is selected,
@@ -1917,6 +1960,7 @@ function initMap() {
           content: policeHover,
         });
         policeMarker.addListener('click', function(){
+          closeAllHover();
           policeHoverCard.open(map, policeMarker);
         });
         // when "click for more info" is selected,
@@ -1958,6 +2002,7 @@ function initMap() {
           content: websterHover,
         });
         websterMarker.addListener('click', function(){
+          closeAllHover();
           websterHoverCard.open(map, websterMarker);
         });
         // when "click for more info" is selected,
@@ -2387,72 +2432,95 @@ function initMap() {
 
         // accEnt hover cards for markers
         albeeAccEntMarker.addListener('click', function(){
+          closeAllHover();
           albeeHoverCard.open(map, albeeAccEntMarker);
         });
         acAccEntMarker.addListener('click', function(){
+          closeAllHover();
           acHoverCard.open(map,acAccEntMarker);
         });
         blackhawkAccEntMarker.addListener('click', function(){
+          closeAllHover();
           blackhawkHoverCard.open(map, blackhawkAccEntMarker);
         });
         equityAccEntMarker.addListener('click', function(){
+          closeAllHover();
         equityHoverCard.open(map, equityAccEntMarker);
         });
         clowAccEntMarker.addListener('click', function(){
+          closeAllHover();
           clowHoverCard.open(map, clowAccEntMarker);
         });
         dempseyAccEntMarker.addListener('click', function(){
+          closeAllHover();
           dempseyHoverCard.open(map, dempseyAccEntMarker);
         });
         donnerAccEntMarker.addListener('click', function(){
+          closeAllHover();
         donnerHoverCard.open(map, donnerAccEntMarker);
         });
         fletcherAccEntMarker.addListener('click', function(){
+          closeAllHover();
         fletcherHoverCard.open(map, fletcherAccEntMarker);
         });
         fredricAccEntMarker.addListener('click', function(){
+          closeAllHover();
           fredricHoverCard.open(map,fredricAccEntMarker);
         });
         gruenhagenAccEntMarker.addListener('click', function(){
+          closeAllHover();
           gruenhagenHoverCard.open(map,gruenhagenAccEntMarker);
         });
         halseyAccEntMarker.addListener('click', function(){
+          closeAllHover();
           halseyHoverCard.open(map, halseyAccEntMarker);
         });
         harringtonAccEntMarker.addListener('click', function(){
+          closeAllHover();
           harringtonHoverCard.open(map, harringtonAccEntMarker);
         });
         kolfAccEntMarker.addListener('click', function(){
+          closeAllHover();
           kolfHoverCard.open(map, kolfAccEntMarker);
         });
         nursingAccEntMarker.addListener('click', function(){
+          closeAllHover();
           nursingHoverCard.open(map, nursingAccEntMarker);
         });
         polkAccEntMarker.addListener('click', function(){
+          closeAllHover();
           polkHoverCard.open(map, polkAccEntMarker);
         });
         radfordAccEntMarker.addListener('click', function(){
+          closeAllHover();
         radfordHoverCard.open(map, radfordAccEntMarker);
         });
         reeveAccEntMarker.addListener('click', function(){
+          closeAllHover();
         reeveHoverCard.open(map, reeveAccEntMarker);
         });
         scottAccEntMarker.addListener('click', function(){
+          closeAllHover();
           scottHoverCard.open(map, scottAccEntMarker);
         });
         stewartAccEntMarker.addListener('click', function(){
+          closeAllHover();
         stewartHoverCard.open(map, stewartAccEntMarker);
         });
         successAccEntMarker.addListener('click', function(){
+          closeAllHover();
         successHoverCard.open(map, successAccEntMarker);
         });
         swartAccEntMarker.addListener('click', function(){
+          closeAllHover();
           swartHoverCard.open(map, swartAccEntMarker);
         });
         taylorAccEntMarker.addListener('click', function(){
+          closeAllHover();
         taylorHoverCard.open(map, taylorAccEntMarker);
         });
         websterAccEntMarker.addListener('click', function(){
+          closeAllHover();
         websterHoverCard.open(map, websterAccEntMarker);
         });
 
@@ -2982,39 +3050,51 @@ var eighteenAccParMarker = new google.maps.Marker({
 
   // sust hovers
   albeeSustMarker.addListener('click', function(){
+    closeAllHover();
     albeeHoverCard.open(map, albeeSustMarker);
   });
   alumniSustMarker.addListener('click', function(){
+    closeAllHover();
     alumniHoverCard.open(map, alumniSustMarker);
   });
   blackhawkSustMarker.addListener('click', function(){
+    closeAllHover();
     blackhawkHoverCard.open(map, blackhawkSustMarker);
   });
   biodigesterSustMarker.addListener('click', function(){
+    closeAllHover();
     biodigesterHoverCard.open(map, biodigesterSustMarker);
   });
   heatingSustMarker.addListener('click', function(){
+    closeAllHover();
     heatingHoverCard.open(map,heatingSustMarker);
   });
   horizonSustMarker.addListener('click', function(){
+    closeAllHover();
     horizonHoverCard.open(map, horizonSustMarker);
   });
   reeveSustMarker.addListener('click', function(){
+    closeAllHover();
   reeveHoverCard.open(map, reeveSustMarker);
   });
   sageSustMarker.addListener('click', function(){
+    closeAllHover();
     sageHoverCard.open(map, sageSustMarker);
   });
   recreationSustMarker.addListener('click', function(){
+    closeAllHover();
     recreationHoverCard.open(map, recreationSustMarker);
   });
   successSustMarker.addListener('click', function(){
+    closeAllHover();
   successHoverCard.open(map, successSustMarker);
   });
   taylorSustMarker.addListener('click', function(){
+    closeAllHover();
     taylorHoverCard.open(map, taylorSustMarker);
   });
   titanSustMarker.addListener('click', function(){
+    closeAllHover();
     titanHoverCard.open(map, titanSustMarker);
   });
 
@@ -3118,45 +3198,59 @@ var eighteenAccParMarker = new google.maps.Marker({
 
         // gender hover
         acGenderMarker.addListener('click', function(){
+          closeAllHover();
           acHoverCard.open(map,acGenderMarker);
         });
         blackhawkGenderMarker.addListener('click', function(){
+          closeAllHover();
           blackhawkHoverCard.open(map, blackhawkGenderMarker);
         });
         campusGenderMarker.addListener('click', function(){
+          closeAllHover();
         campusHoverCard.open(map, campusGenderMarker);
         });
         dempseyGenderMarker.addListener('click', function(){
+          closeAllHover();
           dempseyHoverCard.open(map, dempseyGenderMarker);
         });
         halseyGenderMarker.addListener('click', function(){
+          closeAllHover();
           halseyHoverCard.open(map, halseyGenderMarker);
         });
         harringtonGenderMarker.addListener('click', function(){
+          closeAllHover();
           harringtonHoverCard.open(map, harringtonGenderMarker);
         });
         kolfGenderMarker.addListener('click', function(){
+          closeAllHover();
           kolfHoverCard.open(map, kolfGenderMarker);
         });
         nursingGenderMarker.addListener('click', function(){
+          closeAllHover();
           nursingHoverCard.open(map, nursingGenderMarker);
         });
         reeveGenderMarker.addListener('click', function(){
+          closeAllHover();
         reeveHoverCard.open(map, reeveGenderMarker);
         });
         sageGenderMarker.addListener('click', function(){
+          closeAllHover();
           sageHoverCard.open(map, sageGenderMarker);
         });
         recreationGenderMarker.addListener('click', function(){
+          closeAllHover();
           recreationHoverCard.open(map, recreationGenderMarker);
         });
         successGenderMarker.addListener('click', function(){
+          closeAllHover();
         successHoverCard.open(map, successGenderMarker);
         });
         swartGenderMarker.addListener('click', function(){
+          closeAllHover();
           swartHoverCard.open(map, swartGenderMarker);
         });
         policeGenderMarker.addListener('click', function(){
+          closeAllHover();
           policeHoverCard.open(map, policeGenderMarker);
         });
 
@@ -3288,45 +3382,59 @@ var eighteenAccParMarker = new google.maps.Marker({
 
       // hover for AccaF
       albeeAccaFMarker.addListener('click', function(){
+        closeAllHover();
         albeeHoverCard.open(map, albeeAccaFMarker);
       });
       acAccaFMarker.addListener('click', function(){
+        closeAllHover();
         acHoverCard.open(map,acAccaFMarker);
       });
       ceramicsAccaFMarker.addListener('click', function(){
+        closeAllHover();
         ceramicsHoverCard.open(map, ceramicsAccaFMarker);
       });
       clowAccaFMarker.addListener('click', function(){
+        closeAllHover();
         clowHoverCard.open(map, clowAccaFMarker);
       });
       environmentalAccaFMarker.addListener('click', function(){
+        closeAllHover();
         environmentalHoverCard.open(map, environmentalAccaFMarker);
       });
       fredricAccaFMarker.addListener('click', function(){
+        closeAllHover();
         fredricHoverCard.open(map,fredricAccaFMarker);
       });
       halseyAccaFMarker.addListener('click', function(){
+        closeAllHover();
         halseyHoverCard.open(map, halseyAccaFMarker);
       });
       harringtonAccaFMarker.addListener('click', function(){
+        closeAllHover();
         harringtonHoverCard.open(map, harringtonAccaFMarker);
       });
       kolfAccaFMarker.addListener('click', function(){
+        closeAllHover();
         kolfHoverCard.open(map, kolfAccaFMarker);
       });
       swartAccaFMarker.addListener('click', function(){
+        closeAllHover();
         swartHoverCard.open(map, swartAccaFMarker);
       });
       nursingAccaFMarker.addListener('click', function(){
+        closeAllHover();
         nursingHoverCard.open(map, nursingAccaFMarker);
       });
       polkAccaFMarker.addListener('click', function(){
+        closeAllHover();
         polkHoverCard.open(map, polkAccaFMarker);
       });
       radfordAccaFMarker.addListener('click', function(){
+        closeAllHover();
         radfordHoverCard.open(map, radfordAccaFMarker);
       });
       sageAccaFMarker.addListener('click', function(){
+        closeAllHover();
         sageHoverCard.open(map, sageAccaFMarker);
       });
 
@@ -3402,22 +3510,28 @@ var eighteenAccParMarker = new google.maps.Marker({
       });
       // athletics marker hover
       albeeAthMarker.addListener('click', function(){
+        closeAllHover();
         albeeHoverCard.open(map, albeeAthMarker);
       });
       athleticAthMarker.addListener('click', function(){
+        closeAllHover();
           athleticHoverCard.open(map, athleticAthMarker);
       });
       baseballAthMarker.addListener('click', function(){
+        closeAllHover();
           baseballHoverCard.open(map, baseballAthMarker);
       });
       eastAthMarker.addListener('click', function(){
+        closeAllHover();
         eastHoverCard.open(map,eastAthMarker);
       });
 
       kolfAthMarker.addListener('click', function(){
+        closeAllHover();
         kolfHoverCard.open(map, kolfAthMarker);
       });
       titanAthMarker.addListener('click', function(){
+        closeAllHover();
           titanHoverCard.open(map, titanAthMarker);
       });
 
@@ -3465,15 +3579,19 @@ var eighteenAccParMarker = new google.maps.Marker({
 
       // AccaS hover
       equityAccaSMarker.addListener('click', function(){
+        closeAllHover();
         equityHoverCard.open(map, equityAccaSMarker);
       });
       nursingAccaSMarker.addListener('click', function(){
+        closeAllHover();
         nursingHoverCard.open(map, nursingAccaSMarker);
       });
       successAccaSMarker.addListener('click', function(){
+        closeAllHover();
         successHoverCard.open(map, successAccaSMarker);
       });
       swartAccaSMarker.addListener('click', function(){
+        closeAllHover();
         swartHoverCard.open(map, swartAccaSMarker);
       });
 
@@ -3541,30 +3659,39 @@ var eighteenAccParMarker = new google.maps.Marker({
 
       // CampS hover
       equityCampSMarker.addListener('click', function(){
+        closeAllHover();
         equityHoverCard.open(map, equityCampSMarker);
       });
       campusCampSMarker.addListener('click', function(){
+        closeAllHover();
           campusHoverCard.open(map, campusCampSMarker);
       });
       dempseyCampSMarker.addListener('click', function(){
+        closeAllHover();
         dempseyHoverCard.open(map, dempseyCampSMarker);
       });
       multiculturalCampSMarker.addListener('click', function(){
+        closeAllHover();
         multiculturalHoverCard.open(map, multiculturalCampSMarker);
       });
       pollockCampSMarker.addListener('click', function(){
+        closeAllHover();
           pollockHoverCard.open(map, pollockCampSMarker);
       });
       radfordCampSMarker.addListener('click', function(){
+        closeAllHover();
         radfordHoverCard.open(map, radfordCampSMarker);
       });
       reeveCampSMarker.addListener('click', function(){
+        closeAllHover();
         reeveHoverCard.open(map, reeveCampSMarker);
       });
       recreationCampSMarker.addListener('click', function(){
+        closeAllHover();
         recreationHoverCard.open(map, recreationCampSMarker);
       });
       successCampSMarker.addListener('click', function(){
+        closeAllHover();
         successHoverCard.open(map, successCampSMarker);
       });
 
@@ -3642,30 +3769,39 @@ var eighteenAccParMarker = new google.maps.Marker({
 
       // ResH hover
       donnerResHMarker.addListener('click', function(){
+        closeAllHover();
         donnerHoverCard.open(map, donnerResHMarker);
       });
       evansResHMarker.addListener('click', function(){
+        closeAllHover();
         evansHoverCard.open(map, evansResHMarker);
       });
       fletcherResHMarker.addListener('click', function(){
+        closeAllHover();
           fletcherHoverCard.open(map, fletcherResHMarker);
       });
       gruenhagenResHMarker.addListener('click', function(){
+        closeAllHover();
         gruenhagenHoverCard.open(map,gruenhagenResHMarker);
       });
       horizonResHMarker.addListener('click', function(){
+        closeAllHover();
           horizonHoverCard.open(map, horizonResHMarker);
       });
       stewartResHMarker.addListener('click', function(){
+        closeAllHover();
         stewartHoverCard.open(map, stewartResHMarker);
       });
       scottResHMarker.addListener('click', function(){
+        closeAllHover();
           scottHoverCard.open(map, scottResHMarker);
       });
       taylorResHMarker.addListener('click', function(){
+        closeAllHover();
         taylorHoverCard.open(map, taylorResHMarker);
       });
       websterResHMarker.addListener('click', function(){
+        closeAllHover();
         websterHoverCard.open(map, websterResHMarker);
       });
 
@@ -3729,21 +3865,27 @@ var eighteenAccParMarker = new google.maps.Marker({
 
       // dining hover
       blackhawkDiningMarker.addListener('click', function(){
+        closeAllHover();
         blackhawkHoverCard.open(map, blackhawkDiningMarker);
       });
       clowDiningMarker.addListener('click', function(){
+        closeAllHover();
         clowHoverCard.open(map, clowDiningMarker);
       });
       halseyDiningMarker.addListener('click', function(){
+        closeAllHover();
         halseyHoverCard.open(map, halseyDiningMarker);
       });
       reeveDiningMarker.addListener('click', function(){
+        closeAllHover();
         reeveHoverCard.open(map, reeveDiningMarker);
       });
       sageDiningMarker.addListener('click', function(){
+        closeAllHover();
         sageHoverCard.open(map, sageDiningMarker);
       });
       scottDiningMarker.addListener('click', function(){
+        closeAllHover();
           scottHoverCard.open(map, scottDiningMarker);
       });
       // set/remove dining
@@ -3784,9 +3926,11 @@ var eighteenAccParMarker = new google.maps.Marker({
 
     // StuR hover
     recreationStuRMarker.addListener('click', function(){
+      closeAllHover();
       recreationHoverCard.open(map, recreationStuRMarker);
     });
     reeveStuRMarker.addListener('click', function(){
+      closeAllHover();
       reeveHoverCard.open(map, reeveStuRMarker);
     });
     // StuR set/remove
@@ -3828,6 +3972,59 @@ var eighteenAccParMarker = new google.maps.Marker({
             removeStuR();
           }
         });
+
+        // close all hover cards
+        function closeAllHover(){
+          albeeHoverCard.close(map, albeeMarker);
+          baseballHoverCard.close(map, baseballMarker);
+          alumniHoverCard.close(map, alumniMarker);
+          acHoverCard.close(map,acMarker);
+          athleticHoverCard.close(map, athleticMarker);
+          blackhawkHoverCard.close(map, blackhawkMarker);
+          biodigesterHoverCard.close(map, biodigesterMarker);
+          buckstaffHoverCard.close(map,buckstaffMarker);
+          equityHoverCard.close(map, equityMarker);
+          campusHoverCard.close(map, campusMarker);
+          ceramicsHoverCard.close(map, ceramicsMarker);
+          clowHoverCard.close(map, clowMarker);
+          gardensHoverCard.close(map, gardensMarker);
+          dempseyHoverCard.close(map, dempseyMarker);
+          donnerHoverCard.close(map, donnerMarker);
+          eastHoverCard.close(map,eastMarker);
+          environmentalHoverCard.close(map, environmentalMarker);
+          evansHoverCard.close(map, evansMarker);
+          fletcherHoverCard.close(map, fletcherMarker);
+          fredricHoverCard.close(map,fredricMarker);
+          gruenhagenHoverCard.close(map,gruenhagenMarker);
+          halseyHoverCard.close(map, halseyMarker);
+          harringtonHoverCard.close(map, harringtonMarker);
+          heatingHoverCard.close(map,heatingMarker);
+          parkingRampHoverCard.close(map, parkingRampMarker);
+          horizonHoverCard.close(map, horizonMarker);
+          kolfHoverCard.close(map, kolfMarker);
+          lincolnHoverCard.close(map, lincolnMarker);
+          multiculturalHoverCard.close(map, multiculturalMarker);
+          nursingHoverCard.close(map, nursingMarker);
+          oviattHoverCard.close(map, oviattMarker);
+          pollockHoverCard.close(map, pollockMarker);
+          polkHoverCard.close(map, polkMarker);
+          radfordHoverCard.close(map, radfordMarker);
+          reeveHoverCard.close(map, reeveMarker);
+          sageHoverCard.close(map, sageMarker);
+          scottHoverCard.close(map, scottMarker);
+          stewartHoverCard.close(map, stewartMarker);
+          recreationHoverCard.close(map, recreationMarker);
+          successHoverCard.close(map, successMarker);
+          swartHoverCard.close(map, swartMarker);
+          taylorHoverCard.close(map, taylorMarker);
+          titanHoverCard.close(map, titanMarker);
+          policeHoverCard.close(map, policeMarker);
+          websterHoverCard.close(map, websterMarker);
+
+
+
+
+        }
 
 
   }

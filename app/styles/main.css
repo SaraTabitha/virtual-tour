@@ -403,11 +403,12 @@ html, body, main, .mdl-layout__content, .page-content, #map {
       float: left;
     }
     .hoverDiv{
-      display: inline-block;
+      /*display: inline-block;*/
       height: 100px;
       width: 170px;
       float: right;
       padding: 4px;
+
     }
     h1.headHover{
       position: relative;
