@@ -2671,6 +2671,25 @@ function initMap() {
           thirtyMarker.setMap(null);
           thirtynineMarker.setMap(null);
         }
+        // parking marker hovers + marker functionality
+        // lot 11 hover
+        var elevenHover = document.getElementById('elevenHover');
+        var elevenHoverCard = new google.maps.InfoWindow({
+          content: elevenHover,
+        });
+        elevenMarker.addListener('click', function(){
+          var check = $("#elevenHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          elevenHoverCard.open(map, elevenMarker);
+          $("#elevenHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#elevenHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
+        });
+
+
         // on click function for setting and removing markers
         $("#parkingLabel").click(function(){
           var checkParking = !$("#parkingLots").prop("checked");
@@ -4460,7 +4479,7 @@ var eighteenAccParMarker = new google.maps.Marker({
           titanHoverCard.close(map, titanMarker);
           policeHoverCard.close(map, policeMarker);
           websterHoverCard.close(map, websterMarker);
-
+          elevenHoverCard.close(map, elevenMarker);
 
 
 
