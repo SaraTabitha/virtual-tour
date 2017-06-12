@@ -2688,6 +2688,92 @@ function initMap() {
           closeAllHover();
           }
         });
+        // lot 35 hover
+        var thirtyfiveHover = document.getElementById('thirtyfiveHover');
+        var thirtyfiveHoverCard = new google.maps.InfoWindow({
+          content: thirtyfiveHover,
+        });
+        thirtyfiveMarker.addListener('click', function(){
+          var check = $("#thirtyfiveHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          thirtyfiveHoverCard.open(map, thirtyfiveMarker);
+          $("#thirtyfiveHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#thirtyfiveHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
+        });
+
+        // lot 27 hover
+        var twentysevenHover = document.getElementById('twentysevenHover');
+        var twentysevenHoverCard = new google.maps.InfoWindow({
+          content: twentysevenHover,
+        });
+        twentysevenMarker.addListener('click', function(){
+          var check = $("#twentysevenHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          twentysevenHoverCard.open(map, twentysevenMarker);
+          $("#twentysevenHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#twentysevenHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
+        });
+
+        // lot 21 hover
+        var twentyoneHover = document.getElementById('twentyoneHover');
+        var twentyoneHoverCard = new google.maps.InfoWindow({
+          content: twentyoneHover,
+        });
+        twentyoneMarker.addListener('click', function(){
+          var check = $("#twentyoneHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          twentyoneHoverCard.open(map, twentyoneMarker);
+          $("#twentyoneHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#twentyoneHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
+        });
+
+        // lot 26 hover
+        var twentysixHover = document.getElementById('twentysixHover');
+        var twentysixHoverCard = new google.maps.InfoWindow({
+          content: twentysixHover,
+        });
+        twentysixMarker.addListener('click', function(){
+          var check = $("#twentysixHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          twentysixHoverCard.open(map, twentysixMarker);
+          $("#twentysixHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#twentysixHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
+        });
+
+        // lot 4 hover
+        var fourHover = document.getElementById('fourHover');
+        var fourHoverCard = new google.maps.InfoWindow({
+          content: fourHover,
+        });
+        fourMarker.addListener('click', function(){
+          var check = $("#fourHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          fourHoverCard.open(map, fourMarker);
+          $("#fourHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#fourHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
+        });
+
+
 
 
         // on click function for setting and removing markers
@@ -4480,8 +4566,11 @@ var eighteenAccParMarker = new google.maps.Marker({
           policeHoverCard.close(map, policeMarker);
           websterHoverCard.close(map, websterMarker);
           elevenHoverCard.close(map, elevenMarker);
-
-
+          thirtyfiveHoverCard.close(map, thirtyfiveMarker);
+          twentysevenHoverCard.close(map, twentysevenMarker);
+          twentyoneHoverCard.close(map, twentyoneMarker);
+          twentysixHoverCard.close(map, twentysixMarker);
+          fourHoverCard.close(map, fourMarker);
 
         }
 
