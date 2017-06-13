@@ -3164,6 +3164,110 @@ function initMap() {
           }
         });
 
+        // lot 10 hover
+        var tenHover = document.getElementById('tenHover');
+        var tenHoverCard = new google.maps.InfoWindow({
+          content: tenHover,
+        });
+        tenMarker.addListener('click', function(){
+          var check = $("#tenHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          tenHoverCard.open(map, tenMarker);
+          $("#tenHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#tenHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
+        });
+
+        // lot 9a hover
+        var nineaHover = document.getElementById('nineaHover');
+        var nineaHoverCard = new google.maps.InfoWindow({
+          content: nineaHover,
+        });
+        nineaMarker.addListener('click', function(){
+          var check = $("#nineaHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          nineaHoverCard.open(map, nineaMarker);
+          $("#nineaHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#nineaHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
+        });
+
+        // lot 9 hover
+        var nineHover = document.getElementById('nineHover');
+        var nineHoverCard = new google.maps.InfoWindow({
+          content: nineHover,
+        });
+        nineMarker.addListener('click', function(){
+          var check = $("#nineHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          nineHoverCard.open(map, nineMarker);
+          $("#nineHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#nineHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
+        });
+
+        // lot 18 hover
+        var eighteenHover = document.getElementById('eighteenHover');
+        var eighteenHoverCard = new google.maps.InfoWindow({
+          content: eighteenHover,
+        });
+        eighteenMarker.addListener('click', function(){
+          var check = $("#eighteenHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          eighteenHoverCard.open(map, eighteenMarker);
+          $("#eighteenHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#eighteenHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
+        });
+
+        // lot 30 hover
+        var thirtyHover = document.getElementById('thirtyHover');
+        var thirtyHoverCard = new google.maps.InfoWindow({
+          content: thirtyHover,
+        });
+        thirtyMarker.addListener('click', function(){
+          var check = $("#thirtyHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          thirtyHoverCard.open(map, thirtyMarker);
+          $("#thirtyHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#thirtyHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
+        });
+
+        // lot 39 hover
+        var thirtynineHover = document.getElementById('thirtynineHover');
+        var thirtynineHoverCard = new google.maps.InfoWindow({
+          content: thirtynineHover,
+        });
+        thirtynineMarker.addListener('click', function(){
+          var check = $("#thirtynineHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          thirtynineHoverCard.open(map, thirtynineMarker);
+          $("#thirtynineHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#thirtynineHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
+        });
+
+
+
 
         // on click function for setting and removing markers
         $("#parkingLabel").click(function(){
@@ -4983,6 +5087,12 @@ var eighteenAccParMarker = new google.maps.Marker({
           twelveHoverCard.close(map, twelveMarker);
           sixaHoverCard.close(map, sixaMarker);
           sixHoverCard.close(map, sixMarker);
+          tenHoverCard.close(map, tenMarker);
+          nineaHoverCard.close(map, nineaMarker);
+          nineHoverCard.close(map, nineMarker);
+          eighteenHoverCard.close(map, eighteenMarker);
+          thirtyHoverCard.close(map, thirtyMarker);
+          thirtynineHoverCard.close(map, thirtynineMarker);
 
 
         }
