@@ -2858,6 +2858,243 @@ function initMap() {
           }
         });
 
+        // lot 8 hover
+        var eightHover = document.getElementById('eightHover');
+        var eightHoverCard = new google.maps.InfoWindow({
+          content: eightHover,
+        });
+        eightMarker.addListener('click', function(){
+          var check = $("#eightHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          eightHoverCard.open(map, eightMarker);
+          $("#eightHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#eightHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
+        });
+
+        // lot 33 hover
+        var thirtythreeHover = document.getElementById('thirtythreeHover');
+        var thirtythreeHoverCard = new google.maps.InfoWindow({
+          content: thirtythreeHover,
+        });
+        thirtythreeMarker.addListener('click', function(){
+          var check = $("#thirtythreeHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          thirtythreeHoverCard.open(map, thirtythreeMarker);
+          $("#thirtythreeHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#thirtythreeHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
+        });
+
+        // lot 34 hover
+        var thirtyfourHover = document.getElementById('thirtyfourHover');
+        var thirtyfourHoverCard = new google.maps.InfoWindow({
+          content: thirtyfourHover,
+        });
+        thirtyfourMarker.addListener('click', function(){
+          var check = $("#thirtyfourHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          thirtyfourHoverCard.open(map, thirtyfourMarker);
+          $("#thirtyfourHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#thirtyfourHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
+        });
+
+        // lot 28 hover
+        var twentyeightHover = document.getElementById('twentyeightHover');
+        var twentyeightHoverCard = new google.maps.InfoWindow({
+          content: twentyeightHover,
+        });
+        twentyeightMarker.addListener('click', function(){
+          var check = $("#twentyeightHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          twentyeightHoverCard.open(map, twentyeightMarker);
+          $("#twentyeightHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#twentyeightHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
+        });
+
+        // lot 23 hover
+        var twentythreeHover = document.getElementById('twentythreeHover');
+        var twentythreeHoverCard = new google.maps.InfoWindow({
+          content: twentythreeHover,
+        });
+        twentythreeMarker.addListener('click', function(){
+          var check = $("#twentythreeHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          twentythreeHoverCard.open(map, twentythreeMarker);
+          $("#twentythreeHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#twentythreeHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
+        });
+
+        // lot 14a hover
+        var fourteenaHover = document.getElementById('fourteenaHover');
+        var fourteenaHoverCard = new google.maps.InfoWindow({
+          content: fourteenaHover,
+        });
+        fourteenaMarker.addListener('click', function(){
+          var check = $("#fourteenaHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          fourteenaHoverCard.open(map, fourteenaMarker);
+          $("#fourteenaHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#fourteenaHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
+        });
+
+        // lot 14b hover
+        var fourteenbHover = document.getElementById('fourteenbHover');
+        var fourteenbHoverCard = new google.maps.InfoWindow({
+          content: fourteenbHover,
+        });
+        fourteenbMarker.addListener('click', function(){
+          var check = $("#fourteenbHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          fourteenbHoverCard.open(map, fourteenbMarker);
+          $("#fourteenbHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#fourteenbHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
+        });
+
+        // lot 14c hover
+        var fourteencHover = document.getElementById('fourteencHover');
+        var fourteencHoverCard = new google.maps.InfoWindow({
+          content: fourteencHover,
+        });
+        fourteencMarker.addListener('click', function(){
+          var check = $("#fourteencHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          fourteencHoverCard.open(map, fourteencMarker);
+          $("#fourteencHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#fourteencHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
+        });
+
+        // lot 7 hover
+        var sevenHover = document.getElementById('sevenHover');
+        var sevenHoverCard = new google.maps.InfoWindow({
+          content: sevenHover,
+        });
+        sevenMarker.addListener('click', function(){
+          var check = $("#sevenHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          sevenHoverCard.open(map, sevenMarker);
+          $("#sevenHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#sevenHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
+        });
+
+        // lot 5a hover
+        var fiveaHover = document.getElementById('fiveaHover');
+        var fiveaHoverCard = new google.maps.InfoWindow({
+          content: fiveaHover,
+        });
+        fiveaMarker.addListener('click', function(){
+          var check = $("#fiveaHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          fiveaHoverCard.open(map, fiveaMarker);
+          $("#fiveaHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#fiveaHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
+        });
+
+        // lot 5 hover
+        var fiveHover = document.getElementById('fiveHover');
+        var fiveHoverCard = new google.maps.InfoWindow({
+          content: fiveHover,
+        });
+        fiveMarker.addListener('click', function(){
+          var check = $("#fiveHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          fiveHoverCard.open(map, fiveMarker);
+          $("#fiveHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#fiveHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
+        });
+
+        // lot 7a hover
+        var sevenaHover = document.getElementById('sevenaHover');
+        var sevenaHoverCard = new google.maps.InfoWindow({
+          content: sevenaHover,
+        });
+        sevenaMarker.addListener('click', function(){
+          var check = $("#sevenaHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          sevenaHoverCard.open(map, sevenaMarker);
+          $("#sevenaHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#sevenaHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
+        });
+
+        // lot 15 hover
+        var fifteenHover = document.getElementById('fifteenHover');
+        var fifteenHoverCard = new google.maps.InfoWindow({
+          content: fifteenHover,
+        });
+        fifteenMarker.addListener('click', function(){
+          var check = $("#fifteenHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          fifteenHoverCard.open(map, fifteenMarker);
+          $("#fifteenHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#fifteenHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
+        });
+
+        // lot 32 hover
+        var thirtytwoHover = document.getElementById('thirtytwoHover');
+        var thirtytwoHoverCard = new google.maps.InfoWindow({
+          content: thirtytwoHover,
+        });
+        thirtytwoMarker.addListener('click', function(){
+          var check = $("#thirtytwoHover").hasClass("hoverOpen");
+          if (check === false){
+          closeAllHover();
+          thirtytwoHoverCard.open(map, thirtytwoMarker);
+          $("#thirtytwoHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#thirtytwoHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
+        });
 
 
         // on click function for setting and removing markers
@@ -4660,6 +4897,20 @@ var eighteenAccParMarker = new google.maps.Marker({
           seventeenHoverCard.close(map, seventeenMarker);
           twentynineHoverCard.close(map, twentynineMarker);
           twentyfiveHoverCard.close(map, twentyfiveMarker);
+          eightHoverCard.close(map, eightMarker);
+          thirtythreeHoverCard.close(map, thirtythreeMarker);
+          thirtyfourHoverCard.close(map, thirtyfourMarker);
+          twentyeightHoverCard.close(map, twentyeightMarker);
+          twentythreeHoverCard.close(map, twentythreeMarker);
+          fourteenaHoverCard.close(map, fourteenaMarker);
+          fourteenbHoverCard.close(map, fourteenbMarker);
+          fourteencHoverCard.close(map, fourteencMarker);
+          sevenHoverCard.close(map, sevenMarker);
+          fiveaHoverCard.close(map, fiveaMarker);
+          fiveHoverCard.close(map, fiveMarker);
+          sevenaHoverCard.close(map, sevenaMarker);
+          fifteenHoverCard.close(map, fifteenMarker);
+          thirtytwoHoverCard.close(map, thirtytwoMarker);
 
         }
 
