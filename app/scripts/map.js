@@ -3813,7 +3813,293 @@ var eighteenAccParMarker = new google.maps.Marker({
   position: parkingLots[32],
   icon: image
 });
-// will need to put hover for parking here
+//  hover event listeners for accessible parking here
+elevenAccParMarker.addListener('click', function(){
+  var check = $("#elevenHover").hasClass("hoverOpen");
+  if (check === false){
+  closeAllHover();
+  elevenHoverCard.open(map, elevenAccParMarker);
+  $("#elevenHover").addClass("hoverOpen");
+} else if (check === true){
+  $("#elevenHover").removeClass("hoverOpen");
+  closeAllHover();
+  }
+});
+fourAccParMarker.addListener('click', function(){
+  var check = $("#fourHover").hasClass("hoverOpen");
+  if (check === false){
+  closeAllHover();
+  fourHoverCard.open(map, fourAccParMarker);
+  $("#fourHover").addClass("hoverOpen");
+} else if (check === true){
+  $("#fourHover").removeClass("hoverOpen");
+  closeAllHover();
+  }
+});
+fouraAccParMarker.addListener('click', function(){
+  var check = $("#fouraHover").hasClass("hoverOpen");
+  if (check === false){
+  closeAllHover();
+  fouraHoverCard.open(map, fouraAccParMarker);
+  $("#fouraHover").addClass("hoverOpen");
+} else if (check === true){
+  $("#fouraHover").removeClass("hoverOpen");
+  closeAllHover();
+  }
+});
+sixteenAccParMarker.addListener('click', function(){
+  var check = $("#sixteenHover").hasClass("hoverOpen");
+  if (check === false){
+  closeAllHover();
+  sixteenHoverCard.open(map, sixteenAccParMarker);
+  $("#sixteenHover").addClass("hoverOpen");
+} else if (check === true){
+  $("#sixteenHover").removeClass("hoverOpen");
+  closeAllHover();
+  }
+});
+seventeenAccParMarker.addListener('click', function(){
+  var check = $("#seventeenHover").hasClass("hoverOpen");
+  if (check === false){
+  closeAllHover();
+  seventeenHoverCard.open(map, seventeenAccParMarker);
+  $("#seventeenHover").addClass("hoverOpen");
+} else if (check === true){
+  $("#seventeenHover").removeClass("hoverOpen");
+  closeAllHover();
+  }
+});
+twentynineAccParMarker.addListener('click', function(){
+  var check = $("#twentynineHover").hasClass("hoverOpen");
+  if (check === false){
+  closeAllHover();
+  twentynineHoverCard.open(map, twentynineAccParMarker);
+  $("#twentynineHover").addClass("hoverOpen");
+} else if (check === true){
+  $("#twentynineHover").removeClass("hoverOpen");
+  closeAllHover();
+  }
+});
+twentyfiveAccParMarker.addListener('click', function(){
+  var check = $("#twentyfiveHover").hasClass("hoverOpen");
+  if (check === false){
+  closeAllHover();
+  twentyfiveHoverCard.open(map, twentyfiveAccParMarker);
+  $("#twentyfiveHover").addClass("hoverOpen");
+} else if (check === true){
+  $("#twentyfiveHover").removeClass("hoverOpen");
+  closeAllHover();
+  }
+});
+thirtythreeAccParMarker.addListener('click', function(){
+  var check = $("#thirtythreeHover").hasClass("hoverOpen");
+  if (check === false){
+  closeAllHover();
+  thirtythreeHoverCard.open(map, thirtythreeAccParMarker);
+  $("#thirtythreeHover").addClass("hoverOpen");
+} else if (check === true){
+  $("#thirtythreeHover").removeClass("hoverOpen");
+  closeAllHover();
+  }
+});
+fourteenaAccParMarker.addListener('click', function(){
+  var check = $("#fourteenaHover").hasClass("hoverOpen");
+  if (check === false){
+  closeAllHover();
+  fourteenaHoverCard.open(map, fourteenaAccParMarker);
+  $("#fourteenaHover").addClass("hoverOpen");
+} else if (check === true){
+  $("#fourteenaHover").removeClass("hoverOpen");
+  closeAllHover();
+  }
+});
+sevenaAccParMarker.addListener('click', function(){
+  var check = $("#sevenaHover").hasClass("hoverOpen");
+  if (check === false){
+  closeAllHover();
+  sevenaHoverCard.open(map, sevenaAccParMarker);
+  $("#sevenaHover").addClass("hoverOpen");
+} else if (check === true){
+  $("#sevenaHover").removeClass("hoverOpen");
+  closeAllHover();
+  }
+});
+thirteenAccParMarker.addListener('click', function(){
+  var check = $("#thirteenHover").hasClass("hoverOpen");
+  if (check === false){
+  closeAllHover();
+  thirteenHoverCard.open(map, thirteenAccParMarker);
+  $("#thirteenHover").addClass("hoverOpen");
+} else if (check === true){
+  $("#thirteenHover").removeClass("hoverOpen");
+  closeAllHover();
+  }
+});
+thirtyfourAccParMarker.addListener('click', function(){
+  var check = $("#thirtyfourHover").hasClass("hoverOpen");
+  if (check === false){
+  closeAllHover();
+  thirtyfourHoverCard.open(map, thirtyfourAccParMarker);
+  $("#thirtyfourHover").addClass("hoverOpen");
+} else if (check === true){
+  $("#thirtyfourHover").removeClass("hoverOpen");
+  closeAllHover();
+  }
+});
+twentyeightAccParMarker.addListener('click', function(){
+  var check = $("#twentyeightHover").hasClass("hoverOpen");
+  if (check === false){
+  closeAllHover();
+  twentyeightHoverCard.open(map, twentyeightAccParMarker);
+  $("#twentyeightHover").addClass("hoverOpen");
+} else if (check === true){
+  $("#twentyeightHover").removeClass("hoverOpen");
+  closeAllHover();
+  }
+});
+twentythreeAccParMarker.addListener('click', function(){
+  var check = $("#twentythreeHover").hasClass("hoverOpen");
+  if (check === false){
+  closeAllHover();
+  twentythreeHoverCard.open(map, twentythreeAccParMarker);
+  $("#twentythreeHover").addClass("hoverOpen");
+} else if (check === true){
+  $("#twentythreeHover").removeClass("hoverOpen");
+  closeAllHover();
+  }
+});
+// womens center
+var womensCenterHover = document.getElementById('womensCenterHover');
+var womensCenterHoverCard = new google.maps.InfoWindow({
+  content: womensCenterHover,
+});
+womensCenterMarker.addListener('click', function(){
+  var check = $("#womensCenterHover").hasClass("hoverOpen");
+  if (check === false){
+  closeAllHover();
+  womensCenterHoverCard.open(map, womensCenterMarker);
+  $("#womensCenterHover").addClass("hoverOpen");
+} else if (check === true){
+  $("#womensCenterHover").removeClass("hoverOpen");
+  closeAllHover();
+  }
+});
+
+fifteenAccParMarker.addListener('click', function(){
+  var check = $("#fifteenHover").hasClass("hoverOpen");
+  if (check === false){
+  closeAllHover();
+  fifteenHoverCard.open(map, fifteenAccParMarker);
+  $("#fifteenHover").addClass("hoverOpen");
+} else if (check === true){
+  $("#fifteenHover").removeClass("hoverOpen");
+  closeAllHover();
+  }
+});
+thirtytwoAccParMarker.addListener('click', function(){
+  var check = $("#thirtytwoHover").hasClass("hoverOpen");
+  if (check === false){
+  closeAllHover();
+  thirtytwoHoverCard.open(map, thirtytwoAccParMarker);
+  $("#thirtytwoHover").addClass("hoverOpen");
+} else if (check === true){
+  $("#thirtytwoHover").removeClass("hoverOpen");
+  closeAllHover();
+  }
+});
+
+// parking ramp
+
+tenAccParMarker.addListener('click', function(){
+  var check = $("#tenHover").hasClass("hoverOpen");
+  if (check === false){
+  closeAllHover();
+  tenHoverCard.open(map, tenAccParMarker);
+  $("#tenHover").addClass("hoverOpen");
+} else if (check === true){
+  $("#tenHover").removeClass("hoverOpen");
+  closeAllHover();
+  }
+});
+twelveAccParMarker.addListener('click', function(){
+  var check = $("#twelveHover").hasClass("hoverOpen");
+  if (check === false){
+  closeAllHover();
+  twelveHoverCard.open(map, twelveAccParMarker);
+  $("#twelveHover").addClass("hoverOpen");
+} else if (check === true){
+  $("#twelveHover").removeClass("hoverOpen");
+  closeAllHover();
+  }
+});
+sixaAccParMarker.addListener('click', function(){
+  var check = $("#sixaHover").hasClass("hoverOpen");
+  if (check === false){
+  closeAllHover();
+  sixaHoverCard.open(map, sixaAccParMarker);
+  $("#sixaHover").addClass("hoverOpen");
+} else if (check === true){
+  $("#sixaHover").removeClass("hoverOpen");
+  closeAllHover();
+  }
+});
+sixAccParMarker.addListener('click', function(){
+  var check = $("#sixHover").hasClass("hoverOpen");
+  if (check === false){
+  closeAllHover();
+  sixHoverCard.open(map, sixAccParMarker);
+  $("#sixHover").addClass("hoverOpen");
+} else if (check === true){
+  $("#sixHover").removeClass("hoverOpen");
+  closeAllHover();
+  }
+});
+eighteenAccParMarker.addListener('click', function(){
+  var check = $("#eighteenHover").hasClass("hoverOpen");
+  if (check === false){
+  closeAllHover();
+  eighteenHoverCard.open(map, eighteenAccParMarker);
+  $("#eighteenHover").addClass("hoverOpen");
+} else if (check === true){
+  $("#eighteenHover").removeClass("hoverOpen");
+  closeAllHover();
+  }
+});
+
+// titan one
+var titanOneHover = document.getElementById('titanOneHover');
+var titanOneHoverCard = new google.maps.InfoWindow({
+  content: titanOneHover,
+});
+titanOneMarker.addListener('click', function(){
+  var check = $("#titanOneHover").hasClass("hoverOpen");
+  if (check === false){
+  closeAllHover();
+  titanOneHoverCard.open(map, titanOneMarker);
+  $("#titanOneHover").addClass("hoverOpen");
+} else if (check === true){
+  $("#titanOneHover").removeClass("hoverOpen");
+  closeAllHover();
+  }
+});
+// titan two
+var titanTwoHover = document.getElementById('titanTwoHover');
+var titanTwoHoverCard = new google.maps.InfoWindow({
+  content: titanTwoHover,
+});
+titanTwoMarker.addListener('click', function(){
+  var check = $("#titanTwoHover").hasClass("hoverOpen");
+  if (check === false){
+  closeAllHover();
+  titanTwoHoverCard.open(map, titanTwoMarker);
+  $("#titanTwoHover").addClass("hoverOpen");
+} else if (check === true){
+  $("#titanTwoHover").removeClass("hoverOpen");
+  closeAllHover();
+  }
+});
+
+
 
 // accessible parking set markers
         function setAccPar(){
@@ -5254,8 +5540,9 @@ var eighteenAccParMarker = new google.maps.Marker({
           eighteenHoverCard.close(map, eighteenMarker);
           thirtyHoverCard.close(map, thirtyMarker);
           thirtynineHoverCard.close(map, thirtynineMarker);
-
-
+          womensCenterHoverCard.close(map, womensCenterMarker);
+          titanOneHoverCard.close(map, titanOneMarker);
+          titanTwoHoverCard.close(map, titanTwoMarker);
         }
 
 

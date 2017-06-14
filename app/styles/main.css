@@ -430,12 +430,16 @@ html, body, main, .mdl-layout__content, .page-content, #map {
     .parkingHover{
       width: 100px;
     }
-    .lottwentythreeparkingHover{
+    #twentythreeHover{
       width: 130px;
     }
-    .lotsevenparkingHover{
+    #sevenHover{
       width: 115px;
     }
+    #titanOneHover,#titanTwoHover, #womensCenterHover{
+      width: 145px;
+    }
+
     h1.parkingHeadHover{
       font-size: 14px;
       font-weight: 900;
