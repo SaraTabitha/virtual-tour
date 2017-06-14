@@ -596,6 +596,9 @@ html, body, main, .mdl-layout__content, .page-content, #map {
     #taylorPopup{
       height: 445px;
     }
+    #parkingRampPopup{
+      height: 445px;
+    }
     /*popup stuff continued*/
     .popupBlack{
       background-color: #fdb515;
@@ -662,6 +665,12 @@ html, body, main, .mdl-layout__content, .page-content, #map {
     .imagePopup img{
       width: 400px;
       height: 250px;
+
+    }
+    #parkingRampParkingImage img{
+      width: auto;
+      height: auto;
+      margin-left: 65%;
     }
     .videoPopup{
       float: right;
@@ -728,6 +737,12 @@ html, body, main, .mdl-layout__content, .page-content, #map {
       display: none;
     }
     #heatingSustainability{
+      display: none;
+    }
+    #parkingRampParkingImage{
+      display: none;
+    }
+    #parkingRampParkingText{
       display: none;
     }
     #horizonSustainability{
