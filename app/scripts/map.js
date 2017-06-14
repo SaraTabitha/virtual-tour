@@ -3375,118 +3375,279 @@ function initMap() {
 
         // accEnt hover cards for markers
         albeeAccEntMarker.addListener('click', function(){
+          var check = $("#albeeHover").hasClass("hoverOpen");
+          if (check === false){
           closeAllHover();
           albeeHoverCard.open(map, albeeAccEntMarker);
+          $("#albeeHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#albeeHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
 
         acAccEntMarker.addListener('click', function(){
+          var check = $("#acHover").hasClass("hoverOpen");
+          if (check === false){
           closeAllHover();
           acHoverCard.open(map,acAccEntMarker);
+          $("#acHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#acHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
 
         blackhawkAccEntMarker.addListener('click', function(){
+          var check = $("#blackhawkHover").hasClass("hoverOpen");
+          if (check === false){
           closeAllHover();
-          blackhawkHoverCard.open(map, blackhawkAccEntMarker);
+            blackhawkHoverCard.open(map, blackhawkAccEntMarker);
+          $("#blackhawkHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#blackhawkHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
 
         equityAccEntMarker.addListener('click', function(){
+          var check = $("#equityHover").hasClass("hoverOpen");
+          if (check === false){
           closeAllHover();
-        equityHoverCard.open(map, equityAccEntMarker);
+          equityHoverCard.open(map, equityAccEntMarker);
+          $("#equityHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#equityHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
 
         clowAccEntMarker.addListener('click', function(){
+          var check = $("#clowHover").hasClass("hoverOpen");
+          if (check === false){
           closeAllHover();
           clowHoverCard.open(map, clowAccEntMarker);
+          $("#clowHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#clowHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
 
         dempseyAccEntMarker.addListener('click', function(){
+          var check = $("#dempseyHover").hasClass("hoverOpen");
+          if (check === false){
           closeAllHover();
           dempseyHoverCard.open(map, dempseyAccEntMarker);
+          $("#dempseyHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#dempseyHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
 
         donnerAccEntMarker.addListener('click', function(){
+          var check = $("#donnerHover").hasClass("hoverOpen");
+          if (check === false){
           closeAllHover();
-        donnerHoverCard.open(map, donnerAccEntMarker);
+          donnerHoverCard.open(map, donnerAccEntMarker);
+          $("#donnerHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#donnerHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
 
         fletcherAccEntMarker.addListener('click', function(){
+          var check = $("#fletcherHover").hasClass("hoverOpen");
+          if (check === false){
           closeAllHover();
-        fletcherHoverCard.open(map, fletcherAccEntMarker);
+          fletcherHoverCard.open(map, fletcherAccEntMarker);
+          $("#fletcherHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#fletcherHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
 
         fredricAccEntMarker.addListener('click', function(){
+          var check = $("#fredricHover").hasClass("hoverOpen");
+          if (check === false){
           closeAllHover();
           fredricHoverCard.open(map,fredricAccEntMarker);
+          $("#fredricHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#fredricHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
 
         gruenhagenAccEntMarker.addListener('click', function(){
+          var check = $("#gruenhagenHover").hasClass("hoverOpen");
+          if (check === false){
           closeAllHover();
           gruenhagenHoverCard.open(map,gruenhagenAccEntMarker);
+          $("#gruenhagenHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#gruenhagenHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
 
         halseyAccEntMarker.addListener('click', function(){
+          var check = $("#halseyHover").hasClass("hoverOpen");
+          if (check === false){
           closeAllHover();
           halseyHoverCard.open(map, halseyAccEntMarker);
+          $("#halseyHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#halseyHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
 
         harringtonAccEntMarker.addListener('click', function(){
+          var check = $("#harringtonHover").hasClass("hoverOpen");
+          if (check === false){
           closeAllHover();
           harringtonHoverCard.open(map, harringtonAccEntMarker);
+          $("#harringtonHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#harringtonHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
 
         kolfAccEntMarker.addListener('click', function(){
+          var check = $("#kolfHover").hasClass("hoverOpen");
+          if (check === false){
           closeAllHover();
           kolfHoverCard.open(map, kolfAccEntMarker);
+          $("#kolfHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#kolfHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
 
         nursingAccEntMarker.addListener('click', function(){
+          var check = $("#nursingHover").hasClass("hoverOpen");
+          if (check === false){
           closeAllHover();
           nursingHoverCard.open(map, nursingAccEntMarker);
+          $("#nursingHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#nursingHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
 
         polkAccEntMarker.addListener('click', function(){
+          var check = $("#polkHover").hasClass("hoverOpen");
+          if (check === false){
           closeAllHover();
           polkHoverCard.open(map, polkAccEntMarker);
+          $("#polkHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#polkHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
 
         radfordAccEntMarker.addListener('click', function(){
+          var check = $("#radfordHover").hasClass("hoverOpen");
+          if (check === false){
           closeAllHover();
-        radfordHoverCard.open(map, radfordAccEntMarker);
+          radfordHoverCard.open(map, radfordAccEntMarker);
+          $("#radfordHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#radfordHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
 
         reeveAccEntMarker.addListener('click', function(){
+          var check = $("#reeveHover").hasClass("hoverOpen");
+          if (check === false){
           closeAllHover();
-        reeveHoverCard.open(map, reeveAccEntMarker);
+          reeveHoverCard.open(map, reeveAccEntMarker);
+          $("#reeveHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#reeveHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
 
         scottAccEntMarker.addListener('click', function(){
+          var check = $("#scottHover").hasClass("hoverOpen");
+          if (check === false){
           closeAllHover();
           scottHoverCard.open(map, scottAccEntMarker);
+          $("#scottHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#scottHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
 
         stewartAccEntMarker.addListener('click', function(){
+          var check = $("#stewartHover").hasClass("hoverOpen");
+          if (check === false){
           closeAllHover();
-        stewartHoverCard.open(map, stewartAccEntMarker);
+          stewartHoverCard.open(map, stewartAccEntMarker);
+          $("#stewartHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#stewartHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
 
         successAccEntMarker.addListener('click', function(){
+          var check = $("#successHover").hasClass("hoverOpen");
+          if (check === false){
           closeAllHover();
-        successHoverCard.open(map, successAccEntMarker);
+          successHoverCard.open(map, successAccEntMarker);
+          $("#successHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#successHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
 
         swartAccEntMarker.addListener('click', function(){
+          var check = $("#swartHover").hasClass("hoverOpen");
+          if (check === false){
           closeAllHover();
           swartHoverCard.open(map, swartAccEntMarker);
+          $("#swartHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#swartHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
 
         taylorAccEntMarker.addListener('click', function(){
+          var check = $("#taylorHover").hasClass("hoverOpen");
+          if (check === false){
           closeAllHover();
-        taylorHoverCard.open(map, taylorAccEntMarker);
+          taylorHoverCard.open(map, taylorAccEntMarker);
+          $("#taylorHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#taylorHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
 
         websterAccEntMarker.addListener('click', function(){
+          var check = $("#websterHover").hasClass("hoverOpen");
+          if (check === false){
           closeAllHover();
-        websterHoverCard.open(map, websterAccEntMarker);
+          websterHoverCard.open(map, websterAccEntMarker);
+          $("#websterHover").addClass("hoverOpen");
+        } else if (check === true){
+          $("#websterHover").removeClass("hoverOpen");
+          closeAllHover();
+          }
         });
 
 
