@@ -631,8 +631,8 @@ html, body, main, .mdl-layout__content, .page-content, #map {
       display: inline;
       padding-left: 20px;
       color: #444;
-      top: 5px;
       font-family: 'Open Sans', sans-serif;
+      line-height: 2em;
     }
     ul#popupNav li.about{
       padding-left: 10px;
