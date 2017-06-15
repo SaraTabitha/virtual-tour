@@ -569,36 +569,32 @@ html, body, main, .mdl-layout__content, .page-content, #map {
 
     }
     /*specific popup modifications*/
-    #acPopup{
-      height: 450px;
-    }
-    #dempseyPopup{
-      height: 440px;
+
+    #pollockPopup{
+      height: 380px;
     }
     #donnerPopup{
       height: 400px;
     }
-    #fletcherPopup{
+    #fletcherPopup, #oviattPopup{
       height: 430px;
     }
-    #horizonPopup{
-      height: 515px;
+    #dempseyPopup{
+      height: 440px;
     }
-    #oviattPopup{
-      height: 430px;
+    #taylorPopup, #parkingRampPopup, #blackhawkPopup{
+      height: 445px;
     }
-    #pollockPopup{
-      height: 380px;
+    #acPopup, #reevePopup{
+      height: 450px;
     }
     #successPopup{
       height: 490px;
     }
-    #taylorPopup{
-      height: 445px;
+    #horizonPopup{
+      height: 515px;
     }
-    #parkingRampPopup{
-      height: 445px;
-    }
+
     /*popup stuff continued*/
     .popupBlack{
       background-color: #fdb515;
@@ -652,9 +648,6 @@ html, body, main, .mdl-layout__content, .page-content, #map {
       float: right;
       width: 300px;
     }
-    /*.popupTextNoImage{
-
-    }*/
     .heading{
       margin: 0px;
       font-family: "open-sans", sans-serif;
@@ -702,6 +695,52 @@ html, body, main, .mdl-layout__content, .page-content, #map {
       padding-top: 10px;
       margin-bottom: 0px;
     }
+
+    /*reeve dining padding*/
+    #reeveDiningText p{
+      margin-bottom: 4px;
+    }
+    #reeveDiningImage ul{
+      padding: 0px;
+      margin: 0px;
+      margin-left: 10px;
+      text-align: center;
+    }
+    #reeveDiningImage li{
+      position: relative;
+      display: inline;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 12px;
+      display: inline-block;
+      line-height: 1em;
+
+    }
+    #reeveDiningImage a{
+      text-decoration-line: none;
+    }
+    #reeveDiningImage a:hover{
+      text-decoration-line: underline;
+    }
+
+    /*blackhawk list styling*/
+    #blackhawkDiningText ul{
+      margin: 0px;
+      padding: 0px;
+
+    }
+    #blackhawkDiningText li{
+      margin: 0px;
+      padding: 0px;
+      padding-left: 20px;
+      text-indent: -15px;
+      list-style-type: circle;
+      list-style-position: inside;
+    }
+    #blackhawkDiningText p{
+      margin: 0px;
+      padding: 0px;
+    }
+
     /*styling for popup tabs*/
     #albeeTourVideo{
       display: none;
@@ -724,6 +763,18 @@ html, body, main, .mdl-layout__content, .page-content, #map {
     #blackhawkBathrooms{
       display: none;
     }
+    #blackhawkDiningImage{
+      display: none;
+    }
+    #blackhawkDiningText{
+      display: none;
+    }
+    #clowDiningImage{
+      display: none;
+    }
+    #clowDiningText{
+      display: none;
+    }
     #equityBathrooms{
       display: none;
     }
@@ -731,6 +782,12 @@ html, body, main, .mdl-layout__content, .page-content, #map {
       display: none;
     }
     #halseyBathrooms{
+      display: none;
+    }
+    #halseyDiningImage{
+      display: none;
+    }
+    #halseyDiningText{
       display: none;
     }
     #harringtonBathrooms{
@@ -772,6 +829,12 @@ html, body, main, .mdl-layout__content, .page-content, #map {
     #reeveBathrooms{
       display: none;
     }
+    #reeveDiningImage{
+      display: none;
+    }
+    #reeveDiningText{
+      display: none;
+    }
     #sageTourText{
       display: none;
     }
@@ -782,6 +845,18 @@ html, body, main, .mdl-layout__content, .page-content, #map {
       display: none;
     }
     #sageBathrooms{
+      display: none;
+    }
+    #sageDiningImage{
+      display: none;
+    }
+    #sageDiningText{
+      display: none;
+    }
+    #scottDiningImage{
+      display: none;
+    }
+    #scottDiningText{
       display: none;
     }
     #recreationSustainability{
