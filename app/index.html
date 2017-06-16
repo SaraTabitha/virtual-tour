@@ -54,14 +54,41 @@
     <!-- Your styles -->
     <link rel="stylesheet" media="(min-width: 1025px)"href="styles/main.css">
     <link rel="stylesheet" media="(max-width: 1025px)"href="styles/mobile.css">
+
     <!--jquery link from Google-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 </head>
 <body>
-<header>
+  <!-- mobile header -->
+  <div id="headerMobile" class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header mdl-color--yellow-A700">
+      <div class="mdl-layout__header-row">
+        <!-- Title -->
+        <span class="mdl-layout-title">Title</span>
+        <!-- Add spacer, to align navigation to the right -->
+        <div class="mdl-layout-spacer"></div>
+        <i class="material-icons md-32 grey666">search</i>
+        <i id="notif" class="material-icons md-32 grey666 menu">menu</i>
+        <!-- Navigation -->
+
+      </div>
+    </header>
+    <div class="mdl-layout__drawer-right">
+      <span class="mdl-layout-title">Notifications</span>
+      <i id="mobileDrawerClose" class="material-icons md-32 grey666">search</i>
+     </div>
+    <main class="mdl-layout__content">
+    </main>
+    <!-- <div class="mdl-layout__obfuscator-right"></div> -->
+  </div>
+  <!-- mobile header -->
+
+
+  <!-- web header -->
+<header id="headerWeb">
     <!--start of header -->
-    <div id="menu"class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-drawer">
+    <div id="menu" class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-drawer">
       <div class="mdl-layout__drawer">
         <!--header inside drawer-->
           <div class="mdl-layout__header-row mdl-color--yellow-A700 main">
@@ -405,15 +432,11 @@
       </div>
     </div>
     <!--end of header-->
-
 </header>
 
-   <main class="mdl-layout__content">
+
+   <main id="mainWeb" class="mdl-layout__content">
     <div class="page-content">
-      <!-- message for mobile -->
-      <div id="mobile">
-      <h1> Mobile Site Under Construction</p>
-      </div>
       <!-- POPUPS START -->
       <!--  -->
       <!--  ALBEE POPUP-->

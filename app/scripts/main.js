@@ -74,7 +74,30 @@
 
 // Your custom JavaScript goes here
 
+if(window.matchMedia("(min-width: 1025px)").matches){
+  // the view is at least 1025 px wide
 
+} else{
+  // the view is less than 1025 px wide
+  $('#notif').click(function(){
+   if($('.mdl-layout__drawer-right').hasClass('active')){
+      $('.mdl-layout__drawer-right').removeClass('active');
+   }
+   else{
+      $('.mdl-layout__drawer-right').addClass('active');
+   }
+  });
+
+  $('#mobileDrawerClose').click(function(){
+   if($('.mdl-layout__drawer-right').hasClass('active')){
+
+      $('.mdl-layout__drawer-right').addClass('active');
+   }
+   else{
+     $('.mdl-layout__drawer-right').removeClass('active');
+   }
+  });
+}
 
 
   // function for hiding all of the cards
@@ -600,4 +623,25 @@
   }
 });
   // End second Select All
+
+// mobile header right drawer
+$('#notif').click(function(){
+ if($('.mdl-layout__drawer-right').hasClass('active')){
+    $('.mdl-layout__drawer-right').removeClass('active');
+ }
+ else{
+    $('.mdl-layout__drawer-right').addClass('active');
+ }
+});
+
+$('.mdl-layout__obfuscator-right').click(function(){
+ if($('.mdl-layout__drawer-right').hasClass('active')){
+    $('.mdl-layout__drawer-right').removeClass('active');
+ }
+ else{
+    $('.mdl-layout__drawer-right').addClass('active');
+ }
+});
+
+
 })();
