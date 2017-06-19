@@ -79,24 +79,35 @@ if(window.matchMedia("(min-width: 1025px)").matches){
 
 } else{
   // the view is less than 1025 px wide
-  $('#notif').click(function(){
-   if($('.mdl-layout__drawer-right').hasClass('active')){
-      $('.mdl-layout__drawer-right').removeClass('active');
-   }
-   else{
-      $('.mdl-layout__drawer-right').addClass('active');
-   }
+  // $('#notif').click(function(){
+  //  if($('.mdl-layout__drawer-right').hasClass('active')){
+  //     $('.mdl-layout__drawer-right').removeClass('active');
+  //  }
+  //  else{
+  //     $('.mdl-layout__drawer-right').addClass('active');
+  //  }
+  // });
+
+//   $('#mobileDrawerClose').click(function(){
+//    if($('.mdl-layout__drawer-right').hasClass('active')){
+//
+//       $('.mdl-layout__drawer-right').addClass('active');
+//    }
+//    else{
+//      $('.mdl-layout__drawer-right').removeClass('active');
+//    }
+//   });
+// }
+
+$("#notif").click(function(){
+    $(".mdl-layout__drawer-right").animate(
+      {right: "0px"});
+  });
+    $("#mobileDrawerClose").click(function(){
+    $(".mdl-layout__drawer-right").animate(
+      {right:"-240px"});
   });
 
-  $('#mobileDrawerClose').click(function(){
-   if($('.mdl-layout__drawer-right').hasClass('active')){
-
-      $('.mdl-layout__drawer-right').addClass('active');
-   }
-   else{
-     $('.mdl-layout__drawer-right').removeClass('active');
-   }
-  });
 }
 
 
