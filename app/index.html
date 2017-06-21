@@ -65,10 +65,21 @@
     <header class="mdl-layout__header mdl-color--yellow-A700">
       <div class="mdl-layout__header-row">
         <!-- Title -->
-        <span class="mdl-layout-title">Title</span>
+        <div class=" mdl-color--yellow-A700 main">
+        <img class="mdl-layout-title watermark" src="http://www.uwosh.edu/img/parts/wordmark-large.png">
+
+        </div>
         <!-- Add spacer, to align navigation to the right -->
         <div class="mdl-layout-spacer"></div>
-        <i class="material-icons md-32 grey666">search</i>
+        <div id="search" class="mdl-color--yellow-A700">
+        <div  class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+          <label  class=" searchLabel mdl-button mdl-js-button mdl-button--icon" for="sample6">
+            <i class="material-icons searchLabel">search</i>
+          </label>
+          <div class="mdl-textfield__expandable-holder">
+            <input class="mdl-textfield__input" type="text" id="sample6">
+            <label class=" searchLabel mdl-textfield__label" for="sample-expandable">Expandable Input</label>
+          </div>
         <i id="notif" class="material-icons md-32 grey666 menu">menu</i>
         <!-- Navigation -->
 
@@ -80,7 +91,6 @@
      </div>
     <main class="mdl-layout__content">
     </main>
-    <!-- <div class="mdl-layout__obfuscator-right"></div> -->
   </div>
   <!-- mobile header -->
 
@@ -89,7 +99,7 @@
 <header id="headerWeb">
     <!--start of header -->
     <div id="menu" class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-drawer">
-      <div class="mdl-layout__drawer">
+      <div id="menuDrawer" class="mdl-layout__drawer">
         <!--header inside drawer-->
           <div class="mdl-layout__header-row mdl-color--yellow-A700 main">
             <img class="mdl-layout-title watermark" src="http://www.uwosh.edu/img/parts/wordmark-large.png">
@@ -106,8 +116,11 @@
             </div>
           </div>
         </div>
+
           <!--contents of drawer-->
           <!--black strip-->
+          <div id="drawerContents" class="mdl-layout mdl-layout--fixed-drawer">
+            <div id="drawerDivTwo" class="mdl-layout__drawer">
             <div class="mdl-layout__header-row mdl-color--black drawer">
               <span class="mdl-layout-title mdl-color-text--white text">UW Oshkosh Virtual Tour</span>
             </div>
@@ -262,6 +275,8 @@
                           <li class="tourItem text">VR</li>
                       </ul></div>
           </div>
+          <div>
+    </header>
           <!-- academic facilities card -->
             <div id="accFCard" class="demo-card-wide mdl-card mdl-shadow--2dp">
               <button id="accFClose" class="closeButton mdl-color-text--black mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
@@ -432,7 +447,7 @@
       </div>
     </div>
     <!--end of header-->
-</header>
+<!-- </header> -->
 
 
    <main id="mainWeb" class="mdl-layout__content">

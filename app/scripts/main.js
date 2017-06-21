@@ -74,43 +74,43 @@
 
 // Your custom JavaScript goes here
 
+//
+// mobile
+//
 if(window.matchMedia("(min-width: 1025px)").matches){
   // the view is at least 1025 px wide
 
 } else{
   // the view is less than 1025 px wide
-  // $('#notif').click(function(){
-  //  if($('.mdl-layout__drawer-right').hasClass('active')){
-  //     $('.mdl-layout__drawer-right').removeClass('active');
-  //  }
-  //  else{
-  //     $('.mdl-layout__drawer-right').addClass('active');
-  //  }
-  // });
+ $("#menu").removeClass("mdl-layout--fixed-drawer");
+ $("#menu").addClass("mdl-layout__drawer-right");
 
-//   $('#mobileDrawerClose').click(function(){
-//    if($('.mdl-layout__drawer-right').hasClass('active')){
-//
-//       $('.mdl-layout__drawer-right').addClass('active');
-//    }
-//    else{
-//      $('.mdl-layout__drawer-right').removeClass('active');
-//    }
-//   });
-// }
+ $("#menu").removeClass("mdl-layout--fixed-header");
 
+ $("#menuDrawer").removeClass("mdl-layout__drawer");
+ $("#menuDrawer").addClass("mdl-layout__drawer-right");
+
+ $("#drawerContents").removeClass(" mdl-layout--fixed-drawer");
+ $("#drawerContents").addClass("mdl-layout__drawer-right");
+
+ $("#drawerDivTwo").removeClass("mdl-layout__drawer");
+ $("#drawerContents").addClass("mdl-layout__drawer-right");
+// mobile nav opens
 $("#notif").click(function(){
     $(".mdl-layout__drawer-right").animate(
       {right: "0px"});
   });
-    $("#mobileDrawerClose").click(function(){
-    $(".mdl-layout__drawer-right").animate(
+// mobile nav closes
+$("#mobileDrawerClose").click(function(){
+    $("#menu").animate(
       {right:"-240px"});
   });
 
 }
 
-
+//
+// web
+//
   // function for hiding all of the cards
   function hideAll(){
     $("#athCard").hide();
