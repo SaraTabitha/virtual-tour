@@ -259,13 +259,19 @@ will be correctly compiled during `gulp serve` and `gulp`
  }
 
 /*start my css*/
+/*#menu{
+  display: none;
+}
+#drawerContents{
+  visibility: visible;
+}*/
 .mdl-layout__header{
   height: 64px;
 }
- .mdl-layout__drawer-right>.mdl-layout-title {
+ /*.mdl-layout__drawer-right>.mdl-layout-title {
      line-height: 56px;
      padding-left: 16px;
- }
+ }*/
  .mdl-layout__header-row {
   border-top: 5px solid white;
   padding: 0px;
@@ -300,12 +306,7 @@ float: left;
   padding-right: 20px;
 }
 
-#drawerContents{
-}
-/*
-#mainWeb{
-  display: none;
-}*/
+
 
 h1{
   color: white;

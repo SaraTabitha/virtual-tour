@@ -82,19 +82,40 @@ if(window.matchMedia("(min-width: 1025px)").matches){
 
 } else{
   // the view is less than 1025 px wide
+ // $("#menu").removeClass("mdl-layout--fixed-drawer");
+ // $("#menu").removeClass("mdl-layout");
+ // $("#menu").removeClass("mdl-js-layout");
+ // $("#menu").removeClass("mdl-layout--fixed-header");
+ // $("#menu").addClass("mdl-layout__drawer-right");
+ // $("#menu").addClass("mdl-layout");
+ // $("#menu").addClass("mdl-js-layout");
+ //
+ //
+ // $("#menu").removeClass("mdl-layout--fixed-header");
+ //
+ // $("#menuDrawer").removeClass("mdl-layout__drawer");
+ // $("#menuDrawer").addClass("mdl-layout__drawer-right");
+ //
+ // $("#drawerContents").removeClass(" mdl-layout--fixed-drawer");
+ // $("#drawerContents").addClass("mdl-layout__drawer-right");
+ // // $("#drawerContents").addClass("mdl-layout");
+ // // $("#drawerContents").addClass("mdl-js-layout");
+ //
+ // $("#drawerDivTwo").removeClass("mdl-layout__drawer");
+ // $("#drawerContents").addClass("mdl-layout__drawer-right");
+
  $("#menu").removeClass("mdl-layout--fixed-drawer");
- $("#menu").addClass("mdl-layout__drawer-right");
-
- $("#menu").removeClass("mdl-layout--fixed-header");
-
  $("#menuDrawer").removeClass("mdl-layout__drawer");
- $("#menuDrawer").addClass("mdl-layout__drawer-right");
+ $("#menuDrawer").addClass("mdl-layout__header");
 
- $("#drawerContents").removeClass(" mdl-layout--fixed-drawer");
+ $("#mobileSpacer").addClass("mdl-layout-spacer");
+
+ $("#drawerContents").removeClass("mdl-layout");
+ $("#drawerContents").removeClass("mdl-layout--fixed-drawer");
  $("#drawerContents").addClass("mdl-layout__drawer-right");
 
  $("#drawerDivTwo").removeClass("mdl-layout__drawer");
- $("#drawerContents").addClass("mdl-layout__drawer-right");
+
 // mobile nav opens
 $("#notif").click(function(){
     $(".mdl-layout__drawer-right").animate(
