@@ -105,7 +105,7 @@ $("#notif").click(function(){
 // mobile nav closes
 $("#mobileDrawerClose").click(function(){
     $("#menu").animate(
-      {right:"-240px"});
+      {right:"-380px"});
   });
 
 }
