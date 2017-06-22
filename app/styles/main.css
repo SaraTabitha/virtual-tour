@@ -235,7 +235,10 @@ html, body {
 .mdl-layout__drawer {
   width: 380px;
 }
-
+/*hide menu button used only in mobile*/
+#notif{
+  display: none;
+}
 /*styling for search*/
 #search{
   height: 30px;
