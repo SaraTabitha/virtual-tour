@@ -259,53 +259,57 @@ will be correctly compiled during `gulp serve` and `gulp`
  }
 
 /*start my css*/
-/*#menu{
-  display: none;
+#menuDrawer{
+  width: 100%;
 }
-#drawerContents{
-  visibility: visible;
-}*/
-.mdl-layout__header{
-  height: 64px;
-}
- /*.mdl-layout__drawer-right>.mdl-layout-title {
-     line-height: 56px;
-     padding-left: 16px;
- }*/
+
  .mdl-layout__header-row {
   border-top: 5px solid white;
   padding: 0px;
   margin: 0;
 }
-.mdl-layout-title.watermark{
+#mobileHeader > img{
   height: 54.5px;
   width: 111.5px;
+  position: relative;
+  top: -8%;
+
 }
-#headerMobile > header > div > div.mdl-color--yellow-A700.main > img{
-  position: absolute;
-  top: 4px;
+#mobileHeader{
+  height: 70px;
+  width: 100%;
 }
-#search{
+
+#mobileSearch{
 padding: 0px;
 position: relative;
-float: left;
+float: right;
+top: -40px;
+left: -12%;
 }
-#search > div > label{
-  position: relative;
-  top: -5px;
-  right: -30px;
+
+#mobileSearch > div > label{
+  padding-right: 10px;
+  float: right;
+  top: -35px;
 }
-#search > div{
+
+#mobileSearch > label{
+  top: 0px;
+}
+#mobileSearch > div{
   padding: 0px;
 }
 /*set max width of search text field*/
 #sample6{
  max-width: 100px;
+
 }
 #notif{
-  padding-right: 20px;
+  position: relative;
+  left: 90%;
+  top: -35px;
 }
-
 
 
 h1{

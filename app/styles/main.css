@@ -240,10 +240,16 @@ html, body {
   display: none;
 }
 /*styling for search*/
-#search{
+#webSearch{
   height: 30px;
   margin: 0px;
+  
 }
+
+#mobileHeader{
+  height: 110px;
+}
+
 .mdl-textfield{
   top: 0px;
   bottom: 0px;
