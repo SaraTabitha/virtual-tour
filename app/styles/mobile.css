@@ -466,7 +466,9 @@ html, body, main, .mdl-layout__content, .page-content, #map {
   #map > div > div > div:nth-child(2){
     margin-left: 60% !important;
   }
-
+  #map > div > div > div:nth-child(4) > div > div:nth-child(1){
+    width: 120px !important;
+  }
 /*map data copyright Google */
   @media screen and (max-width: 1024px) {
 
@@ -540,6 +542,53 @@ html, body, main, .mdl-layout__content, .page-content, #map {
           padding-right: 10px !important;
       }
   }
+  @media screen and (max-width: 415px) {
+
+        #map > div > div > div:nth-child(4){
+          position: fixed !important;
+          bottom: 2% !important;
+          left: 22% !important;
+          padding-right: 10px !important;
+      }
+  }
+  @media screen and (max-width: 400px) {
+
+        #map > div > div > div:nth-child(4){
+          position: fixed !important;
+          bottom: 2% !important;
+          left: 22% !important;
+          padding-right: 10px !important;
+      }
+  }
+  @media screen and (max-width: 380px) {
+
+        #map > div > div > div:nth-child(4){
+          position: fixed !important;
+          bottom: 2% !important;
+          left: 20% !important;
+          padding-right: 10px !important;
+      }
+  }
+  @media screen and (max-width: 375px) {
+
+        #map > div > div > div:nth-child(4){
+          position: fixed !important;
+          bottom: 2% !important;
+          left: 5% !important;
+          padding-right: 10px !important;
+      }
+  }
+  @media screen and (max-width: 320px) {
+
+        #map > div > div > div:nth-child(4){
+          position: fixed !important;
+          bottom: 2% !important;
+          left: 2% !important;
+          padding-right: 10px !important;
+      }
+  }
+
+
 
   /*terms of use*/
   #map > div > div > div.gmnoprint.gm-style-cc{
@@ -615,6 +664,24 @@ html, body, main, .mdl-layout__content, .page-content, #map {
           bottom: 2% !important;
           left: 55% !important;
           padding-right: 10px !important;
+      }
+  }
+  @media screen and (max-width: 375px) {
+
+        #map > div > div > div.gmnoprint.gm-style-cc{
+          position: fixed !important;
+          bottom: 2% !important;
+          left: 45% !important;
+          padding-right: 10px !important;
+      }
+      @media screen and (max-width: 320px) {
+
+            #map > div > div > div.gmnoprint.gm-style-cc{
+              position: fixed !important;
+              bottom: 2% !important;
+              left: 41% !important;
+              padding-right: 10px !important;
+          }
       }
   }
 
@@ -696,6 +763,24 @@ html, body, main, .mdl-layout__content, .page-content, #map {
           padding-right: 10px !important;
       }
   }
+  @media screen and (max-width: 375px) {
+
+        #map > div > div > div:nth-child(8){
+          position: fixed !important;
+          bottom: 2% !important;
+          left: 70% !important;
+          padding-right: 10px !important;
+      }
+  }
+  @media screen and (max-width: 320px) {
+
+        #map > div > div > div:nth-child(8){
+          position: fixed !important;
+          bottom: 2% !important;
+          left: 68% !important;
+          padding-right: 10px !important;
+      }
+  }
 
   /*google logo*/
   #map > div > div > div:nth-child(2){
@@ -703,11 +788,11 @@ html, body, main, .mdl-layout__content, .page-content, #map {
     bottom: 1% !important;
     left: -59% !important;
   }
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 375px) {
 
     #map > div > div > div:nth-child(2){
       position: fixed !important;
-      bottom: 1.5% !important;
+      bottom: 4% !important;
       left: -59% !important;
     }
   }
@@ -717,7 +802,41 @@ html, body, main, .mdl-layout__content, .page-content, #map {
     position: fixed !important;
     bottom: 15% !important;
   }
+  @media screen and (max-height: 750px) {
 
+    #map > div > div > div.gmnoprint.gm-bundled-control.gm-bundled-control-on-bottom{
+      position: fixed !important;
+      bottom: 16% !important;
+    }
+  }
+  @media screen and (max-height: 700px) {
+
+    #map > div > div > div.gmnoprint.gm-bundled-control.gm-bundled-control-on-bottom{
+      position: fixed !important;
+      bottom: 17% !important;
+    }
+  }
+  @media screen and (max-height: 650px) {
+
+    #map > div > div > div.gmnoprint.gm-bundled-control.gm-bundled-control-on-bottom{
+      position: fixed !important;
+      bottom: 18% !important;
+    }
+  }
+  @media screen and (max-height: 600px) {
+
+    #map > div > div > div.gmnoprint.gm-bundled-control.gm-bundled-control-on-bottom{
+      position: fixed !important;
+      bottom: 20% !important;
+    }
+  }
+  @media screen and (max-height: 550px) {
+
+    #map > div > div > div.gmnoprint.gm-bundled-control.gm-bundled-control-on-bottom{
+      position: fixed !important;
+      bottom: 21% !important;
+    }
+  }
 
 
 
