@@ -333,22 +333,7 @@ if(window.matchMedia("(min-width: 1025px)").matches){
     // end Student Recreation
     //
 
-    // Start hide/show 360 navigation items
-    $("#linkOne").click(function(){
-      // div toggle
-      $("#linkOneOptions").toggle("slow");
-      // + symbol toggle
-      $("#addOne").toggle();
-    });
-    $("#linkTwo").click(function(){
-      $("#linkTwoOptions").toggle("slow");
-      $("#addTwo").toggle();
-    });
-    $("#linkThree").click(function(){
-      $("#linkThreeOptions").toggle("slow");
-      $("#addThree").toggle();
-    });
-    // End hide/show 360 navigation items
+
 
       // NEED FOLLOWING because without it after using the select all,
       // the user cannot recheck the individual boxes properly
@@ -681,28 +666,25 @@ $("#accFClose").click(function(){
 // end academic facilities
 
 }
+// Start hide/show 360 navigation items
+$("#linkOne").click(function(){
+  // div toggle
+  $("#linkOneOptions").toggle("slow");
+  // + symbol toggle
+  $("#addOne").toggle();
+});
+$("#linkTwo").click(function(){
+  $("#linkTwoOptions").toggle("slow");
+  $("#addTwo").toggle();
+});
+$("#linkThree").click(function(){
+  $("#linkThreeOptions").toggle("slow");
+  $("#addThree").toggle();
+});
+// End hide/show 360 navigation items
 
 
 
-
-// // mobile header right drawer
-// $('#notif').click(function(){
-//  if($('.mdl-layout__drawer-right').hasClass('active')){
-//     $('.mdl-layout__drawer-right').removeClass('active');
-//  }
-//  else{
-//     $('.mdl-layout__drawer-right').addClass('active');
-//  }
-// });
-//
-// $('.mdl-layout__obfuscator-right').click(function(){
-//  if($('.mdl-layout__drawer-right').hasClass('active')){
-//     $('.mdl-layout__drawer-right').removeClass('active');
-//  }
-//  else{
-//     $('.mdl-layout__drawer-right').addClass('active');
-//  }
-// });
 
 
 })();
