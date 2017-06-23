@@ -96,7 +96,6 @@ if(window.matchMedia("(min-width: 1025px)").matches){
  $("#drawerDivTwo").removeClass("mdl-layout__drawer");
  $("#webSearch").removeClass("mdl-color--yellow-A700");
 
-
 // mobile nav opens
 $("#notif").click(function(){
     $(".mdl-layout__drawer-right").animate(
