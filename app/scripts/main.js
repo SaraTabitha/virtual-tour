@@ -97,18 +97,23 @@ if(window.matchMedia("(min-width: 1025px)").matches){
  $("#webSearch").removeClass("mdl-color--yellow-A700");
 
 // mobile nav opens
-$("#notif").click(function(){
-    $(".mdl-layout__drawer-right").animate(
-      {right: "0px"});
-  });
-// mobile nav closes
-$("#mobileDrawerClose").click(function(){
-    $("#menu").animate(
-      {right:"-380px"});
-  });
+
 
 }
 
+$("#notif").click(function(){
+var check = $("#drawerContents").hasClass("clicked");
+if (check === false){
+
+  $(".mdl-layout__drawer-right").animate(
+    {right: "0px"});
+    $("#drawerContents").addClass("clicked");
+} else if (check === true){
+  $("#drawerContents").removeClass("clicked");
+  $(".mdl-layout__drawer-right").animate(
+    {right:"-380px"});
+}
+});
 //
 // web
 //

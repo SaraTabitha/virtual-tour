@@ -243,7 +243,7 @@ html, body {
 #webSearch{
   height: 30px;
   margin: 0px;
-  
+
 }
 
 #mobileHeader{
@@ -372,6 +372,7 @@ span.mdl-navigation__link.color666.text{
 .mdl-navigation.mine:hover{
   background-color: #a2a1a2;
 }
+
 .optionsBox{
 padding: 6px 0px;
 }

@@ -259,14 +259,22 @@ will be correctly compiled during `gulp serve` and `gulp`
  }
 
 /*start my css*/
+#menu{
+  overflow: hidden;
+}
 #menuDrawer{
   width: 100%;
+  height: 70px;
+
 }
 
  .mdl-layout__header-row {
-  border-top: 5px solid white;
+   height: 45px;
   padding: 0px;
   margin: 0;
+}
+.mdl-layout__header-row.drawer{
+  height: 30px;
 }
 #mobileHeader > img{
   height: 54.5px;
@@ -279,6 +287,7 @@ will be correctly compiled during `gulp serve` and `gulp`
   height: 70px;
 }
 #mobileHeader{
+  border-top: 5px solid white;
   height: 70px;
   width: 100%;
 }
@@ -316,11 +325,29 @@ left: -14%;
 
 #drawerContents{
   width: 380px;
+  /*must be auto otherwise the scrollbar doesn't work*/
+  height: auto;
   float: right;
+  top: 70px;
+  bottom: 0px;
   right: -50%;
+  overflow-x: hidden;
 
 }
+@media screen and (max-width: 400px) {
 
+  #drawerContents{
+    width: 300px;
+  }
+}
+
+.mdl-textfield{
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  padding: 0px 10px;
+}
 /*styling copied over from web*/
 /*grey coloring*/
 .background666{
@@ -335,8 +362,19 @@ a.link{
 /*all layout titles*/
 .mdl-layout-title {
   font-size: 16px;
+  padding-left: 15px;
 
 }
+
+#selectAllOne{
+  position: relative;
+  left: 20px;
+}
+#selectAllTwo{
+  position: relative;
+  left: 20px;
+}
+
 /*class for styling all text*/
 .text {
   font-family: 'Open Sans', sans-serif;
@@ -344,9 +382,9 @@ a.link{
 /*360 grey styling*/
 .mdl-layout-title.threeSixty{
   color: #d0cece;
-  /*position: relative;
-  left: 25px;*/
+
 }
+
 /*all checkbox lines*/
  .mdl-checkbox__label {
   font-size: 16px;
@@ -411,6 +449,21 @@ span.mdl-navigation__link{
 }
 span.mdl-navigation__link.color666.text{
   color: #666766;
+}
+#linkOne > span{
+  width: 100%;
+  height: 25px;
+  padding: 5px;
+}
+#linkTwo > span{
+  width: 100%;
+  height: 25px;
+  padding: 5px;
+}
+#linkThree > span{
+  width: 100%;
+  height: 25px;
+  padding: 5px;
 }
 /*hide list items for 360 tour*/
 .tourDrop{
@@ -837,7 +890,41 @@ html, body, main, .mdl-layout__content, .page-content, #map {
       bottom: 21% !important;
     }
   }
+  @media screen and (max-height: 500px) {
 
+    #map > div > div > div.gmnoprint.gm-bundled-control.gm-bundled-control-on-bottom{
+      position: fixed !important;
+      bottom: 22% !important;
+    }
+  }
+  @media screen and (max-height: 450px) {
+
+    #map > div > div > div.gmnoprint.gm-bundled-control.gm-bundled-control-on-bottom{
+      position: fixed !important;
+      bottom: 26% !important;
+    }
+  }
+  @media screen and (max-height: 400px) {
+
+    #map > div > div > div.gmnoprint.gm-bundled-control.gm-bundled-control-on-bottom{
+      position: fixed !important;
+      bottom: 28% !important;
+    }
+  }
+  @media screen and (max-height: 350px) {
+
+    #map > div > div > div.gmnoprint.gm-bundled-control.gm-bundled-control-on-bottom{
+      position: fixed !important;
+      bottom: 30% !important;
+    }
+  }
+  @media screen and (max-height: 300px) {
+
+    #map > div > div > div.gmnoprint.gm-bundled-control.gm-bundled-control-on-bottom{
+      position: fixed !important;
+      bottom: 35% !important;
+    }
+  }
 
 
 h1{
