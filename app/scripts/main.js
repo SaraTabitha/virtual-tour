@@ -74,6 +74,10 @@
 
 // Your custom JavaScript goes here
 
+// reloads the page if it is resized so that it reloads this file based on window width! :D
+$(window).resize(function() {
+  location.reload();
+});
 //
 // mobile
 //
