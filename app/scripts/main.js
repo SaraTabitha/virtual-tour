@@ -591,6 +591,40 @@ if(window.matchMedia("(min-width: 1025px)").matches){
   });
     // End second Select All
 
+    // changing height of drawer (for scroll bar) based on if a Building is selected
+
+    // $("#linkOne").click(function(){
+    //   var height = parseInt($("#drawerContents").height());
+    //   var y = 100;
+    //   var added = height + y;
+    //   function adding (value){
+    //   $("#drawerContents").height(value);
+    //   }
+    //   adding(added);
+    // });
+    $("#linkOne").click(function(){
+      var check = $("#linkOne").hasClass("open");
+      if(check === false){
+        var height = parseInt($("#drawerContents").height());
+        var y = 100;
+        var added = height + y;
+        function adding (value){
+        $("#drawerContents").height(value);
+        }
+        adding(added);
+        $("#linkOne").addClass("open");
+    } else if (check === true) {
+      var height = parseInt($("#drawerContents").height());
+      var y = 100;
+      var added = height - y;
+      function adding (value){
+      $("#drawerContents").height(value);
+      }
+      adding(added);
+      $("#linkOne").removeClass("open");
+    }
+  });
+
 } else{
   // the view is less than 1025 px wide
 

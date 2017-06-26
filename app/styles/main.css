@@ -234,16 +234,25 @@ html, body {
 
 .mdl-layout__drawer {
   width: 380px;
+
 }
+
 /*hide menu button used only in mobile*/
 #notif{
   display: none;
 }
+
 /*styling for search*/
 #webSearch{
   height: 30px;
   margin: 0px;
 
+}
+#menuDrawer{
+  height: auto;
+}
+#drawerContents{
+  height: 900px;
 }
 
 #mobileHeader{
