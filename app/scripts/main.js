@@ -591,20 +591,11 @@ if(window.matchMedia("(min-width: 1025px)").matches){
   });
     // End second Select All
 
-    // changing height of drawer (for scroll bar) based on if a Building is selected
-
-    // $("#linkOne").click(function(){
-    //   var height = parseInt($("#drawerContents").height());
-    //   var y = 100;
-    //   var added = height + y;
-    //   function adding (value){
-    //   $("#drawerContents").height(value);
-    //   }
-    //   adding(added);
-    // });
+    // changing height of drawer (for scroll bar) based on if a Building dropdown is selected
     $("#linkOne").click(function(){
       var check = $("#linkOne").hasClass("open");
       if(check === false){
+        // takes height of drawer and adds 100 to it
         var height = parseInt($("#drawerContents").height());
         var y = 100;
         var added = height + y;
@@ -614,6 +605,7 @@ if(window.matchMedia("(min-width: 1025px)").matches){
         adding(added);
         $("#linkOne").addClass("open");
     } else if (check === true) {
+      // takes height of drawer and removes 100 from it
       var height = parseInt($("#drawerContents").height());
       var y = 100;
       var added = height - y;
@@ -624,6 +616,55 @@ if(window.matchMedia("(min-width: 1025px)").matches){
       $("#linkOne").removeClass("open");
     }
   });
+  // changing height of drawer (for scroll bar) based on if a Building dropdown is selected
+  $("#linkTwo").click(function(){
+    var check = $("#linkTwo").hasClass("open");
+    if(check === false){
+      // takes height of drawer and adds 100 to it
+      var height = parseInt($("#drawerContents").height());
+      var y = 100;
+      var added = height + y;
+      function adding (value){
+      $("#drawerContents").height(value);
+      }
+      adding(added);
+      $("#linkTwo").addClass("open");
+  } else if (check === true) {
+    // takes height of drawer and removes 100 from it
+    var height = parseInt($("#drawerContents").height());
+    var y = 100;
+    var added = height - y;
+    function adding (value){
+    $("#drawerContents").height(value);
+    }
+    adding(added);
+    $("#linkTwo").removeClass("open");
+  }
+});
+$("#linkThree").click(function(){
+  var check = $("#linkThree").hasClass("open");
+  if(check === false){
+    // takes height of drawer and adds 100 to it
+    var height = parseInt($("#drawerContents").height());
+    var y = 100;
+    var added = height + y;
+    function adding (value){
+    $("#drawerContents").height(value);
+    }
+    adding(added);
+    $("#linkThree").addClass("open");
+} else if (check === true) {
+  // takes height of drawer and removes 100 from it
+  var height = parseInt($("#drawerContents").height());
+  var y = 100;
+  var added = height - y;
+  function adding (value){
+  $("#drawerContents").height(value);
+  }
+  adding(added);
+  $("#linkThree").removeClass("open");
+}
+});
 
 } else{
   // the view is less than 1025 px wide
