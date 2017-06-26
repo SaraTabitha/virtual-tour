@@ -214,8 +214,8 @@ html, body {
 /*entire left menu*/
 /**/
 
-#headerMobile{
-  display: none;
+ li{
+  cursor: pointer;
 }
 
 /*yellow portion of header*/
