@@ -453,17 +453,20 @@ span.mdl-navigation__link.color666.text{
 #linkOne > span{
   width: 100%;
   height: 25px;
-  padding: 5px;
+  padding: 10px;
+  padding-left: 15px;
 }
 #linkTwo > span{
   width: 100%;
   height: 25px;
-  padding: 5px;
+  padding: 10px;
+  padding-left: 15px;
 }
 #linkThree > span{
   width: 100%;
   height: 25px;
-  padding: 5px;
+  padding: 10px;
+  padding-left: 15px;
 }
 /*hide list items for 360 tour*/
 .tourDrop{
@@ -855,12 +858,13 @@ html, body, main, .mdl-layout__content, .page-content, #map {
   #map > div > div > div.gmnoprint.gm-bundled-control.gm-bundled-control-on-bottom{
     position: fixed !important;
     bottom: 15% !important;
+    
   }
   @media screen and (max-height: 750px) {
 
     #map > div > div > div.gmnoprint.gm-bundled-control.gm-bundled-control-on-bottom{
       position: fixed !important;
-      bottom: 16% !important;
+      bottom: 15% !important;
     }
   }
   @media screen and (max-height: 700px) {
@@ -933,6 +937,34 @@ h1{
 }
 div#accFCard{
   display: none;
+}
+#accFCard{
+  width: 100%;
+
+}
+/*when window shrinks under a certain size the category page becomes scrollable*/
+@media screen and (max-width: 400px) {
+
+  #accFCard{
+    overflow-y:  scroll;
+  }
+}
+#accFClose{
+  float: right;
+  position: relative;
+  right: 2%;
+}
+/*iframe video*/
+#accFCard > div:nth-child(3){
+  padding-left: 2%;
+  padding-right: 2%;
+}
+/*text*/
+#accFCard > div.mdl-card__supporting-text.color666.text{
+  text-align: center;
+  margin: 0px;
+  position: relative;
+  left: 2%;
 }
 div#athCard{
   display: none;
