@@ -1160,19 +1160,185 @@ div#stuRCard{
   position: relative;
   left: 2%;
 }
+
+/*popup css*/
 div.popup{
   display: none;
 }
 
 .generalHover{
+  height: 80px;
+  width: 160px;
+}
+#equityHover, #recreationHover{
+  width: 185px;
+}
+#equityHover h1.headHover, #recreationHover h1.headHover{
+  width: 180px;
+}
+#alumniHover{
+  width: 195px;
+}
+#alumniHover h1.headHover{
+  width: 190px;
+}
+#environmentalHover{
+  height: 100px;
+}
+
+.imageHover{
   display: none;
 }
+.hoverDiv{
+  /*display: inline-block;*/
+  height: 50px;
+  width: 150px;
+  /*float: right;*/
+  padding: 4px;
+
+}
+h1.headHover{
+  position: relative;
+  display: block;
+  margin: 0px;
+  color: black;
+  font-size: 10px;
+  font-weight: 900;
+  text-decoration: underline;
+}
+p.paraHover{
+  position: relative;
+  display: block;
+  font-size: 10px;
+  width: 145px;
+  margin: 0px;
+}
+.hoverLink{
+  font-size: 10px;
+}
+.hoverBreak{
+  display: none;
+}
+
+/*end popup css*/
+
 .parkingHover{
-  display: none;
+  height: 60px;
+  width: 100px;
 }
-.lottwentythreeparkingHover{
-  display: none;
+.commuterHover{
+  height: 110px;
 }
-.lotsevenparkingHover{
-  display: none;
+#twentythreeHover {
+  height: 160px;
+}
+#thirtynineHover{
+  height: 140px;
+}
+#sevenHover{
+  height: 130px;
+  width: 120px;
+}
+#womensCenterHover{
+  height: 70px;
+}
+
+h1.parkingHeadHover{
+  font-size: 10px;
+  font-weight: 900;
+  text-decoration: underline;
+  margin: 0px;
+  color: black;
+}
+p.parkingTextHover{
+  font-size: 10px;
+  margin:0px;
+}
+.parkingColorStaff{
+  height: 10px;
+  width: 10px;
+  /* staff blue */
+  background-color: #324597;
+  border-radius: 100px;
+  display: inline-block;
+  position: relative;
+  top: -10px;
+  float: right;
+}
+.parkingColorRemote{
+  height: 10px;
+  width: 10px;
+  /* remote orange*/
+  background-color: #f17e21;
+  border-radius: 100px;
+  display: inline-block;
+  position: relative;
+  top: -10px;
+  float: right;
+}
+.parkingColorCommute{
+  height: 10px;
+  width: 10px;
+  /* remote yellow*/
+  background-color: #fbe200;
+  border-radius: 100px;
+  display: inline-block;
+  position: relative;
+  top: -10px;
+  float: right;
+}
+.parkingColorRestricted{
+  height: 10px;
+  width: 10px;
+  /* remote grey*/
+  background-color: #9e9fa2;
+  border-radius: 100px;
+  display: inline-block;
+  position: relative;
+  top: -10px;
+  float: right;
+}
+.parkingColorReserved{
+  height: 10px;
+  width: 10px;
+  /* remote pink*/
+  background-color: #f298bf;
+  border-radius: 100px;
+  display: inline-block;
+  position: relative;
+  top: -10px;
+  float: right;
+}
+.parkingColorCommuter{
+  height: 10px;
+  width: 10px;
+  /* commuter red*/
+  background-color: #ec2024;
+  border-radius: 100px;
+  display: inline-block;
+  position: relative;
+  top: -10px;
+  float: right;
+}
+.parkingColorResident{
+  height: 10px;
+  width: 10px;
+  /* resident green*/
+  background-color: #6fbd46;
+  border-radius: 100px;
+  display: inline-block;
+  position: relative;
+  top: -10px;
+  float: right;
+}
+.parkingColorVisitor{
+  height: 10px;
+  width: 10px;
+  /* visitor peach*/
+  background-color: #ffdc9d;
+  border-radius: 100px;
+  display: inline-block;
+  position: relative;
+  top: -10px;
+  float: right;
 }
