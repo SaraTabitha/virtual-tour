@@ -257,6 +257,10 @@ html, body {
 
 #mobileHeader{
   height: 110px;
+  background-color: #ffcc00  ;
+}
+#webSearch{
+  background-color: #ffcc00  ;
 }
 
 .mdl-textfield{
@@ -637,11 +641,9 @@ html, body, main, .mdl-layout__content, .page-content, #map {
       left: 10px;
       font-size: 2em;
     }
-    .yellow{
-      color: #444;
-    }
+
     .popupNav{
-      background-color: #ffcc00 ;
+      background-color:  #ffcc00 ;
       position: relative;
       left: -10px;
       top: -10px;
