@@ -735,6 +735,10 @@ if (check === false){
   $("#accFCard").show();
   $("#accFCard").animate(
     {top:"0px"});
+    // closes menu when this opens
+    $("#drawerContents").removeClass("clicked");
+    $(".mdl-layout__drawer-right").animate(
+      {right:"-380px"});
 
 } else if (check === true){
   $("#accFCard").removeClass("cardPresent");
@@ -753,6 +757,223 @@ $("#accFClose").click(function(){
     {top:"-100%"});
 });
 // end academic facilities
+// athletics show and slide out
+
+$("#athText").click(function(){
+var check = $("#athCard").hasClass("cardPresent");
+if (check === false){
+  $("#athCard").addClass("cardPresent");
+
+  hideAll();
+  $("#accFCard").removeClass("cardPresent");
+  $("#accSCard").removeClass("cardPresent");
+  $("#campSCard").removeClass("cardPresent");
+  $("#resHCard").removeClass("cardPresent");
+  $("#diningCard").removeClass("cardPresent");
+  $("#stuRCard").removeClass("cardPresent");
+
+  $("#athiframe").attr("src", "https://www.youtube.com/embed/EFlUSVWCA-k");
+  $("#athCard").show();
+  $("#athCard").animate(
+    {top:"0px"});
+    // closes menu when this opens
+    $("#drawerContents").removeClass("clicked");
+    $(".mdl-layout__drawer-right").animate(
+      {right:"-380px"});
+} else if (check === true){
+  $("#athCard").removeClass("cardPresent");
+  $("#athCard").animate(
+      {top:"-100%"});
+}
+});
+// athletics x button hide
+$("#athClose").click(function(){
+  $("#athCard").removeClass("cardPresent");
+  $("#athCard").animate(
+    {top:"-100%"});
+});
+// end athletics
+// start academic services show and slide out
+
+$("#accSText").click(function(){
+var check = $("#accSCard").hasClass("cardPresent");
+if (check === false){
+  $("#accSCard").addClass("cardPresent");
+
+  hideAll();
+  $("#accFCard").removeClass("cardPresent");
+  $("#athCard").removeClass("cardPresent");
+  $("#campSCard").removeClass("cardPresent");
+  $("#resHCard").removeClass("cardPresent");
+  $("#diningCard").removeClass("cardPresent");
+  $("#stuRCard").removeClass("cardPresent");
+
+  $("#accSiframe").attr("src", "https://www.youtube.com/embed/f-KdeyV-_dA");
+  $("#accSCard").show();
+  $("#accSCard").animate(
+    {top:"0px"});
+    // closes menu when this opens
+    $("#drawerContents").removeClass("clicked");
+    $(".mdl-layout__drawer-right").animate(
+      {right:"-380px"});
+} else if (check === true){
+  $("#accSCard").removeClass("cardPresent");
+  $("#accSCard").animate(
+      {top:"-100%"});
+}
+});
+// academic services x button hide
+$("#accSClose").click(function(){
+  $("#accSCard").removeClass("cardPresent");
+  $("#accSCard").animate(
+    {top:"-100%"});
+});
+// end accademic services
+// start campus services show and slide out
+
+$("#campSText").click(function(){
+var check = $("#campSCard").hasClass("cardPresent");
+if (check === false){
+  $("#campSCard").addClass("cardPresent");
+
+  hideAll();
+  $("#accFCard").removeClass("cardPresent");
+  $("#athCard").removeClass("cardPresent");
+  $("#accSCard").removeClass("cardPresent");
+  $("#resHCard").removeClass("cardPresent");
+  $("#diningCard").removeClass("cardPresent");
+  $("#stuRCard").removeClass("cardPresent");
+
+  $("#campSiframe").attr("src", "https://www.youtube.com/embed/6e59ycgCTi4");
+  $("#campSCard").show();
+  $("#campSCard").animate(
+    {top:"0px"});
+    // closes menu when this opens
+    $("#drawerContents").removeClass("clicked");
+    $(".mdl-layout__drawer-right").animate(
+      {right:"-380px"});
+} else if (check === true){
+  $("#campSCard").removeClass("cardPresent");
+  $("#campSCard").animate(
+      {top:"-100%"});
+}
+});
+//  campus services x button hide
+$("#campSClose").click(function(){
+  $("#campSCard").removeClass("cardPresent");
+  $("#campSCard").animate(
+    {top:"-100%"});
+});
+// end campus services
+// start Residence halls show and slide out
+
+$("#resHText").click(function(){
+var check = $("#resHCard").hasClass("cardPresent");
+if (check === false){
+  $("#resHCard").addClass("cardPresent");
+
+  hideAll();
+  $("#accFCard").removeClass("cardPresent");
+  $("#athCard").removeClass("cardPresent");
+  $("#accSCard").removeClass("cardPresent");
+  $("#campSCard").removeClass("cardPresent");
+  $("#diningCard").removeClass("cardPresent");
+  $("#stuRCard").removeClass("cardPresent");
+
+  $("#resHiframe").attr("src", "https://www.youtube.com/embed/R5RVenezdgM");
+  $("#resHCard").show();
+  $("#resHCard").animate(
+    {top:"0px"});
+    // closes menu when this opens
+    $("#drawerContents").removeClass("clicked");
+    $(".mdl-layout__drawer-right").animate(
+      {right:"-380px"});
+} else if (check === true){
+  $("#resHCard").removeClass("cardPresent");
+  $("#resHCard").animate(
+      {top:"-100%"});
+}
+});
+// Residence halls x button hide
+$("#resHClose").click(function(){
+  $("#resHCard").removeClass("cardPresent");
+  $("#resHCard").animate(
+    {top:"-100%"});
+});
+// end residence halls
+// start Dining show and slide out
+
+$("#diningText").click(function(){
+var check = $("#diningCard").hasClass("cardPresent");
+if (check === false){
+  $("#diningCard").addClass("cardPresent");
+
+  hideAll();
+  $("#accFCard").removeClass("cardPresent");
+  $("#athCard").removeClass("cardPresent");
+  $("#accSCard").removeClass("cardPresent");
+  $("#campSCard").removeClass("cardPresent");
+  $("#resHCard").removeClass("cardPresent");
+  $("#stuRCard").removeClass("cardPresent");
+
+  $("#diningiframe").attr("src", "https://www.youtube.com/embed/QBXee6U14FQ");
+  $("#diningCard").show();
+  $("#diningCard").animate(
+    {top:"0px"});
+    // closes menu when this opens
+    $("#drawerContents").removeClass("clicked");
+    $(".mdl-layout__drawer-right").animate(
+      {right:"-380px"});
+} else if (check === true){
+  $("#diningCard").removeClass("cardPresent");
+  $("#diningCard").animate(
+      {top:"-100%"});
+}
+});
+// Dining x button hide
+$("#diningClose").click(function(){
+  $("#diningCard").removeClass("cardPresent");
+  $("#diningCard").animate(
+    {top:"-100%"});
+});
+// end Dining
+// start Student Recreation show and slide out
+
+$("#stuRText").click(function(){
+var check = $("#stuRCard").hasClass("cardPresent");
+if (check === false){
+  $("#stuRCard").addClass("cardPresent");
+
+  hideAll();
+  $("#accFCard").removeClass("cardPresent");
+  $("#athCard").removeClass("cardPresent");
+  $("#accSCard").removeClass("cardPresent");
+  $("#campSCard").removeClass("cardPresent");
+  $("#resHCard").removeClass("cardPresent");
+  $("#diningCard").removeClass("cardPresent");
+
+  $("#stuRiframe").attr("src", "https://www.youtube.com/embed/Fi7OiNe2TnU");
+  $("#stuRCard").show();
+  $("#stuRCard").animate(
+    {top:"0px"});
+    // closes menu when this opens
+    $("#drawerContents").removeClass("clicked");
+    $(".mdl-layout__drawer-right").animate(
+      {right:"-380px"});
+} else if (check === true){
+  $("#stuRCard").removeClass("cardPresent");
+  $("#stuRCard").animate(
+      {top:"-100%"});
+}
+});
+// Student Recreation x button hide
+$("#stuRClose").click(function(){
+  $("#stuRCard").removeClass("cardPresent");
+  $("#stuRCard").animate(
+    {top:"-100%"});
+});
+// end Student Recreation
+
 
 }
 // Start hide/show 360 navigation items

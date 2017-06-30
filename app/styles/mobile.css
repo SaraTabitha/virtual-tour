@@ -972,20 +972,193 @@ div#accFCard{
 div#athCard{
   display: none;
 }
+#athCard{
+  width: 100%;
+}
+@media screen and (max-width: 400px) {
+
+  #athCard{
+    overflow-y:  scroll;
+  }
+}
+#athClose{
+  float: right;
+  position: relative;
+  top: 2%;
+  right: 2%;
+}
+/*iframe video*/
+#athCard > div:nth-child(3){
+  padding-left: 2%;
+  padding-right: 2%;
+}
+/*text*/
+#athCard > div.mdl-card__supporting-text.color666.text{
+  text-align: center;
+  margin: 0px;
+  position: relative;
+  left: 2%;
+}
+
 div#accSCard{
   display: none;
+}
+#accSCard{
+  width: 100%;
+
+}
+/*when window shrinks under a certain size the category page becomes scrollable*/
+@media screen and (max-width: 400px) {
+
+  #accSCard{
+    overflow-y:  scroll;
+  }
+}
+#accSClose{
+  float: right;
+  position: relative;
+  top: 2%;
+  right: 2%;
+}
+/*iframe video*/
+#accSCard > div:nth-child(3){
+  padding-left: 2%;
+  padding-right: 2%;
+}
+/*text*/
+#accSCard > div.mdl-card__supporting-text.color666.text{
+  text-align: center;
+  margin: 0px;
+  position: relative;
+  left: 2%;
 }
 div#campSCard{
   display: none;
 }
+#campSCard{
+  width: 100%;
+
+}
+/*when window shrinks under a certain size the category page becomes scrollable*/
+@media screen and (max-width: 400px) {
+
+  #campSCard{
+    overflow-y:  scroll;
+  }
+}
+#campSClose{
+  float: right;
+  position: relative;
+  top: 2%;
+  right: 2%;
+}
+/*iframe video*/
+#campSCard > div:nth-child(3){
+  padding-left: 2%;
+  padding-right: 2%;
+}
+/*text*/
+#campSCard > div.mdl-card__supporting-text.color666.text{
+  text-align: center;
+  margin: 0px;
+  position: relative;
+  left: 2%;
+}
 div#resHCard{
   display: none;
+}
+#resHCard{
+  width: 100%;
+
+}
+/*when window shrinks under a certain size the category page becomes scrollable*/
+@media screen and (max-width: 400px) {
+
+  #resHCard{
+    overflow-y:  scroll;
+  }
+}
+#resHClose{
+  float: right;
+  position: relative;
+  top: 2%;
+  right: 2%;
+}
+/*iframe video*/
+#resHCard > div:nth-child(3){
+  padding-left: 2%;
+  padding-right: 2%;
+}
+/*text*/
+#resHCard > div.mdl-card__supporting-text.color666.text{
+  text-align: center;
+  margin: 0px;
+  position: relative;
+  left: 2%;
 }
 div#diningCard{
   display: none;
 }
+#diningCard{
+  width: 100%;
+
+}
+/*when window shrinks under a certain size the category page becomes scrollable*/
+@media screen and (max-width: 400px) {
+
+  #diningCard{
+    overflow-y:  scroll;
+  }
+}
+#diningClose{
+  float: right;
+  position: relative;
+  top: 2%;
+  right: 2%;
+}
+/*iframe video*/
+#diningCard > div:nth-child(3){
+  padding-left: 2%;
+  padding-right: 2%;
+}
+/*text*/
+#diningCard > div.mdl-card__supporting-text.color666.text{
+  text-align: center;
+  margin: 0px;
+  position: relative;
+  left: 2%;
+}
 div#stuRCard{
   display: none;
+}
+#stuRCard{
+  width: 100%;
+
+}
+/*when window shrinks under a certain size the category page becomes scrollable*/
+@media screen and (max-width: 400px) {
+
+  #stuRCard{
+    overflow-y:  scroll;
+  }
+}
+#stuRClose{
+  float: right;
+  position: relative;
+  top: 2%;
+  right: 2%;
+}
+/*iframe video*/
+#stuRCard > div:nth-child(3){
+  padding-left: 2%;
+  padding-right: 2%;
+}
+/*text*/
+#stuRCard > div.mdl-card__supporting-text.color666.text{
+  text-align: center;
+  margin: 0px;
+  position: relative;
+  left: 2%;
 }
 div.popup{
   display: none;
