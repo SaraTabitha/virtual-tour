@@ -353,7 +353,7 @@ $("#stuRLabel").removeClass("is-checked");
 // function for loading different functions based on screen width
 if(window.matchMedia("(min-width: 1025px)").matches){
   // the view is at least 1025 px wide
-
+  // web
 
 
     // info bulding card slide in from left (when blue link is clicked)
@@ -675,8 +675,14 @@ $("#linkThree").click(function(){
 }
 });
 
+
+
+
+
+
 } else{
   // the view is less than 1025 px wide
+  // mobile
 
  $("#menu").removeClass("mdl-layout--fixed-drawer");
  $("#menuDrawer").removeClass("mdl-layout__drawer");
@@ -727,14 +733,13 @@ if (check === false){
 
   $("#accFiframe").attr("src", "https://www.youtube.com/embed/V4404T_b5No");
   $("#accFCard").show();
-  $("#accFCard").slideDown(
-    "slow",function() {
+  $("#accFCard").animate(
+    {top:"0px"});
 
-    });
 } else if (check === true){
   $("#accFCard").removeClass("cardPresent");
   $("#accFCard").animate(
-      {left:"-377px"});
+      {top:"-100%"});
 }
 });
 
@@ -745,7 +750,7 @@ $("#accFClose").click(function(){
   // click the link (now that it depends on whether cardPresent is there)
   $("#accFCard").removeClass("cardPresent");
   $("#accFCard").animate(
-    {left:"-377px"});
+    {top:"-100%"});
 });
 // end academic facilities
 
