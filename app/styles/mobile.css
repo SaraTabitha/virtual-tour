@@ -1353,6 +1353,7 @@ p.parkingTextHover{
   visibility: hidden;
 }
 
+
 .popup{
   visibility: hidden;
   opacity: 0;
@@ -1368,6 +1369,7 @@ p.parkingTextHover{
   overflow: scroll;
 
 }
+
 
 /*specific popup modifications*/
 
@@ -1404,6 +1406,7 @@ p.parkingTextHover{
   height: 100px;
 
 }
+/*title*/
 h1.text.yellow{
   position: relative;
   text-align: center;
@@ -1421,13 +1424,13 @@ h1.text.yellow{
 ul#popupNav {
   margin: 0px;
   padding: 0px;
-  text-align: left;
+  text-align: center;
 }
 ul#popupNav li{
   position: relative;
   display: inline;
   padding-left: 40px;
-  text-align: left;
+  text-align: center;
   color: #444;
   font-family: 'Open Sans', sans-serif;
   line-height: 2em;
@@ -1448,7 +1451,7 @@ cursor: pointer;
 
 .infoContainer{
  width: 95%;
- height: 120%;
+ height: 100%;
  margin: 10px;
 
  overflow-x: hidden;
@@ -1456,7 +1459,7 @@ cursor: pointer;
 .popupText{
   position: relative;
   width: 95%;
-  text-align: left;
+  text-align: center;
 
 }
 .heading{
@@ -1469,8 +1472,34 @@ cursor: pointer;
 .imagePopup img{
   width: 400px;
   height: 250px;
+  position: relative;
+  left: 30%;
+}
 
-
+@media screen and (max-width: 900px){
+.imagePopup img{
+  left: 25%;
+}
+}
+@media screen and (max-width: 750px){
+.imagePopup img{
+  left: 25%;
+}
+}
+@media screen and (max-width: 700px){
+.imagePopup img{
+  left: 20%;
+}
+}
+@media screen and (max-width: 650px){
+.imagePopup img{
+  left: 20%;
+}
+}
+@media screen and (max-width: 600px){
+.imagePopup img{
+  left: 15%;
+}
 }
 #parkingRampParkingImage img{
   width: auto;
@@ -1481,12 +1510,11 @@ cursor: pointer;
   float: right;
 }
 .address{
-  text-align: left;
-  margin: 0px;
+  text-align: center;
+  margin-top: 10px;
 }
-a.address{
-  position: relative;
-  left: 40%;
+.imagePopup{
+  text-align: center;
 }
 .videoPopup iframe{
   width: 400px;
@@ -1503,7 +1531,7 @@ a.address{
 
 }
 .subText{
-
+ margin-top: 10px;
 }
 
 /*reeve dining padding*/
@@ -1551,6 +1579,31 @@ a.address{
   padding: 0px;
 }
 
+/*popup styling under 500px width*/
+@media screen and (max-width: 500px){
+ul#popupNav {
+  text-align: left;
+}
+ul#popupNav li{
+  text-align: left;
+}
+.popupText{
+  text-align: left;
+}
+.address{
+  text-align: left;
+}
+.infoContainer{
+  height: 120%;
+}
+.imagePopup img{
+  left: 0;
+}
+.imagePopup{
+  text-align: left;
+}
+
+}
 /*styling for popup tabs*/
 #albeeTourVideo{
   display: none;
