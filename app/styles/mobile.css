@@ -1516,6 +1516,9 @@ cursor: pointer;
 .imagePopup{
   text-align: center;
 }
+.imagePopup> img{
+  margin-bottom: 10px;
+}
 .videoPopup iframe{
   width: 400px;
   height: 250px;
@@ -1533,6 +1536,7 @@ cursor: pointer;
 .subText{
  margin-top: 10px;
 }
+
 
 /*reeve dining padding*/
 #reeveDiningText p{
