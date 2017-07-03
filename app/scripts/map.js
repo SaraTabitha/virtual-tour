@@ -432,7 +432,7 @@ function initMap() {
           $("#albeeTourText").css('display', "none");
           $("#albeeSustainability").css('display', "none");
 
-          $("#albeeAboutImage").css('display', "initial");
+          $("#albeeAboutImage").css('display', "block");
           $("#albeeAboutText").css('display', "initial");
         });
         $("#albeeTourLi").click(function(){
@@ -524,7 +524,7 @@ function initMap() {
         $("#alumniAboutLi").click(function(){
           $("#alumniSustainability").css('display', "none");
 
-          $("#alumniAboutImage").css('display', "initial");
+          $("#alumniAboutImage").css('display', "block");
           $("#alumniAboutText").css('display', "initial");
         });
         $("#alumniSustainabilityLi").click(function(){
@@ -562,7 +562,7 @@ function initMap() {
         });
         // when x on popup is clicked, close popup
         $("#acPopupClose").click(function(){
-          
+
           $('#overlay').animate({"opacity": "0"}, "slow");
           $('#overlay').css('visibility', 'hidden');
 
@@ -574,7 +574,7 @@ function initMap() {
         $("#acAboutLi").click(function(){
           $("#acBathrooms").css('display', "none");
 
-          $("#acAboutImage").css('display', "initial");
+          $("#acAboutImage").css('display', "block");
           $("#acAboutText").css('display', "initial");
         });
         $("#acBathroomsLi").click(function(){
@@ -659,7 +659,7 @@ function initMap() {
           $("#blackhawkDiningImage").css('display', "none");
           $("#blackhawkDiningText").css('display', "none");
 
-          $("#blackhawkAboutImage").css('display', "initial");
+          $("#blackhawkAboutImage").css('display', "block");
           $("#blackhawkAboutText").css('display', "initial");
         });
         $("#blackhawkSustainabilityLi").click(function(){
@@ -798,7 +798,7 @@ function initMap() {
         $("#equityAboutLi").click(function(){
           $("#equityBathrooms").css('display', "none");
 
-          $("#equityAboutImage").css('display', "initial");
+          $("#equityAboutImage").css('display', "block");
           $("#equityAboutText").css('display', "initial");
         });
         $("#equityBathroomsLi").click(function(){
@@ -917,7 +917,7 @@ function initMap() {
           $("#clowDiningImage").css('display', "none");
           $("#clowDiningText").css('display', "none");
 
-          $("#clowAboutImage").css('display', "initial");
+          $("#clowAboutImage").css('display', "block");
           $("#clowAboutText").css('display', "initial");
         });
         $("#clowDiningLi").click(function(){
@@ -1004,7 +1004,7 @@ function initMap() {
         $("#dempseyAboutLi").click(function(){
           $("#dempseyBathrooms").css('display', "none");
 
-          $("#dempseyAboutImage").css('display', "initial");
+          $("#dempseyAboutImage").css('display', "block");
           $("#dempseyAboutText").css('display', "initial");
         });
         $("#dempseyBathroomsLi").click(function(){
@@ -1305,7 +1305,7 @@ function initMap() {
           $("#halseyDiningImage").css('display', "none");
           $("#halseyDiningText").css('display', "none");
 
-          $("#halseyAboutImage").css('display', "initial");
+          $("#halseyAboutImage").css('display', "block");
           $("#halseyAboutText").css('display', "initial");
         });
         $("#halseyBathroomsLi").click(function(){
@@ -1367,7 +1367,7 @@ function initMap() {
         $("#harringtonAboutLi").click(function(){
           $("#harringtonBathrooms").css('display', "none");
 
-          $("#harringtonAboutImage").css('display', "initial");
+          $("#harringtonAboutImage").css('display', "block");
           $("#harringtonAboutText").css('display', "initial");
         });
         $("#harringtonBathroomsLi").click(function(){
@@ -1416,7 +1416,7 @@ function initMap() {
         $("#heatingAboutLi").click(function(){
           $("#heatingSustainability").css('display', "none");
 
-          $("#heatingAboutImage").css('display', "initial");
+          $("#heatingAboutImage").css('display', "block");
           $("#heatingAboutText").css('display', "initial");
         });
         $("#heatingSustainabilityLi").click(function(){
@@ -1467,7 +1467,7 @@ function initMap() {
           $("#parkingRampParkingImage").css('display', "none");
           $("#parkingRampParkingText").css('display', "none");
 
-          $("#parkingAboutImage").css('display', "initial");
+          $("#parkingAboutImage").css('display', "block");
           $("#parkingAboutText").css('display', "initial");
         });
         $("#parkingParkingLi").click(function(){
@@ -1517,7 +1517,7 @@ function initMap() {
         $("#horizonAboutLi").click(function(){
           $("#horizonSustainability").css('display', "none");
 
-          $("#horizonAboutImage").css('display', "initial");
+          $("#horizonAboutImage").css('display', "block");
           $("#horizonAboutText").css('display', "initial");
         });
         $("#horizonSustainabilityLi").click(function(){
@@ -1565,7 +1565,7 @@ function initMap() {
         $("#kolfAboutLi").click(function(){
           $("#kolfBathrooms").css('display', "none");
 
-          $("#kolfAboutImage").css('display', "initial");
+          $("#kolfAboutImage").css('display', "block");
           $("#kolfAboutText").css('display', "initial");
         });
         $("#kolfBathroomsLi").click(function(){
@@ -1681,7 +1681,7 @@ function initMap() {
         $("#nursingAboutLi").click(function(){
           $("#nursingBathrooms").css('display', "none");
 
-          $("#nursingAboutImage").css('display', "initial");
+          $("#nursingAboutImage").css('display', "block");
           $("#nursingAboutText").css('display', "initial");
         });
         $("#nursingBathroomsLi").click(function(){
@@ -1801,7 +1801,7 @@ function initMap() {
           $("#polkTourVideo").css('display', "none");
           $("#polkTourText").css('display', "none");
 
-          $("#polkAboutImage").css('display', "initial");
+          $("#polkAboutImage").css('display', "block");
           $("#polkAboutText").css('display', "initial");
         });
         $("#polkTourLi").click(function(){
@@ -1893,7 +1893,7 @@ function initMap() {
           $("#reeveDiningImage").css('display', "none");
           $("#reeveDiningText").css('display', "none");
 
-          $("#reeveAboutImage").css('display', "initial");
+          $("#reeveAboutImage").css('display', "block");
           $("#reeveAboutText").css('display', "initial");
         });
         $("#reeveTourLi").click(function(){
@@ -1987,7 +1987,7 @@ function initMap() {
           $("#sageDiningImage").css('display', "none");
           $("#sageDiningText").css('display', "none");
 
-          $("#sageAboutImage").css('display', "initial");
+          $("#sageAboutImage").css('display', "block");
           $("#sageAboutText").css('display', "initial");
         });
         $("#sageTourLi").click(function(){
@@ -2075,7 +2075,7 @@ function initMap() {
           $("#scottDiningImage").css('display', "none");
           $("#scottDiningText").css('display', "none");
 
-          $("#scottAboutImage").css('display', "initial");
+          $("#scottAboutImage").css('display', "block");
           $("#scottAboutText").css('display', "initial");
         });
         $("#scottDiningLi").click(function(){
@@ -2162,7 +2162,7 @@ function initMap() {
           $("#recreationSustainability").css('display', "none");
           $("#recreationBathrooms").css('display', "none");
 
-          $("#recreationAboutImage").css('display', "initial");
+          $("#recreationAboutImage").css('display', "block");
           $("#recreationAboutText").css('display', "initial");
         });
         $("#recreationSustainabilityLi").click(function(){
@@ -2223,7 +2223,7 @@ function initMap() {
           $("#successTourText").css('display', "none");
           $("#successTourVideo").css('display', "none");
 
-          $("#successAboutImage").css('display', "initial");
+          $("#successAboutImage").css('display', "block");
           $("#successAboutText").css('display', "initial");
         });
         $("#successTourLi").click(function(){
@@ -2293,7 +2293,7 @@ function initMap() {
         $("#swartAboutLi").click(function(){
           $("#swartBathrooms").css('display', "none");
 
-          $("#swartAboutImage").css('display', "initial");
+          $("#swartAboutImage").css('display', "block");
           $("#swartAboutText").css('display', "initial");
         });
         $("#swartBathroomsLi").click(function(){
@@ -2341,7 +2341,7 @@ function initMap() {
         $("#taylorAboutLi").click(function(){
           $("#taylorSustainability").css('display', "none");
 
-          $("#taylorAboutImage").css('display', "initial");
+          $("#taylorAboutImage").css('display', "block");
           $("#taylorAboutText").css('display', "initial");
         });
         $("#taylorSustainabilityLi").click(function(){
@@ -2389,7 +2389,7 @@ function initMap() {
         $("#titanAboutLi").click(function(){
           $("#titanSustainability").css('display', "none");
 
-          $("#titanAboutImage").css('display', "initial");
+          $("#titanAboutImage").css('display', "block");
           $("#titanAboutText").css('display', "initial");
         });
         $("#titanSustainabilityLi").click(function(){
@@ -2438,7 +2438,7 @@ function initMap() {
         $("#policeAboutLi").click(function(){
           $("#policeBathrooms").css('display', "none");
 
-          $("#policeAboutImage").css('display', "initial");
+          $("#policeAboutImage").css('display', "block");
           $("#policeAboutText").css('display', "initial");
         });
         $("#policeBathroomsLi").click(function(){
