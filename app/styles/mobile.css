@@ -1473,34 +1473,10 @@ cursor: pointer;
   width: 400px;
   height: 250px;
   position: relative;
-  left: 30%;
+  left: 5%;
 }
 
-@media screen and (max-width: 900px){
-.imagePopup img{
-  left: 25%;
-}
-}
-@media screen and (max-width: 750px){
-.imagePopup img{
-  left: 25%;
-}
-}
-@media screen and (max-width: 700px){
-.imagePopup img{
-  left: 20%;
-}
-}
-@media screen and (max-width: 650px){
-.imagePopup img{
-  left: 20%;
-}
-}
-@media screen and (max-width: 600px){
-.imagePopup img{
-  left: 15%;
-}
-}
+
 #parkingRampParkingImage img{
   width: auto;
   height: auto;
