@@ -590,7 +590,7 @@ html, body, main, .mdl-layout__content, .page-content, #map {
       width: 715px;
       height: 420px;
       background-color: white;
-      color: black;
+      color: white;
       z-index: 2;
       padding: 10px;
       border-radius: 10px;
@@ -674,10 +674,12 @@ html, body, main, .mdl-layout__content, .page-content, #map {
     .popupText{
       float: right;
       width: 300px;
+      color: black;
     }
     .heading{
       margin: 0px;
       font-family: "open-sans", sans-serif;
+      color: black;
     }
     .imagePopup{
       float: left;
@@ -686,6 +688,9 @@ html, body, main, .mdl-layout__content, .page-content, #map {
       width: 400px;
       height: 250px;
 
+    }
+    h1.text.yellow{
+      margin: 0px;
     }
     #parkingRampParkingImage img{
       width: auto;
@@ -715,11 +720,13 @@ html, body, main, .mdl-layout__content, .page-content, #map {
       margin: 0px;
       font-family: "open-sans", sans-serif;
       position: relative;
+      color: black;
 
     }
     .subText{
       position: relative;
       padding-top: 10px;
+      color: black;
       margin-bottom: 0px;
     }
 

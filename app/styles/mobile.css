@@ -1466,6 +1466,9 @@ cursor: pointer;
   margin: 0px;
   font-family: "open-sans", sans-serif;
 }
+h1.text.yellow{
+  margin: 0px;
+}
 .imagePopup{
 
 }
