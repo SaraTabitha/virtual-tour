@@ -1358,7 +1358,7 @@ p.parkingTextHover{
   opacity: 0;
   position: fixed;
   width: 100%;
-  /*height: 420px;*/
+  height: 100%;
   background-color: white;
   color: black;
   z-index: 5;
@@ -1367,7 +1367,7 @@ p.parkingTextHover{
 }
 /*specific popup modifications*/
 
-#pollockPopup{
+/*#pollockPopup{
   height: 380px;
 }
 #donnerPopup{
@@ -1390,21 +1390,22 @@ p.parkingTextHover{
 }
 #horizonPopup{
   height: 515px;
-}
+}*/
 
 /*popup stuff continued*/
 .popupBlack{
   background-color: #fdb515;
   position: relative;
+
   width: 100%;
   height: 100px;
 
 }
 h1.text.yellow{
   position: relative;
-  top: 50%;
-  left: 10px;
+  text-align: center;
   font-size: 2em;
+  top: 20px;
 }
 
 .popupNav{
@@ -1417,11 +1418,13 @@ h1.text.yellow{
 ul#popupNav {
   margin: 0px;
   padding: 0px;
+  text-align: center;
 }
 ul#popupNav li{
   position: relative;
   display: inline;
   padding-left: 40px;
+  text-align: center;
   color: #444;
   font-family: 'Open Sans', sans-serif;
   line-height: 2em;
@@ -1439,9 +1442,13 @@ cursor: pointer;
   float: right;
   margin: 20px;
 }
+.infoContainer{
+ width: 100%;
+ padding: 10px;
+ overflow-y: scroll;
+}
 .popupText{
 position: relative;
-left: 50%;
   width: 300px;
   text-align: center;
 }
@@ -1457,6 +1464,7 @@ left: 50%;
   height: 250px;
   position: relative;
   left: 30%;
+  margin-right: 50%;
 
 }
 #parkingRampParkingImage img{
