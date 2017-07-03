@@ -686,7 +686,7 @@ function initMap() {
           $("#blackhawkSustainability").css('display', "none");
           $("#blackhawkBathrooms").css('display', "none");
 
-          $("#blackhawkDiningImage").css('display', "initial");
+          $("#blackhawkDiningImage").css('display', "block");
           $("#blackhawkDiningText").css('display', "initial");
         });
 
@@ -924,7 +924,7 @@ function initMap() {
           $("#clowAboutImage").css('display', "none");
           $("#clowAboutText").css('display', "none");
 
-          $("#clowDiningImage").css('display', "initial");
+          $("#clowDiningImage").css('display', "block");
           $("#clowDiningText").css('display', "initial");
         });
 
@@ -1321,7 +1321,7 @@ function initMap() {
           $("#halseyAboutText").css('display', "none");
           $("#halseyBathrooms").css('display', "none");
 
-          $("#halseyDiningImage").css('display', "initial");
+          $("#halseyDiningImage").css('display', "block");
           $("#halseyDiningText").css('display', "initial");
 
         });
@@ -1937,7 +1937,7 @@ function initMap() {
           $("#reeveSustainability").css('display', "none");
           $("#reeveBathrooms").css('display', "none");
 
-          $("#reeveDiningImage").css('display', "initial");
+          $("#reeveDiningImage").css('display', "block");
           $("#reeveDiningText").css('display', "initial");
         });
 
@@ -2031,7 +2031,7 @@ function initMap() {
           $("#sageSustainability").css('display', "none");
           $("#sageBathrooms").css('display', "none");
 
-          $("#sageDiningImage").css('display', "initial");
+          $("#sageDiningImage").css('display', "block");
           $("#sageDiningText").css('display', "initial");
         });
 
@@ -2082,7 +2082,7 @@ function initMap() {
           $("#scottAboutImage").css('display', "none");
           $("#scottAboutText").css('display', "none");
 
-          $("#scottDiningImage").css('display', "initial");
+          $("#scottDiningImage").css('display', "block");
           $("#scottDiningText").css('display', "initial");
         });
 
