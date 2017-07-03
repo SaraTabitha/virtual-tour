@@ -669,7 +669,7 @@ html, body, main, .mdl-layout__content, .page-content, #map {
     }
     .closeButton{
       float: right;
-      margin: 5px;
+      right: 3%;
     }
     .popupText{
       float: right;
