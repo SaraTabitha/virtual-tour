@@ -1356,14 +1356,19 @@ p.parkingTextHover{
 .popup{
   visibility: hidden;
   opacity: 0;
-  position: fixed;
+  position: absolute;
+  /*top: 60px;*/
   width: 100%;
   height: 100%;
+
   background-color: white;
   color: black;
   z-index: 5;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  overflow: scroll;
+
 }
+
 /*specific popup modifications*/
 
 /*#pollockPopup{
@@ -1416,13 +1421,13 @@ h1.text.yellow{
 ul#popupNav {
   margin: 0px;
   padding: 0px;
-  text-align: center;
+  text-align: left;
 }
 ul#popupNav li{
   position: relative;
   display: inline;
   padding-left: 40px;
-  text-align: center;
+  text-align: left;
   color: #444;
   font-family: 'Open Sans', sans-serif;
   line-height: 2em;
@@ -1437,21 +1442,22 @@ li:hover{
 cursor: pointer;
 }
 .closeButton{
-  /*position: relative;
-  top: 3%;
-  left: 1%;*/
-
+  float: right;
+  right: 3%;
 }
 
 .infoContainer{
- width: 100%;
- padding: 10px;
- overflow-y: scroll;
+ width: 95%;
+ height: 120%;
+ margin: 10px;
+
+ overflow-x: hidden;
 }
 .popupText{
-position: relative;
-  width: 300px;
-  text-align: center;
+  position: relative;
+  width: 95%;
+  text-align: left;
+
 }
 .heading{
   margin: 0px;
@@ -1463,9 +1469,7 @@ position: relative;
 .imagePopup img{
   width: 400px;
   height: 250px;
-  position: relative;
-  left: 30%;
-  margin-right: 50%;
+
 
 }
 #parkingRampParkingImage img{
@@ -1477,7 +1481,7 @@ position: relative;
   float: right;
 }
 .address{
-  text-align: center;
+  text-align: left;
   margin: 0px;
 }
 a.address{
@@ -1499,9 +1503,7 @@ a.address{
 
 }
 .subText{
-  position: relative;
-  padding-top: 10px;
-  margin-bottom: 0px;
+
 }
 
 /*reeve dining padding*/
