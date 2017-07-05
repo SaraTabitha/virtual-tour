@@ -695,10 +695,14 @@ html, body, main, .mdl-layout__content, .page-content, #map {
     h1.text.yellow{
       margin: 0px;
     }
+    #parkingRampParkingImage{
+      width: 715px;
+      padding: 10px;
+
+    }
     #parkingRampParkingImage img{
-      width: auto;
-      height: auto;
-      margin-left: 65%;
+      display: block;
+      margin: 0 auto;
     }
     .videoPopup{
       float: right;

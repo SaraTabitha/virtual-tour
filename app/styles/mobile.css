@@ -1435,6 +1435,7 @@ h1.text.yellow{
 }
 .imagePopup{
   margin: 0 auto;
+  padding-bottom: 10px;
 }
 .imagePopup img{
   width: 400px;
@@ -1444,26 +1445,28 @@ h1.text.yellow{
 }
 
 
-#parkingRampParkingImage img{
-  width: auto;
-  height: auto;
-  margin-left: 65%;
-}
 .videoPopup{
-  float: right;
+  display: block;
+  margin: 0 auto;
+
 }
 .address{
   text-align: center;
-  margin-top: 10px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 5px;
+
 }
 
 .videoPopup iframe{
   width: 400px;
   height: 250px;
+  padding-top: 10px;
 }
 .tourText{
-  width: 300px;
-  float: left;
+  width: 100%;
+  margin: 0 auto;
+
 }
 .sustHeading{
   margin: 0px;
@@ -1530,16 +1533,20 @@ ul#popupNav li{
   text-align: left;
 }
 .popupText{
-  text-align: left;
-  margin-left: 0 auto;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
 }
 .address{
-  text-align: left;
+  display: block;
+  margin: 0 auto;
 }
 .infoContainer{
   height: 120%;
 }
-
+.infoContainer > a {
+  maring: 0 auto;
+}
 
 }
 /*scrolling issue for popups*/
