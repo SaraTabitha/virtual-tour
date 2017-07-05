@@ -966,11 +966,10 @@ div#accFCard{
   padding-right: 2%;
 }
 /*text*/
-#accFCard > div.mdl-card__supporting-text.color666.text{
+.categoryText{
   text-align: center;
-  margin: 0px;
-  position: relative;
-  left: 2%;
+  margin: 0 auto;
+
 }
 
 div#athCard{
@@ -996,13 +995,7 @@ div#athCard{
   padding-left: 2%;
   padding-right: 2%;
 }
-/*text*/
-#athCard > div.mdl-card__supporting-text.color666.text{
-  text-align: center;
-  margin: 0px;
-  position: relative;
-  left: 2%;
-}
+
 
 div#accSCard{
   display: none;
@@ -1029,13 +1022,8 @@ div#accSCard{
   padding-left: 2%;
   padding-right: 2%;
 }
-/*text*/
-#accSCard > div.mdl-card__supporting-text.color666.text{
-  text-align: center;
-  margin: 0px;
-  position: relative;
-  left: 2%;
-}
+
+
 div#campSCard{
   display: none;
 }
@@ -1061,13 +1049,8 @@ div#campSCard{
   padding-left: 2%;
   padding-right: 2%;
 }
-/*text*/
-#campSCard > div.mdl-card__supporting-text.color666.text{
-  text-align: center;
-  margin: 0px;
-  position: relative;
-  left: 2%;
-}
+
+
 div#resHCard{
   display: none;
 }
@@ -1093,13 +1076,7 @@ div#resHCard{
   padding-left: 2%;
   padding-right: 2%;
 }
-/*text*/
-#resHCard > div.mdl-card__supporting-text.color666.text{
-  text-align: center;
-  margin: 0px;
-  position: relative;
-  left: 2%;
-}
+
 div#diningCard{
   display: none;
 }
@@ -1125,13 +1102,7 @@ div#diningCard{
   padding-left: 2%;
   padding-right: 2%;
 }
-/*text*/
-#diningCard > div.mdl-card__supporting-text.color666.text{
-  text-align: center;
-  margin: 0px;
-  position: relative;
-  left: 2%;
-}
+
 div#stuRCard{
   display: none;
 }
@@ -1157,13 +1128,7 @@ div#stuRCard{
   padding-left: 2%;
   padding-right: 2%;
 }
-/*text*/
-#stuRCard > div.mdl-card__supporting-text.color666.text{
-  text-align: center;
-  margin: 0px;
-  position: relative;
-  left: 2%;
-}
+
 
 /*popup css*/
 
@@ -1456,16 +1421,11 @@ cursor: pointer;
 .infoContainer{
  width: 95%;
  height: 100%;
- margin: 10px;
-
+ margin: 0 auto;
+ margin-top: 10px;
  overflow-x: hidden;
 }
-.popupText{
-  position: relative;
-  width: 95%;
-  text-align: center;
 
-}
 .heading{
   margin: 0px;
   font-family: "open-sans", sans-serif;
@@ -1474,13 +1434,13 @@ h1.text.yellow{
   margin: 0px;
 }
 .imagePopup{
-
+  margin: 0 auto;
 }
 .imagePopup img{
   width: 400px;
   height: 250px;
-  position: relative;
-  left: 5%;
+  display: block;
+  margin: 0 auto;
 }
 
 
@@ -1496,12 +1456,7 @@ h1.text.yellow{
   text-align: center;
   margin-top: 10px;
 }
-.imagePopup{
-  text-align: center;
-}
-.imagePopup> img{
-  margin-bottom: 10px;
-}
+
 .videoPopup iframe{
   width: 400px;
   height: 250px;
@@ -1576,6 +1531,7 @@ ul#popupNav li{
 }
 .popupText{
   text-align: left;
+  margin-left: 0 auto;
 }
 .address{
   text-align: left;
@@ -1583,12 +1539,7 @@ ul#popupNav li{
 .infoContainer{
   height: 120%;
 }
-.imagePopup img{
-  left: 0;
-}
-.imagePopup{
-  text-align: left;
-}
+
 
 }
 /*scrolling issue for popups*/
