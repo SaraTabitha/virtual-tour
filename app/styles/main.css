@@ -574,7 +574,14 @@ p.parkingTextHover{
   float: right;
 }
 
-
+/*styling google vr*/
+#googleTestImage{
+  visibility: hidden;
+  z-index: 3;
+  position: absolute;
+  top: 50%;
+  margin-top: -173.5px;
+}
 
 /*overlay + info popup styling*/
 #overlay{

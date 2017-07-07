@@ -350,6 +350,28 @@ $("#selectallcheck2").click(function(){
 });
 // End second Select All
 
+// Google Test VR image click function
+$("#googleTest").click(function(){
+    var check = $("#googleTest").hasClass("checked");
+    if(check === false){
+        $('#overlay').css('visibility', 'visible');
+        $('#overlay').animate({"opacity": "0.3"}, "slow");
+
+        $("#googleTestImage").css('visibility', 'visible');
+        $("#googleTestImage").attr("src", "https://google-developers.appspot.com/vr/concepts/vrview_7220055d5f6acdb547c071c927f216b1.frame?hl=en");
+
+        $("#googleTest").addClass("checked");
+    } else if (check === true) {
+        $('#overlay').css('visibility', 'hidden');
+        $('#overlay').animate({"opacity": "0"}, "slow");
+
+        $("#googleTestImage").css('visibility', 'hidden');
+        $("#googleTestImage").attr("src", "");
+
+        $("#googleTest").removeClass("checked");
+    }
+});
+
 
 // function for loading different functions based on screen width
 if(window.matchMedia("(min-width: 1025px)").matches){
@@ -596,10 +618,6 @@ if(window.matchMedia("(min-width: 1025px)").matches){
         });
         // end Student Recreation
         //
-
-
-
-
 
         // changing height of drawer (for scroll bar) based on if a Building dropdown is selected
         $("#linkOne").click(function(){
