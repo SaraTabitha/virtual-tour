@@ -391,12 +391,14 @@ span.mdl-navigation__link.color666.text{
 
 .optionsBox{
 padding: 6px 0px;
+
 }
 /*positioning of + symbols for 360 navigation*/
 i.add{
 position: relative;
 top: 0px;
 left: 75%;
+
 }
 /*pullout card under menu*/
 .demo-card-wide{
@@ -411,556 +413,555 @@ left: 75%;
 
 /*map styling*/
 html, body, main, .mdl-layout__content, .page-content, #map {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    z-index: 0;
-    overflow: hidden;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  z-index: 0;
+  overflow: hidden;
 }
 #map {
-    position: relative;
-    height: 100%;
+  position: relative;
+  height: 100%;
 
-  }
-    /*hover for markers*/
-   .generalHover{
-      height: 105px;
-      width: 248px;
-    }
+}
+/*hover for markers*/
+.generalHover{
+  height: 105px;
+  width: 248px;
+}
 
-    .imageHover{
-      width: 70px;
-      height: 105px;
-      display: inline-block;
-      float: left;
-    }
-    .hoverDiv{
-      /*display: inline-block;*/
-      height: 100px;
-      width: 170px;
-      float: right;
-      padding: 4px;
+.imageHover{
+  width: 70px;
+  height: 105px;
+  display: inline-block;
+  float: left;
+}
+.hoverDiv{
+  /*display: inline-block;*/
+  height: 100px;
+  width: 170px;
+  float: right;
+  padding: 4px;
 
-    }
-    h1.headHover{
-      position: relative;
-      display: block;
-      margin: 0px;
-      font-size: 14px;
-      font-weight: 900;
-      text-decoration: underline;
-    }
-    p.paraHover{
-      position: relative;
-      display: block;
-      font-size: 12px;
-      width: 155px;
-      margin: 0px;
-    }
+}
+h1.headHover{
+  position: relative;
+  display: block;
+  margin: 0px;
+  font-size: 14px;
+  font-weight: 900;
+  text-decoration: underline;
+}
+p.paraHover{
+  position: relative;
+  display: block;
+  font-size: 12px;
+  width: 155px;
+  margin: 0px;
+}
 
-    /* parking hover styling*/
-    .parkingHover{
-      width: 100px;
-    }
-    #twentythreeHover{
-      width: 130px;
-    }
-    #sevenHover{
-      width: 115px;
-    }
-    #titanOneHover,#titanTwoHover, #womensCenterHover{
-      width: 145px;
-    }
+/* parking hover styling*/
+.parkingHover{
+  width: 100px;
+}
+#twentythreeHover{
+  width: 130px;
+}
+#sevenHover{
+  width: 115px;
+}
+#titanOneHover,#titanTwoHover, #womensCenterHover{
+  width: 145px;
+}
 
-    h1.parkingHeadHover{
-      font-size: 14px;
-      font-weight: 900;
-      text-decoration: underline;
-      margin: 0px;
-    }
-    p.parkingTextHover{
-      font-size: 12px;
-      margin:0px;
-    }
-    .parkingColorStaff{
-      height: 10px;
-      width: 10px;
-      /* staff blue */
-      background-color: #324597;
-      border-radius: 100px;
-      display: inline-block;
-      position: relative;
-      top: -15px;
-      float: right;
-    }
-    .parkingColorRemote{
-      height: 10px;
-      width: 10px;
-      /* remote orange*/
-      background-color: #f17e21;
-      border-radius: 100px;
-      display: inline-block;
-      position: relative;
-      top: -15px;
-      float: right;
-    }
-    .parkingColorCommute{
-      height: 10px;
-      width: 10px;
-      /* remote yellow*/
-      background-color: #fbe200;
-      border-radius: 100px;
-      display: inline-block;
-      position: relative;
-      top: -15px;
-      float: right;
-    }
-    .parkingColorRestricted{
-      height: 10px;
-      width: 10px;
-      /* remote grey*/
-      background-color: #9e9fa2;
-      border-radius: 100px;
-      display: inline-block;
-      position: relative;
-      top: -15px;
-      float: right;
-    }
-    .parkingColorReserved{
-      height: 10px;
-      width: 10px;
-      /* remote pink*/
-      background-color: #f298bf;
-      border-radius: 100px;
-      display: inline-block;
-      position: relative;
-      top: -15px;
-      float: right;
-    }
-    .parkingColorCommuter{
-      height: 10px;
-      width: 10px;
-      /* commuter red*/
-      background-color: #ec2024;
-      border-radius: 100px;
-      display: inline-block;
-      position: relative;
-      top: -15px;
-      float: right;
-    }
-    .parkingColorResident{
-      height: 10px;
-      width: 10px;
-      /* resident green*/
-      background-color: #6fbd46;
-      border-radius: 100px;
-      display: inline-block;
-      position: relative;
-      top: -15px;
-      float: right;
-    }
-    .parkingColorVisitor{
-      height: 10px;
-      width: 10px;
-      /* visitor peach*/
-      background-color: #ffdc9d;
-      border-radius: 100px;
-      display: inline-block;
-      position: relative;
-      top: -15px;
-      float: right;
-    }
+h1.parkingHeadHover{
+  font-size: 14px;
+  font-weight: 900;
+  text-decoration: underline;
+  margin: 0px;
+}
+p.parkingTextHover{
+  font-size: 12px;
+  margin:0px;
+}
+.parkingColorStaff{
+  height: 10px;
+  width: 10px;
+  /* staff blue */
+  background-color: #324597;
+  border-radius: 100px;
+  display: inline-block;
+  position: relative;
+  top: -15px;
+  float: right;
+}
+.parkingColorRemote{
+  height: 10px;
+  width: 10px;
+  /* remote orange*/
+  background-color: #f17e21;
+  border-radius: 100px;
+  display: inline-block;
+  position: relative;
+  top: -15px;
+  float: right;
+}
+.parkingColorCommute{
+  height: 10px;
+  width: 10px;
+  /* remote yellow*/
+  background-color: #fbe200;
+  border-radius: 100px;
+  display: inline-block;
+  position: relative;
+  top: -15px;
+  float: right;
+}
+.parkingColorRestricted{
+  height: 10px;
+  width: 10px;
+  /* remote grey*/
+  background-color: #9e9fa2;
+  border-radius: 100px;
+  display: inline-block;
+  position: relative;
+  top: -15px;
+  float: right;
+}
+.parkingColorReserved{
+  height: 10px;
+  width: 10px;
+  /* remote pink*/
+  background-color: #f298bf;
+  border-radius: 100px;
+  display: inline-block;
+  position: relative;
+  top: -15px;
+  float: right;
+}
+.parkingColorCommuter{
+  height: 10px;
+  width: 10px;
+  /* commuter red*/
+  background-color: #ec2024;
+  border-radius: 100px;
+  display: inline-block;
+  position: relative;
+  top: -15px;
+  float: right;
+}
+.parkingColorResident{
+  height: 10px;
+  width: 10px;
+  /* resident green*/
+  background-color: #6fbd46;
+  border-radius: 100px;
+  display: inline-block;
+  position: relative;
+  top: -15px;
+  float: right;
+}
+.parkingColorVisitor{
+  height: 10px;
+  width: 10px;
+  /* visitor peach*/
+  background-color: #ffdc9d;
+  border-radius: 100px;
+  display: inline-block;
+  position: relative;
+  top: -15px;
+  float: right;
+}
 
 
 
-    /*overlay + info popup styling*/
-    #overlay{
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      background-color: black;
-      z-index: 1;
-      opacity: 0;
-      visibility: hidden;
-    }
-    .popup{
-      visibility: hidden;
-      opacity: 0;
-      position: fixed;
-      left: 40%;
-      top: 20%;
-      width: 715px;
-      height: 420px;
-      background-color: white;
-      color: white;
-      z-index: 2;
-      padding: 10px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+/*overlay + info popup styling*/
+#overlay{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+}
+.popup{
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  left: 40%;
+  top: 20%;
+  width: 715px;
+  height: 420px;
+  background-color: white;
+  color: white;
+  z-index: 2;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
-    }
-    /*specific popup modifications*/
+}
+/*specific popup modifications*/
 
-    #pollockPopup{
-      height: 380px;
-    }
-    #donnerPopup{
-      height: 400px;
-    }
-    #fletcherPopup, #oviattPopup{
-      height: 430px;
-    }
-    #dempseyPopup{
-      height: 440px;
-    }
-    #taylorPopup, #parkingRampPopup, #blackhawkPopup{
-      height: 445px;
-    }
-    #acPopup, #reevePopup{
-      height: 450px;
-    }
-    #successPopup{
-      height: 490px;
-    }
-    #horizonPopup{
-      height: 515px;
-    }
+#pollockPopup{
+  height: 380px;
+}
+#donnerPopup{
+  height: 400px;
+}
+#fletcherPopup, #oviattPopup{
+  height: 430px;
+}
+#dempseyPopup{
+  height: 440px;
+}
+#taylorPopup, #parkingRampPopup, #blackhawkPopup{
+  height: 445px;
+}
+#acPopup, #reevePopup{
+  height: 450px;
+}
+#successPopup{
+  height: 490px;
+}
+#horizonPopup{
+  height: 515px;
+}
 
-    /*popup stuff continued*/
-    .popupBlack{
-      background-color: #fdb515;
-      position: relative;
-      left: -10px;
-      top: -10px;
-      width: 735px;
-      height: 100px;
-      border-radius: 10px 10px 0px 0px;
-    }
-    h1.text.yellow{
-      position: relative;
-      top: 50%;
-      left: 10px;
-      font-size: 2em;
-    }
+/*popup stuff continued*/
+.popupBlack{
+  background-color: #fdb515;
+  position: relative;
+  left: -10px;
+  top: -10px;
+  width: 735px;
+  height: 100px;
+  border-radius: 10px 10px 0px 0px;
+}
+h1.text.yellow{
+  position: relative;
+  top: 50%;
+  left: 10px;
+  font-size: 2em;
+}
 
-    .popupNav{
-      background-color:  #ffcc00 ;
-      position: relative;
-      left: -10px;
-      top: -10px;
-      width: 735px;
-      height: 30px;
-    }
-    ul#popupNav {
-      margin: 0px;
-      padding: 0px;
-    }
-    ul#popupNav li{
-      position: relative;
-      display: inline;
-      padding-left: 20px;
-      color: #444;
-      font-family: 'Open Sans', sans-serif;
-      line-height: 2em;
-    }
-    ul#popupNav li.about{
-      padding-left: 10px;
-    }
-    ul#popupNav li:hover{
-      text-decoration: underline;
-    }
-    .closeButton{
-      float: right;
-      right: 3%;
-    }
-    .popupText{
-      float: right;
-      width: 300px;
-      color: black;
-    }
-    .heading{
-      margin: 0px;
-      font-family: "open-sans", sans-serif;
-      color: black;
-    }
-    .imagePopup{
-      float: left;
-    }
-    .imagePopup img{
-      width: 400px;
-      height: 250px;
+.popupNav{
+  background-color:  #ffcc00 ;
+  position: relative;
+  left: -10px;
+  top: -10px;
+  width: 735px;
+  height: 30px;
+}
+ul#popupNav {
+  margin: 0px;
+  padding: 0px;
+}
+ul#popupNav li{
+  position: relative;
+  display: inline;
+  padding-left: 20px;
+  color: #444;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 2em;
+}
+ul#popupNav li.about{
+  padding-left: 10px;
+}
+ul#popupNav li:hover{
+  text-decoration: underline;
+}
+.closeButton{
+  float: right;
+  right: 3%;
+}
+.popupText{
+  float: right;
+  width: 300px;
+  color: black;
+}
+.heading{
+  margin: 0px;
+  font-family: "open-sans", sans-serif;
+  color: black;
+}
+.imagePopup{
+  float: left;
+}
+.imagePopup img{
+  width: 400px;
+  height: 250px;
+}
+h1.text.yellow{
+  margin: 0px;
+}
+#parkingRampParkingImage{
+  width: 715px;
+  padding: 10px;
 
-    }
-    h1.text.yellow{
-      margin: 0px;
-    }
-    #parkingRampParkingImage{
-      width: 715px;
-      padding: 10px;
+}
+#parkingRampParkingImage img{
+  display: block;
+  margin: 0 auto;
+}
+.videoPopup{
+  float: right;
+}
+.address{
+  text-align: center;
+  margin: 0px;
+  color: black;
+}
+a.address{
+  position: relative;
+  left: 40%;
+}
+.videoPopup iframe{
+  width: 400px;
+  height: 250px;
+}
+.tourText{
+  width: 300px;
+  float: left;
+}
+.sustHeading{
+  margin: 0px;
+  font-family: "open-sans", sans-serif;
+  position: relative;
+  color: black;
 
-    }
-    #parkingRampParkingImage img{
-      display: block;
-      margin: 0 auto;
-    }
-    .videoPopup{
-      float: right;
-    }
-    .address{
-      text-align: center;
-      margin: 0px;
-      color: black;
-    }
-    a.address{
-      position: relative;
-      left: 40%;
-    }
-    .videoPopup iframe{
-      width: 400px;
-      height: 250px;
-    }
-    .tourText{
-      width: 300px;
-      float: left;
-    }
-    .sustHeading{
-      margin: 0px;
-      font-family: "open-sans", sans-serif;
-      position: relative;
-      color: black;
+}
+.subText{
+  position: relative;
+  padding-top: 10px;
+  color: black;
+  margin-bottom: 0px;
+}
 
-    }
-    .subText{
-      position: relative;
-      padding-top: 10px;
-      color: black;
-      margin-bottom: 0px;
-    }
+/*reeve dining padding*/
+#reeveDiningText p{
+  margin-bottom: 4px;
+}
+#reeveDiningImage ul{
+  padding: 0px;
+  margin: 0px;
+  margin-left: 10px;
+  text-align: center;
+}
+#reeveDiningImage li{
+  position: relative;
+  display: inline;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  display: inline-block;
+  line-height: 1em;
 
-    /*reeve dining padding*/
-    #reeveDiningText p{
-      margin-bottom: 4px;
-    }
-    #reeveDiningImage ul{
-      padding: 0px;
-      margin: 0px;
-      margin-left: 10px;
-      text-align: center;
-    }
-    #reeveDiningImage li{
-      position: relative;
-      display: inline;
-      font-family: 'Open Sans', sans-serif;
-      font-size: 12px;
-      display: inline-block;
-      line-height: 1em;
+}
+#reeveDiningImage a{
+  text-decoration-line: none;
+}
+#reeveDiningImage a:hover{
+  text-decoration-line: underline;
+}
 
-    }
-    #reeveDiningImage a{
-      text-decoration-line: none;
-    }
-    #reeveDiningImage a:hover{
-      text-decoration-line: underline;
-    }
+/*blackhawk list styling*/
+#blackhawkDiningText ul{
+  margin: 0px;
+  padding: 0px;
 
-    /*blackhawk list styling*/
-    #blackhawkDiningText ul{
-      margin: 0px;
-      padding: 0px;
+}
+#blackhawkDiningText li{
+  margin: 0px;
+  padding: 0px;
+  padding-left: 20px;
+  text-indent: -15px;
+  list-style-type: circle;
+  list-style-position: inside;
+}
+#blackhawkDiningText p{
+  margin: 0px;
+  padding: 0px;
+}
 
-    }
-    #blackhawkDiningText li{
-      margin: 0px;
-      padding: 0px;
-      padding-left: 20px;
-      text-indent: -15px;
-      list-style-type: circle;
-      list-style-position: inside;
-    }
-    #blackhawkDiningText p{
-      margin: 0px;
-      padding: 0px;
-    }
-
-    /*styling for popup tabs*/
-    #albeeTourVideo{
-      display: none;
-    }
-    #albeeTourText{
-      display: none;
-    }
-    #albeeSustainability{
-      display: none;
-    }
-    #alumniSustainability{
-      display: none;
-    }
-    #acBathrooms{
-      display: none;
-    }
-    #blackhawkSustainability{
-      display: none;
-    }
-    #blackhawkBathrooms{
-      display: none;
-    }
-    #blackhawkDiningImage{
-      display: none;
-    }
-    #blackhawkDiningText{
-      display: none;
-    }
-    #clowDiningImage{
-      display: none;
-    }
-    #clowDiningText{
-      display: none;
-    }
-    #equityBathrooms{
-      display: none;
-    }
-    #dempseyBathrooms{
-      display: none;
-    }
-    #halseyBathrooms{
-      display: none;
-    }
-    #halseyDiningImage{
-      display: none;
-    }
-    #halseyDiningText{
-      display: none;
-    }
-    #harringtonBathrooms{
-      display: none;
-    }
-    #heatingSustainability{
-      display: none;
-    }
-    #parkingRampParkingImage{
-      display: none;
-    }
-    #parkingRampParkingText{
-      display: none;
-    }
-    #horizonSustainability{
-      display: none;
-    }
-    #kolfBathrooms{
-      display: none;
-    }
-    #nursingBathrooms{
-      display: none;
-    }
-    #polkTourText{
-      display: none;
-    }
-    #polkTourVideo{
-      display: none;
-    }
-    #reeveTourText{
-      display: none;
-    }
-    #reeveTourVideo{
-      display: none;
-    }
-    #reeveSustainability{
-      display: none;
-    }
-    #reeveBathrooms{
-      display: none;
-    }
-    #reeveDiningImage{
-      display: none;
-    }
-    #reeveDiningText{
-      display: none;
-    }
-    #sageTourText{
-      display: none;
-    }
-    #sageTourVideo{
-      display: none;
-    }
-    #sageSustainability{
-      display: none;
-    }
-    #sageBathrooms{
-      display: none;
-    }
-    #sageDiningImage{
-      display: none;
-    }
-    #sageDiningText{
-      display: none;
-    }
-    #scottDiningImage{
-      display: none;
-    }
-    #scottDiningText{
-      display: none;
-    }
-    #recreationSustainability{
-      display: none;
-    }
-    #recreationBathrooms{
-      display: none;
-    }
-    #successTourText{
-      display: none;
-    }
-    #successTourVideo{
-      display: none;
-    }
-    #successSustainability{
-      display: none;
-    }
-    #successBathrooms{
-      display: none;
-    }
-    #swartBathrooms{
-      display: none;
-    }
-    #taylorSustainability{
-      display: none;
-    }
-    #titanSustainability{
-      display: none;
-    }
-    #policeBathrooms{
-      display: none;
-    }
-    /*moves the google logo n' stuff into view on the map*/
-    #map > div > div > div:nth-child(2){
-      margin-left: 385px !important;
-    }
-    #map > div > div > div:nth-child(10){
-      left: 385px !important;
-    }
-    /*mobile message*/
-    #mobile{
-      display: none;
-    }
-    /*should not load until told to D:<*/
-    div#accFCard{
-      display: none;
-    }
-    div#athCard{
-      display: none;
-    }
-    div#accSCard{
-      display: none;
-    }
-    div#campSCard{
-      display: none;
-    }
-    div#resHCard{
-      display: none;
-    }
-    div#diningCard{
-      display: none;
-    }
-    div#stuRCard{
-      display: none;
-    }
+/*styling for popup tabs*/
+#albeeTourVideo{
+  display: none;
+}
+#albeeTourText{
+  display: none;
+}
+#albeeSustainability{
+  display: none;
+}
+#alumniSustainability{
+  display: none;
+}
+#acBathrooms{
+  display: none;
+}
+#blackhawkSustainability{
+  display: none;
+}
+#blackhawkBathrooms{
+  display: none;
+}
+#blackhawkDiningImage{
+  display: none;
+}
+#blackhawkDiningText{
+  display: none;
+}
+#clowDiningImage{
+  display: none;
+}
+#clowDiningText{
+  display: none;
+}
+#equityBathrooms{
+  display: none;
+}
+#dempseyBathrooms{
+  display: none;
+}
+#halseyBathrooms{
+  display: none;
+}
+#halseyDiningImage{
+  display: none;
+}
+#halseyDiningText{
+  display: none;
+}
+#harringtonBathrooms{
+  display: none;
+}
+#heatingSustainability{
+  display: none;
+}
+#parkingRampParkingImage{
+  display: none;
+}
+#parkingRampParkingText{
+  display: none;
+}
+#horizonSustainability{
+  display: none;
+}
+#kolfBathrooms{
+  display: none;
+}
+#nursingBathrooms{
+  display: none;
+}
+#polkTourText{
+  display: none;
+}
+#polkTourVideo{
+  display: none;
+}
+#reeveTourText{
+  display: none;
+}
+#reeveTourVideo{
+  display: none;
+}
+#reeveSustainability{
+  display: none;
+}
+#reeveBathrooms{
+  display: none;
+}
+#reeveDiningImage{
+  display: none;
+}
+#reeveDiningText{
+  display: none;
+}
+#sageTourText{
+  display: none;
+}
+#sageTourVideo{
+  display: none;
+}
+#sageSustainability{
+  display: none;
+}
+#sageBathrooms{
+  display: none;
+}
+#sageDiningImage{
+  display: none;
+}
+#sageDiningText{
+  display: none;
+}
+#scottDiningImage{
+  display: none;
+}
+#scottDiningText{
+  display: none;
+}
+#recreationSustainability{
+  display: none;
+}
+#recreationBathrooms{
+  display: none;
+}
+#successTourText{
+  display: none;
+}
+#successTourVideo{
+  display: none;
+}
+#successSustainability{
+  display: none;
+}
+#successBathrooms{
+  display: none;
+}
+#swartBathrooms{
+  display: none;
+}
+#taylorSustainability{
+  display: none;
+}
+#titanSustainability{
+  display: none;
+}
+#policeBathrooms{
+  display: none;
+}
+/*moves the google logo n' stuff into view on the map*/
+#map > div > div > div:nth-child(2){
+  margin-left: 385px !important;
+}
+#map > div > div > div:nth-child(10){
+  left: 385px !important;
+}
+/*mobile message*/
+#mobile{
+  display: none;
+}
+/*should not load until told to D:<*/
+div#accFCard{
+  display: none;
+}
+div#athCard{
+  display: none;
+}
+div#accSCard{
+  display: none;
+}
+div#campSCard{
+  display: none;
+}
+div#resHCard{
+  display: none;
+}
+div#diningCard{
+  display: none;
+}
+div#stuRCard{
+  display: none;
+}
