@@ -710,6 +710,7 @@ html, body, main, .mdl-layout__content, .page-content, #map {
     .address{
       text-align: center;
       margin: 0px;
+      color: black;
     }
     a.address{
       position: relative;
