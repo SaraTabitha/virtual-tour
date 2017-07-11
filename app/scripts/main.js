@@ -371,6 +371,28 @@ $("#googleTest").click(function(){
         $("#googleTest").removeClass("checked");
     }
 });
+$("#titanField").click(function(){
+    var check = $("#titanField").hasClass("checked");
+    if(check === false){
+        $('#overlay').css('visibility', 'visible');
+        $('#vrview').animate({"opacity": "0.3"}, "slow");
+
+        $("#vrview").css('visibility', 'visible');
+        // $("#titanFieldImage").attr("src", "images/Panorama/titanField.jpg");
+
+        $("#vrview").addClass("checked");
+    } else if (check === true) {
+        $('#overlay').css('visibility', 'hidden');
+        $('#overlay').animate({"opacity": "0"}, "slow");
+
+        $("vrview").css('visibility', 'hidden');
+        // $("#titanFieldImage").attr("src", "");
+
+        $("#vrview").removeClass("checked");
+    }
+
+
+});
 
 
 // function for loading different functions based on screen width
