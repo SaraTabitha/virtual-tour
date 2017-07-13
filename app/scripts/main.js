@@ -75,11 +75,14 @@
 // Your custom JavaScript goes here
 
 // reloads the page if it is resized so that it reloads this file based on window width! :D
-
+var lastWidth = $(window).width();
 $(window).resize(function() {
-    setTimeout(function(){
+    var mobileWidth = 1024;
+    if($(this).width() != lastWidth && $(this).width() < mobileWidth){
+        setTimeout(function(){
         location.reload();
-    }, 100);
+        }, 100);
+    } 
 });
 
 // all JS that is not change depending on the width of the screen
@@ -399,12 +402,14 @@ $("#titanField").click(function(){
         $('#overlay').css('visibility', 'visible');
         $('#overlay').animate({"opacity": "0.3"}, "slow");
 
-      
+        $("#titanFieldImage > iframe").css('visibility', 'visible');
+
         $("#titanField").addClass("checked");
     } else if (check === true) {
         $('#overlay').css('visibility', 'hidden');
         $('#overlay').animate({"opacity": "0"}, "slow");
 
+        $("#titanFieldImage > iframe").css('visibility', 'hidden');
 
         $("#titanField").removeClass("checked");
     }

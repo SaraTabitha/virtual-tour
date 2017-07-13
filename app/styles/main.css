@@ -576,11 +576,17 @@ p.parkingTextHover{
 
 /*styling google vr*/
 .vr{
+  height: 347px;
+}
+.vrDiv{
   visibility: hidden;
   z-index: 3;
   position: absolute;
   top: 50%;
   margin-top: -173.5px;
+  height: 347px;
+  /*width: 100%;*/
+  left: 377px;
 }
 
 /*overlay + info popup styling*/
