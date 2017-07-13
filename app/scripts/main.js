@@ -371,27 +371,43 @@ $("#googleTest").click(function(){
         $("#googleTest").removeClass("checked");
     }
 });
+// $("#titanField").click(function(){
+//   debugger;
+//     var check = $("#titanField").hasClass("checked");
+//     if(check === false){
+//         $('#overlay').css('visibility', 'visible');
+//         $('#titanFieldImage > iframe').animate({"opacity": "0.3"}, "slow");
+//
+//         $("#titanFieldImage > iframe").css('visibility', 'visible');
+//         // $("#titanFieldImage").attr("src", "images/Panorama/titanField.jpg");
+//
+//         $("#titanField").addClass("checked");
+//     } else if (check === true) {
+//         $('#overlay').css('visibility', 'hidden');
+//         $('#overlay').animate({"opacity": "0"}, "slow");
+//
+//         $("#titanFieldImage > iframe").css('visibility', 'hidden');
+//         // $("#titanFieldImage").attr("src", "");
+//
+//         $("#titanField").removeClass("checked");
+//     }
+//
+// });
 $("#titanField").click(function(){
     var check = $("#titanField").hasClass("checked");
     if(check === false){
         $('#overlay').css('visibility', 'visible');
-        $('#vrview').animate({"opacity": "0.3"}, "slow");
+        $('#overlay').animate({"opacity": "0.3"}, "slow");
 
-        $("#vrview").css('visibility', 'visible');
-        // $("#titanFieldImage").attr("src", "images/Panorama/titanField.jpg");
-
-        $("#vrview").addClass("checked");
+      
+        $("#titanField").addClass("checked");
     } else if (check === true) {
         $('#overlay').css('visibility', 'hidden');
         $('#overlay').animate({"opacity": "0"}, "slow");
 
-        $("vrview").css('visibility', 'hidden');
-        // $("#titanFieldImage").attr("src", "");
 
-        $("#vrview").removeClass("checked");
+        $("#titanField").removeClass("checked");
     }
-
-
 });
 
 

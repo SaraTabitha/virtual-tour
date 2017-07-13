@@ -1233,7 +1233,7 @@ p.parkingTextHover{
 }
 
 /*styling google vr*/
-#googleTestImage{
+.vr{
   visibility: hidden;
   z-index: 3;
   position: absolute;

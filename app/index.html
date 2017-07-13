@@ -59,16 +59,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- VR view  -->
     <script src="https://storage.googleapis.com/vrview/2.0/build/vrview.min.js"></script>
-    <script>
-    window.addEventListener('load', onVrViewLoad)
-    function onVrViewLoad() {
-        var vrView = new VRView.Player('#vrview', {
-        image: 'images/Panorama/titanFieldPano.jpg',
-        is_stereo: false
-        });
-    }
 
-    </script>
 
 </head>
 <body>
@@ -2265,9 +2256,37 @@
 
                         <!-- VR images -->
                         <iframe allowfullscreen="true" id="googleTestImage" class="vr" style="width: calc(100% + 20px); height: 347px;" src=""></iframe>
-                        <div id="vrview" class="vr">
-                            <!-- <iframe id="titanFieldImage" class="vr" style="width: calc(100% + 20px); height: 347px;" src=""></iframe> -->
+
+                        <!-- <script>
+                        window.addEventListener('load', onVrViewLoad)
+                        function onVrViewLoad() {
+                            var vrView = new VRView.Player('#vrview', {
+                            image: 'images/Panorama/titanFieldPano.jpg',
+                            is_stereo: false
+                            });
+                        }
+                        </script>
+                        <div id="vrview" class="vr"> -->
+                        <!-- </div> -->
+                        <script>
+                            window.addEventListener('load', ontitanFieldImageImageLoad)
+                                function ontitanFieldImageImageLoad() {
+                                    var titanFieldImage = new VRView.Player('#titanFieldImage', {
+                                        image: 'images/Panorama/titanFieldPano.jpg',
+                                        is_stereo: false
+                                    });
+                              $("#titanFieldImage > iframe").css('visibility','hidden');
+                              $("#titanFieldImage > iframe").css('position', 'absolute');
+                              $("#titanFieldImage > iframe").css('z-index', '3');
+                              $("#titanFieldImage > iframe").css('top', '-10px');
+                              $("#titanFieldImage > iframe").css('height', '347px');
+                              $("#titanFieldImage > iframe").css('width', 'calc(100% + 20px)');
+                            }
+                        </script>
+                        <div id="titanFieldImage">
                         </div>
+
+
                         <!-- overlay -->
                         <div id= "overlay">
                         </div>
