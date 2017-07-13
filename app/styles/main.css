@@ -396,9 +396,16 @@ padding: 6px 0px;
 /*positioning of + symbols for 360 navigation*/
 i.add{
 position: relative;
-top: 0px;
-left: 75%;
+float: right;
+top: -40px;
 
+}
+.linkText{
+  position: relative;
+  top 12px;
+}
+.linkSpan{
+  height: 30px !important;
 }
 /*pullout card under menu*/
 .demo-card-wide{

@@ -236,17 +236,17 @@
                                                 </div>
                                                 <!-- placeholder nav -->
                                                 <div id="linkOne" class="mdl-navigation mine">
-                                                        <span class="mdl-navigation__link color666 text" href="#">Building<i id="addOne"class="material-icons color666 add">add</i></span>
+                                                        <span class="mdl-navigation__link linkSpan" href="#"><p class="linkText color666 text">Oshkosh Sports Complex</p><i id="addOne"class="material-icons color666 add">add</i></span>
                                                 </div>
                                                 <div id="linkOneOptions"  class="tourDrop">
                                                         <ul class="noPad" >
-                                                                <li id="googleTest" class="tourItem text">Google Test</li>
                                                                 <li id="titanField" class="tourItem text">Titan Field</li>
+                                                                <li id="" class="tourItem text">VR</li>
                                                                 <li class="tourItem text">VR</li>
                                                         </ul>
                                                 </div>
                                                 <div id="linkTwo" class="mdl-navigation mine">
-                                                        <span  class="mdl-navigation__link color666 text" href="#">Building<i id="addTwo" class="material-icons color666 add">add</i></span>
+                                                        <span  class="mdl-navigation__link linkSpan " href="#"><p class="linkText color666 text">Building</p><i id="addTwo" class="material-icons color666 add">add</i></span>
                                                 </div>
                                                 <div id="linkTwoOptions"   class="tourDrop">
                                                         <ul class="noPad">
@@ -257,7 +257,7 @@
                                                 </div>
 
                                                 <div id="linkThree" class="mdl-navigation mine">
-                                                        <span  class="mdl-navigation__link  color666 text" href="#">Building<i id="addThree"class="material-icons color666 add">add</i></span>
+                                                        <span  class="mdl-navigation__link linkSpan" href="#"><p class="linkText color666 text">Building</p><i id="addThree"class="material-icons color666 add">add</i></span>
                                                 </div>
                                                 <div id="linkThreeOptions" class="tourDrop">
                                                         <ul class="noPad">
@@ -2255,48 +2255,33 @@
                         <!-- POPUPS END -->
 
                         <!-- VR images -->
-                        <!-- <iframe allowfullscreen="true" id="googleTestImage" class="vr" style="width: calc(100% + 20px); height: 347px;" src=""></iframe> -->
 
-                        <!-- <script>
-                        window.addEventListener('load', onVrViewLoad)
-                        function onVrViewLoad() {
-                            var vrView = new VRView.Player('#vrview', {
-                            image: 'images/Panorama/titanFieldPano.jpg',
-                            is_stereo: false
-                            });
-                        }
-                        </script>
-                        <div id="vrview" class="vr"> -->
-                        <!-- </div> -->
                         <script>
                         window.addEventListener('load', ontitanFieldImageImageLoad)
                             function ontitanFieldImageImageLoad() {
                                 var titanFieldImage = new VRView.Player('#titanFieldImage', {
-                                    image: 'images/Panorama/titanFieldPano.jpg',
+                                    image: "images/Panorama/titanFieldPano.jpg",
                                     is_stereo: false
                                 });
-                        $("#titanFieldImage > iframe").addClass("vr");
-
-                        // changes height/width of iframe based on width of
-                        // the window
-                        if(window.matchMedia("(min-width: 1025px)").matches){
-                          // web
-                          var width = ($(window).width() - 377)
-                          $(".vr").css("width", width);
-                        } else{
-                          // mobile
-                          var height = ($(window).height() - 70)
-                              if($(window).height() > $(window).width()){
-                                // if mobile portrait
-                                $(".vr").css("height", "347px");
-                              } else{
-                                // if mobile landscape
-                                $(".vr").css("height", height);
-                              }
-
-                        };
+                            $("#titanFieldImage > iframe").addClass("vr");
+                            // changes height/width of iframe based on width of
+                            // the window
+                            if(window.matchMedia("(min-width: 1025px)").matches){
+                                // web
+                                var width = ($(window).width() - 377)
+                                $(".vr").css("width", width);
+                            } else{
+                                // mobile
+                                var height = ($(window).height() - 70)
+                                if($(window).height() > $(window).width()){
+                                    // if mobile portrait
+                                    $(".vr").css("height", "347px");
+                                } else{
+                                    // if mobile landscape
+                                    $(".vr").css("height", height);
+                                }
+                            };
                         }
-
                         </script>
                         <div id="titanFieldImage" class="vrDiv">
                         </div>
@@ -3107,9 +3092,6 @@
       <script src="scripts/main.js"></script>
       <!-- search box functionality -->
       <script src="scripts/search.js"></script>
-      <!-- vr -->
-      <script src="scripts/vr.js"></script>
-
 
       <!-- endbuild -->
 

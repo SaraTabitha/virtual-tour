@@ -78,11 +78,12 @@
 var lastWidth = $(window).width();
 $(window).resize(function() {
     var mobileWidth = 1024;
-    if($(this).width() != lastWidth && $(this).width() < mobileWidth){
+    if($(this).width() != lastWidth && $(this).width() <= mobileWidth){
         setTimeout(function(){
         location.reload();
         }, 100);
-    } 
+    }
+
 });
 
 // all JS that is not change depending on the width of the screen
