@@ -2276,27 +2276,7 @@
                                     is_stereo: false
                                 });
                         $("#titanFieldImage > iframe").addClass("vr");
-
-                        // changes height/width of iframe based on width of
-                        // the window
-                        if(window.matchMedia("(min-width: 1025px)").matches){
-                          // web
-                          var width = ($(window).width() - 377)
-                          $(".vr").css("width", width);
-                        } else{
-                          // mobile
-                          var height = ($(window).height() - 70)
-                              if($(window).height() > $(window).width()){
-                                // if mobile portrait
-                                $(".vr").css("height", "347px");
-                              } else{
-                                // if mobile landscape
-                                $(".vr").css("height", height);
-                              }
-
-                        };
                         }
-
                         </script>
                         <div id="titanFieldImage" class="vrDiv">
                         </div>
