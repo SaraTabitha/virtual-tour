@@ -372,6 +372,7 @@ $("#titanField").click(function(){
         $("#titanFieldImage > iframe").css('visibility', 'hidden');
 
         $("#titanField").removeClass("checked");
+        document.getElementById("titanField").removeEventListener('click', ontitanFieldImageImageLoad);
     }
 });
 $("#womensCenter").click(function(){

@@ -2265,6 +2265,8 @@
                                     image: "images/Panorama/titanFieldPano.jpg",
                                     is_stereo: false
                                 });
+                              document.getElementById("titanField").removeEventListener('click', ontitanFieldImageImageLoad);
+
                             $("#titanFieldImage > iframe").addClass("vr");
                             // changes height/width of iframe based on width of
                             // the window
