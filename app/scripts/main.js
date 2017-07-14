@@ -372,7 +372,6 @@ $("#titanField").click(function(){
         $("#titanFieldImage > iframe").css('visibility', 'hidden');
 
         $("#titanField").removeClass("checked");
-        document.getElementById("titanField").removeEventListener('click', ontitanFieldImageImageLoad);
     }
 });
 $("#womensCenter").click(function(){
@@ -391,6 +390,24 @@ $("#womensCenter").click(function(){
         $("#womensCenterImage > iframe").css('visibility', 'hidden');
 
         $("#womensCenter").removeClass("checked");
+    }
+});
+$("#womensCenterBackroom").click(function(){
+    var check = $("#womensCenterBackroom").hasClass("checked");
+    if(check === false){
+        $('#overlay').css('visibility', 'visible');
+        $('#overlay').animate({"opacity": "0.3"}, "slow");
+
+        $("#womensCenterBackroomImage > iframe").css('visibility', 'visible');
+
+        $("#womensCenterBackroom").addClass("checked");
+    } else if (check === true) {
+        $('#overlay').css('visibility', 'hidden');
+        $('#overlay').animate({"opacity": "0"}, "slow");
+
+        $("#womensCenterBackroomImage > iframe").css('visibility', 'hidden');
+
+        $("#womensCenterBackroom").removeClass("checked");
     }
 });
 

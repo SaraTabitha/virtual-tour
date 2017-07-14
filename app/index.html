@@ -2286,13 +2286,60 @@
                                 }
                             };
                         }
-                        window.addEventListener('load', onwomensCenterImageLoad)
+                        document.getElementById("womensCenter").addEventListener('click', onwomensCenterImageLoad)
                             function onwomensCenterImageLoad() {
                                 var womensCenterImage = new VRView.Player('#womensCenterImage', {
                                     image: "images/Panorama/womensCenter.jpg",
                                     is_stereo: false
                                 });
+                                document.getElementById("womensCenter").removeEventListener('click', onwomensCenterImageLoad);
+
                             $("#womensCenterImage > iframe").addClass("vr");
+                            // changes height/width of iframe based on width of
+                            // the window
+                            if(window.matchMedia("(min-width: 1025px)").matches){
+                                // web
+                                var width = ($(window).width() - 377)
+                                $(".vr").css("width", width);
+                            } else{
+                                // mobile
+                                var height = ($(window).height() - 70)
+                                if($(window).height() > $(window).width()){
+                                    // if mobile portrait
+                                    $(".vr").css("height", "347px");
+                                } else{
+                                    // if mobile landscape
+                                    $(".vr").css("height", height);
+                                }
+                            };
+                        }
+                        document.getElementById("womensCenterBackroom").addEventListener('click', onwomensCenterBackroomImageLoad)
+                            function onwomensCenterBackroomImageLoad() {
+                                var womensCenterBackroomImage = new VRView.Player('#womensCenterBackroomImage', {
+                                    image: "images/Panorama/womensCenterBackroom.jpg",
+                                    is_stereo: false
+                              });
+                              womensCenterBackroomImage.addHotspot('dining-room', {
+                                  pitch: 30, // In degrees. Up is positive.
+                                  yaw: 20, // In degrees. To the right is positive.
+                                  radius: 1, // Radius of the circular target in meters.
+                                  distance: 2 // Distance of target from camera in meters.
+
+                              });
+
+                              // womensCenterBackroomImage.on('click', function() {
+                              //
+                              //      womensCenterBackroomImage.setContentInfo({
+                              //       image: 'images/Panorama/womensCenter.jpg',
+                              //       is_stereo: false
+                              //     });
+                              // });
+
+
+
+                            document.getElementById("womensCenterBackroom").removeEventListener('click', onwomensCenterBackroomImageLoad);
+
+                            $("#womensCenterBackroomImage > iframe").addClass("vr");
                             // changes height/width of iframe based on width of
                             // the window
                             if(window.matchMedia("(min-width: 1025px)").matches){
