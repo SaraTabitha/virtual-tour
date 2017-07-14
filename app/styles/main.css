@@ -397,12 +397,13 @@ padding: 6px 0px;
 i.add{
 position: relative;
 float: right;
-top: -40px;
+top: -24px;
 
 }
 .linkText{
   position: relative;
-  top 12px;
+  top: 50%;
+  margin-top: -12px;
 }
 .linkSpan{
   height: 30px !important;
