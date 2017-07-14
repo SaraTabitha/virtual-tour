@@ -246,12 +246,12 @@
                                                         </ul>
                                                 </div>
                                                 <div id="linkTwo" class="mdl-navigation mine">
-                                                        <span  class="mdl-navigation__link linkSpan " href="#"><p class="linkText color666 text">Building</p><i id="addTwo" class="material-icons color666 add">add</i></span>
+                                                        <span  class="mdl-navigation__link linkSpan " href="#"><p class="linkText color666 text">Campus Center for Equity &amp; Diversity</p><i id="addTwo" class="material-icons color666 add">add</i></span>
                                                 </div>
                                                 <div id="linkTwoOptions"   class="tourDrop">
                                                         <ul class="noPad">
-                                                                <li class="tourItem text">VR</li>
-                                                                <li class="tourItem text">VR</li>
+                                                                <li id="womensCenter" class="tourItem text">Women's Center</li>
+                                                                <li id="womensCenterBackroom" class="tourItem text">Women's Center Backroom</li>
                                                                 <li class="tourItem text">VR</li>
                                                         </ul>
                                                 </div>
@@ -2257,7 +2257,9 @@
                         <!-- VR images -->
 
                         <script>
-                        window.addEventListener('load', ontitanFieldImageImageLoad)
+
+
+                        document.getElementById("titanField").addEventListener('click', ontitanFieldImageImageLoad)
                             function ontitanFieldImageImageLoad() {
                                 var titanFieldImage = new VRView.Player('#titanFieldImage', {
                                     image: "images/Panorama/titanFieldPano.jpg",
@@ -2282,8 +2284,39 @@
                                 }
                             };
                         }
+                        window.addEventListener('load', onwomensCenterImageLoad)
+                            function onwomensCenterImageLoad() {
+                                var womensCenterImage = new VRView.Player('#womensCenterImage', {
+                                    image: "images/Panorama/womensCenter.jpg",
+                                    is_stereo: false
+                                });
+                            $("#womensCenterImage > iframe").addClass("vr");
+                            // changes height/width of iframe based on width of
+                            // the window
+                            if(window.matchMedia("(min-width: 1025px)").matches){
+                                // web
+                                var width = ($(window).width() - 377)
+                                $(".vr").css("width", width);
+                            } else{
+                                // mobile
+                                var height = ($(window).height() - 70)
+                                if($(window).height() > $(window).width()){
+                                    // if mobile portrait
+                                    $(".vr").css("height", "347px");
+                                } else{
+                                    // if mobile landscape
+                                    $(".vr").css("height", height);
+                                }
+                            };
+                        }
                         </script>
                         <div id="titanFieldImage" class="vrDiv">
+                        </div>
+
+                        <div id="womensCenterImage" class="vrDiv">
+                        </div>
+
+                        <div id="womensCenterBackroomImage" class="vrDiv">
                         </div>
 
 
