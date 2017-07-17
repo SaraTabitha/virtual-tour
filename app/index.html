@@ -241,7 +241,7 @@
                                                 <div id="linkOneOptions"  class="tourDrop">
                                                         <ul class="noPad" >
                                                                 <li id="titanField" class="tourItem text">Titan Field</li>
-                                                                <li id="" class="tourItem text">VR</li>
+                                                                <li id="vrViewTest" class="tourItem text">VR Test</li>
                                                                 <li class="tourItem text">VR</li>
                                                         </ul>
                                                 </div>
@@ -2319,24 +2319,6 @@
                                     image: "images/Panorama/womensCenterBackroom.jpg",
                                     is_stereo: false
                               });
-                              womensCenterBackroomImage.addHotspot('dining-room', {
-                                  pitch: 30, // In degrees. Up is positive.
-                                  yaw: 20, // In degrees. To the right is positive.
-                                  radius: 1, // Radius of the circular target in meters.
-                                  distance: 2 // Distance of target from camera in meters.
-
-                              });
-
-                              // womensCenterBackroomImage.on('click', function() {
-                              //
-                              //      womensCenterBackroomImage.setContentInfo({
-                              //       image: 'images/Panorama/womensCenter.jpg',
-                              //       is_stereo: false
-                              //     });
-                              // });
-
-
-
                             document.getElementById("womensCenterBackroom").removeEventListener('click', onwomensCenterBackroomImageLoad);
 
                             $("#womensCenterBackroomImage > iframe").addClass("vr");
@@ -2358,7 +2340,36 @@
                                 }
                             };
                         }
+                        window.addEventListener('load', onVrViewLoad)
+                         function onVrViewLoad() {
+                          var vrView = new VRView.Player('#vrview', {
+                            image: 'images/Panorama/womensCenterBackroom.jpg',
+                            is_stereo: false
+                          });
+                          vrView.addHotspot('dining-room', {
+                            pitch: 30, // In degrees. Up is positive.
+                            yaw: 20, // In degrees. To the right is positive.
+                            radius: 0.10, // Radius of the circular target in meters.
+                            distance: 2 // Distance of target from camera in meters.
+                          });
+                          vrView.on('click', function(event) {
+                            if (event.id == 'dining-room') {
+                              // Handle hotspot click.
+                                    vrView.setContentInfo({
+                                      image: 'images/Panorama/womensCenter.jpg',
+                                      is_stereo: false
+                                    });
+                            }
+                          });
+                        }
+
+
+
+
                         </script>
+
+                        <div id="vrview" class="vrDiv"></div>
+
                         <div id="titanFieldImage" class="vrDiv">
                         </div>
 

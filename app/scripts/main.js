@@ -79,9 +79,11 @@ var lastWidth = $(window).width();
 $(window).resize(function() {
     var mobileWidth = 1024;
     if($(this).width() != lastWidth && $(this).width() <= mobileWidth){
-        setTimeout(function(){
         location.reload();
-        }, 100);
+
+        // setTimeout(function(){
+        //
+        // }, 100);
     }
 
 });
@@ -408,6 +410,25 @@ $("#womensCenterBackroom").click(function(){
         $("#womensCenterBackroomImage > iframe").css('visibility', 'hidden');
 
         $("#womensCenterBackroom").removeClass("checked");
+    }
+});
+
+$("#vrViewTest").click(function(){
+    var check = $("#vrViewTest").hasClass("checked");
+    if(check === false){
+        $('#overlay').css('visibility', 'visible');
+        $('#overlay').animate({"opacity": "0.3"}, "slow");
+
+        $("#vrview > iframe").css('visibility', 'visible');
+
+        $("#vrViewTest").addClass("checked");
+    } else if (check === true) {
+        $('#overlay').css('visibility', 'hidden');
+        $('#overlay').animate({"opacity": "0"}, "slow");
+
+        $("#vrview > iframe").css('visibility', 'hidden');
+
+        $("#vrViewTest").removeClass("checked");
     }
 });
 
