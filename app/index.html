@@ -2340,31 +2340,77 @@
                                 }
                             };
                         }
-                        window.addEventListener('load', onVrViewLoad)
-                         function onVrViewLoad() {
+                        // window.addEventListener('load', onVrViewLoad)
+                        //  function onVrViewLoad() {
+                        //   var vrView = new VRView.Player('#vrview', {
+                        //     image: 'images/Panorama/womensCenterBackroom.jpg',
+                        //     is_stereo: false
+                        //   });
+                        //
+                        //   vrView.on('ready', function(event) {
+                        //
+                        //
+                        //       if (event.id == 'dining-room') {
+                        //         // Handle hotspot click.
+                        //               vrView.setContentInfo({
+                        //                 image: 'images/Panorama/womensCenter.jpg',
+                        //                 is_stereo: false
+                        //               });
+                        //               vrView.addHotspot('dining-room', {
+                        //                 pitch: 5, // In degrees. Up is positive.
+                        //                 yaw: 20, // In degrees. To the right is positive.
+                        //                 radius: 0.05, // Radius of the circular target in meters.
+                        //                 distance: 2 // Distance of target from camera in meters.
+                        //
+                        //     });
+                        //
+                        //   });
+                        // }
+
+                window.addEventListener('load', onVrViewLoad)
+                // open 1
+                function onVrViewLoad() {
+                          // open 2
                           var vrView = new VRView.Player('#vrview', {
                             image: 'images/Panorama/womensCenterBackroom.jpg',
                             is_stereo: false
+                            // close onVrViewLoad function (close 2)
                           });
+                                  // open 3
+                                  vrView.on('ready', function(event) {
+                                            // open 4
+                                          vrView.addHotspot('dining-room', {
+                                            pitch: 5, // In degrees. Up is positive.
+                                            yaw: 20, // In degrees. To the right is positive.
+                                            radius: 0.05, // Radius of the circular target in meters.
+                                            distance: 2 // Distance of target from camera in meters.
+                                            // close addHotspot (close 4)
+                                          });
 
-                          vrView.on('click', function(event) {
-                            vrView.addHotspot('dining-room', {
-                              pitch: 30, // In degrees. Up is positive.
-                              yaw: 20, // In degrees. To the right is positive.
-                              radius:   0.05, // Radius of the circular target in meters.
-                              distance: 2, // Distance of target from camera in meters.
-                            });
-                            if (event.id == 'dining-room') {
-                              // Handle hotspot click.
-                                    vrView.setContentInfo({
-                                      image: 'images/Panorama/womensCenter.jpg',
-                                      is_stereo: false
-                                    });
-                            }
-                          });
-                        }
+                                          // open 5
+                                          vrView.on('click', function(event) {
+                                            // open 6
+                                              if (event.id == 'dining-room') {
+                                                // Handle hotspot click.
+                                                      // Open 7
+                                                      vrView.setContentInfo({
+                                                        image: 'images/Panorama/womensCenter.jpg',
+                                                        is_stereo: false
+                                                        // close 7
+                                                      });
+
+                                              // close 6
+                                              }
+                                          // close 5
+                                          });
+
+                                  // close on ready function (close 3)
+                                });
 
 
+
+                // close load event listener (close 1)
+                }
 
 
                         </script>
