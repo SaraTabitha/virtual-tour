@@ -2313,33 +2313,33 @@
                                 }
                             };
                         }
-                        document.getElementById("womensCenterBackroom").addEventListener('click', onwomensCenterBackroomImageLoad)
-                            function onwomensCenterBackroomImageLoad() {
-                                var womensCenterBackroomImage = new VRView.Player('#womensCenterBackroomImage', {
-                                    image: "images/Panorama/womensCenterBackroom.jpg",
-                                    is_stereo: false
-                              });
-                            document.getElementById("womensCenterBackroom").removeEventListener('click', onwomensCenterBackroomImageLoad);
-
-                            $("#womensCenterBackroomImage > iframe").addClass("vr");
-                            // changes height/width of iframe based on width of
-                            // the window
-                            if(window.matchMedia("(min-width: 1025px)").matches){
-                                // web
-                                var width = ($(window).width() - 377)
-                                $(".vr").css("width", width);
-                            } else{
-                                // mobile
-                                var height = ($(window).height() - 70)
-                                if($(window).height() > $(window).width()){
-                                    // if mobile portrait
-                                    $(".vr").css("height", "347px");
-                                } else{
-                                    // if mobile landscape
-                                    $(".vr").css("height", height);
-                                }
-                            };
-                        }
+                        // document.getElementById("womensCenterBackroom").addEventListener('click', onwomensCenterBackroomImageLoad)
+                        //     function onwomensCenterBackroomImageLoad() {
+                        //         var womensCenterBackroomImage = new VRView.Player('#womensCenterBackroomImage', {
+                        //             image: "images/Panorama/womensCenterBackroom.jpg",
+                        //             is_stereo: false
+                        //       });
+                        //     document.getElementById("womensCenterBackroom").removeEventListener('click', onwomensCenterBackroomImageLoad);
+                        //
+                        //     $("#womensCenterBackroomImage > iframe").addClass("vr");
+                        //     // changes height/width of iframe based on width of
+                        //     // the window
+                        //     if(window.matchMedia("(min-width: 1025px)").matches){
+                        //         // web
+                        //         var width = ($(window).width() - 377)
+                        //         $(".vr").css("width", width);
+                        //     } else{
+                        //         // mobile
+                        //         var height = ($(window).height() - 70)
+                        //         if($(window).height() > $(window).width()){
+                        //             // if mobile portrait
+                        //             $(".vr").css("height", "347px");
+                        //         } else{
+                        //             // if mobile landscape
+                        //             $(".vr").css("height", height);
+                        //         }
+                        //     };
+                        // }
                         // window.addEventListener('load', onVrViewLoad)
                         //  function onVrViewLoad() {
                         //   var vrView = new VRView.Player('#vrview', {
@@ -2367,50 +2367,184 @@
                         //   });
                         // }
 
-                window.addEventListener('load', onVrViewLoad)
-                // open 1
-                function onVrViewLoad() {
-                          // open 2
-                          var vrView = new VRView.Player('#vrview', {
-                            image: 'images/Panorama/womensCenterBackroom.jpg',
-                            is_stereo: false
-                            // close onVrViewLoad function (close 2)
-                          });
-                                  // open 3
-                                  vrView.on('ready', function(event) {
-                                            // open 4
-                                          vrView.addHotspot('dining-room', {
-                                            pitch: 5, // In degrees. Up is positive.
-                                            yaw: 20, // In degrees. To the right is positive.
-                                            radius: 0.05, // Radius of the circular target in meters.
-                                            distance: 2 // Distance of target from camera in meters.
-                                            // close addHotspot (close 4)
-                                          });
+                // window.addEventListener('load', onVrViewLoad)
+                // // open 1
+                // function onVrViewLoad() {
+                //           // open 2
+                //           var vrView = new VRView.Player('#vrview', {
+                //             image: 'images/Panorama/womensCenter.jpg',
+                //             is_stereo: false
+                //             // close onVrViewLoad function (close 2)
+                //           });
+                //                   // open 3
+                //                   vrView.on('ready', function(event) {
+                //                             // open 4
+                //                           vrView.addHotspot('womenscenter-backroom', {
+                //                             pitch: 0, // In degrees. Up is positive.
+                //                             yaw: -5, // In degrees. To the right is positive.
+                //                             radius: 0.05, // Radius of the circular target in meters.
+                //                             distance: 2 // Distance of target from camera in meters.
+                //                             // close addHotspot (close 4)
+                //                           });
+                //
+                //                           // open 5
+                //                           vrView.on('click', function(event) {
+                //                             // open 6
+                //                               if (event.id == 'womenscenter-backroom') {
+                //                                 // Handle hotspot click.
+                //                                       // Open 7
+                //                                       vrView.setContent({
+                //                                         image: 'images/Panorama/womensCenterBackroom.jpg',
+                //                                         is_stereo: false
+                //                                         // close 7
+                //                                       });
+                //                               // close 6
+                //                               }
+                //                           // close 5
+                //                           });
+                //                   // close on ready function (close 3)
+                //                 });
+                //               // close load event listener (close 1)
+                //               }
 
-                                          // open 5
-                                          vrView.on('click', function(event) {
-                                            // open 6
-                                              if (event.id == 'dining-room') {
-                                                // Handle hotspot click.
-                                                      // Open 7
-                                                      vrView.setContent({
-                                                        image: 'images/Panorama/womensCenter.jpg',
-                                                        is_stereo: false
-                                                        // close 7
-                                                      });
 
-                                              // close 6
-                                              }
-                                          // close 5
-                                          });
+                              // // onLoad function
+                              // var vrView;
+                              //
+                              // var scenes = {
+                              //   walrus: {
+                              //     image: 'images/Panorama/womensCenterBackroom.jpg',
+                              //     hotspots: {
+                              //       whaleLeft: {
+                              //         pitch: 0,
+                              //         yaw: 20,
+                              //         radius: 0.05,
+                              //         distance: 1
+                              //       },
+                              //       whaleRight: {
+                              //         pitch: 0,
+                              //         yaw: 340,
+                              //         radius: 0.05,
+                              //         distance: 1
+                              //       },
+                              //       dolphins: {
+                              //         pitch: 0,
+                              //         yaw: 320,
+                              //         radius: 0.05,
+                              //         distance: 1
+                              //       }
+                              //     }
+                              //   }
+                              //
+                              // };
+                              window.addEventListener('load', onLoad);
+                                  function onLoad(){
+                                            vrView = new VRView.Player('#vrview', {
+                                              image: 'images/Panorama/womensCenter.jpg',
+                                              is_stereo: false,
+                                  });
+                                  vrView.on('ready', function(event){
+                                    vrView.addHotspot('womensCenter-backroom', {
+                                      pitch: 5, // In degrees. Up is positive.
+                                      yaw: 20, // In degrees. To the right is positive.
+                                      radius: 0.05, // Radius of the circular target in meters.
+                                      distance: 2 // Distance of target from camera in meters.
+                                      // close addHotspot (close 4)
+                                    });
 
-                                  // close on ready function (close 3)
+                                    // open 5
+                                    vrView.on('click', function(event) {
+                                      // open 6
+                                        if (event.id == 'womensCenter-backroom') {
+                                          // Handle hotspot click.
+                                                womensCenterBackroom();
+                                        }
+                                        else if (event.id == 'womensCenter'){
+                                                womensCenter();
+                                        }
+                                        // close 6
+
+                                    // close 5
+                                    });
+
+                                  });
+
+
+
+
+                              }
+
+                              function womensCenter(){
+                                vrView.setContent({
+                                  image: 'images/Panorama/womensCenter.jpg',
+                                  is_stereo: false
+                                  // close 7
+                                });
+                                vrView.on('ready', function(event) {
+                                  vrView.addHotspot('womensCenter-backroom', {
+                                    pitch: 5, // In degrees. Up is positive.
+                                    yaw: 20, // In degrees. To the right is positive.
+                                    radius: 0.05, // Radius of the circular target in meters.
+                                    distance: 2 // Distance of target from camera in meters.
+                                    // close addHotspot (close 4)
+                                  });
+
                                 });
 
+                              }
+                              function womensCenterBackroom(){
+                                vrView.setContent({
+                                  image: 'images/Panorama/womensCenterBackroom.jpg',
+                                  is_stereo: false
+                                  // close 7
+                                });
+                                vrView.on('ready', function(event) {
+                                  vrView.addHotspot('womensCenter', {
+                                    pitch: 20, // In degrees. Up is positive.
+                                    yaw: 30, // In degrees. To the right is positive.
+                                    radius: 0.05, // Radius of the circular target in meters.
+                                    distance: 2 // Distance of target from camera in meters.
+                                    // close addHotspot (close 4)
+                                  });
+
+                                });
+
+                              }
 
 
-                // close load event listener (close 1)
-                }
+                              // function onVRViewReady(e) {
+                              //   loadScene('walrus');
+                              // }
+                              // function onHotspotClick(e) {
+                              //   if (e.id) {
+                              //     loadScene(e.id);
+                              //   }
+                              // }
+                              //
+                              // function loadScene(id) {
+                              //
+                              //   // Set the image
+                              //   vrView.setContent({
+                              //     image: scenes[id].image,
+                              //     is_stereo: false,
+                              //   });
+                              //
+                              //   // Add all the hotspots for the scene
+                              //   var newScene = scenes[id];
+                              //   var sceneHotspots = Object.keys(newScene.hotspots);
+                              //   for (var i = 0; i < sceneHotspots.length; i++) {
+                              //     var hotspotKey = sceneHotspots[i];
+                              //     var hotspot = newScene.hotspots[hotspotKey];
+                              //
+                              //     vrView.addHotspot(hotspotKey, {
+                              //       pitch: hotspot.pitch,
+                              //       yaw: hotspot.yaw,
+                              //       radius: hotspot.radius,
+                              //       distance: hotspot.distance
+                              //     });
+                              //   }
+                              // }
+
 
 
                         </script>
