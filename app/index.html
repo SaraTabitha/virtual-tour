@@ -2478,7 +2478,6 @@
                                 vrView.setContent({
                                   image: 'images/Panorama/womensCenter.jpg',
                                   is_stereo: false
-                                  // close 7
                                 });
                                 vrView.on('ready', function(event) {
                                   vrView.addHotspot('womensCenter-backroom', {
@@ -2486,8 +2485,11 @@
                                     yaw: 20, // In degrees. To the right is positive.
                                     radius: 0.05, // Radius of the circular target in meters.
                                     distance: 2 // Distance of target from camera in meters.
-                                    // close addHotspot (close 4)
                                   });
+
+
+
+
 
                                 });
 
@@ -2496,18 +2498,17 @@
                                 vrView.setContent({
                                   image: 'images/Panorama/womensCenterBackroom.jpg',
                                   is_stereo: false
-                                  // close 7
                                 });
-                                vrView.on('ready', function(event) {
+                                // vrView.on('ready', function(event) {
                                   vrView.addHotspot('womensCenter', {
                                     pitch: 20, // In degrees. Up is positive.
                                     yaw: 30, // In degrees. To the right is positive.
                                     radius: 0.05, // Radius of the circular target in meters.
                                     distance: 2 // Distance of target from camera in meters.
-                                    // close addHotspot (close 4)
+
                                   });
 
-                                });
+                                // });
 
                               }
 
