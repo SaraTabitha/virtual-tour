@@ -20,13 +20,40 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
+
+var i = 0;
+
 $( "#button" ).click(function() {
 
-var textHotspotId = 'women';
-for (var i = 0; i < textHotspotId.length; i++) {
-     var hotspotId = textHotspotId[i];
+// var textHotspotId = 'women';
+// for (var i = 0; i < textHotspotId.length; i++) {
+//      var hotspotId = textHotspotId[i];
+var textHotspotId = "women";
+var alphabet = 'abcdefghijklmnopqrstuvwxyz';
 
-console.log(hotspotId);
+function increasei(){
+  if (i < 26){
+    i++;
+  } else if (i == 26){
+    i = 0;
+  }
 }
+function getNextLetter(){
+  increasei();
+  return alphabet.charAt(i);
+}
+var randomId;
+
+while (textHotspotId.length < 6){
+  randomId = getNextLetter();
+  textHotspotId += randomId;
+}
+
+console.log(textHotspotId);
+// }
 });
+
+
+
+
 </script>
