@@ -1,0 +1,32 @@
+<style>
+#button{
+  height: 50px;
+  width: 75px;
+  border: 1px black solid;
+  background-color: green;
+  color: black;
+  margin: 5px;
+  padding: 5px;
+}
+#button:hover{
+  background-color: blue;
+}
+</style>
+
+
+<div id="button">
+  <p> click me! </p>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$( "#button" ).click(function() {
+
+var textHotspotId = 'women';
+for (var i = 0; i < textHotspotId.length; i++) {
+     var hotspotId = textHotspotId[i];
+
+console.log(hotspotId);
+}
+});
+</script>
