@@ -38,11 +38,11 @@ function increasei(){
     i = 0;
   }
 }
+var randomId;
 function getNextLetter(){
   increasei();
   return alphabet.charAt(i);
 }
-var randomId;
 
 while (textHotspotId.length < 6){
   randomId = getNextLetter();
@@ -50,7 +50,6 @@ while (textHotspotId.length < 6){
 }
 
 console.log(textHotspotId);
-// }
 });
 
 
