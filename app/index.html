@@ -2258,26 +2258,7 @@
 
                         <script>
 
-                        // // changes height/width of iframe based on width of
-                        // // the window
-                        $(document).ready(function(){
-                                if(window.matchMedia("(min-width: 1025px)").matches){
-                                    // web
-                                    var width = ($(window).width() - 377)
-                                    $(".vr").css("width", width);
-                                    $(".vrDiv").css("width", width);
-                                } else{
-                                    // mobile
-                                    var height = ($(window).height() - 70)
-                                    if($(window).height() > $(window).width()){
-                                        // if mobile portrait
-                                        $(".vr").css("height", "347px");
-                                    } else{
-                                        // if mobile landscape
-                                        $(".vr").css("height", height);
-                                    }
-                                };
-                        });
+
 
                         // titanField panorama embed
                         document.getElementById("titanField").addEventListener('click', ontitanFieldImageImageLoad)
@@ -2291,6 +2272,25 @@
                               document.getElementById("titanField").removeEventListener('click', ontitanFieldImageImageLoad);
                             // styling for iframe
                             $("#titanFieldImage > iframe").addClass("vr");
+
+                            if(window.matchMedia("(min-width: 1025px)").matches){
+                                // web
+                                var width = ($(window).width() - 377)
+                                $(".vr").css("width", width);
+                                $(".vrDiv").css("width", width);
+                            } else{
+                                // mobile
+                                var height = ($(window).height() - 70)
+                                if($(window).height() > $(window).width()){
+                                    // if mobile portrait
+                                    $(".vr").css("height", "347px");
+                                    $(".vrDiv").css("height", "347px");
+                                } else{
+                                    // if mobile landscape
+                                    $(".vr").css("height", height);
+                                    $(".vrDiv").css("height",  height)
+                                }
+                            };
                         }
 
                         // womens center panorama
@@ -2308,6 +2308,24 @@
                             document.getElementById("womensCenter").removeEventListener('click', onLoad);
                             // styling for iframe
                             $("#womensCenterImage > iframe").addClass("vr");
+                            if(window.matchMedia("(min-width: 1025px)").matches){
+                                // web
+                                var width = ($(window).width() - 377)
+                                $(".vr").css("width", width);
+                                $(".vrDiv").css("width", width);
+                            } else{
+                                // mobile
+                                var height = ($(window).height() - 70)
+                                if($(window).height() > $(window).width()){
+                                    // if mobile portrait
+                                    $(".vr").css("height", "347px");
+                                    $(".vrDiv").css("height", "347px");
+                                } else{
+                                    // if mobile landscape
+                                    $(".vr").css("height", height);
+                                    $(".vrDiv").css("height",  height)
+                                }
+                            };
                             // open 3
                             //adding hotspot
                             womensCenter.on('ready', function(event){
@@ -2400,6 +2418,28 @@
                             // close 5
                             });
                         }
+                        // // changes height/width of iframe based on width of
+                        // // the window
+                        $(document).ready(function(){
+                                if(window.matchMedia("(min-width: 1025px)").matches){
+                                    // web
+                                    var width = ($(window).width() - 377)
+                                    $(".vr").css("width", width);
+                                    $(".vrDiv").css("width", width);
+                                } else{
+                                    // mobile
+                                    var height = ($(window).height() - 70)
+                                    if($(window).height() > $(window).width()){
+                                        // if mobile portrait
+                                        $(".vr").css("height", "347px");
+                                        $(".vrDiv").css("height", "347px");
+                                    } else{
+                                        // if mobile landscape
+                                        $(".vr").css("height", height);
+                                        $(".vrDiv").css("height",  height)
+                                    }
+                                };
+                        });
 
                         </script>
 

@@ -1163,7 +1163,13 @@ p.parkingTextHover{
   width: 100% !important;
 
 }
-
+.vrDiv{
+  visibility: hidden;
+  z-index: 3;
+  position: absolute;
+  height: 347px;
+  width: 100%;
+}
 /*overlay + info popup styling*/
 #overlay{
     position: fixed;
