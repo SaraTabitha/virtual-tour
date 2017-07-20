@@ -357,16 +357,27 @@ $("#selectallcheck2").click(function(){
 // End second Select All
 
 // VR image click function
+function hideAllVR(){
+  $("#titanFieldImage > iframe").css('visibility', 'hidden');
+  $("#titanField").removeClass("checked");
+  $("#womensCenterImage > iframe").css('visibility', 'hidden');
+  $("#womensCenter").removeClass("checked");
+
+}
 
 $("#titanField").click(function(){
     var check = $("#titanField").hasClass("checked");
     if(check === false){
+        hideAllVR();
+
         $('#overlay').css('visibility', 'visible');
         $('#overlay').animate({"opacity": "0.3"}, "slow");
 
         $("#titanFieldImage > iframe").css('visibility', 'visible');
 
         $("#titanField").addClass("checked");
+
+
     } else if (check === true) {
         $('#overlay').css('visibility', 'hidden');
         $('#overlay').animate({"opacity": "0"}, "slow");
@@ -379,12 +390,16 @@ $("#titanField").click(function(){
 $("#womensCenter").click(function(){
     var check = $("#womensCenter").hasClass("checked");
     if(check === false){
+        hideAllVR();
+        
         $('#overlay').css('visibility', 'visible');
         $('#overlay').animate({"opacity": "0.3"}, "slow");
 
         $("#womensCenterImage > iframe").css('visibility', 'visible');
 
         $("#womensCenter").addClass("checked");
+
+
     } else if (check === true) {
         $('#overlay').css('visibility', 'hidden');
         $('#overlay').animate({"opacity": "0"}, "slow");
@@ -394,43 +409,9 @@ $("#womensCenter").click(function(){
         $("#womensCenter").removeClass("checked");
     }
 });
-$("#womensCenterBackroom").click(function(){
-    var check = $("#womensCenterBackroom").hasClass("checked");
-    if(check === false){
-        $('#overlay').css('visibility', 'visible');
-        $('#overlay').animate({"opacity": "0.3"}, "slow");
 
-        $("#womensCenterBackroomImage > iframe").css('visibility', 'visible');
 
-        $("#womensCenterBackroom").addClass("checked");
-    } else if (check === true) {
-        $('#overlay').css('visibility', 'hidden');
-        $('#overlay').animate({"opacity": "0"}, "slow");
 
-        $("#womensCenterBackroomImage > iframe").css('visibility', 'hidden');
-
-        $("#womensCenterBackroom").removeClass("checked");
-    }
-});
-
-$("#vrViewTest").click(function(){
-    var check = $("#vrViewTest").hasClass("checked");
-    if(check === false){
-        $('#overlay').css('visibility', 'visible');
-        $('#overlay').animate({"opacity": "0.3"}, "slow");
-
-        $("#vrview > iframe").css('visibility', 'visible');
-
-        $("#vrViewTest").addClass("checked");
-    } else if (check === true) {
-        $('#overlay').css('visibility', 'hidden');
-        $('#overlay').animate({"opacity": "0"}, "slow");
-
-        $("#vrview > iframe").css('visibility', 'hidden');
-
-        $("#vrViewTest").removeClass("checked");
-    }
-});
 
 
 // function for loading different functions based on screen width

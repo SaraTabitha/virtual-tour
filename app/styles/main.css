@@ -249,7 +249,7 @@ html, body {
 
 }
 #menuDrawer{
-  height: auto;
+  height: 100%;
 }
 #drawerContents{
   height: 900px;
