@@ -2360,10 +2360,10 @@
                                   // open 3
                                   vrView.on('ready', function(event){
 
-                                    var womensId = createHotspotId();
+                                    // var womensId = createHotspotId();
 
                                     // open 7
-                                    vrView.addHotspot(womensId, {
+                                    vrView.addHotspot('intitialId', {
                                       pitch: 5, // In degrees. Up is positive.
                                       yaw: 20, // In degrees. To the right is positive.
                                       radius: 0.05, // Radius of the circular target in meters.
@@ -2376,13 +2376,13 @@
                                     // open 5
                                     vrView.on('click', function(event) {
                                       // open 6
-                                        if (event.id == womensId) {
+                                        if (event.id == 'intitialId') {
                                           // Handle hotspot click.
                                                 womensCenterBackroom();
                                         }
-                                        else if (event.id == 'womensCenter'){
-                                                womensCenter();
-                                        }
+                                        // else if (event.id == 'womensCenter'){
+                                        //         womensCenter();
+                                        // }
                                         // close 6
 
                                     // close 5
@@ -2399,14 +2399,26 @@
                                   image: 'images/Panorama/womensCenter.jpg',
                                   is_stereo: false
                                 });
-                                vrView.on('ready', function(event) {
-                                  vrView.addHotspot('womensId', {
+
+                                  vrView.addHotspot('womensCenter-backroom', {
                                     pitch: 5, // In degrees. Up is positive.
                                     yaw: 20, // In degrees. To the right is positive.
                                     radius: 0.05, // Radius of the circular target in meters.
                                     distance: 2 // Distance of target from camera in meters.
                                   });
-                                });
+                                  // open 5
+                                  vrView.on('click', function(event) {
+                                    // open 6
+                                      if (event.id == 'womensCenter') {
+                                        // Handle hotspot click.
+                                              womensCenterBackroom();
+                                      } else if (event.id == 'womensCenter-backroom')
+                                              womensCenterBackroom();
+                                      // close 6
+
+                                  // close 5
+                                  });
+
 
                               }
                               function womensCenterBackroom(){
@@ -2414,7 +2426,9 @@
                                   image: 'images/Panorama/womensCenterBackroom.jpg',
                                   is_stereo: false
                                 });
-                                // vrView.on('ready', function(event) {
+
+
+
                                   vrView.addHotspot('womensCenter', {
                                     pitch: 20, // In degrees. Up is positive.
                                     yaw: 30, // In degrees. To the right is positive.
@@ -2427,14 +2441,16 @@
                                     // open 6
                                       if (event.id == 'womensCenter') {
                                         // Handle hotspot click.
-                                              onLoad();
+                                              womensCenter();
                                       }
-                                      // close 6
-
+                                    //   else if (event.id == 'womensCenter')
+                                    //           womensCenter();
+                                    //   // close 6
+                                    // }
                                   // close 5
                                   });
 
-                                // });
+
 
                               }
 
