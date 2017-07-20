@@ -362,6 +362,8 @@ function hideAllVR(){
   $("#titanField").removeClass("checked");
   $("#womensCenterImage > iframe").css('visibility', 'hidden');
   $("#womensCenter").removeClass("checked");
+  $("#executiveRoomImage > iframe").css('visibility', 'hidden');
+  $("#executiveRoom").removeClass("checked");
 
 }
 
@@ -391,7 +393,7 @@ $("#womensCenter").click(function(){
     var check = $("#womensCenter").hasClass("checked");
     if(check === false){
         hideAllVR();
-        
+
         $('#overlay').css('visibility', 'visible');
         $('#overlay').animate({"opacity": "0.3"}, "slow");
 
@@ -407,6 +409,29 @@ $("#womensCenter").click(function(){
         $("#womensCenterImage > iframe").css('visibility', 'hidden');
 
         $("#womensCenter").removeClass("checked");
+    }
+});
+
+$("#executiveRoom").click(function(){
+    var check = $("#executiveRoom").hasClass("checked");
+    if(check === false){
+        hideAllVR();
+
+        $('#overlay').css('visibility', 'visible');
+        $('#overlay').animate({"opacity": "0.3"}, "slow");
+
+        $("#executiveRoomImage > iframe").css('visibility', 'visible');
+
+        $("#executiveRoom").addClass("checked");
+
+
+    } else if (check === true) {
+        $('#overlay').css('visibility', 'hidden');
+        $('#overlay').animate({"opacity": "0"}, "slow");
+
+        $("#executiveRoomImage > iframe").css('visibility', 'hidden');
+
+        $("#executiveRoom").removeClass("checked");
     }
 });
 
