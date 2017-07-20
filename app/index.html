@@ -69,7 +69,7 @@
                         <div id="menuDrawer" class="mdl-layout__drawer">
                                 <!--header inside drawer-->
                                 <div id="mobileHeader" class="mdl-layout__header-row  main">
-                                        <img class="mdl-layout-title watermark" src="https://www.uwosh.edu/img/parts/wordmark-large.png">
+                                        <img class="mdl-layout-title watermark" src="/images/wordmark-large.png">
                                 </div>
 
                                 <div id="webSearch">
@@ -241,7 +241,7 @@
                                                 <div id="linkOneOptions"  class="tourDrop">
                                                         <ul class="noPad" >
                                                                 <li id="titanField" class="tourItem text">Titan Field</li>
-                                                                <li id="vrViewTest" class="tourItem text">VR Test</li>
+                                                                <li id="" class="tourItem text">VR</li>
                                                                 <li class="tourItem text">VR</li>
                                                         </ul>
                                                 </div>
@@ -251,7 +251,7 @@
                                                 <div id="linkTwoOptions"   class="tourDrop">
                                                         <ul class="noPad">
                                                                 <li id="womensCenter" class="tourItem text">Women's Center</li>
-                                                                <li id="womensCenterBackroom" class="tourItem text">Women's Center Backroom</li>
+                                                                <li id="" class="tourItem text">VR</li>
                                                                 <li class="tourItem text">VR</li>
                                                         </ul>
                                                 </div>
@@ -2258,169 +2258,155 @@
 
                         <script>
 
+                        // // changes height/width of iframe based on width of
+                        // // the window
+                        $(document).ready(function(){
+                                if(window.matchMedia("(min-width: 1025px)").matches){
+                                    // web
+                                    var width = ($(window).width() - 377)
+                                    $(".vr").css("width", width);
+                                    $(".vrDiv").css("width", width);
+                                } else{
+                                    // mobile
+                                    var height = ($(window).height() - 70)
+                                    if($(window).height() > $(window).width()){
+                                        // if mobile portrait
+                                        $(".vr").css("height", "347px");
+                                    } else{
+                                        // if mobile landscape
+                                        $(".vr").css("height", height);
+                                    }
+                                };
+                        });
 
+                        // titanField panorama embed
                         document.getElementById("titanField").addEventListener('click', ontitanFieldImageImageLoad)
                             function ontitanFieldImageImageLoad() {
                                 var titanFieldImage = new VRView.Player('#titanFieldImage', {
                                     image: "images/Panorama/titanFieldPano.jpg",
                                     is_stereo: false
                                 });
+                                // makes sure that if the titanfield button in menu is clicked it doesn't continuously
+                                // make more panorama players
                               document.getElementById("titanField").removeEventListener('click', ontitanFieldImageImageLoad);
-
+                            // styling for iframe
                             $("#titanFieldImage > iframe").addClass("vr");
-                            // changes height/width of iframe based on width of
-                            // the window
-                            if(window.matchMedia("(min-width: 1025px)").matches){
-                                // web
-                                var width = ($(window).width() - 377)
-                                $(".vr").css("width", width);
-                            } else{
-                                // mobile
-                                var height = ($(window).height() - 70)
-                                if($(window).height() > $(window).width()){
-                                    // if mobile portrait
-                                    $(".vr").css("height", "347px");
-                                } else{
-                                    // if mobile landscape
-                                    $(".vr").css("height", height);
-                                }
-                            };
                         }
-                        document.getElementById("womensCenter").addEventListener('click', onwomensCenterImageLoad)
-                            function onwomensCenterImageLoad() {
-                                var womensCenterImage = new VRView.Player('#womensCenterImage', {
-                                    image: "images/Panorama/womensCenter.jpg",
-                                    is_stereo: false
-                                });
-                                document.getElementById("womensCenter").removeEventListener('click', onwomensCenterImageLoad);
 
+                        // womens center panorama
+                        document.getElementById("womensCenter").addEventListener('click', onLoad)
+                          // open 1
+                          // creates vr view player
+                            function onLoad(){
+                                      // open 2
+                                      womensCenter = new VRView.Player('#womensCenterImage', {
+                                        image: 'images/Panorama/womensCenter.jpg',
+                                        is_stereo: false,
+                            // close 2
+                            });
+                            //makes sure no duplicate players can be created
+                            document.getElementById("womensCenter").removeEventListener('click', onLoad);
+                            // styling for iframe
                             $("#womensCenterImage > iframe").addClass("vr");
-                            // changes height/width of iframe based on width of
-                            // the window
-                            if(window.matchMedia("(min-width: 1025px)").matches){
-                                // web
-                                var width = ($(window).width() - 377)
-                                $(".vr").css("width", width);
-                            } else{
-                                // mobile
-                                var height = ($(window).height() - 70)
-                                if($(window).height() > $(window).width()){
-                                    // if mobile portrait
-                                    $(".vr").css("height", "347px");
-                                } else{
-                                    // if mobile landscape
-                                    $(".vr").css("height", height);
-                                }
-                            };
+                            // open 3
+                            //adding hotspot
+                            womensCenter.on('ready', function(event){
+
+                              // open 7
+                              // hotspot id is VERY important, ids cannot be reused
+                              womensCenter.addHotspot('intitialId', {
+                                pitch: 0, // In degrees. Up is positive.
+                                yaw: -5, // In degrees. To the left is positive.
+                                radius: 0.05, // Radius of the circular target in meters.
+                                distance: 2 // Distance of target from camera in meters.
+
+                                // close addHotspot (close 7)
+                              });
+
+
+                              // open 5
+                              womensCenter.on('click', function(event) {
+                                // open 6
+
+                                  if (event.id == 'intitialId') {
+                                    // Handle hotspot click.
+                                    // sends to function that creates the backroom scene
+                                          womensCenterBackroom();
+                                  }
+
+                              // close 5
+                              });
+
+                            // close 3
+                            });
+
+                        // close 1
                         }
 
+                        // function that changes the image that the player loads
+                        // takes user to the womens center backroom
+                        function womensCenterBackroom(){
+                          womensCenter.setContent({
+                            image: 'images/Panorama/womensCenterBackroom.jpg',
+                            is_stereo: false
+                          });
+                          // create new hotspot to return to womens center
+                            womensCenter.addHotspot('womensCenter', {
+                              pitch: 0, // In degrees. Up is positive.
+                              yaw: 17, // In degrees. To the left is positive.
+                              radius: 0.05, // Radius of the circular target in meters.
+                              distance: 1 // Distance of target from camera in meters.
 
-                              window.addEventListener('load', onLoad);
-                                // open 1
-                                  function onLoad(){
-                                            // open 2
-                                            vrView = new VRView.Player('#vrview', {
-                                              image: 'images/Panorama/womensCenter.jpg',
-                                              is_stereo: false,
-                                  // close 2
-                                  });
+                            });
+                            // open 5
+                            // when the hotspot is clicked the user will be taken back to the
+                            // womens center main room using the womens center function
+                            womensCenter.on('click', function(event) {
+                              // open 6
+                                if (event.id == 'womensCenter') {
+                                  // Handle hotspot click.
+                                        womensCenterChange();
+                                }
 
-                                  // open 3
-                                  vrView.on('ready', function(event){
+                            // close 5
+                            });
 
-                                    // var womensId = createHotspotId();
+                        }
+                        // basically now they are just looping back and forth
+                        // between the womensCenterBackroom function and this function
+                        // so the panorama image is changed and the two hotspots are used
+                        // *does not work if the womensCenterBackroom function is looped
+                        // *back to the load function
+                        function womensCenterChange(){
+                          womensCenter.setContent({
+                            image: 'images/Panorama/womensCenter.jpg',
+                            is_stereo: false
+                          });
 
-                                    // open 7
-                                    vrView.addHotspot('intitialId', {
-                                      pitch: 5, // In degrees. Up is positive.
-                                      yaw: 20, // In degrees. To the right is positive.
-                                      radius: 0.05, // Radius of the circular target in meters.
-                                      distance: 2 // Distance of target from camera in meters.
+                            womensCenter.addHotspot('womensCenter-backroom', {
+                              pitch: 0, // In degrees. Up is positive.
+                              yaw: -5, // In degrees. To the left is positive.
+                              radius: 0.05, // Radius of the circular target in meters.
+                              distance: 2 // Distance of target from camera in meters.
+                            });
+                            // open 5
+                            womensCenter.on('click', function(event) {
+                              // open 6
 
-                                      // close addHotspot (close 7)
-                                    });
-
-
-                                    // open 5
-                                    vrView.on('click', function(event) {
-                                      // open 6
-                                        if (event.id == 'intitialId') {
-                                          // Handle hotspot click.
-                                                womensCenterBackroom();
-                                        }
-
-                                    // close 5
-                                    });
-
-                                  // close 3
-                                  });
-
-                              // close 1
+                                 if (event.id == 'womensCenter-backroom'){
+                                        womensCenterBackroom();
+                                // close 6
                               }
-
-                              function womensCenter(){
-                                vrView.setContent({
-                                  image: 'images/Panorama/womensCenter.jpg',
-                                  is_stereo: false
-                                });
-
-                                  vrView.addHotspot('womensCenter-backroom', {
-                                    pitch: 5, // In degrees. Up is positive.
-                                    yaw: 20, // In degrees. To the right is positive.
-                                    radius: 0.05, // Radius of the circular target in meters.
-                                    distance: 2 // Distance of target from camera in meters.
-                                  });
-                                  // open 5
-                                  vrView.on('click', function(event) {
-                                    // open 6
-
-                                       if (event.id == 'womensCenter-backroom'){
-                                              womensCenterBackroom();
-                                      // close 6
-                                    }
-                                  // close 5
-                                  });
-
-
-                              }
-                              function womensCenterBackroom(){
-                                vrView.setContent({
-                                  image: 'images/Panorama/womensCenterBackroom.jpg',
-                                  is_stereo: false
-                                });
-
-                                  vrView.addHotspot('womensCenter', {
-                                    pitch: 20, // In degrees. Up is positive.
-                                    yaw: 30, // In degrees. To the right is positive.
-                                    radius: 0.05, // Radius of the circular target in meters.
-                                    distance: 2 // Distance of target from camera in meters.
-
-                                  });
-                                  // open 5
-                                  vrView.on('click', function(event) {
-                                    // open 6
-                                      if (event.id == 'womensCenter') {
-                                        // Handle hotspot click.
-                                              womensCenter();
-                                      }
-
-                                  // close 5
-                                  });
-
-                              }
-
+                            // close 5
+                            });
+                        }
 
                         </script>
-
-                        <div id="vrview" class="vrDiv"></div>
 
                         <div id="titanFieldImage" class="vrDiv">
                         </div>
 
                         <div id="womensCenterImage" class="vrDiv">
-                        </div>
-
-                        <div id="womensCenterBackroomImage" class="vrDiv">
                         </div>
 
 
