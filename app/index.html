@@ -2301,7 +2301,9 @@
                           // 7 dempsey>oviatt two
                           // tourDeOvTwo
                           "images/Panorama/sidewalk/UWO360_-22.jpg",
-
+                          // 8 roadOvDe; roadside by Oviatt and Dempsey
+                          // across from Clow
+                          "images/Panorama/sidewalk/UWO360_-5.jpg",
 
 
                         ];
@@ -2622,11 +2624,19 @@
                               distance: 1 // Distance of target from camera in meters.
                             });
                             sidewalkTour.addHotspot('dempsey', {
-                              pitch: 10, // In degrees. Up is positive.
-                              yaw: 170, // In degrees. To the left is positive.
+                              pitch: 0, // In degrees. Up is positive.
+                              yaw: 163, // In degrees. To the left is positive.
                               radius: 0.08, // Radius of the circular target in meters.
                               distance: 2 // Distance of target from camera in meters.
                             });
+                            sidewalkTour.addHotspot('roadOvDe', {
+                              pitch: 0, // In degrees. Up is positive.
+                              yaw: 103.5, // In degrees. To the left is positive.
+                              radius: 0.08, // Radius of the circular target in meters.
+                              distance: 2 // Distance of target from camera in meters.
+                            });
+
+
                             // open 5
                             sidewalkTour.on('click', function(event) {
                               // open 6
@@ -2636,6 +2646,9 @@
                                 // close 6
                               } else if (event.id == 'dempsey'){
                                         dempseyFront();
+
+                              } else if (event.id == 'roadOvDe'){
+                                        roadOvDe();
 
                               }
                             // close 5
@@ -2667,6 +2680,31 @@
                                     // close 5
                                     });
                                 }
+                                function roadOvDe(){
+                                  sidewalkTour.setContent({
+                                    image: panorama[8],
+                                    is_stereo: false
+                                  });
+
+                                    sidewalkTour.addHotspot('tourDeOvThird', {
+                                      pitch: 0, // In degrees. Up is positive.
+                                      yaw: -100, // In degrees. To the left is positive.
+                                      radius: 0.05, // Radius of the circular target in meters.
+                                      distance: 1 // Distance of target from camera in meters.
+
+                                    });
+                                    // open 5
+                                    sidewalkTour.on('click', function(event) {
+                                      // open 6
+
+                                         if (event.id == 'tourDeOvThird'){
+                                                tourDeOv();
+                                        // close 6
+                                      }
+                                    // close 5
+                                    });
+                                }
+
 
 
                         function tourDeOvTwo(){
