@@ -2595,14 +2595,11 @@
                         //
 
                         document.getElementById("dempseyStart").addEventListener('click', onLoad)
-                          // open 1
                           // creates vr view player
                             function onLoad(){
-                                      // open 2
                                       sidewalkTour = new VRView.Player('#sidewalkTour', {
                                         image: panorama[5],
                                         is_stereo: false,
-                            // close 2
                             });
                             //makes sure no duplicate players can be created
                             document.getElementById("dempseyStart").removeEventListener('click', onLoad);
@@ -2626,38 +2623,22 @@
                                     $(".vrDiv").css("height",  height)
                                 }
                             };
-                            // open 3
                             //adding hotspot
                             sidewalkTour.on('ready', function(event){
-
-                              // open 7
                               // hotspot id is VERY important, ids cannot be reused
                               sidewalkTour.addHotspot('intitialId', {
                                 pitch: -10, // In degrees. Up is positive.
                                 yaw: 55, // In degrees. To the left is positive.
                                 radius: 0.05, // Radius of the circular target in meters.
                                 distance: 1 // Distance of target from camera in meters.
-
-                                // close addHotspot (close 7)
                               });
-
-
-                              // open 5
                               sidewalkTour.on('click', function(event) {
-                                // open 6
-
                                   if (event.id == 'intitialId') {
                                     // Handle hotspot click.
                                           tourDeOv();
                                   }
-
-                              // close 5
                               });
-
-                            // close 3
                             });
-
-                        // close 1
                         }
 
                         // see sidewalk tour naming scheme txt file to understand naming scheme for
@@ -2688,23 +2669,18 @@
                             });
 
 
-                            // open 5
                             sidewalkTour.on('click', function(event) {
-                              // open 6
                               // two options: go back to dempsey or go closer to oviatt house
                                  if (event.id == 'tourDeOvTwo'){
                                         tourDeOvTwo();
-                                // close 6
                               } else if (event.id == 'dempsey'){
                                         dempseyFront();
-
                               } else if (event.id == 'roadOvDe'){
                                         roadOvDe();
 
                               }
-                            // close 5
                             });
-                        }
+                          }
                                 // repeat of load function start because that's how it has to work
                                 // (can't just reload the original function to get back to Dempsey)
                                 function dempseyFront(){
@@ -2712,7 +2688,6 @@
                                     image: panorama[5],
                                     is_stereo: false
                                   });
-
                                     sidewalkTour.addHotspot('tourDeOv', {
                                       pitch: -10, // In degrees. Up is positive.
                                       yaw: 55, // In degrees. To the left is positive.
@@ -2720,15 +2695,10 @@
                                       distance: 1 // Distance of target from camera in meters.
 
                                     });
-                                    // open 5
                                     sidewalkTour.on('click', function(event) {
-                                      // open 6
-
                                          if (event.id == 'tourDeOv'){
                                                 tourDeOv();
-                                        // close 6
                                       }
-                                    // close 5
                                     });
                                 }
                                 function roadOvDe(){
@@ -2736,7 +2706,6 @@
                                     image: panorama[8],
                                     is_stereo: false
                                   });
-
                                     sidewalkTour.addHotspot('tourDeOvThird', {
                                       pitch: 0, // In degrees. Up is positive.
                                       yaw: -100, // In degrees. To the left is positive.
@@ -2744,15 +2713,10 @@
                                       distance: 1 // Distance of target from camera in meters.
 
                                     });
-                                    // open 5
                                     sidewalkTour.on('click', function(event) {
-                                      // open 6
-
                                          if (event.id == 'tourDeOvThird'){
                                                 tourDeOv();
-                                        // close 6
                                       }
-                                    // close 5
                                     });
                                 }
 
@@ -2770,23 +2734,129 @@
                               distance: 1 // Distance of target from camera in meters.
 
                             });
+                            sidewalkTour.addHotspot('treesDeOv', {
+                              pitch: 0, // In degrees. Up is positive.
+                              yaw: -92, // In degrees. To the left is positive.
+                              radius: 0.05, // Radius of the circular target in meters.
+                              distance: 1 // Distance of target from camera in meters.
 
-                            // open 5
-
+                            });
                             sidewalkTour.on('click', function(event) {
-                              // open 6
                                 if (event.id == 'tourDeOvAgain') {
                                   // Handle hotspot click.
                                         tourDeOv();
+                                } else if (event.id == 'treesDeOv'){
+                                        treesDeOv();
                                 }
+                            });
+                        }
+                        function treesDeOv(){
+                          sidewalkTour.setContent({
+                            image: panorama[9],
+                            is_stereo: false
+                          });
+                            sidewalkTour.addHotspot('tourDeOvTwoBack', {
+                              pitch: 0, // In degrees. Up is positive.
+                              yaw: 95, // In degrees. To the left is positive.
+                              radius: 0.05, // Radius of the circular target in meters.
+                              distance: .7 // Distance of target from camera in meters.
 
+                            });
+                            sidewalkTour.addHotspot('midGarden', {
+                              pitch: 0, // In degrees. Up is positive.
+                              yaw: -80, // In degrees. To the left is positive.
+                              radius: 0.05, // Radius of the circular target in meters.
+                              distance: .5 // Distance of target from camera in meters.
 
-                            // close 5
+                            });
+                            sidewalkTour.on('click', function(event) {
+                                if (event.id == 'tourDeOvTwoBack') {
+                                  // Handle hotspot click.
+                                  tourDeOvTwo();
+                                } else if (event.id == 'midGarden'){
+                                  midGarden();
+                                }
                             });
 
                         }
+                        function midGarden(){
+                          sidewalkTour.setContent({
+                            image: panorama[10],
+                            is_stereo: false
+                          });
+                            sidewalkTour.addHotspot('treesDeOvBack', {
+                              pitch: -5, // In degrees. Up is positive.
+                              yaw: -95, // In degrees. To the left is positive.
+                              radius: 0.05, // Radius of the circular target in meters.
+                              distance: .7 // Distance of target from camera in meters.
 
+                            });
+                            sidewalkTour.addHotspot('midGardenTwo', {
+                              pitch: -5, // In degrees. Up is positive.
+                              yaw: 85, // In degrees. To the left is positive.
+                              radius: 0.05, // Radius of the circular target in meters.
+                              distance: .7 // Distance of target from camera in meters.
 
+                            });
+                            sidewalkTour.on('click', function(event) {
+                                if (event.id == 'treesDeOvBack') {
+                                  // Handle hotspot click.
+                                  treesDeOv();
+                                } else if (event.id == 'midGardenTwo'){
+                                  midGardenTwo();
+                                }
+                            });
+
+                        }
+                        function midGardenTwo(){
+                          sidewalkTour.setContent({
+                            image: panorama[11],
+                            is_stereo: false
+                          });
+                            sidewalkTour.addHotspot('midGardenBack', {
+                              pitch: -5, // In degrees. Up is positive.
+                              yaw: -92, // In degrees. To the left is positive.
+                              radius: 0.05, // Radius of the circular target in meters.
+                              distance: .7 // Distance of target from camera in meters.
+
+                            });
+                            sidewalkTour.addHotspot('midGardenThree', {
+                              pitch: 5, // In degrees. Up is positive.
+                              yaw: 160, // In degrees. To the left is positive.
+                              radius: 0.05, // Radius of the circular target in meters.
+                              distance: .7 // Distance of target from camera in meters.
+
+                            });
+                            sidewalkTour.on('click', function(event) {
+                                if (event.id == 'midGardenBack') {
+                                  // Handle hotspot click.
+                                  midGarden();
+                                } else if  (event.id == 'midGardenThree'){
+                                  midGardenThree();
+                                }
+                            });
+
+                        }
+                        function midGardenThree(){
+                          sidewalkTour.setContent({
+                            image: panorama[12],
+                            is_stereo: false
+                          });
+                            sidewalkTour.addHotspot('midGardenBackAgain', {
+                              pitch: 5, // In degrees. Up is positive.
+                              yaw: -150, // In degrees. To the left is positive.
+                              radius: 0.05, // Radius of the circular target in meters.
+                              distance: .5 // Distance of target from camera in meters.
+
+                            });
+                            sidewalkTour.on('click', function(event) {
+                                if (event.id == 'midGardenBackAgain') {
+                                  // Handle hotspot click.
+                                  midGarden();
+                                }
+                            });
+
+                        }
 
 
 
