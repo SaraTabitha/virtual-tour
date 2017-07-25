@@ -1,94 +1,94 @@
 buildings: (44)
-	0.gruenhagen conference center
-	{lat: 44.022147, lng: -88.548769}
-	1.East Hall
-	{lat: 44.031217, lng: -88.543806}
-	2.A &C
-	{lat: 44.029640, lng: -88.552137}
-	3.Fredric March Theater
-	{lat:  44.029000, lng:-88.552919}
-	4.Heating Plant
-	{lat: 44.028235, lng: -88.554312}
-	5.Buck staff Planetarium
-	{lat: 44.028428, lng: -88.551581}
-	6.Halsey Science Center
-	{lat:  44.028497, lng: -88.551027}
-	7.Swart Hall
-	{lat:  44.027872, lng:  -88.551962}
-	8.Harrington Hall
-	{lat:  44.027736, lng: -88.550172}
-	9.Oviatt House
-	{lat:  44.027156, lng: -88.551466}
-	10.Nursing and Education Building
-	{lat: 44.027051, lng: -88.552813}
-	11. clow
-	{lat: 44.026306, lng: -88.552268}
-	12.Dempsey hall
-	{lat: 44.026603, lng: -88.550707}
-	13.polk library
-	{lat: 44.026379, lng: -88.549602}
-	14.albee hall
-	{lat: 44.025729, lng: -88.550248}
-	15.sage hall
-	{lat: 44.025720, lng: -88.553770}
-	16.ceramics laboratory
-	{lat: 44.025559, lng: -88.555515}
-	17.environmental science and research center
-	{lat: 44.023518, lng: -88.553851}
-	18.radford hall & student health center 
-	{lat: 44.025671, lng: -88.551561}
-	19.donner hall
-	{lat: 44.025420, lng: -88.552287}
-	20.kolf sports center
-	{lat: 44.024323, lng: -88.552214}
-	21.webster hall
-	{lat: 44.025002, lng: -88.551681}
-	22. taylor hall
-	{lat: 44.024577, lng: -88.551215}
-	23.multicultural education center
-	{lat: 44.024842, lng: -88.550613}
-	24.university police
-	{lat: 44.023763, lng: -88.549972}
-	25.high avenue parking ramp
-	{lat: 44.022960, lng: -88.549791}
-	26.blackhawk commons
-	{lat: 44.023591, lng: -88.549157}
-	27.student recreation and wellness center
-	{lat: 44.021752, lng: -88.551694}
-	28.reeve memorial union
-	{lat: 44.024934, lng: -88.549448}
-	29.student success center
-	{lat: 44.026205, lng: -88.548163}
-	30.evans hall
-	{lat: 44.026168, lng: -88.547397}
-	31.stewart hall
-	{lat: 44.026060, lng: -88.546952}
-	32.fletcher hall
-	{lat: 44.025332, lng: -88.547240}
-	33.campus center for equity and diversity
-	{lat: 44.024655, lng: -88.547217}
-	34.horizon village
-	{lat: 44.024363, lng: -88.547972}
-	35.scott hall
-	{lat: 44.022556, lng: -88.547344}
-	36.lincoln hall
-	{lat: 44.023204, lng: -88.546359}
-	37.alumni welcome and conference center
-	{lat: 44.020528, lng: -88.550432}
-	38.community gardens
-	{lat: 44.015573, lng: -88.555929}
-	39.campus services
-	{lat: 44.017782, lng: -88.556446}
-	40.biodigester
-	{lat: 44.018897, lng: -88.558015}
-	41.athletic service building
-	{lat: 44.023077, lng: -88.561081}
-	42.alumni baseball stadium
-	{lat: 44.023042, lng: -88.561892}
-	43.titan stadium 
-	{lat: 44.023671, lng: -88.562917}
-	44. pollock house
-	{lat: 44.025227, lng:  -88.551292}
+	  // albee hall [0]
+            {lat: 44.025729, lng: -88.550248},
+            // alumni baseball stadium [1]
+            {lat: 44.023042, lng: -88.561892},
+            // alumni welcome and conference center [2]
+            {lat: 44.020528, lng: -88.550432},
+            // A&C [3]
+            {lat: 44.029640, lng: -88.552137},
+            // athletic service building [4]
+            {lat: 44.023077, lng: -88.561081},
+            // blackhawk commons [5]
+            {lat: 44.023591, lng: -88.549157},
+            // biodigester [6]
+            {lat: 44.018897, lng: -88.558015},
+            // Buckstaff Planetarium [7]
+            {lat: 44.028428, lng: -88.551581},
+            // campus center for equity and diversity [8]
+            {lat: 44.024655, lng: -88.547217},
+            // campus services [9]
+            {lat: 44.017782, lng: -88.556446},
+            // ceramics laboratory [10]
+            {lat: 44.025559, lng: -88.555515},
+            //  clow [11]
+            {lat: 44.026306, lng: -88.552268},
+            // community gardens [12]
+            {lat: 44.015573, lng: -88.555929},
+            // Dempsey hall [13]
+            {lat: 44.026603, lng: -88.550707},
+            // donner hall [14]
+            {lat: 44.025420, lng: -88.552287},
+            // East Hall [15]
+            {lat: 44.031217, lng: -88.543806},
+            // environmental science and research center [16]
+            {lat: 44.023518, lng: -88.553851},
+            // evans hall [17]
+            {lat: 44.026168, lng: -88.547397},
+            // fletcher hall [18]
+            {lat: 44.025332, lng: -88.547240},
+            // Fredric March Theater [19]
+            {lat:  44.029000, lng:-88.552919},
+            // gruenhagen [20]
+            {lat: 44.022405, lng:  -88.548824},
+            // Halsey Science Center [21]
+            {lat:  44.028497, lng: -88.551027},
+            // Harrington Hall [22]
+            {lat:  44.027736, lng: -88.550172},
+            // Heating Plant [23]
+            {lat: 44.028235, lng: -88.554312},
+            // high avenue parking ramp [24]
+            {lat: 44.022960, lng: -88.549791},
+            // horizon village [25]
+            {lat: 44.024363, lng: -88.547972},
+            // kolf sports center [26]
+            {lat: 44.024323, lng: -88.552214},
+            // lincoln hall [27]
+            {lat: 44.023204, lng: -88.546359},
+            // multicultural education center [28]
+            {lat: 44.024842, lng: -88.550613},
+            // Nursing and Education Building [29]
+            {lat: 44.027051, lng: -88.552813},
+            // Oviatt House [30]
+            {lat:  44.027156, lng: -88.551466},
+            // pollock house [31]
+            {lat: 44.025227, lng:  -88.551292},
+            // polk library [32]
+            {lat: 44.026379, lng: -88.549602},
+            // radford hall & student health center [33]
+            {lat: 44.025671, lng: -88.551561},
+            // reeve memorial union [34]
+            {lat: 44.024934, lng: -88.549448},
+            // sage hall [35]
+            {lat: 44.025720, lng: -88.553770},
+            // scott hall [36]
+            {lat: 44.022556, lng: -88.547344},
+            // stewart hall [37]
+            {lat: 44.026060, lng: -88.546952},
+            // student recreation and wellness center [38]
+            {lat: 44.021752, lng: -88.551694},
+            // student success center [39]
+            {lat: 44.026205, lng: -88.548163},
+            // Swart Hall [40]
+            {lat:  44.027872, lng:  -88.551962},
+            //  taylor hall [41]
+            {lat: 44.024577, lng: -88.551215},
+            // titan stadium [42]
+            {lat: 44.023671, lng: -88.562917},
+            // university police [43]
+            {lat: 44.023763, lng: -88.549972},
+            // webster hall [44]
+            {lat: 44.025002, lng: -88.551681}
 
 Parking Lots (35)
 	0.11

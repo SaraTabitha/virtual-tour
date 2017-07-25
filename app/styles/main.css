@@ -384,6 +384,7 @@ span.mdl-navigation__link.color666.text{
 /*forcing no padding on navigation*/
 .mdl-navigation.mine{
   padding: 0px;
+  width: 379px;
 }
 .mdl-navigation.mine:hover{
   background-color: #a2a1a2;
