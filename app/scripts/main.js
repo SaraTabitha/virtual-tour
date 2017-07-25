@@ -465,26 +465,6 @@ $("#dempseyStart").click(function(){
     }
 });
 
-// Start hide/show 360 navigation items
-// $("#linkOne").click(function(){
-//     // div toggle
-//     $("#linkOneOptions").toggle("slow");
-//     // + symbol toggle
-//     $("#addOne").toggle();
-// });
-// $("#linkTwo").click(function(){
-//     $("#linkTwoOptions").toggle("slow");
-//     $("#addTwo").toggle();
-// });
-// $("#linkThree").click(function(){
-//     $("#linkThreeOptions").toggle("slow");
-//     $("#addThree").toggle();
-// });
-// $("#linkFour").click(function(){
-//     $("#linkFourOptions").toggle("slow");
-//     $("#addFour").toggle();
-// });
-// End hide/show 360 navigation items
 
 
 
@@ -1134,7 +1114,26 @@ if(window.matchMedia("(min-width: 1025px)").matches){
         }
 
 
-
+        // Start hide/show 360 navigation items
+        $("#linkOne").click(function(){
+            // div toggle
+            $("#linkOneOptions").toggle("slow");
+            // + symbol toggle
+            $("#addOne").toggle();
+        });
+        $("#linkTwo").click(function(){
+            $("#linkTwoOptions").toggle("slow");
+            $("#addTwo").toggle();
+        });
+        $("#linkThree").click(function(){
+            $("#linkThreeOptions").toggle("slow");
+            $("#addThree").toggle();
+        });
+        $("#linkFour").click(function(){
+            $("#linkFourOptions").toggle("slow");
+            $("#addFour").toggle();
+        });
+        // End hide/show 360 navigation items
 
 
 })();

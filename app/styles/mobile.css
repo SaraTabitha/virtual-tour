@@ -447,24 +447,7 @@ span.mdl-navigation__link{
 span.mdl-navigation__link.color666.text{
     color: #666766;
 }
-#linkOne > span{
-    width: 100%;
-    height: 25px;
-    padding: 10px;
-    padding-left: 15px;
-}
-#linkTwo > span{
-    width: 100%;
-    height: 25px;
-    padding: 10px;
-    padding-left: 15px;
-}
-#linkThree > span{
-    width: 100%;
-    height: 25px;
-    padding: 10px;
-    padding-left: 15px;
-}
+
 /*hide list items for 360 tour*/
 .tourDrop{
     display: none;
@@ -493,6 +476,9 @@ i.add{
 }
 .linkSpan{
   height: 30px !important;
+  width: 100%;
+  padding: 10px;
+  padding-left: 15px;
 }
 /*pullout card under menu*/
 .demo-card-wide{
