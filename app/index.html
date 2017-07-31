@@ -2341,22 +2341,6 @@
                           // midHaAr
                           "images/Panorama/sidewalk/UWO360_-84.jpg",
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                         ];
 
                         // titanField panorama embed
@@ -2594,15 +2578,15 @@
                         // start sidewalk tour (thanks Doug!)
                         //
 
-                        document.getElementById("dempseyStart").addEventListener('click', onLoad)
+                        document.getElementById("dempseyStart").addEventListener('click', onsidewalkTourLoad)
                           // creates vr view player
-                            function onLoad(){
+                            function onsidewalkTourLoad(){
                                       sidewalkTour = new VRView.Player('#sidewalkTour', {
                                         image: panorama[5],
                                         is_stereo: false,
                             });
                             //makes sure no duplicate players can be created
-                            document.getElementById("dempseyStart").removeEventListener('click', onLoad);
+                            document.getElementById("dempseyStart").removeEventListener('click', onsidewalkTourLoad);
                             // styling for iframe
                             $("#sidewalkTour > iframe").addClass("vr");
                             if(window.matchMedia("(min-width: 1025px)").matches){
@@ -2626,14 +2610,14 @@
                             //adding hotspot
                             sidewalkTour.on('ready', function(event){
                               // hotspot id is VERY important, ids cannot be reused
-                              sidewalkTour.addHotspot('intitialId', {
+                              sidewalkTour.addHotspot('sidewalkId', {
                                 pitch: -10, // In degrees. Up is positive.
                                 yaw: 55, // In degrees. To the left is positive.
                                 radius: 0.05, // Radius of the circular target in meters.
                                 distance: 1 // Distance of target from camera in meters.
                               });
                               sidewalkTour.on('click', function(event) {
-                                  if (event.id == 'intitialId') {
+                                  if (event.id == 'sidewalkId') {
                                     // Handle hotspot click.
                                           tourDeOv();
                                   }
