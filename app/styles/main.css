@@ -987,3 +987,22 @@ div#diningCard{
 div#stuRCard{
   display: none;
 }
+
+#searchResults{
+    height: 100%;
+    z-index: 10;
+    width: 374px;
+    margin: 0px;
+    background-color: #ffcc00;
+    padding: 0px;
+    left: -10px;
+    position: relative;
+}
+#searchResults > ul{
+  padding: 0px;
+  margin: 0px;
+  padding-left: 40px;
+}
+#searchResults > li{
+
+}
