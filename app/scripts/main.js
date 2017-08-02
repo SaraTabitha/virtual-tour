@@ -816,7 +816,7 @@ if(window.matchMedia("(min-width: 1025px)").matches){
           var searchHeight = $("#searchResults").height();
           // var mobileHeaderHeight = $("#mobileHeader").height();
           // var webSearchHeight = $("#webSearch").height();
-          return(searchHeight);
+          return(searchHeight - 3);
         };
         console.log(getTotalHeight());
         $("#drawerContents").css("top", getTotalHeight());

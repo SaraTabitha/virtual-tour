@@ -78,62 +78,25 @@
                                                         <i class="material-icons searchLabel">search</i>
                                                 </label>
                                                 <div class="mdl-textfield__expandable-holder">
-                                                        <input class="mdl-textfield__input" type="text" id="sample6">
+                                                        <input id="searchInput" class="mdl-textfield__input" type="text" id="sample6" name="search">
                                                         <label class=" searchLabel mdl-textfield__label" ></label>
                                                 </div>
 
-                                                <?php
-                                                echo "<div id='searchResults'>";
-                                                echo "<ul>";
-                                                echo "<li> Search Results </li>";
+                                                <script>
 
-                                                class TableRows extends RecursiveIteratorIterator {
-                                                    function __construct($it) {
-                                                        parent::__construct($it, self::LEAVES_ONLY);
-                                                    }
+                                                $.ajax({
+                                                  type: "GET",
+                                                  url: "search.php",
+                                                  success: function(){
+                                                  /*onsuccess*/
+                                                  console.log("success!");
+                                                  }
+                                                });
 
-                                                    function current() {
-                                                        return "<p>" . parent::current(). "</p>";
-                                                    }
 
-                                                    function beginChildren() {
-                                                        echo "<li>";
-                                                    }
+                                                </script>
 
-                                                    function endChildren() {
-                                                        echo "</li>" . "\n";
-                                                    }
-                                                }
-                                                $servername = "localhost";
-                                                $username = "virtualtourdev";
-                                                $password = "8c2U9z^u";
 
-                                                try {
-                                                    $conn = new PDO("mysql:host=$servername;dbname=virtualtourdev", $username, $password);
-                                                    // set the PDO error mode to exception
-                                                    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                                                    $stmt = $conn->prepare("SELECT DISTINCT Buildings.name FROM Buildings INNER JOIN BuildingJump on BuildingJump.BuildingId = Buildings.Id INNER JOIN BuildingTypes on BuildingTypes.Id= BuildingJump.TypeId WHERE Buildings.name LIKE 'res%' OR BuildingTypes.Name LIKE 'res%'");
-                                                    $stmt->execute();
-
-                                                    // set the resulting array to associative
-                                                    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
-                                                    foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
-                                                        echo $v;
-                                                    }
-
-                                                    // can be set to say "connected successfully" but atm I don't want it to
-                                                    // parce que il va ecrire la expression dans le recherche
-                                                    // beacuse it will write the phrase in the search
-                                                    echo "";
-                                                    }
-                                                catch(PDOException $e)
-                                                    {
-                                                    echo "Connection failed: " . $e->getMessage();
-                                                    }
-                                                    $conn = null;
-                                                    echo "</ul>";
-                                                    echo "</div>";
-                                                ?>
 
                                         </div>
                                 </div>
