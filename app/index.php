@@ -138,15 +138,6 @@
                                         </div>
                                 </div>
 
-                                <style>
-                                 /*temporary element push*/
-
-                                 /*id='drawerContents' move down based on height of searchResults*/
-                                 #drawerContents{
-                                   top: 461px;
-                                 }
-
-                                </style>
 
                                 <i id="notif" class="material-icons md-32 grey666 menu">menu</i>
 

@@ -5,7 +5,7 @@ function initMap() {
         var uwo = {lat: 44.025319, lng: -88.551021};
 
         var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 16,
+            zoom: 15,
             center: uwo
         });
         // sets the image for the marker

@@ -236,6 +236,9 @@ html, body {
   width: 380px;
 
 }
+#drawerDivTwo{
+  overflow-x: hidden;
+}
 
 /*hide menu button used only in mobile*/
 #notif{
@@ -250,6 +253,7 @@ html, body {
 }
 #menuDrawer{
   height: 100%;
+  overflow-x: hidden;
 }
 #drawerContents{
   height: 900px;

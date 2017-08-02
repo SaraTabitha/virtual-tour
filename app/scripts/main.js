@@ -401,7 +401,6 @@ $("#womensCenter").click(function(){
     var check = $(this).hasClass("checked");
     if(check === false){
         hideAllVR();
-
         $('#overlay').css('visibility', 'visible');
         $('#overlay').animate({"opacity": "0.3"}, "slow");
 
@@ -810,6 +809,18 @@ if(window.matchMedia("(min-width: 1025px)").matches){
                 $(this).removeClass("open");
             }
         });
+
+        // changing top positioning of drawer contents in relation to the height
+        // of the search results etc above it
+        function getTotalHeight(){
+          var searchHeight = $("#searchResults").height();
+          // var mobileHeaderHeight = $("#mobileHeader").height();
+          // var webSearchHeight = $("#webSearch").height();
+          return(searchHeight);
+        };
+        console.log(getTotalHeight());
+        $("#drawerContents").css("top", getTotalHeight());
+
 
 } else{
 
