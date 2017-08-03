@@ -810,17 +810,6 @@ if(window.matchMedia("(min-width: 1025px)").matches){
             }
         });
 
-        // changing top positioning of drawer contents in relation to the height
-        // of the search results etc above it
-        function getTotalHeight(){
-          var searchHeight = $("#searchResults").height();
-          // var mobileHeaderHeight = $("#mobileHeader").height();
-          // var webSearchHeight = $("#webSearch").height();
-          return(searchHeight - 3);
-        };
-        console.log(getTotalHeight());
-        $("#drawerContents").css("top", getTotalHeight());
-
 
 } else{
 

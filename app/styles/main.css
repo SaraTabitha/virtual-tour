@@ -257,6 +257,7 @@ html, body {
 }
 #drawerContents{
   height: 900px;
+  /*top: 0px !important;*/
 }
 
 #mobileHeader{
@@ -266,6 +267,10 @@ html, body {
 #webSearch{
   background-color: #ffcc00;
 }
+#searchInput{
+  width: 200px;
+}
+
 
 .mdl-textfield{
   top: 0px;

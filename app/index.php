@@ -78,21 +78,68 @@
                                                         <i class="material-icons searchLabel">search</i>
                                                 </label>
                                                 <div class="mdl-textfield__expandable-holder">
-                                                        <input id="searchInput" class="mdl-textfield__input" type="text" id="sample6" name="search">
+                                                  <form action="search.php" method="GET">
+                                                        <input id="searchInput" class="mdl-textfield__input" type="text" name="search" value="">
+                                                  </form>
                                                         <label class=" searchLabel mdl-textfield__label" ></label>
                                                 </div>
+                                                <div id='searchResults'>
+                                                </div>
+
 
                                                 <script>
 
+
+                                              $( "#searchInput" ).keyup(function() {
+                                                //takes the length of the value of the string in
+                                                // the search and returns a number
+                                                // ex. "hello" = 5
+                                                var characters = $(this).val().length;
+                                                // console.log("# of characters in search:" + characters);
+
+                                                if(characters < 3){
+                                                  $("#searchResults").css("visibility", "hidden");
+                                                  $("#drawerContents").css("top", "0px ");
+
+                                                } else if (characters >= 3){
+                                                      callAjax();
+
+                                                }
+                                                });
+
+
+
+
+                                              function callAjax(){
                                                 $.ajax({
                                                   type: "GET",
                                                   url: "search.php",
-                                                  success: function(){
+                                                  //use value of search input for $search variable in php
+                                                  data: ({search: $("#searchInput").val()}),
+                                                  success: function(results){
                                                   /*onsuccess*/
+                                                  // debugger;
                                                   console.log("success!");
+                                                  // console.log(results);
+
+                                                  $("#searchResults").html(results);
+                                                  $("#searchResults").css("visibility","visible");
+
+                                                  // changing top positioning of drawer contents in relation to the height
+                                                  // of the search results etc above it
+                                                  function getTotalHeight(){
+                                                    var searchHeight = $("#searchResults").height();
+                                                    // var mobileHeaderHeight = $("#mobileHeader").height();
+                                                    // var webSearchHeight = $("#webSearch").height();
+                                                    return(searchHeight - 3);
+                                                  };
+                                                  // console.log("Height of search div:" + getTotalHeight());
+                                                  $("#drawerContents").css("top", getTotalHeight());
+
+
                                                   }
                                                 });
-
+                                              };
 
                                                 </script>
 

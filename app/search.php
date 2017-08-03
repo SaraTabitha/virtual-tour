@@ -1,4 +1,6 @@
 <?php
+
+
 // pdo object, connecting to SQL
 // from: w3schools php MySQL connect
 $servername = "localhost";
@@ -8,6 +10,7 @@ try {
     $conn = new PDO("mysql:host=$servername;dbname=virtualtourdev", $username, $password);
     // set the PDO error mode to exception
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
     // can be set to say "connected successfully" but atm I don't want it to
     // parce que il va ecrire la expression dans le recherche
     // beacuse it will write the phrase in the search
@@ -22,10 +25,9 @@ catch(PDOException $e)
 // table created + search query
 // from but modified: w3schools php select data
 
-// $search = $_GET["search"];
-//
-// if ($search.strlen() > 0){
-        echo "<div id='searchResults'>";
+
+
+        // echo "<div id='searchResults'>";
         echo "<ul>";
         echo "<li> Search Results </li>";
 
@@ -48,8 +50,8 @@ catch(PDOException $e)
         }
 
 
-
-        $stmt = $conn->prepare("SELECT DISTINCT Buildings.name FROM Buildings INNER JOIN BuildingJump on BuildingJump.BuildingId = Buildings.Id INNER JOIN BuildingTypes on BuildingTypes.Id= BuildingJump.TypeId WHERE Buildings.name LIKE '%res%' OR BuildingTypes.Name LIKE '%res%'");
+        $search = $_GET["search"];
+        $stmt = $conn->prepare("SELECT DISTINCT Buildings.name FROM Buildings INNER JOIN BuildingJump on BuildingJump.BuildingId = Buildings.Id INNER JOIN BuildingTypes on BuildingTypes.Id= BuildingJump.TypeId WHERE Buildings.name LIKE '%$search%' OR BuildingTypes.Name LIKE '%$search%'");
         $stmt->execute();
 
 
@@ -61,6 +63,6 @@ catch(PDOException $e)
 
         $conn = null;
         echo "</ul>";
-        echo "</div>";
-// }
+        // echo "</div>";
+
 ?>
