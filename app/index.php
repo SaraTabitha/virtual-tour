@@ -115,25 +115,58 @@
                                                 });
 
 
+                                              // function callAjax(){
+                                              //   $.ajax({
+                                              //     type: "GET",
+                                              //     url: "search.php",
+                                              //     //use value of search input for $search variable in php
+                                              //     data: ({search: $("#searchInput").val()}),
+                                              //     success: function(results){
+                                              //     /*onsuccess*/
+                                              //     // debugger;
+                                              //     console.log("success!");
+                                              //     console.log(results);
+                                              //
+                                              //     $("#searchResults").html(results);
+                                              //     $("#searchResults").css("visibility","visible");
+                                              //
+                                              //     if(window.matchMedia("(min-width: 1025px)").matches){
+                                              //       // web
+                                              //       // changing top positioning of drawer contents in relation to the height
+                                              //       // of the search results etc above it
+                                              //       function getTotalHeight(){
+                                              //         var searchHeight = $("#searchResults").height();
+                                              //         // var mobileHeaderHeight = $("#mobileHeader").height();
+                                              //         // var webSearchHeight = $("#webSearch").height();
+                                              //         return(searchHeight - 3);
+                                              //       }
+                                              //       // console.log("Height of search div:" + getTotalHeight());
+                                              //       $("#drawerContents").css("top", getTotalHeight());
+                                              //     } else {
+                                              //       // mobile
+                                              //     }
+                                              //   })
+                                              //   })
+                                              // };
+
+
                                               function callAjax(){
-                                                $.ajax({
-                                                  type: "GET",
-                                                  url: "search.php",
-                                                  //use value of search input for $search variable in php
-                                                  data: ({search: $("#searchInput").val()}),
-                                                  success: function(results){
-                                                  /*onsuccess*/
-                                                  // debugger;
+                                              $.ajax({
+                                                type: "GET",
+                                                url: "search.php",
+                                                data: ({search: $("#searchInput").val()}),
+                                                success: function(results){
                                                   console.log("success!");
                                                   console.log(results);
 
                                                   $("#searchResults").html(results);
                                                   $("#searchResults").css("visibility","visible");
 
+                                                  // based on width
                                                   if(window.matchMedia("(min-width: 1025px)").matches){
                                                     // web
-                                                    // changing top positioning of drawer contents in relation to the height
-                                                    // of the search results etc above it
+
+                                                    // adjust position of menu drawer based on height of search results
                                                     function getTotalHeight(){
                                                       var searchHeight = $("#searchResults").height();
                                                       // var mobileHeaderHeight = $("#mobileHeader").height();
@@ -142,15 +175,16 @@
                                                     }
                                                     // console.log("Height of search div:" + getTotalHeight());
                                                     $("#drawerContents").css("top", getTotalHeight());
+
                                                   } else {
                                                     // mobile
 
                                                   }
 
 
-                                                  }
-                                                });
-                                              };
+                                                }
+                                              })
+                                            };
 
                                                 </script>
 

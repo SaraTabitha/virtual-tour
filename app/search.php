@@ -1,26 +1,22 @@
 <?php
 
+    // pdo object, connecting to SQL
+    // from: w3schools php MySQL connect
+    $servername = "localhost";
+    $username = "virtualtourdev";
+    $password = "uH80uv$9";
 
-// pdo object, connecting to SQL
-// from: w3schools php MySQL connect
-$servername = "localhost";
-$username = "virtualtourdev";
-$password = "8c2U9z^u";
-try {
-    $conn = new PDO("mysql:host=$servername;dbname=virtualtourdev", $username, $password);
-    // set the PDO error mode to exception
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-    // can be set to say "connected successfully" but atm I don't want it to
-    // parce que il va ecrire la expression dans le recherche
-    // beacuse it will write the phrase in the search
-    echo "";
-    }
-catch(PDOException $e)
-    {
-    echo "Connection failed: " . $e->getMessage();
-    }
-
+    try {
+        $conn = new PDO("mysql:host=$servername;dbname=virtualtourdev", $username, $password);
+        // set the PDO error mode to exception
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        // could say "connected successfully" but we don't want it to
+        echo "";
+        }
+    catch(PDOException $e)
+        {
+        echo "Connection failed: " . $e->getMessage();
+        }
 
 // table created + search query
 // from but modified: w3schools php select data
@@ -51,8 +47,8 @@ catch(PDOException $e)
         // (where search is typed)
         $search = $_GET["search"];
         // le query
-        $stmt = $conn->prepare("SELECT DISTINCT Buildings.name FROM Buildings INNER JOIN BuildingJump on BuildingJump.BuildingId = Buildings.Id INNER JOIN BuildingTypes on BuildingTypes.Id= BuildingJump.TypeId WHERE Buildings.name LIKE '%$search%' OR BuildingTypes.Name LIKE '%$search%'");
-        $stmt->execute();
+        $stmt = $conn->prepare("SELECT DISTINCT Buildings.name FROM Buildings INNER JOIN BuildingJump on BuildingJump.BuildingId = Buildings.Id INNER JOIN BuildingTypes on BuildingTypes.Id= BuildingJump.TypeId WHERE Buildings.name LIKE '%' ? '%' OR BuildingTypes.Name LIKE '%' ? '%'");
+        $stmt->execute(array($search, $search));
 
 
         // set the resulting array to associative

@@ -870,7 +870,6 @@ if(window.matchMedia("(min-width: 1025px)").matches){
             $("#mobileSearch").removeClass("is-focused");
           }
 
-
         });
 
 
