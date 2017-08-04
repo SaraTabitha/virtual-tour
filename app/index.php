@@ -75,12 +75,12 @@
                                 <div id="webSearch">
                                         <div id="mobileSearch" class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
                                                 <label  class= "searchLabel mdl-button mdl-js-button mdl-button--icon" for="sample6">
-                                                        <i class="material-icons searchLabel">search</i>
+                                                        <i id="searchIcon" class="material-icons searchLabel">search</i>
                                                 </label>
                                                 <div class="mdl-textfield__expandable-holder">
-                                                  <form action="search.php" method="GET">
+                                                  <!-- <form action="search.php" method="GET"> -->
                                                         <input id="searchInput" class="mdl-textfield__input" type="text" name="search" value="">
-                                                  </form>
+                                                  <!-- </form> -->
                                                         <label class=" searchLabel mdl-textfield__label" ></label>
                                                 </div>
                                                 <div id='searchResults'>
@@ -108,8 +108,6 @@
                                                 });
 
 
-
-
                                               function callAjax(){
                                                 $.ajax({
                                                   type: "GET",
@@ -120,7 +118,7 @@
                                                   /*onsuccess*/
                                                   // debugger;
                                                   console.log("success!");
-                                                  // console.log(results);
+                                                  console.log(results);
 
                                                   $("#searchResults").html(results);
                                                   $("#searchResults").css("visibility","visible");

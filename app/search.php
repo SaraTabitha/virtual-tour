@@ -25,8 +25,6 @@ catch(PDOException $e)
 // table created + search query
 // from but modified: w3schools php select data
 
-
-
         // echo "<div id='searchResults'>";
         echo "<ul>";
         echo "<li> Search Results </li>";
@@ -49,8 +47,10 @@ catch(PDOException $e)
             }
         }
 
-
+        // variable made of searchInput element in html
+        // (where search is typed)
         $search = $_GET["search"];
+        // le query
         $stmt = $conn->prepare("SELECT DISTINCT Buildings.name FROM Buildings INNER JOIN BuildingJump on BuildingJump.BuildingId = Buildings.Id INNER JOIN BuildingTypes on BuildingTypes.Id= BuildingJump.TypeId WHERE Buildings.name LIKE '%$search%' OR BuildingTypes.Name LIKE '%$search%'");
         $stmt->execute();
 

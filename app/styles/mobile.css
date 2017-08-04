@@ -313,7 +313,7 @@ html, body {
     padding: 0px;
 }
 /*set max width of search text field*/
-#sample6{
+#mobileSearch{
     max-width: 100px;
 }
 #notif{

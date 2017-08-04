@@ -90,6 +90,13 @@ $(window).resize(function() {
 
 // all JS that is not change depending on the width of the screen
 //
+
+//searchfield
+$("#searchIcon").click(function(){
+  $("#mobileSearch").addClass("is-focused");
+});
+
+
 // function for hiding all of the cards beneath the menu for categories
 function hideAll(){
     $("#athCard").hide();
