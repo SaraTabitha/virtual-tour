@@ -99,7 +99,14 @@
 
                                                 if(characters < 3){
                                                   $("#searchResults").css("visibility", "hidden");
-                                                  $("#drawerContents").css("top", "0px ");
+                                                  if(window.matchMedia("(min-width: 1025px)").matches){
+                                                    // web
+                                                    $("#drawerContents").css("top", "0px ");
+                                                  } else {
+                                                    // mobile
+
+                                                  }
+
 
                                                 } else if (characters >= 3){
                                                       callAjax();
@@ -123,16 +130,22 @@
                                                   $("#searchResults").html(results);
                                                   $("#searchResults").css("visibility","visible");
 
-                                                  // changing top positioning of drawer contents in relation to the height
-                                                  // of the search results etc above it
-                                                  function getTotalHeight(){
-                                                    var searchHeight = $("#searchResults").height();
-                                                    // var mobileHeaderHeight = $("#mobileHeader").height();
-                                                    // var webSearchHeight = $("#webSearch").height();
-                                                    return(searchHeight - 3);
-                                                  };
-                                                  // console.log("Height of search div:" + getTotalHeight());
-                                                  $("#drawerContents").css("top", getTotalHeight());
+                                                  if(window.matchMedia("(min-width: 1025px)").matches){
+                                                    // web
+                                                    // changing top positioning of drawer contents in relation to the height
+                                                    // of the search results etc above it
+                                                    function getTotalHeight(){
+                                                      var searchHeight = $("#searchResults").height();
+                                                      // var mobileHeaderHeight = $("#mobileHeader").height();
+                                                      // var webSearchHeight = $("#webSearch").height();
+                                                      return(searchHeight - 3);
+                                                    }
+                                                    // console.log("Height of search div:" + getTotalHeight());
+                                                    $("#drawerContents").css("top", getTotalHeight());
+                                                  } else {
+                                                    // mobile
+
+                                                  }
 
 
                                                   }

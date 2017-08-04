@@ -91,10 +91,7 @@ $(window).resize(function() {
 // all JS that is not change depending on the width of the screen
 //
 
-//searchfield
-$("#searchIcon").click(function(){
-  $("#mobileSearch").addClass("is-focused");
-});
+
 
 
 // function for hiding all of the cards beneath the menu for categories
@@ -480,6 +477,11 @@ if(window.matchMedia("(min-width: 1025px)").matches){
         // the view is at least 1025 px wide
         // web
 
+        //searchfield
+        $("#searchIcon").click(function(){
+          $("#mobileSearch").addClass("is-focused");
+        });
+
         // academic facilities show and slide out (if clicked again, slides back in)
         $("#accFText").click(function(){
             var check = $("#accFCard").hasClass("cardPresent");
@@ -851,6 +853,26 @@ if(window.matchMedia("(min-width: 1025px)").matches){
                     {right:"-380px"});
             }
         });
+
+
+        //searchfield
+        $("#mobileSearch").css("left", "0px");
+        $("#searchIcon").click(function(){
+          var check = $("#mobileSearch").hasClass("clicked");
+
+          if(check === false){
+            $("#mobileSearch").addClass("is-focused");
+            $("#mobileSearch").addClass("clicked");
+            $("#mobileSearch").css("left", "-14%");
+          } else if (check === true){
+            $("#mobileSearch").css("left", "0px");
+            $("#mobileSearch").removeClass("clicked");
+            $("#mobileSearch").removeClass("is-focused");
+          }
+
+
+        });
+
 
 
         // all cards functions are repeated here and change the direction that they
