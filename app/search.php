@@ -4,7 +4,7 @@
     // from: w3schools php MySQL connect
     $servername = "localhost";
     $username = "virtualtourdev";
-    $password = "uH80uv$9";
+    $password = "Fuzk197#";
 
     try {
         $conn = new PDO("mysql:host=$servername;dbname=virtualtourdev", $username, $password);

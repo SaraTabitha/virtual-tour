@@ -156,11 +156,19 @@
                                                 url: "search.php",
                                                 data: ({search: $("#searchInput").val()}),
                                                 success: function(results){
+                                                  var emptyResult = "<ul><li> Search Results </li></ul>";
                                                   console.log("success!");
                                                   console.log(results);
 
-                                                  $("#searchResults").html(results);
+
                                                   $("#searchResults").css("visibility","visible");
+
+                                                  if( emptyResult == results){
+                                                    $("#searchResults").html("<ul><li>No results</li></ul>");
+
+                                                  } else if (emptyResult !== results){
+                                                    $("#searchResults").html(results);
+                                                  }
 
                                                   // based on width
                                                   if(window.matchMedia("(min-width: 1025px)").matches){
