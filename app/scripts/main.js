@@ -856,7 +856,7 @@ if(window.matchMedia("(min-width: 1025px)").matches){
 
 
         //searchfield
-        $("#mobileSearch").css("left", "0px");
+
         $("#searchIcon").click(function(){
           var check = $("#mobileSearch").hasClass("clicked");
 
@@ -865,7 +865,7 @@ if(window.matchMedia("(min-width: 1025px)").matches){
             $("#mobileSearch").addClass("clicked");
             $("#mobileSearch").css("left", "-14%");
           } else if (check === true){
-            $("#mobileSearch").css("left", "0px");
+            $("#mobileSearch").css("left", "-3%");
             $("#mobileSearch").removeClass("clicked");
             $("#mobileSearch").removeClass("is-focused");
           }

@@ -1006,6 +1006,7 @@ div#stuRCard{
     padding: 0px;
     left: -10px;
     position: relative;
+    visibility: hidden;
 }
 #searchResults > ul{
   padding: 0px;
@@ -1014,4 +1015,15 @@ div#stuRCard{
 }
 #searchResults > li{
 
+}
+/*"search results" text underlined*/
+.firstResults{
+  text-decoration: underline;
+}
+
+#searchResults > ul > li > p{
+  font-style: italic;
+}
+#noResults{
+  font-style: italic;
 }

@@ -115,59 +115,53 @@
                                                 });
 
 
-                                              // function callAjax(){
-                                              //   $.ajax({
-                                              //     type: "GET",
-                                              //     url: "search.php",
-                                              //     //use value of search input for $search variable in php
-                                              //     data: ({search: $("#searchInput").val()}),
-                                              //     success: function(results){
-                                              //     /*onsuccess*/
-                                              //     // debugger;
-                                              //     console.log("success!");
-                                              //     console.log(results);
-                                              //
-                                              //     $("#searchResults").html(results);
-                                              //     $("#searchResults").css("visibility","visible");
-                                              //
-                                              //     if(window.matchMedia("(min-width: 1025px)").matches){
-                                              //       // web
-                                              //       // changing top positioning of drawer contents in relation to the height
-                                              //       // of the search results etc above it
-                                              //       function getTotalHeight(){
-                                              //         var searchHeight = $("#searchResults").height();
-                                              //         // var mobileHeaderHeight = $("#mobileHeader").height();
-                                              //         // var webSearchHeight = $("#webSearch").height();
-                                              //         return(searchHeight - 3);
-                                              //       }
-                                              //       // console.log("Height of search div:" + getTotalHeight());
-                                              //       $("#drawerContents").css("top", getTotalHeight());
-                                              //     } else {
-                                              //       // mobile
-                                              //     }
-                                              //   })
-                                              //   })
-                                              // };
-
-
                                               function callAjax(){
                                               $.ajax({
                                                 type: "GET",
                                                 url: "search.php",
                                                 data: ({search: $("#searchInput").val()}),
                                                 success: function(results){
-                                                  var emptyResult = "<ul><li> Search Results </li></ul>";
-                                                  console.log("success!");
-                                                  console.log(results);
 
+                                                  console.log("success!");
+                                                  // console.log(results);
 
                                                   $("#searchResults").css("visibility","visible");
 
+
+                                                  var emptyResult = "<ul><li> Search Results </li></ul>";
                                                   if( emptyResult == results){
-                                                    $("#searchResults").html("<ul><li>No results</li></ul>");
+                                                    // note to self: if you want to add class/id to these make sure to use
+                                                    // different quotations than you use to wrap the string~
+                                                    // "" string, '' for classes and ids
+                                                    $("#searchResults").html("<ul><li id='noResults'> No results</li></ul>");
 
                                                   } else if (emptyResult !== results){
                                                     $("#searchResults").html(results);
+                                                    // style "Search Results" text that is the first <li> in <ul>
+                                                    $("#searchResults > ul > li:nth-child(1)").addClass("firstResults");
+
+
+
+                                                    //
+
+                                                    var n = 1;
+                                                    // counting number of list items
+                                                    var listItems = $("#searchResults > ul").children().length;
+                                                    do {
+                                                      n++
+                                                      // gets value of element
+                                                      // / /g <- selects all spaces in the string
+                                                      var hello = $("#searchResults > ul > li:nth-child(" + n + ")").text().toLowerCase().replace(/ /g, "");
+                                                      // sets the id of the element ^ to the string returned above
+                                                      $("#searchResults > ul > li:nth-child(" + n + ")").prop("id", hello + "Result");
+                                                    // increase n until it matches the number of listItems that are present
+                                                    } while (n <= listItems);
+                                                    console.log(n);
+
+                                                    console.log("number of list elements:" + listItems);
+
+
+
                                                   }
 
                                                   // based on width
@@ -393,8 +387,9 @@
                                                 </div>
                                                 <div id="linkFourOptions" class="tourDrop">
                                                         <ul class="noPad">
-                                                                <li id="acEnd" class="tourItem text">Arts and Communications Outside</li>
                                                                 <li id="dempseyStart" class="tourItem text">Dempsey Outside</li>
+                                                                <li id="" class="tourItem text">VR</li>
+
                                                                 <li class="tourItem text">VR</li>
                                                         </ul>
                                                 </div>
