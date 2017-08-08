@@ -863,7 +863,7 @@ if(window.matchMedia("(min-width: 1025px)").matches){
         $("#drawerContents").addClass("mdl-layout__drawer-right");
 
         $("#drawerDivTwo").removeClass("mdl-layout__drawer");
-        $("#webSearch").removeClass("mdl-color--yellow-A700");
+      
 
         // mobile nav opens on menu button click
         $("#notif").click(function(){
