@@ -324,6 +324,9 @@ html, body {
     overflow-y: scroll;
     overflow-x: hidden;
     visibility: hidden;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    border-right:1px solid black;
 }
 #searchResults > ul{
   background-color: #ffcc00;

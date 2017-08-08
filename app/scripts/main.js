@@ -889,10 +889,16 @@ if(window.matchMedia("(min-width: 1025px)").matches){
             $("#mobileSearch").addClass("is-focused");
             $("#mobileSearch").addClass("clicked");
             $("#mobileSearch").css("left", "-14%");
+            $("#searchInput").css("visibility", "visible");
+
           } else if (check === true){
             $("#mobileSearch").css("left", "-3%");
             $("#mobileSearch").removeClass("clicked");
             $("#mobileSearch").removeClass("is-focused");
+            $("#mobileSearch").css("height", "0px");
+            $("#searchResults").css("visibility", "hidden");
+            $("#searchInput").val("");
+            $("#searchInput").css("visibility", "hidden");
           }
 
         });
