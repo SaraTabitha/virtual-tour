@@ -333,24 +333,29 @@ html, body {
 
   /*padding-left: 40px;*/
 }
-#searchResults > li{
-  word-wrap: break-word;
-}
-#searchResults > ul > li > p{
-  margin: 0px;
-  padding: 0px;
-}
+
 /*"search results" text underlined*/
 .firstResults{
-  text-decoration: underline;
+  /*text-decoration: underline;*/
+}
+.firstResults > h6{
+  padding: 0px;
+  margin: 0px;
 }
 
-#searchResults > ul > li > p{
-  font-style: italic;
-}
 #noResults{
   font-style: italic;
 }
+.results{
+  word-wrap: break-word;
+  color: black;
+  text-decoration: underline;
+}
+.results > p{
+  margin: 0px;
+  padding: 0px;
+}
+
 
 #notif{
     position: relative;
@@ -1191,6 +1196,7 @@ p.parkingTextHover{
   position: absolute;
   height: 347px;
   width: 100%;
+
 }
 /*overlay + info popup styling*/
 #overlay{
@@ -1269,6 +1275,22 @@ li:hover{
 .closeButton{
     float: right;
     right: 3%;
+}
+.vrCloseButton{
+  position: absolute;
+  color: black;
+  z-index: 10;
+  top: 5px;
+  font-size: 24px;
+  left: 90%;
+  visibility: hidden;
+  padding: 10px;
+  /*v centering techniques below not working for some reason v*/
+  /*display: block;
+  margin: 0 auto;
+  text-align: center;*/
+
+
 }
 
 .infoContainer{
@@ -1399,9 +1421,9 @@ h1.text.yellow{
 }
 /*scrolling issue for popups*/
 @media screen and (max-width: 600px){
-    .popup{
+    /*.popup{
         top: 60px;
-    }
+    }*/
 }
 @media screen and (max-width: 500px){
     .five{

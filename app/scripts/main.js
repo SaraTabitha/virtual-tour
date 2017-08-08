@@ -76,14 +76,12 @@
 
 // reloads the page if it is resized so that it reloads this file based on window width! :D
 var lastWidth = $(window).width();
+var mobileWidth = 1024;
 $(window).resize(function() {
-    var mobileWidth = 1024;
-    if($(this).width() != lastWidth && $(this).width() <= mobileWidth){
-        location.reload();
-
-        // setTimeout(function(){
-        //
-        // }, 100);
+    if($(this).width() !== lastWidth && $(this).width() <= mobileWidth){
+        setTimeout(function(){
+          location.reload();
+        }, 100);
     }
 
 });
@@ -375,7 +373,18 @@ function hideAllVR(){
   $("#sidewalkTour > iframe").css('visibility', 'hidden');
   $("#dempseyStart").removeClass("checked");
 
+  // close button for panoramas
+  $(".vrCloseButton").css("visibility", "visible");
+
 }
+
+// close button click
+$(".vrCloseButton").click(function(){
+  hideAllVR();
+  $('#overlay').css('visibility', 'hidden');
+  $('#overlay').animate({"opacity": "0"}, "slow");
+  $(".vrCloseButton").css("visibility", "hidden");
+})
 
 // on click for the menu item that is selected
 // to bring up the iframe and grey overlay
@@ -387,6 +396,8 @@ $("#titanField").click(function(){
         $('#overlay').css('visibility', 'visible');
         $('#overlay').animate({"opacity": "0.3"}, "slow");
 
+        $(".vrCloseButton").css("visibility", "visible");
+
         $("#titanFieldImage > iframe").css('visibility', 'visible');
 
         $(this).addClass("checked");
@@ -397,6 +408,8 @@ $("#titanField").click(function(){
         $('#overlay').animate({"opacity": "0"}, "slow");
 
         $("#titanFieldImage > iframe").css('visibility', 'hidden');
+
+        $(".vrCloseButton").css("visibility", "hidden");
 
         $(this).removeClass("checked");
     }
@@ -410,6 +423,8 @@ $("#womensCenter").click(function(){
 
         $("#womensCenterImage > iframe").css('visibility', 'visible');
 
+        $(".vrCloseButton").css("visibility", "visible");
+
         $(this).addClass("checked");
 
 
@@ -418,6 +433,8 @@ $("#womensCenter").click(function(){
         $('#overlay').animate({"opacity": "0"}, "slow");
 
         $("#womensCenterImage > iframe").css('visibility', 'hidden');
+
+        $(".vrCloseButton").css("visibility", "hidden");
 
         $(this).removeClass("checked");
     }
@@ -433,6 +450,8 @@ $("#executiveRoom").click(function(){
 
         $("#executiveRoomImage > iframe").css('visibility', 'visible');
 
+        $(".vrCloseButton").css("visibility", "visible");
+
         $(this).addClass("checked");
 
 
@@ -441,6 +460,8 @@ $("#executiveRoom").click(function(){
         $('#overlay').animate({"opacity": "0"}, "slow");
 
         $("#executiveRoomImage > iframe").css('visibility', 'hidden');
+
+        $(".vrCloseButton").css("visibility", "hidden");
 
         $(this).removeClass("checked");
     }
@@ -455,6 +476,8 @@ $("#dempseyStart").click(function(){
 
         $("#sidewalkTour > iframe").css('visibility', 'visible');
 
+        $(".vrCloseButton").css("visibility", "visible");
+
         $(this).addClass("checked");
 
 
@@ -463,6 +486,8 @@ $("#dempseyStart").click(function(){
         $('#overlay').animate({"opacity": "0"}, "slow");
 
         $("#sidewalkTour > iframe").css('visibility', 'hidden');
+
+        $(".vrCloseButton").css("visibility", "hidden");
 
         $(this).removeClass("checked");
     }
@@ -1162,6 +1187,7 @@ if(window.matchMedia("(min-width: 1025px)").matches){
             $("#addFour").toggle();
         });
         // End hide/show 360 navigation items
+
 
 
 })();

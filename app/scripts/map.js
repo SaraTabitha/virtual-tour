@@ -383,6 +383,8 @@ function initMap() {
             policeMarker.setMap(null);
             websterMarker.setMap(null);
         }
+
+
         // adding hover cards for building markers
         var albeeHover = document.getElementById('albeeHover');
         var albeeHoverCard = new google.maps.InfoWindow({

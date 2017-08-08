@@ -23,7 +23,7 @@
 
         // echo "<div id='searchResults'>";
         echo "<ul>";
-        echo "<li> Search Results </li>";
+        echo "<li class='firstResults text'><h6>Search Results:</h6></li>";
 
         class TableRows extends RecursiveIteratorIterator {
             function __construct($it) {
@@ -35,7 +35,7 @@
             }
 
             function beginChildren() {
-                echo "<li>";
+                echo "<li class='results text'>";
             }
 
             function endChildren() {
