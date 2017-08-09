@@ -52,8 +52,9 @@
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue-yellow.min.css" />
 
     <!-- Your styles -->
-    <link rel="stylesheet" media="(min-width: 1025px)"href="styles/main.css">
-    <link rel="stylesheet" media="(max-width: 1025px)"href="styles/mobile.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- <link rel="stylesheet" href="styles/mobile.css"> -->
+    <link rel="stylesheet" href="styles/materialdesign.css">
 
     <!--jquery link from Google-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -2638,6 +2639,7 @@
                                 }
                             };
                         }
+
 
                         // womens center panorama
                         document.getElementById("womensCenter").addEventListener('click', onLoad)

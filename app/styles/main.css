@@ -1,276 +1,37 @@
-/**
- * Copyright 2015 Google Inc. All Rights Reserved.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-/*
-Note: any .css or .scss files included in the 'styles' directory
-will be correctly compiled during `gulp serve` and `gulp`
- */
-
-html, body {
-  font-family: 'Roboto', 'Helvetica', sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-.mdl-demo .mdl-layout.is-small-screen .mdl-layout__header-row h3 {
-  font-size: inherit;
-}
-.mdl-demo .mdl-layout__tab-bar-button {
-  display: none;
-}
-.mdl-demo .mdl-layout.is-small-screen .mdl-layout__tab-bar .mdl-button {
-  display: none;
-}
-.mdl-demo .mdl-layout:not(.is-small-screen) .mdl-layout__tab-bar,
-.mdl-demo .mdl-layout:not(.is-small-screen) .mdl-layout__tab-bar-container {
-  overflow: visible;
-}
-.mdl-demo .mdl-layout__tab-bar-container {
-  height: 64px;
-}
-.mdl-demo .mdl-layout__tab-bar {
-  padding: 0;
-  padding-left: 16px;
-  box-sizing: border-box;
-  height: 100%;
-  width: 100%;
-}
-.mdl-demo .mdl-layout__tab-bar .mdl-layout__tab {
-  height: 64px;
-  line-height: 64px;
-}
-.mdl-demo .mdl-layout__tab-bar .mdl-layout__tab.is-active::after {
-  background-color: white;
-  height: 4px;
-}
-.mdl-demo main > .mdl-layout__tab-panel {
-  padding: 8px;
-  padding-top: 48px;
-}
-.mdl-demo .mdl-card {
-  height: auto;
-  display: flex;
-  flex-direction: column;
-}
-.mdl-demo .mdl-card > * {
-  height: auto;
-}
-.mdl-demo .mdl-card .mdl-card__supporting-text {
-  margin: 40px;
-  flex-grow: 1;
-  padding: 0;
-  color: inherit;
-  width: calc(100% - 80px);
-}
-.mdl-demo.mdl-demo .mdl-card__supporting-text h4 {
-  margin-top: 0;
-  margin-bottom: 20px;
-}
-.mdl-demo .mdl-card__actions {
-  margin: 0;
-  padding: 4px 40px;
-  color: inherit;
-}
-.mdl-demo .mdl-card__actions a {
-  color: #00BCD4;
-  margin: 0;
-}
-.mdl-demo .mdl-card__actions a:hover,
-.mdl-demo .mdl-card__actions a:active {
-  color: inherit;
-  background-color: transparent;
-}
-.mdl-demo .mdl-card__supporting-text + .mdl-card__actions {
-  border-top: 1px solid rgba(0, 0, 0, 0.12);
-}
-.mdl-demo #add {
-  position: absolute;
-  right: 40px;
-  top: 36px;
-  z-index: 999;
-}
-
-.mdl-demo .mdl-layout__content section:not(:last-of-type) {
-  position: relative;
-  margin-bottom: 48px;
-}
-.mdl-demo section.section--center {
-  max-width: 860px;
-}
-.mdl-demo #features section.section--center {
-  max-width: 620px;
-}
-.mdl-demo section > header{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.mdl-demo section > .section__play-btn {
-  min-height: 200px;
-}
-.mdl-demo section > header > .material-icons {
-  font-size: 3rem;
-}
-.mdl-demo section > button {
-  position: absolute;
-  z-index: 99;
-  top: 8px;
-  right: 8px;
-}
-.mdl-demo section .section__circle {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  flex-grow: 0;
-  flex-shrink: 1;
-}
-.mdl-demo section .section__text {
-  flex-grow: 1;
-  flex-shrink: 0;
-  padding-top: 8px;
-}
-.mdl-demo section .section__text h5 {
-  font-size: inherit;
-  margin: 0;
-  margin-bottom: 0.5em;
-}
-.mdl-demo section .section__text a {
-  text-decoration: none;
-}
-.mdl-demo section .section__circle-container > .section__circle-container__circle {
-  width: 64px;
-  height: 64px;
-  border-radius: 32px;
-  margin: 8px 0;
-}
-.mdl-demo section.section--footer .section__circle--big {
-  width: 100px;
-  height: 100px;
-  border-radius: 50px;
-  margin: 8px 32px;
-}
-.mdl-demo .is-small-screen section.section--footer .section__circle--big {
-  width: 50px;
-  height: 50px;
-  border-radius: 25px;
-  margin: 8px 16px;
-}
-.mdl-demo section.section--footer {
-  padding: 64px 0;
-  margin: 0 -8px -8px -8px;
-}
-.mdl-demo section.section--center .section__text:not(:last-child) {
-  border-bottom: 1px solid rgba(0,0,0,.13);
-}
-.mdl-demo .mdl-card .mdl-card__supporting-text > h3:first-child {
-  margin-bottom: 24px;
-}
-.mdl-demo .mdl-layout__tab-panel:not(#overview) {
-  background-color: white;
-}
-.mdl-demo #features section {
-  margin-bottom: 72px;
-}
-.mdl-demo #features h4, #features h5 {
-  margin-bottom: 16px;
-}
-.mdl-demo .toc {
-  border-left: 4px solid #C1EEF4;
-  margin: 24px;
-  padding: 0;
-  padding-left: 8px;
-  display: flex;
-  flex-direction: column;
-}
-.mdl-demo .toc h4 {
-  font-size: 0.9rem;
-  margin-top: 0;
-}
-.mdl-demo .toc a {
-  color: #4DD0E1;
-  text-decoration: none;
-  font-size: 16px;
-  line-height: 28px;
-  display: block;
-}
-.mdl-demo .mdl-menu__container {
-  z-index: 99;
-}
 /**/
-/*START MY CSS*/
-/*entire left menu*/
+/*START SHARED STYLING (REGARDLESS OF WINDOW WIDTH)*/
 /**/
 
- li{
-  cursor: pointer;
-}
-
-/*yellow portion of header*/
-.mdl-layout__header-row.main {
-  height: 109px;
-  border-top: 5px solid white;
-  padding: 0px 0px 20px 0px;
-  margin: 0;
-}
 /*black space for virtual tour*/
+/*v in mobile it only specified height 30px*/
 .mdl-layout__header-row.drawer{
   padding: 0px 0px 0px 20px;
   width: 100%;
   height: 30px;
 }
-
-.mdl-layout__drawer {
-  width: 380px;
-
-}
-#drawerDivTwo{
-  overflow-x: hidden;
-}
-
-/*hide menu button used only in mobile*/
-#notif{
-  display: none;
-}
-
-/*styling for search*/
-#webSearch{
-  height: 30px;
+#searchResults > ul{
+  padding: 0px;
   margin: 0px;
-
 }
-#menuDrawer{
-  height: 100%;
-  overflow-x: hidden;
+/*"search results" text underlined*/
+.firstResults{
+  /*text-decoration: underline;*/
 }
-#drawerContents{
-  height: 900px;
-  /*top: 0px !important;*/
+.firstResults > h6{
+  padding: 0px;
+  margin: 0px;
 }
-
-#mobileHeader{
-  height: 110px;
-  background-color: #ffcc00;
+#noResults{
+  font-style: italic;
 }
-#webSearch{
-  background-color: #ffcc00;
+.results{
+  color: black;
+  text-decoration: underline;
 }
-#searchInput{
-  width: 200px;
+.results > p{
+  margin: 0px;
+  padding: 0px;
 }
-
 
 .mdl-textfield{
   top: 0px;
@@ -279,20 +40,6 @@ html, body {
   right: 0px;
   padding: 0px 10px;
 }
-.searchLabel.mdl-button.mdl-js-button.mdl-button--icon{
-  top: 0px;
-  bottom: 0px;
-  left: 10px;
-  right: 0px;
-  padding: 0px;
-}
-/*uwo watermark picture*/
-.mdl-layout-title.watermark {
-  height: 109px;
-  width: 223px;
-  padding-top: 10px;
-}
-
 /*grey coloring*/
 .background666{
   background-color: #666766;
@@ -315,23 +62,23 @@ a.link{
 /*360 grey styling*/
 .mdl-layout-title.threeSixty{
   color: #d0cece;
-  /*position: relative;
-  left: 25px;*/
 }
 /*all checkbox lines*/
  .mdl-checkbox__label {
   font-size: 16px;
-
 }
+
 /*grey for select all checkbox lines*/
 .mdl-checkbox__label.selectAll{
   color:  #d0cece;
 }
+
 .options{
   padding: 0px;
   list-style: none;
   margin: 0;
 }
+
 .options > li{
   padding-left: 20px;
 }
@@ -388,17 +135,15 @@ span.mdl-navigation__link.color666.text{
 }
 /*hide list items for 360 tour*/
 .tourDrop{
-  display: none;
+    display: none;
 }
 /*forcing no padding on navigation*/
 .mdl-navigation.mine{
-  padding: 0px;
-  width: 364px;
+    padding: 0px;
 }
 .mdl-navigation.mine:hover{
   background-color: #a2a1a2;
 }
-
 .optionsBox{
 padding: 6px 0px;
 
@@ -418,17 +163,12 @@ top: -24px;
 .linkSpan{
   height: 30px !important;
 }
-/*pullout card under menu*/
 .demo-card-wide{
   position: relative;
-  width: 377px;
   height: 100%;
   display: none;
-  /*curve for slide out/in*/
-  transition: left .3s cubic-bezier(0.0, 0.0, 0.2, 1);
   z-index: 1;
 }
-
 /*map styling*/
 html, body, main, .mdl-layout__content, .page-content, #map {
   width: 100%;
@@ -439,62 +179,47 @@ html, body, main, .mdl-layout__content, .page-content, #map {
   overflow: hidden;
 }
 #map {
-  position: relative;
-  height: 100%;
-
+    position: relative;
 }
-/*hover for markers*/
-.generalHover{
-  height: 105px;
-  width: 248px;
+/*should not load until told to D:<*/
+div#accFCard{
+  display: none;
 }
-
-.imageHover{
-  width: 70px;
-  height: 105px;
-  display: inline-block;
-  float: left;
+div#athCard{
+  display: none;
 }
-.hoverDiv{
-  /*display: inline-block;*/
-  height: 100px;
-  width: 170px;
-  float: right;
-  padding: 4px;
-
+div#accSCard{
+  display: none;
+}
+div#campSCard{
+  display: none;
+}
+div#resHCard{
+  display: none;
+}
+div#diningCard{
+  display: none;
+}
+div#stuRCard{
+  display: none;
 }
 h1.headHover{
   position: relative;
   display: block;
   margin: 0px;
-  font-size: 14px;
   font-weight: 900;
   text-decoration: underline;
 }
 p.paraHover{
   position: relative;
   display: block;
-  font-size: 12px;
-  width: 155px;
   margin: 0px;
 }
-
 /* parking hover styling*/
 .parkingHover{
   width: 100px;
 }
-#twentythreeHover{
-  width: 130px;
-}
-#sevenHover{
-  width: 115px;
-}
-#titanOneHover,#titanTwoHover, #womensCenterHover{
-  width: 145px;
-}
-
 h1.parkingHeadHover{
-  font-size: 14px;
   font-weight: 900;
   text-decoration: underline;
   margin: 0px;
@@ -511,7 +236,6 @@ p.parkingTextHover{
   border-radius: 100px;
   display: inline-block;
   position: relative;
-  top: -15px;
   float: right;
 }
 .parkingColorRemote{
@@ -522,7 +246,6 @@ p.parkingTextHover{
   border-radius: 100px;
   display: inline-block;
   position: relative;
-  top: -15px;
   float: right;
 }
 .parkingColorCommute{
@@ -533,7 +256,6 @@ p.parkingTextHover{
   border-radius: 100px;
   display: inline-block;
   position: relative;
-  top: -15px;
   float: right;
 }
 .parkingColorRestricted{
@@ -544,7 +266,6 @@ p.parkingTextHover{
   border-radius: 100px;
   display: inline-block;
   position: relative;
-  top: -15px;
   float: right;
 }
 .parkingColorReserved{
@@ -555,7 +276,6 @@ p.parkingTextHover{
   border-radius: 100px;
   display: inline-block;
   position: relative;
-  top: -15px;
   float: right;
 }
 .parkingColorCommuter{
@@ -566,7 +286,6 @@ p.parkingTextHover{
   border-radius: 100px;
   display: inline-block;
   position: relative;
-  top: -15px;
   float: right;
 }
 .parkingColorResident{
@@ -577,7 +296,6 @@ p.parkingTextHover{
   border-radius: 100px;
   display: inline-block;
   position: relative;
-  top: -15px;
   float: right;
 }
 .parkingColorVisitor{
@@ -588,26 +306,8 @@ p.parkingTextHover{
   border-radius: 100px;
   display: inline-block;
   position: relative;
-  top: -15px;
   float: right;
 }
-
-/*styling google vr*/
-.vr{
-  height: 347px;
-}
-.vrDiv{
-  visibility: hidden;
-  z-index: 3;
-  position: absolute;
-  top: 50%;
-  margin-top: -173.5px;
-  height: 347px;
-  /*width: 100%;*/
-  left: 377px;
-}
-
-/*overlay + info popup styling*/
 #overlay{
   position: fixed;
   width: 100%;
@@ -618,72 +318,22 @@ p.parkingTextHover{
   visibility: hidden;
 }
 .popup{
-  visibility: hidden;
-  opacity: 0;
-  position: fixed;
-  left: 40%;
-  top: 20%;
-  width: 715px;
-  height: 420px;
-  background-color: white;
-  color: white;
-  z-index: 2;
-  padding: 10px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
-}
-/*specific popup modifications*/
-
-#pollockPopup{
-  height: 380px;
-}
-#donnerPopup{
-  height: 400px;
-}
-#fletcherPopup, #oviattPopup{
-  height: 430px;
-}
-#dempseyPopup{
-  height: 440px;
-}
-#taylorPopup, #parkingRampPopup, #blackhawkPopup{
-  height: 445px;
-}
-#acPopup, #reevePopup{
-  height: 450px;
-}
-#successPopup{
-  height: 490px;
-}
-#horizonPopup{
-  height: 515px;
+visibility: hidden;
+opacity: 0;
+background-color: white;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-/*popup stuff continued*/
 .popupBlack{
-  background-color: #fdb515;
-  position: relative;
-  left: -10px;
-  top: -10px;
-  width: 735px;
-  height: 100px;
-  border-radius: 10px 10px 0px 0px;
+background-color: #fdb515;
+position: relative;
+height: 100px;
 }
-h1.text.yellow{
-  position: relative;
-  top: 50%;
-  left: 10px;
-  font-size: 2em;
-}
-
 .popupNav{
-  background-color:  #ffcc00 ;
-  position: relative;
-  left: -10px;
-  top: -10px;
-  width: 735px;
-  height: 30px;
+background-color:  #ffcc00 ;
+position: relative;
+top: -10px;
+height: 30px;
 }
 ul#popupNav {
   margin: 0px;
@@ -692,13 +342,9 @@ ul#popupNav {
 ul#popupNav li{
   position: relative;
   display: inline;
-  padding-left: 20px;
   color: #444;
   font-family: 'Open Sans', sans-serif;
   line-height: 2em;
-}
-ul#popupNav li.about{
-  padding-left: 10px;
 }
 ul#popupNav li:hover{
   text-decoration: underline;
@@ -709,82 +355,31 @@ ul#popupNav li:hover{
 }
 .vrCloseButton{
   position: absolute;
-  color: white;
-  font-size: 30px;
-  left: 95%;
   z-index: 10;
-  height: 10px;
-  width: 10px;
-  padding: 10px;
-  margin: 10px;
-  text-align: center;
   visibility: hidden;
-  top: 22%;
-}
-.popupText{
-  float: right;
-  width: 300px;
-  color: black;
+  padding: 10px;
 }
 .heading{
   margin: 0px;
   font-family: "open-sans", sans-serif;
-  color: black;
+
 }
-.imagePopup{
-  float: left;
-}
+
 .imagePopup img{
   width: 400px;
   height: 250px;
 }
-h1.text.yellow{
-  margin: 0px;
-}
-#parkingRampParkingImage{
-  width: 715px;
-  padding: 10px;
 
-}
-#parkingRampParkingImage img{
-  display: block;
-  margin: 0 auto;
-}
-.videoPopup{
-  float: right;
-}
-.address{
-  text-align: center;
-  margin: 0px;
-  color: black;
-}
-a.address{
-  position: relative;
-  left: 40%;
-}
 .videoPopup iframe{
   width: 400px;
   height: 250px;
-}
-.tourText{
-  width: 300px;
-  float: left;
 }
 .sustHeading{
   margin: 0px;
   font-family: "open-sans", sans-serif;
   position: relative;
-  color: black;
-
-}
-.subText{
-  position: relative;
-  padding-top: 10px;
-  color: black;
-  margin-bottom: 0px;
 }
 
-/*reeve dining padding*/
 #reeveDiningText p{
   margin-bottom: 4px;
 }
@@ -794,6 +389,7 @@ a.address{
   margin-left: 10px;
   text-align: center;
 }
+
 #reeveDiningImage li{
   position: relative;
   display: inline;
@@ -809,8 +405,6 @@ a.address{
 #reeveDiningImage a:hover{
   text-decoration-line: underline;
 }
-
-/*blackhawk list styling*/
 #blackhawkDiningText ul{
   margin: 0px;
   padding: 0px;
@@ -828,8 +422,6 @@ a.address{
   margin: 0px;
   padding: 0px;
 }
-
-/*styling for popup tabs*/
 #albeeTourVideo{
   display: none;
 }
@@ -977,73 +569,1233 @@ a.address{
 #policeBathrooms{
   display: none;
 }
-/*moves the google logo n' stuff into view on the map*/
-#map > div > div > div:nth-child(2){
-  margin-left: 385px !important;
-}
-#map > div > div > div:nth-child(10){
-  left: 385px !important;
-}
-/*mobile message*/
-#mobile{
-  display: none;
-}
-/*should not load until told to D:<*/
-div#accFCard{
-  display: none;
-}
-div#athCard{
-  display: none;
-}
-div#accSCard{
-  display: none;
-}
-div#campSCard{
-  display: none;
-}
-div#resHCard{
-  display: none;
-}
-div#diningCard{
-  display: none;
-}
-div#stuRCard{
-  display: none;
-}
 
-#searchResults{
+
+/**/
+/*END OF SHARED STYLING*/
+/**/
+
+/**/
+/*START WEB STYLING*/
+/**/
+@media screen and (min-width: 1025px){
+
+  #mobileHeader{
+    height: 110px;
+  }
+  #searchResults{
+      height: 100%;
+      z-index: 10;
+      width: 374px;
+      margin: 0px;
+      background-color: #ffcc00;
+      padding: 0px;
+      left: -10px;
+      position: relative;
+      visibility: hidden;
+  }
+
+  #searchResults > ul{
+    padding-left: 40px;
+  }
+
+  /*hide menu button used only in mobile*/
+  #notif{
+    display: none;
+  }
+
+  #drawerContents{
+    height: 900px;
+
+  }
+
+  /*pullout card under menu*/
+  .demo-card-wide{
+    width: 377px;
+    /*curve for slide out/in*/
+    transition: left .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+
+  }
+
+  #map {
     height: 100%;
+  }
+  /*moves the google logo n' stuff into view on the map*/
+  #map > div > div > div:nth-child(2){
+    margin-left: 385px !important;
+  }
+  #map > div > div > div:nth-child(10){
+    left: 385px !important;
+  }
+  /*hover for markers*/
+  .generalHover{
+    height: 105px;
+    width: 248px;
+  }
+
+  .imageHover{
+    width: 70px;
+    height: 105px;
+    display: inline-block;
+    float: left;
+  }
+  .hoverDiv{
+    /*display: inline-block;*/
+    height: 100px;
+    width: 170px;
+    float: right;
+    padding: 4px;
+
+  }
+  h1.headHover{
+  font-size: 14px;
+  }
+  p.paraHover{
+
+    font-size: 12px;
+    width: 155px;
+
+  }
+
+  h1.parkingHeadHover{
+      font-size: 10px;
+      color: black;
+  }
+  .parkingColorStaff{
+    top: -15px;
+  }
+  .parkingColorRemote{
+    top: -15px;
+  }
+
+  .parkingColorCommute{
+    top: -15px;
+  }
+
+  .parkingColorRestricted{
+      top: -15px;
+  }
+
+  .parkingColorReserved{
+      top: -15px;
+  }
+  .parkingColorCommuter{
+      top: -15px;
+  }
+  .parkingColorResident{
+    top: -15px;
+  }
+  .parkingColorVisitor{
+      top: -15px;
+  }
+
+  /*styling google vr*/
+  .vr{
+    height: 347px;
+  }
+  .vrDiv{
+    visibility: hidden;
+    z-index: 3;
+    position: absolute;
+    top: 50%;
+    margin-top: -173.5px;
+    height: 347px;
+    /*width: 100%;*/
+    left: 377px;
+  }
+  .popup{
+    position: fixed;
+    left: 40%;
+    top: 20%;
+    width: 715px;
+    height: 420px;
+    color: white;
+    z-index: 2;
+    padding: 10px;
+    border-radius: 10px;
+
+  }
+
+  .popupBlack{
+
+    left: -10px;
+    top: -10px;
+    width: 735px;
+    border-radius: 10px 10px 0px 0px;
+  }
+  h1.text.yellow{
+    position: relative;
+    top: 50%;
+    left: 10px;
+    font-size: 2em;
+  }
+  .popupNav{
+    left: -10px;
+    width: 735px;
+  }
+
+  ul#popupNav li{
+    padding-left: 20px;
+  }
+
+  ul#popupNav li.about{
+    padding-left: 10px;
+  }
+  .vrCloseButton{
+    color: white;
+    font-size: 30px;
+    left: 95%;
+    height: 10px;
+    width: 10px;
+    margin: 10px;
+    text-align: center;
+    top: 22%;
+  }
+  .heading{
+    color: black;
+  }
+  .imagePopup{
+    float: left;
+  }
+  .videoPopup{
+    float: right;
+  }
+  .address{
+    text-align: center;
+    margin: 0px;
+    color: black;
+  }
+  .tourText{
+    width: 300px;
+    float: left;
+  }
+  .sustHeading{
+    color: black;
+  }
+  .subText{
+    position: relative;
+    padding-top: 10px;
+    color: black;
+    margin-bottom: 0px;
+  }
+  li{
+    cursor: pointer;
+  }
+
+  /*yellow portion of header*/
+  .mdl-layout__header-row.main {
+    height: 109px;
+    border-top: 5px solid white;
+    padding: 0px 0px 20px 0px;
+    margin: 0;
+  }
+
+
+  .mdl-layout__drawer {
+    width: 380px;
+
+  }
+  #drawerDivTwo{
+    overflow-x: hidden;
+  }
+
+  /*styling for search*/
+  #webSearch{
+    height: 30px;
+    margin: 0px;
+
+  }
+  #menuDrawer{
+    height: 100%;
+    overflow-x: hidden;
+  }
+
+
+  #webSearch{
+    background-color: #ffcc00;
+  }
+  #searchInput{
+    width: 200px;
+  }
+
+  .searchLabel.mdl-button.mdl-js-button.mdl-button--icon{
+    top: 0px;
+    bottom: 0px;
+    left: 10px;
+    right: 0px;
+    padding: 0px;
+  }
+  /*uwo watermark picture*/
+  .mdl-layout-title.watermark {
+    height: 109px;
+    width: 223px;
+    padding-top: 10px;
+  }
+
+
+
+  #twentythreeHover{
+    width: 130px;
+  }
+  #sevenHover{
+    width: 115px;
+  }
+  #titanOneHover,#titanTwoHover, #womensCenterHover{
+    width: 145px;
+  }
+
+  #pollockPopup{
+    height: 380px;
+  }
+  #donnerPopup{
+    height: 400px;
+  }
+  #fletcherPopup, #oviattPopup{
+    height: 430px;
+  }
+  #dempseyPopup{
+    height: 440px;
+  }
+  #taylorPopup, #parkingRampPopup, #blackhawkPopup{
+    height: 445px;
+  }
+  #acPopup, #reevePopup{
+    height: 450px;
+  }
+  #successPopup{
+    height: 490px;
+  }
+  #horizonPopup{
+    height: 515px;
+  }
+
+  /*popup stuff continued*/
+
+
+  .popupText{
+    float: right;
+    width: 300px;
+    color: black;
+  }
+
+  h1.text.yellow{
+    margin: 0px;
+  }
+  #parkingRampParkingImage{
+    width: 715px;
+    padding: 10px;
+
+  }
+  #parkingRampParkingImage img{
+    display: block;
+    margin: 0 auto;
+  }
+
+  a.address{
+    position: relative;
+    left: 40%;
+  }
+
+  /*mobile message*/
+  #mobile{
+    display: none;
+  }
+
+
+/*end brace for min-width 1025 (web)*/
+}
+/**/
+/*END WEB STYLING*/
+/**/
+
+
+/**/
+/*START MOBILE STYLING*/
+/**/
+@media screen and (max-width: 1024px){
+  #mobileHeader{
+    background-color: #ffcc00;
+  }
+
+      /*drawer right */
+    .mdl-layout__drawer-right {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        width: 380px;
+        height: 100%;
+        max-height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+        box-sizing: border-box;
+        border-right: 1px solid #e0e0e0;
+        background: #fafafa;
+        -webkit-transform: translateX(250px);
+        -ms-transform: translateX(250px);
+        transform: translateX(250px);
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        will-change: transform;
+        -webkit-transition-duration: .2s;
+        transition-duration: .2s;
+        -webkit-transition-timing-function: cubic-bezier(.4,0,.2,1);
+        transition-timing-function: cubic-bezier(.4,0,.2,1);
+        -webkit-transition-property: -webkit-transform;
+        transition-property: transform;
+        color: #424242;
+        overflow: visible;
+        overflow-y: auto;
+        z-index: 5;
+    }
+
+    .active {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+    }
+
+    #menu{
+    overflow: hidden;
+    }
+
+    #menuDrawer{
+    width: 100%;
+    height: 70px;
+    z-index: 4;
+    }
+
+    .mdl-layout__header-row {
+    height: 45px;
+    padding: 0px;
+    margin: 0;
+    }
+
+    #mobileHeader > img{
+    height: 54.5px;
+    width: 111.5px;
+    position: relative;
+    top: -8%;
+    }
+
+    #headerWeb{
+    height: 70px;
+    }
+
+    #mobileHeader{
+    border-top: 5px solid white;
+    height: 70px;
+    width: 100%;
+    }
+
+    #mobileSearch{
+    padding: 0px;
+    position: relative;
+    float: right;
+    top: -40px;
+    left: -3%;
+    max-width: 100px;
+    }
+
+    #mobileSearch > div > label{
+    padding-right: 10px;
+    float: right;
+    top: -35px;
+    }
+
+    #mobileSearch > label{
+    top: 0px;
+    }
+
+    #searchResults{
+    max-height: 200px;
     z-index: 10;
-    width: 374px;
+    width: 120px;
     margin: 0px;
     background-color: #ffcc00;
-    padding: 0px;
-    left: -10px;
+    padding: 10px;
     position: relative;
+    top: 12px;
+    overflow-y: scroll;
+    overflow-x: hidden;
     visibility: hidden;
-}
-#searchResults > ul{
-  padding: 0px;
-  margin: 0px;
-  padding-left: 40px;
-}
-/*"search results" text underlined*/
-.firstResults{
-  /*text-decoration: underline;*/
-}
-.firstResults > h6{
-  padding: 0px;
-  margin: 0px;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    border-right:1px solid black;
+    }
+
+    #searchResults > ul{
+    background-color: #ffcc00;
+    width: 120px;
+    }
+
+    .results{
+    word-wrap: break-word;
+    }
+
+    #notif{
+    position: relative;
+    left: 90%;
+    top: -35px;
+    }
+
+    #drawerContents{
+    width: 380px;
+    /*must be auto otherwise the scrollbar doesn't work*/
+    height: auto;
+    float: right;
+    top: 70px;
+    bottom: 0px;
+    right: -50%;
+    overflow-x: hidden;
+    }
+
+    /*all layout titles*/
+    .mdl-layout-title {
+        padding-left: 15px;
+    }
+
+    #selectAllOne{
+    position: relative;
+    left: 20px;
+    }
+
+    #selectAllTwo{
+    position: relative;
+    left: 20px;
+    }
+
+    /*forcing no padding on navigation*/
+    .mdl-navigation.mine{
+      width: 364px;
+    }
+
+    .linkSpan{
+      width: 100%;
+      padding: 10px;
+      padding-left: 15px;
+    }
+
+    /*pullout card under menu*/
+    .demo-card-wide{
+    width: 100%;
+    /*curve for slide out/in*/
+    transition: top .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+    }
+
+    #mainWeb{
+    position: relative;
+    }
+    /*moves the google logo n' stuff into view on the map*/
+
+    #map > div > div > div:nth-child(2){
+    margin-left: 60% !important;
+    }
+    /*map+satellite buttons*/
+    #map > div > div > div:nth-child(4) > div > div:nth-child(1){
+    width: 120px !important;
+    }
+    /*map data copyright Google */
+    #map > div > div > div:nth-child(4){
+      position: fixed !important;
+      bottom: 2% !important;
+      left: 60% !important;
+      padding-right: 10px !important;
+    }
+
+    /*terms of use*/
+    #map > div > div > div.gmnoprint.gm-style-cc{
+        width: 70px !important;
+        position: fixed !important;
+        bottom: 2% !important;
+        left: 75% !important;
+        padding-right: 10px !important;
+    }
+
+    /*google logo*/
+    #map > div > div > div:nth-child(2){
+        position: fixed !important;
+        bottom: 1% !important;
+        left: -59% !important;
+    }
+
+    /*street view dude + zoom in and out*/
+    #map > div > div > div.gmnoprint.gm-bundled-control.gm-bundled-control-on-bottom{
+        position: fixed !important;
+        bottom: 15% !important;
+    }
+
+    h1{
+    color: white;
+    }
+
+    #accFCard{
+    width: 100%;
+    }
+
+    #accFClose{
+    float: right;
+    position: relative;
+    top: 2%;
+    right: 2%;
+    }
+
+    /*iframe video*/
+    #accFCard > div:nth-child(3){
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
+    /*text*/
+    .categoryText{
+        text-align: center;
+        margin: 0 auto;
+    }
+    #athCard{
+    width: 100%;
+    }
+
+    #athClose{
+    float: right;
+    position: relative;
+    top: 2%;
+    right: 2%;
+    }
+    /*iframe video*/
+    #athCard > div:nth-child(3){
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+    #accSCard{
+    width: 100%;
+    }
+
+    #accSClose{
+    float: right;
+    position: relative;
+    top: 2%;
+    right: 2%;
+    }
+
+    /*iframe video*/
+    #accSCard > div:nth-child(3){
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
+    #campSCard{
+        width: 100%;
+    }
+
+    #campSClose{
+    float: right;
+    position: relative;
+    top: 2%;
+    right: 2%;
+    }
+
+    /*iframe video*/
+    #campSCard > div:nth-child(3){
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
+    #resHCard{
+    width: 100%;
+    }
+
+    #resHClose{
+    float: right;
+    position: relative;
+    top: 2%;
+    right: 2%;
+    }
+
+    /*iframe video*/
+    #resHCard > div:nth-child(3){
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
+    #diningCard{
+    width: 100%;
+    }
+
+    #diningClose{
+    float: right;
+    position: relative;
+    top: 2%;
+    right: 2%;
+    }
+
+    /*iframe video*/
+    #diningCard > div:nth-child(3){
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
+    #stuRCard{
+    width: 100%;
+    }
+
+    #stuRClose{
+    float: right;
+    position: relative;
+    top: 2%;
+    right: 2%;
+    }
+
+    /*iframe video*/
+    #stuRCard > div:nth-child(3){
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
+    /*popup css*/
+    .generalHover{
+        height: 80px;
+        width: 160px;
+    }
+    #equityHover, #recreationHover{
+    width: 185px;
+    }
+    #equityHover h1.headHover, #recreationHover h1.headHover{
+        width: 180px;
+    }
+    #alumniHover{
+        width: 195px;
+    }
+    #alumniHover h1.headHover{
+        width: 190px;
+    }
+    #environmentalHover{
+        height: 100px;
+    }
+    .imageHover{
+    display: none;
+    }
+
+    .hoverDiv{
+    height: 50px;
+    width: 150px;
+    padding: 4px;
+
+    }
+    h1.headHover{
+
+    color: black;
+    font-size: 10px;
+
+    }
+
+    p.paraHover{
+
+    font-size: 10px;
+    width: 145px;
+    }
+
+    .hoverLink{
+    font-size: 10px;
+    }
+
+    .hoverBreak{
+    display: none;
+    }
+
+    .parkingHover{
+    height: 60px;
+    }
+    .commuterHover{
+    height: 110px;
+    }
+    #twentythreeHover {
+        height: 160px;
+    }
+    #thirtynineHover{
+        height: 140px;
+    }
+    #sevenHover{
+        height: 130px;
+        width: 120px;
+    }
+    #womensCenterHover{
+        height: 70px;
+    }
+
+    h1.parkingHeadHover{
+    font-size: 10px;
+    color: black;
+    }
+
+    .parkingColorStaff{
+    top: -10px;
+
+    }
+
+    .parkingColorRemote{
+    top: -10px;
+
+    }
+
+    .parkingColorCommute{
+    top: -10px;
+    }
+
+    .parkingColorRestricted{
+    top: -10px;
+    }
+
+    .parkingColorReserved{
+    top: -10px;
+    }
+
+    .parkingColorCommuter{
+        top: -10px;
+    }
+    .parkingColorResident{
+    top: -10px;
+    }
+
+    .parkingColorVisitor{
+        top: -10px;
+    }
+
+    /*styling google vr*/
+    .vr{
+      visibility: hidden;
+      z-index: 3;
+      position: absolute;
+      width: 100% !important;
+
+    }
+    .vrDiv{
+      visibility: hidden;
+      z-index: 3;
+      position: absolute;
+      height: 347px;
+      width: 100%;
+
+    }
+    .popup{
+    position: absolute;
+    /*top: 60px;*/
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    color: black;
+    z-index: 5;
+    }
+
+    .popupBlack{
+    width: 100%;
+
+    }
+
+    h1.text.yellow{
+    position: relative;
+    text-align: center;
+    font-size: 2em;
+    top: 20px;
+    margin: 0px;
+    }
+
+    .popupNav{
+    width: 100%;
+    }
+
+    ul#popupNav {
+        text-align: center;
+    }
+    ul#popupNav li{
+        padding-left: 40px;
+        text-align: center;
+    }
+
+    ul#popupNav li.about{
+    padding-left: 20px;
+    }
+
+    li:hover{
+    cursor: pointer;
+    }
+    .vrCloseButton{
+      color: black;
+      top: 5px;
+      font-size: 24px;
+      left: 90%;
+
+    }
+    .infoContainer{
+    width: 95%;
+    height: 100%;
+    margin: 0 auto;
+    margin-top: 10px;
+    overflow-x: hidden;
+    }
+
+    .imagePopup{
+    margin: 0 auto;
+    padding-bottom: 10px;
+    }
+    .imagePopup img{
+
+    display: block;
+    margin: 0 auto;
+    }
+    .videoPopup{
+    display: block;
+    margin: 0 auto;
+
+    }
+    .address{
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 5px;
+    }
+    .videoPopup iframe{
+
+    padding-top: 10px;
+    }
+    .tourText{
+    width: 100%;
+    margin: 0 auto;
+    }
+    .subText{
+    margin-top: 10px;
+    }
+/*end brace for media max-width 1024 (mobile)*/
 }
 
-#noResults{
-  font-style: italic;
+@media screen and (max-width: 400px) {
+    #drawerContents{
+        width: 300px;
+    }
 }
-.results{
-  color: black;
-  text-decoration: underline;
+
+@media screen and (max-width: 1000px) {
+    #map > div > div > div:nth-child(4){
+        position: fixed !important;
+        bottom: 2% !important;
+        left: 60% !important;
+        padding-right: 10px !important;
+    }
 }
-.results > p{
-  margin: 0px;
-  padding: 0px;
+@media screen and (max-width: 900px) {
+    #map > div > div > div:nth-child(4){
+        position: fixed !important;
+        bottom: 2% !important;
+        left: 59% !important;
+        padding-right: 10px !important;
+    }
+}
+@media screen and (max-width: 800px) {
+    #map > div > div > div:nth-child(4){
+        position: fixed !important;
+        bottom: 2% !important;
+        left: 56% !important;
+        padding-right: 10px !important;
+    }
+}
+@media screen and (max-width: 700px) {
+    #map > div > div > div:nth-child(4){
+        position: fixed !important;
+        bottom: 2% !important;
+        left: 48% !important;
+        padding-right: 10px !important;
+    }
+}
+@media screen and (max-width: 600px) {
+    #map > div > div > div:nth-child(4){
+        position: fixed !important;
+        bottom: 2% !important;
+        left: 36% !important;
+        padding-right: 10px !important;
+    }
+}
+@media screen and (max-width: 550px) {
+    #map > div > div > div:nth-child(4){
+        position: fixed !important;
+        bottom: 2% !important;
+        left: 35% !important;
+        padding-right: 10px !important;
+    }
+}
+@media screen and (max-width: 480px) {
+    #map > div > div > div:nth-child(4){
+        position: fixed !important;
+        bottom: 2% !important;
+        left: 25% !important;
+        padding-right: 10px !important;
+    }
+}
+@media screen and (max-width: 415px) {
+    #map > div > div > div:nth-child(4){
+        position: fixed !important;
+        bottom: 2% !important;
+        left: 22% !important;
+        padding-right: 10px !important;
+    }
+}
+@media screen and (max-width: 400px) {
+    #map > div > div > div:nth-child(4){
+        position: fixed !important;
+        bottom: 2% !important;
+        left: 22% !important;
+        padding-right: 10px !important;
+    }
+}
+@media screen and (max-width: 380px) {
+    #map > div > div > div:nth-child(4){
+        position: fixed !important;
+        bottom: 2% !important;
+        left: 20% !important;
+        padding-right: 10px !important;
+    }
+}
+@media screen and (max-width: 375px) {
+    #map > div > div > div:nth-child(4){
+        position: fixed !important;
+        bottom: 2% !important;
+        left: 5% !important;
+        padding-right: 10px !important;
+    }
+}
+@media screen and (max-width: 320px) {
+    #map > div > div > div:nth-child(4){
+        position: fixed !important;
+        bottom: 2% !important;
+        left: 2% !important;
+        padding-right: 10px !important;
+    }
+}
+@media screen and (max-width: 1000px) {
+    #map > div > div > div.gmnoprint.gm-style-cc{
+        position: fixed !important;
+        bottom: 2% !important;
+        left: 75% !important;
+        padding-right: 10px !important;
+    }
+}
+@media screen and (max-width: 900px) {
+    #map > div > div > div.gmnoprint.gm-style-cc{
+        position: fixed !important;
+        bottom: 2% !important;
+        left: 75% !important;
+        padding-right: 10px !important;
+    }
+}
+@media screen and (max-width: 800px) {
+    #map > div > div > div.gmnoprint.gm-style-cc{
+        position: fixed !important;
+        bottom: 2% !important;
+        left: 74% !important;
+        padding-right: 10px !important;
+    }
+}
+@media screen and (max-width: 700px) {
+    #map > div > div > div.gmnoprint.gm-style-cc{
+        position: fixed !important;
+        bottom: 2% !important;
+        left: 68% !important;
+        padding-right: 10px !important;
+    }
+}
+@media screen and (max-width: 600px) {
+    #map > div > div > div.gmnoprint.gm-style-cc{
+        position: fixed !important;
+        bottom: 2% !important;
+        left: 60% !important;
+        padding-right: 10px !important;
+    }
+}
+@media screen and (max-width: 550px) {
+    #map > div > div > div.gmnoprint.gm-style-cc{
+        position: fixed !important;
+        bottom: 2% !important;
+        left: 60% !important;
+        padding-right: 10px !important;
+    }
+}
+@media screen and (max-width: 480px) {
+    #map > div > div > div.gmnoprint.gm-style-cc{
+        position: fixed !important;
+        bottom: 2% !important;
+        left: 55% !important;
+        padding-right: 10px !important;
+    }
+}
+@media screen and (max-width: 375px) {
+    #map > div > div > div.gmnoprint.gm-style-cc{
+        position: fixed !important;
+        bottom: 2% !important;
+        left: 45% !important;
+        padding-right: 10px !important;
+    }
+}
+@media screen and (max-width: 320px) {
+    #map > div > div > div.gmnoprint.gm-style-cc{
+        position: fixed !important;
+        bottom: 2% !important;
+        left: 41% !important;
+        padding-right: 10px !important;
+    }
+}
+/*google logo*/
+@media screen and (max-width: 375px) {
+    #map > div > div > div:nth-child(2){
+        position: fixed !important;
+        bottom: 4% !important;
+        left: -59% !important;
+    }
+}
+
+/*street view dude + zoom in and out*/
+@media screen and (max-height: 750px) {
+    #map > div > div > div.gmnoprint.gm-bundled-control.gm-bundled-control-on-bottom{
+        position: fixed !important;
+        bottom: 15% !important;
+    }
+}
+@media screen and (max-height: 700px) {
+    #map > div > div > div.gmnoprint.gm-bundled-control.gm-bundled-control-on-bottom{
+        position: fixed !important;
+        bottom: 17% !important;
+    }
+}
+@media screen and (max-height: 650px) {
+    #map > div > div > div.gmnoprint.gm-bundled-control.gm-bundled-control-on-bottom{
+        position: fixed !important;
+        bottom: 18% !important;
+    }
+}
+@media screen and (max-height: 600px) {
+    #map > div > div > div.gmnoprint.gm-bundled-control.gm-bundled-control-on-bottom{
+        position: fixed !important;
+        bottom: 20% !important;
+    }
+}
+@media screen and (max-height: 550px) {
+    #map > div > div > div.gmnoprint.gm-bundled-control.gm-bundled-control-on-bottom{
+        position: fixed !important;
+        bottom: 21% !important;
+    }
+}
+@media screen and (max-height: 500px) {
+    #map > div > div > div.gmnoprint.gm-bundled-control.gm-bundled-control-on-bottom{
+        position: fixed !important;
+        bottom: 22% !important;
+    }
+}
+@media screen and (max-height: 450px) {
+    #map > div > div > div.gmnoprint.gm-bundled-control.gm-bundled-control-on-bottom{
+        position: fixed !important;
+        bottom: 26% !important;
+    }
+}
+@media screen and (max-height: 400px) {
+    #map > div > div > div.gmnoprint.gm-bundled-control.gm-bundled-control-on-bottom{
+        position: fixed !important;
+        bottom: 28% !important;
+    }
+}
+@media screen and (max-height: 350px) {
+    #map > div > div > div.gmnoprint.gm-bundled-control.gm-bundled-control-on-bottom{
+        position: fixed !important;
+        bottom: 30% !important;
+    }
+}
+@media screen and (max-height: 300px) {
+    #map > div > div > div.gmnoprint.gm-bundled-control.gm-bundled-control-on-bottom{
+        position: fixed !important;
+        bottom: 35% !important;
+    }
+}
+/*when window shrinks under a certain size the category page becomes scrollable*/
+@media screen and (max-width: 400px) {
+    #accFCard{
+        overflow-y:  scroll;
+    }
+}
+@media screen and (max-width: 400px) {
+    #athCard{
+        overflow-y:  scroll;
+    }
+}
+/*when window shrinks under a certain size the category page becomes scrollable*/
+@media screen and (max-width: 400px) {
+    #accSCard{
+        overflow-y:  scroll;
+    }
+}
+/*when window shrinks under a certain size the category page becomes scrollable*/
+@media screen and (max-width: 400px) {
+    #campSCard{
+        overflow-y:  scroll;
+    }
+}
+/*when window shrinks under a certain size the category page becomes scrollable*/
+@media screen and (max-width: 400px) {
+    #resHCard{
+        overflow-y:  scroll;
+    }
+}
+/*when window shrinks under a certain size the category page becomes scrollable*/
+@media screen and (max-width: 400px) {
+    #diningCard{
+        overflow-y:  scroll;
+    }
+}
+/*when window shrinks under a certain size the category page becomes scrollable*/
+@media screen and (max-width: 400px) {
+    #stuRCard{
+        overflow-y:  scroll;
+    }
+}
+/*popup styling under 500px width*/
+@media screen and (max-width: 500px){
+    ul#popupNav {
+        text-align: left;
+    }
+    ul#popupNav li{
+        text-align: left;
+    }
+    .popupText{
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .address{
+        display: block;
+        margin: 0 auto;
+    }
+    .infoContainer{
+        height: 120%;
+    }
+    .infoContainer > a {
+        maring: 0 auto;
+    }
+}
+/*scrolling issue for popups*/
+@media screen and (max-width: 500px){
+    .five{
+        height: 60px;
+        background-color:  #ffcc00;
+    }
+}
+@media screen and (max-width: 400px){
+    .four{
+        height: 60px;
+        background-color:  #ffcc00;
+    }
 }

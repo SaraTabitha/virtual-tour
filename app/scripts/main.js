@@ -74,23 +74,10 @@
 
 // Your custom JavaScript goes here
 
-// reloads the page if it is resized so that it reloads this file based on window width! :D
-var lastWidth = $(window).width();
-var mobileWidth = 1024;
-$(window).resize(function() {
-    if($(this).width() !== lastWidth && $(this).width() <= mobileWidth){
-        setTimeout(function(){
-          location.reload();
-        }, 100);
-    }
 
-});
 
 // all JS that is not change depending on the width of the screen
 //
-
-
-
 
 // function for hiding all of the cards beneath the menu for categories
 function hideAll(){
@@ -493,22 +480,59 @@ $("#dempseyStart").click(function(){
     }
 });
 
+    // Start hide/show 360 navigation items
+    $("#linkOne").click(function(){
+        // div toggle
+        $("#linkOneOptions").toggle("slow");
+        // + symbol toggle
+        $("#addOne").toggle();
+    });
+    $("#linkTwo").click(function(){
+        $("#linkTwoOptions").toggle("slow");
+        $("#addTwo").toggle();
+    });
+    $("#linkThree").click(function(){
+        $("#linkThreeOptions").toggle("slow");
+        $("#addThree").toggle();
+    });
+    $("#linkFour").click(function(){
+        $("#linkFourOptions").toggle("slow");
+        $("#addFour").toggle();
+    });
+    // End hide/show 360 navigation items
+
 
 
 
 
 // function for loading different functions based on screen width
-if(window.matchMedia("(min-width: 1025px)").matches){
+var desktop = function(){
         // the view is at least 1025 px wide
         // web
 
+
+        // all necessary class changes to move the menu back to the left side
+        $("#menu").addClass("mdl-layout--fixed-drawer");
+        $("#menuDrawer").addClass("mdl-layout__drawer");
+
+        $("#mobileSpacer").removeClass("mdl-layout-spacer");
+
+        $("#drawerContents").addClass("mdl-layout");
+        $("#drawerContents").addClass("mdl-layout--fixed-drawer");
+        $("#drawerContents").removeClass("mdl-layout__drawer-right");
+
+        $("#drawerDivTwo").addClass("mdl-layout__drawer");
+
+        // web
         //searchfield
         $("#searchIcon").click(function(){
           $("#mobileSearch").addClass("is-focused");
         });
 
         // academic facilities show and slide out (if clicked again, slides back in)
+
         $("#accFText").click(function(){
+
             var check = $("#accFCard").hasClass("cardPresent");
             if (check === false){
                 $("#accFCard").addClass("cardPresent");
@@ -526,10 +550,12 @@ if(window.matchMedia("(min-width: 1025px)").matches){
 
                 $("#accFiframe").attr("src", "https://www.youtube.com/embed/V4404T_b5No");
                 $("#accFCard").show();
+
                 $("#accFCard").animate(
                     {left: "377px"});
             } else if (check === true){
                 $("#accFCard").removeClass("cardPresent");
+
                 $("#accFCard").animate(
                     {left:"-377px"});
             }
@@ -845,7 +871,11 @@ if(window.matchMedia("(min-width: 1025px)").matches){
         });
 
 
-} else{
+
+
+};
+// appearance
+var mobile = function(){
 
         // the view is less than 1025 px wide
         // mobile
@@ -863,16 +893,19 @@ if(window.matchMedia("(min-width: 1025px)").matches){
         $("#drawerContents").addClass("mdl-layout__drawer-right");
 
         $("#drawerDivTwo").removeClass("mdl-layout__drawer");
-      
+        $("#webSearch").removeClass("mdl-color--yellow-A700");
 
+        // mobile
         // mobile nav opens on menu button click
         $("#notif").click(function(){
             var check = $("#drawerContents").hasClass("clicked");
             if (check === false){
+
                 $(".mdl-layout__drawer-right").animate(
                     {right: "250px"});
                 $("#drawerContents").addClass("clicked");
             } else if (check === true){
+
                 $("#drawerContents").removeClass("clicked");
                 $(".mdl-layout__drawer-right").animate(
                     {right:"-380px"});
@@ -911,6 +944,7 @@ if(window.matchMedia("(min-width: 1025px)").matches){
         // accademic facilities// info bulding card slide in from left (when blue link is clicked)
         // academic facilities show and slide out (if clicked again, slides back in)
         $("#accFText").click(function(){
+
             var check = $("#accFCard").hasClass("cardPresent");
             if (check === false){
                 $("#accFCard").addClass("cardPresent");
@@ -932,11 +966,13 @@ if(window.matchMedia("(min-width: 1025px)").matches){
                     {top:"0px"});
                 // closes menu when this opens
                 $("#drawerContents").removeClass("clicked");
+
                 $(".mdl-layout__drawer-right").animate(
                     {right:"-380px"});
 
             } else if (check === true){
                 $("#accFCard").removeClass("cardPresent");
+                
                 $("#accFCard").animate(
                     {top:"-100%"});
             }
@@ -1169,30 +1205,40 @@ if(window.matchMedia("(min-width: 1025px)").matches){
         });
         // end Student Recreation
 
+};
 
-        }
 
+if(window.matchMedia("(min-width: 1025px)").matches){
+// web
+desktop();
 
-        // Start hide/show 360 navigation items
-        $("#linkOne").click(function(){
-            // div toggle
-            $("#linkOneOptions").toggle("slow");
-            // + symbol toggle
-            $("#addOne").toggle();
-        });
-        $("#linkTwo").click(function(){
-            $("#linkTwoOptions").toggle("slow");
-            $("#addTwo").toggle();
-        });
-        $("#linkThree").click(function(){
-            $("#linkThreeOptions").toggle("slow");
-            $("#addThree").toggle();
-        });
-        $("#linkFour").click(function(){
-            $("#linkFourOptions").toggle("slow");
-            $("#addFour").toggle();
-        });
-        // End hide/show 360 navigation items
+} else {
+// mobile
+mobile();
+
+}
+
+// reloads the page if it is resized so that it reloads this file based on window width! :D
+var lastWidth = $(window).width();
+var mobileWidth = 1024;
+$(window).resize(function() {
+    // if($(this).width() !== lastWidth && $(this).width() <= mobileWidth){
+    //     setTimeout(function(){
+    //       location.reload();
+    //     }, 100);
+    // }
+    // widthFunctions();
+    if($(this).width() >= mobileWidth){
+      // Screen is desktop
+      // console.log("I am going to desktop!");
+      desktop();
+    } else if ($(this).width() <= mobileWidth){
+      // Screen is mobile
+      // console.log("I am going to mobile!");
+      mobile();
+    }
+});
+
 
 
 
