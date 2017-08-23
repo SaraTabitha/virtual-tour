@@ -327,16 +327,17 @@ $("#dempseyStart").click(function(){
       // toggling on/off with material design
       var check = $("#mobileSearch").hasClass("mobileSearchOpen");
       if(check === true){
-        $("#searchInput").val("");
         $("#mobileSearch").removeClass("is-focused");
+        $("#searchResults").css("visibility","hidden");
       }
       else if (check === false){
       $("#mobileSearch").addClass("is-focused");
       }
       // needs to be: if closed->empty val
+      $("#searchInput").val("");
       $("#mobileSearch").toggleClass("mobileSearchOpen");
       $("#searchInput").toggleClass("searchInputOpen");
-      $("#searchResults").toggleClass("searchResultsOpen");
+      // $("#searchResults").toggleClass("searchResultsOpen");
 
     });
 

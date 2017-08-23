@@ -580,6 +580,10 @@ ul#popupNav li:hover{
   display: none;
 }
 
+.searchResultsOpen{
+  visibility: visible !important;
+}
+
 
 /**/
 /*END OF SHARED STYLING*/
@@ -1059,9 +1063,7 @@ ul#popupNav li:hover{
     background-color: #ffcc00;
     width: 120px;
     }
-    .searchResultsOpen{
-      visibility: visible !important;
-    }
+
 
     .results{
     word-wrap: break-word;
