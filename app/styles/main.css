@@ -1016,6 +1016,7 @@ ul#popupNav li:hover{
     float: right;
     top: -40px;
     left: -3%;
+    height:0px;
     max-width: 100px;
     }
 
@@ -1028,7 +1029,15 @@ ul#popupNav li:hover{
     #mobileSearch > label{
     top: 0px;
     }
-
+    .mobileSearchOpen{
+      left: -14% !important;
+    }
+    #searchInput{
+      visibility: hidden;
+    }
+    .searchInputOpen{
+      visibility: visible !important;
+    }
     #searchResults{
     max-height: 200px;
     z-index: 10;
@@ -1049,6 +1058,9 @@ ul#popupNav li:hover{
     #searchResults > ul{
     background-color: #ffcc00;
     width: 120px;
+    }
+    .searchResultsOpen{
+      visibility: visible !important;
     }
 
     .results{
@@ -1071,7 +1083,7 @@ ul#popupNav li:hover{
     right: -50%;
     overflow-x: hidden;
     }
-    
+
 
     /*all layout titles*/
     .mdl-layout-title {

@@ -308,6 +308,38 @@ $("#dempseyStart").click(function(){
     // End hide/show 360 navigation items
 
 
+    // function for hiding all of the cards beneath the menu for categories
+    function hideAll(){
+        $("#athCard").hide();
+        $("#accSCard").hide();
+        $("#campSCard").hide();
+        $("#accFCard").hide();
+        $("#resHCard").hide();
+        $("#diningCard").hide();
+        $("#stuRCard").hide();
+    }
+
+    //searchfield
+
+    $("#searchIcon").click(function(){
+      // checking and using if/else prevents the click function
+      //  from having issues with the is-focused class
+      // toggling on/off with material design
+      var check = $("#mobileSearch").hasClass("mobileSearchOpen");
+      if(check === true){
+        $("#searchInput").val("");
+        $("#mobileSearch").removeClass("is-focused");
+      }
+      else if (check === false){
+      $("#mobileSearch").addClass("is-focused");
+      }
+      // needs to be: if closed->empty val
+      $("#mobileSearch").toggleClass("mobileSearchOpen");
+      $("#searchInput").toggleClass("searchInputOpen");
+      $("#searchResults").toggleClass("searchResultsOpen");
+
+    });
+
 
 
 
@@ -331,21 +363,12 @@ var desktop = function(){
 
         // web
         //searchfield
-        $("#searchIcon").click(function(){
-          $("#mobileSearch").toggleClass("is-focused");
-        });
+        // $("#searchIcon").click(function(){
+        //   $("#mobileSearch").toggleClass("is-focused");
+        // });
 
 
-        // function for hiding all of the cards beneath the menu for categories
-        function hideAll(){
-            $("#athCard").hide();
-            $("#accSCard").hide();
-            $("#campSCard").hide();
-            $("#accFCard").hide();
-            $("#resHCard").hide();
-            $("#diningCard").hide();
-            $("#stuRCard").hide();
-        }
+
 
         // academic facilities show and slide out (if clicked again, slides back in)
 
@@ -716,32 +739,20 @@ var mobile = function(){
         // mobile
         // mobile nav opens on menu button click
         $("#notif").click(function(){
-            $("#drawerContents").toggleClass("active");
-        });
-
-
-        //searchfield
-
-        $("#searchIcon").click(function(){
-          var check = $("#mobileSearch").hasClass("clicked");
-
+          var check = $("#drawerContents").hasClass("active");
           if(check === false){
-            $("#mobileSearch").addClass("is-focused");
-            $("#mobileSearch").addClass("clicked");
-            $("#mobileSearch").css("left", "-14%");
-            $("#searchInput").css("visibility", "visible");
-
-          } else if (check === true){
-            $("#mobileSearch").css("left", "-3%");
-            $("#mobileSearch").removeClass("clicked");
-            $("#mobileSearch").removeClass("is-focused");
-            $("#mobileSearch").css("height", "0px");
-            $("#searchResults").css("visibility", "hidden");
-            $("#searchInput").val("");
-            $("#searchInput").css("visibility", "hidden");
+            $("#drawerContents").addClass("active");
+          }else if (check === true){
+            $("#drawerContents").removeClass("active");
           }
-
+          // ^ need to check for class instead of toggle because
+          // otherwise the open/close button gets stuck on active
+          // going between web and mobile if the menu is open
+            // $("#drawerContents").toggleClass("active");
         });
+
+
+
 
 
 
