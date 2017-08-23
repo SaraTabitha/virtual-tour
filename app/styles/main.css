@@ -2,8 +2,16 @@
 /*START SHARED STYLING (REGARDLESS OF WINDOW WIDTH)*/
 /**/
 
-/*black space for virtual tour*/
-/*v in mobile it only specified height 30px*/
+
+/*for all of the elements that change visibility on click*/
+/*.invisible{
+  visibility: hidden;
+}*/
+/*!important is <lol>important</lol> to overwrite hidden*/
+.visible{
+  visibility: visible !important;
+}
+
 .mdl-layout__header-row.drawer{
   padding: 0px 0px 0px 20px;
   width: 100%;
@@ -317,6 +325,7 @@ p.parkingTextHover{
   opacity: 0;
   visibility: hidden;
 }
+
 .popup{
 visibility: hidden;
 opacity: 0;
@@ -353,12 +362,13 @@ ul#popupNav li:hover{
   float: right;
   right: 3%;
 }
-.vrCloseButton{
+#vrCloseButton{
   position: absolute;
   z-index: 10;
   visibility: hidden;
   padding: 10px;
 }
+
 .heading{
   margin: 0px;
   font-family: "open-sans", sans-serif;
@@ -582,6 +592,7 @@ ul#popupNav li:hover{
 
   #mobileHeader{
     height: 110px;
+    background-color: #ffcc00;
   }
   #searchResults{
       height: 100%;
@@ -741,7 +752,7 @@ ul#popupNav li:hover{
   ul#popupNav li.about{
     padding-left: 10px;
   }
-  .vrCloseButton{
+  #vrCloseButton{
     color: white;
     font-size: 30px;
     left: 95%;
@@ -958,11 +969,12 @@ ul#popupNav li:hover{
         overflow-y: auto;
         z-index: 5;
     }
-
+    /*when menu is open*/
     .active {
     -webkit-transform: translateX(0);
     -ms-transform: translateX(0);
     transform: translateX(0);
+    right: 0px !important;
     }
 
     #menu{
@@ -1059,6 +1071,7 @@ ul#popupNav li:hover{
     right: -50%;
     overflow-x: hidden;
     }
+    
 
     /*all layout titles*/
     .mdl-layout-title {
@@ -1067,12 +1080,10 @@ ul#popupNav li:hover{
 
     #selectAllOne{
     position: relative;
-    left: 20px;
     }
 
     #selectAllTwo{
     position: relative;
-    left: 20px;
     }
 
     /*forcing no padding on navigation*/
@@ -1428,7 +1439,7 @@ ul#popupNav li:hover{
     li:hover{
     cursor: pointer;
     }
-    .vrCloseButton{
+    #vrCloseButton{
       color: black;
       top: 5px;
       font-size: 24px;

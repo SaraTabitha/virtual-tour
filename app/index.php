@@ -2635,7 +2635,7 @@
                                     // if mobile landscape
                                     $(".vr").css("height", height);
                                     $(".vrDiv").css("height",  height);
-                                    $(".vrCloseButton").css("visibility", "hidden");
+                                    $("#vrCloseButton").css("visibility", "hidden");
                                 }
                             };
                         }
@@ -2672,7 +2672,7 @@
                                     // if mobile landscape
                                     $(".vr").css("height", height);
                                     $(".vrDiv").css("height",  height);
-                                    $(".vrCloseButton").css("visibility", "hidden");
+                                    $("#vrCloseButton").css("visibility", "hidden");
                                 }
                             };
                             // open 3
@@ -2835,7 +2835,7 @@
                                     // if mobile landscape
                                     $(".vr").css("height", height);
                                     $(".vrDiv").css("height",  height);
-                                    $(".vrCloseButton").css("visibility", "hidden");
+                                    $("#vrCloseButton").css("visibility", "hidden");
                                 }
                             };
                         }
@@ -2867,7 +2867,7 @@
                                   // if mobile landscape
                                   $(".vr").css("height", height);
                                   $(".vrDiv").css("height",  height);
-                                  $(".vrCloseButton").css("visibility", "hidden");
+                                  $("#vrCloseButton").css("visibility", "hidden");
                               }
                             } else{
                               // web
@@ -3423,7 +3423,7 @@
                         //
 
                         </script>
-                        <p class ="vrCloseButton">x</p>
+                        <p id="vrCloseButton">x</p>
                         <div id="titanFieldImage" class="vrDiv"></div>
 
                         <div id="womensCenterImage" class="vrDiv"></div>
@@ -3435,7 +3435,7 @@
 
                         <!-- overlay -->
 
-                        <div id= "overlay"></div>
+                        <div id= "overlay" ></div>
 
 
                         <!-- google map!! (meat of it in map.js)-->

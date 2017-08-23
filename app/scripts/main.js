@@ -79,272 +79,78 @@
 // all JS that is not change depending on the width of the screen
 //
 
-// function for hiding all of the cards beneath the menu for categories
-function hideAll(){
-    $("#athCard").hide();
-    $("#accSCard").hide();
-    $("#campSCard").hide();
-    $("#accFCard").hide();
-    $("#resHCard").hide();
-    $("#diningCard").hide();
-    $("#stuRCard").hide();
-}
+
 // NEED FOLLOWING because without it after using the select all,
 // the user cannot recheck the individual boxes properly
-// building on click/off check box
+// building on click/off checks check box
 $("#buildings").click(function(){
-    var check = !$(this).prop("checked");
-    if (check === false){
-        $(this).prop("checked", true);
-        $("#buildLabel").addClass("is-checked");
-    } else if (check === true){
-        $(this).removeProp("checked", true);
-        $("#buildLabel").removeClass("is-checked");
-    }
+  $("#buildLabel").toggleClass("is-checked");
 });
 $("#parkingLots").click(function(){
-    var check = !$(this).prop("checked");
-    if (check === false){
-        $(this).prop("checked", true);
-        $("#parkingLabel").addClass("is-checked");
-    } else if (check === true){
-        $(this).removeProp("checked", true);
-        $("#parkingLabel").removeClass("is-checked");
-    }
+  $("#parkingLabel").toggleClass("is-checked");
 });
 $("#accEnt").click(function(){
-    var check = !$("#accEnt").prop("checked");
-    if (check === false){
-        $("#accEnt").prop("checked", true);
-        $("#accEntLabel").addClass("is-checked");
-    } else if (check === true){
-        $("#accEnt").removeProp("checked", true);
-        $("#accEntLabel").removeClass("is-checked");
-    }
+  $("#accEntLabel").toggleClass("is-checked");
 });
 $("#accPar").click(function(){
-    var check = !$(this).prop("checked");
-    if (check === false){
-        $(this).prop("checked", true);
-        $("#accParLabel").addClass("is-checked");
-    } else if (check === true){
-        $(this).removeProp("checked", true);
-        $("#accParLabel").removeClass("is-checked");
-    }
+  $("#accParLabel").toggleClass("is-checked");
 });
 $("#emergency").click(function(){
-    var check = !$(this).prop("checked");
-    if (check === false){
-        $(this).prop("checked", true);
-        $("#emergencyLabel").addClass("is-checked");
-    } else if (check === true){
-        $(this).removeProp("checked", true);
-        $("#emergencyLabel").removeClass("is-checked");
-    }
+  $("#emergencyLabel").toggleClass("is-checked");
 });
 $("#sust").click(function(){
-    var check = !$(this).prop("checked");
-    if (check === false){
-        $(this).prop("checked", true);
-        $("#sustLabel").addClass("is-checked");
-    } else if (check === true){
-        $(this).removeProp("checked", true);
-        $("#sustLabel").removeClass("is-checked");
-    }
+  $("#sustLabel").toggleClass("is-checked");
 });
 $("#gender").click(function(){
-    var check = !$(this).prop("checked");
-    if (check === false){
-        $(this).prop("checked", true);
-        $("#genderLabel").addClass("is-checked");
-    } else if (check === true){
-        $(this).removeProp("checked", true);
-        $("#genderLabel").removeClass("is-checked");
-    }
+  $("#genderLabel").toggleClass("is-checked");
 });
 
-// event listener for the select all button attached to function clicking
+// on click for the select all button
 $("#selectallcheck").click(function(){
-
-    //checks the input for the checked property (! = not checked)
-    var check = !$(this).prop("checked");
-    // because it looks at whether or not the property is checked BEFORE The click is put into effect,
-    //it has to do the opposite of what the state of the click is eg. If check was false before click
-    // then: check everything (and then the select all with check as the very last step (and become true))
-    if(check === false){
-        // buildings
-        $("#buildings").prop("checked", true);
-        $("#buildLabel").addClass("is-checked");
-
-        // parking lots
-        $("#parkingLots").prop("checked", true);
-        $("#parkingLabel").addClass("is-checked");
-        // accessible entries
-        $("#accEnt").prop("checked", true);
-        $("#accEntLabel").addClass("is-checked");
-        // Accessible Parking
-        $("#accPar").prop("checked", true);
-        $("#accParLabel").addClass("is-checked");
-        // Emergency Phones
-        $("#emergency").prop("checked", true);
-        $("#emergencyLabel").addClass("is-checked");
-        // sustainability points of interest
-        $("#sust").prop("checked", true);
-        $("#sustLabel").addClass("is-checked");
-        // gender neutral and family bathrooms
-        $("#gender").prop("checked", true);
-        $("#genderLabel").addClass("is-checked");
-
-    } else if (check === true) {
-
-        // buildings
-        $("#buildings").removeProp("checked", true);
-        $("#buildLabel").removeClass("is-checked");
-
-        // parking lots
-        $("#parkingLots").removeProp("checked", true);
-        $("#parkingLabel").removeClass("is-checked");
-        // Accessible entries
-        $("#accEnt").removeProp("checked", true);
-        $("#accEntLabel").removeClass("is-checked");
-        // Accessible Parking
-        $("#accPar").removeProp("checked", true);
-        $("#accParLabel").removeClass("is-checked");
-        // Emergency Phones
-        $("#emergency").removeProp("checked", true);
-        $("#emergencyLabel").removeClass("is-checked");
-        // sustainability points of interest
-        $("#sust").removeProp("checked", true);
-        $("#sustLabel").removeClass("is-checked");
-        // gender neutral and family bathrooms
-        $("#gender").removeProp("checked", true);
-        $("#genderLabel").removeClass("is-checked");
-
-    }
+$("#buildLabel").toggleClass("is-checked");
+$("#parkingLabel").toggleClass("is-checked");
+$("#accEntLabel").toggleClass("is-checked");
+$("#accParLabel").toggleClass("is-checked");
+$("#emergencyLabel").toggleClass("is-checked");
+$("#sustLabel").toggleClass("is-checked");
+$("#genderLabel").toggleClass("is-checked");
 });
 
-// on click listeners with same disclaimer as above
+
+// on click  with same disclaimer as above
 $("#accaF").click(function(){
-    var check = !$(this).prop("checked");
-    if (check === false){
-        $(this).prop("checked", true);
-        $("#accaFLabel").addClass("is-checked");
-    } else if (check === true){
-        $(this).removeProp("checked", true);
-        $("#accaFLabel").removeClass("is-checked");
-    }
+    $("#accaFLabel").toggleClass("is-checked");
 });
 $("#ath").click(function(){
-    var check = !$(this).prop("checked");
-    if (check === false){
-        $(this).prop("checked", true);
-        $("#athLabel").addClass("is-checked");
-    } else if (check === true){
-        $(this).removeProp("checked", true);
-        $("#athLabel").removeClass("is-checked");
-    }
+    $("#athLabel").toggleClass("is-checked");
 });
 $("#accS").click(function(){
-    var check = !$(this).prop("checked");
-    if (check === false){
-        $(this).prop("checked", true);
-        $("#accSLabel").addClass("is-checked");
-    } else if (check === true){
-        $(this).removeProp("checked", true);
-        $("#accSLabel").removeClass("is-checked");
-    }
+  $("#accSLabel").toggleClass("is-checked");
 });
 $("#campS").click(function(){
-    var check = !$(this).prop("checked");
-    if (check === false){
-        $(this).prop("checked", true);
-        $("#campSLabel").addClass("is-checked");
-    } else if (check === true){
-        $(this).removeProp("checked", true);
-        $("#campSLabel").removeClass("is-checked");
-    }
+  $("#campSLabel").toggleClass("is-checked");
 });
 $("#resH").click(function(){
-    var check = !$(this).prop("checked");
-    if (check === false){
-        $(this).prop("checked", true);
-        $("#resHLabel").addClass("is-checked");
-    } else if (check === true){
-        $(this).removeProp("checked", true);
-        $("#resHLabel").removeClass("is-checked");
-    }
+    $("#resHLabel").toggleClass("is-checked");
 });
 $("#dining").click(function(){
-    var check = !$(this).prop("checked");
-    if (check === false){
-        $(this).prop("checked", true);
-        $("#diningLabel").addClass("is-checked");
-    } else if (check === true){
-        $(this).removeProp("checked", true);
-        $("#diningLabel").removeClass("is-checked");
-    }
+    $("#diningLabel").toggleClass("is-checked");
 });
 $("#stuR").click(function(){
-    var check = !$(this).prop("checked");
-    if (check === false){
-        $(this).prop("checked", true);
-        $("#stuRLabel").addClass("is-checked");
-    } else if (check === true){
-        $(this).removeProp("checked", true);
-        $("#stuRLabel").removeClass("is-checked");
-    }
+  $("#stuRLabel").toggleClass("is-checked");
 });
 
-// Start second Select All (identical to above so I will omit comments explaining functionality)
+// second Select All
 $("#selectallcheck2").click(function(){
-    var checkTwo = !$(this).prop("checked");
-    if(checkTwo === false){
-        // academic facilities
-        $("#accaF").prop("checked",true);
-        $("#accaFLabel").addClass("is-checked");
-        // athletics
-        $("#ath").prop("checked",true);
-        $("#athLabel").addClass("is-checked");
-        // academic services
-        $("#accS").prop("checked",true);
-        $("#accSLabel").addClass("is-checked");
-        // campus services
-        $("#campS").prop("checked",true);
-        $("#campSLabel").addClass("is-checked");
-        // residence halls
-        $("#resH").prop("checked",true);
-        $("#resHLabel").addClass("is-checked");
-        // dining
-        $("#dining").prop("checked",true);
-        $("#diningLabel").addClass("is-checked");
-        // student recreation
-        $("#stuR").prop("checked",true);
-        $("#stuRLabel").addClass("is-checked");
-    } else if (checkTwo === true) {
-        // academic facilities
-        $("#accaF").removeProp("checked", true);
-        $("#accaFLabel").removeClass("is-checked");
-        // athletics
-        $("#ath").removeProp("checked", true);
-        $("#athLabel").removeClass("is-checked");
-        // academic services
-        $("#accS").removeProp("checked", true);
-        $("#accSLabel").removeClass("is-checked");
-        // campus services
-        $("#campS").removeProp("checked", true);
-        $("#campSLabel").removeClass("is-checked");
-        // residence halls
-        $("#resH").removeProp("checked", true);
-        $("#resHLabel").removeClass("is-checked");
-        // dining
-        $("#dining").removeProp("checked", true);
-        $("#diningLabel").removeClass("is-checked");
-        // student recreation
-        $("#stuR").removeProp("checked", true);
-        $("#stuRLabel").removeClass("is-checked");
-    }
+$("#accaFLabel").toggleClass("is-checked");
+$("#athLabel").toggleClass("is-checked");
+$("#accSLabel").toggleClass("is-checked");
+$("#campSLabel").toggleClass("is-checked");
+$("#resHLabel").toggleClass("is-checked");
+$("#diningLabel").toggleClass("is-checked");
+$("#stuRLabel").toggleClass("is-checked");
+
 });
-// End second Select All
 
 // VR image click function
 // when a new panorama is selected from the menu the
@@ -361,16 +167,16 @@ function hideAllVR(){
   $("#dempseyStart").removeClass("checked");
 
   // close button for panoramas
-  $(".vrCloseButton").css("visibility", "visible");
+  $("#vrCloseButton").css("visibility", "visible");
 
 }
 
 // close button click
-$(".vrCloseButton").click(function(){
+$("#vrCloseButton").click(function(){
   hideAllVR();
   $('#overlay').css('visibility', 'hidden');
   $('#overlay').animate({"opacity": "0"}, "slow");
-  $(".vrCloseButton").css("visibility", "hidden");
+  $("#vrCloseButton").css("visibility", "hidden");
 })
 
 // on click for the menu item that is selected
@@ -383,7 +189,7 @@ $("#titanField").click(function(){
         $('#overlay').css('visibility', 'visible');
         $('#overlay').animate({"opacity": "0.3"}, "slow");
 
-        $(".vrCloseButton").css("visibility", "visible");
+        $("#vrCloseButton").css("visibility", "visible");
 
         $("#titanFieldImage > iframe").css('visibility', 'visible');
 
@@ -396,7 +202,7 @@ $("#titanField").click(function(){
 
         $("#titanFieldImage > iframe").css('visibility', 'hidden');
 
-        $(".vrCloseButton").css("visibility", "hidden");
+        $("#vrCloseButton").css("visibility", "hidden");
 
         $(this).removeClass("checked");
     }
@@ -410,7 +216,7 @@ $("#womensCenter").click(function(){
 
         $("#womensCenterImage > iframe").css('visibility', 'visible');
 
-        $(".vrCloseButton").css("visibility", "visible");
+        $("#vrCloseButton").css("visibility", "visible");
 
         $(this).addClass("checked");
 
@@ -421,7 +227,7 @@ $("#womensCenter").click(function(){
 
         $("#womensCenterImage > iframe").css('visibility', 'hidden');
 
-        $(".vrCloseButton").css("visibility", "hidden");
+        $("#vrCloseButton").css("visibility", "hidden");
 
         $(this).removeClass("checked");
     }
@@ -437,7 +243,7 @@ $("#executiveRoom").click(function(){
 
         $("#executiveRoomImage > iframe").css('visibility', 'visible');
 
-        $(".vrCloseButton").css("visibility", "visible");
+        $("#vrCloseButton").css("visibility", "visible");
 
         $(this).addClass("checked");
 
@@ -448,7 +254,7 @@ $("#executiveRoom").click(function(){
 
         $("#executiveRoomImage > iframe").css('visibility', 'hidden');
 
-        $(".vrCloseButton").css("visibility", "hidden");
+        $("#vrCloseButton").css("visibility", "hidden");
 
         $(this).removeClass("checked");
     }
@@ -474,7 +280,7 @@ $("#dempseyStart").click(function(){
 
         $("#sidewalkTour > iframe").css('visibility', 'hidden');
 
-        $(".vrCloseButton").css("visibility", "hidden");
+        $("#vrCloseButton").css("visibility", "hidden");
 
         $(this).removeClass("checked");
     }
@@ -526,8 +332,20 @@ var desktop = function(){
         // web
         //searchfield
         $("#searchIcon").click(function(){
-          $("#mobileSearch").addClass("is-focused");
+          $("#mobileSearch").toggleClass("is-focused");
         });
+
+
+        // function for hiding all of the cards beneath the menu for categories
+        function hideAll(){
+            $("#athCard").hide();
+            $("#accSCard").hide();
+            $("#campSCard").hide();
+            $("#accFCard").hide();
+            $("#resHCard").hide();
+            $("#diningCard").hide();
+            $("#stuRCard").hide();
+        }
 
         // academic facilities show and slide out (if clicked again, slides back in)
 
@@ -898,18 +716,7 @@ var mobile = function(){
         // mobile
         // mobile nav opens on menu button click
         $("#notif").click(function(){
-            var check = $("#drawerContents").hasClass("clicked");
-            if (check === false){
-
-                $(".mdl-layout__drawer-right").animate(
-                    {right: "250px"});
-                $("#drawerContents").addClass("clicked");
-            } else if (check === true){
-
-                $("#drawerContents").removeClass("clicked");
-                $(".mdl-layout__drawer-right").animate(
-                    {right:"-380px"});
-            }
+            $("#drawerContents").toggleClass("active");
         });
 
 
@@ -972,7 +779,7 @@ var mobile = function(){
 
             } else if (check === true){
                 $("#accFCard").removeClass("cardPresent");
-                
+
                 $("#accFCard").animate(
                     {top:"-100%"});
             }
