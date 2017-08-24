@@ -341,6 +341,21 @@ $("#dempseyStart").click(function(){
 
     });
 
+    // mobile
+    // mobile nav opens on menu button click
+    $("#notif").click(function(){
+      var check = $("#drawerContents").hasClass("active");
+      if(check === false){
+        $("#drawerContents").addClass("active");
+      }else if (check === true){
+        $("#drawerContents").removeClass("active");
+      }
+      // ^ need to check for class instead of toggle because
+      // otherwise the open/close button gets stuck on active
+      // going between web and mobile if the menu is open
+        // $("#drawerContents").toggleClass("active");
+    });
+
 
 
 
@@ -358,17 +373,15 @@ var desktop = function(){
 
         $("#drawerContents").addClass("mdl-layout");
         $("#drawerContents").addClass("mdl-layout--fixed-drawer");
-        $("#drawerContents").addClass("searchResultAdjust");
         $("#drawerContents").removeClass("mdl-layout__drawer-right");
-
-
         $("#drawerDivTwo").addClass("mdl-layout__drawer");
-
-        // web
-        //searchfield
-        // $("#searchIcon").click(function(){
-        //   $("#mobileSearch").toggleClass("is-focused");
-        // });
+        // issue with dynamically changing the css top of
+        // drawer contents when the search results come down
+        // on web differently than on mobile
+        // have to add class and manually reset the "top" otherwise
+        // it keeps whatever it was previously when going between mobile and desktop
+        $("#drawerContents").addClass("searchResultAdjust");
+        $("#drawerContents").css("top", "0px");
 
 
 
@@ -734,27 +747,18 @@ var mobile = function(){
 
         $("#drawerContents").removeClass("mdl-layout");
         $("#drawerContents").removeClass("mdl-layout--fixed-drawer");
-        $("#drawerContents").removeClass("searchResultAdjust");
-        $("#drawerContents").css("top", "70px");
+
         $("#drawerContents").addClass("mdl-layout__drawer-right");
 
         $("#drawerDivTwo").removeClass("mdl-layout__drawer");
-        $("#webSearch").removeClass("mdl-color--yellow-A700");
 
-        // mobile
-        // mobile nav opens on menu button click
-        $("#notif").click(function(){
-          var check = $("#drawerContents").hasClass("active");
-          if(check === false){
-            $("#drawerContents").addClass("active");
-          }else if (check === true){
-            $("#drawerContents").removeClass("active");
-          }
-          // ^ need to check for class instead of toggle because
-          // otherwise the open/close button gets stuck on active
-          // going between web and mobile if the menu is open
-            // $("#drawerContents").toggleClass("active");
-        });
+        // search results changing height of menu only needed for desktop
+        $("#drawerContents").removeClass("searchResultAdjust");
+        // need this because otherwise dynamic changes on desktop screw up the menu
+        // on mobile and needs to be manually reset this way
+        $("#drawerContents").css("top", "70px");
+
+
 
 
 
