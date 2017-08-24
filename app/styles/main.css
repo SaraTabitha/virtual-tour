@@ -1100,7 +1100,7 @@ ul#popupNav li:hover{
 
     /*forcing no padding on navigation*/
     .mdl-navigation.mine{
-      width: 364px;
+      width: 100%;
     }
 
     .linkSpan{

@@ -90,6 +90,10 @@
 
                                                 <script>
 
+                                                // between these script tags: AJAX call and everything for the search results
+                                                // including some display things for the results
+                                                // and the open/close popup schtuff + turning the results into "links" :D
+
 
                                               $( "#searchInput" ).keyup(function() {
                                                 //takes the length of the value of the string in
