@@ -358,7 +358,9 @@ var desktop = function(){
 
         $("#drawerContents").addClass("mdl-layout");
         $("#drawerContents").addClass("mdl-layout--fixed-drawer");
+        $("#drawerContents").addClass("searchResultAdjust");
         $("#drawerContents").removeClass("mdl-layout__drawer-right");
+
 
         $("#drawerDivTwo").addClass("mdl-layout__drawer");
 
@@ -732,6 +734,8 @@ var mobile = function(){
 
         $("#drawerContents").removeClass("mdl-layout");
         $("#drawerContents").removeClass("mdl-layout--fixed-drawer");
+        $("#drawerContents").removeClass("searchResultAdjust");
+        $("#drawerContents").css("top", "70px");
         $("#drawerContents").addClass("mdl-layout__drawer-right");
 
         $("#drawerDivTwo").removeClass("mdl-layout__drawer");

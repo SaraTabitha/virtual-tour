@@ -100,14 +100,8 @@
 
                                                 if(characters < 3){
                                                   $("#searchResults").css("visibility", "hidden");
-                                                  if(window.matchMedia("(min-width: 1025px)").matches){
-                                                    // web
-                                                    $("#drawerContents").css("top", "0px ");
-                                                  } else {
-                                                    // mobile
-
-                                                  }
-
+                                                    // web adjustment only
+                                                    $(".searchResultAdjust").css("top", "0px ");
 
                                                 } else if (characters >= 3){
                                                       callAjax();
@@ -314,10 +308,9 @@
 
                                                   }
 
-                                                  // based on width
-                                                  if(window.matchMedia("(min-width: 1025px)").matches){
-                                                    // web
-
+                                                  var check = $("#drawerContents").hasClass("searchResultAdjust");
+                                                  if(check === true){
+                                                    // only for desktop
                                                     // adjust position of menu drawer based on height of search results
                                                     function getTotalHeight(){
                                                       var searchHeight = $("#searchResults").height();
@@ -325,11 +318,11 @@
                                                       // var webSearchHeight = $("#webSearch").height();
                                                       return(searchHeight - 3);
                                                     }
-                                                    // console.log("Height of search div:" + getTotalHeight());
-                                                    $("#drawerContents").css("top", getTotalHeight());
+                                                    console.log("Height of search div:" + getTotalHeight());
 
-                                                  } else {
-                                                    // mobile
+                                                    // get element, apply css to the element(not to the class)
+                                                    // for mobile: top reset is forced with another .css
+                                                    $(".searchResultAdjust").css("top", getTotalHeight());
 
                                                   }
 
