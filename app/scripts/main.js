@@ -380,8 +380,11 @@ var desktop = function(){
         // on web differently than on mobile
         // have to add class and manually reset the "top" otherwise
         // it keeps whatever it was previously when going between mobile and desktop
-        $("#drawerContents").addClass("searchResultAdjust");
+        $("#drawerContents").addClass("drawerContentsAdjust");
         $("#drawerContents").css("top", "0px");
+
+        // height issue with the tour drop downs
+        $("#drawerContents").css("height", "900px");
 
 
 
@@ -637,7 +640,7 @@ var desktop = function(){
                 var y = 100;
                 var added = height + y;
                 function adding (value){
-                    $("#drawerContents").height(value);
+                    $(".drawerContentsAdjust").height(value);
                 }
                 adding(added);
                 $(this).addClass("open");
@@ -647,7 +650,7 @@ var desktop = function(){
                 var y = 100;
                 var added = height - y;
                 function adding (value){
-                    $("#drawerContents").height(value);
+                    $(".drawerContentsAdjust").height(value);
                 }
                 adding(added);
                 $(this).removeClass("open");
@@ -662,7 +665,7 @@ var desktop = function(){
                 var y = 100;
                 var added = height + y;
                 function adding (value){
-                    $("#drawerContents").height(value);
+                    $(".drawerContentsAdjust").height(value);
                 }
                 adding(added);
                 $(this).addClass("open");
@@ -672,7 +675,7 @@ var desktop = function(){
                 var y = 100;
                 var added = height - y;
                 function adding (value){
-                    $("#drawerContents").height(value);
+                    $(".drawerContentsAdjust").height(value);
                 }
                 adding(added);
                 $(this).removeClass("open");
@@ -686,7 +689,7 @@ var desktop = function(){
                 var y = 100;
                 var added = height + y;
                 function adding (value){
-                    $("#drawerContents").height(value);
+                    $(".drawerContentsAdjust").height(value);
                 }
                 adding(added);
                 $(this).addClass("open");
@@ -696,7 +699,7 @@ var desktop = function(){
                 var y = 100;
                 var added = height - y;
                 function adding (value){
-                    $("#drawerContents").height(value);
+                    $(".drawerContentsAdjust").height(value);
                 }
                 adding(added);
                 $(this).removeClass("open");
@@ -710,7 +713,7 @@ var desktop = function(){
                 var y = 100;
                 var added = height + y;
                 function adding (value){
-                    $("#drawerContents").height(value);
+                    $(".drawerContentsAdjust").height(value);
                 }
                 adding(added);
                 $(this).addClass("open");
@@ -720,7 +723,7 @@ var desktop = function(){
                 var y = 100;
                 var added = height - y;
                 function adding (value){
-                    $("#drawerContents").height(value);
+                    $(".drawerContentsAdjust").height(value);
                 }
                 adding(added);
                 $(this).removeClass("open");
@@ -753,11 +756,12 @@ var mobile = function(){
         $("#drawerDivTwo").removeClass("mdl-layout__drawer");
 
         // search results changing height of menu only needed for desktop
-        $("#drawerContents").removeClass("searchResultAdjust");
+        $("#drawerContents").removeClass("drawerContentsAdjust");
         // need this because otherwise dynamic changes on desktop screw up the menu
         // on mobile and needs to be manually reset this way
         $("#drawerContents").css("top", "70px");
-
+        // height issue with the tour drop downs
+        $("#drawerContents").css("height", "auto");
 
 
 

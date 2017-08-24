@@ -105,7 +105,7 @@
                                                 if(characters < 3){
                                                   $("#searchResults").css("visibility", "hidden");
                                                     // web adjustment only
-                                                    $(".searchResultAdjust").css("top", "0px ");
+                                                    $(".drawerContentsAdjust").css("top", "0px ");
 
                                                 } else if (characters >= 3){
                                                       callAjax();
@@ -312,7 +312,7 @@
 
                                                   }
 
-                                                  var check = $("#drawerContents").hasClass("searchResultAdjust");
+                                                  var check = $("#drawerContents").hasClass("drawerContentsAdjust");
                                                   if(check === true){
                                                     // only for desktop
                                                     // adjust position of menu drawer based on height of search results
@@ -326,7 +326,7 @@
 
                                                     // get element, apply css to the element(not to the class)
                                                     // for mobile: top reset is forced with another .css
-                                                    $(".searchResultAdjust").css("top", getTotalHeight());
+                                                    $(".drawerContentsAdjust").css("top", getTotalHeight());
 
                                                   }
 
