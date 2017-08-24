@@ -8,6 +8,9 @@
   visibility: hidden;
 }*/
 /*!important is <lol>important</lol> to overwrite hidden*/
+#menuDrawer{
+  z-index: 99;
+}
 .visible{
   visibility: visible !important;
 }
@@ -172,10 +175,10 @@ top: -24px;
   height: 30px !important;
 }
 .demo-card-wide{
-  position: relative;
+  position: absolute;
   height: 100%;
-  display: none;
-  z-index: 1;
+  /*display: none;*/
+  /*z-index: 1;*/
 }
 /*map styling*/
 html, body, main, .mdl-layout__content, .page-content, #map {
@@ -189,28 +192,7 @@ html, body, main, .mdl-layout__content, .page-content, #map {
 #map {
     position: relative;
 }
-/*should not load until told to D:<*/
-div#accFCard{
-  display: none;
-}
-div#athCard{
-  display: none;
-}
-div#accSCard{
-  display: none;
-}
-div#campSCard{
-  display: none;
-}
-div#resHCard{
-  display: none;
-}
-div#diningCard{
-  display: none;
-}
-div#stuRCard{
-  display: none;
-}
+
 h1.headHover{
   position: relative;
   display: block;
@@ -358,10 +340,7 @@ ul#popupNav li{
 ul#popupNav li:hover{
   text-decoration: underline;
 }
-.closeButton{
-  float: right;
-  right: 3%;
-}
+
 #vrCloseButton{
   position: absolute;
   z-index: 10;
@@ -628,6 +607,23 @@ ul#popupNav li:hover{
     /*curve for slide out/in*/
     transition: left .3s cubic-bezier(0.0, 0.0, 0.2, 1);
 
+  }
+  .cardOpen{
+    /*-webkit-transition-duration: .2s;
+    transition-duration: .2s;
+    -webkit-transition-timing-function: cubic-bezier(.4,0,.2,1);
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    -webkit-transition-property: -webkit-transform;
+    transition-property: transform;*/
+    left: 377px !important;
+    z-index: 10!important;
+  }
+  .cardClosed{
+    z-index: 0;
+    left: -377px;
+  }
+  .cardCloseButton{
+    right: -90%;
   }
 
   #map {
@@ -915,6 +911,8 @@ ul#popupNav li:hover{
   }
 
 
+
+
 /*end brace for min-width 1025 (web)*/
 }
 /**/
@@ -1082,6 +1080,7 @@ ul#popupNav li:hover{
     bottom: 0px;
     right: -50%;
     overflow-x: hidden;
+    z-index: 99;
     }
 
 
@@ -1112,9 +1111,34 @@ ul#popupNav li:hover{
     /*pullout card under menu*/
     .demo-card-wide{
     width: 100%;
-    /*curve for slide out/in*/
+    top: 70px !important;
     transition: top .3s cubic-bezier(0.0, 0.0, 0.2, 1);
     }
+    .cardOpen{
+      /*-webkit-transition-duration: .2s;
+      transition-duration: .2s;
+      -webkit-transition-timing-function: cubic-bezier(.4,0,.2,1);
+      transition-timing-function: cubic-bezier(.4,0,.2,1);
+      -webkit-transition-property: -webkit-transform;
+      transition-property: transform;*/
+      z-index: 2 !important;
+      /*curve for slide out/in*/
+
+    }
+    .cardClosed{
+      z-index: 0;
+
+      top: -100%;
+    }
+    .cardCloseButton{
+      left: 90%;
+    }
+
+    /*for hall info popups*/
+    .closeButton{
+      left: 15%;
+    }
+
 
     #mainWeb{
     position: relative;

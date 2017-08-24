@@ -546,8 +546,8 @@
                                 </div>
 
                                 <!-- academic facilities card -->
-                                <div id="accFCard" class="demo-card-wide mdl-card mdl-shadow--2dp">
-                                        <button id="accFClose" class="closeButton mdl-color-text--black mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
+                                <div id="accFCard" class="demo-card-wide mdl-card mdl-shadow--2dp cardClosed">
+                                        <button id="accFClose" class="cardCloseButton mdl-color-text--black mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
                                                 <i  class="material-icons">close</i>
                                         </button>
                                         <div class="mdl-card__title">
@@ -571,8 +571,8 @@
                                 <!-- end of academic facilities card -->
 
                                 <!-- start Athletics card -->
-                                <div id="athCard" class="demo-card-wide mdl-card mdl-shadow--2dp">
-                                        <button id="athClose" class="closeButton mdl-color-text--black mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
+                                <div id="athCard" class="demo-card-wide mdl-card mdl-shadow--2dp cardClosed">
+                                        <button id="athClose" class="cardCloseButton mdl-color-text--black mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
                                                 <i  class="material-icons">close</i>
                                         </button>
                                         <div class="mdl-card__title">
@@ -595,8 +595,8 @@
                                 <!-- end Athletics card  -->
 
                                 <!-- start Academic Services card -->
-                                <div id="accSCard" class="demo-card-wide mdl-card mdl-shadow--2dp">
-                                        <button id="accSClose" class="closeButton mdl-color-text--black mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
+                                <div id="accSCard" class="demo-card-wide mdl-card mdl-shadow--2dp cardClosed">
+                                        <button id="accSClose" class="cardCloseButton mdl-color-text--black mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
                                                 <i  class="material-icons">close</i>
                                         </button>
                                         <div class="mdl-card__title">
@@ -618,8 +618,8 @@
                                 <!-- end Academic Services card  -->
 
                                 <!-- start Campus Services card -->
-                                <div id="campSCard" class="demo-card-wide mdl-card mdl-shadow--2dp">
-                                        <button id="campSClose" class="closeButton mdl-color-text--black mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
+                                <div id="campSCard" class="demo-card-wide mdl-card mdl-shadow--2dp cardClosed">
+                                        <button id="campSClose" class="cardCloseButton mdl-color-text--black mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
                                                 <i  class="material-icons">close</i>
                                         </button>
                                         <div class="mdl-card__title">
@@ -643,8 +643,8 @@
                                 <!-- end Campus Services card  -->
 
                                 <!-- start Residence Halls card -->
-                                <div id="resHCard" class="demo-card-wide mdl-card mdl-shadow--2dp">
-                                        <button id="resHClose" class="closeButton mdl-color-text--black mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
+                                <div id="resHCard" class="demo-card-wide mdl-card mdl-shadow--2dp cardClosed">
+                                        <button id="resHClose" class="cardCloseButton mdl-color-text--black mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
                                                 <i  class="material-icons">close</i>
                                         </button>
                                         <div class="mdl-card__title">
@@ -668,8 +668,8 @@
                                 <!-- end Residence Halls card  -->
 
                                 <!-- start Dining card -->
-                                <div id="diningCard" class="demo-card-wide mdl-card mdl-shadow--2dp">
-                                        <button id="diningClose" class="closeButton mdl-color-text--black mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
+                                <div id="diningCard" class="demo-card-wide mdl-card mdl-shadow--2dp cardClosed">
+                                        <button id="diningClose" class="cardCloseButton mdl-color-text--black mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
                                                 <i  class="material-icons">close</i>
                                         </button>
                                         <div class="mdl-card__title">
@@ -693,8 +693,8 @@
                                 <!-- end Dining card  -->
 
                                 <!-- start Student Recreation card -->
-                                <div id="stuRCard" class="demo-card-wide mdl-card mdl-shadow--2dp">
-                                        <button id="stuRClose" class="closeButton mdl-color-text--black mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
+                                <div id="stuRCard" class="demo-card-wide mdl-card mdl-shadow--2dp cardClosed">
+                                        <button id="stuRClose" class="cardCloseButton mdl-color-text--black mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
                                                 <i  class="material-icons">close</i>
                                         </button>
                                         <div class="mdl-card__title">

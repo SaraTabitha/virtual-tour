@@ -357,13 +357,102 @@ $("#dempseyStart").click(function(){
     });
 
 
+    function closeAllCards(){
+      $("#accFCard").removeClass("cardOpen");
+      $("#athCard").removeClass("cardOpen");
+      $("#accSCard").removeClass("cardOpen");
+      $("#campSCard").removeClass("cardOpen");
+      $("#resHCard").removeClass("cardOpen");
+      $("#diningCard").removeClass("cardOpen");
+      $("#stuRCard").removeClass("cardOpen");
+    }
+    // accademic facilities// info bulding card slide in from left (when blue link is clicked)
+    // academic facilities show and slide out (if clicked again, slides back in)
+    $("#accFText").click(function(){
+        closeAllCards();
+        $("#accFiframe").attr("src", "https://www.youtube.com/embed/V4404T_b5No");
+        $("#accFCard").toggleClass("cardOpen");
+        $("#drawerContents").toggleClass("active");
+    });
+    // click x button on academic facilities card and it will disappear again
+    $("#accFClose").click(function(){
+        $("#accFCard").toggleClass("cardOpen");
+        });
+        // athletics show and slide out
+        $("#athText").click(function(){
+          closeAllCards();
+            $("#athiframe").attr("src", "https://www.youtube.com/embed/EFlUSVWCA-k");
+            $("#athCard").toggleClass("cardOpen");
+            $("#drawerContents").toggleClass("active");
+        });
+        // athletics x button hide
+        $("#athClose").click(function(){
+            $("#athCard").toggleClass("cardOpen");
+        });
+        // start academic services
+        $("#accSText").click(function(){
+          closeAllCards();
+            $("#accSiframe").attr("src", "https://www.youtube.com/embed/f-KdeyV-_dA");
+            $("#accSCard").toggleClass("cardOpen");
+            $("#drawerContents").toggleClass("active");
+        });
+        // academic services x button hide
+        $("#accSClose").click(function(){
+            $("#accSCard").toggleClass("cardOpen");
+        });
+        // start campus services show and slide out
+        $("#campSText").click(function(){
+          closeAllCards();
+            $("#campSiframe").attr("src", "https://www.youtube.com/embed/6e59ycgCTi4");
+            $("#campSCard").toggleClass("cardOpen");
+            $("#drawerContents").toggleClass("active");
+        });
+        //  campus services x button hide
+        $("#campSClose").click(function(){
+            $("#campSCard").toggleClass("cardOpen");
+        });
+        // start Residence halls show and slide out
+        $("#resHText").click(function(){
+          closeAllCards();
+            $("#resHiframe").attr("src", "https://www.youtube.com/embed/R5RVenezdgM");
+            $("#resHCard").toggleClass("cardOpen");
+            $("#drawerContents").toggleClass("active");
+        });
+        // Residence halls x button hide
+        $("#resHClose").click(function(){
+            $("#resHCard").toggleClass("cardOpen");
+        });
+        // start Dining show and slide out
+        $("#diningText").click(function(){
+          closeAllCards();
+            $("#diningiframe").attr("src", "https://www.youtube.com/embed/QBXee6U14FQ");
+            $("#diningCard").toggleClass("cardOpen");
+            $("#drawerContents").toggleClass("active");
+        });
+        // Dining x button hide
+        $("#diningClose").click(function(){
+            $("#diningCard").toggleClass("cardOpen");
+        });
+        // start Student Recreation show and slide out
+
+        $("#stuRText").click(function(){
+          closeAllCards();
+            $("#stuRiframe").attr("src", "https://www.youtube.com/embed/Fi7OiNe2TnU");
+            $("#stuRCard").toggleClass("cardOpen");
+            $("#drawerContents").toggleClass("active");
+        });
+        // Student Recreation x button hide
+        $("#stuRClose").click(function(){
+            $("#stuRCard").toggleClass("cardOpen");
+        });
+
+
 
 
 // function for loading different functions based on screen width
 var desktop = function(){
         // the view is at least 1025 px wide
         // web
-
 
         // all necessary class changes to move the menu back to the left side
         $("#menu").addClass("mdl-layout--fixed-drawer");
@@ -386,250 +475,8 @@ var desktop = function(){
         // height issue with the tour drop downs
         $("#drawerContents").css("height", "900px");
 
-
-
-
-        // academic facilities show and slide out (if clicked again, slides back in)
-
-        $("#accFText").click(function(){
-
-            var check = $("#accFCard").hasClass("cardPresent");
-            if (check === false){
-                $("#accFCard").addClass("cardPresent");
-
-                // hide + removeClass for others is so that if they leave
-                // one open and click on another/click between category links
-                // they will open/close properly
-                hideAll();
-                $("#athCard").removeClass("cardPresent");
-                $("#accSCard").removeClass("cardPresent");
-                $("#campSCard").removeClass("cardPresent");
-                $("#resHCard").removeClass("cardPresent");
-                $("#diningCard").removeClass("cardPresent");
-                $("#stuRCard").removeClass("cardPresent");
-
-                $("#accFiframe").attr("src", "https://www.youtube.com/embed/V4404T_b5No");
-                $("#accFCard").show();
-
-                $("#accFCard").animate(
-                    {left: "377px"});
-            } else if (check === true){
-                $("#accFCard").removeClass("cardPresent");
-
-                $("#accFCard").animate(
-                    {left:"-377px"});
-            }
-        });
-
-        // click x button on academic facilities card and it will disappear again
-        $("#accFClose").click(function(){
-            // remove class when x is clicked so that
-            // it will open again on the first click when they
-            // click the link (now that it depends on whether cardPresent is there)
-            $("#accFCard").removeClass("cardPresent");
-            $("#accFCard").animate(
-                {left:"-377px"});
-        });
-        // end academic facilities
-        //
-        // athletics show and slide out
-
-        $("#athText").click(function(){
-            var check = $("#athCard").hasClass("cardPresent");
-                if (check === false){
-                $("#athCard").addClass("cardPresent");
-
-                hideAll();
-                $("#accFCard").removeClass("cardPresent");
-                $("#accSCard").removeClass("cardPresent");
-                $("#campSCard").removeClass("cardPresent");
-                $("#resHCard").removeClass("cardPresent");
-                $("#diningCard").removeClass("cardPresent");
-                $("#stuRCard").removeClass("cardPresent");
-
-                $("#athiframe").attr("src", "https://www.youtube.com/embed/EFlUSVWCA-k");
-                $("#athCard").show();
-                $("#athCard").animate(
-                    {left: "377px"});
-            } else if (check === true){
-                $("#athCard").removeClass("cardPresent");
-                $("#athCard").animate(
-                    {left:"-377px"});
-            }
-        });
-        // athletics x button hide
-        $("#athClose").click(function(){
-            $("#athCard").removeClass("cardPresent");
-            $("#athCard").animate(
-                {left:"-377px"});
-        });
-        // end athletics
         //
         // start academic services show and slide out
-
-        $("#accSText").click(function(){
-            var check = $("#accSCard").hasClass("cardPresent");
-            if (check === false){
-                $("#accSCard").addClass("cardPresent");
-
-                hideAll();
-                $("#accFCard").removeClass("cardPresent");
-                $("#athCard").removeClass("cardPresent");
-                $("#campSCard").removeClass("cardPresent");
-                $("#resHCard").removeClass("cardPresent");
-                $("#diningCard").removeClass("cardPresent");
-                $("#stuRCard").removeClass("cardPresent");
-
-                $("#accSiframe").attr("src", "https://www.youtube.com/embed/f-KdeyV-_dA");
-                $("#accSCard").show();
-                $("#accSCard").animate(
-                    {left: "377px"});
-            } else if (check === true){
-                $("#accSCard").removeClass("cardPresent");
-                $("#accSCard").animate(
-                    {left:"-377px"});
-            }
-        });
-        // academic services x button hide
-        $("#accSClose").click(function(){
-            $("#accSCard").removeClass("cardPresent");
-            $("#accSCard").animate(
-                {left:"-377px"});
-        });
-        // end accademic services
-        //
-        // start campus services show and slide out
-
-        $("#campSText").click(function(){
-            var check = $("#campSCard").hasClass("cardPresent");
-            if (check === false){
-                $("#campSCard").addClass("cardPresent");
-
-                hideAll();
-                $("#accFCard").removeClass("cardPresent");
-                $("#athCard").removeClass("cardPresent");
-                $("#accSCard").removeClass("cardPresent");
-                $("#resHCard").removeClass("cardPresent");
-                $("#diningCard").removeClass("cardPresent");
-                $("#stuRCard").removeClass("cardPresent");
-
-                $("#campSiframe").attr("src", "https://www.youtube.com/embed/6e59ycgCTi4");
-                $("#campSCard").show();
-                $("#campSCard").animate(
-                    {left: "377px"});
-            } else if (check === true){
-                $("#campSCard").removeClass("cardPresent");
-                $("#campSCard").animate(
-                    {left:"-377px"});
-            }
-        });
-        //  campus services x button hide
-        $("#campSClose").click(function(){
-            $("#campSCard").removeClass("cardPresent");
-            $("#campSCard").animate(
-                {left:"-377px"});
-        });
-        // end campus services
-        //
-        // start Residence halls show and slide out
-
-        $("#resHText").click(function(){
-            var check = $("#resHCard").hasClass("cardPresent");
-            if (check === false){
-                $("#resHCard").addClass("cardPresent");
-
-                hideAll();
-                $("#accFCard").removeClass("cardPresent");
-                $("#athCard").removeClass("cardPresent");
-                $("#accSCard").removeClass("cardPresent");
-                $("#campSCard").removeClass("cardPresent");
-                $("#diningCard").removeClass("cardPresent");
-                $("#stuRCard").removeClass("cardPresent");
-
-                $("#resHiframe").attr("src", "https://www.youtube.com/embed/R5RVenezdgM");
-                $("#resHCard").show();
-                $("#resHCard").animate(
-                    {left: "377px"});
-            } else if (check === true){
-                $("#resHCard").removeClass("cardPresent");
-                $("#resHCard").animate(
-                    {left:"-377px"});
-            }
-        });
-        // Residence halls x button hide
-        $("#resHClose").click(function(){
-            $("#resHCard").removeClass("cardPresent");
-            $("#resHCard").animate(
-                {left:"-377px"});
-        });
-        // end residence halls
-        //
-        // start Dining show and slide out
-
-        $("#diningText").click(function(){
-        var check = $("#diningCard").hasClass("cardPresent");
-            if (check === false){
-                $("#diningCard").addClass("cardPresent");
-
-                hideAll();
-                $("#accFCard").removeClass("cardPresent");
-                $("#athCard").removeClass("cardPresent");
-                $("#accSCard").removeClass("cardPresent");
-                $("#campSCard").removeClass("cardPresent");
-                $("#resHCard").removeClass("cardPresent");
-                $("#stuRCard").removeClass("cardPresent");
-
-                $("#diningiframe").attr("src", "https://www.youtube.com/embed/QBXee6U14FQ");
-                $("#diningCard").show();
-                $("#diningCard").animate(
-                    {left: "377px"});
-            } else if (check === true){
-                $("#diningCard").removeClass("cardPresent");
-                $("#diningCard").animate(
-                    {left:"-377px"});
-            }
-        });
-        // Dining x button hide
-        $("#diningClose").click(function(){
-            $("#diningCard").removeClass("cardPresent");
-            $("#diningCard").animate(
-                {left:"-377px"});
-        });
-        // end Dining
-        //
-        // start Student Recreation show and slide out
-
-        $("#stuRText").click(function(){
-            var check = $("#stuRCard").hasClass("cardPresent");
-            if (check === false){
-                $("#stuRCard").addClass("cardPresent");
-
-                hideAll();
-                $("#accFCard").removeClass("cardPresent");
-                $("#athCard").removeClass("cardPresent");
-                $("#accSCard").removeClass("cardPresent");
-                $("#campSCard").removeClass("cardPresent");
-                $("#resHCard").removeClass("cardPresent");
-                $("#diningCard").removeClass("cardPresent");
-
-                $("#stuRiframe").attr("src", "https://www.youtube.com/embed/Fi7OiNe2TnU");
-                $("#stuRCard").show();
-                $("#stuRCard").animate(
-                    {left: "377px"});
-            } else if (check === true){
-                $("#stuRCard").removeClass("cardPresent");
-                $("#stuRCard").animate(
-                    {left:"-377px"});
-            }
-        });
-        // Student Recreation x button hide
-        $("#stuRClose").click(function(){
-            $("#stuRCard").removeClass("cardPresent");
-            $("#stuRCard").animate(
-                {left:"-377px"});
-        });
-        // end Student Recreation
-        //
 
         // changing height of drawer (for scroll bar) based on if a Building dropdown is selected
         $("#linkOne").click(function(){
@@ -731,16 +578,12 @@ var desktop = function(){
         });
 
 
-
-
 };
 // appearance
 var mobile = function(){
 
         // the view is less than 1025 px wide
         // mobile
-
-
         // all necessary class changes to move the menu from the left side
         // to a top menu bar + sliding out menu
         $("#menu").removeClass("mdl-layout--fixed-drawer");
@@ -762,279 +605,6 @@ var mobile = function(){
         $("#drawerContents").css("top", "70px");
         // height issue with the tour drop downs
         $("#drawerContents").css("height", "auto");
-
-
-
-
-
-
-
-        // all cards functions are repeated here and change the direction that they
-        // slide from
-
-        // accademic facilities// info bulding card slide in from left (when blue link is clicked)
-        // academic facilities show and slide out (if clicked again, slides back in)
-        $("#accFText").click(function(){
-
-            var check = $("#accFCard").hasClass("cardPresent");
-            if (check === false){
-                $("#accFCard").addClass("cardPresent");
-
-                // hide + removeClass for others is so that if they leave
-                // one open and click on another/click between category links
-                // they will open/close properly
-                hideAll();
-                $("#athCard").removeClass("cardPresent");
-                $("#accSCard").removeClass("cardPresent");
-                $("#campSCard").removeClass("cardPresent");
-                $("#resHCard").removeClass("cardPresent");
-                $("#diningCard").removeClass("cardPresent");
-                $("#stuRCard").removeClass("cardPresent");
-
-                $("#accFiframe").attr("src", "https://www.youtube.com/embed/V4404T_b5No");
-                $("#accFCard").show();
-                $("#accFCard").animate(
-                    {top:"0px"});
-                // closes menu when this opens
-                $("#drawerContents").removeClass("clicked");
-
-                $(".mdl-layout__drawer-right").animate(
-                    {right:"-380px"});
-
-            } else if (check === true){
-                $("#accFCard").removeClass("cardPresent");
-
-                $("#accFCard").animate(
-                    {top:"-100%"});
-            }
-        });
-
-        // click x button on academic facilities card and it will disappear again
-        $("#accFClose").click(function(){
-            // remove class when x is clicked so that
-            // it will open again on the first click when they
-            // click the link (now that it depends on whether cardPresent is there)
-            $("#accFCard").removeClass("cardPresent");
-            $("#accFCard").animate(
-            {top:"-100%"});
-            });
-            // end academic facilities
-            // athletics show and slide out
-
-            $("#athText").click(function(){
-            var check = $("#athCard").hasClass("cardPresent");
-            if (check === false){
-                $("#athCard").addClass("cardPresent");
-
-                hideAll();
-                $("#accFCard").removeClass("cardPresent");
-                $("#accSCard").removeClass("cardPresent");
-                $("#campSCard").removeClass("cardPresent");
-                $("#resHCard").removeClass("cardPresent");
-                $("#diningCard").removeClass("cardPresent");
-                $("#stuRCard").removeClass("cardPresent");
-
-                $("#athiframe").attr("src", "https://www.youtube.com/embed/EFlUSVWCA-k");
-                $("#athCard").show();
-                $("#athCard").animate(
-                    {top:"0px"});
-                // closes menu when this opens
-                $("#drawerContents").removeClass("clicked");
-                $(".mdl-layout__drawer-right").animate(
-                    {right:"-380px"});
-            } else if (check === true){
-                $("#athCard").removeClass("cardPresent");
-                $("#athCard").animate(
-                    {top:"-100%"});
-            }
-        });
-        // athletics x button hide
-        $("#athClose").click(function(){
-            $("#athCard").removeClass("cardPresent");
-            $("#athCard").animate(
-                {top:"-100%"});
-        });
-        // end athletics
-        // start academic services show and slide out
-
-        $("#accSText").click(function(){
-        var check = $("#accSCard").hasClass("cardPresent");
-            if (check === false){
-                $("#accSCard").addClass("cardPresent");
-
-                hideAll();
-                $("#accFCard").removeClass("cardPresent");
-                $("#athCard").removeClass("cardPresent");
-                $("#campSCard").removeClass("cardPresent");
-                $("#resHCard").removeClass("cardPresent");
-                $("#diningCard").removeClass("cardPresent");
-                $("#stuRCard").removeClass("cardPresent");
-
-                $("#accSiframe").attr("src", "https://www.youtube.com/embed/f-KdeyV-_dA");
-                $("#accSCard").show();
-                $("#accSCard").animate(
-                    {top:"0px"});
-                // closes menu when this opens
-                $("#drawerContents").removeClass("clicked");
-                $(".mdl-layout__drawer-right").animate(
-                    {right:"-380px"});
-            } else if (check === true){
-                $("#accSCard").removeClass("cardPresent");
-                $("#accSCard").animate(
-                    {top:"-100%"});
-            }
-        });
-        // academic services x button hide
-        $("#accSClose").click(function(){
-            $("#accSCard").removeClass("cardPresent");
-            $("#accSCard").animate(
-                {top:"-100%"});
-        });
-        // end accademic services
-        // start campus services show and slide out
-
-        $("#campSText").click(function(){
-            var check = $("#campSCard").hasClass("cardPresent");
-            if (check === false){
-                $("#campSCard").addClass("cardPresent");
-
-                hideAll();
-                $("#accFCard").removeClass("cardPresent");
-                $("#athCard").removeClass("cardPresent");
-                $("#accSCard").removeClass("cardPresent");
-                $("#resHCard").removeClass("cardPresent");
-                $("#diningCard").removeClass("cardPresent");
-                $("#stuRCard").removeClass("cardPresent");
-
-                $("#campSiframe").attr("src", "https://www.youtube.com/embed/6e59ycgCTi4");
-                $("#campSCard").show();
-                $("#campSCard").animate(
-                    {top:"0px"});
-                // closes menu when this opens
-                $("#drawerContents").removeClass("clicked");
-                $(".mdl-layout__drawer-right").animate(
-                    {right:"-380px"});
-            } else if (check === true){
-                $("#campSCard").removeClass("cardPresent");
-                $("#campSCard").animate(
-                    {top:"-100%"});
-            }
-        });
-        //  campus services x button hide
-        $("#campSClose").click(function(){
-            $("#campSCard").removeClass("cardPresent");
-            $("#campSCard").animate(
-                {top:"-100%"});
-        });
-        // end campus services
-        // start Residence halls show and slide out
-
-        $("#resHText").click(function(){
-            var check = $("#resHCard").hasClass("cardPresent");
-            if (check === false){
-                $("#resHCard").addClass("cardPresent");
-
-                hideAll();
-                $("#accFCard").removeClass("cardPresent");
-                $("#athCard").removeClass("cardPresent");
-                $("#accSCard").removeClass("cardPresent");
-                $("#campSCard").removeClass("cardPresent");
-                $("#diningCard").removeClass("cardPresent");
-                $("#stuRCard").removeClass("cardPresent");
-
-                $("#resHiframe").attr("src", "https://www.youtube.com/embed/R5RVenezdgM");
-                $("#resHCard").show();
-                $("#resHCard").animate(
-                    {top:"0px"});
-                // closes menu when this opens
-                $("#drawerContents").removeClass("clicked");
-                $(".mdl-layout__drawer-right").animate(
-                    {right:"-380px"});
-            } else if (check === true){
-                $("#resHCard").removeClass("cardPresent");
-                $("#resHCard").animate(
-                    {top:"-100%"});
-            }
-        });
-        // Residence halls x button hide
-        $("#resHClose").click(function(){
-            $("#resHCard").removeClass("cardPresent");
-            $("#resHCard").animate(
-                {top:"-100%"});
-        });
-        // end residence halls
-        // start Dining show and slide out
-
-        $("#diningText").click(function(){
-        var check = $("#diningCard").hasClass("cardPresent");
-            if (check === false){
-                $("#diningCard").addClass("cardPresent");
-
-                hideAll();
-                $("#accFCard").removeClass("cardPresent");
-                $("#athCard").removeClass("cardPresent");
-                $("#accSCard").removeClass("cardPresent");
-                $("#campSCard").removeClass("cardPresent");
-                $("#resHCard").removeClass("cardPresent");
-                $("#stuRCard").removeClass("cardPresent");
-
-                $("#diningiframe").attr("src", "https://www.youtube.com/embed/QBXee6U14FQ");
-                $("#diningCard").show();
-                $("#diningCard").animate(
-                    {top:"0px"});
-                // closes menu when this opens
-                $("#drawerContents").removeClass("clicked");
-                $(".mdl-layout__drawer-right").animate(
-                    {right:"-380px"});
-            } else if (check === true){
-                $("#diningCard").removeClass("cardPresent");
-                $("#diningCard").animate(
-                    {top:"-100%"});
-            }
-        });
-        // Dining x button hide
-        $("#diningClose").click(function(){
-            $("#diningCard").removeClass("cardPresent");
-            $("#diningCard").animate(
-                {top:"-100%"});
-        });
-        // end Dining
-        // start Student Recreation show and slide out
-
-        $("#stuRText").click(function(){
-            var check = $("#stuRCard").hasClass("cardPresent");
-            if (check === false){
-                $("#stuRCard").addClass("cardPresent");
-
-                hideAll();
-                $("#accFCard").removeClass("cardPresent");
-                $("#athCard").removeClass("cardPresent");
-                $("#accSCard").removeClass("cardPresent");
-                $("#campSCard").removeClass("cardPresent");
-                $("#resHCard").removeClass("cardPresent");
-                $("#diningCard").removeClass("cardPresent");
-
-                $("#stuRiframe").attr("src", "https://www.youtube.com/embed/Fi7OiNe2TnU");
-                $("#stuRCard").show();
-                $("#stuRCard").animate(
-                    {top:"0px"});
-                // closes menu when this opens
-                $("#drawerContents").removeClass("clicked");
-                $(".mdl-layout__drawer-right").animate(
-                    {right:"-380px"});
-            } else if (check === true){
-                $("#stuRCard").removeClass("cardPresent");
-                $("#stuRCard").animate(
-                    {top:"-100%"});
-            }
-        });
-        // Student Recreation x button hide
-        $("#stuRClose").click(function(){
-            $("#stuRCard").removeClass("cardPresent");
-            $("#stuRCard").animate(
-                {top:"-100%"});
-        });
-        // end Student Recreation
 
 };
 
