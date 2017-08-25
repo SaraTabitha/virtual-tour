@@ -345,7 +345,7 @@ ul#popupNav li:hover{
   position: absolute;
   z-index: 10;
   visibility: hidden;
-  padding: 10px;
+  padding: 20px;
 }
 
 .heading{
@@ -709,7 +709,7 @@ ul#popupNav li:hover{
     top: 50%;
     margin-top: -173.5px;
     height: 347px;
-    /*width: 100%;*/
+    width: calc(100% - 377px);
     left: 377px;
   }
   .popup{
@@ -909,7 +909,11 @@ ul#popupNav li:hover{
   #mobile{
     display: none;
   }
-
+  /*for hall info popups*/
+  .closeButton{
+    float: right;
+    right: 30px;
+  }
 
 
 
@@ -1417,22 +1421,8 @@ ul#popupNav li:hover{
         top: -10px;
     }
 
-    /*styling google vr*/
-    .vr{
-      visibility: hidden;
-      z-index: 3;
-      position: absolute;
-      width: 100% !important;
 
-    }
-    .vrDiv{
-      visibility: hidden;
-      z-index: 3;
-      position: absolute;
-      height: 347px;
-      width: 100%;
 
-    }
     .popup{
     position: absolute;
     /*top: 60px;*/
@@ -1522,6 +1512,62 @@ ul#popupNav li:hover{
     margin-top: 10px;
     }
 /*end brace for media max-width 1024 (mobile)*/
+}
+/*vr portrait*/
+@media screen and (max-width: 1024px) and (orientation: portrait){
+  .vrDiv{
+    visibility: hidden;
+    z-index: 3;
+    position: absolute;
+    height: 347px;
+    width: 100%;
+
+  }
+  /*styling google vr*/
+  .vr{
+    visibility: hidden;
+    z-index: 3;
+    position: absolute;
+    width: 100% !important;
+    height: 347px;
+  }
+}
+@media screen and (max-width: 1024px) and (orientation: landscape){
+/*vr landscape */
+  .vrDiv{
+    visibility: hidden;
+    z-index: 3;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+  }
+  /*styling google vr*/
+  .vr{
+    visibility: hidden;
+    z-index: 3;
+    position: absolute;
+    width: 100% !important;
+    height: calc(100% - 70px);
+  }
+}
+@media screen and (max-width: 1024px) and (min-width: 920px){
+  .vrDiv{
+    visibility: hidden;
+    z-index: 3;
+    position: absolute;
+    height: 347px;
+    width: 100%;
+
+  }
+  /*styling google vr*/
+  .vr{
+    visibility: hidden;
+    z-index: 3;
+    position: absolute;
+    width: 100% !important;
+    height: 347px;
+  }
 }
 
 @media screen and (max-width: 400px) {

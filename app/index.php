@@ -2594,10 +2594,10 @@
                           "images/Panorama/sidewalk/UWO360_-73.jpg",
                           // 21 halseycorner; cornerHa
                           "images/Panorama/sidewalk/UWO360_-75.jpg",
-                          // 22 behind halsey, front of ac
+                          // 22 behind halsey, front of A&C
                           // behindHaAr
                           "images/Panorama/sidewalk/UWO360_-81.jpg",
-                          // 23 mid halsey and ac road
+                          // 23 mid halsey and A&C road
                           // midHaAr
                           "images/Panorama/sidewalk/UWO360_-84.jpg",
 
@@ -2616,25 +2616,7 @@
                             // styling for iframe
                             $("#titanFieldImage > iframe").addClass("vr");
 
-                            if(window.matchMedia("(min-width: 1025px)").matches){
-                                // web
-                                var width = ($(window).width() - 377)
-                                $(".vr").css("width", width);
-                                $(".vrDiv").css("width", width);
-                            } else{
-                                // mobile
-                                var height = ($(window).height() - 70)
-                                if($(window).height() > $(window).width()){
-                                    // if mobile portrait
-                                    $(".vr").css("height", "347px");
-                                    $(".vrDiv").css("height", "347px");
-                                } else{
-                                    // if mobile landscape
-                                    $(".vr").css("height", height);
-                                    $(".vrDiv").css("height",  height);
-                                    $("#vrCloseButton").css("visibility", "hidden");
-                                }
-                            };
+                          
                         }
 
 
@@ -2653,26 +2635,7 @@
                             document.getElementById("womensCenter").removeEventListener('click', onLoad);
                             // styling for iframe
                             $("#womensCenterImage > iframe").addClass("vr");
-                            if(window.matchMedia("(min-width: 1025px)").matches){
-                                // web
-                                var width = ($(window).width() - 377)
-                                $(".vr").css("width", width);
-                                $(".vrDiv").css("width", width);
-                            } else{
-                                // mobile
-                                var height = ($(window).height() - 70)
-                                if($(window).height() > $(window).width()){
-                                    // if mobile portrait
-                                    $(".vr").css("height", "347px");
-                                    $(".vrDiv").css("height", "347px");
-                                } else{
-                                    // if mobile landscape
-                                    $(".vr").css("height", height);
-                                    $(".vrDiv").css("height",  height);
-                                    $("#vrCloseButton").css("visibility", "hidden");
-                                }
-                            };
-                            // open 3
+
                             //adding hotspot
                             womensCenter.on('ready', function(event){
 
@@ -2681,7 +2644,7 @@
                               womensCenter.addHotspot('intitialId', {
                                 pitch: 20, // In degrees. Up is positive.
                                 yaw: -125, // In degrees. To the left is positive.
-                                radius: 0.05, // Radius of the circular target in meters.
+                                radius: 0.30, // Radius of the circular target in meters.
                                 distance: 1.5 // Distance of target from camera in meters.
 
                                 // close addHotspot (close 7)
@@ -2718,13 +2681,13 @@
                             womensCenter.addHotspot('womensCenter-backroom', {
                               pitch: 0, // In degrees. Up is positive.
                               yaw: -5, // In degrees. To the left is positive.
-                              radius: 0.05, // Radius of the circular target in meters.
+                              radius: 0.30, // Radius of the circular target in meters.
                               distance: 2 // Distance of target from camera in meters.
                             });
                             womensCenter.addHotspot('womensCenter-Entrance', {
                               pitch: 5, // In degrees. Up is positive.
                               yaw: 153, // In degrees. To the left is positive.
-                              radius: 0.05, // Radius of the circular target in meters.
+                              radius: 0.30, // Radius of the circular target in meters.
                               distance: 2 // Distance of target from camera in meters.
                             });
                             // open 5
@@ -2756,7 +2719,7 @@
                             womensCenter.addHotspot('womensCenter', {
                               pitch: 0, // In degrees. Up is positive.
                               yaw: 17, // In degrees. To the left is positive.
-                              radius: 0.05, // Radius of the circular target in meters.
+                              radius: 0.30, // Radius of the circular target in meters.
                               distance: 1 // Distance of target from camera in meters.
 
                             });
@@ -2784,7 +2747,7 @@
                             womensCenter.addHotspot('womensCenterMain', {
                               pitch: 20, // In degrees. Up is positive.
                               yaw: -125, // In degrees. To the left is positive.
-                              radius: 0.05, // Radius of the circular target in meters.
+                              radius: 0.30, // Radius of the circular target in meters.
                               distance: 1.5 // Distance of target from camera in meters.
 
                             });
@@ -2801,8 +2764,6 @@
                         }
 
 
-
-
                         // executive board room panorama embed
                         document.getElementById("executiveRoom").addEventListener('click', onexecutiveRoomImageLoad)
                             function onexecutiveRoomImageLoad() {
@@ -2816,25 +2777,6 @@
                             // styling for iframe
                             $("#executiveRoomImage > iframe").addClass("vr");
 
-                            if(window.matchMedia("(min-width: 1025px)").matches){
-                                // web
-                                var width = ($(window).width() - 377)
-                                $(".vr").css("width", width);
-                                $(".vrDiv").css("width", width);
-                            } else{
-                                // mobile
-                                var height = ($(window).height() - 70)
-                                if($(window).height() > $(window).width()){
-                                    // if mobile portrait
-                                    $(".vr").css("height", "347px");
-                                    $(".vrDiv").css("height", "347px");
-                                } else{
-                                    // if mobile landscape
-                                    $(".vr").css("height", height);
-                                    $(".vrDiv").css("height",  height);
-                                    $("#vrCloseButton").css("visibility", "hidden");
-                                }
-                            };
                         }
 
 
@@ -2853,25 +2795,7 @@
                             document.getElementById("dempseyStart").removeEventListener('click', onsidewalkTourLoad);
                             // styling for iframe
                             $("#sidewalkTour > iframe").addClass("vr");
-                            if(window.matchMedia("(max-width: 1024px)").matches){
-                              // mobile
-                              var height = ($(window).height() - 70)
-                              if($(window).height() > $(window).width()){
-                                  // if mobile portrait
-                                  $(".vr").css("height", "347px");
-                                  $(".vrDiv").css("height", "347px");
-                              } else{
-                                  // if mobile landscape
-                                  $(".vr").css("height", height);
-                                  $(".vrDiv").css("height",  height);
-                                  $("#vrCloseButton").css("visibility", "hidden");
-                              }
-                            } else{
-                              // web
-                              var width = ($(window).width() - 377)
-                              $(".vr").css("width", width);
-                              $(".vrDiv").css("width", width);
-                            };
+
 
                             //adding hotspot
                             sidewalkTour.on('ready', function(event){
@@ -2879,7 +2803,7 @@
                               sidewalkTour.addHotspot('sidewalkId', {
                                 pitch: -10, // In degrees. Up is positive.
                                 yaw: 55, // In degrees. To the left is positive.
-                                radius: 0.05, // Radius of the circular target in meters.
+                                radius: 0.10, // Radius of the circular target in meters.
                                 distance: 1 // Distance of target from camera in meters.
                               });
                               sidewalkTour.on('click', function(event) {
@@ -2902,19 +2826,19 @@
                             sidewalkTour.addHotspot('tourDeOvTwo', {
                               pitch: 0, // In degrees. Up is positive.
                               yaw: -80, // In degrees. To the left is positive.
-                              radius: 0.05, // Radius of the circular target in meters.
+                              radius: 0.10, // Radius of the circular target in meters.
                               distance: 1 // Distance of target from camera in meters.
                             });
                             sidewalkTour.addHotspot('dempsey', {
                               pitch: 0, // In degrees. Up is positive.
                               yaw: 163, // In degrees. To the left is positive.
-                              radius: 0.08, // Radius of the circular target in meters.
+                              radius: 0.10, // Radius of the circular target in meters.
                               distance: 2 // Distance of target from camera in meters.
                             });
                             sidewalkTour.addHotspot('roadOvDe', {
                               pitch: 0, // In degrees. Up is positive.
                               yaw: 103.5, // In degrees. To the left is positive.
-                              radius: 0.08, // Radius of the circular target in meters.
+                              radius: 0.10, // Radius of the circular target in meters.
                               distance: 2 // Distance of target from camera in meters.
                             });
 
@@ -2941,7 +2865,7 @@
                                     sidewalkTour.addHotspot('tourDeOv', {
                                       pitch: -10, // In degrees. Up is positive.
                                       yaw: 55, // In degrees. To the left is positive.
-                                      radius: 0.05, // Radius of the circular target in meters.
+                                      radius: 0.10, // Radius of the circular target in meters.
                                       distance: 1 // Distance of target from camera in meters.
 
                                     });
@@ -2959,7 +2883,7 @@
                                     sidewalkTour.addHotspot('tourDeOvThird', {
                                       pitch: 0, // In degrees. Up is positive.
                                       yaw: -100, // In degrees. To the left is positive.
-                                      radius: 0.05, // Radius of the circular target in meters.
+                                      radius: 0.10, // Radius of the circular target in meters.
                                       distance: 1 // Distance of target from camera in meters.
 
                                     });
@@ -2980,14 +2904,14 @@
                             sidewalkTour.addHotspot('tourDeOvAgain', {
                               pitch: 0, // In degrees. Up is positive.
                               yaw: 88, // In degrees. To the left is positive.
-                              radius: 0.05, // Radius of the circular target in meters.
+                              radius: 0.10, // Radius of the circular target in meters.
                               distance: 1 // Distance of target from camera in meters.
 
                             });
                             sidewalkTour.addHotspot('treesDeOv', {
                               pitch: 0, // In degrees. Up is positive.
                               yaw: -92, // In degrees. To the left is positive.
-                              radius: 0.05, // Radius of the circular target in meters.
+                              radius: 0.10, // Radius of the circular target in meters.
                               distance: 1 // Distance of target from camera in meters.
 
                             });
@@ -3008,14 +2932,14 @@
                             sidewalkTour.addHotspot('tourDeOvTwoBack', {
                               pitch: 0, // In degrees. Up is positive.
                               yaw: 95, // In degrees. To the left is positive.
-                              radius: 0.05, // Radius of the circular target in meters.
+                              radius: 0.10, // Radius of the circular target in meters.
                               distance: .7 // Distance of target from camera in meters.
 
                             });
                             sidewalkTour.addHotspot('midGarden', {
                               pitch: 0, // In degrees. Up is positive.
                               yaw: -80, // In degrees. To the left is positive.
-                              radius: 0.05, // Radius of the circular target in meters.
+                              radius: 0.10, // Radius of the circular target in meters.
                               distance: .5 // Distance of target from camera in meters.
 
                             });
@@ -3037,14 +2961,14 @@
                             sidewalkTour.addHotspot('treesDeOvBack', {
                               pitch: -5, // In degrees. Up is positive.
                               yaw: -95, // In degrees. To the left is positive.
-                              radius: 0.05, // Radius of the circular target in meters.
+                              radius: 0.10, // Radius of the circular target in meters.
                               distance: .7 // Distance of target from camera in meters.
 
                             });
                             sidewalkTour.addHotspot('midGardenTwo', {
                               pitch: -5, // In degrees. Up is positive.
                               yaw: 85, // In degrees. To the left is positive.
-                              radius: 0.05, // Radius of the circular target in meters.
+                              radius: 0.10, // Radius of the circular target in meters.
                               distance: .7 // Distance of target from camera in meters.
 
                             });
@@ -3066,14 +2990,14 @@
                             sidewalkTour.addHotspot('midGardenBack', {
                               pitch: -5, // In degrees. Up is positive.
                               yaw: -92, // In degrees. To the left is positive.
-                              radius: 0.05, // Radius of the circular target in meters.
+                              radius: 0.10, // Radius of the circular target in meters.
                               distance: .7 // Distance of target from camera in meters.
 
                             });
                             sidewalkTour.addHotspot('midGardenThree', {
                               pitch: 5, // In degrees. Up is positive.
                               yaw: 160, // In degrees. To the left is positive.
-                              radius: 0.05, // Radius of the circular target in meters.
+                              radius: 0.10, // Radius of the circular target in meters.
                               distance: .7 // Distance of target from camera in meters.
 
                             });
@@ -3095,14 +3019,14 @@
                             sidewalkTour.addHotspot('midGardenTwoBack', {
                               pitch: 5, // In degrees. Up is positive.
                               yaw: -150, // In degrees. To the left is positive.
-                              radius: 0.05, // Radius of the circular target in meters.
+                              radius: 0.10, // Radius of the circular target in meters.
                               distance: .5 // Distance of target from camera in meters.
 
                             });
                             sidewalkTour.addHotspot('midGardenFour', {
                               pitch: 5, // In degrees. Up is positive.
                               yaw: 65, // In degrees. To the left is positive.
-                              radius: 0.05, // Radius of the circular target in meters.
+                              radius: 0.10, // Radius of the circular target in meters.
                               distance: .5 // Distance of target from camera in meters.
 
                             });
@@ -3124,14 +3048,14 @@
                             sidewalkTour.addHotspot('midGardenThreeBack', {
                               pitch: 5, // In degrees. Up is positive.
                               yaw: -70, // In degrees. To the left is positive.
-                              radius: 0.05, // Radius of the circular target in meters.
+                              radius: 0.10, // Radius of the circular target in meters.
                               distance: .5 // Distance of target from camera in meters.
 
                             });
                             sidewalkTour.addHotspot('midSwHa', {
                               pitch: 5, // In degrees. Up is positive.
                               yaw: 80, // In degrees. To the left is positive.
-                              radius: 0.05, // Radius of the circular target in meters.
+                              radius: 0.10, // Radius of the circular target in meters.
                               distance: .5 // Distance of target from camera in meters.
 
                             });
@@ -3153,14 +3077,14 @@
                             sidewalkTour.addHotspot('midGardenFourBack', {
                               pitch: 5, // In degrees. Up is positive.
                               yaw: -90, // In degrees. To the left is positive.
-                              radius: 0.05, // Radius of the circular target in meters.
+                              radius: 0.10, // Radius of the circular target in meters.
                               distance: .5 // Distance of target from camera in meters.
 
                             });
                             sidewalkTour.addHotspot('midSwHaTwo', {
                               pitch: 5, // In degrees. Up is positive.
                               yaw: 85, // In degrees. To the left is positive.
-                              radius: 0.05, // Radius of the circular target in meters.
+                              radius: 0.10, // Radius of the circular target in meters.
                               distance: .5 // Distance of target from camera in meters.
 
                             });
@@ -3182,14 +3106,14 @@
                             sidewalkTour.addHotspot('midSwHaBack', {
                               pitch: 5, // In degrees. Up is positive.
                               yaw: -94, // In degrees. To the left is positive.
-                              radius: 0.05, // Radius of the circular target in meters.
+                              radius: 0.10, // Radius of the circular target in meters.
                               distance: .5 // Distance of target from camera in meters.
 
                             });
                             sidewalkTour.addHotspot('cornerSw', {
                               pitch: 5, // In degrees. Up is positive.
                               yaw: 90, // In degrees. To the left is positive.
-                              radius: 0.05, // Radius of the circular target in meters.
+                              radius: 0.10, // Radius of the circular target in meters.
                               distance: .5 // Distance of target from camera in meters.
 
                             });
@@ -3210,14 +3134,14 @@
                             sidewalkTour.addHotspot('midSwHaTwoBack', {
                               pitch: 5, // In degrees. Up is positive.
                               yaw: -94, // In degrees. To the left is positive.
-                              radius: 0.05, // Radius of the circular target in meters.
+                              radius: 0.10, // Radius of the circular target in meters.
                               distance: .5 // Distance of target from camera in meters.
 
                             });
                             sidewalkTour.addHotspot('midSw', {
                               pitch: 5, // In degrees. Up is positive.
                               yaw: 90, // In degrees. To the left is positive.
-                              radius: 0.05, // Radius of the circular target in meters.
+                              radius: 0.10, // Radius of the circular target in meters.
                               distance: .5 // Distance of target from camera in meters.
 
                             });
@@ -3237,14 +3161,14 @@
                           sidewalkTour.addHotspot('cornerSwBack', {
                             pitch: 5, // In degrees. Up is positive.
                             yaw: -92, // In degrees. To the left is positive.
-                            radius: 0.05, // Radius of the circular target in meters.
+                            radius: 0.10, // Radius of the circular target in meters.
                             distance: .5 // Distance of target from camera in meters.
 
                           });
                           sidewalkTour.addHotspot('behindSw', {
                             pitch: 5, // In degrees. Up is positive.
                             yaw: 90, // In degrees. To the left is positive.
-                            radius: 0.05, // Radius of the circular target in meters.
+                            radius: 0.10, // Radius of the circular target in meters.
                             distance: .5 // Distance of target from camera in meters.
 
                           });
@@ -3265,14 +3189,14 @@
                           sidewalkTour.addHotspot('midSwBack', {
                             pitch: 5, // In degrees. Up is positive.
                             yaw: -92, // In degrees. To the left is positive.
-                            radius: 0.05, // Radius of the circular target in meters.
+                            radius: 0.10, // Radius of the circular target in meters.
                             distance: .5 // Distance of target from camera in meters.
 
                           });
                           sidewalkTour.addHotspot('swBu', {
                             pitch: 5, // In degrees. Up is positive.
                             yaw: 90, // In degrees. To the left is positive.
-                            radius: 0.05, // Radius of the circular target in meters.
+                            radius: 0.10, // Radius of the circular target in meters.
                             distance: .5 // Distance of target from camera in meters.
 
                           });
@@ -3293,14 +3217,14 @@
                           sidewalkTour.addHotspot('behindSwBack', {
                             pitch: 5, // In degrees. Up is positive.
                             yaw: -86, // In degrees. To the left is positive.
-                            radius: 0.05, // Radius of the circular target in meters.
+                            radius: 0.10, // Radius of the circular target in meters.
                             distance: .5 // Distance of target from camera in meters.
 
                           });
                           sidewalkTour.addHotspot('swBuHa', {
                             pitch: 5, // In degrees. Up is positive.
                             yaw: 95, // In degrees. To the left is positive.
-                            radius: 0.05, // Radius of the circular target in meters.
+                            radius: 0.10, // Radius of the circular target in meters.
                             distance: .5 // Distance of target from camera in meters.
 
                           });
@@ -3321,14 +3245,14 @@
                           sidewalkTour.addHotspot('swBuBack', {
                             pitch: 5, // In degrees. Up is positive.
                             yaw: -92, // In degrees. To the left is positive.
-                            radius: 0.05, // Radius of the circular target in meters.
+                            radius: 0.10, // Radius of the circular target in meters.
                             distance: .5 // Distance of target from camera in meters.
 
                           });
                           sidewalkTour.addHotspot('cornerHa', {
                             pitch: 5, // In degrees. Up is positive.
                             yaw: 90, // In degrees. To the left is positive.
-                            radius: 0.05, // Radius of the circular target in meters.
+                            radius: 0.10, // Radius of the circular target in meters.
                             distance: .5 // Distance of target from camera in meters.
 
                           });
@@ -3348,14 +3272,14 @@
                           sidewalkTour.addHotspot('swBuHaBack', {
                             pitch: 5, // In degrees. Up is positive.
                             yaw: -88, // In degrees. To the left is positive.
-                            radius: 0.05, // Radius of the circular target in meters.
+                            radius: 0.10, // Radius of the circular target in meters.
                             distance: .5 // Distance of target from camera in meters.
 
                           });
                           sidewalkTour.addHotspot('behindHaAr', {
                             pitch: 5, // In degrees. Up is positive.
                             yaw: 95, // In degrees. To the left is positive.
-                            radius: 0.05, // Radius of the circular target in meters.
+                            radius: 0.10, // Radius of the circular target in meters.
                             distance: .5 // Distance of target from camera in meters.
 
                           });
@@ -3375,14 +3299,14 @@
                           sidewalkTour.addHotspot('cornerHaBack', {
                             pitch: 5, // In degrees. Up is positive.
                             yaw: -80, // In degrees. To the left is positive.
-                            radius: 0.05, // Radius of the circular target in meters.
+                            radius: 0.10, // Radius of the circular target in meters.
                             distance: .5 // Distance of target from camera in meters.
 
                           });
                           sidewalkTour.addHotspot('midHaAr', {
                             pitch: 5, // In degrees. Up is positive.
                             yaw: 100, // In degrees. To the left is positive.
-                            radius: 0.05, // Radius of the circular target in meters.
+                            radius: 0.10, // Radius of the circular target in meters.
                             distance: .5 // Distance of target from camera in meters.
 
                           });
@@ -3402,7 +3326,7 @@
                           sidewalkTour.addHotspot('behindHaArBack', {
                             pitch: 5, // In degrees. Up is positive.
                             yaw: -85, // In degrees. To the left is positive.
-                            radius: 0.05, // Radius of the circular target in meters.
+                            radius: 0.10, // Radius of the circular target in meters.
                             distance: .5 // Distance of target from camera in meters.
 
                           });
