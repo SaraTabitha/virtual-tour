@@ -79,79 +79,264 @@
 // all JS that is not change depending on the width of the screen
 //
 
-
 // NEED FOLLOWING because without it after using the select all,
-// the user cannot recheck the individual boxes properly
-// building on click/off checks check box
-$("#buildings").click(function(){
-  $("#buildLabel").toggleClass("is-checked");
-});
-$("#parkingLots").click(function(){
-  $("#parkingLabel").toggleClass("is-checked");
-});
-$("#accEnt").click(function(){
-  $("#accEntLabel").toggleClass("is-checked");
-});
-$("#accPar").click(function(){
-  $("#accParLabel").toggleClass("is-checked");
-});
-$("#emergency").click(function(){
-  $("#emergencyLabel").toggleClass("is-checked");
-});
-$("#sust").click(function(){
-  $("#sustLabel").toggleClass("is-checked");
-});
-$("#gender").click(function(){
-  $("#genderLabel").toggleClass("is-checked");
-});
+    // the user cannot recheck the individual boxes properly
+    // building on click/off check box
 
-// on click for the select all button
-$("#selectallcheck").click(function(){
-$("#buildLabel").toggleClass("is-checked");
-$("#parkingLabel").toggleClass("is-checked");
-$("#accEntLabel").toggleClass("is-checked");
-$("#accParLabel").toggleClass("is-checked");
-$("#emergencyLabel").toggleClass("is-checked");
-$("#sustLabel").toggleClass("is-checked");
-$("#genderLabel").toggleClass("is-checked");
-});
+    // has to be written like this otherwise it screws up between safari and other browsers
+    // CANNOT toggle class unforunately
+    $("#buildings").click(function(){
+    var check = !$("#buildings").prop("checked");
+    if (check === false){
+      $("#buildings").prop("checked", true);
+      $("#buildLabel").addClass("is-checked");
+    } else if (check === true){
+      $("#buildings").removeProp("checked", true);
+      $("#buildLabel").removeClass("is-checked");
+    }
+    });
+    $("#parkingLots").click(function(){
+    var check = !$("#parkingLots").prop("checked");
+    if (check === false){
+      $("#parkingLots").prop("checked", true);
+      $("#parkingLabel").addClass("is-checked");
+    } else if (check === true){
+      $("#parkingLots").removeProp("checked", true);
+      $("#parkingLabel").removeClass("is-checked");
+    }
+    });
+    $("#accEnt").click(function(){
+    var check = !$("#accEnt").prop("checked");
+    if (check === false){
+      $("#accEnt").prop("checked", true);
+      $("#accEntLabel").addClass("is-checked");
+    } else if (check === true){
+      $("#accEnt").removeProp("checked", true);
+      $("#accEntLabel").removeClass("is-checked");
+    }
+    });
+    $("#accPar").click(function(){
+    var check = !$("#accPar").prop("checked");
+    if (check === false){
+      $("#accPar").prop("checked", true);
+      $("#accParLabel").addClass("is-checked");
+    } else if (check === true){
+      $("#accPar").removeProp("checked", true);
+      $("#accParLabel").removeClass("is-checked");
+    }
+    });
+    $("#emergency").click(function(){
+    var check = !$("#emergency").prop("checked");
+    if (check === false){
+      $("#emergency").prop("checked", true);
+      $("#emergencyLabel").addClass("is-checked");
+    } else if (check === true){
+      $("#emergency").removeProp("checked", true);
+      $("#emergencyLabel").removeClass("is-checked");
+    }
+    });
+    $("#sust").click(function(){
+    var check = !$("#sust").prop("checked");
+    if (check === false){
+      $("#sust").prop("checked", true);
+      $("#sustLabel").addClass("is-checked");
+    } else if (check === true){
+      $("#sust").removeProp("checked", true);
+      $("#sustLabel").removeClass("is-checked");
+    }
+    });
+    $("#gender").click(function(){
+    var check = !$("#gender").prop("checked");
+    if (check === false){
+      $("#gender").prop("checked", true);
+      $("#genderLabel").addClass("is-checked");
+    } else if (check === true){
+      $("#gender").removeProp("checked", true);
+      $("#genderLabel").removeClass("is-checked");
+    }
+    });
+    // event listener for the select all button attached to function clicking
+    $("#selectallcheck").click(function(){
+
+      //checks the input for the checked property (! = not checked)
+      var check = !$("#selectallcheck").prop("checked");
+    // because it looks at whether or not the property is checked BEFORE The click is put into effect,
+    //it has to do the opposite of what the state of the click is ex. If check was false before click
+    // do: check everything (and then the select all with check as the very last step (and become true))
+      if(check === false){
+      // buildings
+      $("#buildings").prop("checked", true);
+      $("#buildLabel").addClass("is-checked");
+
+      // parking lots
+      $("#parkingLots").prop("checked", true);
+      $("#parkingLabel").addClass("is-checked");
+      // accessible entries
+      $("#accEnt").prop("checked", true);
+      $("#accEntLabel").addClass("is-checked");
+      // Accessible Parking
+      $("#accPar").prop("checked", true);
+      $("#accParLabel").addClass("is-checked");
+      // Emergency Phones
+      $("#emergency").prop("checked", true);
+      $("#emergencyLabel").addClass("is-checked");
+      // sustainability points of interest
+      $("#sust").prop("checked", true);
+      $("#sustLabel").addClass("is-checked");
+      // gender neutral and family bathrooms
+      $("#gender").prop("checked", true);
+      $("#genderLabel").addClass("is-checked");
+
+      } else if (check === true) {
+
+      // buildings
+      $("#buildings").removeProp("checked", true);
+      $("#buildLabel").removeClass("is-checked");
+
+      // parking lots
+      $("#parkingLots").removeProp("checked", true);
+      $("#parkingLabel").removeClass("is-checked");
+      // Accessible entries
+      $("#accEnt").removeProp("checked", true);
+      $("#accEntLabel").removeClass("is-checked");
+      // Accessible Parking
+      $("#accPar").removeProp("checked", true);
+      $("#accParLabel").removeClass("is-checked");
+      // Emergency Phones
+      $("#emergency").removeProp("checked", true);
+      $("#emergencyLabel").removeClass("is-checked");
+      // sustainability points of interest
+      $("#sust").removeProp("checked", true);
+      $("#sustLabel").removeClass("is-checked");
+      // gender neutral and family bathrooms
+      $("#gender").removeProp("checked", true);
+      $("#genderLabel").removeClass("is-checked");
+
+      }
+    });
 
 
-// on click  with same disclaimer as above
-$("#accaF").click(function(){
-    $("#accaFLabel").toggleClass("is-checked");
-});
-$("#ath").click(function(){
-    $("#athLabel").toggleClass("is-checked");
-});
-$("#accS").click(function(){
-  $("#accSLabel").toggleClass("is-checked");
-});
-$("#campS").click(function(){
-  $("#campSLabel").toggleClass("is-checked");
-});
-$("#resH").click(function(){
-    $("#resHLabel").toggleClass("is-checked");
-});
-$("#dining").click(function(){
-    $("#diningLabel").toggleClass("is-checked");
-});
-$("#stuR").click(function(){
-  $("#stuRLabel").toggleClass("is-checked");
-});
+    $("#accaF").click(function(){
+      var check = !$("#accaF").prop("checked");
+      if (check === false){
+        $("#accaF").prop("checked", true);
+        $("#accaFLabel").addClass("is-checked");
+      } else if (check === true){
+        $("#accaF").removeProp("checked", true);
+        $("#accaFLabel").removeClass("is-checked");
+      }
+      });
+      $("#ath").click(function(){
+      var check = !$("#ath").prop("checked");
+      if (check === false){
+        $("#ath").prop("checked", true);
+        $("#athLabel").addClass("is-checked");
+      } else if (check === true){
+        $("#ath").removeProp("checked", true);
+        $("#athLabel").removeClass("is-checked");
+      }
+      });
+      $("#accS").click(function(){
+      var check = !$("#accS").prop("checked");
+      if (check === false){
+        $("#accS").prop("checked", true);
+        $("#accSLabel").addClass("is-checked");
+      } else if (check === true){
+        $("#accS").removeProp("checked", true);
+        $("#accSLabel").removeClass("is-checked");
+      }
+      });
+      $("#campS").click(function(){
+      var check = !$("#campS").prop("checked");
+      if (check === false){
+        $("#campS").prop("checked", true);
+        $("#campSLabel").addClass("is-checked");
+      } else if (check === true){
+        $("#campS").removeProp("checked", true);
+        $("#campSLabel").removeClass("is-checked");
+      }
+      });
+      $("#resH").click(function(){
+      var check = !$("#resH").prop("checked");
+      if (check === false){
+        $("#resH").prop("checked", true);
+        $("#resHLabel").addClass("is-checked");
+      } else if (check === true){
+        $("#resH").removeProp("checked", true);
+        $("#resHLabel").removeClass("is-checked");
+      }
+      });
+      $("#dining").click(function(){
+      var check = !$("#dining").prop("checked");
+      if (check === false){
+        $("#dining").prop("checked", true);
+        $("#diningLabel").addClass("is-checked");
+      } else if (check === true){
+        $("#dining").removeProp("checked", true);
+        $("#diningLabel").removeClass("is-checked");
+      }
+      });
+      $("#stuR").click(function(){
+      var check = !$("#stuR").prop("checked");
+      if (check === false){
+        $("#stuR").prop("checked", true);
+        $("#stuRLabel").addClass("is-checked");
+      } else if (check === true){
+        $("#stuR").removeProp("checked", true);
+        $("#stuRLabel").removeClass("is-checked");
+      }
+      });
+      // Start second Select All (identical to above so I will omit comments explaining functionality)
 
-// second Select All
-$("#selectallcheck2").click(function(){
-$("#accaFLabel").toggleClass("is-checked");
-$("#athLabel").toggleClass("is-checked");
-$("#accSLabel").toggleClass("is-checked");
-$("#campSLabel").toggleClass("is-checked");
-$("#resHLabel").toggleClass("is-checked");
-$("#diningLabel").toggleClass("is-checked");
-$("#stuRLabel").toggleClass("is-checked");
-
-});
-
+      $("#selectallcheck2").click(function(){
+        var checkTwo = !$("#selectallcheck2").prop("checked");
+        if(checkTwo === false){
+          // academic facilities
+          $("#accaF").prop("checked",true);
+          $("#accaFLabel").addClass("is-checked");
+          // athletics
+          $("#ath").prop("checked",true);
+          $("#athLabel").addClass("is-checked");
+          // academic services
+          $("#accS").prop("checked",true);
+          $("#accSLabel").addClass("is-checked");
+          // campus services
+          $("#campS").prop("checked",true);
+          $("#campSLabel").addClass("is-checked");
+          // residence halls
+          $("#resH").prop("checked",true);
+          $("#resHLabel").addClass("is-checked");
+          // dining
+          $("#dining").prop("checked",true);
+          $("#diningLabel").addClass("is-checked");
+          // student recreation
+          $("#stuR").prop("checked",true);
+          $("#stuRLabel").addClass("is-checked");
+      } else if (checkTwo === true) {
+        // academic facilities
+        $("#accaF").removeProp("checked", true);
+        $("#accaFLabel").removeClass("is-checked");
+        // athletics
+        $("#ath").removeProp("checked", true);
+        $("#athLabel").removeClass("is-checked");
+        // academic services
+        $("#accS").removeProp("checked", true);
+        $("#accSLabel").removeClass("is-checked");
+        // campus services
+        $("#campS").removeProp("checked", true);
+        $("#campSLabel").removeClass("is-checked");
+        // residence halls
+        $("#resH").removeProp("checked", true);
+        $("#resHLabel").removeClass("is-checked");
+        // dining
+        $("#dining").removeProp("checked", true);
+        $("#diningLabel").removeClass("is-checked");
+        // student recreation
+        $("#stuR").removeProp("checked", true);
+        $("#stuRLabel").removeClass("is-checked");
+      }
+    });
+    // End second Select All
 // VR image click function
 // when a new panorama is selected from the menu the
 // hideAllVR function makes sure to hide any possible

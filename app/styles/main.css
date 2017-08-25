@@ -671,31 +671,31 @@ ul#popupNav li:hover{
       color: black;
   }
   .parkingColorStaff{
-    top: -15px;
+    top: -10px;
   }
   .parkingColorRemote{
-    top: -15px;
+    top: -10px;
   }
 
   .parkingColorCommute{
-    top: -15px;
+    top: -10px;
   }
 
   .parkingColorRestricted{
-      top: -15px;
+      top: -10px;
   }
 
   .parkingColorReserved{
-      top: -15px;
+      top: -10px;
   }
   .parkingColorCommuter{
-      top: -15px;
+      top: -10px;
   }
   .parkingColorResident{
-    top: -15px;
+    top: -10px;
   }
   .parkingColorVisitor{
-      top: -15px;
+      top: -10px;
   }
 
   /*styling google vr*/
