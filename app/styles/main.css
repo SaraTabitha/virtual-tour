@@ -1,3 +1,8 @@
+/*Author: Sara Tabitha
+Date: 4/2017
+Description: this file contains all of the styling for the virtual tour organized by no media query to web & mobile
+media queries */
+
 /**/
 /*START SHARED STYLING (REGARDLESS OF WINDOW WIDTH)*/
 /**/
@@ -165,6 +170,9 @@ position: relative;
 float: right;
 top: -24px;
 
+}
+.remove{
+  visibility: hidden;
 }
 .linkText{
   position: relative;
@@ -636,6 +644,15 @@ ul#popupNav li:hover{
   #map > div > div > div:nth-child(10){
     left: 385px !important;
   }
+
+  /*street view back arrow*/
+  #map > div > div:nth-child(2) > div:nth-child(9){
+    left: 379px !important;
+  }
+  /*street view description of location*/
+  #map > div > div:nth-child(2) > div:nth-child(10){
+    left: 405px !important;
+  }
   /*hover for markers*/
   .generalHover{
     height: 105px;
@@ -700,15 +717,15 @@ ul#popupNav li:hover{
 
   /*styling google vr*/
   .vr{
-    height: 347px;
+    height: 500px;
   }
   .vrDiv{
     visibility: hidden;
     z-index: 3;
     position: absolute;
-    top: 50%;
+    top: 45%;
     margin-top: -173.5px;
-    height: 347px;
+    height: 500px;
     width: calc(100% - 377px);
     left: 377px;
   }
@@ -758,7 +775,7 @@ ul#popupNav li:hover{
     width: 10px;
     margin: 10px;
     text-align: center;
-    top: 22%;
+    top: 20%;
   }
   .heading{
     color: black;
@@ -835,7 +852,7 @@ ul#popupNav li:hover{
     padding: 0px;
   }
   /*uwo watermark picture*/
-  .mdl-layout-title.watermark {
+  #watermark {
     height: 109px;
     width: 223px;
     padding-top: 10px;
@@ -997,13 +1014,17 @@ ul#popupNav li:hover{
     margin: 0;
     }
 
-    #mobileHeader > img{
+    #watermark{
     height: 54.5px;
     width: 111.5px;
     position: relative;
     top: -8%;
     }
 
+    #watermarkLink{
+      position: relative;
+      top: -8%;
+    }
     #headerWeb{
     height: 70px;
     }
@@ -1184,6 +1205,14 @@ ul#popupNav li:hover{
     #map > div > div > div.gmnoprint.gm-bundled-control.gm-bundled-control-on-bottom{
         position: fixed !important;
         bottom: 15% !important;
+    }
+    /*street view back arrow*/
+    #map > div > div:nth-child(2) > div:nth-child(9){
+      top: 70px !important;
+    }
+    /*street view description of location*/
+    #map > div > div:nth-child(2) > div:nth-child(10){
+      top: 70px !important;
     }
 
     h1{

@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- UWO Virtual Tour 2.0 Started 3/2017 by Sara Tabitha Mayhew with the help of Material Design, and Google's Maps API & VR View -->
     <title>UWO Virtual Tour 2.0</title>
 
     <!-- Disable tap highlight on IE -->
@@ -70,7 +71,9 @@
                         <div id="menuDrawer" class="mdl-layout__drawer">
                                 <!--header inside drawer-->
                                 <div id="mobileHeader" class="mdl-layout__header-row  main">
-                                        <img class="mdl-layout-title watermark" src="/images/wordmark-large.png">
+                                        <a id="watermarkLink" href="https://www.uwosh.edu/" target="_blank">
+                                          <img id="watermark" class="mdl-layout-title watermark" src="/images/wordmark-large.png">
+                                        </a>
                                 </div>
 
                                 <div id="webSearch">
@@ -322,7 +325,7 @@
                                                       // var webSearchHeight = $("#webSearch").height();
                                                       return(searchHeight - 3);
                                                     }
-                                                    console.log("Height of search div:" + getTotalHeight());
+                                                    // console.log("Height of search div:" + getTotalHeight());
 
                                                     // get element, apply css to the element(not to the class)
                                                     // for mobile: top reset is forced with another .css
@@ -497,7 +500,7 @@
                                                 <!-- If new buildings are added they need to have the click function
                                                      added in main.js for the height change/scroll bar fix-->
                                                 <div id="linkOne" class="mdl-navigation mine">
-                                                        <span class="mdl-navigation__link linkSpan" href="#"><p class="linkText color666 text">Alumni Welcome &amp; Conference Center</p><i id="addOne"class="material-icons color666 add">add</i></span>
+                                                        <span class="mdl-navigation__link linkSpan" href="#"><p class="linkText color666 text">Alumni Welcome &amp; Conference Center</p><i id="addOne"class="material-icons color666 add">add</i><i id="removeOne"class="material-icons color666 add remove">remove</i></span>
                                                 </div>
                                                 <div id="linkOneOptions"  class="tourDrop">
                                                         <ul class="noPad" >
@@ -508,7 +511,7 @@
                                                 </div>
 
                                                 <div id="linkTwo" class="mdl-navigation mine">
-                                                        <span  class="mdl-navigation__link linkSpan " href="#"><p class="linkText color666 text">Campus Center for Equity &amp; Diversity</p><i id="addTwo" class="material-icons color666 add">add</i></span>
+                                                        <span  class="mdl-navigation__link linkSpan " href="#"><p class="linkText color666 text">Campus Center for Equity &amp; Diversity</p><i id="addTwo" class="material-icons color666 add">add</i><i id="removeTwo"class="material-icons color666 add remove">remove</i></span>
                                                 </div>
                                                 <div id="linkTwoOptions"   class="tourDrop">
                                                         <ul class="noPad">
@@ -519,7 +522,7 @@
                                                 </div>
 
                                                 <div id="linkThree" class="mdl-navigation mine">
-                                                        <span  class="mdl-navigation__link linkSpan" href="#"><p class="linkText color666 text">Oshkosh Sports Complex</p><i id="addThree"class="material-icons color666 add">add</i></span>
+                                                        <span  class="mdl-navigation__link linkSpan" href="#"><p class="linkText color666 text">Oshkosh Sports Complex</p><i id="addThree"class="material-icons color666 add">add</i><i id="removeThree"class="material-icons color666 add remove">remove</i></span>
                                                 </div>
                                                 <div id="linkThreeOptions" class="tourDrop">
                                                         <ul class="noPad">
@@ -530,7 +533,7 @@
                                                 </div>
 
                                                 <div id="linkFour" class="mdl-navigation mine">
-                                                        <span  class="mdl-navigation__link linkSpan" href="#"><p class="linkText color666 text">Sidewalk Tour</p><i id="addFour"class="material-icons color666 add">add</i></span>
+                                                        <span  class="mdl-navigation__link linkSpan" href="#"><p class="linkText color666 text">Sidewalk Tour</p><i id="addFour"class="material-icons color666 add">add</i><i id="removeFour"class="material-icons color666 add remove">remove</i></span>
                                                 </div>
                                                 <div id="linkFourOptions" class="tourDrop">
                                                         <ul class="noPad">
@@ -1211,7 +1214,7 @@
                                 <!--  Dempsey Hall About Content -->
                                 <div class="infoContainer">
                                         <div id="dempseyAboutImage" class="imagePopup">
-                                                <img  src="images/campuspictures/centerforequityFull.jpeg">
+                                                <img  src="images/campuspictures/dempseyFull.jpeg">
                                                 <p class="address text">
                                                 800 Algoma Boulevard, Oshkosh, WI, 54901</p>
                                         </div>
@@ -1517,7 +1520,7 @@
                                 <!--  Harrington Hall About Content -->
                                 <div class="infoContainer">
                                         <div id="harringtonAboutImage" class="imagePopup">
-                                                <img  src="images/campuspictures/halseyFull.jpeg">
+                                                <img  src="images/campuspictures/harringtonFull.jpeg">
                                                 <p class="address text">
                                                 845 Elmwood Avenue, Oshkosh, WI, 54901</p>
                                         </div>
@@ -1639,7 +1642,7 @@
                                 <!-- Horizon Village About Content -->
                                 <div class="infoContainer">
                                         <div id="horizonAboutImage" class="imagePopup">
-                                                <img  src="images/campuspictures/heatingplantFull.jpeg">
+                                                <img  src="images/campuspictures/horizonFull.jpeg">
                                                 <p class="address text">
                                                 700 Algoma Boulevard, Oshkosh, WI, 54901</p>
                                         </div>
@@ -1718,11 +1721,13 @@
                                                 <i  class="material-icons">close</i>
                                         </button></h1>
                                 </div>
+
                                 <!-- <nav class="popupNav">
                                 <ul id="popupNav">
                                 <li class="about"> About</li>
                                 </ul>
                                 </nav> -->
+
                                 <div class="infoContainer">
                                         <div class="imagePopup">
                                                 <img  src="images/campuspictures/lincoln-hallFull.jpg">
@@ -1747,11 +1752,13 @@
                                                 <i  class="material-icons">close</i>
                                         </button></h1>
                                 </div>
+
                                 <!-- <nav class="popupNav">
                                 <ul id="popupNav">
                                 <li class="about"> About</li>
                                 </ul>
                                 </nav> -->
+
                                 <div class="infoContainer">
                                         <div class="imagePopup">
                                                 <img  src="images/campuspictures/multiculturaleducationFull.jpeg">
@@ -2048,7 +2055,7 @@
                         <!-- Sage Hall popup -->
                         <div id="sagePopup" class="popup">
                                 <div class="popupBlack">
-                                        <h1 class="text yellow ">Reeve Memorial Union <button id="sagePopupClose" class="closeButton mdl-color-text--white mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
+                                        <h1 class="text yellow ">Sage Hall <button id="sagePopupClose" class="closeButton mdl-color-text--white mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
                                                 <i  class="material-icons">close</i>
                                         </button></h1>
                                 </div>
@@ -2373,7 +2380,7 @@
                                 <nav class="popupNav">
                                         <ul id="popupNav">
                                                 <li id="taylorAboutLi" class="about"> About</li>
-                                                <li id="taylorSustainabilityLi"> Bathrooms</li>
+                                                <li id="taylorSustainabilityLi"> Sustainability</li>
                                         </ul>
                                 </nav>
                                 <!-- Taylor Hall About Content -->
@@ -2454,7 +2461,7 @@
                         <!-- University Police popup -->
                         <div id="policePopup" class="popup">
                                 <div class="popupBlack">
-                                        <h1 class="text yellow ">Swart Hall <button id="policePopupClose" class="closeButton mdl-color-text--white mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
+                                        <h1 class="text yellow ">University Police Station <button id="policePopupClose" class="closeButton mdl-color-text--white mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
                                                 <i  class="material-icons">close</i>
                                         </button></h1>
                                 </div>
@@ -2616,7 +2623,7 @@
                             // styling for iframe
                             $("#titanFieldImage > iframe").addClass("vr");
 
-                          
+
                         }
 
 
@@ -4152,13 +4159,21 @@
 </body>
 <footer>
 
-      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_4zQ9m4LdUjtmEOJG4g05xf2oipMUDuU&callback=initMap"></script>
-      <script src="scripts/map.js"></script>
-      <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+
+      <!-- <script src="https://code.getmdl.io/1.2.1/material.min.js"></script> -->
+      <script src="mdl/material.js"></script>
+
       <!-- build:js scripts/main.min.js -->
       <script src="scripts/main.js"></script>
       <!-- search box functionality -->
       <script src="scripts/search.js"></script>
+      <!-- map -->
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_4zQ9m4LdUjtmEOJG4g05xf2oipMUDuU&callback=initMap"></script>
+      <script src="scripts/map.js"></script>
+
+
+
+
 
       <!-- endbuild -->
 

@@ -9,7 +9,31 @@ function initMap() {
             center: uwo
         });
         // sets the image for the marker
-        var image = 'images/marker_yellow.png';
+        var purpleMarker = 'images/markers/marker_purple.png';
+        var pinkMarker = 'images/markers/marker_pink.png';
+        var redMarker = 'images/markers/marker_red.png';
+        var orangeMarker = 'images/markers/marker_orange.png';
+        var yellowMarker = 'images/markers/marker_yellow.png';
+        var greenMarker = 'images/markers/marker_green.png';
+        var skyblueMarker = 'images/markers/marker_skyblue.png';
+
+        var acaFMarker = 'images/markers/acafmarker.png';
+        var athMarker = 'images/markers/athleticsmarker.png';
+        var acaSMarker = 'images/markers/acaservicesmarker.png';
+        var campSMarker = 'images/markers/campservicesmarker.png';
+        var resHMarker = 'images/markers/reshallsmarker.png';
+        var diningMarker = 'images/markers/diningmarker.png';
+        var stuRMarker = 'images/markers/sturecmarker.png';
+
+        var maroonMarker = 'images/markers/marker_maroon.png';
+        var lavenderMarker = 'images/markers/marker_lavender.png';
+        var lightpinkMarker = 'images/markers/marker_lightpink.png';
+        var lightyellowMarker = 'images/markers/marker_lightyellow.png';
+        var lightorangeMarker = 'images/markers/marker_lightorange.png';
+        var darkgreenMarker = 'images/markers/marker_darkgreen.png';
+        var navyMarker = 'images/markers/marker_navy.png';
+
+        var image = 'images/markers/marker_yellow.png';
 
         // buildings array, sets locations for all of the places
         var buildings = [
@@ -107,183 +131,183 @@ function initMap() {
         // create markers for buildings
         var albeeMarker = new google.maps.Marker({
             position: buildings[0],
-            icon: image
+            icon: yellowMarker
         });
         var baseballMarker = new google.maps.Marker({
             position: buildings[1],
-            icon: image
+            icon: yellowMarker
         });
         var alumniMarker = new google.maps.Marker({
             position: buildings[2],
-            icon: image
+            icon: yellowMarker
         });
         var acMarker = new google.maps.Marker({
             position: buildings[3],
-            icon: image
+            icon: yellowMarker
         });
         var athleticMarker = new google.maps.Marker({
             position: buildings[4],
-            icon: image
+            icon: yellowMarker
         });
         var blackhawkMarker = new google.maps.Marker({
             position: buildings[5],
-            icon: image
+            icon: yellowMarker
         });
         var biodigesterMarker = new google.maps.Marker({
             position: buildings[6],
-            icon: image
+            icon: yellowMarker
         });
         var buckstaffMarker = new google.maps.Marker({
             position: buildings[7],
-            icon: image
+            icon: yellowMarker
         });
         var equityMarker = new google.maps.Marker({
             position: buildings[8],
-            icon: image
+            icon: yellowMarker
         });
         var campusMarker = new google.maps.Marker({
             position: buildings[9],
-            icon: image
+            icon: yellowMarker
         });
         var ceramicsMarker = new google.maps.Marker({
             position: buildings[10],
-            icon: image
+            icon: yellowMarker
         });
         var clowMarker = new google.maps.Marker({
             position: buildings[11],
-            icon: image
+            icon: yellowMarker
         });
         var gardensMarker = new google.maps.Marker({
             position: buildings[12],
-            icon: image
+            icon: yellowMarker
         });
         var dempseyMarker = new google.maps.Marker({
             position: buildings[13],
-            icon: image
+            icon: yellowMarker
         });
         var donnerMarker = new google.maps.Marker({
             position: buildings[14],
-            icon: image
+            icon: yellowMarker
         });
         var eastMarker = new google.maps.Marker({
             position: buildings[15],
-            icon: image
+            icon: yellowMarker
         });
         var environmentalMarker = new google.maps.Marker({
             position: buildings[16],
-            icon: image
+            icon: yellowMarker
         });
         var evansMarker = new google.maps.Marker({
             position: buildings[17],
-            icon: image
+            icon: yellowMarker
         });
         var fletcherMarker = new google.maps.Marker({
             position: buildings[18],
-            icon: image
+            icon: yellowMarker
         });
         var fredricMarker = new google.maps.Marker({
             position: buildings[19],
-            icon: image
+            icon: yellowMarker
         });
         var gruenhagenMarker = new google.maps.Marker({
             position: buildings[20],
-            icon: image
+            icon: yellowMarker
         });
         var halseyMarker = new google.maps.Marker({
             position: buildings[21],
-            icon: image
+            icon: yellowMarker
         });
         var harringtonMarker = new google.maps.Marker({
             position: buildings[22],
-            icon: image
+            icon: yellowMarker
         });
         var heatingMarker = new google.maps.Marker({
             position: buildings[23],
-            icon: image
+            icon: yellowMarker
         });
         var parkingRampMarker = new google.maps.Marker({
             position: buildings[24],
-            icon: image
+            icon: yellowMarker
         });
         var horizonMarker = new google.maps.Marker({
             position: buildings[25],
-            icon: image
+            icon: yellowMarker
         });
         var kolfMarker = new google.maps.Marker({
             position: buildings[26],
-            icon: image
+            icon: yellowMarker
         });
         var lincolnMarker = new google.maps.Marker({
             position: buildings[27],
-            icon: image
+            icon: yellowMarker
         });
         var multiculturalMarker = new google.maps.Marker({
             position: buildings[28],
-            icon: image
+            icon: yellowMarker
         });
         var nursingMarker = new google.maps.Marker({
             position: buildings[29],
-            icon: image
+            icon: yellowMarker
         });
         var oviattMarker = new google.maps.Marker({
             position: buildings[30],
-            icon: image
+            icon: yellowMarker
         });
         var pollockMarker = new google.maps.Marker({
             position: buildings[31],
-            icon: image
+            icon: yellowMarker
         });
         var polkMarker = new google.maps.Marker({
             position: buildings[32],
-            icon: image
+            icon: yellowMarker
         });
         var radfordMarker = new google.maps.Marker({
             position: buildings[33],
-            icon: image
+            icon: yellowMarker
         });
         var reeveMarker = new google.maps.Marker({
             position: buildings[34],
-            icon: image
+            icon: yellowMarker
         });
         var sageMarker = new google.maps.Marker({
             position: buildings[35],
-            icon: image
+            icon: yellowMarker
         });
         var scottMarker = new google.maps.Marker({
             position: buildings[36],
-            icon: image
+            icon: yellowMarker
         });
         var stewartMarker = new google.maps.Marker({
             position: buildings[37],
-            icon: image
+            icon: yellowMarker
         });
         var recreationMarker = new google.maps.Marker({
             position: buildings[38],
-            icon: image
+            icon: yellowMarker
         });
         var successMarker = new google.maps.Marker({
             position: buildings[39],
-            icon: image
+            icon: yellowMarker
         });
         var swartMarker = new google.maps.Marker({
             position: buildings[40],
-            icon: image
+            icon: yellowMarker
         });
         var taylorMarker = new google.maps.Marker({
             position: buildings[41],
-            icon: image
+            icon: yellowMarker
         });
         var titanMarker = new google.maps.Marker({
             position: buildings[42],
-            icon: image
+            icon: yellowMarker
         });
         var policeMarker = new google.maps.Marker({
             position: buildings[43],
-            icon: image
+            icon: yellowMarker
         });
         var websterMarker = new google.maps.Marker({
             position: buildings[44],
-            icon: image
+            icon: yellowMarker
         });
 
         // declaring set and remove functions for buildings
@@ -407,6 +431,12 @@ function initMap() {
                 $("#albeeHover").removeClass("hoverOpen");
                 closeAllHover();
             }
+        });
+        // trying to make hover text for marker
+        albeeMarker.addListener('mouseover', function(){
+          
+          console.log("you hovered over me!");
+
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
@@ -2573,147 +2603,147 @@ function initMap() {
         // parking lots markers
         var elevenMarker = new google.maps.Marker({
             position: parkingLots[0],
-            icon: image
+            icon: purpleMarker
         });
         var thirtyfiveMarker = new google.maps.Marker({
             position: parkingLots[1],
-            icon: image
+            icon: purpleMarker
         });
         var twentysevenMarker = new google.maps.Marker({
             position: parkingLots[2],
-            icon: image
+            icon: purpleMarker
         });
         var twentyoneMarker = new google.maps.Marker({
             position: parkingLots[3],
-            icon: image
+            icon: purpleMarker
         });
         var twentysixMarker = new google.maps.Marker({
             position: parkingLots[4],
-            icon: image
+            icon: purpleMarker
         });
         var fourMarker = new google.maps.Marker({
             position: parkingLots[5],
-            icon: image
+            icon: purpleMarker
         });
         var fouraMarker = new google.maps.Marker({
             position: parkingLots[6],
-            icon: image
+            icon: purpleMarker
         });
         var sixteenMarker = new google.maps.Marker({
             position: parkingLots[7],
-            icon: image
+            icon: purpleMarker
         });
         var seventeenMarker = new google.maps.Marker({
             position: parkingLots[8],
-            icon: image
+            icon: purpleMarker
         });
         var twentynineMarker = new google.maps.Marker({
             position: parkingLots[9],
-            icon: image
+            icon: purpleMarker
         });
         var twentyfiveMarker = new google.maps.Marker({
             position: parkingLots[10],
-            icon: image
+            icon: purpleMarker
         });
         var eightMarker = new google.maps.Marker({
             position: parkingLots[11],
-            icon: image
+            icon: purpleMarker
         });
         var thirtythreeMarker = new google.maps.Marker({
             position: parkingLots[12],
-            icon: image
+            icon: purpleMarker
         });
         var thirtyfourMarker = new google.maps.Marker({
             position: parkingLots[13],
-            icon: image
+            icon: purpleMarker
         });
         var twentyeightMarker = new google.maps.Marker({
             position: parkingLots[14],
-            icon: image
+            icon: purpleMarker
         });
         var twentythreeMarker = new google.maps.Marker({
             position: parkingLots[15],
-            icon: image
+            icon: purpleMarker
         });
         var fourteenaMarker = new google.maps.Marker({
             position: parkingLots[16],
-            icon: image
+            icon: purpleMarker
         });
         var fourteenbMarker = new google.maps.Marker({
             position: parkingLots[17],
-            icon: image
+            icon: purpleMarker
         });
         var fourteencMarker = new google.maps.Marker({
             position: parkingLots[18],
-            icon: image
+            icon: purpleMarker
         });
         var sevenMarker = new google.maps.Marker({
             position: parkingLots[19],
-            icon: image
+            icon: purpleMarker
         });
         var fiveaMarker = new google.maps.Marker({
             position: parkingLots[20],
-            icon: image
+            icon: purpleMarker
         });
         var fiveMarker = new google.maps.Marker({
             position: parkingLots[21],
-            icon: image
+            icon: purpleMarker
         });
         var sevenaMarker = new google.maps.Marker({
             position: parkingLots[22],
-            icon: image
+            icon: purpleMarker
         });
         var fifteenMarker = new google.maps.Marker({
             position: parkingLots[23],
-            icon: image
+            icon: purpleMarker
         });
         var thirtytwoMarker = new google.maps.Marker({
             position: parkingLots[24],
-            icon: image
+            icon: purpleMarker
         });
         var thirteenMarker = new google.maps.Marker({
             position: parkingLots[25],
-            icon: image
+            icon: purpleMarker
         });
         var twelveMarker = new google.maps.Marker({
             position: parkingLots[26],
-            icon: image
+            icon: purpleMarker
         });
         var sixaMarker = new google.maps.Marker({
             position: parkingLots[27],
-            icon: image
+            icon: purpleMarker
         });
         var sixMarker = new google.maps.Marker({
             position: parkingLots[28],
-            icon: image
+            icon: purpleMarker
         });
         var tenMarker = new google.maps.Marker({
             position: parkingLots[29],
-            icon: image
+            icon: purpleMarker
         });
         var nineaMarker = new google.maps.Marker({
             position: parkingLots[30],
-            icon: image
+            icon: purpleMarker
         });
         var nineMarker = new google.maps.Marker({
             position: parkingLots[31],
-            icon: image
+            icon: purpleMarker
         });
         var eighteenMarker = new google.maps.Marker({
             position: parkingLots[32],
-            icon: image
+            icon: purpleMarker
         });
         var thirtyMarker = new google.maps.Marker({
             position: parkingLots[33],
-            icon: image
+            icon: purpleMarker
         });
         var thirtynineMarker = new google.maps.Marker({
             position: parkingLots[34],
-            icon: image
+            icon: purpleMarker
         });
         var parkingRampParkingMarker = new google.maps.Marker({
             position: buildings[24],
-            icon: image
+            icon: purpleMarker
         });
 
         // set parking lot markers
@@ -3418,95 +3448,95 @@ function initMap() {
         // accEnt markers
         var albeeAccEntMarker = new google.maps.Marker({
             position: buildings[0],
-            icon: image
+            icon: orangeMarker
         });
         var acAccEntMarker = new google.maps.Marker({
             position: buildings[3],
-            icon: image
+            icon: orangeMarker
         });
         var blackhawkAccEntMarker = new google.maps.Marker({
             position: buildings[5],
-            icon: image
+            icon: orangeMarker
         });
         var equityAccEntMarker = new google.maps.Marker({
             position: buildings[8],
-            icon: image
+            icon: orangeMarker
         });
         var clowAccEntMarker = new google.maps.Marker({
             position: buildings[11],
-            icon: image
+            icon: orangeMarker
         });
         var dempseyAccEntMarker = new google.maps.Marker({
             position: buildings[13],
-            icon: image
+            icon: orangeMarker
         });
         var donnerAccEntMarker = new google.maps.Marker({
             position: buildings[14],
-            icon: image
+            icon: orangeMarker
         });
         var fletcherAccEntMarker = new google.maps.Marker({
             position: buildings[18],
-            icon: image
+            icon: orangeMarker
         });
         var fredricAccEntMarker = new google.maps.Marker({
             position: buildings[19],
-            icon: image
+            icon: orangeMarker
         });
         var gruenhagenAccEntMarker = new google.maps.Marker({
             position: buildings[20],
-            icon: image
+            icon: orangeMarker
         });
         var halseyAccEntMarker = new google.maps.Marker({
             position: buildings[21],
-            icon: image
+            icon: orangeMarker
         });
         var harringtonAccEntMarker = new google.maps.Marker({
             position: buildings[22],
-            icon: image
+            icon: orangeMarker
         });
         var kolfAccEntMarker = new google.maps.Marker({
             position: buildings[26],
-            icon: image
+            icon: orangeMarker
         });
         var nursingAccEntMarker = new google.maps.Marker({
             position: buildings[29],
-            icon: image
+            icon: orangeMarker
         });
         var polkAccEntMarker = new google.maps.Marker({
             position: buildings[32],
-            icon: image
+            icon: orangeMarker
         });
         var radfordAccEntMarker = new google.maps.Marker({
             position: buildings[33],
-            icon: image
+            icon: orangeMarker
         });
         var reeveAccEntMarker = new google.maps.Marker({
             position: buildings[34],
-            icon: image
+            icon: orangeMarker
         });
         var scottAccEntMarker = new google.maps.Marker({
             position: buildings[36],
-            icon: image
+            icon: orangeMarker
         });
         var stewartAccEntMarker = new google.maps.Marker({
             position: buildings[37],
-            icon: image
+            icon: orangeMarker
         });
         var successAccEntMarker = new google.maps.Marker({
             position: buildings[39],
-            icon: image
+            icon: orangeMarker
         });
         var swartAccEntMarker = new google.maps.Marker({
             position: buildings[40],
-            icon: image
+            icon: orangeMarker
         });
         var taylorAccEntMarker = new google.maps.Marker({
             position: buildings[41],
-            icon: image
+            icon: orangeMarker
         });
         var websterAccEntMarker = new google.maps.Marker({
             position: buildings[44],
-            icon: image
+            icon: orangeMarker
         });
 
         // accEnt hover cards for markers
@@ -3851,103 +3881,103 @@ function initMap() {
         var womensCenter = {lat: 44.024816, lng: -88.546638};
         var womensCenterMarker = new google.maps.Marker({
             position: womensCenter,
-            icon: image
+            icon: pinkMarker
         });
 
         var titanOne = {lat: 44.024401, lng: -88.564253};
         var titanOneMarker = new google.maps.Marker({
             position: titanOne,
-            icon: image
+            icon: pinkMarker
         });
 
         var titanTwo = {lat: 44.023007, lng:  -88.564339};
         var titanTwoMarker = new google.maps.Marker({
             position: titanTwo,
-            icon: image
+            icon: pinkMarker
         });
         var elevenAccParMarker = new google.maps.Marker({
             position: parkingLots[0],
-            icon: image
+            icon: pinkMarker
         });
         var fourAccParMarker = new google.maps.Marker({
             position: parkingLots[5],
-            icon: image
+            icon: pinkMarker
         });
         var fouraAccParMarker = new google.maps.Marker({
             position: parkingLots[6],
-            icon: image
+            icon: pinkMarker
         });
         var sixteenAccParMarker = new google.maps.Marker({
             position: parkingLots[7],
-            icon: image
+            icon: pinkMarker
         });
         var seventeenAccParMarker = new google.maps.Marker({
             position: parkingLots[8],
-            icon: image
+            icon: pinkMarker
         });
         var twentynineAccParMarker = new google.maps.Marker({
             position: parkingLots[9],
-            icon: image
+            icon: pinkMarker
         });
         var twentyfiveAccParMarker = new google.maps.Marker({
             position: parkingLots[10],
-            icon: image
+            icon: pinkMarker
         });
         var thirtythreeAccParMarker = new google.maps.Marker({
             position: parkingLots[12],
-            icon: image
+            icon: pinkMarker
         });
         var fourteenaAccParMarker = new google.maps.Marker({
             position: parkingLots[16],
-            icon: image
+            icon: pinkMarker
         });
         var sevenaAccParMarker = new google.maps.Marker({
             position: parkingLots[22],
-            icon: image
+            icon: pinkMarker
         });
         var thirteenAccParMarker = new google.maps.Marker({
             position: parkingLots[25],
-            icon: image
+            icon: pinkMarker
         });
         var thirtyfourAccParMarker = new google.maps.Marker({
             position: parkingLots[13],
-            icon: image
+            icon: pinkMarker
         });
         var twentyeightAccParMarker = new google.maps.Marker({
             position: parkingLots[14],
-            icon: image
+            icon: pinkMarker
         });
         var twentythreeAccParMarker = new google.maps.Marker({
             position: parkingLots[15],
-            icon: image
+            icon: pinkMarker
         });
         var fifteenAccParMarker = new google.maps.Marker({
             position: parkingLots[23],
-            icon: image
+            icon: pinkMarker
         });
         var thirtytwoAccParMarker = new google.maps.Marker({
             position: parkingLots[24],
-            icon: image
+            icon: pinkMarker
         });
         var tenAccParMarker = new google.maps.Marker({
             position: parkingLots[29],
-            icon: image
+            icon: pinkMarker
         });
         var twelveAccParMarker = new google.maps.Marker({
             position: parkingLots[26],
-            icon: image
+            icon: pinkMarker
         });
         var sixaAccParMarker = new google.maps.Marker({
             position: parkingLots[27],
-            icon: image
+            icon: pinkMarker
         });
         var sixAccParMarker = new google.maps.Marker({
             position: parkingLots[28],
-            icon: image
+            icon: pinkMarker
         });
         var eighteenAccParMarker = new google.maps.Marker({
             position: parkingLots[32],
-            icon: image
+            icon: pinkMarker
         });
         //  hover event listeners for accessible parking here
         elevenAccParMarker.addListener('click', function(){
@@ -4365,115 +4395,115 @@ function initMap() {
         // creating emergency phone markers
         var phoneZero = new google.maps.Marker({
             position: emergencyPhones[0],
-            icon: image
+            icon: skyblueMarker
         });
         var phoneOne = new google.maps.Marker({
             position: emergencyPhones[1],
-            icon: image
+            icon: skyblueMarker
         });
         var phoneTwo = new google.maps.Marker({
             position: emergencyPhones[2],
-            icon: image
+            icon: skyblueMarker
         });
         var phoneThree = new google.maps.Marker({
             position: emergencyPhones[3],
-            icon: image
+            icon: skyblueMarker
         });
         var phoneFour = new google.maps.Marker({
             position: emergencyPhones[4],
-            icon: image
+            icon: skyblueMarker
         });
         var phoneFive= new google.maps.Marker({
             position: emergencyPhones[5],
-            icon: image
+            icon: skyblueMarker
         });
         var phoneSix = new google.maps.Marker({
             position: emergencyPhones[6],
-            icon: image
+            icon: skyblueMarker
         });
         var phoneSeven = new google.maps.Marker({
             position: emergencyPhones[7],
-            icon: image
+            icon: skyblueMarker
         });
         var phoneEight = new google.maps.Marker({
             position: emergencyPhones[8],
-            icon: image
+            icon: skyblueMarker
         });
         var phoneNine = new google.maps.Marker({
             position: emergencyPhones[9],
-            icon: image
+            icon: skyblueMarker
         });
         var phoneTen = new google.maps.Marker({
             position: emergencyPhones[10],
-            icon: image
+            icon: skyblueMarker
         });
         var phoneEleven = new google.maps.Marker({
             position: emergencyPhones[11],
-            icon: image
+            icon: skyblueMarker
         });
         var phoneTwelve = new google.maps.Marker({
             position: emergencyPhones[12],
-            icon: image
+            icon: skyblueMarker
         });
         var phoneThirteen = new google.maps.Marker({
             position: emergencyPhones[13],
-            icon: image
+            icon: skyblueMarker
         });
         var phoneFourteen = new google.maps.Marker({
             position: emergencyPhones[14],
-            icon: image
+            icon: skyblueMarker
         });
         var phoneFifteen = new google.maps.Marker({
             position: emergencyPhones[15],
-            icon: image
+            icon: skyblueMarker
         });
         var phoneSixteen = new google.maps.Marker({
             position: emergencyPhones[16],
-            icon: image
+            icon: skyblueMarker
         });
         var phoneSeventeen = new google.maps.Marker({
             position: emergencyPhones[17],
-            icon: image
+            icon: skyblueMarker
         });
         var phoneEighteen = new google.maps.Marker({
             position: emergencyPhones[18],
-            icon: image
+            icon: skyblueMarker
         });
         var phoneNineteen = new google.maps.Marker({
             position: emergencyPhones[19],
-            icon: image
+            icon: skyblueMarker
         });
         var phoneTwenty = new google.maps.Marker({
             position: emergencyPhones[20],
-            icon: image
+            icon: skyblueMarker
         });
         var phoneTwentyOne = new google.maps.Marker({
             position: emergencyPhones[21],
-            icon: image
+            icon: skyblueMarker
         });
         var phoneTwentyTwo = new google.maps.Marker({
             position: emergencyPhones[22],
-            icon: image
+            icon: skyblueMarker
         });
         var phoneTwentyThree = new google.maps.Marker({
             position: emergencyPhones[23],
-            icon: image
+            icon: skyblueMarker
         });
         var phoneTwentyFour = new google.maps.Marker({
             position: emergencyPhones[24],
-            icon: image
+            icon: skyblueMarker
         });
         var phoneTwentyFive = new google.maps.Marker({
             position: emergencyPhones[25],
-            icon: image
+            icon: skyblueMarker
         });
         var phoneTwentySix = new google.maps.Marker({
             position: emergencyPhones[26],
-            icon: image
+            icon: skyblueMarker
         });
         var phoneTwentySeven = new google.maps.Marker({
             position: emergencyPhones[27],
-            icon: image
+            icon: skyblueMarker
         });
         // function for setting emergency phone markers
         function setEmergencyPhones(){
@@ -4550,51 +4580,51 @@ function initMap() {
         // creating sust markers
         var albeeSustMarker = new google.maps.Marker({
             position: buildings[0],
-            icon: image
+            icon: redMarker
         });
         var alumniSustMarker = new google.maps.Marker({
             position: buildings[2],
-            icon: image
+            icon: redMarker
         });
         var blackhawkSustMarker = new google.maps.Marker({
             position: buildings[5],
-            icon: image
+            icon: redMarker
         });
         var biodigesterSustMarker = new google.maps.Marker({
             position: buildings[6],
-            icon: image
+            icon: redMarker
         });
         var heatingSustMarker = new google.maps.Marker({
             position: buildings[23],
-            icon: image
+            icon: redMarker
         });
         var horizonSustMarker = new google.maps.Marker({
             position: buildings[25],
-            icon: image
+            icon: redMarker
         });
         var reeveSustMarker = new google.maps.Marker({
             position: buildings[34],
-            icon: image
+            icon: redMarker
         });
         var sageSustMarker = new google.maps.Marker({
             position: buildings[35],
-            icon: image
+            icon: redMarker
         });
         var recreationSustMarker = new google.maps.Marker({
             position: buildings[38],
-            icon: image
+            icon: redMarker
         });
         var successSustMarker = new google.maps.Marker({
             position: buildings[39],
-            icon: image
+            icon: redMarker
         });
         var taylorSustMarker = new google.maps.Marker({
             position: buildings[41],
-            icon: image
+            icon: redMarker
         });
         var titanSustMarker = new google.maps.Marker({
             position: buildings[42],
-            icon: image
+            icon: redMarker
         });
 
         // sust hovers
@@ -4785,59 +4815,59 @@ function initMap() {
         // create gender markers
         var acGenderMarker = new google.maps.Marker({
             position: buildings[3],
-            icon: image
+            icon: greenMarker
         });
         var blackhawkGenderMarker = new google.maps.Marker({
             position: buildings[5],
-            icon: image
+            icon: greenMarker
         });
         var campusGenderMarker = new google.maps.Marker({
             position: buildings[9],
-            icon: image
+            icon: greenMarker
         });
         var dempseyGenderMarker = new google.maps.Marker({
             position: buildings[13],
-            icon: image
+            icon: greenMarker
         });
         var halseyGenderMarker = new google.maps.Marker({
             position: buildings[21],
-            icon: image
+            icon: greenMarker
         });
         var harringtonGenderMarker = new google.maps.Marker({
             position: buildings[22],
-            icon: image
+            icon: greenMarker
         });
         var kolfGenderMarker = new google.maps.Marker({
             position: buildings[26],
-            icon: image
+            icon: greenMarker
         });
         var nursingGenderMarker = new google.maps.Marker({
             position: buildings[29],
-            icon: image
+            icon: greenMarker
         });
         var reeveGenderMarker = new google.maps.Marker({
             position: buildings[34],
-            icon: image
+            icon: greenMarker
         });
         var sageGenderMarker = new google.maps.Marker({
             position: buildings[35],
-            icon: image
+            icon: greenMarker
         });
         var recreationGenderMarker = new google.maps.Marker({
             position: buildings[38],
-            icon: image
+            icon: greenMarker
         });
         var successGenderMarker = new google.maps.Marker({
             position: buildings[39],
-            icon: image
+            icon: greenMarker
         });
         var swartGenderMarker = new google.maps.Marker({
             position: buildings[40],
-            icon: image
+            icon: greenMarker
         });
         var policeGenderMarker = new google.maps.Marker({
             position: buildings[43],
-            icon: image
+            icon: greenMarker
         });
 
 
@@ -5081,59 +5111,59 @@ function initMap() {
         // AccaF markers
         var albeeAccaFMarker = new google.maps.Marker({
             position: buildings[0],
-            icon: image
+            icon: acaFMarker
         });
         var acAccaFMarker = new google.maps.Marker({
             position: buildings[3],
-            icon: image
+            icon: acaFMarker
         });
         var ceramicsAccaFMarker = new google.maps.Marker({
             position: buildings[10],
-            icon: image
+            icon: acaFMarker
         });
         var clowAccaFMarker = new google.maps.Marker({
             position: buildings[11],
-            icon: image
+            icon: acaFMarker
         });
         var environmentalAccaFMarker = new google.maps.Marker({
             position: buildings[16],
-            icon: image
+            icon: acaFMarker
         });
         var fredricAccaFMarker = new google.maps.Marker({
             position: buildings[19],
-            icon: image
+            icon: acaFMarker
         });
         var halseyAccaFMarker = new google.maps.Marker({
             position: buildings[21],
-            icon: image
+            icon: acaFMarker
         });
         var harringtonAccaFMarker = new google.maps.Marker({
             position: buildings[22],
-            icon: image
+            icon: acaFMarker
         });
         var kolfAccaFMarker = new google.maps.Marker({
             position: buildings[26],
-            icon: image
+            icon: acaFMarker
         });
         var nursingAccaFMarker = new google.maps.Marker({
             position: buildings[29],
-            icon: image
+            icon: acaFMarker
         });
         var polkAccaFMarker = new google.maps.Marker({
             position: buildings[32],
-            icon: image
+            icon: acaFMarker
         });
         var radfordAccaFMarker = new google.maps.Marker({
             position: buildings[33],
-            icon: image
+            icon: acaFMarker
         });
         var sageAccaFMarker = new google.maps.Marker({
             position: buildings[35],
-            icon: image
+            icon: acaFMarker
         });
         var swartAccaFMarker = new google.maps.Marker({
             position: buildings[40],
-            icon: image
+            icon: acaFMarker
         });
 
         // hover for AccaF
@@ -5350,28 +5380,28 @@ function initMap() {
         // create markers for athletics
         var albeeAthMarker = new google.maps.Marker({
             position: buildings[0],
-            icon: image
+            icon: athMarker
         });
         var baseballAthMarker = new google.maps.Marker({
             position: buildings[1],
-            icon: image
+            icon: athMarker
         });
         var athleticAthMarker = new google.maps.Marker({
             position: buildings[4],
-            icon: image
+            icon: athMarker
         });
         var eastAthMarker = new google.maps.Marker({
             position: buildings[15],
-            icon: image
+            icon: athMarker
         });
         var kolfAthMarker = new google.maps.Marker({
             position: buildings[26],
-            icon: image
+            icon: athMarker
         });
 
         var titanAthMarker = new google.maps.Marker({
             position: buildings[42],
-            icon: image
+            icon: athMarker
         });
         // athletics marker hover
         albeeAthMarker.addListener('click', function(){
@@ -5475,19 +5505,19 @@ function initMap() {
         // AccaS markers
         var equityAccaSMarker = new google.maps.Marker({
             position: buildings[8],
-            icon: image
+            icon: acaSMarker
         });
         var nursingAccaSMarker = new google.maps.Marker({
             position: buildings[29],
-            icon: image
+            icon: acaSMarker
         });
         var successAccaSMarker = new google.maps.Marker({
             position: buildings[39],
-            icon: image
+            icon: acaSMarker
         });
         var swartAccaSMarker = new google.maps.Marker({
             position: buildings[40],
-            icon: image
+            icon: acaSMarker
         });
 
         // AccaS hover
@@ -5566,39 +5596,39 @@ function initMap() {
         // CampS markers
         var equityCampSMarker = new google.maps.Marker({
             position: buildings[8],
-            icon: image
+            icon: campSMarker
         });
         var campusCampSMarker = new google.maps.Marker({
             position: buildings[9],
-            icon: image
+            icon: campSMarker
         });
         var dempseyCampSMarker = new google.maps.Marker({
             position: buildings[13],
-            icon: image
+            icon: campSMarker
         });
         var multiculturalCampSMarker = new google.maps.Marker({
             position: buildings[28],
-            icon: image
+            icon: campSMarker
         });
         var pollockCampSMarker = new google.maps.Marker({
             position: buildings[31],
-            icon: image
+            icon: campSMarker
         });
         var radfordCampSMarker = new google.maps.Marker({
             position: buildings[33],
-            icon: image
+            icon: campSMarker
         });
         var reeveCampSMarker = new google.maps.Marker({
             position: buildings[34],
-            icon: image
+            icon: campSMarker
         });
         var recreationCampSMarker = new google.maps.Marker({
             position: buildings[38],
-            icon: image
+            icon: campSMarker
         });
         var successCampSMarker = new google.maps.Marker({
             position: buildings[39],
-            icon: image
+            icon: campSMarker
         });
 
 
@@ -5748,39 +5778,39 @@ function initMap() {
         // ResH markers
         var donnerResHMarker = new google.maps.Marker({
             position: buildings[14],
-            icon: image
+            icon: resHMarker
         });
         var evansResHMarker = new google.maps.Marker({
             position: buildings[17],
-            icon: image
+            icon: resHMarker
         });
         var fletcherResHMarker = new google.maps.Marker({
             position: buildings[18],
-            icon: image
+            icon: resHMarker
         });
         var gruenhagenResHMarker = new google.maps.Marker({
             position: buildings[20],
-            icon: image
+            icon: resHMarker
         });
         var horizonResHMarker = new google.maps.Marker({
             position: buildings[25],
-            icon: image
+            icon: resHMarker
         });
         var stewartResHMarker = new google.maps.Marker({
             position: buildings[37],
-            icon: image
+            icon: resHMarker
         });
         var scottResHMarker = new google.maps.Marker({
             position: buildings[36],
-            icon: image
+            icon: resHMarker
         });
         var taylorResHMarker = new google.maps.Marker({
             position: buildings[41],
-            icon: image
+            icon: resHMarker
         });
         var websterResHMarker = new google.maps.Marker({
             position: buildings[44],
-            icon: image
+            icon: resHMarker
         });
 
         // ResH hover
@@ -5928,27 +5958,27 @@ function initMap() {
         // dining markers
         var blackhawkDiningMarker = new google.maps.Marker({
             position: buildings[5],
-            icon: image
+            icon: diningMarker
         });
         var clowDiningMarker = new google.maps.Marker({
             position: buildings[11],
-            icon: image
+            icon: diningMarker
         });
         var halseyDiningMarker = new google.maps.Marker({
             position: buildings[21],
-            icon: image
+            icon: diningMarker
         });
         var reeveDiningMarker = new google.maps.Marker({
             position: buildings[34],
-            icon: image
+            icon: diningMarker
         });
         var sageDiningMarker = new google.maps.Marker({
             position: buildings[35],
-            icon: image
+            icon: diningMarker
         });
         var scottDiningMarker = new google.maps.Marker({
             position: buildings[36],
-            icon: image
+            icon: diningMarker
         });
 
         // dining hover
@@ -6053,11 +6083,11 @@ function initMap() {
         // StuR markers
         var reeveStuRMarker = new google.maps.Marker({
             position: buildings[34],
-            icon: image
+            icon: stuRMarker
         });
         var recreationStuRMarker = new google.maps.Marker({
             position: buildings[38],
-            icon: image
+            icon: stuRMarker
         });
 
         // StuR hover
@@ -6124,6 +6154,8 @@ function initMap() {
                 removeStuR();
             }
         });
+
+
 
         // close all hover cards
         function closeAllHover(){
@@ -6211,6 +6243,76 @@ function initMap() {
             titanOneHoverCard.close(map, titanOneMarker);
             titanTwoHoverCard.close(map, titanTwoMarker);
         }
+
+        // close all hover when checkboxes are unselected
+        // (prevents being able to have multiple hovers open when going between filters)
+
+        // ! need to close based on specific grouping of markers :s
+        $("#buildings").click(function(){
+          var check = !$("#buildings").prop("checked");
+          // when closing a filter
+          if(check === true){
+            // closeAllHover();
+          }
+        });
+
+        $("#parkingLots").click(function(){
+          var check = !$("#parkingLots").prop("checked");
+          // when closing a filter
+          if(check === true){
+            // closeAllHover();
+          }
+        });
+
+        $("#accEnt").click(function(){
+          var check = !$("#accEnt").prop("checked");
+          // when closing a filter
+          if(check === true){
+            // closeAllHover();
+          }
+        });
+
+        $("#accPar").click(function(){
+          var check = !$("#accPar").prop("checked");
+          // when closing a filter
+          if(check === true){
+            // closeAllHover();
+          }
+        });
+
+        $("#emergency").click(function(){
+          var check = !$("#emergency").prop("checked");
+          // when closing a filter
+          if(check === true){
+            // closeAllHover();
+          }
+        });
+
+        $("#sust").click(function(){
+          var check = !$("#sust").prop("checked");
+          // when closing a filter
+          if(check === true){
+            // closeAllHover();
+          }
+        });
+
+        $("#gender").click(function(){
+          var check = !$("#gender").prop("checked");
+          // when closing a filter
+          if(check === true){
+            // closeAllHover();
+          }
+        });
+
+        $("#selectallcheck").click(function(){
+          var check = !$("#selectallcheck").prop("checked");
+          // when closing a filter
+          if(check === true){
+            closeAllHover();
+          }
+        });
+
+
 
 
 }
