@@ -6548,6 +6548,71 @@ function initMap() {
           }
         });
 
+        $("#accaF").click(function(){
+          var check = !$("#accaF").prop("checked");
+          // when closing a filter
+          if(check === true){
+            closeAllAccaF();
+          }
+        });
+
+        $("#ath").click(function(){
+          var check = !$("#ath").prop("checked");
+          // when closing a filter
+          if(check === true){
+            closeAllAth();
+          }
+        });
+
+        $("#accS").click(function(){
+          var check = !$("#accS").prop("checked");
+          // when closing a filter
+          if(check === true){
+            closeAllAccaS();
+          }
+        });
+
+        $("#campS").click(function(){
+          var check = !$("#campS").prop("checked");
+          // when closing a filter
+          if(check === true){
+            closeAllCampS();
+          }
+        });
+
+        $("#resH").click(function(){
+          var check = !$("#resH").prop("checked");
+          // when closing a filter
+          if(check === true){
+            closeAllResH();
+          }
+        });
+
+        $("#dining").click(function(){
+          var check = !$("#dining").prop("checked");
+          // when closing a filter
+          if(check === true){
+            closeAllDining();
+          }
+        });
+
+        $("#stuR").click(function(){
+          var check = !$("#stuR").prop("checked");
+          // when closing a filter
+          if(check === true){
+            closeAllStuR();
+          }
+        });
+
+        $("#selectAllTwo").click(function(){
+          var check = !$("#selectAllTwo").prop("checked");
+          // when closing a filter
+          if(check === true){
+            closeAllBuildings();
+          }
+        });
+
+
 
 
 
