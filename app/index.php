@@ -170,7 +170,7 @@
                                                 data: ({search: $("#searchInput").val()}),
                                                 success: function(results){
 
-                                                  console.log("success!");
+                                                  // console.log("success!");
                                                   // console.log(results);
 
                                                   $("#searchResults").css("visibility","visible");

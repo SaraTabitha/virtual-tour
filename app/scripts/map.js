@@ -434,7 +434,7 @@ function initMap() {
         });
         // trying to make hover text for marker
         albeeMarker.addListener('mouseover', function(){
-          
+
           console.log("you hovered over me!");
 
         });
@@ -6156,7 +6156,251 @@ function initMap() {
         });
 
 
-
+        // close all buildings
+        function closeAllBuildings(){
+          albeeHoverCard.close(map, albeeMarker);
+          baseballHoverCard.close(map, baseballMarker);
+          alumniHoverCard.close(map, alumniMarker);
+          acHoverCard.close(map,acMarker);
+          athleticHoverCard.close(map, athleticMarker);
+          blackhawkHoverCard.close(map, blackhawkMarker);
+          biodigesterHoverCard.close(map, biodigesterMarker);
+          buckstaffHoverCard.close(map,buckstaffMarker);
+          equityHoverCard.close(map, equityMarker);
+          campusHoverCard.close(map, campusMarker);
+          ceramicsHoverCard.close(map, ceramicsMarker);
+          clowHoverCard.close(map, clowMarker);
+          gardensHoverCard.close(map, gardensMarker);
+          dempseyHoverCard.close(map, dempseyMarker);
+          donnerHoverCard.close(map, donnerMarker);
+          eastHoverCard.close(map,eastMarker);
+          environmentalHoverCard.close(map, environmentalMarker);
+          evansHoverCard.close(map, evansMarker);
+          fletcherHoverCard.close(map, fletcherMarker);
+          fredricHoverCard.close(map,fredricMarker);
+          gruenhagenHoverCard.close(map,gruenhagenMarker);
+          halseyHoverCard.close(map, halseyMarker);
+          harringtonHoverCard.close(map, harringtonMarker);
+          heatingHoverCard.close(map,heatingMarker);
+          parkingRampHoverCard.close(map, parkingRampMarker);
+          horizonHoverCard.close(map, horizonMarker);
+          kolfHoverCard.close(map, kolfMarker);
+          lincolnHoverCard.close(map, lincolnMarker);
+          multiculturalHoverCard.close(map, multiculturalMarker);
+          nursingHoverCard.close(map, nursingMarker);
+          oviattHoverCard.close(map, oviattMarker);
+          pollockHoverCard.close(map, pollockMarker);
+          polkHoverCard.close(map, polkMarker);
+          radfordHoverCard.close(map, radfordMarker);
+          reeveHoverCard.close(map, reeveMarker);
+          sageHoverCard.close(map, sageMarker);
+          scottHoverCard.close(map, scottMarker);
+          stewartHoverCard.close(map, stewartMarker);
+          recreationHoverCard.close(map, recreationMarker);
+          successHoverCard.close(map, successMarker);
+          swartHoverCard.close(map, swartMarker);
+          taylorHoverCard.close(map, taylorMarker);
+          titanHoverCard.close(map, titanMarker);
+          policeHoverCard.close(map, policeMarker);
+          websterHoverCard.close(map, websterMarker);
+        }
+        //close parking lots cards
+        function closeAllParking(){
+          elevenHoverCard.close(map, elevenMarker);
+          thirtyfiveHoverCard.close(map, thirtyfiveMarker);
+          twentysevenHoverCard.close(map, twentysevenMarker);
+          twentyoneHoverCard.close(map, twentyoneMarker);
+          twentysixHoverCard.close(map, twentysixMarker);
+          fourHoverCard.close(map, fourMarker);
+          fouraHoverCard.close(map, fourMarker);
+          sixteenHoverCard.close(map, sixteenMarker);
+          seventeenHoverCard.close(map, seventeenMarker);
+          twentynineHoverCard.close(map, twentynineMarker);
+          twentyfiveHoverCard.close(map, twentyfiveMarker);
+          eightHoverCard.close(map, eightMarker);
+          thirtythreeHoverCard.close(map, thirtythreeMarker);
+          thirtyfourHoverCard.close(map, thirtyfourMarker);
+          twentyeightHoverCard.close(map, twentyeightMarker);
+          twentythreeHoverCard.close(map, twentythreeMarker);
+          fourteenaHoverCard.close(map, fourteenaMarker);
+          fourteenbHoverCard.close(map, fourteenbMarker);
+          fourteencHoverCard.close(map, fourteencMarker);
+          sevenHoverCard.close(map, sevenMarker);
+          fiveaHoverCard.close(map, fiveaMarker);
+          fiveHoverCard.close(map, fiveMarker);
+          sevenaHoverCard.close(map, sevenaMarker);
+          fifteenHoverCard.close(map, fifteenMarker);
+          thirtytwoHoverCard.close(map, thirtytwoMarker);
+          thirteenHoverCard.close(map, thirteenMarker);
+          twelveHoverCard.close(map, twelveMarker);
+          sixaHoverCard.close(map, sixaMarker);
+          sixHoverCard.close(map, sixMarker);
+          tenHoverCard.close(map, tenMarker);
+          nineaHoverCard.close(map, nineaMarker);
+          nineHoverCard.close(map, nineMarker);
+          eighteenHoverCard.close(map, eighteenMarker);
+          thirtyHoverCard.close(map, thirtyMarker);
+          thirtynineHoverCard.close(map, thirtynineMarker);
+          womensCenterHoverCard.close(map, womensCenterMarker);
+          titanOneHoverCard.close(map, titanOneMarker);
+          titanTwoHoverCard.close(map, titanTwoMarker);
+        }
+        // close all accEnt cards
+        function closeAllAccEnt(){
+          albeeHoverCard.close(map, albeeMarker);
+          acHoverCard.close(map,acMarker);
+          blackhawkHoverCard.close(map, blackhawkMarker);
+          equityHoverCard.close(map, equityMarker);
+          clowHoverCard.close(map, clowMarker);
+          dempseyHoverCard.close(map, dempseyMarker);
+          donnerHoverCard.close(map, donnerMarker);
+          fletcherHoverCard.close(map, fletcherMarker);
+          fredricHoverCard.close(map,fredricMarker);
+          gruenhagenHoverCard.close(map,gruenhagenMarker);
+          halseyHoverCard.close(map, halseyMarker);
+          harringtonHoverCard.close(map, harringtonMarker);
+          kolfHoverCard.close(map, kolfMarker);
+          nursingHoverCard.close(map, nursingMarker);
+          polkHoverCard.close(map, polkMarker);
+          radfordHoverCard.close(map, radfordMarker);
+          reeveHoverCard.close(map, reeveMarker);
+          scottHoverCard.close(map, scottMarker);
+          stewartHoverCard.close(map, stewartMarker);
+          successHoverCard.close(map, successMarker);
+          swartHoverCard.close(map, swartMarker);
+          taylorHoverCard.close(map, taylorMarker);
+          websterHoverCard.close(map, websterMarker);
+        }
+        //close all AccPark cards
+        function closeAllAccPark(){
+          womensCenterHoverCard.close(map, womensCenterMarker);
+          titanOneHoverCard.close(map, titanOneMarker);
+          titanTwoHoverCard.close(map, titanTwoMarker);
+          elevenHoverCard.close(map, elevenMarker);
+          fourHoverCard.close(map, fourMarker);
+          fouraHoverCard.close(map, fourMarker);
+          sixteenHoverCard.close(map, sixteenMarker);
+          seventeenHoverCard.close(map, seventeenMarker);
+          twentynineHoverCard.close(map, twentynineMarker);
+          twentyfiveHoverCard.close(map, twentyfiveMarker);
+          thirtythreeHoverCard.close(map, thirtythreeMarker);
+          fourteenaHoverCard.close(map, fourteenaMarker);
+          sevenaHoverCard.close(map, sevenaMarker);
+          thirteenHoverCard.close(map, thirteenMarker);
+          thirtyfourHoverCard.close(map, thirtyfourMarker);
+          twentyeightHoverCard.close(map, twentyeightMarker);
+          twentythreeHoverCard.close(map, twentythreeMarker);
+          fifteenHoverCard.close(map, fifteenMarker);
+          thirtytwoHoverCard.close(map, thirtytwoMarker);
+          tenHoverCard.close(map, tenMarker);
+          twelveHoverCard.close(map, twelveMarker);
+          sixaHoverCard.close(map, sixaMarker);
+          sixHoverCard.close(map, sixMarker);
+          eighteenHoverCard.close(map, eighteenMarker);
+        }
+        //close all sust cards
+        function closeAllSust(){
+          albeeHoverCard.close(map, albeeMarker);
+          alumniHoverCard.close(map, alumniMarker);
+          blackhawkHoverCard.close(map, blackhawkMarker);
+          biodigesterHoverCard.close(map, biodigesterMarker);
+          heatingHoverCard.close(map,heatingMarker);
+          horizonHoverCard.close(map, horizonMarker);
+          reeveHoverCard.close(map, reeveMarker);
+          sageHoverCard.close(map, sageMarker);
+          recreationHoverCard.close(map, recreationMarker);
+          successHoverCard.close(map, successMarker);
+          taylorHoverCard.close(map, taylorMarker);
+          titanHoverCard.close(map, titanMarker);
+        }
+        //close all gender cards
+        function closeAllGender(){
+          acHoverCard.close(map,acMarker);
+          blackhawkHoverCard.close(map, blackhawkMarker);
+          campusHoverCard.close(map, campusMarker);
+          dempseyHoverCard.close(map, dempseyMarker);
+          halseyHoverCard.close(map, halseyMarker);
+          harringtonHoverCard.close(map, harringtonMarker);
+          kolfHoverCard.close(map, kolfMarker);
+          nursingHoverCard.close(map, nursingMarker);
+          reeveHoverCard.close(map, reeveMarker);
+          sageHoverCard.close(map, sageMarker);
+          recreationHoverCard.close(map, recreationMarker);
+          successHoverCard.close(map, successMarker);
+          swartHoverCard.close(map, swartMarker);
+          policeHoverCard.close(map, policeMarker);
+        }
+        //close all AccaF cards
+        function closeAllAccaF(){
+          albeeHoverCard.close(map, albeeMarker);
+          acHoverCard.close(map,acMarker);
+          ceramicsHoverCard.close(map, ceramicsMarker);
+          clowHoverCard.close(map, clowMarker);
+          environmentalHoverCard.close(map, environmentalMarker);
+          fredricHoverCard.close(map,fredricMarker);
+          halseyHoverCard.close(map, halseyMarker);
+          harringtonHoverCard.close(map, harringtonMarker);
+          kolfHoverCard.close(map, kolfMarker);
+          nursingHoverCard.close(map, nursingMarker);
+          polkHoverCard.close(map, polkMarker);
+          radfordHoverCard.close(map, radfordMarker);
+          sageHoverCard.close(map, sageMarker);
+          swartHoverCard.close(map, swartMarker);
+        }
+        //close all athletics cards
+        function closeAllAth(){
+          albeeHoverCard.close(map, albeeMarker);
+          baseballHoverCard.close(map, baseballMarker);
+          athleticHoverCard.close(map, athleticMarker);
+          eastHoverCard.close(map,eastMarker);
+          kolfHoverCard.close(map, kolfMarker);
+          titanHoverCard.close(map, titanMarker);
+        }
+        //close all AccaS cards
+        function closeAllAccaS(){
+          equityHoverCard.close(map, equityMarker);
+          nursingHoverCard.close(map, nursingMarker);
+          successHoverCard.close(map, successMarker);
+          swartHoverCard.close(map, swartMarker);
+        }
+        //close all CampS cards
+        function closeAllCampS(){
+          equityHoverCard.close(map, equityMarker);
+          campusHoverCard.close(map, campusMarker);
+          dempseyHoverCard.close(map, dempseyMarker);
+          multiculturalHoverCard.close(map, multiculturalMarker);
+          pollockHoverCard.close(map, pollockMarker);
+          radfordHoverCard.close(map, radfordMarker);
+          reeveHoverCard.close(map, reeveMarker);
+          recreationHoverCard.close(map, recreationMarker);
+          successHoverCard.close(map, successMarker);
+        }
+        //close all resH cards
+        function closeAllResH(){
+          donnerHoverCard.close(map, donnerMarker);
+          evansHoverCard.close(map, evansMarker);
+          fletcherHoverCard.close(map, fletcherMarker);
+          gruenhagenHoverCard.close(map,gruenhagenMarker);
+          horizonHoverCard.close(map, horizonMarker);
+          stewartHoverCard.close(map, stewartMarker);
+          scottHoverCard.close(map, scottMarker);
+          taylorHoverCard.close(map, taylorMarker);
+          websterHoverCard.close(map, websterMarker);
+        }
+        //close all dining cards
+        function closeAllDining(){
+          blackhawkHoverCard.close(map, blackhawkMarker);
+          clowHoverCard.close(map, clowMarker);
+          halseyHoverCard.close(map, halseyMarker);
+          reeveHoverCard.close(map, reeveMarker);
+          sageHoverCard.close(map, sageMarker);
+          scottHoverCard.close(map, scottMarker);
+        }
+        //close all StuR cards
+        function closeAllStuR(){
+          reeveHoverCard.close(map, reeveMarker);
+          recreationHoverCard.close(map, recreationMarker);
+        }
         // close all hover cards
         function closeAllHover(){
             albeeHoverCard.close(map, albeeMarker);
@@ -6252,7 +6496,7 @@ function initMap() {
           var check = !$("#buildings").prop("checked");
           // when closing a filter
           if(check === true){
-            // closeAllHover();
+             closeAllBuildings();
           }
         });
 
@@ -6260,7 +6504,7 @@ function initMap() {
           var check = !$("#parkingLots").prop("checked");
           // when closing a filter
           if(check === true){
-            // closeAllHover();
+             closeAllParking();
           }
         });
 
@@ -6268,7 +6512,7 @@ function initMap() {
           var check = !$("#accEnt").prop("checked");
           // when closing a filter
           if(check === true){
-            // closeAllHover();
+            closeAllAccEnt();
           }
         });
 
@@ -6276,15 +6520,7 @@ function initMap() {
           var check = !$("#accPar").prop("checked");
           // when closing a filter
           if(check === true){
-            // closeAllHover();
-          }
-        });
-
-        $("#emergency").click(function(){
-          var check = !$("#emergency").prop("checked");
-          // when closing a filter
-          if(check === true){
-            // closeAllHover();
+             closeAllAccPark();
           }
         });
 
@@ -6292,7 +6528,7 @@ function initMap() {
           var check = !$("#sust").prop("checked");
           // when closing a filter
           if(check === true){
-            // closeAllHover();
+             closeAllSust();
           }
         });
 
@@ -6300,12 +6536,12 @@ function initMap() {
           var check = !$("#gender").prop("checked");
           // when closing a filter
           if(check === true){
-            // closeAllHover();
+           closeAllGender();
           }
         });
 
-        $("#selectallcheck").click(function(){
-          var check = !$("#selectallcheck").prop("checked");
+        $("#selectAllOne").click(function(){
+          var check = !$("#selectAllOne").prop("checked");
           // when closing a filter
           if(check === true){
             closeAllHover();
