@@ -131,7 +131,8 @@ function initMap() {
         // create markers for buildings
         var albeeMarker = new google.maps.Marker({
             position: buildings[0],
-            icon: yellowMarker
+            icon: yellowMarker,
+            title: "Albee Hall"
         });
         var baseballMarker = new google.maps.Marker({
             position: buildings[1],
@@ -416,12 +417,28 @@ function initMap() {
         });
 
 
+        //my attempt at making function to replace the ones I've copy/pasted
+        function markerOpen(name){
+          var hoverName = name + "Hover";
+          var check = $("#" + hoverName).hasClass("hoverOpen");
+          if (check === false){
+            closeAllHover();
+            var hoverCard = name + "HoverCard";
+            hoverCard.open(map, albeeMarker);
+            $("#" + hoverName).addClass("hoverOpen");
+          } else if (check === true){
+            $("#" + hoverName).removeClass("hoverOpen");
+            closeAllHover();
+          }
+        }
         // listener, allows user to open and close marker by clicking on it
         // also closes all other markers so that only the clicked marker is open
         // at one time
         // also is the click function for the marker opening any hover popup at all
         // so that's important
         albeeMarker.addListener('click', function(){
+          // var albee = "albee";
+          // markerOpen(albee);
             var check = $("#albeeHover").hasClass("hoverOpen");
             if (check === false){
                 closeAllHover();
@@ -432,12 +449,9 @@ function initMap() {
                 closeAllHover();
             }
         });
-        // trying to make hover text for marker
-        albeeMarker.addListener('mouseover', function(){
 
-          console.log("you hovered over me!");
 
-        });
+
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
         // +animate to fade in
@@ -1885,7 +1899,7 @@ function initMap() {
             content: reeveHover,
         });
 
-        reeveMarker.addListener('click', function(){
+        reeveMarker.addListener('mouseover', function(){
             var check = $("#reeveHover").hasClass("hoverOpen");
             if (check === false){
                 closeAllHover();
