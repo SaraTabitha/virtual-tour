@@ -136,51 +136,63 @@ function initMap() {
         });
         var baseballMarker = new google.maps.Marker({
             position: buildings[1],
-            icon: yellowMarker
+            icon: yellowMarker,
+            title: "Alumni Baseball Stadium"
         });
         var alumniMarker = new google.maps.Marker({
             position: buildings[2],
-            icon: yellowMarker
+            icon: yellowMarker,
+            title: "Alumni Welcome and Conference Center"
         });
         var acMarker = new google.maps.Marker({
             position: buildings[3],
-            icon: yellowMarker
+            icon: yellowMarker,
+            title: "Arts and Communications"
         });
         var athleticMarker = new google.maps.Marker({
             position: buildings[4],
-            icon: yellowMarker
+            icon: yellowMarker,
+            title: "Athletic Service Building"
         });
         var blackhawkMarker = new google.maps.Marker({
             position: buildings[5],
-            icon: yellowMarker
+            icon: yellowMarker,
+            title: "Blackhawk Commons"
         });
         var biodigesterMarker = new google.maps.Marker({
             position: buildings[6],
-            icon: yellowMarker
+            icon: yellowMarker,
+            title: "Biodigester"
         });
         var buckstaffMarker = new google.maps.Marker({
             position: buildings[7],
-            icon: yellowMarker
+            icon: yellowMarker,
+            title: "Buckstaff Planetarium"
         });
         var equityMarker = new google.maps.Marker({
             position: buildings[8],
-            icon: yellowMarker
+            icon: yellowMarker,
+            title: "Campus Center for Equity and Diversity"
         });
         var campusMarker = new google.maps.Marker({
             position: buildings[9],
-            icon: yellowMarker
+            icon: yellowMarker,
+            title: "Campus Services"
         });
         var ceramicsMarker = new google.maps.Marker({
             position: buildings[10],
-            icon: yellowMarker
+            icon: yellowMarker,
+            title: "Ceramics Laboratory"
         });
         var clowMarker = new google.maps.Marker({
             position: buildings[11],
-            icon: yellowMarker
+            icon: yellowMarker,
+            title: "Clow Social Sciences Center"
         });
         var gardensMarker = new google.maps.Marker({
             position: buildings[12],
-            icon: yellowMarker
+            icon: yellowMarker,
+            title: "Community Gardens"
         });
         var dempseyMarker = new google.maps.Marker({
             position: buildings[13],
@@ -188,39 +200,48 @@ function initMap() {
         });
         var donnerMarker = new google.maps.Marker({
             position: buildings[14],
-            icon: yellowMarker
+            icon: yellowMarker,
+            title: "Donner Hall"
         });
         var eastMarker = new google.maps.Marker({
             position: buildings[15],
-            icon: yellowMarker
+            icon: yellowMarker,
+            title: "East Hall"
         });
         var environmentalMarker = new google.maps.Marker({
             position: buildings[16],
-            icon: yellowMarker
+            icon: yellowMarker,
+            title: "Environmental Science and Research Center"
         });
         var evansMarker = new google.maps.Marker({
             position: buildings[17],
-            icon: yellowMarker
+            icon: yellowMarker,
+            title: "Evans Hall"
         });
         var fletcherMarker = new google.maps.Marker({
             position: buildings[18],
-            icon: yellowMarker
+            icon: yellowMarker,
+            title: "Fletcher Hall"
         });
         var fredricMarker = new google.maps.Marker({
             position: buildings[19],
-            icon: yellowMarker
+            icon: yellowMarker,
+            title: "Fredric March Theater"
         });
         var gruenhagenMarker = new google.maps.Marker({
             position: buildings[20],
-            icon: yellowMarker
+            icon: yellowMarker,
+            title: "Gruenhagen Conference Center"
         });
         var halseyMarker = new google.maps.Marker({
             position: buildings[21],
-            icon: yellowMarker
+            icon: yellowMarker,
+            title: "Halsey Science Center"
         });
         var harringtonMarker = new google.maps.Marker({
             position: buildings[22],
-            icon: yellowMarker
+            icon: yellowMarker,
+            title: "Harrington Hall"
         });
         var heatingMarker = new google.maps.Marker({
             position: buildings[23],
@@ -228,27 +249,33 @@ function initMap() {
         });
         var parkingRampMarker = new google.maps.Marker({
             position: buildings[24],
-            icon: yellowMarker
+            icon: yellowMarker,
+            title: "High Avenue Parking Ramp"
         });
         var horizonMarker = new google.maps.Marker({
             position: buildings[25],
-            icon: yellowMarker
+            icon: yellowMarker,
+            title: "Horizon Village"
         });
         var kolfMarker = new google.maps.Marker({
             position: buildings[26],
-            icon: yellowMarker
+            icon: yellowMarker,
+            title: "Kolf Sports Center"
         });
         var lincolnMarker = new google.maps.Marker({
             position: buildings[27],
-            icon: yellowMarker
+            icon: yellowMarker,
+            title: "Lincoln Hall"
         });
         var multiculturalMarker = new google.maps.Marker({
             position: buildings[28],
-            icon: yellowMarker
+            icon: yellowMarker,
+            title: "Multicultural Education Center"
         });
         var nursingMarker = new google.maps.Marker({
             position: buildings[29],
-            icon: yellowMarker
+            icon: yellowMarker,
+            title: "Nursing and Education Building"
         });
         var oviattMarker = new google.maps.Marker({
             position: buildings[30],
@@ -256,59 +283,73 @@ function initMap() {
         });
         var pollockMarker = new google.maps.Marker({
             position: buildings[31],
-            icon: yellowMarker
+            icon: yellowMarker,
+            title: "Oviatt House"
         });
         var polkMarker = new google.maps.Marker({
             position: buildings[32],
-            icon: yellowMarker
+            icon: yellowMarker,
+            title: "Polk Library"
         });
         var radfordMarker = new google.maps.Marker({
             position: buildings[33],
-            icon: yellowMarker
+            icon: yellowMarker,
+            title: "Radford Hall and Student Health Center"
         });
         var reeveMarker = new google.maps.Marker({
             position: buildings[34],
-            icon: yellowMarker
+            icon: yellowMarker,
+            title: "Reeve Memorial Union"
         });
         var sageMarker = new google.maps.Marker({
             position: buildings[35],
-            icon: yellowMarker
+            icon: yellowMarker,
+            title: "Sage Hall"
         });
         var scottMarker = new google.maps.Marker({
             position: buildings[36],
-            icon: yellowMarker
+            icon: yellowMarker,
+            title: "Scott Hall"
         });
         var stewartMarker = new google.maps.Marker({
             position: buildings[37],
-            icon: yellowMarker
+            icon: yellowMarker,
+            title: "Stewart Hall"
         });
         var recreationMarker = new google.maps.Marker({
             position: buildings[38],
-            icon: yellowMarker
+            icon: yellowMarker,
+            title: "Student Recreation and Wellness Center"
         });
         var successMarker = new google.maps.Marker({
             position: buildings[39],
-            icon: yellowMarker
+            icon: yellowMarker,
+            title: "Student Success Center"
         });
         var swartMarker = new google.maps.Marker({
             position: buildings[40],
-            icon: yellowMarker
+            icon: yellowMarker,
+            title: "Swart Hall"
         });
         var taylorMarker = new google.maps.Marker({
             position: buildings[41],
-            icon: yellowMarker
+            icon: yellowMarker,
+            title: "Taylor Hall"
         });
         var titanMarker = new google.maps.Marker({
             position: buildings[42],
-            icon: yellowMarker
+            icon: yellowMarker,
+            title: "Titan Stadium"
         });
         var policeMarker = new google.maps.Marker({
             position: buildings[43],
-            icon: yellowMarker
+            icon: yellowMarker,
+            title: "University Police"
         });
         var websterMarker = new google.maps.Marker({
             position: buildings[44],
-            icon: yellowMarker
+            icon: yellowMarker,
+            title: "Webster Hall"
         });
 
         // declaring set and remove functions for buildings
@@ -1899,7 +1940,7 @@ function initMap() {
             content: reeveHover,
         });
 
-        reeveMarker.addListener('mouseover', function(){
+        reeveMarker.addListener('click', function(){
             var check = $("#reeveHover").hasClass("hoverOpen");
             if (check === false){
                 closeAllHover();
@@ -2617,152 +2658,183 @@ function initMap() {
         // parking lots markers
         var elevenMarker = new google.maps.Marker({
             position: parkingLots[0],
-            icon: purpleMarker
+            icon: purpleMarker,
+            title: "Lot 11"
         });
         var thirtyfiveMarker = new google.maps.Marker({
             position: parkingLots[1],
-            icon: purpleMarker
+            icon: purpleMarker,
+            title: "Lot 35"
         });
         var twentysevenMarker = new google.maps.Marker({
             position: parkingLots[2],
-            icon: purpleMarker
+            icon: purpleMarker,
+            title: "Lot 27"
         });
         var twentyoneMarker = new google.maps.Marker({
             position: parkingLots[3],
-            icon: purpleMarker
+            icon: purpleMarker,
+            title: "Lot 21"
         });
         var twentysixMarker = new google.maps.Marker({
             position: parkingLots[4],
-            icon: purpleMarker
+            icon: purpleMarker,
+            title: "Lot 26"
         });
         var fourMarker = new google.maps.Marker({
             position: parkingLots[5],
-            icon: purpleMarker
+            icon: purpleMarker,
+            title: "Lot 4"
         });
         var fouraMarker = new google.maps.Marker({
             position: parkingLots[6],
-            icon: purpleMarker
+            icon: purpleMarker,
+            title: "Lot 4a"
         });
         var sixteenMarker = new google.maps.Marker({
             position: parkingLots[7],
-            icon: purpleMarker
+            icon: purpleMarker,
+            title: "Lot 16"
         });
         var seventeenMarker = new google.maps.Marker({
             position: parkingLots[8],
-            icon: purpleMarker
+            icon: purpleMarker,
+            title: "Lot 17"
         });
         var twentynineMarker = new google.maps.Marker({
             position: parkingLots[9],
-            icon: purpleMarker
+            icon: purpleMarker,
+            title: "Lot 29"
         });
         var twentyfiveMarker = new google.maps.Marker({
             position: parkingLots[10],
-            icon: purpleMarker
+            icon: purpleMarker,
+            title: "Lot 25"
         });
         var eightMarker = new google.maps.Marker({
             position: parkingLots[11],
-            icon: purpleMarker
+            icon: purpleMarker,
+            title: "Lot 8"
         });
         var thirtythreeMarker = new google.maps.Marker({
             position: parkingLots[12],
-            icon: purpleMarker
+            icon: purpleMarker,
+            title: "Lot 33"
         });
         var thirtyfourMarker = new google.maps.Marker({
             position: parkingLots[13],
-            icon: purpleMarker
+            icon: purpleMarker,
+            title: "Lot 34"
         });
         var twentyeightMarker = new google.maps.Marker({
             position: parkingLots[14],
-            icon: purpleMarker
+            icon: purpleMarker,
+            title: "Lot 28"
         });
         var twentythreeMarker = new google.maps.Marker({
             position: parkingLots[15],
-            icon: purpleMarker
+            icon: purpleMarker,
+            title: "Lot 23"
         });
         var fourteenaMarker = new google.maps.Marker({
             position: parkingLots[16],
-            icon: purpleMarker
+            icon: purpleMarker,
+            title: "Lot 14a"
         });
         var fourteenbMarker = new google.maps.Marker({
             position: parkingLots[17],
-            icon: purpleMarker
+            icon: purpleMarker,
+            title: "Lot 14b"
         });
         var fourteencMarker = new google.maps.Marker({
             position: parkingLots[18],
-            icon: purpleMarker
+            icon: purpleMarker,
+            title: "Lot 14c"
         });
         var sevenMarker = new google.maps.Marker({
             position: parkingLots[19],
-            icon: purpleMarker
+            icon: purpleMarker,
+            title: "Lot 7"
         });
         var fiveaMarker = new google.maps.Marker({
             position: parkingLots[20],
-            icon: purpleMarker
+            icon: purpleMarker,
+            title: "Lot 5a"
         });
         var fiveMarker = new google.maps.Marker({
             position: parkingLots[21],
-            icon: purpleMarker
+            icon: purpleMarker,
+            title: "Lot 5"
         });
         var sevenaMarker = new google.maps.Marker({
             position: parkingLots[22],
-            icon: purpleMarker
+            icon: purpleMarker,
+            title: "Lot 7a"
         });
         var fifteenMarker = new google.maps.Marker({
             position: parkingLots[23],
-            icon: purpleMarker
+            icon: purpleMarker,
+            title: "Lot 15"
         });
         var thirtytwoMarker = new google.maps.Marker({
             position: parkingLots[24],
-            icon: purpleMarker
+            icon: purpleMarker,
+            title: "Lot 32"
         });
         var thirteenMarker = new google.maps.Marker({
             position: parkingLots[25],
-            icon: purpleMarker
+            icon: purpleMarker,
+            title: "Lot 13"
         });
         var twelveMarker = new google.maps.Marker({
             position: parkingLots[26],
-            icon: purpleMarker
+            icon: purpleMarker,
+            title: "Lot 12"
         });
         var sixaMarker = new google.maps.Marker({
             position: parkingLots[27],
-            icon: purpleMarker
+            icon: purpleMarker,
+            title: "Lot 6a"
         });
         var sixMarker = new google.maps.Marker({
             position: parkingLots[28],
-            icon: purpleMarker
+            icon: purpleMarker,
+            title: "Lot 6"
         });
         var tenMarker = new google.maps.Marker({
             position: parkingLots[29],
-            icon: purpleMarker
+            icon: purpleMarker,
+            title: "Lot 10"
         });
         var nineaMarker = new google.maps.Marker({
             position: parkingLots[30],
-            icon: purpleMarker
+            icon: purpleMarker,
+            title: "Lot 9a"
         });
         var nineMarker = new google.maps.Marker({
             position: parkingLots[31],
-            icon: purpleMarker
+            icon: purpleMarker,
+            title: "Lot 9"
         });
         var eighteenMarker = new google.maps.Marker({
             position: parkingLots[32],
-            icon: purpleMarker
+            icon: purpleMarker,
+            title: "Lot 18"
         });
         var thirtyMarker = new google.maps.Marker({
             position: parkingLots[33],
-            icon: purpleMarker
+            icon: purpleMarker,
+            title: "Lot 30"
         });
         var thirtynineMarker = new google.maps.Marker({
             position: parkingLots[34],
-            icon: purpleMarker
-        });
-        var parkingRampParkingMarker = new google.maps.Marker({
-            position: buildings[24],
-            icon: purpleMarker
+            icon: purpleMarker,
+            title: "Lot 39"
         });
 
         // set parking lot markers
         function setParkingLots(){
-            parkingRampParkingMarker.setMap(map);
+            parkingRampMarker.setMap(map);
             elevenMarker.setMap(map);
             thirtyfiveMarker.setMap(map);
             twentysevenMarker.setMap(map);
@@ -2801,7 +2873,7 @@ function initMap() {
         }
         // remove parking lot markers
         function removeParkingLots(){
-            parkingRampParkingMarker.setMap(null);
+            parkingRampMarker.setMap(null);
             elevenMarker.setMap(null);
             thirtyfiveMarker.setMap(null);
             twentysevenMarker.setMap(null);
@@ -2840,18 +2912,6 @@ function initMap() {
         }
         // parking marker hovers + marker functionality
 
-        // parking ramp
-        parkingRampParkingMarker.addListener('click', function(){
-            var check = $("#parkingRampHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                parkingRampHoverCard.open(map, parkingRampParkingMarker);
-                $("#parkingRampHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#parkingRampHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
-        });
         // lot 11 hover
         var elevenHover = document.getElementById('elevenHover');
         var elevenHoverCard = new google.maps.InfoWindow({
@@ -3462,95 +3522,118 @@ function initMap() {
         // accEnt markers
         var albeeAccEntMarker = new google.maps.Marker({
             position: buildings[0],
-            icon: orangeMarker
+            icon: orangeMarker,
+            title: "Albee Hall"
         });
         var acAccEntMarker = new google.maps.Marker({
             position: buildings[3],
-            icon: orangeMarker
+            icon: orangeMarker,
+            title: "Arts and Communications"
         });
         var blackhawkAccEntMarker = new google.maps.Marker({
             position: buildings[5],
-            icon: orangeMarker
+            icon: orangeMarker,
+            title: "Blackhawk Commons"
         });
         var equityAccEntMarker = new google.maps.Marker({
             position: buildings[8],
-            icon: orangeMarker
+            icon: orangeMarker,
+            title: "Campus Center for Equity and Diversity"
         });
         var clowAccEntMarker = new google.maps.Marker({
             position: buildings[11],
-            icon: orangeMarker
+            icon: orangeMarker,
+            title: "Clow Social Science Center"
         });
         var dempseyAccEntMarker = new google.maps.Marker({
             position: buildings[13],
-            icon: orangeMarker
+            icon: orangeMarker,
+            title: "Dempsey Hall"
         });
         var donnerAccEntMarker = new google.maps.Marker({
             position: buildings[14],
-            icon: orangeMarker
+            icon: orangeMarker,
+            title: "Donner Hall"
         });
         var fletcherAccEntMarker = new google.maps.Marker({
             position: buildings[18],
-            icon: orangeMarker
+            icon: orangeMarker,
+            title: "Fletcher Hall"
         });
         var fredricAccEntMarker = new google.maps.Marker({
             position: buildings[19],
-            icon: orangeMarker
+            icon: orangeMarker,
+            title: "Fredric March Theater"
         });
         var gruenhagenAccEntMarker = new google.maps.Marker({
             position: buildings[20],
-            icon: orangeMarker
+            icon: orangeMarker,
+            title: "Gruenhagen Conference Center"
         });
         var halseyAccEntMarker = new google.maps.Marker({
             position: buildings[21],
-            icon: orangeMarker
+            icon: orangeMarker,
+            title: "Halsey Science Center"
         });
         var harringtonAccEntMarker = new google.maps.Marker({
             position: buildings[22],
-            icon: orangeMarker
+            icon: orangeMarker,
+            title: "Harrington Hall"
         });
         var kolfAccEntMarker = new google.maps.Marker({
             position: buildings[26],
-            icon: orangeMarker
+            icon: orangeMarker,
+            title: "Kolf Sports Center"
         });
         var nursingAccEntMarker = new google.maps.Marker({
             position: buildings[29],
-            icon: orangeMarker
+            icon: orangeMarker,
+            title: "Nursing and Education Building"
         });
         var polkAccEntMarker = new google.maps.Marker({
             position: buildings[32],
-            icon: orangeMarker
+            icon: orangeMarker,
+            title: "Polk Library"
         });
         var radfordAccEntMarker = new google.maps.Marker({
             position: buildings[33],
-            icon: orangeMarker
+            icon: orangeMarker,
+            title: "Radford Hall and Student Health Center"
         });
         var reeveAccEntMarker = new google.maps.Marker({
             position: buildings[34],
-            icon: orangeMarker
+            icon: orangeMarker,
+            title: "Reeve Memorial Union"
         });
         var scottAccEntMarker = new google.maps.Marker({
             position: buildings[36],
-            icon: orangeMarker
+            icon: orangeMarker,
+            title: "Scott Hall"
         });
         var stewartAccEntMarker = new google.maps.Marker({
             position: buildings[37],
-            icon: orangeMarker
+            icon: orangeMarker,
+            title: "Stewart Hall"
         });
         var successAccEntMarker = new google.maps.Marker({
             position: buildings[39],
-            icon: orangeMarker
+            icon: orangeMarker,
+            title: "Student Success Center"
         });
         var swartAccEntMarker = new google.maps.Marker({
             position: buildings[40],
-            icon: orangeMarker
+            icon: orangeMarker,
+            title: "Swart Hall"
         });
         var taylorAccEntMarker = new google.maps.Marker({
             position: buildings[41],
-            icon: orangeMarker
+            icon: orangeMarker,
+            title: "Taylor Hall"
         });
         var websterAccEntMarker = new google.maps.Marker({
             position: buildings[44],
-            icon: orangeMarker
+            icon: orangeMarker,
+            title: "Webster Hall"
         });
 
         // accEnt hover cards for markers
@@ -3895,103 +3978,127 @@ function initMap() {
         var womensCenter = {lat: 44.024816, lng: -88.546638};
         var womensCenterMarker = new google.maps.Marker({
             position: womensCenter,
-            icon: pinkMarker
+            icon: pinkMarker,
+            title: "Women's Center"
         });
 
         var titanOne = {lat: 44.024401, lng: -88.564253};
         var titanOneMarker = new google.maps.Marker({
             position: titanOne,
-            icon: pinkMarker
+            icon: pinkMarker,
+            title: "Titan One"
         });
 
         var titanTwo = {lat: 44.023007, lng:  -88.564339};
         var titanTwoMarker = new google.maps.Marker({
             position: titanTwo,
-            icon: pinkMarker
+            icon: pinkMarker,
+            title: "Titan Two"
         });
         var elevenAccParMarker = new google.maps.Marker({
             position: parkingLots[0],
-            icon: pinkMarker
+            icon: pinkMarker,
+            title: "Lot 11"
         });
         var fourAccParMarker = new google.maps.Marker({
             position: parkingLots[5],
-            icon: pinkMarker
+            icon: pinkMarker,
+            title: "Lot 4"
         });
         var fouraAccParMarker = new google.maps.Marker({
             position: parkingLots[6],
-            icon: pinkMarker
+            icon: pinkMarker,
+            title: "Lot 4a"
         });
         var sixteenAccParMarker = new google.maps.Marker({
             position: parkingLots[7],
-            icon: pinkMarker
+            icon: pinkMarker,
+            title: "Lot 16"
         });
         var seventeenAccParMarker = new google.maps.Marker({
             position: parkingLots[8],
-            icon: pinkMarker
+            icon: pinkMarker,
+            title: "Lot 17"
         });
         var twentynineAccParMarker = new google.maps.Marker({
             position: parkingLots[9],
-            icon: pinkMarker
+            icon: pinkMarker,
+            title: "Lot 29"
         });
         var twentyfiveAccParMarker = new google.maps.Marker({
             position: parkingLots[10],
-            icon: pinkMarker
+            icon: pinkMarker,
+            title: "Lot 25"
         });
         var thirtythreeAccParMarker = new google.maps.Marker({
             position: parkingLots[12],
-            icon: pinkMarker
+            icon: pinkMarker,
+            title: "Lot 33"
         });
         var fourteenaAccParMarker = new google.maps.Marker({
             position: parkingLots[16],
-            icon: pinkMarker
+            icon: pinkMarker,
+            title: "Lot 14a"
         });
         var sevenaAccParMarker = new google.maps.Marker({
             position: parkingLots[22],
-            icon: pinkMarker
+            icon: pinkMarker,
+            title: "Lot 7a"
         });
         var thirteenAccParMarker = new google.maps.Marker({
             position: parkingLots[25],
-            icon: pinkMarker
+            icon: pinkMarker,
+            title: "Lot 13"
         });
         var thirtyfourAccParMarker = new google.maps.Marker({
             position: parkingLots[13],
-            icon: pinkMarker
+            icon: pinkMarker,
+            title: "Lot 34"
         });
         var twentyeightAccParMarker = new google.maps.Marker({
             position: parkingLots[14],
-            icon: pinkMarker
+            icon: pinkMarker,
+            title: "Lot 28"
         });
         var twentythreeAccParMarker = new google.maps.Marker({
             position: parkingLots[15],
-            icon: pinkMarker
+            icon: pinkMarker,
+            title: "Lot 23"
         });
         var fifteenAccParMarker = new google.maps.Marker({
             position: parkingLots[23],
-            icon: pinkMarker
+            icon: pinkMarker,
+            title: "Lot 15"
         });
         var thirtytwoAccParMarker = new google.maps.Marker({
             position: parkingLots[24],
-            icon: pinkMarker
+            icon: pinkMarker,
+            title: "Lot 32"
         });
         var tenAccParMarker = new google.maps.Marker({
             position: parkingLots[29],
-            icon: pinkMarker
+            icon: pinkMarker,
+            title: "Lot 10"
         });
         var twelveAccParMarker = new google.maps.Marker({
             position: parkingLots[26],
-            icon: pinkMarker
+            icon: pinkMarker,
+            title: "Lot 12"
         });
         var sixaAccParMarker = new google.maps.Marker({
             position: parkingLots[27],
-            icon: pinkMarker
+            icon: pinkMarker,
+            title: "Lot 6a"
         });
         var sixAccParMarker = new google.maps.Marker({
             position: parkingLots[28],
-            icon: pinkMarker
+            icon: pinkMarker,
+            title: "Lot 6"
         });
         var eighteenAccParMarker = new google.maps.Marker({
             position: parkingLots[32],
-            icon: pinkMarker
+            icon: pinkMarker,
+            title: "Lot 18"
         });
         //  hover event listeners for accessible parking here
         elevenAccParMarker.addListener('click', function(){
@@ -4409,115 +4516,143 @@ function initMap() {
         // creating emergency phone markers
         var phoneZero = new google.maps.Marker({
             position: emergencyPhones[0],
-            icon: skyblueMarker
+            icon: skyblueMarker,
+            title: "Emergency Phone"
         });
         var phoneOne = new google.maps.Marker({
             position: emergencyPhones[1],
-            icon: skyblueMarker
+            icon: skyblueMarker,
+            title: "Emergency Phone"
         });
         var phoneTwo = new google.maps.Marker({
             position: emergencyPhones[2],
-            icon: skyblueMarker
+            icon: skyblueMarker,
+            title: "Emergency Phone"
         });
         var phoneThree = new google.maps.Marker({
             position: emergencyPhones[3],
-            icon: skyblueMarker
+            icon: skyblueMarker,
+            title: "Emergency Phone"
         });
         var phoneFour = new google.maps.Marker({
             position: emergencyPhones[4],
-            icon: skyblueMarker
+            icon: skyblueMarker,
+            title: "Emergency Phone"
         });
         var phoneFive= new google.maps.Marker({
             position: emergencyPhones[5],
-            icon: skyblueMarker
+            icon: skyblueMarker,
+            title: "Emergency Phone"
         });
         var phoneSix = new google.maps.Marker({
             position: emergencyPhones[6],
-            icon: skyblueMarker
+            icon: skyblueMarker,
+            title: "Emergency Phone"
         });
         var phoneSeven = new google.maps.Marker({
             position: emergencyPhones[7],
-            icon: skyblueMarker
+            icon: skyblueMarker,
+            title: "Emergency Phone"
         });
         var phoneEight = new google.maps.Marker({
             position: emergencyPhones[8],
-            icon: skyblueMarker
+            icon: skyblueMarker,
+            title: "Emergency Phone"
         });
         var phoneNine = new google.maps.Marker({
             position: emergencyPhones[9],
-            icon: skyblueMarker
+            icon: skyblueMarker,
+            title: "Emergency Phone"
         });
         var phoneTen = new google.maps.Marker({
             position: emergencyPhones[10],
-            icon: skyblueMarker
+            icon: skyblueMarker,
+            title: "Emergency Phone"
         });
         var phoneEleven = new google.maps.Marker({
             position: emergencyPhones[11],
-            icon: skyblueMarker
+            icon: skyblueMarker,
+            title: "Emergency Phone"
         });
         var phoneTwelve = new google.maps.Marker({
             position: emergencyPhones[12],
-            icon: skyblueMarker
+            icon: skyblueMarker,
+            title: "Emergency Phone"
         });
         var phoneThirteen = new google.maps.Marker({
             position: emergencyPhones[13],
-            icon: skyblueMarker
+            icon: skyblueMarker,
+            title: "Emergency Phone"
         });
         var phoneFourteen = new google.maps.Marker({
             position: emergencyPhones[14],
-            icon: skyblueMarker
+            icon: skyblueMarker,
+            title: "Emergency Phone"
         });
         var phoneFifteen = new google.maps.Marker({
             position: emergencyPhones[15],
-            icon: skyblueMarker
+            icon: skyblueMarker,
+            title: "Emergency Phone"
         });
         var phoneSixteen = new google.maps.Marker({
             position: emergencyPhones[16],
-            icon: skyblueMarker
+            icon: skyblueMarker,
+            title: "Emergency Phone"
         });
         var phoneSeventeen = new google.maps.Marker({
             position: emergencyPhones[17],
-            icon: skyblueMarker
+            icon: skyblueMarker,
+            title: "Emergency Phone"
         });
         var phoneEighteen = new google.maps.Marker({
             position: emergencyPhones[18],
-            icon: skyblueMarker
+            icon: skyblueMarker,
+            title: "Emergency Phone"
         });
         var phoneNineteen = new google.maps.Marker({
             position: emergencyPhones[19],
-            icon: skyblueMarker
+            icon: skyblueMarker,
+            title: "Emergency Phone"
         });
         var phoneTwenty = new google.maps.Marker({
             position: emergencyPhones[20],
-            icon: skyblueMarker
+            icon: skyblueMarker,
+            title: "Emergency Phone"
         });
         var phoneTwentyOne = new google.maps.Marker({
             position: emergencyPhones[21],
-            icon: skyblueMarker
+            icon: skyblueMarker,
+            title: "Emergency Phone"
         });
         var phoneTwentyTwo = new google.maps.Marker({
             position: emergencyPhones[22],
-            icon: skyblueMarker
+            icon: skyblueMarker,
+            title: "Emergency Phone"
         });
         var phoneTwentyThree = new google.maps.Marker({
             position: emergencyPhones[23],
-            icon: skyblueMarker
+            icon: skyblueMarker,
+            title: "Emergency Phone"
         });
         var phoneTwentyFour = new google.maps.Marker({
             position: emergencyPhones[24],
-            icon: skyblueMarker
+            icon: skyblueMarker,
+            title: "Emergency Phone"
         });
         var phoneTwentyFive = new google.maps.Marker({
             position: emergencyPhones[25],
-            icon: skyblueMarker
+            icon: skyblueMarker,
+            title: "Emergency Phone"
         });
         var phoneTwentySix = new google.maps.Marker({
             position: emergencyPhones[26],
-            icon: skyblueMarker
+            icon: skyblueMarker,
+            title: "Emergency Phone"
         });
         var phoneTwentySeven = new google.maps.Marker({
             position: emergencyPhones[27],
-            icon: skyblueMarker
+            icon: skyblueMarker,
+            title: "Emergency Phone"
         });
         // function for setting emergency phone markers
         function setEmergencyPhones(){
@@ -4594,51 +4729,63 @@ function initMap() {
         // creating sust markers
         var albeeSustMarker = new google.maps.Marker({
             position: buildings[0],
-            icon: redMarker
+            icon: redMarker,
+            title: "Albee Hall"
         });
         var alumniSustMarker = new google.maps.Marker({
             position: buildings[2],
-            icon: redMarker
+            icon: redMarker,
+            title: "Alumni Welcome and Conference Center"
         });
         var blackhawkSustMarker = new google.maps.Marker({
             position: buildings[5],
-            icon: redMarker
+            icon: redMarker,
+            title: "Blackhawk Commons"
         });
         var biodigesterSustMarker = new google.maps.Marker({
             position: buildings[6],
-            icon: redMarker
+            icon: redMarker,
+            title: "Biodigester"
         });
         var heatingSustMarker = new google.maps.Marker({
             position: buildings[23],
-            icon: redMarker
+            icon: redMarker,
+            title: "Heating Plant"
         });
         var horizonSustMarker = new google.maps.Marker({
             position: buildings[25],
-            icon: redMarker
+            icon: redMarker,
+            title: "Horizon Village"
         });
         var reeveSustMarker = new google.maps.Marker({
             position: buildings[34],
-            icon: redMarker
+            icon: redMarker,
+            title: "Reeve Memorial Union"
         });
         var sageSustMarker = new google.maps.Marker({
             position: buildings[35],
-            icon: redMarker
+            icon: redMarker,
+            title: "Sage Hall"
         });
         var recreationSustMarker = new google.maps.Marker({
             position: buildings[38],
-            icon: redMarker
+            icon: redMarker,
+            title: "Student Recreation and Conference Center"
         });
         var successSustMarker = new google.maps.Marker({
             position: buildings[39],
-            icon: redMarker
+            icon: redMarker,
+            title: "Student Success Center"
         });
         var taylorSustMarker = new google.maps.Marker({
             position: buildings[41],
-            icon: redMarker
+            icon: redMarker,
+            title: "Taylor Hall"
         });
         var titanSustMarker = new google.maps.Marker({
             position: buildings[42],
-            icon: redMarker
+            icon: redMarker,
+            title: "Titan Stadium"
         });
 
         // sust hovers
@@ -4829,59 +4976,73 @@ function initMap() {
         // create gender markers
         var acGenderMarker = new google.maps.Marker({
             position: buildings[3],
-            icon: greenMarker
+            icon: greenMarker,
+            title: "Arts and Communications"
         });
         var blackhawkGenderMarker = new google.maps.Marker({
             position: buildings[5],
-            icon: greenMarker
+            icon: greenMarker,
+            title: "Blackhawk Commons"
         });
         var campusGenderMarker = new google.maps.Marker({
             position: buildings[9],
-            icon: greenMarker
+            icon: greenMarker,
+            title: "Campus Center for Equity and Diversity"
         });
         var dempseyGenderMarker = new google.maps.Marker({
             position: buildings[13],
-            icon: greenMarker
+            icon: greenMarker,
+            title: "Dempsey Hall"
         });
         var halseyGenderMarker = new google.maps.Marker({
             position: buildings[21],
-            icon: greenMarker
+            icon: greenMarker,
+            title: "Halsey Science Center"
         });
         var harringtonGenderMarker = new google.maps.Marker({
             position: buildings[22],
-            icon: greenMarker
+            icon: greenMarker,
+            title: "Harrington Hall"
         });
         var kolfGenderMarker = new google.maps.Marker({
             position: buildings[26],
-            icon: greenMarker
+            icon: greenMarker,
+            title: "Kolf Sports Center"
         });
         var nursingGenderMarker = new google.maps.Marker({
             position: buildings[29],
-            icon: greenMarker
+            icon: greenMarker,
+            title: "Nursing and Education Building"
         });
         var reeveGenderMarker = new google.maps.Marker({
             position: buildings[34],
-            icon: greenMarker
+            icon: greenMarker,
+            title: "Reeve Memorial Union"
         });
         var sageGenderMarker = new google.maps.Marker({
             position: buildings[35],
-            icon: greenMarker
+            icon: greenMarker,
+            title: "Sage Hall"
         });
         var recreationGenderMarker = new google.maps.Marker({
             position: buildings[38],
-            icon: greenMarker
+            icon: greenMarker,
+            title: "Student Recreation and Wellness Center"
         });
         var successGenderMarker = new google.maps.Marker({
             position: buildings[39],
-            icon: greenMarker
+            icon: greenMarker,
+            title: "Student Success Center"
         });
         var swartGenderMarker = new google.maps.Marker({
             position: buildings[40],
-            icon: greenMarker
+            icon: greenMarker,
+            title: "Swart Hall"
         });
         var policeGenderMarker = new google.maps.Marker({
             position: buildings[43],
-            icon: greenMarker
+            icon: greenMarker,
+            title: "University Police"
         });
 
 
@@ -5125,47 +5286,58 @@ function initMap() {
         // AccaF markers
         var albeeAccaFMarker = new google.maps.Marker({
             position: buildings[0],
-            icon: acaFMarker
+            icon: acaFMarker,
+            title: "Albee Hall"
         });
         var acAccaFMarker = new google.maps.Marker({
             position: buildings[3],
-            icon: acaFMarker
+            icon: acaFMarker,
+            title: "Arts and Communications"
         });
         var ceramicsAccaFMarker = new google.maps.Marker({
             position: buildings[10],
-            icon: acaFMarker
+            icon: acaFMarker,
+            title: "Ceramics Laboratory"
         });
         var clowAccaFMarker = new google.maps.Marker({
             position: buildings[11],
-            icon: acaFMarker
+            icon: acaFMarker,
+            title: "Clow Social Science Center"
         });
         var environmentalAccaFMarker = new google.maps.Marker({
             position: buildings[16],
-            icon: acaFMarker
+            icon: acaFMarker,
+            title: "Environmental Science and Research Center"
         });
         var fredricAccaFMarker = new google.maps.Marker({
             position: buildings[19],
-            icon: acaFMarker
+            icon: acaFMarker,
+            title: "Fredric March Theater"
         });
         var halseyAccaFMarker = new google.maps.Marker({
             position: buildings[21],
-            icon: acaFMarker
+            icon: acaFMarker,
+            title: "Halsey Science Center"
         });
         var harringtonAccaFMarker = new google.maps.Marker({
             position: buildings[22],
-            icon: acaFMarker
+            icon: acaFMarker,
+            title: "Harrington Hall"
         });
         var kolfAccaFMarker = new google.maps.Marker({
             position: buildings[26],
-            icon: acaFMarker
+            icon: acaFMarker,
+            title: "Kolf Sports Center"
         });
         var nursingAccaFMarker = new google.maps.Marker({
             position: buildings[29],
-            icon: acaFMarker
+            icon: acaFMarker,
+            title: "Nursing and Education Building"
         });
         var polkAccaFMarker = new google.maps.Marker({
             position: buildings[32],
-            icon: acaFMarker
+            icon: acaFMarker,
+            title: "Polk Library"
         });
         var radfordAccaFMarker = new google.maps.Marker({
             position: buildings[33],

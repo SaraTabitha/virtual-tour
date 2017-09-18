@@ -160,6 +160,7 @@
       $("#genderLabel").removeClass("is-checked");
     }
     });
+
     // event listener for the select all button attached to function clicking
     $("#selectallcheck").click(function(){
 
@@ -169,10 +170,10 @@
     //it has to do the opposite of what the state of the click is ex. If check was false before click
     // do: check everything (and then the select all with check as the very last step (and become true))
       if(check === false){
+
       // buildings
       $("#buildings").attr("checked", true);
       $("#buildLabel").addClass("is-checked");
-
       // parking lots
       $("#parkingLots").attr("checked", true);
       $("#parkingLabel").addClass("is-checked");
@@ -197,7 +198,6 @@
       // buildings
       $("#buildings").removeAttr("checked", true);
       $("#buildLabel").removeClass("is-checked");
-
       // parking lots
       $("#parkingLots").removeAttr("checked", true);
       $("#parkingLabel").removeClass("is-checked");
@@ -318,27 +318,27 @@
           $("#stuR").attr("checked",true);
           $("#stuRLabel").addClass("is-checked");
       } else if (checkTwo === true) {
-        // academic facilities
-        $("#accaF").removeAttr("checked", true);
-        $("#accaFLabel").removeClass("is-checked");
-        // athletics
-        $("#ath").removeAttr("checked", true);
-        $("#athLabel").removeClass("is-checked");
-        // academic services
-        $("#accS").removeAttr("checked", true);
-        $("#accSLabel").removeClass("is-checked");
-        // campus services
-        $("#campS").removeAttr("checked", true);
-        $("#campSLabel").removeClass("is-checked");
-        // residence halls
-        $("#resH").removeAttr("checked", true);
-        $("#resHLabel").removeClass("is-checked");
-        // dining
-        $("#dining").removeAttr("checked", true);
-        $("#diningLabel").removeClass("is-checked");
-        // student recreation
-        $("#stuR").removeAttr("checked", true);
-        $("#stuRLabel").removeClass("is-checked");
+          // academic facilities
+          $("#accaF").removeAttr("checked", true);
+          $("#accaFLabel").removeClass("is-checked");
+          // athletics
+          $("#ath").removeAttr("checked", true);
+          $("#athLabel").removeClass("is-checked");
+          // academic services
+          $("#accS").removeAttr("checked", true);
+          $("#accSLabel").removeClass("is-checked");
+          // campus services
+          $("#campS").removeAttr("checked", true);
+          $("#campSLabel").removeClass("is-checked");
+          // residence halls
+          $("#resH").removeAttr("checked", true);
+          $("#resHLabel").removeClass("is-checked");
+          // dining
+          $("#dining").removeAttr("checked", true);
+          $("#diningLabel").removeClass("is-checked");
+          // student recreation
+          $("#stuR").removeAttr("checked", true);
+          $("#stuRLabel").removeClass("is-checked");
       }
     });
     // End second Select All
