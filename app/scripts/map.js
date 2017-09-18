@@ -5341,15 +5341,18 @@ function initMap() {
         });
         var radfordAccaFMarker = new google.maps.Marker({
             position: buildings[33],
-            icon: acaFMarker
+            icon: acaFMarker,
+            title: "Radford Hall and Student Health Center"
         });
         var sageAccaFMarker = new google.maps.Marker({
             position: buildings[35],
-            icon: acaFMarker
+            icon: acaFMarker,
+            title: "Sage Hall"
         });
         var swartAccaFMarker = new google.maps.Marker({
             position: buildings[40],
-            icon: acaFMarker
+            icon: acaFMarker,
+            title: "Swart Hall"
         });
 
         // hover for AccaF
@@ -5566,28 +5569,34 @@ function initMap() {
         // create markers for athletics
         var albeeAthMarker = new google.maps.Marker({
             position: buildings[0],
-            icon: athMarker
+            icon: athMarker,
+            title: "Albee Hall"
         });
         var baseballAthMarker = new google.maps.Marker({
             position: buildings[1],
-            icon: athMarker
+            icon: athMarker,
+            title: "Alumni Baseball Stadium"
         });
         var athleticAthMarker = new google.maps.Marker({
             position: buildings[4],
-            icon: athMarker
+            icon: athMarker,
+            title: "Athletic Service Building"
         });
         var eastAthMarker = new google.maps.Marker({
             position: buildings[15],
-            icon: athMarker
+            icon: athMarker,
+            title: "East Hall"
         });
         var kolfAthMarker = new google.maps.Marker({
             position: buildings[26],
-            icon: athMarker
+            icon: athMarker,
+            title: "Kolf Sports Center"
         });
 
         var titanAthMarker = new google.maps.Marker({
             position: buildings[42],
-            icon: athMarker
+            icon: athMarker,
+            title: "Titan Stadium"
         });
         // athletics marker hover
         albeeAthMarker.addListener('click', function(){
@@ -5691,19 +5700,23 @@ function initMap() {
         // AccaS markers
         var equityAccaSMarker = new google.maps.Marker({
             position: buildings[8],
-            icon: acaSMarker
+            icon: acaSMarker,
+            title: "Campus Center for Diversity and Equity"
         });
         var nursingAccaSMarker = new google.maps.Marker({
             position: buildings[29],
-            icon: acaSMarker
+            icon: acaSMarker,
+            title: "Nursing and Education Building"
         });
         var successAccaSMarker = new google.maps.Marker({
             position: buildings[39],
-            icon: acaSMarker
+            icon: acaSMarker,
+            title: "Student Success Center"
         });
         var swartAccaSMarker = new google.maps.Marker({
             position: buildings[40],
-            icon: acaSMarker
+            icon: acaSMarker,
+            title: "Swart Hall"
         });
 
         // AccaS hover
@@ -5782,39 +5795,48 @@ function initMap() {
         // CampS markers
         var equityCampSMarker = new google.maps.Marker({
             position: buildings[8],
-            icon: campSMarker
+            icon: campSMarker,
+            title: "Campus Center for Diversity and Equity"
         });
         var campusCampSMarker = new google.maps.Marker({
             position: buildings[9],
-            icon: campSMarker
+            icon: campSMarker,
+            title: "Campus Services"
         });
         var dempseyCampSMarker = new google.maps.Marker({
             position: buildings[13],
-            icon: campSMarker
+            icon: campSMarker,
+            title: "Dempsey Hall"
         });
         var multiculturalCampSMarker = new google.maps.Marker({
             position: buildings[28],
-            icon: campSMarker
+            icon: campSMarker,
+            title: "Multicultural Education Center"
         });
         var pollockCampSMarker = new google.maps.Marker({
             position: buildings[31],
-            icon: campSMarker
+            icon: campSMarker,
+            title: "Pollock House"
         });
         var radfordCampSMarker = new google.maps.Marker({
             position: buildings[33],
-            icon: campSMarker
+            icon: campSMarker,
+            title: "Radford Hall and Student Health Center"
         });
         var reeveCampSMarker = new google.maps.Marker({
             position: buildings[34],
-            icon: campSMarker
+            icon: campSMarker,
+            title: "Reeve Memorial Union"
         });
         var recreationCampSMarker = new google.maps.Marker({
             position: buildings[38],
-            icon: campSMarker
+            icon: campSMarker,
+            title: "Student Recreation and Wellness Center"
         });
         var successCampSMarker = new google.maps.Marker({
             position: buildings[39],
-            icon: campSMarker
+            icon: campSMarker,
+            title: "Student Success Center"
         });
 
 
