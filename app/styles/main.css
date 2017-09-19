@@ -1016,7 +1016,7 @@ ul#popupNav li:hover{
 
     #watermark{
     height: 54.5px;
-    width: 111.5px;
+    width: auto;
     position: relative;
     top: -8%;
     }

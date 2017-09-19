@@ -5986,39 +5986,48 @@ function initMap() {
         // ResH markers
         var donnerResHMarker = new google.maps.Marker({
             position: buildings[14],
-            icon: resHMarker
+            icon: resHMarker,
+            title: "Donner Hall"
         });
         var evansResHMarker = new google.maps.Marker({
             position: buildings[17],
-            icon: resHMarker
+            icon: resHMarker,
+            title: "Evans Hall"
         });
         var fletcherResHMarker = new google.maps.Marker({
             position: buildings[18],
-            icon: resHMarker
+            icon: resHMarker,
+            title: "Fletcher Hall"
         });
         var gruenhagenResHMarker = new google.maps.Marker({
             position: buildings[20],
-            icon: resHMarker
+            icon: resHMarker,
+            title: "Gruenhagen Conference Center"
         });
         var horizonResHMarker = new google.maps.Marker({
             position: buildings[25],
-            icon: resHMarker
+            icon: resHMarker,
+            title: "Horizon Village"
         });
         var stewartResHMarker = new google.maps.Marker({
             position: buildings[37],
-            icon: resHMarker
+            icon: resHMarker,
+            title: "Stewart Hall"
         });
         var scottResHMarker = new google.maps.Marker({
             position: buildings[36],
-            icon: resHMarker
+            icon: resHMarker,
+            title: "Scott Hall"
         });
         var taylorResHMarker = new google.maps.Marker({
             position: buildings[41],
-            icon: resHMarker
+            icon: resHMarker,
+            title: "Taylor Hall"
         });
         var websterResHMarker = new google.maps.Marker({
             position: buildings[44],
-            icon: resHMarker
+            icon: resHMarker,
+            title: "Webster Hall"
         });
 
         // ResH hover
@@ -6166,27 +6175,33 @@ function initMap() {
         // dining markers
         var blackhawkDiningMarker = new google.maps.Marker({
             position: buildings[5],
-            icon: diningMarker
+            icon: diningMarker,
+            title: "Blackhawk Commons"
         });
         var clowDiningMarker = new google.maps.Marker({
             position: buildings[11],
-            icon: diningMarker
+            icon: diningMarker,
+            title: "Clow Social Science Center"
         });
         var halseyDiningMarker = new google.maps.Marker({
             position: buildings[21],
-            icon: diningMarker
+            icon: diningMarker,
+            title: "Halsey Science Center"
         });
         var reeveDiningMarker = new google.maps.Marker({
             position: buildings[34],
-            icon: diningMarker
+            icon: diningMarker,
+            title: "Reeve Memorial Union"
         });
         var sageDiningMarker = new google.maps.Marker({
             position: buildings[35],
-            icon: diningMarker
+            icon: diningMarker,
+            title: "Sage Hall"
         });
         var scottDiningMarker = new google.maps.Marker({
             position: buildings[36],
-            icon: diningMarker
+            icon: diningMarker,
+            title: "Scott Hall"
         });
 
         // dining hover
@@ -6291,11 +6306,13 @@ function initMap() {
         // StuR markers
         var reeveStuRMarker = new google.maps.Marker({
             position: buildings[34],
-            icon: stuRMarker
+            icon: stuRMarker,
+            title: "Reeve Memorial Union"
         });
         var recreationStuRMarker = new google.maps.Marker({
             position: buildings[38],
-            icon: stuRMarker
+            icon: stuRMarker,
+            title: "Student Recreation and Wellness Center"
         });
 
         // StuR hover
