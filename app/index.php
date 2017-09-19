@@ -4168,8 +4168,9 @@
       <!-- search box functionality -->
       <script src="scripts/search.js"></script>
       <!-- map -->
-      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_4zQ9m4LdUjtmEOJG4g05xf2oipMUDuU&callback=initMap"></script>
       <script src="scripts/map.js"></script>
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_4zQ9m4LdUjtmEOJG4g05xf2oipMUDuU&callback=initMap"></script>
+
 
 
 
