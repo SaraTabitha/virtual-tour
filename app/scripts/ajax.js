@@ -72,7 +72,7 @@ $( "#searchInput" ).keyup(function() {
   function callAjax(){
   $.ajax({
     type: "GET",
-    url: "php/search.php",
+    url: "../php/search.php",
     data: ({search: $("#searchInput").val()}),
     success: function(results){
 
