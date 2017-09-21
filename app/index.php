@@ -845,7 +845,7 @@
                         <!-- Arts & Communications Center POPUP -->
                         <div id="acPopup" class="popup">
                                 <div class="popupBlack">
-                                        <h1 class="text yellow ">Arts &amp; Communications Center <button id="acPopupClose" class="closeButton mdl-color-text--white mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
+                                        <h1 class="text yellow ">Arts &amp; Communication Center <button id="acPopupClose" class="closeButton mdl-color-text--white mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
                                                 <i  class="material-icons">close</i>
                                         </button></h1>
                                 </div>
@@ -4170,10 +4170,6 @@
       <!-- map -->
       <script src="scripts/map.js"></script>
       <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_4zQ9m4LdUjtmEOJG4g05xf2oipMUDuU&callback=initMap"></script>
-
-
-
-
 
 
       <!-- endbuild -->
