@@ -1,10 +1,6 @@
 <?php
 
-    // pdo object, connecting to SQL
-    // from: w3schools php MySQL connect
-    $servername = "localhost";
-    $username = "virtualtourdev";
-    $password = "Fuzk197#";
+    include('db-config.php');
 
     try {
         $conn = new PDO("mysql:host=$servername;dbname=virtualtourdev", $username, $password);
