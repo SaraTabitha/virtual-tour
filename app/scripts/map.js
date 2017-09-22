@@ -506,6 +506,7 @@ function initMap() {
         });
         // when x on popup is clicked, close popup
         $("#albeePopupClose").click(function(){
+            
             $('#overlay').animate({"opacity": "0"}, "slow");
             $('#overlay').css('visibility', 'hidden');
 

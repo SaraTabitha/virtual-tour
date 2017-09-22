@@ -929,7 +929,7 @@ ul#popupNav li:hover{
   /*for hall info popups*/
   .closeButton{
     float: right;
-    right: 30px;
+    right: 15px;
     top: 15px;
   }
 
@@ -1164,7 +1164,9 @@ ul#popupNav li:hover{
     .closeButton{
       float: right;
       top: 20px;
-      right: 20px;
+      right: 3%;
+      margin: 5px;
+      z-index: 99;
     }
 
 
