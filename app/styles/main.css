@@ -323,7 +323,7 @@ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 .popupBlack{
 background-color: #fdb515;
 position: relative;
-height: 100px;
+min-height: 100px;
 }
 .popupNav{
 background-color:  #ffcc00 ;
@@ -1160,8 +1160,9 @@ ul#popupNav li:hover{
     /*for hall info popups*/
     .closeButton{
       float: right;
-      top: 20px;
+      /* top: 20px; */
       right: 3%;
+      position: absolute;
       margin: 5px;
       z-index: 99;
     }
@@ -1475,6 +1476,7 @@ ul#popupNav li:hover{
     font-size: 2em;
     top: 20px;
     margin: 0px;
+    padding: 20px;
     }
 
     .popupNav{
