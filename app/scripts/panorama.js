@@ -2,12 +2,12 @@
 var panorama = [
     // 0 titan field
     "images/Panorama/titan field/titanFieldPano.jpg",
-    // 1 womens center front entrance
-    "images/Panorama/womens center/womensCenterFront.jpg",
-    // 2 womens center main room
-    "images/Panorama/womens center/womensCenter.jpg",
-    // 3 womens center backroom
-    "images/Panorama/womens center/womensCenterBackroom.jpg",
+    // 1 womens-center front entrance
+    "images/Panorama/womens-center/womensCenterFront.jpg",
+    // 2 womens-center main room
+    "images/Panorama/womens-center/womensCenter.jpg",
+    // 3 womens-center backroom
+    "images/Panorama/womens-center/womensCenterBackroom.jpg",
     // 4 executive board room
     "images/Panorama/executive board room/executiveBoardRoom.jpg",
     // 5 dempsey outside, sidewalk tour
@@ -77,148 +77,148 @@ var panorama = [
   }
 
 
-  // womens center panorama
-  document.getElementById("womensCenter").addEventListener('click', onLoad)
-    // open 1
-    // creates vr view player
-      function onLoad(){
-                // open 2
-                womensCenter = new VRView.Player('#womensCenterImage', {
-                  image: panorama[1],
-                  is_stereo: false,
-      // close 2
-      });
-      //makes sure no duplicate players can be created
-      document.getElementById("womensCenter").removeEventListener('click', onLoad);
-      // styling for iframe
-      $("#womensCenterImage > iframe").addClass("vr");
+  // // womens-center panorama
+  // document.getElementById("womensCenter").addEventListener('click', onLoad)
+  //   // open 1
+  //   // creates vr view player
+  //     function onLoad(){
+  //               // open 2
+  //               womensCenter = new VRView.Player('#womensCenterImage', {
+  //                 image: panorama[1],
+  //                 is_stereo: false,
+  //     // close 2
+  //     });
+  //     //makes sure no duplicate players can be created
+  //     document.getElementById("womensCenter").removeEventListener('click', onLoad);
+  //     // styling for iframe
+  //     $("#womensCenterImage > iframe").addClass("vr");
 
-      //adding hotspot
-      womensCenter.on('ready', function(event){
+  //     //adding hotspot
+  //     womensCenter.on('ready', function(event){
 
-        // open 7
-        // hotspot id is VERY important, ids cannot be reused
-        womensCenter.addHotspot('intitialId', {
-          pitch: 20, // In degrees. Up is positive.
-          yaw: -125, // In degrees. To the left is positive.
-          radius: 0.30, // Radius of the circular target in meters.
-          distance: 1.5 // Distance of target from camera in meters.
+  //       // open 7
+  //       // hotspot id is VERY important, ids cannot be reused
+  //       womensCenter.addHotspot('intitialId', {
+  //         pitch: 20, // In degrees. Up is positive.
+  //         yaw: -125, // In degrees. To the left is positive.
+  //         radius: 0.30, // Radius of the circular target in meters.
+  //         distance: 1.5 // Distance of target from camera in meters.
 
-          // close addHotspot (close 7)
-        });
+  //         // close addHotspot (close 7)
+  //       });
 
 
-        // open 5
-        womensCenter.on('click', function(event) {
-          // open 6
+  //       // open 5
+  //       womensCenter.on('click', function(event) {
+  //         // open 6
 
-            if (event.id == 'intitialId') {
-              // Handle hotspot click.
-              // sends to function that creates the backroom scene
-                    womensCenterChange();
-            }
+  //           if (event.id == 'intitialId') {
+  //             // Handle hotspot click.
+  //             // sends to function that creates the backroom scene
+  //                   womensCenterChange();
+  //           }
 
-        // close 5
-        });
+  //       // close 5
+  //       });
 
-      // close 3
-      });
+  //     // close 3
+  //     });
 
-  // close 1
-  }
+  // // close 1
+  // }
 
-  // function that changes the image that the player loads
-  // takes user to the womens center backroom
-  function womensCenterChange(){
-    womensCenter.setContent({
-      image: panorama[2],
-      is_stereo: false
-    });
+  // // function that changes the image that the player loads
+  // // takes user to the womens-center backroom
+  // function womensCenterChange(){
+  //   womensCenter.setContent({
+  //     image: panorama[2],
+  //     is_stereo: false
+  //   });
 
-      womensCenter.addHotspot('womensCenter-backroom', {
-        pitch: 0, // In degrees. Up is positive.
-        yaw: -5, // In degrees. To the left is positive.
-        radius: 0.30, // Radius of the circular target in meters.
-        distance: 2 // Distance of target from camera in meters.
-      });
-      womensCenter.addHotspot('womensCenter-Entrance', {
-        pitch: 5, // In degrees. Up is positive.
-        yaw: 153, // In degrees. To the left is positive.
-        radius: 0.30, // Radius of the circular target in meters.
-        distance: 2 // Distance of target from camera in meters.
-      });
-      // open 5
-      womensCenter.on('click', function(event) {
-        // open 6
+  //     womensCenter.addHotspot('womensCenter-backroom', {
+  //       pitch: 0, // In degrees. Up is positive.
+  //       yaw: -5, // In degrees. To the left is positive.
+  //       radius: 0.30, // Radius of the circular target in meters.
+  //       distance: 2 // Distance of target from camera in meters.
+  //     });
+  //     womensCenter.addHotspot('womensCenter-Entrance', {
+  //       pitch: 5, // In degrees. Up is positive.
+  //       yaw: 153, // In degrees. To the left is positive.
+  //       radius: 0.30, // Radius of the circular target in meters.
+  //       distance: 2 // Distance of target from camera in meters.
+  //     });
+  //     // open 5
+  //     womensCenter.on('click', function(event) {
+  //       // open 6
 
-           if (event.id == 'womensCenter-backroom'){
-                  womensCenterBackroom();
-          // close 6
-        } else if (event.id == 'womensCenter-Entrance'){
-                  womensCenterEntrance();
+  //          if (event.id == 'womensCenter-backroom'){
+  //                 womensCenterBackroom();
+  //         // close 6
+  //       } else if (event.id == 'womensCenter-Entrance'){
+  //                 womensCenterEntrance();
 
-        }
-      // close 5
-      });
-  }
+  //       }
+  //     // close 5
+  //     });
+  // }
 
-  // basically now they are just looping back and forth
-  // between the womensCenterBackroom function and this function
-  // so the panorama image is changed and the two hotspots are used
-  // *does not work if the womensCenterBackroom function is looped
-  // *back to the load function
-  function womensCenterBackroom(){
-    womensCenter.setContent({
-      image: panorama[3],
-      is_stereo: false
-    });
-    // create new hotspot to return to womens center
-      womensCenter.addHotspot('womensCenter', {
-        pitch: 0, // In degrees. Up is positive.
-        yaw: 17, // In degrees. To the left is positive.
-        radius: 0.30, // Radius of the circular target in meters.
-        distance: 1 // Distance of target from camera in meters.
+  // // basically now they are just looping back and forth
+  // // between the womensCenterBackroom function and this function
+  // // so the panorama image is changed and the two hotspots are used
+  // // *does not work if the womensCenterBackroom function is looped
+  // // *back to the load function
+  // function womensCenterBackroom(){
+  //   womensCenter.setContent({
+  //     image: panorama[3],
+  //     is_stereo: false
+  //   });
+  //   // create new hotspot to return to womens-center
+  //     womensCenter.addHotspot('womensCenter', {
+  //       pitch: 0, // In degrees. Up is positive.
+  //       yaw: 17, // In degrees. To the left is positive.
+  //       radius: 0.30, // Radius of the circular target in meters.
+  //       distance: 1 // Distance of target from camera in meters.
 
-      });
-      // open 5
-      // when the hotspot is clicked the user will be taken back to the
-      // womens center main room using the womens center function
-      womensCenter.on('click', function(event) {
-        // open 6
-          if (event.id == 'womensCenter') {
-            // Handle hotspot click.
-                  womensCenterChange();
-          }
+  //     });
+  //     // open 5
+  //     // when the hotspot is clicked the user will be taken back to the
+  //     // womens-center main room using the womens-center function
+  //     womensCenter.on('click', function(event) {
+  //       // open 6
+  //         if (event.id == 'womensCenter') {
+  //           // Handle hotspot click.
+  //                 womensCenterChange();
+  //         }
 
-      // close 5
-      });
+  //     // close 5
+  //     });
 
-  }
+  // }
 
-  function womensCenterEntrance(){
-    womensCenter.setContent({
-      image: panorama[1],
-      is_stereo: false
-    });
+  // function womensCenterEntrance(){
+  //   womensCenter.setContent({
+  //     image: panorama[1],
+  //     is_stereo: false
+  //   });
 
-      womensCenter.addHotspot('womensCenterMain', {
-        pitch: 20, // In degrees. Up is positive.
-        yaw: -125, // In degrees. To the left is positive.
-        radius: 0.30, // Radius of the circular target in meters.
-        distance: 1.5 // Distance of target from camera in meters.
+  //     womensCenter.addHotspot('womensCenterMain', {
+  //       pitch: 20, // In degrees. Up is positive.
+  //       yaw: -125, // In degrees. To the left is positive.
+  //       radius: 0.30, // Radius of the circular target in meters.
+  //       distance: 1.5 // Distance of target from camera in meters.
 
-      });
-      // open 5
-      womensCenter.on('click', function(event) {
-        // open 6
+  //     });
+  //     // open 5
+  //     womensCenter.on('click', function(event) {
+  //       // open 6
 
-           if (event.id == 'womensCenterMain'){
-                  womensCenterChange()
-          // close 6
-        }
-      // close 5
-      });
-  }
+  //          if (event.id == 'womensCenterMain'){
+  //                 womensCenterChange()
+  //         // close 6
+  //       }
+  //     // close 5
+  //     });
+  // }
 
 
   // executive board room panorama embed
@@ -381,6 +381,7 @@ var panorama = [
           }
       });
   }
+  
   function treesDeOv(){
     sidewalkTour.setContent({
       image: panorama[9],
@@ -410,6 +411,7 @@ var panorama = [
       });
 
   }
+  
   function midGarden(){
     sidewalkTour.setContent({
       image: panorama[10],
@@ -439,6 +441,7 @@ var panorama = [
       });
 
   }
+  
   function midGardenTwo(){
     sidewalkTour.setContent({
       image: panorama[11],
@@ -468,6 +471,7 @@ var panorama = [
       });
 
   }
+  
   function midGardenThree(){
     sidewalkTour.setContent({
       image: panorama[12],
@@ -497,6 +501,7 @@ var panorama = [
       });
 
   }
+  
   function midGardenFour(){
     sidewalkTour.setContent({
       image: panorama[13],
@@ -526,6 +531,7 @@ var panorama = [
 
       });
   }
+  
   function midSwHa(){
     sidewalkTour.setContent({
       image: panorama[14],
@@ -555,6 +561,7 @@ var panorama = [
           }
       });
   }
+  
   function midSwHaTwo(){
     sidewalkTour.setContent({
       image: panorama[15],
@@ -583,6 +590,7 @@ var panorama = [
           }
       });
   }
+  
   function cornerSw(){
     sidewalkTour.setContent({
       image: panorama[16],
@@ -610,6 +618,7 @@ var panorama = [
          }
       });
   }
+  
   function midSw(){
     sidewalkTour.setContent({
       image: panorama[17],
@@ -638,6 +647,7 @@ var panorama = [
          }
       });
   }
+  
   function behindSw(){
     sidewalkTour.setContent({
       image: panorama[18],
@@ -666,6 +676,7 @@ var panorama = [
          }
       });
   }
+  
   function swBu(){
     sidewalkTour.setContent({
       image: panorama[19],
@@ -694,6 +705,7 @@ var panorama = [
          }
       });
   }
+  
   function swBuHa(){
     sidewalkTour.setContent({
       image: panorama[20],
@@ -721,6 +733,7 @@ var panorama = [
          }
       });
   }
+  
   function cornerHa(){
     sidewalkTour.setContent({
       image: panorama[21],
@@ -748,6 +761,7 @@ var panorama = [
          }
       });
   }
+  
   function behindHaAr(){
     sidewalkTour.setContent({
       image: panorama[22],
@@ -775,6 +789,7 @@ var panorama = [
          }
       });
   }
+  
   function midHaAr(){
     sidewalkTour.setContent({
       image: panorama[23],

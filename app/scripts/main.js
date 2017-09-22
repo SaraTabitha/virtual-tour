@@ -349,7 +349,7 @@
 function hideAllVR(){
   $("#titanFieldImage > iframe").css('visibility', 'hidden');
   $("#titanField").removeClass("checked");
-  $("#womensCenterImage > iframe").css('visibility', 'hidden');
+  $("#womensCenterVR > iframe").css('visibility', 'hidden');
   $("#womensCenter").removeClass("checked");
   $("#executiveRoomImage > iframe").css('visibility', 'hidden');
   $("#executiveRoom").removeClass("checked");
@@ -397,30 +397,31 @@ $("#titanField").click(function(){
         $(this).removeClass("checked");
     }
 });
+
 $("#womensCenter").click(function(){
-    var check = $(this).hasClass("checked");
-    if(check === false){
-        hideAllVR();
-        $('#overlay').css('visibility', 'visible');
-        $('#overlay').animate({"opacity": "0.3"}, "slow");
+  var check = $(this).hasClass("checked");
+  if(check === false){
+      hideAllVR();
+      $('#overlay').css('visibility', 'visible');
+      $('#overlay').animate({"opacity": "0.3"}, "slow");
 
-        $("#womensCenterImage > iframe").css('visibility', 'visible');
+      $("#womensCenterVR > iframe").css('visibility', 'visible');
 
-        $("#vrCloseButton").css("visibility", "visible");
+      $("#vrCloseButton").css("visibility", "visible");
 
-        $(this).addClass("checked");
+      $(this).addClass("checked");
 
 
-    } else if (check === true) {
-        $('#overlay').css('visibility', 'hidden');
-        $('#overlay').animate({"opacity": "0"}, "slow");
+  } else if (check === true) {
+      $('#overlay').css('visibility', 'hidden');
+      $('#overlay').animate({"opacity": "0"}, "slow");
 
-        $("#womensCenterImage > iframe").css('visibility', 'hidden');
+      $("#womensCenterVR > iframe").css('visibility', 'hidden');
 
-        $("#vrCloseButton").css("visibility", "hidden");
+      $("#vrCloseButton").css("visibility", "hidden");
 
-        $(this).removeClass("checked");
-    }
+      $(this).removeClass("checked");
+  }
 });
 
 $("#executiveRoom").click(function(){

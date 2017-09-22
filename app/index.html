@@ -82,7 +82,6 @@
     <!-- VR view  -->
     <script src="https://storage.googleapis.com/vrview/2.0/build/vrview.min.js"></script>
 
-
 </head>
 <body>
 
@@ -285,7 +284,7 @@
                                                 <div id="linkTwoOptions"   class="tourDrop">
                                                         <ul class="noPad">
                                                                 <li id="womensCenter" class="tourItem text">Women's Center</li>
-                                                                <li id="" class="tourItem text">VR</li>
+                                                                <li class="tourItem text">VR</li>
                                                                 <li class="tourItem text">VR</li>
                                                         </ul>
                                                 </div>
@@ -2317,11 +2316,15 @@
                          ¯\_(ツ)_/¯ -->
 
                         <script src="scripts/panorama.js"></script>
+
+                        <!-- testing -->
+                        <script src="scripts/virtual-tour-scenes/womens-center.js"></script>
                         
                         <p id="vrCloseButton">x</p>
                         <div id="titanFieldImage" class="vrDiv"></div>
-
-                        <div id="womensCenterImage" class="vrDiv"></div>
+                        
+                        <!-- testing -->
+                        <div id="womensCenterVR" class="vrDiv"></div>
 
                         <div id="executiveRoomImage" class="vrDiv"></div>
 
@@ -3125,21 +3128,14 @@
         </main>
 </body>
 <footer>
-
-
-      <!-- <script src="https://code.getmdl.io/1.2.1/material.min.js"></script> -->
-      <script src="mdl/material.js"></script>
-
+      <!-- Begin build -->
+      <script src="lib/mdl/material.min.js"></script>
       <!-- build:js scripts/main.min.js -->
       <script src="scripts/main.js"></script>
-      <!-- search box functionality -->
-      <script src="scripts/search.js"></script>
       <!-- map -->
       <script src="scripts/map.js"></script>
       <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_4zQ9m4LdUjtmEOJG4g05xf2oipMUDuU&callback=initMap"></script>
-
-
-      <!-- endbuild -->
+      <!-- End build -->
 
       <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
       <!-- <script>
