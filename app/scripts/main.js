@@ -479,6 +479,8 @@ $("#dempseyStart").click(function(){
 
     // Start hide/show 360 navigation items
     $("#linkOne").click(function(){
+        // add shadow
+        $(this).toggleClass("mdl-shadow--3dp");
         // div toggle
         $("#linkOneOptions").toggle("slow");
         // + symbol toggle
@@ -486,16 +488,22 @@ $("#dempseyStart").click(function(){
         $("#removeOne").toggleClass("remove");
     });
     $("#linkTwo").click(function(){
+      // add shadow
+      $(this).toggleClass("mdl-shadow--3dp");
         $("#linkTwoOptions").toggle("slow");
         $("#addTwo").toggle();
         $("#removeTwo").toggleClass("remove");
     });
     $("#linkThree").click(function(){
+      // add shadow
+      $(this).toggleClass("mdl-shadow--3dp");
         $("#linkThreeOptions").toggle("slow");
         $("#addThree").toggle();
         $("#removeThree").toggleClass("remove");
     });
     $("#linkFour").click(function(){
+      // add shadow
+      $(this).toggleClass("mdl-shadow--3dp");
         $("#linkFourOptions").toggle("slow");
         $("#addFour").toggle();
         $("#removeFour").toggleClass("remove");
