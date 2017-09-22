@@ -29,10 +29,7 @@ media queries */
   padding: 0px;
   margin: 0px;
 }
-/*"search results" text underlined*/
-.firstResults{
-  /*text-decoration: underline;*/
-}
+
 .firstResults > h6{
   padding: 0px;
   margin: 0px;
@@ -232,7 +229,7 @@ p.parkingTextHover{
   /* staff blue */
   background-color: #324597;
   border-radius: 100px;
-  display: inline-block;
+  /* display: inline-block; */
   position: relative;
   float: right;
 }
@@ -242,7 +239,7 @@ p.parkingTextHover{
   /* remote orange*/
   background-color: #f17e21;
   border-radius: 100px;
-  display: inline-block;
+  /* display: inline-block; */
   position: relative;
   float: right;
 }
@@ -252,7 +249,7 @@ p.parkingTextHover{
   /* remote yellow*/
   background-color: #fbe200;
   border-radius: 100px;
-  display: inline-block;
+  /* display: inline-block; */
   position: relative;
   float: right;
 }
@@ -262,7 +259,7 @@ p.parkingTextHover{
   /* remote grey*/
   background-color: #9e9fa2;
   border-radius: 100px;
-  display: inline-block;
+  /* display: inline-block; */
   position: relative;
   float: right;
 }
@@ -272,7 +269,7 @@ p.parkingTextHover{
   /* remote pink*/
   background-color: #f298bf;
   border-radius: 100px;
-  display: inline-block;
+  /* display: inline-block; */
   position: relative;
   float: right;
 }
@@ -282,7 +279,7 @@ p.parkingTextHover{
   /* commuter red*/
   background-color: #ec2024;
   border-radius: 100px;
-  display: inline-block;
+  /* display: inline-block; */
   position: relative;
   float: right;
 }
@@ -292,7 +289,7 @@ p.parkingTextHover{
   /* resident green*/
   background-color: #6fbd46;
   border-radius: 100px;
-  display: inline-block;
+  /* display: inline-block; */
   position: relative;
   float: right;
 }
@@ -302,7 +299,7 @@ p.parkingTextHover{
   /* visitor peach*/
   background-color: #ffdc9d;
   border-radius: 100px;
-  display: inline-block;
+  /* display: inline-block; */
   position: relative;
   float: right;
 }
@@ -662,7 +659,7 @@ ul#popupNav li:hover{
   .imageHover{
     width: 70px;
     height: 105px;
-    display: inline-block;
+    /* display: inline-block; */
     float: left;
   }
   .hoverDiv{
@@ -1910,7 +1907,7 @@ ul#popupNav li:hover{
         height: 120%;
     }
     .infoContainer > a {
-        maring: 0 auto;
+        marigin: 0 auto;
     }
 }
 /*scrolling issue for popups*/
