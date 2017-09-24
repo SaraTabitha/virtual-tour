@@ -3145,27 +3145,32 @@
                 </div>
         </main>
         <footer>
-                <!-- Begin build -->
-                <script data-main="app" src="lib/require.js"></script>
-                <!--jquery link from Google-->
-                <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+                <!-- Begin JavaScript files -->
+                <!-- jQuery -->
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+                
                 <!-- VR view  -->
-                <!-- <script src="https://storage.googleapis.com/vrview/2.0/build/vrview.min.js"></script> -->
+                <script src="https://storage.googleapis.com/vrview/2.0/build/vrview.min.js"></script>
+                
+                <!-- VR scenes -->
+                <script src="scripts/panorama.js"></script>
+                <script src="scripts/virtual-tour-scenes/womens-center.js"></script>
 
-                <!-- VR images -->
-                <!-- <script src="scripts/panorama.js"></script> -->
-                <!-- <script src="scripts/virtual-tour-scenes/womens-center.js"></script> -->
+                <!-- Material Design -->
                 <script src="lib/mdl/material.js"></script>
 
                 <!-- build:js scripts/main.min.js -->
-                <!-- <script src="scripts/main.js"></script> -->
-                <!-- map -->
-                <!-- <script src="scripts/map.js"></script> -->
-                <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_4zQ9m4LdUjtmEOJG4g05xf2oipMUDuU&callback=initMap"></script> -->
-                <!-- ajax/search -->
-                <!-- Including scripts for Ajax -->
-                <!-- <script src="scripts/ajax.js"></script> -->
-                <!-- End build -->
+                <script src="scripts/main.js"></script>
+                
+                <!-- Map information -->
+                <script src="scripts/map.js"></script>
+                
+                <!-- Google Maps API -->
+                <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_4zQ9m4LdUjtmEOJG4g05xf2oipMUDuU&callback=initMap"></script>
+                
+                <!-- Search worker -->
+                <script src="scripts/search-worker.js"></script>
+                <!-- End JavaScript files -->
 
                 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
                 <!-- <script>
