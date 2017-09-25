@@ -10,6 +10,7 @@ var panorama = [
     "images/Panorama/womens-center/womensCenterBackroom.jpg",
     // 4 executive board room
     "images/Panorama/executive board room/executiveBoardRoom.jpg",
+    
     // 5 dempsey outside, sidewalk tour
     "images/Panorama/sidewalk/UWO360b_-2.jpg",
     // 6 oviatt outside> sidewalk closest to dempsey
@@ -241,573 +242,573 @@ var panorama = [
   // start sidewalk tour (thanks Doug!)
   //
 
-  document.getElementById("dempseyStart").addEventListener('click', onsidewalkTourLoad)
-    // creates vr view player
-      function onsidewalkTourLoad(){
-                sidewalkTour = new VRView.Player('#sidewalkTour', {
-                  image: panorama[5],
-                  is_stereo: false,
-      });
-      //makes sure no duplicate players can be created
-      document.getElementById("dempseyStart").removeEventListener('click', onsidewalkTourLoad);
-      // styling for iframe
-      $("#sidewalkTour > iframe").addClass("vr");
+  // document.getElementById("dempseyStart").addEventListener('click', onsidewalkTourLoad)
+  //   // creates vr view player
+  //     function onsidewalkTourLoad(){
+  //               sidewalkTour = new VRView.Player('#sidewalkTour', {
+  //                 image: panorama[5],
+  //                 is_stereo: false,
+  //     });
+  //     //makes sure no duplicate players can be created
+  //     document.getElementById("dempseyStart").removeEventListener('click', onsidewalkTourLoad);
+  //     // styling for iframe
+  //     $("#sidewalkTour > iframe").addClass("vr");
 
 
-      //adding hotspot
-      sidewalkTour.on('ready', function(event){
-        // hotspot id is VERY important, ids cannot be reused
-        sidewalkTour.addHotspot('sidewalkId', {
-          pitch: -10, // In degrees. Up is positive.
-          yaw: 55, // In degrees. To the left is positive.
-          radius: 0.10, // Radius of the circular target in meters.
-          distance: 1 // Distance of target from camera in meters.
-        });
-        sidewalkTour.on('click', function(event) {
-            if (event.id == 'sidewalkId') {
-              // Handle hotspot click.
-                    tourDeOv();
-            }
-        });
-      });
-  }
+  //     //adding hotspot
+  //     sidewalkTour.on('ready', function(event){
+  //       // hotspot id is VERY important, ids cannot be reused
+  //       sidewalkTour.addHotspot('sidewalkId', {
+  //         pitch: -10, // In degrees. Up is positive.
+  //         yaw: 55, // In degrees. To the left is positive.
+  //         radius: 0.10, // Radius of the circular target in meters.
+  //         distance: 1 // Distance of target from camera in meters.
+  //       });
+  //       sidewalkTour.on('click', function(event) {
+  //           if (event.id == 'sidewalkId') {
+  //             // Handle hotspot click.
+  //                   tourDeOv();
+  //           }
+  //       });
+  //     });
+  // }
 
-  // see sidewalk tour naming scheme txt file to understand naming scheme for
-  // the functions in the sidewalk tour
-  function tourDeOv(){
-    sidewalkTour.setContent({
-      image: panorama[6],
-      is_stereo: false
-    });
+  // // see sidewalk tour naming scheme txt file to understand naming scheme for
+  // // the functions in the sidewalk tour
+  // function tourDeOv(){
+  //   sidewalkTour.setContent({
+  //     image: panorama[6],
+  //     is_stereo: false
+  //   });
 
-      sidewalkTour.addHotspot('tourDeOvTwo', {
-        pitch: 0, // In degrees. Up is positive.
-        yaw: -80, // In degrees. To the left is positive.
-        radius: 0.10, // Radius of the circular target in meters.
-        distance: 1 // Distance of target from camera in meters.
-      });
-      sidewalkTour.addHotspot('dempsey', {
-        pitch: 0, // In degrees. Up is positive.
-        yaw: 163, // In degrees. To the left is positive.
-        radius: 0.10, // Radius of the circular target in meters.
-        distance: 2 // Distance of target from camera in meters.
-      });
-      sidewalkTour.addHotspot('roadOvDe', {
-        pitch: 0, // In degrees. Up is positive.
-        yaw: 103.5, // In degrees. To the left is positive.
-        radius: 0.10, // Radius of the circular target in meters.
-        distance: 2 // Distance of target from camera in meters.
-      });
-
-
-      sidewalkTour.on('click', function(event) {
-        // two options: go back to dempsey or go closer to oviatt house
-           if (event.id == 'tourDeOvTwo'){
-                  tourDeOvTwo();
-        } else if (event.id == 'dempsey'){
-                  dempseyFront();
-        } else if (event.id == 'roadOvDe'){
-                  roadOvDe();
-
-        }
-      });
-    }
-          // repeat of load function start because that's how it has to work
-          // (can't just reload the original function to get back to Dempsey)
-          function dempseyFront(){
-            sidewalkTour.setContent({
-              image: panorama[5],
-              is_stereo: false
-            });
-              sidewalkTour.addHotspot('tourDeOv', {
-                pitch: -10, // In degrees. Up is positive.
-                yaw: 55, // In degrees. To the left is positive.
-                radius: 0.10, // Radius of the circular target in meters.
-                distance: 1 // Distance of target from camera in meters.
-
-              });
-              sidewalkTour.on('click', function(event) {
-                   if (event.id == 'tourDeOv'){
-                          tourDeOv();
-                }
-              });
-          }
-          function roadOvDe(){
-            sidewalkTour.setContent({
-              image: panorama[8],
-              is_stereo: false
-            });
-              sidewalkTour.addHotspot('tourDeOvThird', {
-                pitch: 0, // In degrees. Up is positive.
-                yaw: -100, // In degrees. To the left is positive.
-                radius: 0.10, // Radius of the circular target in meters.
-                distance: 1 // Distance of target from camera in meters.
-
-              });
-              sidewalkTour.on('click', function(event) {
-                   if (event.id == 'tourDeOvThird'){
-                          tourDeOv();
-                }
-              });
-          }
+  //     sidewalkTour.addHotspot('tourDeOvTwo', {
+  //       pitch: 0, // In degrees. Up is positive.
+  //       yaw: -80, // In degrees. To the left is positive.
+  //       radius: 0.10, // Radius of the circular target in meters.
+  //       distance: 1 // Distance of target from camera in meters.
+  //     });
+  //     sidewalkTour.addHotspot('dempsey', {
+  //       pitch: 0, // In degrees. Up is positive.
+  //       yaw: 163, // In degrees. To the left is positive.
+  //       radius: 0.10, // Radius of the circular target in meters.
+  //       distance: 2 // Distance of target from camera in meters.
+  //     });
+  //     sidewalkTour.addHotspot('roadOvDe', {
+  //       pitch: 0, // In degrees. Up is positive.
+  //       yaw: 103.5, // In degrees. To the left is positive.
+  //       radius: 0.10, // Radius of the circular target in meters.
+  //       distance: 2 // Distance of target from camera in meters.
+  //     });
 
 
+  //     sidewalkTour.on('click', function(event) {
+  //       // two options: go back to dempsey or go closer to oviatt house
+  //          if (event.id == 'tourDeOvTwo'){
+  //                 tourDeOvTwo();
+  //       } else if (event.id == 'dempsey'){
+  //                 dempseyFront();
+  //       } else if (event.id == 'roadOvDe'){
+  //                 roadOvDe();
 
-  function tourDeOvTwo(){
-    sidewalkTour.setContent({
-      image: panorama[7],
-      is_stereo: false
-    });
-      sidewalkTour.addHotspot('tourDeOvAgain', {
-        pitch: 0, // In degrees. Up is positive.
-        yaw: 88, // In degrees. To the left is positive.
-        radius: 0.10, // Radius of the circular target in meters.
-        distance: 1 // Distance of target from camera in meters.
+  //       }
+  //     });
+  //   }
+  //         // repeat of load function start because that's how it has to work
+  //         // (can't just reload the original function to get back to Dempsey)
+  //         function dempseyFront(){
+  //           sidewalkTour.setContent({
+  //             image: panorama[5],
+  //             is_stereo: false
+  //           });
+  //             sidewalkTour.addHotspot('tourDeOv', {
+  //               pitch: -10, // In degrees. Up is positive.
+  //               yaw: 55, // In degrees. To the left is positive.
+  //               radius: 0.10, // Radius of the circular target in meters.
+  //               distance: 1 // Distance of target from camera in meters.
 
-      });
-      sidewalkTour.addHotspot('treesDeOv', {
-        pitch: 0, // In degrees. Up is positive.
-        yaw: -92, // In degrees. To the left is positive.
-        radius: 0.10, // Radius of the circular target in meters.
-        distance: 1 // Distance of target from camera in meters.
+  //             });
+  //             sidewalkTour.on('click', function(event) {
+  //                  if (event.id == 'tourDeOv'){
+  //                         tourDeOv();
+  //               }
+  //             });
+  //         }
+  //         function roadOvDe(){
+  //           sidewalkTour.setContent({
+  //             image: panorama[8],
+  //             is_stereo: false
+  //           });
+  //             sidewalkTour.addHotspot('tourDeOvThird', {
+  //               pitch: 0, // In degrees. Up is positive.
+  //               yaw: -100, // In degrees. To the left is positive.
+  //               radius: 0.10, // Radius of the circular target in meters.
+  //               distance: 1 // Distance of target from camera in meters.
 
-      });
-      sidewalkTour.on('click', function(event) {
-          if (event.id == 'tourDeOvAgain') {
-            // Handle hotspot click.
-                  tourDeOv();
-          } else if (event.id == 'treesDeOv'){
-                  treesDeOv();
-          }
-      });
-  }
+  //             });
+  //             sidewalkTour.on('click', function(event) {
+  //                  if (event.id == 'tourDeOvThird'){
+  //                         tourDeOv();
+  //               }
+  //             });
+  //         }
+
+
+
+  // function tourDeOvTwo(){
+  //   sidewalkTour.setContent({
+  //     image: panorama[7],
+  //     is_stereo: false
+  //   });
+  //     sidewalkTour.addHotspot('tourDeOvAgain', {
+  //       pitch: 0, // In degrees. Up is positive.
+  //       yaw: 88, // In degrees. To the left is positive.
+  //       radius: 0.10, // Radius of the circular target in meters.
+  //       distance: 1 // Distance of target from camera in meters.
+
+  //     });
+  //     sidewalkTour.addHotspot('treesDeOv', {
+  //       pitch: 0, // In degrees. Up is positive.
+  //       yaw: -92, // In degrees. To the left is positive.
+  //       radius: 0.10, // Radius of the circular target in meters.
+  //       distance: 1 // Distance of target from camera in meters.
+
+  //     });
+  //     sidewalkTour.on('click', function(event) {
+  //         if (event.id == 'tourDeOvAgain') {
+  //           // Handle hotspot click.
+  //                 tourDeOv();
+  //         } else if (event.id == 'treesDeOv'){
+  //                 treesDeOv();
+  //         }
+  //     });
+  // }
   
-  function treesDeOv(){
-    sidewalkTour.setContent({
-      image: panorama[9],
-      is_stereo: false
-    });
-      sidewalkTour.addHotspot('tourDeOvTwoBack', {
-        pitch: 0, // In degrees. Up is positive.
-        yaw: 95, // In degrees. To the left is positive.
-        radius: 0.10, // Radius of the circular target in meters.
-        distance: .7 // Distance of target from camera in meters.
+  // function treesDeOv(){
+  //   sidewalkTour.setContent({
+  //     image: panorama[9],
+  //     is_stereo: false
+  //   });
+  //     sidewalkTour.addHotspot('tourDeOvTwoBack', {
+  //       pitch: 0, // In degrees. Up is positive.
+  //       yaw: 95, // In degrees. To the left is positive.
+  //       radius: 0.10, // Radius of the circular target in meters.
+  //       distance: .7 // Distance of target from camera in meters.
 
-      });
-      sidewalkTour.addHotspot('midGarden', {
-        pitch: 0, // In degrees. Up is positive.
-        yaw: -80, // In degrees. To the left is positive.
-        radius: 0.10, // Radius of the circular target in meters.
-        distance: .5 // Distance of target from camera in meters.
+  //     });
+  //     sidewalkTour.addHotspot('midGarden', {
+  //       pitch: 0, // In degrees. Up is positive.
+  //       yaw: -80, // In degrees. To the left is positive.
+  //       radius: 0.10, // Radius of the circular target in meters.
+  //       distance: .5 // Distance of target from camera in meters.
 
-      });
-      sidewalkTour.on('click', function(event) {
-          if (event.id == 'tourDeOvTwoBack') {
-            // Handle hotspot click.
-            tourDeOvTwo();
-          } else if (event.id == 'midGarden'){
-            midGarden();
-          }
-      });
+  //     });
+  //     sidewalkTour.on('click', function(event) {
+  //         if (event.id == 'tourDeOvTwoBack') {
+  //           // Handle hotspot click.
+  //           tourDeOvTwo();
+  //         } else if (event.id == 'midGarden'){
+  //           midGarden();
+  //         }
+  //     });
 
-  }
+  // }
   
-  function midGarden(){
-    sidewalkTour.setContent({
-      image: panorama[10],
-      is_stereo: false
-    });
-      sidewalkTour.addHotspot('treesDeOvBack', {
-        pitch: -5, // In degrees. Up is positive.
-        yaw: -95, // In degrees. To the left is positive.
-        radius: 0.10, // Radius of the circular target in meters.
-        distance: .7 // Distance of target from camera in meters.
+  // function midGarden(){
+  //   sidewalkTour.setContent({
+  //     image: panorama[10],
+  //     is_stereo: false
+  //   });
+  //     sidewalkTour.addHotspot('treesDeOvBack', {
+  //       pitch: -5, // In degrees. Up is positive.
+  //       yaw: -95, // In degrees. To the left is positive.
+  //       radius: 0.10, // Radius of the circular target in meters.
+  //       distance: .7 // Distance of target from camera in meters.
 
-      });
-      sidewalkTour.addHotspot('midGardenTwo', {
-        pitch: -5, // In degrees. Up is positive.
-        yaw: 85, // In degrees. To the left is positive.
-        radius: 0.10, // Radius of the circular target in meters.
-        distance: .7 // Distance of target from camera in meters.
+  //     });
+  //     sidewalkTour.addHotspot('midGardenTwo', {
+  //       pitch: -5, // In degrees. Up is positive.
+  //       yaw: 85, // In degrees. To the left is positive.
+  //       radius: 0.10, // Radius of the circular target in meters.
+  //       distance: .7 // Distance of target from camera in meters.
 
-      });
-      sidewalkTour.on('click', function(event) {
-          if (event.id == 'treesDeOvBack') {
-            // Handle hotspot click.
-            treesDeOv();
-          } else if (event.id == 'midGardenTwo'){
-            midGardenTwo();
-          }
-      });
+  //     });
+  //     sidewalkTour.on('click', function(event) {
+  //         if (event.id == 'treesDeOvBack') {
+  //           // Handle hotspot click.
+  //           treesDeOv();
+  //         } else if (event.id == 'midGardenTwo'){
+  //           midGardenTwo();
+  //         }
+  //     });
 
-  }
+  // }
   
-  function midGardenTwo(){
-    sidewalkTour.setContent({
-      image: panorama[11],
-      is_stereo: false
-    });
-      sidewalkTour.addHotspot('midGardenBack', {
-        pitch: -5, // In degrees. Up is positive.
-        yaw: -92, // In degrees. To the left is positive.
-        radius: 0.10, // Radius of the circular target in meters.
-        distance: .7 // Distance of target from camera in meters.
+  // function midGardenTwo(){
+  //   sidewalkTour.setContent({
+  //     image: panorama[11],
+  //     is_stereo: false
+  //   });
+  //     sidewalkTour.addHotspot('midGardenBack', {
+  //       pitch: -5, // In degrees. Up is positive.
+  //       yaw: -92, // In degrees. To the left is positive.
+  //       radius: 0.10, // Radius of the circular target in meters.
+  //       distance: .7 // Distance of target from camera in meters.
 
-      });
-      sidewalkTour.addHotspot('midGardenThree', {
-        pitch: 5, // In degrees. Up is positive.
-        yaw: 160, // In degrees. To the left is positive.
-        radius: 0.10, // Radius of the circular target in meters.
-        distance: .7 // Distance of target from camera in meters.
+  //     });
+  //     sidewalkTour.addHotspot('midGardenThree', {
+  //       pitch: 5, // In degrees. Up is positive.
+  //       yaw: 160, // In degrees. To the left is positive.
+  //       radius: 0.10, // Radius of the circular target in meters.
+  //       distance: .7 // Distance of target from camera in meters.
 
-      });
-      sidewalkTour.on('click', function(event) {
-          if (event.id == 'midGardenBack') {
-            // Handle hotspot click.
-            midGarden();
-          } else if  (event.id == 'midGardenThree'){
-            midGardenThree();
-          }
-      });
+  //     });
+  //     sidewalkTour.on('click', function(event) {
+  //         if (event.id == 'midGardenBack') {
+  //           // Handle hotspot click.
+  //           midGarden();
+  //         } else if  (event.id == 'midGardenThree'){
+  //           midGardenThree();
+  //         }
+  //     });
 
-  }
+  // }
   
-  function midGardenThree(){
-    sidewalkTour.setContent({
-      image: panorama[12],
-      is_stereo: false
-    });
-      sidewalkTour.addHotspot('midGardenTwoBack', {
-        pitch: 5, // In degrees. Up is positive.
-        yaw: -150, // In degrees. To the left is positive.
-        radius: 0.10, // Radius of the circular target in meters.
-        distance: .5 // Distance of target from camera in meters.
+  // function midGardenThree(){
+  //   sidewalkTour.setContent({
+  //     image: panorama[12],
+  //     is_stereo: false
+  //   });
+  //     sidewalkTour.addHotspot('midGardenTwoBack', {
+  //       pitch: 5, // In degrees. Up is positive.
+  //       yaw: -150, // In degrees. To the left is positive.
+  //       radius: 0.10, // Radius of the circular target in meters.
+  //       distance: .5 // Distance of target from camera in meters.
 
-      });
-      sidewalkTour.addHotspot('midGardenFour', {
-        pitch: 5, // In degrees. Up is positive.
-        yaw: 65, // In degrees. To the left is positive.
-        radius: 0.10, // Radius of the circular target in meters.
-        distance: .5 // Distance of target from camera in meters.
+  //     });
+  //     sidewalkTour.addHotspot('midGardenFour', {
+  //       pitch: 5, // In degrees. Up is positive.
+  //       yaw: 65, // In degrees. To the left is positive.
+  //       radius: 0.10, // Radius of the circular target in meters.
+  //       distance: .5 // Distance of target from camera in meters.
 
-      });
-      sidewalkTour.on('click', function(event) {
-          if (event.id == 'midGardenTwoBack') {
-            // Handle hotspot click.
-            midGardenTwo();
-          } else if (event.id == 'midGardenFour'){
-            midGardenFour();
-          }
-      });
+  //     });
+  //     sidewalkTour.on('click', function(event) {
+  //         if (event.id == 'midGardenTwoBack') {
+  //           // Handle hotspot click.
+  //           midGardenTwo();
+  //         } else if (event.id == 'midGardenFour'){
+  //           midGardenFour();
+  //         }
+  //     });
 
-  }
+  // }
   
-  function midGardenFour(){
-    sidewalkTour.setContent({
-      image: panorama[13],
-      is_stereo: false
-    });
-      sidewalkTour.addHotspot('midGardenThreeBack', {
-        pitch: 5, // In degrees. Up is positive.
-        yaw: -70, // In degrees. To the left is positive.
-        radius: 0.10, // Radius of the circular target in meters.
-        distance: .5 // Distance of target from camera in meters.
+  // function midGardenFour(){
+  //   sidewalkTour.setContent({
+  //     image: panorama[13],
+  //     is_stereo: false
+  //   });
+  //     sidewalkTour.addHotspot('midGardenThreeBack', {
+  //       pitch: 5, // In degrees. Up is positive.
+  //       yaw: -70, // In degrees. To the left is positive.
+  //       radius: 0.10, // Radius of the circular target in meters.
+  //       distance: .5 // Distance of target from camera in meters.
 
-      });
-      sidewalkTour.addHotspot('midSwHa', {
-        pitch: 5, // In degrees. Up is positive.
-        yaw: 80, // In degrees. To the left is positive.
-        radius: 0.10, // Radius of the circular target in meters.
-        distance: .5 // Distance of target from camera in meters.
+  //     });
+  //     sidewalkTour.addHotspot('midSwHa', {
+  //       pitch: 5, // In degrees. Up is positive.
+  //       yaw: 80, // In degrees. To the left is positive.
+  //       radius: 0.10, // Radius of the circular target in meters.
+  //       distance: .5 // Distance of target from camera in meters.
 
-      });
-      sidewalkTour.on('click', function(event) {
-          if (event.id == 'midGardenThreeBack') {
-            // Handle hotspot click.
-            midGardenThree();
-          } else if (event.id == 'midSwHa'){
-                midSwHa();
-          }
+  //     });
+  //     sidewalkTour.on('click', function(event) {
+  //         if (event.id == 'midGardenThreeBack') {
+  //           // Handle hotspot click.
+  //           midGardenThree();
+  //         } else if (event.id == 'midSwHa'){
+  //               midSwHa();
+  //         }
 
-      });
-  }
+  //     });
+  // }
   
-  function midSwHa(){
-    sidewalkTour.setContent({
-      image: panorama[14],
-      is_stereo: false
-    });
-      sidewalkTour.addHotspot('midGardenFourBack', {
-        pitch: 5, // In degrees. Up is positive.
-        yaw: -90, // In degrees. To the left is positive.
-        radius: 0.10, // Radius of the circular target in meters.
-        distance: .5 // Distance of target from camera in meters.
+  // function midSwHa(){
+  //   sidewalkTour.setContent({
+  //     image: panorama[14],
+  //     is_stereo: false
+  //   });
+  //     sidewalkTour.addHotspot('midGardenFourBack', {
+  //       pitch: 5, // In degrees. Up is positive.
+  //       yaw: -90, // In degrees. To the left is positive.
+  //       radius: 0.10, // Radius of the circular target in meters.
+  //       distance: .5 // Distance of target from camera in meters.
 
-      });
-      sidewalkTour.addHotspot('midSwHaTwo', {
-        pitch: 5, // In degrees. Up is positive.
-        yaw: 85, // In degrees. To the left is positive.
-        radius: 0.10, // Radius of the circular target in meters.
-        distance: .5 // Distance of target from camera in meters.
+  //     });
+  //     sidewalkTour.addHotspot('midSwHaTwo', {
+  //       pitch: 5, // In degrees. Up is positive.
+  //       yaw: 85, // In degrees. To the left is positive.
+  //       radius: 0.10, // Radius of the circular target in meters.
+  //       distance: .5 // Distance of target from camera in meters.
 
-      });
-      sidewalkTour.on('click', function(event) {
-          if (event.id == 'midGardenFourBack') {
-            // Handle hotspot click.
-            midGardenFour();
-          } else if (event.id == 'midSwHaTwo'){
-            midSwHaTwo();
+  //     });
+  //     sidewalkTour.on('click', function(event) {
+  //         if (event.id == 'midGardenFourBack') {
+  //           // Handle hotspot click.
+  //           midGardenFour();
+  //         } else if (event.id == 'midSwHaTwo'){
+  //           midSwHaTwo();
 
-          }
-      });
-  }
+  //         }
+  //     });
+  // }
   
-  function midSwHaTwo(){
-    sidewalkTour.setContent({
-      image: panorama[15],
-      is_stereo: false
-    });
-      sidewalkTour.addHotspot('midSwHaBack', {
-        pitch: 5, // In degrees. Up is positive.
-        yaw: -94, // In degrees. To the left is positive.
-        radius: 0.10, // Radius of the circular target in meters.
-        distance: .5 // Distance of target from camera in meters.
+  // function midSwHaTwo(){
+  //   sidewalkTour.setContent({
+  //     image: panorama[15],
+  //     is_stereo: false
+  //   });
+  //     sidewalkTour.addHotspot('midSwHaBack', {
+  //       pitch: 5, // In degrees. Up is positive.
+  //       yaw: -94, // In degrees. To the left is positive.
+  //       radius: 0.10, // Radius of the circular target in meters.
+  //       distance: .5 // Distance of target from camera in meters.
 
-      });
-      sidewalkTour.addHotspot('cornerSw', {
-        pitch: 5, // In degrees. Up is positive.
-        yaw: 90, // In degrees. To the left is positive.
-        radius: 0.10, // Radius of the circular target in meters.
-        distance: .5 // Distance of target from camera in meters.
+  //     });
+  //     sidewalkTour.addHotspot('cornerSw', {
+  //       pitch: 5, // In degrees. Up is positive.
+  //       yaw: 90, // In degrees. To the left is positive.
+  //       radius: 0.10, // Radius of the circular target in meters.
+  //       distance: .5 // Distance of target from camera in meters.
 
-      });
-      sidewalkTour.on('click', function(event) {
-          if (event.id == 'midSwHaBack') {
-            // Handle hotspot click.
-            midSwHa();
-          } else if (event.id == 'cornerSw'){
-            cornerSw();
-          }
-      });
-  }
+  //     });
+  //     sidewalkTour.on('click', function(event) {
+  //         if (event.id == 'midSwHaBack') {
+  //           // Handle hotspot click.
+  //           midSwHa();
+  //         } else if (event.id == 'cornerSw'){
+  //           cornerSw();
+  //         }
+  //     });
+  // }
   
-  function cornerSw(){
-    sidewalkTour.setContent({
-      image: panorama[16],
-      is_stereo: false
-    });
-      sidewalkTour.addHotspot('midSwHaTwoBack', {
-        pitch: 5, // In degrees. Up is positive.
-        yaw: -94, // In degrees. To the left is positive.
-        radius: 0.10, // Radius of the circular target in meters.
-        distance: .5 // Distance of target from camera in meters.
+  // function cornerSw(){
+  //   sidewalkTour.setContent({
+  //     image: panorama[16],
+  //     is_stereo: false
+  //   });
+  //     sidewalkTour.addHotspot('midSwHaTwoBack', {
+  //       pitch: 5, // In degrees. Up is positive.
+  //       yaw: -94, // In degrees. To the left is positive.
+  //       radius: 0.10, // Radius of the circular target in meters.
+  //       distance: .5 // Distance of target from camera in meters.
 
-      });
-      sidewalkTour.addHotspot('midSw', {
-        pitch: 5, // In degrees. Up is positive.
-        yaw: 90, // In degrees. To the left is positive.
-        radius: 0.10, // Radius of the circular target in meters.
-        distance: .5 // Distance of target from camera in meters.
+  //     });
+  //     sidewalkTour.addHotspot('midSw', {
+  //       pitch: 5, // In degrees. Up is positive.
+  //       yaw: 90, // In degrees. To the left is positive.
+  //       radius: 0.10, // Radius of the circular target in meters.
+  //       distance: .5 // Distance of target from camera in meters.
 
-      });
-      sidewalkTour.on('click', function(event) {
-         if (event.id == 'midSwHaTwoBack'){
-           midSwHaTwo();
-         } else if (event.id == 'midSw'){
-           midSw();
-         }
-      });
-  }
+  //     });
+  //     sidewalkTour.on('click', function(event) {
+  //        if (event.id == 'midSwHaTwoBack'){
+  //          midSwHaTwo();
+  //        } else if (event.id == 'midSw'){
+  //          midSw();
+  //        }
+  //     });
+  // }
   
-  function midSw(){
-    sidewalkTour.setContent({
-      image: panorama[17],
-      is_stereo: false
-    });
-    sidewalkTour.addHotspot('cornerSwBack', {
-      pitch: 5, // In degrees. Up is positive.
-      yaw: -92, // In degrees. To the left is positive.
-      radius: 0.10, // Radius of the circular target in meters.
-      distance: .5 // Distance of target from camera in meters.
+  // function midSw(){
+  //   sidewalkTour.setContent({
+  //     image: panorama[17],
+  //     is_stereo: false
+  //   });
+  //   sidewalkTour.addHotspot('cornerSwBack', {
+  //     pitch: 5, // In degrees. Up is positive.
+  //     yaw: -92, // In degrees. To the left is positive.
+  //     radius: 0.10, // Radius of the circular target in meters.
+  //     distance: .5 // Distance of target from camera in meters.
 
-    });
-    sidewalkTour.addHotspot('behindSw', {
-      pitch: 5, // In degrees. Up is positive.
-      yaw: 90, // In degrees. To the left is positive.
-      radius: 0.10, // Radius of the circular target in meters.
-      distance: .5 // Distance of target from camera in meters.
+  //   });
+  //   sidewalkTour.addHotspot('behindSw', {
+  //     pitch: 5, // In degrees. Up is positive.
+  //     yaw: 90, // In degrees. To the left is positive.
+  //     radius: 0.10, // Radius of the circular target in meters.
+  //     distance: .5 // Distance of target from camera in meters.
 
-    });
+  //   });
 
-      sidewalkTour.on('click', function(event) {
-         if (event.id == 'cornerSwBack'){
-           cornerSw();
-         } else if (event.id == 'behindSw'){
-           behindSw();
-         }
-      });
-  }
+  //     sidewalkTour.on('click', function(event) {
+  //        if (event.id == 'cornerSwBack'){
+  //          cornerSw();
+  //        } else if (event.id == 'behindSw'){
+  //          behindSw();
+  //        }
+  //     });
+  // }
   
-  function behindSw(){
-    sidewalkTour.setContent({
-      image: panorama[18],
-      is_stereo: false
-    });
-    sidewalkTour.addHotspot('midSwBack', {
-      pitch: 5, // In degrees. Up is positive.
-      yaw: -92, // In degrees. To the left is positive.
-      radius: 0.10, // Radius of the circular target in meters.
-      distance: .5 // Distance of target from camera in meters.
+  // function behindSw(){
+  //   sidewalkTour.setContent({
+  //     image: panorama[18],
+  //     is_stereo: false
+  //   });
+  //   sidewalkTour.addHotspot('midSwBack', {
+  //     pitch: 5, // In degrees. Up is positive.
+  //     yaw: -92, // In degrees. To the left is positive.
+  //     radius: 0.10, // Radius of the circular target in meters.
+  //     distance: .5 // Distance of target from camera in meters.
 
-    });
-    sidewalkTour.addHotspot('swBu', {
-      pitch: 5, // In degrees. Up is positive.
-      yaw: 90, // In degrees. To the left is positive.
-      radius: 0.10, // Radius of the circular target in meters.
-      distance: .5 // Distance of target from camera in meters.
+  //   });
+  //   sidewalkTour.addHotspot('swBu', {
+  //     pitch: 5, // In degrees. Up is positive.
+  //     yaw: 90, // In degrees. To the left is positive.
+  //     radius: 0.10, // Radius of the circular target in meters.
+  //     distance: .5 // Distance of target from camera in meters.
 
-    });
+  //   });
 
-      sidewalkTour.on('click', function(event) {
-         if (event.id == 'midSwBack'){
-           midSw();
-         } else if (event.id == 'swBu'){
-           swBu();
-         }
-      });
-  }
+  //     sidewalkTour.on('click', function(event) {
+  //        if (event.id == 'midSwBack'){
+  //          midSw();
+  //        } else if (event.id == 'swBu'){
+  //          swBu();
+  //        }
+  //     });
+  // }
   
-  function swBu(){
-    sidewalkTour.setContent({
-      image: panorama[19],
-      is_stereo: false
-    });
-    sidewalkTour.addHotspot('behindSwBack', {
-      pitch: 5, // In degrees. Up is positive.
-      yaw: -86, // In degrees. To the left is positive.
-      radius: 0.10, // Radius of the circular target in meters.
-      distance: .5 // Distance of target from camera in meters.
+  // function swBu(){
+  //   sidewalkTour.setContent({
+  //     image: panorama[19],
+  //     is_stereo: false
+  //   });
+  //   sidewalkTour.addHotspot('behindSwBack', {
+  //     pitch: 5, // In degrees. Up is positive.
+  //     yaw: -86, // In degrees. To the left is positive.
+  //     radius: 0.10, // Radius of the circular target in meters.
+  //     distance: .5 // Distance of target from camera in meters.
 
-    });
-    sidewalkTour.addHotspot('swBuHa', {
-      pitch: 5, // In degrees. Up is positive.
-      yaw: 95, // In degrees. To the left is positive.
-      radius: 0.10, // Radius of the circular target in meters.
-      distance: .5 // Distance of target from camera in meters.
+  //   });
+  //   sidewalkTour.addHotspot('swBuHa', {
+  //     pitch: 5, // In degrees. Up is positive.
+  //     yaw: 95, // In degrees. To the left is positive.
+  //     radius: 0.10, // Radius of the circular target in meters.
+  //     distance: .5 // Distance of target from camera in meters.
 
-    });
+  //   });
 
-      sidewalkTour.on('click', function(event) {
-         if (event.id == 'behindSwBack'){
-           behindSw();
-         } else if (event.id == 'swBuHa'){
-           swBuHa();
-         }
-      });
-  }
+  //     sidewalkTour.on('click', function(event) {
+  //        if (event.id == 'behindSwBack'){
+  //          behindSw();
+  //        } else if (event.id == 'swBuHa'){
+  //          swBuHa();
+  //        }
+  //     });
+  // }
   
-  function swBuHa(){
-    sidewalkTour.setContent({
-      image: panorama[20],
-      is_stereo: false
-    });
-    sidewalkTour.addHotspot('swBuBack', {
-      pitch: 5, // In degrees. Up is positive.
-      yaw: -92, // In degrees. To the left is positive.
-      radius: 0.10, // Radius of the circular target in meters.
-      distance: .5 // Distance of target from camera in meters.
+  // function swBuHa(){
+  //   sidewalkTour.setContent({
+  //     image: panorama[20],
+  //     is_stereo: false
+  //   });
+  //   sidewalkTour.addHotspot('swBuBack', {
+  //     pitch: 5, // In degrees. Up is positive.
+  //     yaw: -92, // In degrees. To the left is positive.
+  //     radius: 0.10, // Radius of the circular target in meters.
+  //     distance: .5 // Distance of target from camera in meters.
 
-    });
-    sidewalkTour.addHotspot('cornerHa', {
-      pitch: 5, // In degrees. Up is positive.
-      yaw: 90, // In degrees. To the left is positive.
-      radius: 0.10, // Radius of the circular target in meters.
-      distance: .5 // Distance of target from camera in meters.
+  //   });
+  //   sidewalkTour.addHotspot('cornerHa', {
+  //     pitch: 5, // In degrees. Up is positive.
+  //     yaw: 90, // In degrees. To the left is positive.
+  //     radius: 0.10, // Radius of the circular target in meters.
+  //     distance: .5 // Distance of target from camera in meters.
 
-    });
-      sidewalkTour.on('click', function(event) {
-         if (event.id == 'swBuBack'){
-           swBu();
-         } else if (event.id == 'cornerHa'){
-           cornerHa();
-         }
-      });
-  }
+  //   });
+  //     sidewalkTour.on('click', function(event) {
+  //        if (event.id == 'swBuBack'){
+  //          swBu();
+  //        } else if (event.id == 'cornerHa'){
+  //          cornerHa();
+  //        }
+  //     });
+  // }
   
-  function cornerHa(){
-    sidewalkTour.setContent({
-      image: panorama[21],
-      is_stereo: false
-    });
-    sidewalkTour.addHotspot('swBuHaBack', {
-      pitch: 5, // In degrees. Up is positive.
-      yaw: -88, // In degrees. To the left is positive.
-      radius: 0.10, // Radius of the circular target in meters.
-      distance: .5 // Distance of target from camera in meters.
+  // function cornerHa(){
+  //   sidewalkTour.setContent({
+  //     image: panorama[21],
+  //     is_stereo: false
+  //   });
+  //   sidewalkTour.addHotspot('swBuHaBack', {
+  //     pitch: 5, // In degrees. Up is positive.
+  //     yaw: -88, // In degrees. To the left is positive.
+  //     radius: 0.10, // Radius of the circular target in meters.
+  //     distance: .5 // Distance of target from camera in meters.
 
-    });
-    sidewalkTour.addHotspot('behindHaAr', {
-      pitch: 5, // In degrees. Up is positive.
-      yaw: 95, // In degrees. To the left is positive.
-      radius: 0.10, // Radius of the circular target in meters.
-      distance: .5 // Distance of target from camera in meters.
+  //   });
+  //   sidewalkTour.addHotspot('behindHaAr', {
+  //     pitch: 5, // In degrees. Up is positive.
+  //     yaw: 95, // In degrees. To the left is positive.
+  //     radius: 0.10, // Radius of the circular target in meters.
+  //     distance: .5 // Distance of target from camera in meters.
 
-    });
-      sidewalkTour.on('click', function(event) {
-         if (event.id == 'swBuHaBack'){
-           swBuHa();
-         } else if (event.id == 'behindHaAr'){
-           behindHaAr();
-         }
-      });
-  }
+  //   });
+  //     sidewalkTour.on('click', function(event) {
+  //        if (event.id == 'swBuHaBack'){
+  //          swBuHa();
+  //        } else if (event.id == 'behindHaAr'){
+  //          behindHaAr();
+  //        }
+  //     });
+  // }
   
-  function behindHaAr(){
-    sidewalkTour.setContent({
-      image: panorama[22],
-      is_stereo: false
-    });
-    sidewalkTour.addHotspot('cornerHaBack', {
-      pitch: 5, // In degrees. Up is positive.
-      yaw: -80, // In degrees. To the left is positive.
-      radius: 0.10, // Radius of the circular target in meters.
-      distance: .5 // Distance of target from camera in meters.
+  // function behindHaAr(){
+  //   sidewalkTour.setContent({
+  //     image: panorama[22],
+  //     is_stereo: false
+  //   });
+  //   sidewalkTour.addHotspot('cornerHaBack', {
+  //     pitch: 5, // In degrees. Up is positive.
+  //     yaw: -80, // In degrees. To the left is positive.
+  //     radius: 0.10, // Radius of the circular target in meters.
+  //     distance: .5 // Distance of target from camera in meters.
 
-    });
-    sidewalkTour.addHotspot('midHaAr', {
-      pitch: 5, // In degrees. Up is positive.
-      yaw: 100, // In degrees. To the left is positive.
-      radius: 0.10, // Radius of the circular target in meters.
-      distance: .5 // Distance of target from camera in meters.
+  //   });
+  //   sidewalkTour.addHotspot('midHaAr', {
+  //     pitch: 5, // In degrees. Up is positive.
+  //     yaw: 100, // In degrees. To the left is positive.
+  //     radius: 0.10, // Radius of the circular target in meters.
+  //     distance: .5 // Distance of target from camera in meters.
 
-    });
-      sidewalkTour.on('click', function(event) {
-         if (event.id == 'cornerHaBack'){
-           cornerHa();
-         } else if (event.id == 'midHaAr'){
-           midHaAr();
-         }
-      });
-  }
+  //   });
+  //     sidewalkTour.on('click', function(event) {
+  //        if (event.id == 'cornerHaBack'){
+  //          cornerHa();
+  //        } else if (event.id == 'midHaAr'){
+  //          midHaAr();
+  //        }
+  //     });
+  // }
   
-  function midHaAr(){
-    sidewalkTour.setContent({
-      image: panorama[23],
-      is_stereo: false
-    });
-    sidewalkTour.addHotspot('behindHaArBack', {
-      pitch: 5, // In degrees. Up is positive.
-      yaw: -85, // In degrees. To the left is positive.
-      radius: 0.10, // Radius of the circular target in meters.
-      distance: .5 // Distance of target from camera in meters.
+  // function midHaAr(){
+  //   sidewalkTour.setContent({
+  //     image: panorama[23],
+  //     is_stereo: false
+  //   });
+  //   sidewalkTour.addHotspot('behindHaArBack', {
+  //     pitch: 5, // In degrees. Up is positive.
+  //     yaw: -85, // In degrees. To the left is positive.
+  //     radius: 0.10, // Radius of the circular target in meters.
+  //     distance: .5 // Distance of target from camera in meters.
 
-    });
-      sidewalkTour.on('click', function(event) {
-         if (event.id == 'behindHaArBack'){
-           behindHaAr();
-         }
-      });
-  }
+  //   });
+  //     sidewalkTour.on('click', function(event) {
+  //        if (event.id == 'behindHaArBack'){
+  //          behindHaAr();
+  //        }
+  //     });
+  // }
 
 
 

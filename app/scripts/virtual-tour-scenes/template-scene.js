@@ -104,5 +104,5 @@ function loadScene(id) {
     }
 }
 
-// fires on click of Women's Center VR
+// fires on click of #template
 document.getElementById("template").addEventListener('click', loadtemplateVR);

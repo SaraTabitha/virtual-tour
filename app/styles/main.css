@@ -351,6 +351,7 @@ ul#popupNav li:hover{
   z-index: 10;
   visibility: hidden;
   padding: 20px;
+  cursor: pointer;
 }
 
 .heading{

@@ -450,6 +450,7 @@ $("#executiveRoom").click(function(){
         $(this).removeClass("checked");
     }
 });
+
 $("#dempseyStart").click(function(){
     var check = $(this).hasClass("checked");
     if(check === false){
