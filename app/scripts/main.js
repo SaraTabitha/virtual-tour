@@ -8,17 +8,11 @@
 // all JS that is not changed depending on the width of the screen
 //
 
-// NEED FOLLOWING because without it after using the select all,
-    // the user cannot recheck the individual boxes properly
-    // building on click/off check box
 
-    //most browser friendly solution
-    //have to check by prop otherwise it doesn't "check" the box in safari
-    //have to use attr & removeattr otherwise after using a selectAll the boxes have to be double clicked to be selected again
-    //have to also use addClass & removeClass otherwise Chrome and Safari do not behave the same (chrome prefers add/remove class, safari prefers attr)
-   
+   //functions for clicking checkboxes
+   //map.js has click functions for setting markers that are linked to these checkbox ids 
    function clickCheckboxes(name){
-    $("#" + name + "Label").toggleClass("is-checked");
+    $( "#" + name + "Label").toggleClass("is-checked");
     if($("#" + name).prop("checked")){
       $("#" + name).removeProp("checked");
     }else{
@@ -26,6 +20,7 @@
     }
    }
    $("#buildings").click(function(){
+     var buildings = "buildings";
     clickCheckboxes(buildings);
    });
     // $("#buildings").click(function(){
@@ -38,65 +33,98 @@
     //   $("#buildingsLabel").removeClass("is-checked");
     // }
     // });
-    $("#parkingLots").click(function(){
-    var check = !$("#parkingLots").prop("checked");
-    if (check === false){
-      $("#parkingLots").attr("checked", true);
-      $("#parkingLabel").addClass("is-checked");
-    } else if (check === true){
-      $("#parkingLots").removeAttr("checked", true);
-      $("#parkingLabel").removeClass("is-checked");
-    }
+    $("#parking").click(function(){
+      var parking = "parking";
+      clickCheckboxes(parking);
     });
+    // $("#parkingLots").click(function(){
+    // var check = !$("#parkingLots").prop("checked");
+    // if (check === false){
+    //   $("#parkingLots").attr("checked", true);
+    //   $("#parkingLabel").addClass("is-checked");
+    // } else if (check === true){
+    //   $("#parkingLots").removeAttr("checked", true);
+    //   $("#parkingLabel").removeClass("is-checked");
+    // }
+    // });
+
     $("#accEnt").click(function(){
-    var check = !$("#accEnt").prop("checked");
-    if (check === false){
-      $("#accEnt").attr("checked", true);
-      $("#accEntLabel").addClass("is-checked");
-    } else if (check === true){
-      $("#accEnt").removeAttr("checked", true);
-      $("#accEntLabel").removeClass("is-checked");
-    }
+      var accEnt = "accEnt";
+      clickCheckboxes(accEnt);
     });
+    // $("#accEnt").click(function(){
+    // var check = !$("#accEnt").prop("checked");
+    // if (check === false){
+    //   $("#accEnt").attr("checked", true);
+    //   $("#accEntLabel").addClass("is-checked");
+    // } else if (check === true){
+    //   $("#accEnt").removeAttr("checked", true);
+    //   $("#accEntLabel").removeClass("is-checked");
+    // }
+    // });
     $("#accPar").click(function(){
-    var check = !$("#accPar").prop("checked");
-    if (check === false){
-      $("#accPar").attr("checked", true);
-      $("#accParLabel").addClass("is-checked");
-    } else if (check === true){
-      $("#accPar").removeAttr("checked", true);
-      $("#accParLabel").removeClass("is-checked");
-    }
+      var accPar = "accPar";
+      clickCheckboxes(accPar);
     });
+    // $("#accPar").click(function(){
+    // var check = !$("#accPar").prop("checked");
+    // if (check === false){
+    //   $("#accPar").attr("checked", true);
+    //   $("#accParLabel").addClass("is-checked");
+    // } else if (check === true){
+    //   $("#accPar").removeAttr("checked", true);
+    //   $("#accParLabel").removeClass("is-checked");
+    // }
+    // });
+
     $("#emergency").click(function(){
-    var check = !$("#emergency").prop("checked");
-    if (check === false){
-      $("#emergency").attr("checked", true);
-      $("#emergencyLabel").addClass("is-checked");
-    } else if (check === true){
-      $("#emergency").removeAttr("checked", true);
-      $("#emergencyLabel").removeClass("is-checked");
-    }
+      var emergency = "emergency";
+      clickCheckboxes(emergency);
     });
+    // $("#emergency").click(function(){
+    // var check = !$("#emergency").prop("checked");
+    // if (check === false){
+    //   $("#emergency").attr("checked", true);
+    //   $("#emergencyLabel").addClass("is-checked");
+    // } else if (check === true){
+    //   $("#emergency").removeAttr("checked", true);
+    //   $("#emergencyLabel").removeClass("is-checked");
+    // }
+    // });
     $("#sust").click(function(){
-    var check = !$("#sust").prop("checked");
-    if (check === false){
-      $("#sust").attr("checked", true);
-      $("#sustLabel").addClass("is-checked");
-    } else if (check === true){
-      $("#sust").removeAttr("checked", true);
-      $("#sustLabel").removeClass("is-checked");
-    }
+      var sust = "sust";
+      clickCheckboxes(sust);
     });
+
+    // $("#sust").click(function(){
+    // var check = !$("#sust").prop("checked");
+    // if (check === false){
+    //   $("#sust").attr("checked", true);
+    //   $("#sustLabel").addClass("is-checked");
+    // } else if (check === true){
+    //   $("#sust").removeAttr("checked", true);
+    //   $("#sustLabel").removeClass("is-checked");
+    // }
+    // });
     $("#gender").click(function(){
-    var check = !$("#gender").prop("checked");
-    if (check === false){
-      $("#gender").attr("checked", true);
-      $("#genderLabel").addClass("is-checked");
-    } else if (check === true){
-      $("#gender").removeAttr("checked", true);
-      $("#genderLabel").removeClass("is-checked");
-    }
+      var gender = "gender";
+      clickCheckboxes(gender);
+    });
+
+
+    // $("#gender").click(function(){
+    // var check = !$("#gender").prop("checked");
+    // if (check === false){
+    //   $("#gender").attr("checked", true);
+    //   $("#genderLabel").addClass("is-checked");
+    // } else if (check === true){
+    //   $("#gender").removeAttr("checked", true);
+    //   $("#genderLabel").removeClass("is-checked");
+    // }
+    // });
+
+    $("#selectallcheck").click(function(){
+
     });
 
     // event listener for the select all button attached to function clicking

@@ -2574,7 +2574,7 @@ function initMap() {
 
         // on click function for selecting the Building checkbox
         // sets and removes all of the building markers on the map
-        $("#buildLabel").click(function(){
+        $("#buildingsLabel").click(function(){
             var checkBuilding = !$("#buildings").prop("checked");
             if (checkBuilding === false){
                 setBuilding();
@@ -6726,8 +6726,8 @@ function initMap() {
           }
         });
 
-        $("#parkingLots").click(function(){
-          var check = !$("#parkingLots").prop("checked");
+        $("#parking").click(function(){
+          var check = !$("#parking").prop("checked");
           // when closing a filter
           if(check === true){
              closeAllParking();
