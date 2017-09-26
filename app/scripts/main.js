@@ -13,7 +13,12 @@
    //map.js has click functions for setting markers that are linked to these checkbox ids 
    
    function toggleClass(name){
-    $( "#" + name + "Label").toggleClass("is-checked");
+     if($( "#" + name + "Label").hasClass("is-checked");){
+      $( "#" + name + "Label").addClass("is-checked");
+     }else{
+      $( "#" + name + "Label").removeClass("is-checked");
+     }
+    // $( "#" + name + "Label").toggleClass("is-checked");
    }
    function removePropandClass(name){
     $("#" + name).removeProp("checked");
