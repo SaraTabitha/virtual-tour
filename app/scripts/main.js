@@ -16,14 +16,24 @@
     //have to check by prop otherwise it doesn't "check" the box in safari
     //have to use attr & removeattr otherwise after using a selectAll the boxes have to be double clicked to be selected again
     //have to also use addClass & removeClass otherwise Chrome and Safari do not behave the same (chrome prefers add/remove class, safari prefers attr)
+   
+   function clickCheckboxes(name){
+    $("#" + name + "Label").toggleClass("is-checked");
+    if($("#" + name).prop("checked")){
+      $("#" + name).removeProp("checked");
+    }else{
+      $("#" + name).prop("checked");
+    }
+   }
+   
     $("#buildings").click(function(){
     var check = !$("#buildings").prop("checked");
     if (check === false){
       $("#buildings").attr("checked", true);
-      $("#buildLabel").addClass("is-checked");
+      $("#buildingsLabel").addClass("is-checked");
     } else if (check === true){
       $("#buildings").removeAttr("checked", true);
-      $("#buildLabel").removeClass("is-checked");
+      $("#buildingsLabel").removeClass("is-checked");
     }
     });
     $("#parkingLots").click(function(){
