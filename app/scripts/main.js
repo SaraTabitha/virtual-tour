@@ -88,7 +88,7 @@
       var gender = "gender";
 
         //does selectall not have prop check and no class is-checked
-      if(!$("#selectallcheck").prop("checked") && !$("#selectallcheck").hasClass("is-checked")){
+      if((!$("#selectallcheck").prop("checked")) && (!$("#selectallcheck").hasClass("is-checked")){
         //if select all is unchecked, all others should be unchecked
         removePropandClass(buildings);
         removePropandClass(parking);
