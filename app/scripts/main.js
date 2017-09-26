@@ -24,11 +24,11 @@
    }
    function removePropandClass(name){
     $("#" + name).removeProp("checked");
-    ("#" + name + "Label").removeClass("is-checked");
+    $("#" + name + "Label").removeClass("is-checked");
    }
    function addPropandClass(name){
     $("#" + name).prop("checked");
-    ("#" + name + "Label").addClass("is-checked");
+    $("#" + name + "Label").addClass("is-checked");
    }
 
    $("#buildings").click(function(){
