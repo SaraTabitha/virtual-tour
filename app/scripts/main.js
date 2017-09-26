@@ -150,7 +150,7 @@
       toggleClass(sust);
       toggleClass(gender);
 
-      if($(#selectallcheck).prop("checked")){
+      if($("#selectallcheck").prop("checked")){
         removeProp(buildings);
         removeProp(parking);
         removeProp(accEnt);
