@@ -19,11 +19,11 @@
    
    function clickCheckboxes(name){
      debugger;
-    $("'#" + name + "Label'").toggleClass("is-checked");
-    if($("'#" + name + "'").prop("checked")){
-      $("'#" + name + "'").removeProp("checked");
+    $( name + "Label'").toggleClass("is-checked");
+    if($(name).prop("checked")){
+      $(name).removeProp("checked");
     }else{
-      $("'#" + name + "'").prop("checked");
+      $(name).prop("checked");
     }
    }
    $("#buildings").click(function(){
