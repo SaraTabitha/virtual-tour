@@ -25,17 +25,19 @@
       $("#" + name).prop("checked");
     }
    }
-   
-    $("#buildings").click(function(){
-    var check = !$("#buildings").prop("checked");
-    if (check === false){
-      $("#buildings").attr("checked", true);
-      $("#buildingsLabel").addClass("is-checked");
-    } else if (check === true){
-      $("#buildings").removeAttr("checked", true);
-      $("#buildingsLabel").removeClass("is-checked");
-    }
-    });
+   $("#buildings").click(function(){
+    clickCheckboxes(buildings);
+   });
+    // $("#buildings").click(function(){
+    // var check = !$("#buildings").prop("checked");
+    // if (check === false){
+    //   $("#buildings").attr("checked", true);
+    //   $("#buildingsLabel").addClass("is-checked");
+    // } else if (check === true){
+    //   $("#buildings").removeAttr("checked", true);
+    //   $("#buildingsLabel").removeClass("is-checked");
+    // }
+    // });
     $("#parkingLots").click(function(){
     var check = !$("#parkingLots").prop("checked");
     if (check === false){
