@@ -8,15 +8,9 @@
 // all JS that is not changed depending on the width of the screen
 //
 
-// NEED FOLLOWING because without it after using the select all,
-    // the user cannot recheck the individual boxes properly
-    // building on click/off check box
 
-    //most browser friendly solution
-    //have to check by prop otherwise it doesn't "check" the box in safari
-    //have to use attr & removeattr otherwise after using a selectAll the boxes have to be double clicked to be selected again
-    //have to also use addClass & removeClass otherwise Chrome and Safari do not behave the same (chrome prefers add/remove class, safari prefers attr)
-   
+   //functions for clicking checkboxes
+   //map.js has click functions for setting markers that are linked to these checkbox ids 
    function clickCheckboxes(name){
     $( "#" + name + "Label").toggleClass("is-checked");
     if($("#" + name).prop("checked")){
@@ -130,7 +124,7 @@
     // });
 
     $("#selectallcheck").click(function(){
-      
+
     });
 
     // event listener for the select all button attached to function clicking
