@@ -37,6 +37,7 @@
      //if checkbox is not already checked, check it
     if((!$("#" + name).prop("checked")) && (!$( "#" + name + "Label").hasClass("is-checked"))){
       addPropandClass(name);
+      console.log("I executed (and added) for: " + name);
     } 
    }
    $("#buildings").click(function(){
@@ -90,6 +91,7 @@
         
       }else{
         //if selectall is checked, all others should be checked
+        // debugger;
         selectAllCheck(buildings);
         selectAllCheck(parking);
         selectAllCheck(accEnt);
