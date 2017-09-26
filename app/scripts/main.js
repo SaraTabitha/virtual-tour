@@ -19,6 +19,16 @@
       $("#" + name).prop("checked");
     }
    }
+   function toggleClass(name){
+    $( "#" + name + "Label").toggleClass("is-checked");
+   }
+   function removeProp(name){
+    $("#" + name).removeProp("checked");
+   }
+   function addProp(name){
+    $("#" + name).prop("checked");
+   }
+
    $("#buildings").click(function(){
      var buildings = "buildings";
     clickCheckboxes(buildings);
@@ -132,13 +142,31 @@
       var sust = "sust";
       var gender = "gender";
 
-      clickCheckboxes(buildings);
-      clickCheckboxes(parking);
-      clickCheckboxes(accEnt);
-      clickCheckboxes(accPar);
-      clickCheckboxes(emergency);
-      clickCheckboxes(sust);
-      clickCheckboxes(gender);
+      toggleClass(buildings);
+      toggleClass(parking);
+      toggleClass(accEnt);
+      toggleClass(accPar);
+      toggleClass(emergency);
+      toggleClass(sust);
+      toggleClass(gender);
+
+      if($(#selectallcheck).prop("checked")){
+        removeProp(buildings);
+        removeProp(parking);
+        removeProp(accEnt);
+        removeProp(accPar);
+        removeProp(emergency);
+        removeProp(sust);
+        removeProp(gender);
+      }else{
+        addProp(buildings);
+        addProp(parking);
+        addProp(accEnt);
+        addProp(accPar);
+        addProp(emergency);
+        addProp(sust);
+        addProp(gender);
+      }
     });
 
     // // event listener for the select all button attached to function clicking
