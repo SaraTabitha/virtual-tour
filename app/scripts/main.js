@@ -11,14 +11,7 @@
 
    //functions for clicking checkboxes
    //map.js has click functions for setting markers that are linked to these checkbox ids 
-   function clickCheckboxes(name){
-    $( "#" + name + "Label").toggleClass("is-checked");
-    if($("#" + name).prop("checked")){
-      $("#" + name).removeProp("checked");
-    }else{
-      $("#" + name).prop("checked");
-    }
-   }
+   
    function toggleClass(name){
     $( "#" + name + "Label").toggleClass("is-checked");
    }
@@ -29,6 +22,14 @@
    function addPropandClass(name){
     $("#" + name).prop("checked");
     $("#" + name + "Label").addClass("is-checked");
+   }
+   function clickCheckboxes(name){
+    toggleClass(name);
+    if($("#" + name).prop("checked")){
+      $("#" + name).removeProp("checked");
+    }else{
+      $("#" + name).prop("checked");
+    }
    }
 
    $("#buildings").click(function(){
@@ -153,6 +154,11 @@
       // toggleClass(gender);
 
       if(!$("#selectallcheck").prop("checked")){
+        if(){
+
+        } else if (){
+
+        }
         removePropandClass(buildings);
         removePropandClass(parking);
         removePropandClass(accEnt);
