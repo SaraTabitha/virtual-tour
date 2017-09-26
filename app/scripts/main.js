@@ -12,6 +12,16 @@
    //functions for clicking checkboxes
    //map.js has click functions for setting markers that are linked to these checkbox ids 
    
+   //to start: set all checkboxes to NOT have prop "checked"
+   $("#buildings").removeProp("checked");
+   $("#parking").removeProp("checked");
+   $("#accEnt").removeProp("checked");
+   $("#accPar").removeProp("checked");
+   $("#emergency").removeProp("checked");
+   $("#sust").removeProp("checked");
+   $("#gender").removeProp("checked");
+   $("#selectallcheck").removeProp("checked");
+   
   //remove property and class
    function removePropandClass(name){
     $("#" + name).removeProp("checked");
@@ -24,7 +34,7 @@
    }
    //basic function for checking the checkboxes (checks if they are already checked or not)
    function clickCheckboxes(name){
-    if(($("#" + name).prop("checked")) || ($( "#" + name + "Label").hasClass("is-checked"))){
+    if(($("#" + name).prop("checked")) && ($( "#" + name + "Label").hasClass("is-checked"))){
       //if checkbox is checked, uncheck it
       removePropandClass(name);
     }else{
@@ -42,7 +52,7 @@
     } 
    }
    $("#buildings").click(function(){
-     debugger;
+    //  debugger;
      var buildings = "buildings";
     clickCheckboxes(buildings);
    });
@@ -79,7 +89,7 @@
       var emergency = "emergency";
       var sust = "sust";
       var gender = "gender";
-
+      // debugger;
         //does selectall not have prop check and no class is-checked
       if((!$("#selectallcheck").prop("checked")) && (!$("#selectallcheck").hasClass("is-checked"))){
         //if select all is unchecked, all others should be unchecked
