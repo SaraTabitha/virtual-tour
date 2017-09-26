@@ -139,9 +139,9 @@
 
       // buildings
       $("#buildings").attr("checked", true);
-      $("#buildLabel").addClass("is-checked");
+      $("#buildingsLabel").addClass("is-checked");
       // parking lots
-      $("#parkingLots").attr("checked", true);
+      $("#parking").attr("checked", true);
       $("#parkingLabel").addClass("is-checked");
       // accessible entries
       $("#accEnt").attr("checked", true);
@@ -163,9 +163,9 @@
 
       // buildings
       $("#buildings").removeAttr("checked", true);
-      $("#buildLabel").removeClass("is-checked");
+      $("#buildingsLabel").removeClass("is-checked");
       // parking lots
-      $("#parkingLots").removeAttr("checked", true);
+      $("#parking").removeAttr("checked", true);
       $("#parkingLabel").removeClass("is-checked");
       // Accessible entries
       $("#accEnt").removeAttr("checked", true);
