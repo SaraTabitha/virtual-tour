@@ -3,7 +3,7 @@ var titanFieldVRView;
 
 // declaring the scenes for this VRView
 var titanFieldScenes = {
-    x: {
+    titanField: {
         image: 'images/Panorama/titan-field/titanFieldPano.jpg',
         hotspots: {
 
@@ -30,7 +30,7 @@ function loadtitanFieldVR(){
 // fires when the VRView objects is ready to do stuff
 function ontitanFieldVRViewReady(e){
     console.log('ontitanFieldReady');
-    loadScene('x');
+    loadScene('titanField');
 }
 
 // fires when a hotspot gets clicked
