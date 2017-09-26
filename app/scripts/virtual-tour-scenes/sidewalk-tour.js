@@ -317,7 +317,7 @@ var sidewalkTouScenes = {
 };
 
 // fires when a user clicks on a 360 tour link
-function loadsidewalkTourVR(){
+function loadSidewalkTourVR(){
     // initializing the VRView object
     sidewalkTourVRView = new VRView.Player('#sidewalkTour', {
         image: 'images/Panorama/blank.png',
@@ -335,20 +335,20 @@ function loadsidewalkTourVR(){
 // fires when the VRView objects is ready to do stuff
 function onsidewalkTourVRViewReady(e){
     console.log('onSidewalkTourReady');
-    loadScene('dempseyFront');
+    loadSidewalkTourScene('dempseyFront');
 }
 
 // fires when a hotspot gets clicked
 function onsidewalkTourVRClick(e) {
     console.log('onsidewalkTourVRClick', e.id);
     if (e.id) {
-        loadScene(e.id);
+        loadSidewalkTourScene(e.id);
     }
 }
 
 // loads the image and it's hotspots
-function loadScene(id) {
-    console.log('loadScene', id);
+function loadSidewalkTourScene(id) {
+    console.log('loadSidewalkTourScene', id);
 
     // Set the image
     sidewalkTourVRView.setContent({
@@ -374,4 +374,4 @@ function loadScene(id) {
 }
 
 // fires on click of Dempsey Dev
-document.getElementById("dempseyStart").addEventListener('click', loadsidewalkTourVR);
+document.getElementById("dempseyStart").addEventListener('click', loadSidewalkTourVR);

@@ -63,20 +63,20 @@ function loadWomensCenterVR(){
 // fires when the VRView objects is ready to do stuff
 function onWomensCenterVRViewReady(e){
     console.log('onWomensCenterReady');
-    loadScene('womensCenterFront');
+    loadWomensCenterScene('womensCenterFront');
 }
 
 // fires when a hotspot gets clicked
 function onWomensCenterVRClick(e) {
     console.log('onWomensCenterVRClick', e.id);
     if (e.id) {
-        loadScene(e.id);
+        loadWomensCenterScene(e.id);
     }
 }
 
 // loads the image and it's hotspots
-function loadScene(id) {
-    console.log('loadScene', id);
+function loadWomensCenterScene(id) {
+    console.log('loadWomensCenterScene', id);
 
     // Set the image
     womensCenterVRView.setContent({

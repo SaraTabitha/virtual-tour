@@ -66,7 +66,7 @@ function loadtemplateVR(){
 // fires when the VRView objects is ready to do stuff
 function ontemplateVRViewReady(e){
     console.log('ontemplateReady');
-    loadScene('x');
+    loadTemplateScene('x');
 }
 
 // fires when a hotspot gets clicked
@@ -78,7 +78,7 @@ function ontemplateVRClick(e) {
 }
 
 // loads the image and it's hotspots
-function loadScene(id) {
+function loadTemplateScene(id) {
     console.log('loadScene', id);
 
     // Set the image

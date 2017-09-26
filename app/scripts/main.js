@@ -285,11 +285,11 @@
 // hideAllVR function makes sure to hide any possible
 // visible panoramas
 function hideAllVR(){
-  $("#titanFieldImage > iframe").css('visibility', 'hidden');
+  $("#titanFieldVR > iframe").css('visibility', 'hidden');
   $("#titanField").removeClass("checked");
   $("#womensCenterVR > iframe").css('visibility', 'hidden');
   $("#womensCenter").removeClass("checked");
-  $("#executiveRoomImage > iframe").css('visibility', 'hidden');
+  $("#executiveRoomVR > iframe").css('visibility', 'hidden');
   $("#executiveRoom").removeClass("checked");
   $("#sidewalkTour > iframe").css('visibility', 'hidden');
   $("#dempseyStart").removeClass("checked");
@@ -319,7 +319,7 @@ $("#titanField").click(function(){
 
         $("#vrCloseButton").css("visibility", "visible");
 
-        $("#titanFieldImage > iframe").css('visibility', 'visible');
+        $("#titanFieldVR > iframe").css('visibility', 'visible');
 
         $(this).addClass("checked");
 
@@ -328,7 +328,7 @@ $("#titanField").click(function(){
         $('#overlay').css('visibility', 'hidden');
         $('#overlay').animate({"opacity": "0"}, "slow");
 
-        $("#titanFieldImage > iframe").css('visibility', 'hidden');
+        $("#titanFieldVR > iframe").css('visibility', 'hidden');
 
         $("#vrCloseButton").css("visibility", "hidden");
 
@@ -370,7 +370,7 @@ $("#executiveRoom").click(function(){
         $('#overlay').css('visibility', 'visible');
         $('#overlay').animate({"opacity": "0.3"}, "slow");
 
-        $("#executiveRoomImage > iframe").css('visibility', 'visible');
+        $("#executiveRoomVR > iframe").css('visibility', 'visible');
 
         $("#vrCloseButton").css("visibility", "visible");
 
@@ -381,7 +381,7 @@ $("#executiveRoom").click(function(){
         $('#overlay').css('visibility', 'hidden');
         $('#overlay').animate({"opacity": "0"}, "slow");
 
-        $("#executiveRoomImage > iframe").css('visibility', 'hidden');
+        $("#executiveRoomVR > iframe").css('visibility', 'hidden');
 
         $("#vrCloseButton").css("visibility", "hidden");
 
