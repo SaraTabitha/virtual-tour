@@ -24,7 +24,7 @@
    }
    //basic function for checking the checkboxes (checks if they are already checked or not)
    function clickCheckboxes(name){
-    if(($("#" + name).prop("checked")) && ($( "#" + name + "Label").hasClass("is-checked"))){
+    if(($("#" + name).prop("checked")) || ($( "#" + name + "Label").hasClass("is-checked"))){
       //if checkbox is checked, uncheck it
       removePropandClass(name);
     }else{
@@ -32,15 +32,17 @@
       addPropandClass(name);
     }
    }
-   //checks if the checkbox is already selected for the select all (hopefully)
+   //checks if the checkbox is already selected for the select all 
    function selectAllCheck(name){
      //if checkbox is not already checked, check it
-    if((!$("#" + name).prop("checked")) && (!$( "#" + name + "Label").hasClass("is-checked"))){
+     //(uses OR because for some reason after unchecking the )
+    if((!$("#" + name).prop("checked")) || (!$( "#" + name + "Label").hasClass("is-checked"))){
       addPropandClass(name);
       console.log("I executed (and added) for: " + name);
     } 
    }
    $("#buildings").click(function(){
+     debugger;
      var buildings = "buildings";
     clickCheckboxes(buildings);
    });
