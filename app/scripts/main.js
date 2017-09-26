@@ -22,11 +22,13 @@
    function toggleClass(name){
     $( "#" + name + "Label").toggleClass("is-checked");
    }
-   function removeProp(name){
+   function removePropandClass(name){
     $("#" + name).removeProp("checked");
+    ("#" + name + "Label").removeClass("is-checked");
    }
-   function addProp(name){
+   function addPropandClass(name){
     $("#" + name).prop("checked");
+    ("#" + name + "Label").addClass("is-checked");
    }
 
    $("#buildings").click(function(){
@@ -142,30 +144,30 @@
       var sust = "sust";
       var gender = "gender";
 
-      toggleClass(buildings);
-      toggleClass(parking);
-      toggleClass(accEnt);
-      toggleClass(accPar);
-      toggleClass(emergency);
-      toggleClass(sust);
-      toggleClass(gender);
+      // toggleClass(buildings);
+      // toggleClass(parking);
+      // toggleClass(accEnt);
+      // toggleClass(accPar);
+      // toggleClass(emergency);
+      // toggleClass(sust);
+      // toggleClass(gender);
 
       if($("#selectallcheck").prop("checked")){
-        removeProp(buildings);
-        removeProp(parking);
-        removeProp(accEnt);
-        removeProp(accPar);
-        removeProp(emergency);
-        removeProp(sust);
-        removeProp(gender);
+        removePropandClass(buildings);
+        removePropandClass(parking);
+        removePropandClass(accEnt);
+        removePropandClass(accPar);
+        removePropandClass(emergency);
+        removePropandClass(sust);
+        removePropandClass(gender);
       }else{
-        addProp(buildings);
-        addProp(parking);
-        addProp(accEnt);
-        addProp(accPar);
-        addProp(emergency);
-        addProp(sust);
-        addProp(gender);
+        addPropandClass(buildings);
+        addPropandClass(parking);
+        addPropandClass(accEnt);
+        addPropandClass(accPar);
+        addPropandClass(emergency);
+        addPropandClass(sust);
+        addPropandClass(gender);
       }
     });
 
