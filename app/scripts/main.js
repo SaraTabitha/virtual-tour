@@ -80,7 +80,16 @@
         //does selectall not have prop check and no class is-checked
       if((!$("#selectallcheck").prop("checked")) && (!$("#selectallcheck").hasClass("is-checked"))){
         //if select all is unchecked, all others should be unchecked
+        removePropandClass(buildings);
+        removePropandClass(parking);
+        removePropandClass(accEnt);
+        removePropandClass(accPar);
+        removePropandClass(emergency);
+        removePropandClass(sust);
+        removePropandClass(gender);
         
+      }else{
+        //if selectall is checked, all others should be checked
         selectAllCheck(buildings);
         selectAllCheck(parking);
         selectAllCheck(accEnt);
@@ -88,15 +97,6 @@
         selectAllCheck(emergency);
         selectAllCheck(sust);
         selectAllCheck(gender);
-      }else{
-        //if selectall is checked, all others should be checked
-        addPropandClass(buildings);
-        addPropandClass(parking);
-        addPropandClass(accEnt);
-        addPropandClass(accPar);
-        addPropandClass(emergency);
-        addPropandClass(sust);
-        addPropandClass(gender);
       }
     });
 
