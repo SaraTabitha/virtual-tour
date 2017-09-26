@@ -29,11 +29,11 @@
     $("#" + name + "Label").addClass("is-checked");
    }
    function clickCheckboxes(name){
-    toggleClass(name);
+    // toggleClass(name);
     if($("#" + name).prop("checked") && $( "#" + name + "Label").hasClass("is-checked")){
-      $("#" + name).removeProp("checked");
+      removePropandClass(name);
     }else{
-      $("#" + name).prop("checked");
+      addPropandClass(name);
     }
    }
 
@@ -88,7 +88,7 @@
       var gender = "gender";
 
         //does selectall not have prop check and no class is-checked
-      if((!$("#selectallcheck").prop("checked")) && (!$("#selectallcheck").hasClass("is-checked")){
+      if((!$("#selectallcheck").prop("checked")) && (!$("#selectallcheck").hasClass("is-checked"))){
         //if select all is unchecked, all others should be unchecked
         removePropandClass(buildings);
         removePropandClass(parking);
