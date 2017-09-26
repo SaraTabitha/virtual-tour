@@ -43,13 +43,13 @@
       var parking = "parking";
       clickCheckboxes(parking);
     });
-    // $("#parking").click(function(){
-    // var check = !$("#parking").prop("checked");
+    // $("#parkingLots").click(function(){
+    // var check = !$("#parkingLots").prop("checked");
     // if (check === false){
-    //   $("#parking").attr("checked", true);
+    //   $("#parkingLots").attr("checked", true);
     //   $("#parkingLabel").addClass("is-checked");
     // } else if (check === true){
-    //   $("#parking").removeAttr("checked", true);
+    //   $("#parkingLots").removeAttr("checked", true);
     //   $("#parkingLabel").removeClass("is-checked");
     // }
     // });
