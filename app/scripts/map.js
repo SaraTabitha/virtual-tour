@@ -3512,7 +3512,7 @@ function initMap() {
 
         // on click function for setting and removing markers
         $("#parkingLabel").click(function(){
-            var checkParking = !$("#parkingLots").prop("checked");
+            var checkParking = !$("#parking").prop("checked");
             if (checkParking === false){
                 setParkingLots();
             } else if (checkParking === true){
