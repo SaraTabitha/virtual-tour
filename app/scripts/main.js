@@ -124,67 +124,81 @@
     // });
 
     $("#selectallcheck").click(function(){
-      
+      var buildings = "buildings";
+      var parking = "parking";
+      var accEnt = "accEnt";
+      var accPar = "accPar";
+      var emergency = "emergency";
+      var sust = "sust";
+      var gender = "gender";
+
+      clickCheckboxes(buildings);
+      clickCheckboxes(parking);
+      clickCheckboxes(accEnt);
+      clickCheckboxes(accPar);
+      clickCheckboxes(emergency);
+      clickCheckboxes(sust);
+      clickCheckboxes(gender);
     });
 
-    // event listener for the select all button attached to function clicking
-    $("#selectallcheck").click(function(){
+    // // event listener for the select all button attached to function clicking
+    // $("#selectallcheck").click(function(){
 
-      //checks the input for the checked property (! = not checked)
-      var check = !$("#selectallcheck").prop("checked");
-    // because it looks at whether or not the property is checked BEFORE The click is put into effect,
-    //it has to do the opposite of what the state of the click is ex. If check was false before click
-    // do: check everything (and then the select all with check as the very last step (and become true))
-      if(check === false){
+    //   //checks the input for the checked property (! = not checked)
+    //   var check = !$("#selectallcheck").prop("checked");
+    // // because it looks at whether or not the property is checked BEFORE The click is put into effect,
+    // //it has to do the opposite of what the state of the click is ex. If check was false before click
+    // // do: check everything (and then the select all with check as the very last step (and become true))
+    //   if(check === false){
 
-      // buildings
-      $("#buildings").attr("checked", true);
-      $("#buildingsLabel").addClass("is-checked");
-      // parking lots
-      $("#parking").attr("checked", true);
-      $("#parkingLabel").addClass("is-checked");
-      // accessible entries
-      $("#accEnt").attr("checked", true);
-      $("#accEntLabel").addClass("is-checked");
-      // Accessible Parking
-      $("#accPar").attr("checked", true);
-      $("#accParLabel").addClass("is-checked");
-      // Emergency Phones
-      $("#emergency").attr("checked", true);
-      $("#emergencyLabel").addClass("is-checked");
-      // sustainability points of interest
-      $("#sust").attr("checked", true);
-      $("#sustLabel").addClass("is-checked");
-      // gender neutral and family bathrooms
-      $("#gender").attr("checked", true);
-      $("#genderLabel").addClass("is-checked");
+    //   // buildings
+    //   $("#buildings").attr("checked", true);
+    //   $("#buildingsLabel").addClass("is-checked");
+    //   // parking lots
+    //   $("#parking").attr("checked", true);
+    //   $("#parkingLabel").addClass("is-checked");
+    //   // accessible entries
+    //   $("#accEnt").attr("checked", true);
+    //   $("#accEntLabel").addClass("is-checked");
+    //   // Accessible Parking
+    //   $("#accPar").attr("checked", true);
+    //   $("#accParLabel").addClass("is-checked");
+    //   // Emergency Phones
+    //   $("#emergency").attr("checked", true);
+    //   $("#emergencyLabel").addClass("is-checked");
+    //   // sustainability points of interest
+    //   $("#sust").attr("checked", true);
+    //   $("#sustLabel").addClass("is-checked");
+    //   // gender neutral and family bathrooms
+    //   $("#gender").attr("checked", true);
+    //   $("#genderLabel").addClass("is-checked");
 
-      } else if (check === true) {
+    //   } else if (check === true) {
 
-      // buildings
-      $("#buildings").removeAttr("checked", true);
-      $("#buildingsLabel").removeClass("is-checked");
-      // parking lots
-      $("#parking").removeAttr("checked", true);
-      $("#parkingLabel").removeClass("is-checked");
-      // Accessible entries
-      $("#accEnt").removeAttr("checked", true);
-      $("#accEntLabel").removeClass("is-checked");
-      // Accessible Parking
-      $("#accPar").removeAttr("checked", true);
-      $("#accParLabel").removeClass("is-checked");
-      // Emergency Phones
-      $("#emergency").removeAttr("checked", true);
-      $("#emergencyLabel").removeClass("is-checked");
-      // sustainability points of interest
-      $("#sust").removeAttr("checked", true);
-      $("#sustLabel").removeClass("is-checked");
-      // gender neutral and family bathrooms
-      $("#gender").removeAttr("checked", true);
-      $("#genderLabel").removeClass("is-checked");
+    //   // buildings
+    //   $("#buildings").removeAttr("checked", true);
+    //   $("#buildingsLabel").removeClass("is-checked");
+    //   // parking lots
+    //   $("#parking").removeAttr("checked", true);
+    //   $("#parkingLabel").removeClass("is-checked");
+    //   // Accessible entries
+    //   $("#accEnt").removeAttr("checked", true);
+    //   $("#accEntLabel").removeClass("is-checked");
+    //   // Accessible Parking
+    //   $("#accPar").removeAttr("checked", true);
+    //   $("#accParLabel").removeClass("is-checked");
+    //   // Emergency Phones
+    //   $("#emergency").removeAttr("checked", true);
+    //   $("#emergencyLabel").removeClass("is-checked");
+    //   // sustainability points of interest
+    //   $("#sust").removeAttr("checked", true);
+    //   $("#sustLabel").removeClass("is-checked");
+    //   // gender neutral and family bathrooms
+    //   $("#gender").removeAttr("checked", true);
+    //   $("#genderLabel").removeClass("is-checked");
 
-      }
-    });
+    //   }
+    // });
 
 
     $("#accaF").click(function(){
