@@ -45,8 +45,7 @@
    //checks if the checkbox is already selected for the select all 
    function selectAllCheck(name){
      //if checkbox is not already checked, check it
-     //(uses OR because for some reason after unchecking the )
-    if((!$("#" + name).prop("checked")) || (!$( "#" + name + "Label").hasClass("is-checked"))){
+    if((!$("#" + name).prop("checked")) && (!$( "#" + name + "Label").hasClass("is-checked"))){
       addPropandClass(name);
       console.log("I executed (and added) for: " + name);
     } 
