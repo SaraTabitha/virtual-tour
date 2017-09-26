@@ -30,7 +30,7 @@
    }
    function clickCheckboxes(name){
     // toggleClass(name);
-    if($("#" + name).prop("checked") && $( "#" + name + "Label").hasClass("is-checked")){
+    if(($("#" + name).prop("checked")) && ($( "#" + name + "Label").hasClass("is-checked"))){
       removePropandClass(name);
     }else{
       addPropandClass(name);
