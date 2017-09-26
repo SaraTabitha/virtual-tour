@@ -13,7 +13,7 @@
    //map.js has click functions for setting markers that are linked to these checkbox ids 
    
    function toggleClass(name){
-     if($( "#" + name + "Label").hasClass("is-checked");){
+     if(!$( "#" + name + "Label").hasClass("is-checked")){
       $( "#" + name + "Label").addClass("is-checked");
      }else{
       $( "#" + name + "Label").removeClass("is-checked");
@@ -30,7 +30,7 @@
    }
    function clickCheckboxes(name){
     toggleClass(name);
-    if($("#" + name).prop("checked")){
+    if($("#" + name).prop("checked") && $( "#" + name + "Label").hasClass("is-checked")){
       $("#" + name).removeProp("checked");
     }else{
       $("#" + name).prop("checked");
@@ -87,8 +87,9 @@
       var sust = "sust";
       var gender = "gender";
 
-      if(!$("#selectallcheck").prop("checked")){
-        
+        //does selectall not have prop check and no class is-checked
+      if(!$("#selectallcheck").prop("checked") && !$("#selectallcheck").hasClass("is-checked")){
+        //if select all is unchecked, all others should be unchecked
         removePropandClass(buildings);
         removePropandClass(parking);
         removePropandClass(accEnt);
@@ -97,6 +98,7 @@
         removePropandClass(sust);
         removePropandClass(gender);
       }else{
+        //if selectall is checked, all others should be checked
         addPropandClass(buildings);
         addPropandClass(parking);
         addPropandClass(accEnt);
