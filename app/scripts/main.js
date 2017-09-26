@@ -18,8 +18,6 @@
     //have to also use addClass & removeClass otherwise Chrome and Safari do not behave the same (chrome prefers add/remove class, safari prefers attr)
    
    function clickCheckboxes(name){
-     
-    //  var name = name.toString();
     $( "#" + name + "Label").toggleClass("is-checked");
     if($("#" + name).prop("checked")){
       $("#" + name).removeProp("checked");
@@ -41,16 +39,20 @@
     //   $("#buildingsLabel").removeClass("is-checked");
     // }
     // });
-    $("#parkingLots").click(function(){
-    var check = !$("#parkingLots").prop("checked");
-    if (check === false){
-      $("#parkingLots").attr("checked", true);
-      $("#parkingLabel").addClass("is-checked");
-    } else if (check === true){
-      $("#parkingLots").removeAttr("checked", true);
-      $("#parkingLabel").removeClass("is-checked");
-    }
+    $("#parking").click(function(){
+      var parking = "parking";
+      clickCheckboxes(parking);
     });
+    // $("#parking").click(function(){
+    // var check = !$("#parking").prop("checked");
+    // if (check === false){
+    //   $("#parking").attr("checked", true);
+    //   $("#parkingLabel").addClass("is-checked");
+    // } else if (check === true){
+    //   $("#parking").removeAttr("checked", true);
+    //   $("#parkingLabel").removeClass("is-checked");
+    // }
+    // });
     $("#accEnt").click(function(){
     var check = !$("#accEnt").prop("checked");
     if (check === false){
