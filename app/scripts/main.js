@@ -18,15 +18,17 @@
     //have to also use addClass & removeClass otherwise Chrome and Safari do not behave the same (chrome prefers add/remove class, safari prefers attr)
    
    function clickCheckboxes(name){
-     debugger;
-    $( name + "Label'").toggleClass("is-checked");
-    if($(name).prop("checked")){
-      $(name).removeProp("checked");
+     
+    //  var name = name.toString();
+    $( "#" + name + "Label").toggleClass("is-checked");
+    if($("#" + name).prop("checked")){
+      $("#" + name).removeProp("checked");
     }else{
-      $(name).prop("checked");
+      $("#" + name).prop("checked");
     }
    }
    $("#buildings").click(function(){
+     var buildings = "buildings";
     clickCheckboxes(buildings);
    });
     // $("#buildings").click(function(){
