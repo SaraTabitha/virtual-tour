@@ -53,55 +53,84 @@
     //   $("#parkingLabel").removeClass("is-checked");
     // }
     // });
+
     $("#accEnt").click(function(){
-    var check = !$("#accEnt").prop("checked");
-    if (check === false){
-      $("#accEnt").attr("checked", true);
-      $("#accEntLabel").addClass("is-checked");
-    } else if (check === true){
-      $("#accEnt").removeAttr("checked", true);
-      $("#accEntLabel").removeClass("is-checked");
-    }
+      var accEnt = "accEnt";
+      clickCheckboxes(accEnt);
     });
+    // $("#accEnt").click(function(){
+    // var check = !$("#accEnt").prop("checked");
+    // if (check === false){
+    //   $("#accEnt").attr("checked", true);
+    //   $("#accEntLabel").addClass("is-checked");
+    // } else if (check === true){
+    //   $("#accEnt").removeAttr("checked", true);
+    //   $("#accEntLabel").removeClass("is-checked");
+    // }
+    // });
     $("#accPar").click(function(){
-    var check = !$("#accPar").prop("checked");
-    if (check === false){
-      $("#accPar").attr("checked", true);
-      $("#accParLabel").addClass("is-checked");
-    } else if (check === true){
-      $("#accPar").removeAttr("checked", true);
-      $("#accParLabel").removeClass("is-checked");
-    }
+      var accPar = "accPar";
+      clickCheckboxes(accPar);
     });
+    // $("#accPar").click(function(){
+    // var check = !$("#accPar").prop("checked");
+    // if (check === false){
+    //   $("#accPar").attr("checked", true);
+    //   $("#accParLabel").addClass("is-checked");
+    // } else if (check === true){
+    //   $("#accPar").removeAttr("checked", true);
+    //   $("#accParLabel").removeClass("is-checked");
+    // }
+    // });
+
     $("#emergency").click(function(){
-    var check = !$("#emergency").prop("checked");
-    if (check === false){
-      $("#emergency").attr("checked", true);
-      $("#emergencyLabel").addClass("is-checked");
-    } else if (check === true){
-      $("#emergency").removeAttr("checked", true);
-      $("#emergencyLabel").removeClass("is-checked");
-    }
+      var emergency = "emergency";
+      clickCheckboxes(emergency);
     });
+    // $("#emergency").click(function(){
+    // var check = !$("#emergency").prop("checked");
+    // if (check === false){
+    //   $("#emergency").attr("checked", true);
+    //   $("#emergencyLabel").addClass("is-checked");
+    // } else if (check === true){
+    //   $("#emergency").removeAttr("checked", true);
+    //   $("#emergencyLabel").removeClass("is-checked");
+    // }
+    // });
     $("#sust").click(function(){
-    var check = !$("#sust").prop("checked");
-    if (check === false){
-      $("#sust").attr("checked", true);
-      $("#sustLabel").addClass("is-checked");
-    } else if (check === true){
-      $("#sust").removeAttr("checked", true);
-      $("#sustLabel").removeClass("is-checked");
-    }
+      var sust = "sust";
+      clickCheckboxes(sust);
     });
+
+    // $("#sust").click(function(){
+    // var check = !$("#sust").prop("checked");
+    // if (check === false){
+    //   $("#sust").attr("checked", true);
+    //   $("#sustLabel").addClass("is-checked");
+    // } else if (check === true){
+    //   $("#sust").removeAttr("checked", true);
+    //   $("#sustLabel").removeClass("is-checked");
+    // }
+    // });
     $("#gender").click(function(){
-    var check = !$("#gender").prop("checked");
-    if (check === false){
-      $("#gender").attr("checked", true);
-      $("#genderLabel").addClass("is-checked");
-    } else if (check === true){
-      $("#gender").removeAttr("checked", true);
-      $("#genderLabel").removeClass("is-checked");
-    }
+      var gender = "gender";
+      clickCheckboxes(gender);
+    });
+
+
+    // $("#gender").click(function(){
+    // var check = !$("#gender").prop("checked");
+    // if (check === false){
+    //   $("#gender").attr("checked", true);
+    //   $("#genderLabel").addClass("is-checked");
+    // } else if (check === true){
+    //   $("#gender").removeAttr("checked", true);
+    //   $("#genderLabel").removeClass("is-checked");
+    // }
+    // });
+
+    $("#selectallcheck").click(function(){
+      
     });
 
     // event listener for the select all button attached to function clicking
