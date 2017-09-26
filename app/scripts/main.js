@@ -152,7 +152,7 @@
       // toggleClass(sust);
       // toggleClass(gender);
 
-      if($("#selectallcheck").prop("checked")){
+      if(!$("#selectallcheck").prop("checked")){
         removePropandClass(buildings);
         removePropandClass(parking);
         removePropandClass(accEnt);
