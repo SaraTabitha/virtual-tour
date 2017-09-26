@@ -124,7 +124,7 @@
     // });
 
     $("#selectallcheck").click(function(){
-
+      
     });
 
     // event listener for the select all button attached to function clicking
