@@ -6681,12 +6681,14 @@ function initMap() {
    function selectAllCheck(name){
      //if checkbox is not already checked, check it
     //  (!$("#" + name).prop("checked")) && 
-    if((!$( "#" + name + "Label").hasClass("is-checked"))){
+    if(!($( "#" + name + "Label").hasClass("is-checked"))){
       addPropandClass(name);
-      console.log("I executed (and added) for: " + name);
+    //   console.log("I executed (and added) for: " + name);
     } 
    }
-    $("#selectallcheck").click(function(){
+
+    $("#selectallOne").click(function(){
+        // debugger;
       var buildings = "buildings";
       var parking = "parking";
       var accEnt = "accEnt";
@@ -6697,7 +6699,7 @@ function initMap() {
       // debugger;
         //does selectall not have prop check and no class is-checked
         // (!$("#selectallcheck").prop("checked")) &&
-      if( (!$("#selectallcheck").hasClass("is-checked"))){
+      if( ($("#selectallOne").hasClass("is-checked"))){
         //if select all is unchecked, all others should be unchecked
         removePropandClass(buildings);
         removePropandClass(parking);
