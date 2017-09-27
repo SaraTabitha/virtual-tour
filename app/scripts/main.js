@@ -13,45 +13,45 @@
    //map.js has click functions for setting markers that are linked to these checkbox ids 
    
    //to start: set all checkboxes to NOT have prop "checked"
-   $("#buildings").removeProp("checked");
-   $("#parking").removeProp("checked");
-   $("#accEnt").removeProp("checked");
-   $("#accPar").removeProp("checked");
-   $("#emergency").removeProp("checked");
-   $("#sust").removeProp("checked");
-   $("#gender").removeProp("checked");
-   $("#selectallcheck").removeProp("checked");
+  //  $("#buildings").removeProp("checked");
+  //  $("#parking").removeProp("checked");
+  //  $("#accEnt").removeProp("checked");
+  //  $("#accPar").removeProp("checked");
+  //  $("#emergency").removeProp("checked");
+  //  $("#sust").removeProp("checked");
+  //  $("#gender").removeProp("checked");
+  //  $("#selectallcheck").removeProp("checked");
    
-  //remove property and class
-   function removePropandClass(name){
-    // $("#" + name).removeProp("checked");
-    $("#" + name + "Label").removeClass("is-checked");
-   }
-   //add property and class
-   function addPropandClass(name){
-    // $("#" + name).prop("checked");
-    $("#" + name + "Label").addClass("is-checked");
-   }
-   //basic function for checking the checkboxes (checks if they are already checked or not)
-   function clickCheckboxes(name){
-    // ($("#" + name).prop("checked")) &&
-    if( ($( "#" + name + "Label").hasClass("is-checked"))){
-      //if checkbox is checked, uncheck it
-      removePropandClass(name);
-    }else{
-      //if checkbox is not checked, check it
-      addPropandClass(name);
-    }
-   }
-   //checks if the checkbox is already selected for the select all 
-   function selectAllCheck(name){
-     //if checkbox is not already checked, check it
-    //  (!$("#" + name).prop("checked")) &&
-    if( (!$( "#" + name + "Label").hasClass("is-checked"))){
-      addPropandClass(name);
-      console.log("I executed (and added) for: " + name);
-    } 
-   }
+  // //remove property and class
+  //  function removePropandClass(name){
+  //   // $("#" + name).removeProp("checked");
+  //   $("#" + name + "Label").removeClass("is-checked");
+  //  }
+  //  //add property and class
+  //  function addPropandClass(name){
+  //   // $("#" + name).prop("checked");
+  //   $("#" + name + "Label").addClass("is-checked");
+  //  }
+  //  //basic function for checking the checkboxes (checks if they are already checked or not)
+  //  function clickCheckboxes(name){
+  //   // ($("#" + name).prop("checked")) &&
+  //   if( ($( "#" + name + "Label").hasClass("is-checked"))){
+  //     //if checkbox is checked, uncheck it
+  //     removePropandClass(name);
+  //   }else{
+  //     //if checkbox is not checked, check it
+  //     addPropandClass(name);
+  //   }
+  //  }
+  //  //checks if the checkbox is already selected for the select all 
+  //  function selectAllCheck(name){
+  //    //if checkbox is not already checked, check it
+  //   //  (!$("#" + name).prop("checked")) &&
+  //   if( (!$( "#" + name + "Label").hasClass("is-checked"))){
+  //     addPropandClass(name);
+  //     console.log("I executed (and added) for: " + name);
+  //   } 
+  //  }
   //  $("#buildings").click(function(){
   //   //  debugger;
   //    var buildings = "buildings";
@@ -82,39 +82,39 @@
   //     clickCheckboxes(gender);
   //   });
 
-    $("#selectallcheck").click(function(){
-      var buildings = "buildings";
-      var parking = "parking";
-      var accEnt = "accEnt";
-      var accPar = "accPar";
-      var emergency = "emergency";
-      var sust = "sust";
-      var gender = "gender";
-      // debugger;
-        //does selectall not have prop check and no class is-checked
-        // !$("#selectallcheck").prop("checked")) &&
-      if(( (!$("#selectallcheck").hasClass("is-checked"))){
-        //if select all is unchecked, all others should be unchecked
-        removePropandClass(buildings);
-        removePropandClass(parking);
-        removePropandClass(accEnt);
-        removePropandClass(accPar);
-        removePropandClass(emergency);
-        removePropandClass(sust);
-        removePropandClass(gender);
+    // $("#selectallcheck").click(function(){
+    //   var buildings = "buildings";
+    //   var parking = "parking";
+    //   var accEnt = "accEnt";
+    //   var accPar = "accPar";
+    //   var emergency = "emergency";
+    //   var sust = "sust";
+    //   var gender = "gender";
+    //   // debugger;
+    //     //does selectall not have prop check and no class is-checked
+    //     // !$("#selectallcheck").prop("checked")) &&
+    //   if(( (!$("#selectallcheck").hasClass("is-checked"))){
+    //     //if select all is unchecked, all others should be unchecked
+    //     removePropandClass(buildings);
+    //     removePropandClass(parking);
+    //     removePropandClass(accEnt);
+    //     removePropandClass(accPar);
+    //     removePropandClass(emergency);
+    //     removePropandClass(sust);
+    //     removePropandClass(gender);
         
-      }else{
-        //if selectall is checked, all others should be checked
-        // debugger;
-        selectAllCheck(buildings);
-        selectAllCheck(parking);
-        selectAllCheck(accEnt);
-        selectAllCheck(accPar);
-        selectAllCheck(emergency);
-        selectAllCheck(sust);
-        selectAllCheck(gender);
-      }
-    });
+    //   }else{
+    //     //if selectall is checked, all others should be checked
+    //     // debugger;
+    //     selectAllCheck(buildings);
+    //     selectAllCheck(parking);
+    //     selectAllCheck(accEnt);
+    //     selectAllCheck(accPar);
+    //     selectAllCheck(emergency);
+    //     selectAllCheck(sust);
+    //     selectAllCheck(gender);
+    //   }
+    // });
 
     // // event listener for the select all button attached to function clicking
     // $("#selectallcheck").click(function(){
