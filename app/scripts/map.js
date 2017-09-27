@@ -6657,38 +6657,45 @@ function initMap() {
     //     });
    
   //remove property and class
-   function removePropandClass(name){
-    // $("#" + name).removeProp("checked");
-    $("#" + name + "Label").removeClass("is-checked");
+//    function removePropandClass(name){
+//     // $("#" + name).removeProp("checked");
+//     $("#" + name + "Label").removeClass("is-checked");
+//    }
+//    //add property and class
+//    function addPropandClass(name){
+//     // $("#" + name).prop("checked");
+//     $("#" + name + "Label").addClass("is-checked");
+//    }
+//    //basic function for checking the checkboxes (checks if they are already checked or not)
+//    function clickCheckboxes(name){
+//     // ($("#" + name).prop("checked")) && 
+//     if(($( "#" + name + "Label").hasClass("is-checked"))){
+//       //if checkbox is checked, uncheck it
+//       removePropandClass(name);
+//     }else{
+//       //if checkbox is not checked, check it
+//       addPropandClass(name);
+//     }
+//    }
+//    //checks if the checkbox is already selected for the select all 
+//    function selectAllCheck(name){
+//      //if checkbox is not already checked, check it
+//     //  (!$("#" + name).prop("checked")) && 
+//     if(!($( "#" + name + "Label").hasClass("is-checked"))){
+//       addPropandClass(name);
+//       console.log("I executed (and added) for: " + name);
+//     } 
+//    }
+   function triggerCheck(name){
+       $("#" + name).MaterialCheckbox.check();
    }
-   //add property and class
-   function addPropandClass(name){
-    // $("#" + name).prop("checked");
-    $("#" + name + "Label").addClass("is-checked");
-   }
-   //basic function for checking the checkboxes (checks if they are already checked or not)
-   function clickCheckboxes(name){
-    // ($("#" + name).prop("checked")) && 
-    if(($( "#" + name + "Label").hasClass("is-checked"))){
-      //if checkbox is checked, uncheck it
-      removePropandClass(name);
-    }else{
-      //if checkbox is not checked, check it
-      addPropandClass(name);
-    }
-   }
-   //checks if the checkbox is already selected for the select all 
-   function selectAllCheck(name){
-     //if checkbox is not already checked, check it
-    //  (!$("#" + name).prop("checked")) && 
-    if(!($( "#" + name + "Label").hasClass("is-checked"))){
-      addPropandClass(name);
-    //   console.log("I executed (and added) for: " + name);
-    } 
+   function triggerUncheck(name){
+       $("#" + name).MaterialCheckbox.uncheck();
    }
 
-    $("#selectallOne").click(function(){
-        // debugger;
+    $("#selectAllOne").click(function(){
+        
+        debugger;
       var buildings = "buildings";
       var parking = "parking";
       var accEnt = "accEnt";
@@ -6696,30 +6703,59 @@ function initMap() {
       var emergency = "emergency";
       var sust = "sust";
       var gender = "gender";
+
+         
+          if( ($("#selectAllOne").hasClass("is-checked"))){
+            //if select all is unchecked, all others should be unchecked
+             
+            triggerUncheck(buildings);
+            triggerUncheck(parking);
+            triggerUncheck(accEnt);
+            triggerUncheck(accPar);
+            triggerUncheck(emergency);
+            triggerUncheck(sust);
+            triggerUncheck(gender);
+            
+            
+          }else{
+            //if selectall is checked, all others should be checked
+            // debugger;
+            triggerCheck(buildings);
+            triggerCheck(parking);
+            triggerCheck(accEnt);
+            triggerCheck(accPar);
+            triggerCheck(emergency);
+            triggerCheck(sust);
+            triggerCheck(gender);
+          }
+
+
       // debugger;
         //does selectall not have prop check and no class is-checked
         // (!$("#selectallcheck").prop("checked")) &&
-      if( ($("#selectallOne").hasClass("is-checked"))){
-        //if select all is unchecked, all others should be unchecked
-        removePropandClass(buildings);
-        removePropandClass(parking);
-        removePropandClass(accEnt);
-        removePropandClass(accPar);
-        removePropandClass(emergency);
-        removePropandClass(sust);
-        removePropandClass(gender);
+    //   if( ($("#selectAllOne").hasClass("is-checked"))){
+    //     //if select all is unchecked, all others should be unchecked
+         
+    //     removePropandClass(buildings);
+    //     removePropandClass(parking);
+    //     removePropandClass(accEnt);
+    //     removePropandClass(accPar);
+    //     removePropandClass(emergency);
+    //     removePropandClass(sust);
+    //     removePropandClass(gender);
         
-      }else{
-        //if selectall is checked, all others should be checked
-        // debugger;
-        selectAllCheck(buildings);
-        selectAllCheck(parking);
-        selectAllCheck(accEnt);
-        selectAllCheck(accPar);
-        selectAllCheck(emergency);
-        selectAllCheck(sust);
-        selectAllCheck(gender);
-      }
+        
+    //   }else{
+    //     //if selectall is checked, all others should be checked
+    //     // debugger;
+    //     selectAllCheck(buildings);
+    //     selectAllCheck(parking);
+    //     selectAllCheck(accEnt);
+    //     selectAllCheck(accPar);
+    //     selectAllCheck(emergency);
+    //     selectAllCheck(sust);
+    //     selectAllCheck(gender);
+    //   }
     });
         
         //set and remove building markers
