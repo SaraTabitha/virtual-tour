@@ -24,17 +24,18 @@
    
   //remove property and class
    function removePropandClass(name){
-    $("#" + name).removeProp("checked");
+    // $("#" + name).removeProp("checked");
     $("#" + name + "Label").removeClass("is-checked");
    }
    //add property and class
    function addPropandClass(name){
-    $("#" + name).prop("checked");
+    // $("#" + name).prop("checked");
     $("#" + name + "Label").addClass("is-checked");
    }
    //basic function for checking the checkboxes (checks if they are already checked or not)
    function clickCheckboxes(name){
-    if(($("#" + name).prop("checked")) && ($( "#" + name + "Label").hasClass("is-checked"))){
+    // ($("#" + name).prop("checked")) &&
+    if( ($( "#" + name + "Label").hasClass("is-checked"))){
       //if checkbox is checked, uncheck it
       removePropandClass(name);
     }else{
@@ -45,40 +46,41 @@
    //checks if the checkbox is already selected for the select all 
    function selectAllCheck(name){
      //if checkbox is not already checked, check it
-    if((!$("#" + name).prop("checked")) && (!$( "#" + name + "Label").hasClass("is-checked"))){
+    //  (!$("#" + name).prop("checked")) &&
+    if( (!$( "#" + name + "Label").hasClass("is-checked"))){
       addPropandClass(name);
       console.log("I executed (and added) for: " + name);
     } 
    }
-   $("#buildings").click(function(){
-    //  debugger;
-     var buildings = "buildings";
-    clickCheckboxes(buildings);
-   });
-    $("#parking").click(function(){
-      var parking = "parking";
-      clickCheckboxes(parking);
-    });
-    $("#accEnt").click(function(){
-      var accEnt = "accEnt";
-      clickCheckboxes(accEnt);
-    });
-    $("#accPar").click(function(){
-      var accPar = "accPar";
-      clickCheckboxes(accPar);
-    });
-    $("#emergency").click(function(){
-      var emergency = "emergency";
-      clickCheckboxes(emergency);
-    });
-    $("#sust").click(function(){
-      var sust = "sust";
-      clickCheckboxes(sust);
-    });
-    $("#gender").click(function(){
-      var gender = "gender";
-      clickCheckboxes(gender);
-    });
+  //  $("#buildings").click(function(){
+  //   //  debugger;
+  //    var buildings = "buildings";
+  //   clickCheckboxes(buildings);
+  //  });
+  //   $("#parking").click(function(){
+  //     var parking = "parking";
+  //     clickCheckboxes(parking);
+  //   });
+  //   $("#accEnt").click(function(){
+  //     var accEnt = "accEnt";
+  //     clickCheckboxes(accEnt);
+  //   });
+  //   $("#accPar").click(function(){
+  //     var accPar = "accPar";
+  //     clickCheckboxes(accPar);
+  //   });
+  //   $("#emergency").click(function(){
+  //     var emergency = "emergency";
+  //     clickCheckboxes(emergency);
+  //   });
+  //   $("#sust").click(function(){
+  //     var sust = "sust";
+  //     clickCheckboxes(sust);
+  //   });
+  //   $("#gender").click(function(){
+  //     var gender = "gender";
+  //     clickCheckboxes(gender);
+  //   });
 
     $("#selectallcheck").click(function(){
       var buildings = "buildings";
@@ -90,7 +92,8 @@
       var gender = "gender";
       // debugger;
         //does selectall not have prop check and no class is-checked
-      if((!$("#selectallcheck").prop("checked")) && (!$("#selectallcheck").hasClass("is-checked"))){
+        // !$("#selectallcheck").prop("checked")) &&
+      if(( (!$("#selectallcheck").hasClass("is-checked"))){
         //if select all is unchecked, all others should be unchecked
         removePropandClass(buildings);
         removePropandClass(parking);
