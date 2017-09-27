@@ -248,12 +248,16 @@
 //       console.log("I executed (and added) for: " + name);
 //     } 
 //    }
+
+
+
    function triggerCheck(name){
-    document.getElementById("#" + name).MaterialCheckbox.check;
+
+    document.getElementById("#" + name + "Label").MaterialCheckbox.check;
  //    $("#" + name).MaterialCheckbox.check();
   }
   function triggerUncheck(name){
-  document.getElementById("#" + name).MaterialCheckbox.uncheck;
+  document.getElementById("#" + name + "Label").MaterialCheckbox.uncheck;
   //    $("#" + name).MaterialCheckbox.uncheck();
   }
 
