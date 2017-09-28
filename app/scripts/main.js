@@ -29,7 +29,7 @@
   //  }
   //  //add property and class
   //  function addPropandClass(name){
-  //   // $("#" + name).prop("checked");
+  //   // 
   //   $("#" + name + "Label").addClass("is-checked");
   //  }
   //  //basic function for checking the checkboxes (checks if they are already checked or not)
@@ -252,17 +252,21 @@
 
 
   function triggerCheck(name){
-  document.getElementById("#" + name + "Label").MaterialCheckbox.check;
+    
+  document.getElementById(name + "Label").MaterialCheckbox.check();
+  // $("#" + name).prop("checked");
  //    $("#" + name).MaterialCheckbox.check();
   }
   function triggerUncheck(name){
-  document.getElementById("#" + name + "Label").MaterialCheckbox.uncheck;
+    
+  document.getElementById(name + "Label").MaterialCheckbox.uncheck();
+  // $("#" + name).removeProp("checked");
   //    $("#" + name).MaterialCheckbox.uncheck();
   }
 
- $("#selectAllOne").click(function(){
+ $("#selectAllOne").change(function(){
      
-     // debugger;
+    //  debugger;
    var buildings = "buildings";
    var parking = "parking";
    var accEnt = "accEnt";
@@ -270,31 +274,39 @@
    var emergency = "emergency";
    var sust = "sust";
    var gender = "gender";
+  
 
       
-       if( ($("#selectAllOne").hasClass("is-checked"))){
+       if( !$("#selectAllOne").hasClass("is-checked") ){
          //if select all is unchecked, all others should be unchecked
-         $("#buildingsLabel").MaterialCheckbox.uncheck;
-        //  triggerUncheck(buildings);
-        //  triggerUncheck(parking);
-        //  triggerUncheck(accEnt);
-        //  triggerUncheck(accPar);
-        //  triggerUncheck(emergency);
-        //  triggerUncheck(sust);
-        //  triggerUncheck(gender);
+        //  document.getElementById("buildingsLabel").MaterialCheckbox.uncheck();
+        //  document.getElementById(parking).MaterialCheckbox.uncheck();
+         triggerUncheck(buildings);
+         triggerUncheck(parking);
+         triggerUncheck(accEnt);
+         triggerUncheck(accPar);
+         triggerUncheck(emergency);
+         triggerUncheck(sust);
+         triggerUncheck(gender);
+
+        //  $("#selectallcheck").removeProp("checked");
+         
          
          
        }else{
          //if selectall is checked, all others should be checked
          // debugger;
-         $("#buildingsLabel").MaterialCheckbox.check;
-        //  triggerCheck(buildings);
-        //  triggerCheck(parking);
-        //  triggerCheck(accEnt);
-        //  triggerCheck(accPar);
-        //  triggerCheck(emergency);
-        //  triggerCheck(sust);
-        //  triggerCheck(gender);
+        //  document.getElementById("buildingsLabel").MaterialCheckbox.check();
+        //  document.getElementById(parking).MaterialCheckbox.check();
+         triggerCheck(buildings);
+         triggerCheck(parking);
+         triggerCheck(accEnt);
+         triggerCheck(accPar);
+         triggerCheck(emergency);
+         triggerCheck(sust);
+         triggerCheck(gender);
+
+        //  $("#selectallcheck").prop("checked");
        }
 
 
