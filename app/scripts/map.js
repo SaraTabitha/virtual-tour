@@ -6614,24 +6614,134 @@ function initMap() {
 
 
     
-        
-        //set and remove building markers
-        $("#buildingsLabel").click(function(){
-            var checkBuilding = !$("#buildings").prop("checked");
-            if (checkBuilding === false){
-                setBuilding();
-            } else if (checkBuilding === true ){
-                removeBuilding();
-            }
+        //functions for clicking checkboxes
+  function triggerCheck(name){
+    // fancy schmancy method Material Design already gives for checking le checkbox
+  document.getElementById(name + "Label").MaterialCheckbox.check();
+  checkboxMarkersandCards(name);
+  }
+
+  function triggerUncheck(name){
+    // fancy schmancy method Material Design already gives for unchecking le checkbox
+  document.getElementById(name + "Label").MaterialCheckbox.uncheck();
+  uncheckMarkersandCards(name);
+  }
+
+  //checks if name corresponds with specific ids and sets the buildings & their markers accordingly
+  function checkboxMarkersandCards(name){
+        if(name === "buildings"){
+            // if buildings is checked, set all buildings markers
+            setBuilding();
+        }
+    }
+    //checks if name corresponds with specific ids and sets the buildings & their markers accordingly
+   function uncheckMarkersandCards(name){
+        if (name === "buildings"){
+            removeBuilding();
+            closeAllBuildings();
+        }
+    }
+    // watches for change event on checkbox, checks if it has class is-checked and then sets the markers and hover cards accordingly
+    function checkIfChecked(name){
+        $("#" + name).change(function(){
+             if(!$("#" + name).hasClass("is-checked")){
+                //  if checkbox is unchecked, remove markers and hover cards
+                 uncheckMarkersandCards(name);
+             } else {
+                //  if checkbox is checked, set markers
+                 checkboxMarkersandCards(name);
+             }
         });
-        //closes all building hover cards
-        $("#buildings").click(function(){
-          var check = !$("#buildings").prop("checked");
-          // when closing a filter
-          if(check === true){
-             closeAllBuildings();
+    }
+
+    var buildingsCheckbox = "buildings";
+    checkIfChecked(buildingsCheckbox);
+//    $("#buildings").change(function(){
+//        var buildings = "buildings";
+//        checkIfChecked(buildings);
+//    });
+
+ $("#selectAllOne").change(function(){
+   var buildings = "buildings";
+   var parking = "parking";
+   var accEnt = "accEnt";
+   var accPar = "accPar";
+   var emergency = "emergency";
+   var sust = "sust";
+   var gender = "gender";
+
+       if( !$("#selectAllOne").hasClass("is-checked") ){
+         //if select all is unchecked, all others should be unchecked
+         triggerUncheck(buildings);
+         triggerUncheck(parking);
+         triggerUncheck(accEnt);
+         triggerUncheck(accPar);
+         triggerUncheck(emergency);
+         triggerUncheck(sust);
+         triggerUncheck(gender);
+         
+       }else{
+         //if selectall is checked, all others should be checked
+         triggerCheck(buildings);
+         triggerCheck(parking);
+         triggerCheck(accEnt);
+         triggerCheck(accPar);
+         triggerCheck(emergency);
+         triggerCheck(sust);
+         triggerCheck(gender);
+       }
+
+ });
+
+ $("#selectAllTwo").change(function(){
+          var accaF = "accaF";
+          var ath = "ath";
+          var accS = "accS";
+          var campS = "campS";
+          var resH = "resH";
+          var dining = "dining";
+          var stuR = "stuR";
+
+          if( !$("#selectAllTwo").hasClass("is-checked") ){
+            triggerUncheck(accaF);
+            triggerUncheck(ath);
+            triggerUncheck(accS);
+            triggerUncheck(campS);
+            triggerUncheck(resH);
+            triggerUncheck(dining);
+            triggerUncheck(stuR);
+
+          } else {
+            triggerCheck(accaF);
+            triggerCheck(ath);
+            triggerCheck(accS);
+            triggerCheck(campS);
+            triggerCheck(resH);
+            triggerCheck(dining);
+            triggerCheck(stuR);
+
           }
-        });
+  
+      });
+
+      
+        // //set and remove building markers
+        // $("#buildingsLabel").click(function(){
+        //     var checkBuilding = !$("#buildings").prop("checked");
+        //     if (checkBuilding === false){
+        //         setBuilding();
+        //     } else if (checkBuilding === true ){
+        //         removeBuilding();
+        //     }
+        // });
+        // //closes all building hover cards
+        // $("#buildings").click(function(){
+        //   var check = !$("#buildings").prop("checked");
+        //   // when closing a filter
+        //   if(check === true){
+        //      closeAllBuildings();
+        //   }
+        // });
 
         // on click function for setting and removing markers
         $("#parkingLabel").click(function(){
