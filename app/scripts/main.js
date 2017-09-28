@@ -11,16 +11,16 @@
 
    //functions for clicking checkboxes
   function triggerCheck(name){
+    // fancy schmancy method Material Design already gives for checking le checkbox
   document.getElementById(name + "Label").MaterialCheckbox.check();
   }
 
   function triggerUncheck(name){
+    // fancy schmancy method Material Design already gives for unchecking le checkbox
   document.getElementById(name + "Label").MaterialCheckbox.uncheck();
   }
 
  $("#selectAllOne").change(function(){
-     
-    //  debugger;
    var buildings = "buildings";
    var parking = "parking";
    var accEnt = "accEnt";
@@ -28,6 +28,7 @@
    var emergency = "emergency";
    var sust = "sust";
    var gender = "gender";
+
        if( !$("#selectAllOne").hasClass("is-checked") ){
          //if select all is unchecked, all others should be unchecked
          triggerUncheck(buildings);
@@ -51,128 +52,40 @@
 
  });
 
+ $("#selectAllTwo").change(function(){
+          var accaF = "accaF";
+          var ath = "ath";
+          var accS = "accS";
+          var campS = "campS";
+          var resH = "resH";
+          var dining = "dining";
+          var stuR = "stuR";
 
-    $("#accaF").click(function(){
-      var check = !$("#accaF").prop("checked");
-      if (check === false){
-        $("#accaF").attr("checked", true);
-        $("#accaFLabel").addClass("is-checked");
-      } else if (check === true){
-        $("#accaF").removeAttr("checked", true);
-        $("#accaFLabel").removeClass("is-checked");
-      }
-      });
-      $("#ath").click(function(){
-      var check = !$("#ath").prop("checked");
-      if (check === false){
-        $("#ath").attr("checked", true);
-        $("#athLabel").addClass("is-checked");
-      } else if (check === true){
-        $("#ath").removeAttr("checked", true);
-        $("#athLabel").removeClass("is-checked");
-      }
-      });
-      $("#accS").click(function(){
-      var check = !$("#accS").prop("checked");
-      if (check === false){
-        $("#accS").attr("checked", true);
-        $("#accSLabel").addClass("is-checked");
-      } else if (check === true){
-        $("#accS").removeAttr("checked", true);
-        $("#accSLabel").removeClass("is-checked");
-      }
-      });
-      $("#campS").click(function(){
-      var check = !$("#campS").prop("checked");
-      if (check === false){
-        $("#campS").attr("checked", true);
-        $("#campSLabel").addClass("is-checked");
-      } else if (check === true){
-        $("#campS").removeAttr("checked", true);
-        $("#campSLabel").removeClass("is-checked");
-      }
-      });
-      $("#resH").click(function(){
-      var check = !$("#resH").prop("checked");
-      if (check === false){
-        $("#resH").attr("checked", true);
-        $("#resHLabel").addClass("is-checked");
-      } else if (check === true){
-        $("#resH").removeAttr("checked", true);
-        $("#resHLabel").removeClass("is-checked");
-      }
-      });
-      $("#dining").click(function(){
-      var check = !$("#dining").prop("checked");
-      if (check === false){
-        $("#dining").attr("checked", true);
-        $("#diningLabel").addClass("is-checked");
-      } else if (check === true){
-        $("#dining").removeAttr("checked", true);
-        $("#diningLabel").removeClass("is-checked");
-      }
-      });
-      $("#stuR").click(function(){
-      var check = !$("#stuR").prop("checked");
-      if (check === false){
-        $("#stuR").attr("checked", true);
-        $("#stuRLabel").addClass("is-checked");
-      } else if (check === true){
-        $("#stuR").removeAttr("checked", true);
-        $("#stuRLabel").removeClass("is-checked");
-      }
-      });
-      // Start second Select All (identical to above so I will omit comments explaining functionality)
+          if( !$("#selectAllTwo").hasClass("is-checked") ){
+            triggerUncheck(accaF);
+            triggerUncheck(ath);
+            triggerUncheck(accS);
+            triggerUncheck(campS);
+            triggerUncheck(resH);
+            triggerUncheck(dining);
+            triggerUncheck(stuR);
 
-      $("#selectallcheck2").click(function(){
-        var checkTwo = !$("#selectallcheck2").prop("checked");
-        if(checkTwo === false){
-          // academic facilities
-          $("#accaF").attr("checked",true);
-          $("#accaFLabel").addClass("is-checked");
-          // athletics
-          $("#ath").attr("checked",true);
-          $("#athLabel").addClass("is-checked");
-          // academic services
-          $("#accS").attr("checked",true);
-          $("#accSLabel").addClass("is-checked");
-          // campus services
-          $("#campS").attr("checked",true);
-          $("#campSLabel").addClass("is-checked");
-          // residence halls
-          $("#resH").attr("checked",true);
-          $("#resHLabel").addClass("is-checked");
-          // dining
-          $("#dining").attr("checked",true);
-          $("#diningLabel").addClass("is-checked");
-          // student recreation
-          $("#stuR").attr("checked",true);
-          $("#stuRLabel").addClass("is-checked");
-      } else if (checkTwo === true) {
-          // academic facilities
-          $("#accaF").removeAttr("checked", true);
-          $("#accaFLabel").removeClass("is-checked");
-          // athletics
-          $("#ath").removeAttr("checked", true);
-          $("#athLabel").removeClass("is-checked");
-          // academic services
-          $("#accS").removeAttr("checked", true);
-          $("#accSLabel").removeClass("is-checked");
-          // campus services
-          $("#campS").removeAttr("checked", true);
-          $("#campSLabel").removeClass("is-checked");
-          // residence halls
-          $("#resH").removeAttr("checked", true);
-          $("#resHLabel").removeClass("is-checked");
-          // dining
-          $("#dining").removeAttr("checked", true);
-          $("#diningLabel").removeClass("is-checked");
-          // student recreation
-          $("#stuR").removeAttr("checked", true);
-          $("#stuRLabel").removeClass("is-checked");
-      }
-    });
-    // End second Select All
+          } else {
+            triggerCheck(accaF);
+            triggerCheck(ath);
+            triggerCheck(accS);
+            triggerCheck(campS);
+            triggerCheck(resH);
+            triggerCheck(dining);
+            triggerCheck(stuR);
+
+          }
+  
+      });
+
+   
+
+      
 // VR image click function
 // when a new panorama is selected from the menu the
 // hideAllVR function makes sure to hide any possible
