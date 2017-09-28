@@ -6614,7 +6614,12 @@ function initMap() {
 
 
     
-        //functions for clicking checkboxes
+    //functions for checkboxes
+    // naming conventions for checkboxes: ex. "buildingsLabel" "name + Label" is the element that has the class "is-checked" is added to
+    // ex. "buildings" without "Label" added onto the end is the input element with attribute " type= 'checkbox' "
+
+        // triggerCheck and triggerUncheck check and uncheck the checkboxes
+        //primarily should only be needed for the selectall functions
   function triggerCheck(name){
     // fancy schmancy method Material Design already gives for checking le checkbox
   document.getElementById(name + "Label").MaterialCheckbox.check();
@@ -6626,6 +6631,9 @@ function initMap() {
   document.getElementById(name + "Label").MaterialCheckbox.uncheck();
   uncheckMarkersandCards(name);
   }
+
+
+    //   the following functions handle setting/removing markers and hover cards when checkboxes are checked or unchecked
 
   //checks if name corresponds with specific ids and sets the buildings & their markers accordingly
   function checkboxMarkersandCards(name){
@@ -6643,23 +6651,26 @@ function initMap() {
     }
     // watches for change event on checkbox, checks if it has class is-checked and then sets the markers and hover cards accordingly
     function checkIfChecked(name){
-        $("#" + name).change(function(){
-             if(!$("#" + name).hasClass("is-checked")){
-                //  if checkbox is unchecked, remove markers and hover cards
-                 uncheckMarkersandCards(name);
-             } else {
-                //  if checkbox is checked, set markers
+        // debugger;
+             if(!$("#" + name + "Label").hasClass("is-checked")){
+                 //  if checkbox is checked, set markers
                  checkboxMarkersandCards(name);
+             } else {
+                //  if checkbox is unchecked, remove markers and hover cards
+                uncheckMarkersandCards(name);
              }
-        });
+        
     }
 
-    var buildingsCheckbox = "buildings";
-    checkIfChecked(buildingsCheckbox);
-//    $("#buildings").change(function(){
-//        var buildings = "buildings";
-//        checkIfChecked(buildings);
-//    });
+    // all onchange functions for the checkboxes
+    
+    // checks if the checkbox is checked or not and then sets markers/hover cards accordingly
+    // to work: buildings needs to be added to functions: "checkboxMarkersandCards" and "uncheckMarkersandCards"
+   $("#buildings").change(function(){
+        // sets up parameter as string
+       var buildings = "buildings";
+       checkIfChecked(buildings);
+   });
 
  $("#selectAllOne").change(function(){
    var buildings = "buildings";
@@ -6672,6 +6683,8 @@ function initMap() {
 
        if( !$("#selectAllOne").hasClass("is-checked") ){
          //if select all is unchecked, all others should be unchecked
+
+        //  uncheck: unchecks checkbox and removes markers and hover cards
          triggerUncheck(buildings);
          triggerUncheck(parking);
          triggerUncheck(accEnt);
@@ -6682,6 +6695,8 @@ function initMap() {
          
        }else{
          //if selectall is checked, all others should be checked
+
+        //  check: checks checkbox and sets markers 
          triggerCheck(buildings);
          triggerCheck(parking);
          triggerCheck(accEnt);
