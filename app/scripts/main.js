@@ -251,9 +251,8 @@
 
 
 
-   function triggerCheck(name){
-
-    document.getElementById("#" + name + "Label").MaterialCheckbox.check;
+  function triggerCheck(name){
+  document.getElementById("#" + name + "Label").MaterialCheckbox.check;
  //    $("#" + name).MaterialCheckbox.check();
   }
   function triggerUncheck(name){
@@ -275,26 +274,27 @@
       
        if( ($("#selectAllOne").hasClass("is-checked"))){
          //if select all is unchecked, all others should be unchecked
-          
-         triggerUncheck(buildings);
-         triggerUncheck(parking);
-         triggerUncheck(accEnt);
-         triggerUncheck(accPar);
-         triggerUncheck(emergency);
-         triggerUncheck(sust);
-         triggerUncheck(gender);
+         $("#buildingsLabel").MaterialCheckbox.uncheck;
+        //  triggerUncheck(buildings);
+        //  triggerUncheck(parking);
+        //  triggerUncheck(accEnt);
+        //  triggerUncheck(accPar);
+        //  triggerUncheck(emergency);
+        //  triggerUncheck(sust);
+        //  triggerUncheck(gender);
          
          
        }else{
          //if selectall is checked, all others should be checked
          // debugger;
-         triggerCheck(buildings);
-         triggerCheck(parking);
-         triggerCheck(accEnt);
-         triggerCheck(accPar);
-         triggerCheck(emergency);
-         triggerCheck(sust);
-         triggerCheck(gender);
+         $("#buildingsLabel").MaterialCheckbox.check;
+        //  triggerCheck(buildings);
+        //  triggerCheck(parking);
+        //  triggerCheck(accEnt);
+        //  triggerCheck(accPar);
+        //  triggerCheck(emergency);
+        //  triggerCheck(sust);
+        //  triggerCheck(gender);
        }
 
 
