@@ -5205,28 +5205,6 @@ function initMap() {
 
         
 
-        // on click function for selecting the first select all checkbox
-        // and setting/removing all markers
-        $("#selectallcheck").click(function(){
-            var checkSelect = !$("#selectallcheck").prop("checked");
-            if (checkSelect === false){
-                setBuilding();
-                setParkingLots();
-                setAccEnt();
-                setAccPar();
-                setEmergencyPhones();
-                setSust();
-                setGender();
-            } else if (checkSelect === true){
-                removeBuilding();
-                removeParkingLots();
-                removeAccEnt();
-                removeAccPar();
-                removeEmergencyPhones();
-                removeSust();
-                removeGender();
-            }
-        });
         // AccaF markers
         var albeeAccaFMarker = new google.maps.Marker({
             position: buildings[0],
@@ -6253,27 +6231,7 @@ function initMap() {
         }
         
 
-        // categories select all, setting all/removing all markers
-        $("#selectallcheck2").click(function(){
-            var checkSelect = !$("#selectallcheck2").prop("checked");
-            if (checkSelect === false){
-                setAccaF();
-                setAth();
-                setAccaS();
-                setCampS();
-                setResH();
-                setDining();
-                setStuR();
-            } else if (checkSelect === true){
-                removeAccaF();
-                removeAth();
-                removeAccaS();
-                removeCampS();
-                removeResH();
-                removeDining();
-                removeStuR();
-            }
-        });
+        
 
 
         // close all buildings
@@ -6640,13 +6598,62 @@ function initMap() {
         if(name === "buildings"){
             // if buildings is checked, set all buildings markers
             setBuilding();
+        } 
+        else if (name === "parking"){
+            setParkingLots();
+
+        }
+        else if (name === "accEnt"){
+            setAccEnt();
+
+        }
+        else if (name === "accPar"){
+            setAccPar();
+
+        }
+        else if (name === "emergency"){
+            setEmergencyPhones();
+        }
+        else if (name === "sust"){
+            setSust();
+        }
+        else if (name === "gender"){
+            setGender();
         }
     }
     //checks if name corresponds with specific ids and sets the buildings & their markers accordingly
    function uncheckMarkersandCards(name){
         if (name === "buildings"){
+            // removes building markers
             removeBuilding();
+            // removes hoverpopups (not markers, the white popups after you click markers)
             closeAllBuildings();
+        } 
+        else if (name === "parking"){
+            removeParkingLots();
+            closeAllParking();
+        }
+        else if (name === "accEnt"){
+            removeAccEnt();
+            closeAllAccEnt();
+
+        }
+        else if (name === "accPar"){
+            removeAccPar();
+            closeAllAccPark();
+ 
+         }
+         else if (name === "emergency"){
+            removeEmergencyPhones();
+            // emergency phones do not have any hovercards attached to their markers atm
+         }
+         else if (name === "sust"){
+            removeSust();
+            closeAllSust();
+        }
+        else if (name === "gender"){
+            removeGender();
+            closeAllGender();
         }
     }
     // watches for change event on checkbox, checks if it has class is-checked and then sets the markers and hover cards accordingly
@@ -6663,14 +6670,40 @@ function initMap() {
     }
 
     // all onchange functions for the checkboxes
-    
+
     // checks if the checkbox is checked or not and then sets markers/hover cards accordingly
     // to work: buildings needs to be added to functions: "checkboxMarkersandCards" and "uncheckMarkersandCards"
+    // selector for .change function should use the id for the input element 
    $("#buildings").change(function(){
         // sets up parameter as string
        var buildings = "buildings";
        checkIfChecked(buildings);
    });
+   $("#parking").change(function(){
+       var parking = "parking";
+       checkIfChecked(parking);
+   });
+   $("#accEnt").change(function(){
+    var accEnt = "accEnt";
+    checkIfChecked(accEnt);
+   });
+   $("#accPar").change(function(){
+    var accPar = "accPar";
+    checkIfChecked(accPar);
+   });
+   $("#emergency").change(function(){
+    var emergency = "emergency";
+    checkIfChecked(emergency);
+   });
+   $("#sust").change(function(){
+    var sust = "sust";
+    checkIfChecked(sust);
+   });
+   $("#gender").change(function(){
+    var gender = "gender";
+    checkIfChecked(gender);
+   });
+
 
  $("#selectAllOne").change(function(){
    var buildings = "buildings";
@@ -6726,6 +6759,8 @@ function initMap() {
             triggerUncheck(dining);
             triggerUncheck(stuR);
 
+            closeAllBuildings();
+
           } else {
             triggerCheck(accaF);
             triggerCheck(ath);
@@ -6737,123 +6772,11 @@ function initMap() {
 
           }
   
-      });
+});
 
-      
-        // //set and remove building markers
-        // $("#buildingsLabel").click(function(){
-        //     var checkBuilding = !$("#buildings").prop("checked");
-        //     if (checkBuilding === false){
-        //         setBuilding();
-        //     } else if (checkBuilding === true ){
-        //         removeBuilding();
-        //     }
-        // });
-        // //closes all building hover cards
-        // $("#buildings").click(function(){
-        //   var check = !$("#buildings").prop("checked");
-        //   // when closing a filter
-        //   if(check === true){
-        //      closeAllBuildings();
-        //   }
-        // });
+        
 
-        // on click function for setting and removing markers
-        $("#parkingLabel").click(function(){
-            var checkParking = !$("#parking").prop("checked");
-            if (checkParking === false){
-                setParkingLots();
-            } else if (checkParking === true){
-                removeParkingLots();
-            }
-        });
-        $("#parking").click(function(){
-          var check = !$("#parking").prop("checked");
-          // when closing a filter
-          if(check === true){
-             closeAllParking();
-          }
-        });
-
-        // on click function for accessible entries
-        $("#accEntLabel").click(function(){
-            var checkAccEnt = !$("#accEnt").prop("checked");
-            if (checkAccEnt === false){
-                setAccEnt();
-            } else if (checkAccEnt === true){
-                removeAccEnt();
-            }
-        });
-        $("#accEnt").click(function(){
-          var check = !$("#accEnt").prop("checked");
-          // when closing a filter
-          if(check === true){
-            closeAllAccEnt();
-          }
-        });
-
-        // on click function for accessible parking markers
-        $("#accParLabel").click(function(){
-            var checkAccPar = !$("#accPar").prop("checked");
-            if (checkAccPar  === false){
-                setAccPar();
-            } else if (checkAccPar  === true){
-                removeAccPar();
-            }
-        });
-        $("#accPar").click(function(){
-          var check = !$("#accPar").prop("checked");
-          // when closing a filter
-          if(check === true){
-             closeAllAccPark();
-          }
-        });
-
-
-        // on click function for setting emergency phone markers
-        $("#emergencyLabel").click(function(){
-            var checkEmergency = !$("#emergency").prop("checked");
-            if (checkEmergency === false){
-                setEmergencyPhones();
-            } else if (checkEmergency === true){
-                removeEmergencyPhones();
-            }
-        });
-
-
-        // on click function for sustainability
-        $("#sustLabel").click(function(){
-            var checkSust = !$("#sust").prop("checked");
-            if (checkSust === false){
-                setSust();
-            } else if (checkSust === true){
-                removeSust();
-            }
-        });
-        $("#sust").click(function(){
-          var check = !$("#sust").prop("checked");
-          // when closing a filter
-          if(check === true){
-             closeAllSust();
-          }
-        });
-
-        // on click function for gender markers
-        $("#genderLabel").click(function(){
-            var checkGender = !$("#gender").prop("checked");
-            if (checkGender === false){
-                setGender();
-            } else if (checkGender === true){
-                removeGender();
-            }
-        });
-        $("#gender").click(function(){
-          var check = !$("#gender").prop("checked");
-          // when closing a filter
-          if(check === true){
-           closeAllGender();
-          }
-        });
+        
 
         $("#selectAllOne").click(function(){
           var check = !$("#selectAllOne").prop("checked");
@@ -6986,6 +6909,49 @@ function initMap() {
         });
 
 
+        // // on click function for selecting the first select all checkbox
+        // // and setting/removing all markers
+        // $("#selectallcheck").click(function(){
+        //     var checkSelect = !$("#selectallcheck").prop("checked");
+        //     if (checkSelect === false){
+        //         setBuilding();
+        //         setParkingLots();
+        //         setAccEnt();
+        //         setAccPar();
+        //         setEmergencyPhones();
+        //         setSust();
+        //         setGender();
+        //     } else if (checkSelect === true){
+        //         removeBuilding();
+        //         removeParkingLots();
+        //         removeAccEnt();
+        //         removeAccPar();
+        //         removeEmergencyPhones();
+        //         removeSust();
+        //         removeGender();
+        //     }
+        // });
+        // categories select all, setting all/removing all markers
+        $("#selectallcheck2").click(function(){
+            var checkSelect = !$("#selectallcheck2").prop("checked");
+            if (checkSelect === false){
+                setAccaF();
+                setAth();
+                setAccaS();
+                setCampS();
+                setResH();
+                setDining();
+                setStuR();
+            } else if (checkSelect === true){
+                removeAccaF();
+                removeAth();
+                removeAccaS();
+                removeCampS();
+                removeResH();
+                removeDining();
+                removeStuR();
+            }
+});
 
 
 
