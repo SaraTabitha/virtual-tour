@@ -118,6 +118,7 @@ $( "#searchInput" ).keyup(function() {
         // });
         function clickResults(id){
           // debugger;
+          // console.log(id);
             $("#"+ id + "Result").click(function(){
               closeAllPopup();
               if(id ==  "albeehall"){
@@ -159,7 +160,7 @@ $( "#searchInput" ).keyup(function() {
               } else if (id == "fletcherhall"){
                 $("#fletcherLink").trigger("click");
               } else if (id == "fredricmarchtheater"){
-                $("#fredericLink").trigger("click");
+                $("#fredricLink").trigger("click");
               } else if (id == "gruenhagenconferencecenter"){
                 $("#gruenhagenLink").trigger("click");
               } else if (id == "halseysciencecenter"){

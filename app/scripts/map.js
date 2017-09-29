@@ -528,9 +528,7 @@ function initMap() {
             $("#albeeAboutImage").css('display', "none");
             $("#albeeAboutText").css('display', "none");
             $("#albeeSustainability").css('display', "none");
-            $('#albeeAboutTour').attr('src',"");
             
-
             $("#albeeTourVideo").css('display', "initial");
             $("#albeeTourText").css('display', "initial");
         });
@@ -598,6 +596,7 @@ function initMap() {
         $("#alumniLink").click(function(){
             $('#overlay').css('visibility', 'visible');
             $('#overlay').animate({"opacity": "0.3"}, "slow");
+            $("#alumniAboutImage > img").attr("src", "images/campuspictures/awcc-buildingFull.jpg");
 
             $("#alumniPopup").css('visibility', 'visible');
             $('#alumniPopup').animate({"opacity": "1"}, "slow");
@@ -647,6 +646,7 @@ function initMap() {
         $("#acLink").click(function(){
             $('#overlay').css('visibility', 'visible');
             $('#overlay').animate({"opacity": "0.3"}, "slow");
+            $("#acAboutImage > img").attr("src","images/campuspictures/artscommunicationsFull.jpeg");
 
             $("#acPopup").css('visibility', 'visible');
             $('#acPopup').animate({"opacity": "1"}, "slow");
@@ -696,6 +696,7 @@ function initMap() {
         $("#athleticLink").click(function(){
             $('#overlay').css('visibility', 'visible');
             $('#overlay').animate({"opacity": "0.3"}, "slow");
+            $("#athleticAboutText > img").attr("src", "images/campuspictures/athleticserviceFull.jpeg");
 
             $("#athleticPopup").css('visibility', 'visible');
             $('#athleticPopup').animate({"opacity": "1"}, "slow");
@@ -730,6 +731,7 @@ function initMap() {
         $("#blackhawkLink").click(function(){
             $('#overlay').css('visibility', 'visible');
             $('#overlay').animate({"opacity": "0.3"}, "slow");
+            $("#blackhawkAboutImage > img").attr("src", "images/campuspictures/blackhawkFull.jpeg");
 
             $("#blackhawkPopup").css('visibility', 'visible');
             $('#blackhawkPopup').animate({"opacity": "1"}, "slow");
@@ -776,6 +778,7 @@ function initMap() {
             $("#blackhawkAboutText").css('display', "none");
             $("#blackhawkSustainability").css('display', "none");
             $("#blackhawkBathrooms").css('display', "none");
+            $("#blackhawkDiningImage > img").attr("src", "images/campuspictures/blackhawkGif.gif");
 
             $("#blackhawkDiningImage").css('display', "block");
             $("#blackhawkDiningText").css('display', "initial");
@@ -803,6 +806,7 @@ function initMap() {
         $("#biodigesterLink").click(function(){
             $('#overlay').css('visibility', 'visible');
             $('#overlay').animate({"opacity": "0.3"}, "slow");
+            $("#biodigesterAboutText > div > img").attr("src", "images/campuspictures/biodigesterFull.jpg");
 
             $("#biodigesterPopup").css('visibility', 'visible');
             $('#biodigesterPopup').animate({"opacity": "1"}, "slow");
@@ -837,6 +841,7 @@ function initMap() {
         $("#buckstaffLink").click(function(){
             $('#overlay').css('visibility', 'visible');
             $('#overlay').animate({"opacity": "0.3"}, "slow");
+            $("#buckstaffAboutText > div.imagePopup > img").attr("src", "images/campuspictures/buckstaffFull.jpeg");
 
             $("#buckstaffPopup").css('visibility', 'visible');
             $('#buckstaffPopup').animate({"opacity": "1"}, "slow");
@@ -872,6 +877,7 @@ function initMap() {
         $("#equityLink").click(function(){
             $('#overlay').css('visibility', 'visible');
             $('#overlay').animate({"opacity": "0.3"}, "slow");
+            $("#equityAboutImage > img").attr("src", "images/campuspictures/centerforequityFull.jpeg");
 
             $("#equityPopup").css('visibility', 'visible');
             $('#equityPopup').animate({"opacity": "1"}, "slow");
@@ -920,6 +926,7 @@ function initMap() {
         $("#campusLink").click(function(){
             $('#overlay').css('visibility', 'visible');
             $('#overlay').animate({"opacity": "0.3"}, "slow");
+            $("#campusAboutImage > img").attr("src", "images/campuspictures/campus-servicesFull.jpg");
 
             $("#campusPopup").css('visibility', 'visible');
             $('#campusPopup').animate({"opacity": "1"}, "slow");
@@ -955,6 +962,7 @@ function initMap() {
         $("#ceramicsLink").click(function(){
             $('#overlay').css('visibility', 'visible');
             $('#overlay').animate({"opacity": "0.3"}, "slow");
+            $("#ceramicsAboutImage > img").attr("src", "images/campuspictures/ceramicslabFull.jpeg");
 
             $("#ceramicsPopup").css('visibility', 'visible');
             $('#ceramicsPopup').animate({"opacity": "1"}, "slow");
@@ -990,6 +998,7 @@ function initMap() {
         $("#clowLink").click(function(){
             $('#overlay').css('visibility', 'visible');
             $('#overlay').animate({"opacity": "0.3"}, "slow");
+            $("#clowAboutImage > img").attr("src", "images/campuspictures/clowFull.jpeg");
 
             $("#clowPopup").css('visibility', 'visible');
             $('#clowPopup').animate({"opacity": "1"}, "slow");
@@ -1014,6 +1023,7 @@ function initMap() {
         $("#clowDiningLi").click(function(){
             $("#clowAboutImage").css('display', "none");
             $("#clowAboutText").css('display', "none");
+            $("#clowDiningImage > img").attr("src", "images/campuspictures/clowGif.gif");
 
             $("#clowDiningImage").css('display', "block");
             $("#clowDiningText").css('display', "initial");
@@ -1042,6 +1052,7 @@ function initMap() {
         $("#gardensLink").click(function(){
             $('#overlay').css('visibility', 'visible');
             $('#overlay').animate({"opacity": "0.3"}, "slow");
+            $("#gardensAboutImage > img").attr("src", "images/campuspictures/community-gardensFull.jpg");
 
             $("#gardensPopup").css('visibility', 'visible');
             $('#gardensPopup').animate({"opacity": "1"}, "slow");
@@ -1078,6 +1089,7 @@ function initMap() {
         $("#dempseyLink").click(function(){
             $('#overlay').css('visibility', 'visible');
             $('#overlay').animate({"opacity": "0.3"}, "slow");
+            $("#dempseyAboutImage > img").attr("src", "images/campuspictures/dempseyFull.jpeg");
 
             $("#dempseyPopup").css('visibility', 'visible');
             $('#dempseyPopup').animate({"opacity": "1"}, "slow");
@@ -1127,6 +1139,7 @@ function initMap() {
         $("#donnerLink").click(function(){
             $('#overlay').css('visibility', 'visible');
             $('#overlay').animate({"opacity": "0.3"}, "slow");
+            $("#donnerAboutImage > img").attr("src", "images/campuspictures/donnerFull.jpeg");
 
             $("#donnerPopup").css('visibility', 'visible');
             $('#donnerPopup').animate({"opacity": "1"}, "slow");
@@ -1162,6 +1175,7 @@ function initMap() {
         $("#eastLink").click(function(){
             $('#overlay').css('visibility', 'visible');
             $('#overlay').animate({"opacity": "0.3"}, "slow");
+            $("#eastAboutImage > img").attr("src", "images/campuspictures/easthallFull.jpg");
 
             $("#eastPopup").css('visibility', 'visible');
             $('#eastPopup').animate({"opacity": "1"}, "slow");
@@ -1197,6 +1211,7 @@ function initMap() {
         $("#environmentalLink").click(function(){
             $('#overlay').css('visibility', 'visible');
             $('#overlay').animate({"opacity": "0.3"}, "slow");
+            $("#environmentalAboutImage > img").attr("src", "images/campuspictures/aquaticstudiescenterFull.jpeg");
 
             $("#environmentalPopup").css('visibility', 'visible');
             $('#environmentalPopup').animate({"opacity": "1"}, "slow");
@@ -1232,6 +1247,7 @@ function initMap() {
         $("#evansLink").click(function(){
             $('#overlay').css('visibility', 'visible');
             $('#overlay').animate({"opacity": "0.3"}, "slow");
+            $("#evansAboutImage > img").attr("src", "images/campuspictures/evansFull.jpeg");
 
             $("#evansPopup").css('visibility', 'visible');
             $('#evansPopup').animate({"opacity": "1"}, "slow");
@@ -1267,6 +1283,7 @@ function initMap() {
         $("#fletcherLink").click(function(){
             $('#overlay').css('visibility', 'visible');
             $('#overlay').animate({"opacity": "0.3"}, "slow");
+            $("#fletcherAboutImage > img").attr("src", "images/campuspictures/fletcherFull.jpeg");
 
             $("#fletcherPopup").css('visibility', 'visible');
             $('#fletcherPopup').animate({"opacity": "1"}, "slow");
@@ -1302,6 +1319,7 @@ function initMap() {
         $("#fredricLink").click(function(){
             $('#overlay').css('visibility', 'visible');
             $('#overlay').animate({"opacity": "0.3"}, "slow");
+            $("#fredricAboutImage > img").attr("src", "images/campuspictures/fredricmarchFull.jpeg");
 
             $("#fredricPopup").css('visibility', 'visible');
             $('#fredricPopup').animate({"opacity": "1"}, "slow");
@@ -1341,6 +1359,7 @@ function initMap() {
         $("#gruenhagenLink").click(function(){
             $('#overlay').css('visibility', 'visible');
             $('#overlay').animate({"opacity": "0.3"}, "slow");
+            $("#gruenhagenAboutImage > img").attr("src", "images/campuspictures/gruenhagenFull.jpeg");
 
             $("#gruenhagenPopup").css('visibility', 'visible');
             $('#gruenhagenPopup').animate({"opacity": "1"}, "slow");
@@ -1377,6 +1396,7 @@ function initMap() {
         $("#halseyLink").click(function(){
             $('#overlay').css('visibility', 'visible');
             $('#overlay').animate({"opacity": "0.3"}, "slow");
+            $("#halseyAboutImage > img").attr("src", "images/campuspictures/halseyFull.jpeg");
 
             $("#halseyPopup").css('visibility', 'visible');
             $('#halseyPopup').animate({"opacity": "1"}, "slow");
@@ -1411,6 +1431,7 @@ function initMap() {
             $("#halseyAboutImage").css('display', "none");
             $("#halseyAboutText").css('display', "none");
             $("#halseyBathrooms").css('display', "none");
+            $("#halseyDiningImage > img").attr("src", "images/campuspictures/halseyGif.gif");
 
             $("#halseyDiningImage").css('display', "block");
             $("#halseyDiningText").css('display', "initial");
@@ -1441,6 +1462,7 @@ function initMap() {
         $("#harringtonLink").click(function(){
             $('#overlay').css('visibility', 'visible');
             $('#overlay').animate({"opacity": "0.3"}, "slow");
+            $("#harringtonAboutImage > img").attr("src", "images/campuspictures/harringtonFull.jpeg");
 
             $("#harringtonPopup").css('visibility', 'visible');
             $('#harringtonPopup').animate({"opacity": "1"}, "slow");
@@ -1490,6 +1512,7 @@ function initMap() {
         $("#heatingLink").click(function(){
             $('#overlay').css('visibility', 'visible');
             $('#overlay').animate({"opacity": "0.3"}, "slow");
+            $("#heatingAboutImage > img").attr("src", "images/campuspictures/heatingplantFull.jpeg");
 
             $("#heatingPopup").css('visibility', 'visible');
             $('#heatingPopup').animate({"opacity": "1"}, "slow");
@@ -1540,6 +1563,7 @@ function initMap() {
         $("#parkingRampLink").click(function(){
             $('#overlay').css('visibility', 'visible');
             $('#overlay').animate({"opacity": "0.3"}, "slow");
+            $("#parkingAboutImage > img").attr("src", "images/campuspictures/parkingrampFull.jpeg");
 
             $("#parkingRampPopup").css('visibility', 'visible');
             $('#parkingRampPopup').animate({"opacity": "1"}, "slow");
@@ -1564,6 +1588,7 @@ function initMap() {
         $("#parkingParkingLi").click(function(){
             $("#parkingAboutImage").css('display', "none");
             $("#parkingAboutText").css('display', "none");
+            $("#parkingRampParkingImage> img").attr("src", "images/campuspictures/parkingRamp.png");
 
             $("#parkingRampParkingImage").css('display', "initial");
             $("#parkingRampParkingText").css('display', "initial");
@@ -1591,6 +1616,7 @@ function initMap() {
         $("#horizonLink").click(function(){
             $('#overlay').css('visibility', 'visible');
             $('#overlay').animate({"opacity": "0.3"}, "slow");
+            $("#horizonAboutImage > img").attr("src", "images/campuspictures/horizonFull.jpeg");
 
             $("#horizonPopup").css('visibility', 'visible');
             $('#horizonPopup').animate({"opacity": "1"}, "slow");
@@ -1639,6 +1665,7 @@ function initMap() {
         $("#kolfLink").click(function(){
             $('#overlay').css('visibility', 'visible');
             $('#overlay').animate({"opacity": "0.3"}, "slow");
+            $("#kolfAboutImage > img").attr("src", "images/campuspictures/kolfFull.jpeg");
 
             $("#kolfPopup").css('visibility', 'visible');
             $('#kolfPopup').animate({"opacity": "1"}, "slow");
@@ -1687,6 +1714,7 @@ function initMap() {
         $("#lincolnLink").click(function(){
             $('#overlay').css('visibility', 'visible');
             $('#overlay').animate({"opacity": "0.3"}, "slow");
+            $("#lincolnAboutImage > img").attr("src", "images/campuspictures/lincoln-hallFull.jpg");
 
             $("#lincolnPopup").css('visibility', 'visible');
             $('#lincolnPopup').animate({"opacity": "1"}, "slow");
@@ -1721,6 +1749,7 @@ function initMap() {
         $("#multiculturalLink").click(function(){
             $('#overlay').css('visibility', 'visible');
             $('#overlay').animate({"opacity": "0.3"}, "slow");
+            $("#multiculturalAboutImage > img").attr("src", "images/campuspictures/multiculturaleducationFull.jpeg");
 
             $("#multiculturalPopup").css('visibility', 'visible');
             $('#multiculturalPopup').animate({"opacity": "1"}, "slow");
@@ -1755,6 +1784,7 @@ function initMap() {
         $("#nursingLink").click(function(){
             $('#overlay').css('visibility', 'visible');
             $('#overlay').animate({"opacity": "0.3"}, "slow");
+            $("#nursingAboutImage > img").attr("src", "images/campuspictures/nursingeducationFull.jpeg");
 
             $("#nursingPopup").css('visibility', 'visible');
             $('#nursingPopup').animate({"opacity": "1"}, "slow");
@@ -1804,6 +1834,7 @@ function initMap() {
         $("#oviattLink").click(function(){
             $('#overlay').css('visibility', 'visible');
             $('#overlay').animate({"opacity": "0.3"}, "slow");
+            $("#oviattAboutImage > img").attr("src", "images/campuspictures/oviattFull.jpeg");
 
             $("#oviattPopup").css('visibility', 'visible');
             $('#oviattPopup').animate({"opacity": "1"}, "slow");
@@ -1838,6 +1869,7 @@ function initMap() {
         $("#pollockLink").click(function(){
             $('#overlay').css('visibility', 'visible');
             $('#overlay').animate({"opacity": "0.3"}, "slow");
+            $("#pollockAboutImage > img").attr("src", "images/campuspictures/pollockFull.jpeg");
 
             $("#pollockPopup").css('visibility', 'visible');
             $('#pollockPopup').animate({"opacity": "1"}, "slow");
@@ -1874,6 +1906,7 @@ function initMap() {
             $('#overlay').css('visibility', 'visible');
             $('#overlay').animate({"opacity": "0.3"}, "slow");
             $('#polkiframe').attr('src',"https://www.youtube.com/embed/iHPdc89AD_c");
+            $("#polkAboutImage > img").attr("src", "images/campuspictures/polkFull.jpeg");
 
             $("#polkPopup").css('visibility', 'visible');
             $('#polkPopup').animate({"opacity": "1"}, "slow");
@@ -1926,6 +1959,7 @@ function initMap() {
         $("#radfordLink").click(function(){
             $('#overlay').css('visibility', 'visible');
             $('#overlay').animate({"opacity": "0.3"}, "slow");
+            $("#radfordAboutImage > img").attr("src", "images/campuspictures/radfordFull.jpeg");
 
             $("#radfordPopup").css('visibility', 'visible');
             $('#radfordPopup').animate({"opacity": "1"}, "slow");
@@ -1962,6 +1996,7 @@ function initMap() {
             $('#overlay').css('visibility', 'visible');
             $('#overlay').animate({"opacity": "0.3"}, "slow");
             $('#reeveiframe').attr('src',"https://www.youtube.com/embed/QAtW972K3cQ");
+            $("#reeveAboutImage > img").attr("src", "images/campuspictures/reeveFull.jpeg");
 
             $("#reevePopup").css('visibility', 'visible');
             $('#reevePopup').animate({"opacity": "1"}, "slow");
@@ -2027,6 +2062,7 @@ function initMap() {
             $("#reeveTourText").css('display', "none");
             $("#reeveSustainability").css('display', "none");
             $("#reeveBathrooms").css('display', "none");
+            $("#reeveDiningImage > img").attr("src", "images/campuspictures/reeveGif.gif");
 
             $("#reeveDiningImage").css('display', "block");
             $("#reeveDiningText").css('display', "initial");
@@ -2056,6 +2092,7 @@ function initMap() {
             $('#overlay').css('visibility', 'visible');
             $('#overlay').animate({"opacity": "0.3"}, "slow");
             $('#sageiframe').attr('src',"https://www.youtube.com/embed/DVRbh2fCCZ0");
+            $("#sageAboutImage > img").attr("src", "images/campuspictures/sageFull.jpeg");
 
             $("#sagePopup").css('visibility', 'visible');
             $('#sagePopup').animate({"opacity": "1"}, "slow");
@@ -2121,6 +2158,7 @@ function initMap() {
             $("#sageTourText").css('display', "none");
             $("#sageSustainability").css('display', "none");
             $("#sageBathrooms").css('display', "none");
+            $("#sageDiningImage > img").attr("src", "images/campuspictures/sageGif.gif");
 
             $("#sageDiningImage").css('display', "block");
             $("#sageDiningText").css('display', "initial");
@@ -2148,7 +2186,7 @@ function initMap() {
         $("#scottLink").click(function(){
             $('#overlay').css('visibility', 'visible');
             $('#overlay').animate({"opacity": "0.3"}, "slow");
-
+            $("#scottAboutImage > img").attr("src", "images/campuspictures/scottFull.jpeg");
 
             $("#scottPopup").css('visibility', 'visible');
             $('#scottPopup').animate({"opacity": "1"}, "slow");
@@ -2172,6 +2210,7 @@ function initMap() {
         $("#scottDiningLi").click(function(){
             $("#scottAboutImage").css('display', "none");
             $("#scottAboutText").css('display', "none");
+            $("#scottDiningImage > img").attr("src", "images/campuspictures/scottGif.gif");
 
             $("#scottDiningImage").css('display', "block");
             $("#scottDiningText").css('display', "initial");
@@ -2199,6 +2238,7 @@ function initMap() {
         $("#stewartLink").click(function(){
             $('#overlay').css('visibility', 'visible');
             $('#overlay').animate({"opacity": "0.3"}, "slow");
+            $("#stewartAboutImage > img").attr("src", "images/campuspictures/stewartFull.jpeg");
 
             $("#stewartPopup").css('visibility', 'visible');
             $('#stewartPopup').animate({"opacity": "1"}, "slow");
@@ -2235,6 +2275,7 @@ function initMap() {
         $("#recreationLink").click(function(){
             $('#overlay').css('visibility', 'visible');
             $('#overlay').animate({"opacity": "0.3"}, "slow");
+            $("#recreationAboutImage > img").attr("src", "images/campuspictures/srwcFull.jpeg");
 
             $("#recreationPopup").css('visibility', 'visible');
             $('#recreationPopup').animate({"opacity": "1"}, "slow");
@@ -2294,6 +2335,7 @@ function initMap() {
             $('#overlay').css('visibility', 'visible');
             $('#overlay').animate({"opacity": "0.3"}, "slow");
             $('#successiframe').attr('src',"https://www.youtube.com/embed/NjZjuqM7SBg");
+            $("#successAboutImage > img").attr("src", "images/campuspictures/studentsuccessFull.jpeg");
 
             $("#successPopup").css('visibility', 'visible');
             $('#successPopup').animate({"opacity": "1"}, "slow");
@@ -2367,6 +2409,7 @@ function initMap() {
         $("#swartLink").click(function(){
             $('#overlay').css('visibility', 'visible');
             $('#overlay').animate({"opacity": "0.3"}, "slow");
+            $("#swartAboutImage > img").attr("src", "images/campuspictures/swartFull.jpeg");
 
             $("#swartPopup").css('visibility', 'visible');
             $('#swartPopup').animate({"opacity": "1"}, "slow");
@@ -2415,6 +2458,7 @@ function initMap() {
         $("#taylorLink").click(function(){
             $('#overlay').css('visibility', 'visible');
             $('#overlay').animate({"opacity": "0.3"}, "slow");
+            $("#taylorAboutImage > img").attr("src", "images/campuspictures/taylorFull.jpeg");
 
             $("#taylorPopup").css('visibility', 'visible');
             $('#taylorPopup').animate({"opacity": "1"}, "slow");
@@ -2463,6 +2507,7 @@ function initMap() {
         $("#titanLink").click(function(){
             $('#overlay').css('visibility', 'visible');
             $('#overlay').animate({"opacity": "0.3"}, "slow");
+            $("#titanAboutImage > img").attr("src", "images/campuspictures/titanstadiumFull.jpeg");
 
             $("#titanPopup").css('visibility', 'visible');
             $('#titanPopup').animate({"opacity": "1"}, "slow");
@@ -2512,6 +2557,7 @@ function initMap() {
         $("#policeLink").click(function(){
             $('#overlay').css('visibility', 'visible');
             $('#overlay').animate({"opacity": "0.3"}, "slow");
+            $("#policeAboutImage > img").attr("src", "images/campuspictures/universitypoliceFull.jpeg");
 
             $("#policePopup").css('visibility', 'visible');
             $('#policePopup').animate({"opacity": "1"}, "slow");
@@ -2561,6 +2607,7 @@ function initMap() {
         $("#websterLink").click(function(){
             $('#overlay').css('visibility', 'visible');
             $('#overlay').animate({"opacity": "0.3"}, "slow");
+            $("#websterAboutImage > img").attr("src", "images/campuspictures/websterFull.jpeg");
 
             $("#websterPopup").css('visibility', 'visible');
             $('#websterPopup').animate({"opacity": "1"}, "slow");
