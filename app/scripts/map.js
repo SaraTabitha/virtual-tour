@@ -6230,10 +6230,6 @@ function initMap() {
             recreationStuRMarker.setMap(null);
         }
         
-
-        
-
-
         // close all buildings
         function closeAllBuildings(){
           albeeHoverCard.close(map, albeeMarker);
@@ -6568,10 +6564,6 @@ function initMap() {
         }
 
 
-
-
-
-
     
     //functions for checkboxes
     // naming conventions for checkboxes: ex. "buildingsLabel" "name + Label" is the element that has the class "is-checked" is added to
@@ -6621,6 +6613,27 @@ function initMap() {
         }
         else if (name === "gender"){
             setGender();
+        }
+        else if (name === "accaF"){
+            setAccaF();
+        }
+        else if (name === "ath"){
+            setAth();
+        }
+        else if (name === "accS"){
+            setAccaS();
+        }
+        else if (name === "campS"){
+            setCampS();
+        }
+        else if (name === "resH"){
+            setResH();
+        }
+        else if (name === "dining"){
+            setDining();
+        }
+        else if (name === "stuR"){
+            setStuR();
         }
     }
     //checks if name corresponds with specific ids and sets the buildings & their markers accordingly
@@ -6675,6 +6688,34 @@ function initMap() {
             removeGender();
             
         }
+        else if (name === "accaF"){
+            closeAllAccaF();
+            removeAccaF();
+        }
+        else if (name === "ath"){
+            closeAllAth();
+            removeAth();
+        }
+        else if (name === "accS"){
+            closeAllAccaS();
+            removeAccaS();
+        }
+        else if (name === "campS"){
+            closeAllCampS();
+            removeCampS();
+        }
+        else if (name === "resH"){
+            closeAllResH();
+            removeResH();
+        }
+        else if (name === "dining"){
+            closeAllDining();
+            removeDining();
+        }
+        else if (name === "stuR"){
+            closeAllStuR();
+            removeStuR();
+        }
         
     }
     // watches for change event on checkbox, checks if it has class is-checked and then sets the markers and hover cards accordingly
@@ -6724,6 +6765,34 @@ function initMap() {
         var gender = "gender";
         checkIfChecked(gender);
    });
+   $("#accaF").change(function(){
+    var accaF = "accaF";
+    checkIfChecked(accaF);
+    });
+    $("#ath").change(function(){
+        var ath= "ath";
+        checkIfChecked(ath);
+     });
+     $("#accS").change(function(){
+        var accS = "accS";
+        checkIfChecked(accS);
+     });
+     $("#campS").change(function(){
+        var campS = "campS";
+        checkIfChecked(campS);
+     });
+     $("#resH").change(function(){
+        var resH = "resH";
+        checkIfChecked(resH);
+     });
+     $("#dining").change(function(){
+        var dining = "dining";
+        checkIfChecked(dining);
+     });
+     $("#stuR").change(function(){
+        var stuR = "stuR";
+        checkIfChecked(stuR);
+     });
 
 
  $("#selectAllOne").change(function(){
@@ -6737,12 +6806,10 @@ function initMap() {
 
        if( !$("#selectAllOne").hasClass("is-checked") ){
          //if select all is unchecked, all others should be unchecked
-
         //  uncheck: unchecks checkbox and removes markers and hover cards
         
         // HAS TO COME BEFORE UNCHECK IS TRIGGERED
          closeAllHover();
-
 
          triggerUncheck(buildings);
          triggerUncheck(parking);
@@ -6751,16 +6818,9 @@ function initMap() {
          triggerUncheck(emergency);
          triggerUncheck(sust);
          triggerUncheck(gender);
-
-         
-         
-         
        }else{
          //if selectall is checked, all others should be checked
-
         //  check: checks checkbox and sets markers 
-        
-
          triggerCheck(buildings);
          triggerCheck(parking);
          triggerCheck(accEnt);
@@ -6782,6 +6842,8 @@ function initMap() {
           var stuR = "stuR";
 
           if( !$("#selectAllTwo").hasClass("is-checked") ){
+              // HAS TO COME BEFORE UNCHECK IS TRIGGERED
+             closeAllHover();
             triggerUncheck(accaF);
             triggerUncheck(ath);
             triggerUncheck(accS);
@@ -6789,9 +6851,6 @@ function initMap() {
             triggerUncheck(resH);
             triggerUncheck(dining);
             triggerUncheck(stuR);
-
-            closeAllHover();
-
           } else {
             triggerCheck(accaF);
             triggerCheck(ath);
@@ -6804,175 +6863,6 @@ function initMap() {
           }
   
     });
-
-
-
-        $("#accaFLabel").click(function(){
-            var checkAccF = !$("#accaF").prop("checked");
-            if (checkAccF === false){
-                setAccaF();
-            } else if (checkAccF === true){
-                removeAccaF();
-            }
-        });
-        $("#accaF").click(function(){
-          var check = !$("#accaF").prop("checked");
-          // when closing a filter
-          if(check === true){
-            closeAllAccaF();
-          }
-        });
-
-
-        $("#athLabel").click(function(){
-            var checkAth = !$("#ath").prop("checked");
-            if (checkAth === false){
-                setAth();
-            } else if (checkAth === true){
-                removeAth();
-            }
-        });
-        $("#ath").click(function(){
-          var check = !$("#ath").prop("checked");
-          // when closing a filter
-          if(check === true){
-            closeAllAth();
-          }
-        });
-
-        $("#accSLabel").click(function(){
-            var checkAccS = !$("#accS").prop("checked");
-            if (checkAccS === false){
-                setAccaS();
-            } else if (checkAccS === true){
-                removeAccaS();
-            }
-        });
-        $("#accS").click(function(){
-          var check = !$("#accS").prop("checked");
-          // when closing a filter
-          if(check === true){
-            closeAllAccaS();
-          }
-        });
-
-        $("#campSLabel").click(function(){
-            var checkCampS = !$("#campS").prop("checked");
-            if (checkCampS === false){
-                setCampS();
-            } else if (checkCampS === true){
-                removeCampS();
-            }
-        });
-        $("#campS").click(function(){
-          var check = !$("#campS").prop("checked");
-          // when closing a filter
-          if(check === true){
-            closeAllCampS();
-          }
-        });
-
-        $("#resHLabel").click(function(){
-            var checkResH = !$("#resH").prop("checked");
-            if (checkResH === false){
-                setResH();
-            } else if (checkResH === true){
-                removeResH();
-            }
-        });
-        $("#resH").click(function(){
-          var check = !$("#resH").prop("checked");
-          // when closing a filter
-          if(check === true){
-            closeAllResH();
-          }
-        });
-
-        $("#diningLabel").click(function(){
-            var checkDining = !$("#dining").prop("checked");
-            if (checkDining === false){
-                setDining();
-            } else if (checkDining === true){
-                removeDining();
-            }
-        });
-        $("#dining").click(function(){
-          var check = !$("#dining").prop("checked");
-          // when closing a filter
-          if(check === true){
-            closeAllDining();
-          }
-        });
-
-        $("#stuRLabel").click(function(){
-            var checkStuR = !$("#stuR").prop("checked");
-            if (checkStuR === false){
-                setStuR();
-            } else if (checkStuR === true){
-                removeStuR();
-            }
-        });
-        $("#stuR").click(function(){
-          var check = !$("#stuR").prop("checked");
-          // when closing a filter
-          if(check === true){
-            closeAllStuR();
-          }
-        });
-
-        $("#selectAllTwo").click(function(){
-          var check = !$("#selectAllTwo").prop("checked");
-          // when closing a filter
-          if(check === true){
-            closeAllBuildings();
-          }
-        });
-
-
-        // // on click function for selecting the first select all checkbox
-        // // and setting/removing all markers
-        // $("#selectallcheck").click(function(){
-        //     var checkSelect = !$("#selectallcheck").prop("checked");
-        //     if (checkSelect === false){
-        //         setBuilding();
-        //         setParkingLots();
-        //         setAccEnt();
-        //         setAccPar();
-        //         setEmergencyPhones();
-        //         setSust();
-        //         setGender();
-        //     } else if (checkSelect === true){
-        //         removeBuilding();
-        //         removeParkingLots();
-        //         removeAccEnt();
-        //         removeAccPar();
-        //         removeEmergencyPhones();
-        //         removeSust();
-        //         removeGender();
-        //     }
-        // });
-        // categories select all, setting all/removing all markers
-        $("#selectallcheck2").click(function(){
-            var checkSelect = !$("#selectallcheck2").prop("checked");
-            if (checkSelect === false){
-                setAccaF();
-                setAth();
-                setAccaS();
-                setCampS();
-                setResH();
-                setDining();
-                setStuR();
-            } else if (checkSelect === true){
-                removeAccaF();
-                removeAth();
-                removeAccaS();
-                removeCampS();
-                removeResH();
-                removeDining();
-                removeStuR();
-            }
-});
-
 
 
 }
