@@ -60,7 +60,17 @@ gulp.task('js', function(){
 
 gulp.task('images', function(){
   return gulp.src('app/images/**/*')
-      .pipe(imagemin())
+      .pipe(imagemin([
+        imagemin.gifsicle({interlaced: true}),
+        imagemin.jpegtran({progressive: true}),
+        imagemin.optipng({optimizationLevel: 5}),
+        imagemin.svgo({
+          plugins: [
+            {removeViewBox: true},
+            {cleanupIDs: false}
+          ]
+        })
+      ]))
       .pipe(gulp.dest('dist/images'));
 });
 
@@ -91,7 +101,7 @@ gulp.task('lib-js', function(){
 });
 
 gulp.task('lib-style', function () {
-  return gulp.src(['app/lib/*.scss', 'app/lib/*.css'])
+  return gulp.src(['app/lib/**/*.scss', 'app/lib/**/*.css'])
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({
       browsers: ['last 2 versions']
