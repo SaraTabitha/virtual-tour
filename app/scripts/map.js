@@ -6281,6 +6281,7 @@ function initMap() {
           titanHoverCard.close(map, titanMarker);
           policeHoverCard.close(map, policeMarker);
           websterHoverCard.close(map, websterMarker);
+          console.log("i should have done my job");
         }
         //close parking lots cards
         function closeAllParking(){
@@ -6564,6 +6565,7 @@ function initMap() {
             womensCenterHoverCard.close(map, womensCenterMarker);
             titanOneHoverCard.close(map, titanOneMarker);
             titanTwoHoverCard.close(map, titanTwoMarker);
+            
         }
 
 
@@ -6588,6 +6590,7 @@ function initMap() {
     // fancy schmancy method Material Design already gives for unchecking le checkbox
   document.getElementById(name + "Label").MaterialCheckbox.uncheck();
   uncheckMarkersandCards(name);
+  
   }
 
 
@@ -6627,20 +6630,20 @@ function initMap() {
             // removes building markers
             removeBuilding();
             // removes hoverpopups (not markers, the white popups after you click markers)
-            closeAllBuildings();
+            // closeAllBuildings();
         } 
         else if (name === "parking"){
             removeParkingLots();
-            closeAllParking();
+            // closeAllParking();
         }
         else if (name === "accEnt"){
             removeAccEnt();
-            closeAllAccEnt();
+            // closeAllAccEnt();
 
         }
         else if (name === "accPar"){
             removeAccPar();
-            closeAllAccPark();
+            // closeAllAccPark();
  
          }
          else if (name === "emergency"){
@@ -6649,12 +6652,13 @@ function initMap() {
          }
          else if (name === "sust"){
             removeSust();
-            closeAllSust();
+            // closeAllSust();
         }
         else if (name === "gender"){
             removeGender();
-            closeAllGender();
+            // closeAllGender();
         }
+        
     }
     // watches for change event on checkbox, checks if it has class is-checked and then sets the markers and hover cards accordingly
     function checkIfChecked(name){
@@ -6684,24 +6688,24 @@ function initMap() {
        checkIfChecked(parking);
    });
    $("#accEnt").change(function(){
-    var accEnt = "accEnt";
-    checkIfChecked(accEnt);
+        var accEnt = "accEnt";
+        checkIfChecked(accEnt);
    });
    $("#accPar").change(function(){
-    var accPar = "accPar";
-    checkIfChecked(accPar);
+        var accPar = "accPar";
+        checkIfChecked(accPar);
    });
    $("#emergency").change(function(){
-    var emergency = "emergency";
-    checkIfChecked(emergency);
+        var emergency = "emergency";
+        checkIfChecked(emergency);
    });
    $("#sust").change(function(){
-    var sust = "sust";
-    checkIfChecked(sust);
+        var sust = "sust";
+        checkIfChecked(sust);
    });
    $("#gender").change(function(){
-    var gender = "gender";
-    checkIfChecked(gender);
+        var gender = "gender";
+        checkIfChecked(gender);
    });
 
 
@@ -6725,6 +6729,8 @@ function initMap() {
          triggerUncheck(emergency);
          triggerUncheck(sust);
          triggerUncheck(gender);
+         
+         closeAllHover();
          
        }else{
          //if selectall is checked, all others should be checked
@@ -6759,7 +6765,7 @@ function initMap() {
             triggerUncheck(dining);
             triggerUncheck(stuR);
 
-            closeAllBuildings();
+            closeAllHover();
 
           } else {
             triggerCheck(accaF);
@@ -6772,19 +6778,8 @@ function initMap() {
 
           }
   
-});
+    });
 
-        
-
-        
-
-        $("#selectAllOne").click(function(){
-          var check = !$("#selectAllOne").prop("checked");
-          // when closing a filter
-          if(check === true){
-            closeAllHover();
-          }
-        });
 
 
         $("#accaFLabel").click(function(){
