@@ -6281,7 +6281,6 @@ function initMap() {
           titanHoverCard.close(map, titanMarker);
           policeHoverCard.close(map, policeMarker);
           websterHoverCard.close(map, websterMarker);
-          console.log("i should have done my job");
         }
         //close parking lots cards
         function closeAllParking(){
@@ -6627,23 +6626,35 @@ function initMap() {
     //checks if name corresponds with specific ids and sets the buildings & their markers accordingly
    function uncheckMarkersandCards(name){
         if (name === "buildings"){
+            // removes hoverpopups (not markers, the white popups after you click markers)
+            // must come before markers are removed
+            closeAllBuildings();
+
             // removes building markers
             removeBuilding();
-            // removes hoverpopups (not markers, the white popups after you click markers)
-            // closeAllBuildings();
+            
         } 
         else if (name === "parking"){
+            // must come before markers are removed
+            closeAllParking();
+
             removeParkingLots();
-            // closeAllParking();
+            
         }
         else if (name === "accEnt"){
+            // must come before markers are removed
+           closeAllAccEnt();
+
             removeAccEnt();
-            // closeAllAccEnt();
+            
 
         }
         else if (name === "accPar"){
+            // must come before markers are removed
+            closeAllAccPark();
+
             removeAccPar();
-            // closeAllAccPark();
+            
  
          }
          else if (name === "emergency"){
@@ -6651,12 +6662,18 @@ function initMap() {
             // emergency phones do not have any hovercards attached to their markers atm
          }
          else if (name === "sust"){
+            // must come before markers are removed
+            closeAllSust();
+
             removeSust();
-            // closeAllSust();
+           
         }
         else if (name === "gender"){
+            // must come before markers are removed
+            closeAllGender();
+
             removeGender();
-            // closeAllGender();
+            
         }
         
     }
@@ -6722,6 +6739,11 @@ function initMap() {
          //if select all is unchecked, all others should be unchecked
 
         //  uncheck: unchecks checkbox and removes markers and hover cards
+        
+        // HAS TO COME BEFORE UNCHECK IS TRIGGERED
+         closeAllHover();
+
+
          triggerUncheck(buildings);
          triggerUncheck(parking);
          triggerUncheck(accEnt);
@@ -6729,13 +6751,16 @@ function initMap() {
          triggerUncheck(emergency);
          triggerUncheck(sust);
          triggerUncheck(gender);
+
          
-         closeAllHover();
+         
          
        }else{
          //if selectall is checked, all others should be checked
 
         //  check: checks checkbox and sets markers 
+        
+
          triggerCheck(buildings);
          triggerCheck(parking);
          triggerCheck(accEnt);
