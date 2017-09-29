@@ -12,7 +12,7 @@ media queries */
 /*.invisible{
   visibility: hidden;
 }*/
-/*!important is <lol>important</lol> to overwrite hidden*/
+/* !important is <lol>important</lol> to overwrite hidden*/
 #menuDrawer{
   z-index: 99;
 }
