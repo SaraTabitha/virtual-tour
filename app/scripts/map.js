@@ -457,38 +457,25 @@ function initMap() {
             content: albeeHover,
         });
 
-
-        //my attempt at making function to replace the ones I've copy/pasted
-        function markerOpen(name){
-          var hoverName = name + "Hover";
-          var check = $("#" + hoverName).hasClass("hoverOpen");
-          if (check === false){
-            closeAllHover();
-            var hoverCard = name + "HoverCard";
-            hoverCard.open(map, albeeMarker);
-            $("#" + hoverName).addClass("hoverOpen");
-          } else if (check === true){
-            $("#" + hoverName).removeClass("hoverOpen");
-            closeAllHover();
-          }
-        }
         // listener, allows user to open and close marker by clicking on it
         // also closes all other markers so that only the clicked marker is open
         // at one time
         // also is the click function for the marker opening any hover popup at all
         // so that's important
+        function albeeMarkerOpenClose(){
+          var check = $("#albeeHover").hasClass("hoverOpen");
+          if (check === false){
+              closeAllHover();
+              albeeHoverCard.open(map, albeeMarker);
+              $("#albeeHover").addClass("hoverOpen");
+              $("#albeeHover > img").attr("src"," images/campuspictures/albeehall.jpeg");
+          } else if (check === true){
+              $("#albeeHover").removeClass("hoverOpen");
+              closeAllHover();
+          }
+        }
         albeeMarker.addListener('click', function(){
-          // var albee = "albee";
-          // markerOpen(albee);
-            var check = $("#albeeHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                albeeHoverCard.open(map, albeeMarker);
-                $("#albeeHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#albeeHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
+            albeeMarkerOpenClose();
         });
 
 
@@ -507,6 +494,9 @@ function initMap() {
         });
         // when x on popup is clicked, close popup
         $("#albeePopupClose").click(function(){
+            // reset src
+            $('#albeeiframe').attr('src',"");
+            $('#albeeAboutImage > img').attr('src',"");
             
             $('#overlay').animate({"opacity": "0"}, "slow");
             $('#overlay').css('visibility', 'hidden');
@@ -545,7 +535,8 @@ function initMap() {
         var baseballHoverCard = new google.maps.InfoWindow({
             content: baseballHover,
         });
-        baseballMarker.addListener('click', function(){
+
+        function baseballMarkerOpenClose(){
             var check = $("#baseballHover").hasClass("hoverOpen");
             if (check === false){
                 closeAllHover();
@@ -555,6 +546,9 @@ function initMap() {
                 $("#baseballHover").removeClass("hoverOpen");
                 closeAllHover();
             }
+        }
+        baseballMarker.addListener('click', function(){
+            baseballMarkerOpenClose();
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
@@ -579,7 +573,7 @@ function initMap() {
         var alumniHoverCard = new google.maps.InfoWindow({
             content: alumniHover,
         });
-        alumniMarker.addListener('click', function(){
+        function alumniMarkerOpenClose(){
             var check = $("#alumniHover").hasClass("hoverOpen");
             if (check === false){
                 closeAllHover();
@@ -589,6 +583,9 @@ function initMap() {
                 $("#alumniHover").removeClass("hoverOpen");
                 closeAllHover();
             }
+        }
+        alumniMarker.addListener('click', function(){
+            alumniMarkerOpenClose();
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
@@ -596,7 +593,7 @@ function initMap() {
         $("#alumniLink").click(function(){
             $('#overlay').css('visibility', 'visible');
             $('#overlay').animate({"opacity": "0.3"}, "slow");
-            $("#alumniAboutImage > img").attr("src", "images/campuspictures/awcc-buildingFull.jpg");
+            
 
             $("#alumniPopup").css('visibility', 'visible');
             $('#alumniPopup').animate({"opacity": "1"}, "slow");
@@ -605,6 +602,7 @@ function initMap() {
         $("#alumniPopupClose").click(function(){
             $('#overlay').animate({"opacity": "0"}, "slow");
             $('#overlay').css('visibility', 'hidden');
+            $("#alumniAboutImage > img").attr("src", "");
 
             $('#alumniPopup').animate({"opacity": "0"}, "slow");
             $("#alumniPopup").css('visibility', 'hidden');
@@ -629,7 +627,7 @@ function initMap() {
         var acHoverCard = new google.maps.InfoWindow({
             content: acHover,
         });
-        acMarker.addListener('click', function(){
+        function acMarkerOpenClose(){
             var check = $("#acHover").hasClass("hoverOpen");
             if (check === false){
                 closeAllHover();
@@ -639,6 +637,9 @@ function initMap() {
                 $("#acHover").removeClass("hoverOpen");
                 closeAllHover();
             }
+        }
+        acMarker.addListener('click', function(){
+            acMarkerOpenClose();
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
@@ -653,6 +654,7 @@ function initMap() {
         });
         // when x on popup is clicked, close popup
         $("#acPopupClose").click(function(){
+            $("#acAboutImage > img").attr("src","");
 
             $('#overlay').animate({"opacity": "0"}, "slow");
             $('#overlay').css('visibility', 'hidden');
@@ -679,7 +681,7 @@ function initMap() {
         var athleticHoverCard = new google.maps.InfoWindow({
             content: athleticHover,
         });
-        athleticMarker.addListener('click', function(){
+        function athleticMarkerOpenClose(){
             var check = $("#athleticHover").hasClass("hoverOpen");
             if (check === false){
                 closeAllHover();
@@ -689,6 +691,9 @@ function initMap() {
                 $("#athleticHover").removeClass("hoverOpen");
                 closeAllHover();
             }
+        }
+        athleticMarker.addListener('click', function(){
+            athleticMarkerOpenClose();
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
@@ -705,6 +710,7 @@ function initMap() {
         $("#athleticPopupClose").click(function(){
             $('#overlay').animate({"opacity": "0"}, "slow");
             $('#overlay').css('visibility', 'hidden');
+            $("#athleticAboutText > img").attr("src", "");
 
             $('#athleticPopup').animate({"opacity": "0"}, "slow");
             $("#athleticPopup").css('visibility', 'hidden');
@@ -714,7 +720,7 @@ function initMap() {
         var blackhawkHoverCard = new google.maps.InfoWindow({
             content: blackhawkHover,
         });
-        blackhawkMarker.addListener('click', function(){
+        function blackhawkMarkerOpenClose(){
             var check = $("#blackhawkHover").hasClass("hoverOpen");
             if (check === false){
                 closeAllHover();
@@ -724,6 +730,9 @@ function initMap() {
                 $("#blackhawkHover").removeClass("hoverOpen");
                 closeAllHover();
             }
+        }
+        blackhawkMarker.addListener('click', function(){
+            blackhawkMarkerOpenClose();
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
@@ -743,6 +752,9 @@ function initMap() {
 
             $('#blackhawkPopup').animate({"opacity": "0"}, "slow");
             $("#blackhawkPopup").css('visibility', 'hidden');
+
+            $("#blackhawkAboutImage > img").attr("src", "");
+            $("#blackhawkDiningImage > img").attr("src", "");
         });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
@@ -789,8 +801,8 @@ function initMap() {
             content: biodigesterHover,
         });
 
-        biodigesterMarker.addListener('click', function(){
-        var check = $("#biodigesterHover").hasClass("hoverOpen");
+        function biodigesterMarkerOpenClose(){
+            var check = $("#biodigesterHover").hasClass("hoverOpen");
             if (check === false){
                 closeAllHover();
                 biodigesterHoverCard.open(map, biodigesterMarker);
@@ -799,6 +811,10 @@ function initMap() {
                 $("#biodigesterHover").removeClass("hoverOpen");
                 closeAllHover();
             }
+        
+        }
+        biodigesterMarker.addListener('click', function(){
+            biodigesterMarkerOpenClose();
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
@@ -818,13 +834,15 @@ function initMap() {
 
             $('#biodigesterPopup').animate({"opacity": "0"}, "slow");
             $("#biodigesterPopup").css('visibility', 'hidden');
+
+            $("#biodigesterAboutText > div > img").attr("src", "");
         });
 
         var buckstaffHover = document.getElementById('buckstaffHover');
         var buckstaffHoverCard = new google.maps.InfoWindow({
             content: buckstaffHover,
         });
-        buckstaffMarker.addListener('click', function(){
+        function buckstaffMarkerOpenClose(){
             var check = $("#buckstaffHover").hasClass("hoverOpen");
             if (check === false){
                 closeAllHover();
@@ -834,6 +852,9 @@ function initMap() {
                 $("#buckstaffHover").removeClass("hoverOpen");
                 closeAllHover();
             }
+        }
+        buckstaffMarker.addListener('click', function(){
+            buckstaffMarkerOpenClose();
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
@@ -853,6 +874,8 @@ function initMap() {
 
             $('#buckstaffPopup').animate({"opacity": "0"}, "slow");
             $("#buckstaffPopup").css('visibility', 'hidden');
+
+            $("#buckstaffAboutText > div.imagePopup > img").attr("src", "");
         });
 
         var equityHover = document.getElementById('equityHover');
@@ -860,7 +883,7 @@ function initMap() {
             content: equityHover,
         });
 
-        equityMarker.addListener('click', function(){
+        function equityMarkerOpenClose(){
             var check = $("#equityHover").hasClass("hoverOpen");
             if (check === false){
                 closeAllHover();
@@ -870,6 +893,9 @@ function initMap() {
                 $("#equityHover").removeClass("hoverOpen");
                 closeAllHover();
             }
+        }
+        equityMarker.addListener('click', function(){
+            equityMarkerOpenClose();
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
@@ -877,7 +903,7 @@ function initMap() {
         $("#equityLink").click(function(){
             $('#overlay').css('visibility', 'visible');
             $('#overlay').animate({"opacity": "0.3"}, "slow");
-            $("#equityAboutImage > img").attr("src", "images/campuspictures/centerforequityFull.jpeg");
+            
 
             $("#equityPopup").css('visibility', 'visible');
             $('#equityPopup').animate({"opacity": "1"}, "slow");
@@ -889,6 +915,8 @@ function initMap() {
 
             $('#equityPopup').animate({"opacity": "0"}, "slow");
             $("#equityPopup").css('visibility', 'hidden');
+
+            $("#equityAboutImage > img").attr("src", "");
         });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
@@ -909,7 +937,7 @@ function initMap() {
         var campusHoverCard = new google.maps.InfoWindow({
             content: campusHover,
         });
-        campusMarker.addListener('click', function(){
+        function campusMarkerOpenClose(){
             var check = $("#campusHover").hasClass("hoverOpen");
             if (check === false){
                 closeAllHover();
@@ -919,6 +947,9 @@ function initMap() {
                 $("#campusHover").removeClass("hoverOpen");
                 closeAllHover();
             }
+        }
+        campusMarker.addListener('click', function(){
+            campusMarkerOpenClose();
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
@@ -938,14 +969,15 @@ function initMap() {
 
             $('#campusPopup').animate({"opacity": "0"}, "slow");
             $("#campusPopup").css('visibility', 'hidden');
+
+            $("#campusAboutImage > img").attr("src", "");
         });
 
         var ceramicsHover = document.getElementById('ceramicsHover');
         var ceramicsHoverCard = new google.maps.InfoWindow({
             content: ceramicsHover,
         });
-
-        ceramicsMarker.addListener('click', function(){
+        function ceramicsMarkerOpenClose(){
             var check = $("#ceramicsHover").hasClass("hoverOpen");
             if (check === false){
                 closeAllHover();
@@ -955,6 +987,9 @@ function initMap() {
                 $("#ceramicsHover").removeClass("hoverOpen");
                 closeAllHover();
             }
+        }
+        ceramicsMarker.addListener('click', function(){
+            ceramicsMarkerOpenClose();
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
@@ -974,14 +1009,15 @@ function initMap() {
 
             $('#ceramicsPopup').animate({"opacity": "0"}, "slow");
             $("#ceramicsPopup").css('visibility', 'hidden');
+
+            $("#ceramicsAboutImage > img").attr("src", "");
         });
 
         var clowHover = document.getElementById('clowHover');
         var clowHoverCard = new google.maps.InfoWindow({
             content: clowHover,
         });
-
-        clowMarker.addListener('click', function(){
+        function clowMarkerOpenClose(){
             var check = $("#clowHover").hasClass("hoverOpen");
             if (check === false){
                 closeAllHover();
@@ -991,6 +1027,9 @@ function initMap() {
                 $("#clowHover").removeClass("hoverOpen");
                 closeAllHover();
             }
+        }
+        clowMarker.addListener('click', function(){
+            clowMarkerOpenClose();
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
@@ -1010,6 +1049,9 @@ function initMap() {
 
             $('#clowPopup').animate({"opacity": "0"}, "slow");
             $("#clowPopup").css('visibility', 'hidden');
+
+            $("#clowAboutImage > img").attr("src", "");
+            $("#clowDiningImage > img").attr("src", "");
         });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
@@ -1034,8 +1076,7 @@ function initMap() {
         var gardensHoverCard = new google.maps.InfoWindow({
             content: gardensHover,
         });
-
-        gardensMarker.addListener('click', function(){
+        function gardensMarkerOpenClose(){
             var check = $("#gardensHover").hasClass("hoverOpen");
             if (check === false){
                 closeAllHover();
@@ -1045,6 +1086,9 @@ function initMap() {
                 $("gardensHover").removeClass("hoverOpen");
                 closeAllHover();
             }
+        }
+        gardensMarker.addListener('click', function(){
+            gardensMarkerOpenClose();
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
@@ -1064,6 +1108,8 @@ function initMap() {
 
             $('#gardensPopup').animate({"opacity": "0"}, "slow");
             $("#gardensPopup").css('visibility', 'hidden');
+
+            $("#gardensAboutImage > img").attr("src", "");
         });
 
 
@@ -1071,8 +1117,7 @@ function initMap() {
         var dempseyHoverCard = new google.maps.InfoWindow({
             content: dempseyHover,
         });
-
-        dempseyMarker.addListener('click', function(){
+        function dempseyMarkerOpenClose(){
             var check = $("#dempseyHover").hasClass("hoverOpen");
             if (check === false){
                 closeAllHover();
@@ -1082,6 +1127,9 @@ function initMap() {
                 $("#dempseyHover").removeClass("hoverOpen");
                 closeAllHover();
             }
+        }
+        dempseyMarker.addListener('click', function(){
+            dempseyMarkerOpenClose();
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
@@ -1101,6 +1149,8 @@ function initMap() {
 
             $('#dempseyPopup').animate({"opacity": "0"}, "slow");
             $("#dempseyPopup").css('visibility', 'hidden');
+
+            $("#dempseyAboutImage > img").attr("src", "");
         });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
@@ -1122,7 +1172,7 @@ function initMap() {
         var donnerHoverCard = new google.maps.InfoWindow({
             content: donnerHover,
         });
-        donnerMarker.addListener('click', function(){
+        function donnerMarkerOpenClose(){
             var check = $("#donnerHover").hasClass("hoverOpen");
             if (check === false){
                 closeAllHover();
@@ -1132,6 +1182,9 @@ function initMap() {
                 $("#donnerHover").removeClass("hoverOpen");
                 closeAllHover();
             }
+        }
+        donnerMarker.addListener('click', function(){
+            donnerMarkerOpenClose();
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
@@ -1151,6 +1204,8 @@ function initMap() {
 
             $('#donnerPopup').animate({"opacity": "0"}, "slow");
             $("#donnerPopup").css('visibility', 'hidden');
+
+            $("#donnerAboutImage > img").attr("src", "");
         });
 
 
@@ -1158,7 +1213,7 @@ function initMap() {
         var eastHoverCard = new google.maps.InfoWindow({
             content: eastHover,
         });
-        eastMarker.addListener('click', function(){
+        function eastMarkerOpenClose(){
             var check = $("#eastHover").hasClass("hoverOpen");
             if (check === false){
                 closeAllHover();
@@ -1168,6 +1223,9 @@ function initMap() {
                 $("#eastHover").removeClass("hoverOpen");
                 closeAllHover();
             }
+        }
+        eastMarker.addListener('click', function(){
+            eastMarkerOpenClose();
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
@@ -1187,14 +1245,15 @@ function initMap() {
 
             $('#eastPopup').animate({"opacity": "0"}, "slow");
             $("#eastPopup").css('visibility', 'hidden');
+
+            $("#eastAboutImage > img").attr("src", "");
         });
 
         var environmentalHover = document.getElementById('environmentalHover');
         var environmentalHoverCard = new google.maps.InfoWindow({
             content: environmentalHover,
         });
-
-        environmentalMarker.addListener('click', function(){
+        function environmentalMarkerOpenClose(){
             var check = $("#environmentalHover").hasClass("hoverOpen");
             if (check === false){
                 closeAllHover();
@@ -1204,6 +1263,9 @@ function initMap() {
                 $("#environmentalHover").removeClass("hoverOpen");
                 closeAllHover();
             }
+        }
+        environmentalMarker.addListener('click', function(){
+            environmentalMarkerOpenClose();
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
@@ -1223,6 +1285,8 @@ function initMap() {
 
             $('#environmentalPopup').animate({"opacity": "0"}, "slow");
             $("#environmentalPopup").css('visibility', 'hidden');
+
+            $("#environmentalAboutImage > img").attr("src", "");
         });
 
         var evansHover = document.getElementById('evansHover');
@@ -1259,6 +1323,7 @@ function initMap() {
 
             $('#evansPopup').animate({"opacity": "0"}, "slow");
             $("#evansPopup").css('visibility', 'hidden');
+            $("#evansAboutImage > img").attr("src", "");
         });
 
         var fletcherHover = document.getElementById('fletcherHover');
@@ -1295,6 +1360,8 @@ function initMap() {
 
             $('#fletcherPopup').animate({"opacity": "0"}, "slow");
             $("#fletcherPopup").css('visibility', 'hidden');
+
+            $("#fletcherAboutImage > img").attr("src", "");
         });
 
         var fredricHover = document.getElementById('fredricHover');
@@ -1331,6 +1398,8 @@ function initMap() {
 
             $('#fredricPopup').animate({"opacity": "0"}, "slow");
             $("#fredricPopup").css('visibility', 'hidden');
+
+            $("#fredricAboutImage > img").attr("src", "");
         });
 
         // GRUENHAGEN
@@ -1371,6 +1440,8 @@ function initMap() {
 
             $('#gruenhagenPopup').animate({"opacity": "0"}, "slow");
             $("#gruenhagenPopup").css('visibility', 'hidden');
+
+            $("#gruenhagenAboutImage > img").attr("src", "");
         });
 
 
@@ -1408,6 +1479,9 @@ function initMap() {
 
             $('#halseyPopup').animate({"opacity": "0"}, "slow");
             $("#halseyPopup").css('visibility', 'hidden');
+
+            $("#halseyAboutImage > img").attr("src", "");
+            $("#halseyDiningImage > img").attr("src", "");
         });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
@@ -1474,6 +1548,8 @@ function initMap() {
 
             $('#harringtonPopup').animate({"opacity": "0"}, "slow");
             $("#harringtonPopup").css('visibility', 'hidden');
+
+            $("#harringtonAboutImage > img").attr("src", "");
         });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
@@ -1524,6 +1600,8 @@ function initMap() {
 
             $('#heatingPopup').animate({"opacity": "0"}, "slow");
             $("#heatingPopup").css('visibility', 'hidden');
+
+            $("#heatingAboutImage > img").attr("src", "");
         });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
@@ -1575,6 +1653,9 @@ function initMap() {
 
             $('#parkingRampPopup').animate({"opacity": "0"}, "slow");
             $("#parkingRampPopup").css('visibility', 'hidden');
+
+            $("#parkingAboutImage > img").attr("src", "");
+            $("#parkingRampParkingImage> img").attr("src", "");
         });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
@@ -1628,6 +1709,8 @@ function initMap() {
 
             $('#horizonPopup').animate({"opacity": "0"}, "slow");
             $("#horizonPopup").css('visibility', 'hidden');
+
+            $("#horizonAboutImage > img").attr("src", "");
         });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
@@ -1677,6 +1760,8 @@ function initMap() {
 
             $('#kolfPopup').animate({"opacity": "0"}, "slow");
             $("#kolfPopup").css('visibility', 'hidden');
+
+            $("#kolfAboutImage > img").attr("src", "");
         });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
@@ -1726,6 +1811,8 @@ function initMap() {
 
             $('#lincolnPopup').animate({"opacity": "0"}, "slow");
             $("#lincolnPopup").css('visibility', 'hidden');
+
+            $("#lincolnAboutImage > img").attr("src", "");
         });
 
         var multiculturalHover = document.getElementById('multiculturalHover');
@@ -1761,6 +1848,8 @@ function initMap() {
 
             $('#multiculturalPopup').animate({"opacity": "0"}, "slow");
             $("#multiculturalPopup").css('visibility', 'hidden');
+
+            $("#multiculturalAboutImage > img").attr("src", "");
         });
 
         var nursingHover = document.getElementById('nursingHover');
@@ -1846,6 +1935,8 @@ function initMap() {
 
             $('#oviattPopup').animate({"opacity": "0"}, "slow");
             $("#oviattPopup").css('visibility', 'hidden');
+
+            $("#oviattAboutImage > img").attr("src", "");
         });
 
         var pollockHover = document.getElementById('pollockHover');
@@ -1881,6 +1972,8 @@ function initMap() {
 
             $('#pollockPopup').animate({"opacity": "0"}, "slow");
             $("#pollockPopup").css('visibility', 'hidden');
+
+            $("#pollockAboutImage > img").attr("src", "");
         });
 
 
@@ -1918,6 +2011,9 @@ function initMap() {
 
             $('#polkPopup').animate({"opacity": "0"}, "slow");
             $("#polkPopup").css('visibility', 'hidden');
+
+            $('#polkiframe').attr('src',"");
+            $("#polkAboutImage > img").attr("src", "");
         });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
@@ -1971,6 +2067,8 @@ function initMap() {
 
             $('#radfordPopup').animate({"opacity": "0"}, "slow");
             $("#radfordPopup").css('visibility', 'hidden');
+
+            $("#radfordAboutImage > img").attr("src", "");
         });
 
         var reeveHover = document.getElementById('reeveHover');
@@ -2008,6 +2106,10 @@ function initMap() {
 
             $('#reevePopup').animate({"opacity": "0"}, "slow");
             $("#reevePopup").css('visibility', 'hidden');
+
+            $('#reeveiframe').attr('src',"");
+            $("#reeveAboutImage > img").attr("src", "");
+            $("#reeveDiningImage > img").attr("src", "");
         });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
@@ -2104,6 +2206,10 @@ function initMap() {
 
             $('#sagePopup').animate({"opacity": "0"}, "slow");
             $("#sagePopup").css('visibility', 'hidden');
+
+            $('#sageiframe').attr('src',"");
+            $("#sageAboutImage > img").attr("src", "");
+            $("#sageDiningImage > img").attr("src", "");
         });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
@@ -2198,6 +2304,9 @@ function initMap() {
 
             $('#scottPopup').animate({"opacity": "0"}, "slow");
             $("#scottPopup").css('visibility', 'hidden');
+
+            $("#scottAboutImage > img").attr("src", "");
+            $("#scottDiningImage > img").attr("src", "");
         });
         // tab clicking/content displaying
         $("#scottAboutLi").click(function(){
@@ -2250,6 +2359,8 @@ function initMap() {
 
             $('#stewartPopup').animate({"opacity": "0"}, "slow");
             $("#stewartPopup").css('visibility', 'hidden');
+
+            $("#stewartAboutImage > img").attr("src", "");
         });
 
 
@@ -2287,6 +2398,8 @@ function initMap() {
 
             $('#recreationPopup').animate({"opacity": "0"}, "slow");
             $("#recreationPopup").css('visibility', 'hidden');
+
+            $("#recreationAboutImage > img").attr("src", "");
         });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
@@ -2347,6 +2460,9 @@ function initMap() {
 
             $('#successPopup').animate({"opacity": "0"}, "slow");
             $("#successPopup").css('visibility', 'hidden');
+
+            $('#successiframe').attr('src',"");
+            $("#successAboutImage > img").attr("src", "");
         });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
@@ -2421,6 +2537,8 @@ function initMap() {
 
             $('#swartPopup').animate({"opacity": "0"}, "slow");
             $("#swartPopup").css('visibility', 'hidden');
+
+            $("#swartAboutImage > img").attr("src", "");
         });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
@@ -2470,6 +2588,8 @@ function initMap() {
 
             $('#taylorPopup').animate({"opacity": "0"}, "slow");
             $("#taylorPopup").css('visibility', 'hidden');
+
+            $("#taylorAboutImage > img").attr("src", "");
         });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
@@ -2519,6 +2639,8 @@ function initMap() {
 
             $('#titanPopup').animate({"opacity": "0"}, "slow");
             $("#titanPopup").css('visibility', 'hidden');
+
+            $("#taylorAboutImage > img").attr("src", "");
         });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
@@ -2569,6 +2691,8 @@ function initMap() {
 
             $('#policePopup').animate({"opacity": "0"}, "slow");
             $("#policePopup").css('visibility', 'hidden');
+
+            $("#policeAboutImage > img").attr("src", "");
         });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
@@ -2619,6 +2743,8 @@ function initMap() {
 
             $('#websterPopup').animate({"opacity": "0"}, "slow");
             $("#websterPopup").css('visibility', 'hidden');
+
+            $("#websterAboutImage > img").attr("src", "");
         });
 
 
@@ -3672,15 +3798,7 @@ function initMap() {
 
         // accEnt hover cards for markers
         albeeAccEntMarker.addListener('click', function(){
-            var check = $("#albeeHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                albeeHoverCard.open(map, albeeAccEntMarker);
-                $("#albeeHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#albeeHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
+            albeeMarkerOpenClose();
         });
 
         acAccEntMarker.addListener('click', function(){
@@ -3696,63 +3814,24 @@ function initMap() {
         });
 
         blackhawkAccEntMarker.addListener('click', function(){
-            var check = $("#blackhawkHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                blackhawkHoverCard.open(map, blackhawkAccEntMarker);
-                $("#blackhawkHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#blackhawkHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
+            blackhawkMarkerOpenClose();
         });
 
         equityAccEntMarker.addListener('click', function(){
-            var check = $("#equityHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                equityHoverCard.open(map, equityAccEntMarker);
-                $("#equityHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#equityHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
+            equityMarkerOpenClose();
         });
 
         clowAccEntMarker.addListener('click', function(){
-            var check = $("#clowHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                clowHoverCard.open(map, clowAccEntMarker);
-                $("#clowHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#clowHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
+            clowMarkerOpenClose();
         });
 
         dempseyAccEntMarker.addListener('click', function(){
-            var check = $("#dempseyHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                dempseyHoverCard.open(map, dempseyAccEntMarker);
-                $("#dempseyHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#dempseyHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
+            dempseyMarkerOpenClose();
+            
         });
 
         donnerAccEntMarker.addListener('click', function(){
-            var check = $("#donnerHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                donnerHoverCard.open(map, donnerAccEntMarker);
-                $("#donnerHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#donnerHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
+            donnerMarkerOpenClose();
         });
 
         fletcherAccEntMarker.addListener('click', function(){
@@ -4800,39 +4879,15 @@ function initMap() {
 
         // sust hovers
         albeeSustMarker.addListener('click', function(){
-            var check = $("#albeeHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                albeeHoverCard.open(map, albeeSustMarker);
-                $("#albeeHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#albeeHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
+            albeeMarkerOpenClose();
         });
 
         alumniSustMarker.addListener('click', function(){
-            var check = $("#alumniHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                alumniHoverCard.open(map, alumniSustMarker);
-                $("#alumniHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#alumniHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
+            alumniMarkerOpenClose();
         });
 
         blackhawkSustMarker.addListener('click', function(){
-            var check = $("#blackhawkHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                blackhawkHoverCard.open(map, blackhawkSustMarker);
-                $("#blackhawkHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#blackhawkHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
+            blackhawkMarkerOpenClose();
         });
 
         biodigesterSustMarker.addListener('click', function(){
@@ -5062,39 +5117,16 @@ function initMap() {
         });
 
         blackhawkGenderMarker.addListener('click', function(){
-            var check = $("#blackhawkHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                blackhawkHoverCard.open(map, blackhawkGenderMarker);
-                $("#blackhawkHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#blackhawkHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
+            blackhawkMarkerOpenClose();
         });
 
         campusGenderMarker.addListener('click', function(){
-            var check = $("#campusHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                campusHoverCard.open(map, campusGenderMarker);
-                $("#campusHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#campusHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
+            campusMarkerOpenClose();
         });
 
         dempseyGenderMarker.addListener('click', function(){
-            var check = $("#dempseyHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                dempseyHoverCard.open(map, dempseyGenderMarker);
-                $("#dempseyHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#dempseyHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
+            dempseyMarkerOpenClose();
+            
         });
 
         halseyGenderMarker.addListener('click', function(){
@@ -5329,15 +5361,7 @@ function initMap() {
 
         // hover for AccaF
         albeeAccaFMarker.addListener('click', function(){
-            var check = $("#albeeHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                albeeHoverCard.open(map, albeeAccaFMarker);
-                $("#albeeHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#albeeHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
+            albeeMarkerOpenClose();
         });
 
         acAccaFMarker.addListener('click', function(){
@@ -5353,39 +5377,15 @@ function initMap() {
         });
 
         ceramicsAccaFMarker.addListener('click', function(){
-            var check = $("#ceramicsHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                ceramicsHoverCard.open(map, ceramicsAccaFMarker);
-                $("#ceramicsHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#ceramicsHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
+            ceramicsMarkerOpenClose();
         });
 
         clowAccaFMarker.addListener('click', function(){
-            var check = $("#clowHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                clowHoverCard.open(map, clowAccaFMarker);
-                $("#clowHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#clowHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
+            clowMarkerOpenClose();
         });
 
         environmentalAccaFMarker.addListener('click', function(){
-            var check = $("#environmentalHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                environmentalHoverCard.open(map, environmentalAccaFMarker);
-                $("#environmentalHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#environmentalHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
+            environmentalMarkerOpenClose();
         });
 
         fredricAccaFMarker.addListener('click', function(){
@@ -5565,51 +5565,19 @@ function initMap() {
         });
         // athletics marker hover
         albeeAthMarker.addListener('click', function(){
-            var check = $("#albeeHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                albeeHoverCard.open(map, albeeAthMarker);
-                $("#albeeHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#albeeHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
+            albeeMarkerOpenClose();
         });
 
         athleticAthMarker.addListener('click', function(){
-            var check = $("#athleticHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                athleticHoverCard.open(map, athleticAthMarker);
-                $("#athleticHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#athleticHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
+            athleticMarkerOpenClose();
         });
 
         baseballAthMarker.addListener('click', function(){
-            var check = $("#baseballHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                baseballHoverCard.open(map, baseballAthMarker);
-                $("#baseballHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#baseballHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
+            baseballMarkerOpenClose();
         });
 
         eastAthMarker.addListener('click', function(){
-            var check = $("#eastHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                eastHoverCard.open(map,eastAthMarker);
-                $("#eastHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#eastHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
+            eastMarkerOpenClose();
         });
 
 
@@ -5679,15 +5647,7 @@ function initMap() {
 
         // AccaS hover
         equityAccaSMarker.addListener('click', function(){
-            var check = $("#equityHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                equityHoverCard.open(map, equityAccaSMarker);
-                $("#equityHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#equityHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
+            equityMarkerOpenClose();
         });
 
         nursingAccaSMarker.addListener('click', function(){
@@ -5793,39 +5753,16 @@ function initMap() {
 
         // CampS hover
         equityCampSMarker.addListener('click', function(){
-            var check = $("#equityHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                equityHoverCard.open(map, equityCampSMarker);
-                $("#equityHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#equityHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
+            equityMarkerOpenClose();
         });
 
         campusCampSMarker.addListener('click', function(){
-            var check = $("#campusHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                campusHoverCard.open(map, campusCampSMarker);
-                $("#campusHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#campusHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
+            campusMarkerOpenClose();
         });
 
         dempseyCampSMarker.addListener('click', function(){
-            var check = $("#dempseyHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                dempseyHoverCard.open(map, dempseyCampSMarker);
-                $("#dempseyHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#dempseyHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
+            dempseyMarkerOpenClose();
+            
         });
 
         multiculturalCampSMarker.addListener('click', function(){
@@ -5976,15 +5913,7 @@ function initMap() {
 
         // ResH hover
         donnerResHMarker.addListener('click', function(){
-            var check = $("#donnerHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                donnerHoverCard.open(map, donnerResHMarker);
-                $("#donnerHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#donnerHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
+            donnerMarkerOpenClose();
         });
 
         evansResHMarker.addListener('click', function(){
@@ -6143,27 +6072,11 @@ function initMap() {
 
         // dining hover
         blackhawkDiningMarker.addListener('click', function(){
-            var check = $("#blackhawkHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                blackhawkHoverCard.open(map, blackhawkDiningMarker);
-                $("#blackhawkHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#blackhawkHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
+            blackhawkMarkerOpenClose();
         });
 
         clowDiningMarker.addListener('click', function(){
-            var check = $("#clowHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                clowHoverCard.open(map, clowDiningMarker);
-                $("#clowHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#clowHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
+            clowMarkerOpenClose();
         });
 
         halseyDiningMarker.addListener('click', function(){
