@@ -118,7 +118,6 @@ $( "#searchInput" ).keyup(function() {
         // });
         function clickResults(id){
           // debugger;
-
             $("#"+ id + "Result").click(function(){
               closeAllPopup();
               if(id ==  "albeehall"){

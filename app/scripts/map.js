@@ -500,6 +500,7 @@ function initMap() {
             $('#overlay').css('visibility', 'visible');
             $('#overlay').animate({"opacity": "0.3"}, "slow");
             $('#albeeiframe').attr('src',"https://www.youtube.com/embed/AW5cpKVsXWA");
+            $('#albeeAboutImage > img').attr('src',"images/campuspictures/albeehallFull.jpeg");
 
             $("#albeePopup").css('visibility', 'visible');
             $('#albeePopup').animate({"opacity": "1"}, "slow");
@@ -527,6 +528,8 @@ function initMap() {
             $("#albeeAboutImage").css('display', "none");
             $("#albeeAboutText").css('display', "none");
             $("#albeeSustainability").css('display', "none");
+            $('#albeeAboutTour').attr('src',"");
+            
 
             $("#albeeTourVideo").css('display', "initial");
             $("#albeeTourText").css('display', "initial");
@@ -6569,22 +6572,20 @@ function initMap() {
     // naming conventions for checkboxes: ex. "buildingsLabel" "name + Label" is the element that has the class "is-checked" is added to
     // ex. "buildings" without "Label" added onto the end is the input element with attribute " type= 'checkbox' "
 
-        // triggerCheck and triggerUncheck check and uncheck the checkboxes
-        //primarily should only be needed for the selectall functions
+     // triggerCheck and triggerUncheck check and uncheck the checkboxes
+     //primarily should only be needed for the selectall functions
   function triggerCheck(name){
     // fancy schmancy method Material Design already gives for checking le checkbox
-  document.getElementById(name + "Label").MaterialCheckbox.check();
-  checkboxMarkersandCards(name);
+    document.getElementById(name + "Label").MaterialCheckbox.check();
+    checkboxMarkersandCards(name);
   }
 
   function triggerUncheck(name){
     // fancy schmancy method Material Design already gives for unchecking le checkbox
-  document.getElementById(name + "Label").MaterialCheckbox.uncheck();
-  uncheckMarkersandCards(name);
+    document.getElementById(name + "Label").MaterialCheckbox.uncheck();
+    uncheckMarkersandCards(name);
   
   }
-
-
     //   the following functions handle setting/removing markers and hover cards when checkboxes are checked or unchecked
 
   //checks if name corresponds with specific ids and sets the buildings & their markers accordingly
@@ -6595,15 +6596,12 @@ function initMap() {
         } 
         else if (name === "parking"){
             setParkingLots();
-
         }
         else if (name === "accEnt"){
             setAccEnt();
-
         }
         else if (name === "accPar"){
             setAccPar();
-
         }
         else if (name === "emergency"){
             setEmergencyPhones();
@@ -6642,51 +6640,32 @@ function initMap() {
             // removes hoverpopups (not markers, the white popups after you click markers)
             // must come before markers are removed
             closeAllBuildings();
-
             // removes building markers
             removeBuilding();
-            
         } 
         else if (name === "parking"){
-            // must come before markers are removed
             closeAllParking();
-
             removeParkingLots();
-            
         }
         else if (name === "accEnt"){
-            // must come before markers are removed
            closeAllAccEnt();
-
             removeAccEnt();
-            
-
         }
         else if (name === "accPar"){
-            // must come before markers are removed
             closeAllAccPark();
-
             removeAccPar();
-            
- 
          }
          else if (name === "emergency"){
             removeEmergencyPhones();
             // emergency phones do not have any hovercards attached to their markers atm
          }
          else if (name === "sust"){
-            // must come before markers are removed
             closeAllSust();
-
             removeSust();
-           
         }
         else if (name === "gender"){
-            // must come before markers are removed
             closeAllGender();
-
             removeGender();
-            
         }
         else if (name === "accaF"){
             closeAllAccaF();
@@ -6737,7 +6716,7 @@ function initMap() {
     // to work: buildings needs to be added to functions: "checkboxMarkersandCards" and "uncheckMarkersandCards"
     // selector for .change function should use the id for the input element 
    $("#buildings").change(function(){
-        // sets up parameter as string
+    // sets up parameter as string
        var buildings = "buildings";
        checkIfChecked(buildings);
    });
@@ -6766,8 +6745,8 @@ function initMap() {
         checkIfChecked(gender);
    });
    $("#accaF").change(function(){
-    var accaF = "accaF";
-    checkIfChecked(accaF);
+        var accaF = "accaF";
+        checkIfChecked(accaF);
     });
     $("#ath").change(function(){
         var ath= "ath";
@@ -6859,7 +6838,6 @@ function initMap() {
             triggerCheck(resH);
             triggerCheck(dining);
             triggerCheck(stuR);
-
           }
   
     });
