@@ -450,6 +450,101 @@ function initMap() {
             websterMarker.setMap(null);
         }
 
+        //array of the thumbnails that are on the hover that appears when a marker is clicked
+        var markerHoverImages = [
+            // 0 albee 
+            "images/campuspictures/albeehall.jpeg",
+            //baseball does not have a thumbnail atm
+
+            //1 alumni conf 
+            "images/campuspictures/awcc-building.jpg",
+            //2 ac
+            "images/campuspictures/artscommunications.jpeg",
+            //3 athletic
+            "images/campuspictures/athleticservice.jpeg",
+            //4 blackhawk
+            "images/campuspictures/blackhawk.jpeg",
+            //5 biodigester
+            "images/campuspictures/biodigester.jpg",
+            //6 buckstaff
+            "images/campuspictures/buckstaff.jpeg",
+            //7 equity
+            "images/campuspictures/centerforequity.jpeg",
+            //8 campus services
+            "images/campuspictures/campus-services.jpg", 
+            // 9 ceramics
+            "images/campuspictures/ceramicslab.jpeg",
+            //10 clow 
+            "images/campuspictures/clow.jpeg",
+            //11 gardens
+            "images/campuspictures/community-gardens.jpg",
+            //12 dempsey
+            "images/campuspictures/dempsey.jpeg",
+            //13 donner 
+            "images/campuspictures/donner.jpeg",
+            //14 east 
+            "images/campuspictures/easthall.jpg",
+            //15 environmental science
+            "images/campuspictures/aquaticstudiescenter.jpeg",
+            //16 evans
+            "images/campuspictures/evans.jpeg",
+            //17 fletcher
+            "images/campuspictures/fletcher.jpeg",
+            //18 fredric
+            "images/campuspictures/fredricmarch.jpeg",
+            //19 gruenhagen
+            "images/campuspictures/gruenhagen.jpeg",
+            //20 halsey
+            "images/campuspictures/halsey.jpeg",
+            //21 harrington
+            "images/campuspictures/harrington.jpeg",
+            //22 heating
+            "images/campuspictures/heatingplant.jpeg",
+            //23 parking ramp
+            "images/campuspictures/parkingramp.jpeg",
+            //24 horizon
+            "images/campuspictures/horizon.jpeg",
+            //25 kolf
+            "images/campuspictures/kolf.jpeg",
+            //26 lincoln
+            "images/campuspictures/lincoln-hall.jpg",
+            //27 multicultural 
+            "images/campuspictures/multiculturaleducation.jpeg",
+            //28 nursing
+            "images/campuspictures/nursingeducation.jpeg",
+            //29 oviatt
+            "images/campuspictures/oviatt.jpeg",
+            //20 pollock
+            "images/campuspictures/pollock.jpeg",
+            //31 polk
+            "images/campuspictures/polk.jpeg",
+            //32 radford
+            "images/campuspictures/radford.jpeg",
+            //33 reeve
+            "images/campuspictures/reeve.jpeg",
+            //34 sage
+            "images/campuspictures/sage.jpeg",
+            //35 scott
+            "images/campuspictures/scott.jpeg",
+            //36 stewart
+            "images/campuspictures/stewart.jpeg",
+            //37 recreation
+            "images/campuspictures/srwc.jpeg",
+            //38 student success center
+            "images/campuspictures/studentsuccess.jpeg",
+            //39 swart
+            "images/campuspictures/swart.jpeg",
+            //40 taylor
+            "images/campuspictures/taylor.jpeg",
+            //41 titan
+            "images/campuspictures/titanstadium.jpeg",
+            //42 police
+            "images/campuspictures/universitypolice.jpeg",
+            //43 webster
+            "images/campuspictures/webster.jpeg"
+
+        ];
+
 
         // adding hover cards for building markers
         var albeeHover = document.getElementById('albeeHover');
@@ -468,7 +563,7 @@ function initMap() {
               closeAllHover();
               albeeHoverCard.open(map, albeeMarker);
               $("#albeeHover").addClass("hoverOpen");
-              $("#albeeHover > img").attr("src"," images/campuspictures/albeehall.jpeg");
+              $("#albeeHover > img").attr("src", markerHoverImages[0]);
           } else if (check === true){
               $("#albeeHover").removeClass("hoverOpen");
               $("#albeeHover > img").attr("src","");
@@ -580,7 +675,7 @@ function initMap() {
                 closeAllHover();
                 alumniHoverCard.open(map, alumniMarker);
                 $("#alumniHover").addClass("hoverOpen");
-                $("#alumniHover > img").attr("src", "images/campuspictures/awcc-building.jpg");
+                $("#alumniHover > img").attr("src", markerHoverImages[1]);
             } else if (check === true){
                 $("#alumniHover > img").attr("src", "");
                 $("#alumniHover").removeClass("hoverOpen");
@@ -636,7 +731,7 @@ function initMap() {
                 closeAllHover();
                 acHoverCard.open(map, acMarker);
                 $("#acHover").addClass("hoverOpen");
-                $("#acHover > img").attr("src", "images/campuspictures/artscommunications.jpeg");
+                $("#acHover > img").attr("src", markerHoverImages[2]);
             } else if (check === true){
                 $("#acHover > img").attr("src", "");
                 $("#acHover").removeClass("hoverOpen");
@@ -692,7 +787,7 @@ function initMap() {
                 closeAllHover();
                 athleticHoverCard.open(map, athleticMarker);
                 $("#athleticHover").addClass("hoverOpen");
-                $("#athleticHover > img").attr("src", "images/campuspictures/athleticservice.jpeg");
+                $("#athleticHover > img").attr("src", markerHoverImages[3]);
             } else if (check === true){
                 $("#athleticHover > img").attr("src", "");
                 $("#athleticHover").removeClass("hoverOpen");
@@ -733,7 +828,7 @@ function initMap() {
                 closeAllHover();
                 blackhawkHoverCard.open(map, blackhawkMarker);
                 $("#blackhawkHover").addClass("hoverOpen");
-                $("#blackhawkHover > img").attr("src", "images/campuspictures/blackhawk.jpeg");
+                $("#blackhawkHover > img").attr("src", markerHoverImages[4]);
             } else if (check === true){
                 $("#blackhawkHover > img").attr("src", "");
                 $("#blackhawkHover").removeClass("hoverOpen");
@@ -816,9 +911,9 @@ function initMap() {
                 closeAllHover();
                 biodigesterHoverCard.open(map, biodigesterMarker);
                 $("#biodigesterHover").addClass("hoverOpen");
-                $("#biodigesterHover > img").attr("images/campuspictures/biodigester.jpg");
+                $("#biodigesterHover > img").attr("src", markerHoverImages[5]);
             } else if (check === true){
-                $("#biodigesterHover > img").attr("");
+                $("#biodigesterHover > img").attr("src", "");
                 $("#biodigesterHover").removeClass("hoverOpen");
                 closeAllHover();
             }
@@ -859,7 +954,7 @@ function initMap() {
                 closeAllHover();
                 buckstaffHoverCard.open(map, buckstaffMarker);
                 $("#buckstaffHover").addClass("hoverOpen");
-                $("#buckstaffHover > img").attr("src", "images/campuspictures/buckstaff.jpeg");
+                $("#buckstaffHover > img").attr("src", markerHoverImages[6]);
             } else if (check === true){
                 $("#buckstaffHover > img").attr("src", "");
                 $("#buckstaffHover").removeClass("hoverOpen");
@@ -902,7 +997,7 @@ function initMap() {
                 closeAllHover();
                 equityHoverCard.open(map, equityMarker);
                 $("#equityHover").addClass("hoverOpen");
-                $("#equityHover > img").attr("src", "images/campuspictures/centerforequity.jpeg");
+                $("#equityHover > img").attr("src", markerHoverImages[7]);
             } else if (check === true){
                 $("#equityHover > img").attr("src", "");
                 $("#equityHover").removeClass("hoverOpen");
@@ -958,7 +1053,7 @@ function initMap() {
                 closeAllHover();
                 campusHoverCard.open(map, campusMarker);
                 $("#campusHover").addClass("hoverOpen");
-                $("#campusHover > img").attr("src", "images/campuspictures/campus-services.jpg");
+                $("#campusHover > img").attr("src", markerHoverImages[8] );
             } else if (check === true){
                 $("#campusHover > img").attr("src", "");
                 $("#campusHover").removeClass("hoverOpen");
@@ -1000,7 +1095,7 @@ function initMap() {
                 closeAllHover();
                 ceramicsHoverCard.open(map, ceramicsMarker);
                 $("#ceramicsHover").addClass("hoverOpen");
-                $("#ceramicsHover > img").attr("src", "images/campuspictures/ceramicslab.jpeg");
+                $("#ceramicsHover > img").attr("src", markerHoverImages[9]);
             } else if (check === true){
                 $("#ceramicsHover > img").attr("src", "");
                 $("#ceramicsHover").removeClass("hoverOpen");
@@ -1042,7 +1137,7 @@ function initMap() {
                 closeAllHover();
                 clowHoverCard.open(map, clowMarker);
                 $("#clowHover").addClass("hoverOpen");
-                $("#clowHover > img").attr("src", "images/campuspictures/clow.jpeg");
+                $("#clowHover > img").attr("src", markerHoverImages[10]);
             } else if (check === true){
                 $("#clowHover > img").attr("src", "");
                 $("#clowHover").removeClass("hoverOpen");
@@ -1103,7 +1198,7 @@ function initMap() {
                 closeAllHover();
                 gardensHoverCard.open(map, gardensMarker);
                 $("#gardensHover").addClass("hoverOpen");
-                $("#gardensHover > img").attr("src", "images/campuspictures/community-gardens.jpg");
+                $("#gardensHover > img").attr("src", markerHoverImages[11]);
             } else if (check === true){
                 $("#gardensHover > img").attr("src", "");
                 $("gardensHover").removeClass("hoverOpen");
@@ -1146,7 +1241,7 @@ function initMap() {
                 closeAllHover();
                 dempseyHoverCard.open(map, dempseyMarker);
                 $("#dempseyHover").addClass("hoverOpen");
-                $("#dempseyHover > img").attr("src", "images/campuspictures/dempsey.jpeg");
+                $("#dempseyHover > img").attr("src", markerHoverImages[12]);
             } else if (check === true){
                 $("#dempseyHover > img").attr("src", "");
                 $("#dempseyHover").removeClass("hoverOpen");
@@ -1203,7 +1298,7 @@ function initMap() {
                 closeAllHover();
                 donnerHoverCard.open(map, donnerMarker);
                 $("#donnerHover").addClass("hoverOpen");
-                $("#donnerHover > img").attr("src", "images/campuspictures/donner.jpeg");
+                $("#donnerHover > img").attr("src", markerHoverImages[13]);
             } else if (check === true){
                 $("#donnerHover > img").attr("src", "");
                 $("#donnerHover").removeClass("hoverOpen");
@@ -1246,7 +1341,7 @@ function initMap() {
                 closeAllHover();
                 eastHoverCard.open(map, eastMarker);
                 $("#eastHover").addClass("hoverOpen");
-                $("#eastHover > img").attr("src", "images/campuspictures/easthall.jpg");
+                $("#eastHover > img").attr("src", markerHoverImages[14]);
             } else if (check === true){
                 $("#eastHover > img").attr("src", "");
                 $("#eastHover").removeClass("hoverOpen");
@@ -1288,7 +1383,7 @@ function initMap() {
                 closeAllHover();
                 environmentalHoverCard.open(map, environmentalMarker);
                 $("#environmentalHover").addClass("hoverOpen");
-                $("#environmentalHover > img").attr("src", "images/campuspictures/aquaticstudiescenter.jpeg");
+                $("#environmentalHover > img").attr("src", markerHoverImages[15]);
             } else if (check === true){
                 $("#environmentalHover > img").attr("src", "");
                 $("#environmentalHover").removeClass("hoverOpen");
@@ -1330,7 +1425,7 @@ function initMap() {
                 closeAllHover();
                 evansHoverCard.open(map, evansMarker);
                 $("#evansHover").addClass("hoverOpen");
-                $("#evansHover > img").attr("src", "images/campuspictures/evans.jpeg");
+                $("#evansHover > img").attr("src", markerHoverImages[16]);
             } else if (check === true){
                 $("#evansHover > img").attr("src", "");
                 $("#evansHover").removeClass("hoverOpen");
@@ -1371,7 +1466,7 @@ function initMap() {
                 closeAllHover();
                 fletcherHoverCard.open(map, fletcherMarker);
                 $("#fletcherHover").addClass("hoverOpen");
-                $("#fletcherHover > img").attr("src", "images/campuspictures/fletcher.jpeg");
+                $("#fletcherHover > img").attr("src", markerHoverImages[17]);
             } else if (check === true){
                 $("#fletcherHover > img").attr("src", "");
                 $("#fletcherHover").removeClass("hoverOpen");
@@ -1413,7 +1508,7 @@ function initMap() {
                 closeAllHover();
                 fredricHoverCard.open(map, fredricMarker);
                 $("#fredricHover").addClass("hoverOpen");
-                $("#fredricHover > img").attr("src", "images/campuspictures/fredricmarch.jpeg");
+                $("#fredricHover > img").attr("src", markerHoverImages[18]);
             } else if (check === true){
                 $("#fredricHover > img").attr("src", "");
                 $("#fredricHover").removeClass("hoverOpen");
@@ -1459,7 +1554,7 @@ function initMap() {
                 closeAllHover();
                 gruenhagenHoverCard.open(map, gruenhagenMarker);
                 $("#gruenhagenHover").addClass("hoverOpen");
-                $("#gruenhagenHover > img").attr("src", "images/campuspictures/gruenhagen.jpeg");
+                $("#gruenhagenHover > img").attr("src", markerHoverImages[19]);
             } else if (check === true){
                 $("#gruenhagenHover > img").attr("src", "");
                 $("#gruenhagenHover").removeClass("hoverOpen");
@@ -1502,7 +1597,7 @@ function initMap() {
                 closeAllHover();
                 halseyHoverCard.open(map, halseyMarker);
                 $("#halseyHover").addClass("hoverOpen");
-                $("#halseyHover > img").attr("src", "images/campuspictures/halsey.jpeg");
+                $("#halseyHover > img").attr("src", markerHoverImages[20]);
             } else if (check === true){
                 $("#halseyHover > img").attr("src", "");
                 $("#halseyHover").removeClass("hoverOpen");
@@ -1575,7 +1670,7 @@ function initMap() {
                 closeAllHover();
                 harringtonHoverCard.open(map, harringtonMarker);
                 $("#harringtonHover").addClass("hoverOpen");
-                $("#harringtonHover > img").attr("src", "images/campuspictures/harrington.jpeg");
+                $("#harringtonHover > img").attr("src", markerHoverImages[21]);
             } else if (check === true){
                 $("#harringtonHover > img").attr("src", "");
                 $("#harringtonHover").removeClass("hoverOpen");
@@ -1631,7 +1726,7 @@ function initMap() {
                 closeAllHover();
                 heatingHoverCard.open(map, heatingMarker);
                 $("#heatingHover").addClass("hoverOpen");
-                $("#heatingHover > img").attr("src", "images/campuspictures/heatingplant.jpeg");
+                $("#heatingHover > img").attr("src", markerHoverImages[22]);
             } else if (check === true){
                 $("#heatingHover > img").attr("src", "");
                 $("#heatingHover").removeClass("hoverOpen");
@@ -1688,7 +1783,7 @@ function initMap() {
                 closeAllHover();
                 parkingRampHoverCard.open(map, parkingRampMarker);
                 $("#parkingRampHover").addClass("hoverOpen");
-                $("#parkingRampHover > img").attr("src", "images/campuspictures/parkingramp.jpeg");
+                $("#parkingRampHover > img").attr("src", markerHoverImages[23]);
             } else if (check === true){
                 $("#parkingRampHover > img").attr("src", "");
                 $("#parkingRampHover").removeClass("hoverOpen");
@@ -1748,7 +1843,7 @@ function initMap() {
                 closeAllHover();
                 horizonHoverCard.open(map, horizonMarker);
                 $("#horizonHover").addClass("hoverOpen");
-                $("#horizonHover > img").attr("src", "images/campuspictures/horizon.jpeg");
+                $("#horizonHover > img").attr("src", markerHoverImages[24]);
             } else if (check === true){
                 $("#horizonHover > img").attr("src", "");
                 $("#horizonHover").removeClass("hoverOpen");
@@ -1804,7 +1899,7 @@ function initMap() {
                 closeAllHover();
                 kolfHoverCard.open(map, kolfMarker);
                 $("#kolfHover").addClass("hoverOpen");
-                $("#kolfHover > img").attr("src", "images/campuspictures/kolf.jpeg");
+                $("#kolfHover > img").attr("src", markerHoverImages[25]);
             } else if (check === true){
                 $("#kolfHover > img").attr("src", "");
                 $("#kolfHover").removeClass("hoverOpen");
@@ -1860,7 +1955,7 @@ function initMap() {
                 closeAllHover();
                 lincolnHoverCard.open(map, lincolnMarker);
                 $("#lincolnHover").addClass("hoverOpen");
-                $("#lincolnHover > img").attr("src", "images/campuspictures/lincoln-hall.jpg");
+                $("#lincolnHover > img").attr("src", markerHoverImages[26]);
             } else if (check === true){
                 $("#lincolnHover > img").attr("src", "");
                 $("#lincolnHover").removeClass("hoverOpen");
@@ -1902,7 +1997,7 @@ function initMap() {
                 closeAllHover();
                 multiculturalHoverCard.open(map, multiculturalMarker);
                 $("#multiculturalHover").addClass("hoverOpen");
-                $("#multiculturalHover > img").attr("src", "images/campuspictures/multiculturaleducation.jpeg");
+                $("#multiculturalHover > img").attr("src", markerHoverImages[27]);
             } else if (check === true){
                 $("#multiculturalHover > img").attr("src", "");
                 $("#multiculturalHover").removeClass("hoverOpen");
@@ -1944,7 +2039,7 @@ function initMap() {
                 closeAllHover();
                 nursingHoverCard.open(map, nursingMarker);
                 $("#nursingHover").addClass("hoverOpen");
-                $("#nursingHover > img").attr("src", "images/campuspictures/nursingeducation.jpeg");
+                $("#nursingHover > img").attr("src", markerHoverImages[28]);
             } else if (check === true){
                 $("#nursingHover > img").attr("src", "");
                 $("#nursingHover").removeClass("hoverOpen");
@@ -1999,7 +2094,7 @@ function initMap() {
                 closeAllHover();
                 oviattHoverCard.open(map, oviattMarker);
                 $("#oviattHover").addClass("hoverOpen");
-                $("#oviattHover > img").attr("src", "images/campuspictures/oviatt.jpeg");
+                $("#oviattHover > img").attr("src", markerHoverImages[29]);
             } else if (check === true){
                 $("#oviattHover > img").attr("src", "");
                 $("#oviattHover").removeClass("hoverOpen");
@@ -3237,7 +3332,7 @@ function initMap() {
         var elevenHoverCard = new google.maps.InfoWindow({
             content: elevenHover,
         });
-        elevenMarker.addListener('click', function(){
+        function elevenMarkerOpenClose(){
             var check = $("#elevenHover").hasClass("hoverOpen");
             if (check === false){
                 closeAllHover();
@@ -3247,13 +3342,16 @@ function initMap() {
                 $("#elevenHover").removeClass("hoverOpen");
                 closeAllHover();
             }
+        }
+        elevenMarker.addListener('click', function(){
+            elevenMarkerOpenClose();
         });
         // lot 35 hover
         var thirtyfiveHover = document.getElementById('thirtyfiveHover');
         var thirtyfiveHoverCard = new google.maps.InfoWindow({
             content: thirtyfiveHover,
         });
-        thirtyfiveMarker.addListener('click', function(){
+        function thirtyfiveMarkerOpenClose(){
             var check = $("#thirtyfiveHover").hasClass("hoverOpen");
             if (check === false){
                 closeAllHover();
@@ -3263,6 +3361,9 @@ function initMap() {
                 $("#thirtyfiveHover").removeClass("hoverOpen");
                 closeAllHover();
             }
+        }
+        thirtyfiveMarker.addListener('click', function(){
+            thirtyfiveMarkerOpenClose();
         });
 
         // lot 27 hover
@@ -3270,7 +3371,7 @@ function initMap() {
         var twentysevenHoverCard = new google.maps.InfoWindow({
             content: twentysevenHover,
         });
-        twentysevenMarker.addListener('click', function(){
+        function twentysevenMarkerOpenClose(){
             var check = $("#twentysevenHover").hasClass("hoverOpen");
             if (check === false){
                 closeAllHover();
@@ -3280,6 +3381,9 @@ function initMap() {
                 $("#twentysevenHover").removeClass("hoverOpen");
                 closeAllHover();
             }
+        }
+        twentysevenMarker.addListener('click', function(){
+            twentysevenMarkerOpenClose();
         });
 
         // lot 21 hover
@@ -3287,7 +3391,7 @@ function initMap() {
         var twentyoneHoverCard = new google.maps.InfoWindow({
             content: twentyoneHover,
         });
-        twentyoneMarker.addListener('click', function(){
+        function twentyoneMarkerOpenClose(){
             var check = $("#twentyoneHover").hasClass("hoverOpen");
             if (check === false){
                 closeAllHover();
@@ -3297,6 +3401,9 @@ function initMap() {
                 $("#twentyoneHover").removeClass("hoverOpen");
                 closeAllHover();
             }
+        }
+        twentyoneMarker.addListener('click', function(){
+            twentyoneMarkerOpenClose();
         });
 
         // lot 26 hover
@@ -3304,7 +3411,7 @@ function initMap() {
         var twentysixHoverCard = new google.maps.InfoWindow({
             content: twentysixHover,
         });
-        twentysixMarker.addListener('click', function(){
+        function twentysixMarkerOpenClose(){
             var check = $("#twentysixHover").hasClass("hoverOpen");
             if (check === false){
                 closeAllHover();
@@ -3314,6 +3421,9 @@ function initMap() {
                 $("#twentysixHover").removeClass("hoverOpen");
                 closeAllHover();
             }
+        }
+        twentysixMarker.addListener('click', function(){
+            twentysixMarkerOpenClose();
         });
 
         // lot 4 hover
@@ -3321,7 +3431,7 @@ function initMap() {
         var fourHoverCard = new google.maps.InfoWindow({
             content: fourHover,
         });
-        fourMarker.addListener('click', function(){
+        function fourMarkerOpenClose(){
             var check = $("#fourHover").hasClass("hoverOpen");
             if (check === false){
                 closeAllHover();
@@ -3331,6 +3441,9 @@ function initMap() {
                 $("#fourHover").removeClass("hoverOpen");
                 closeAllHover();
             }
+        }
+        fourMarker.addListener('click', function(){
+            fourMarkerOpenClose();
         });
 
         // lot 4a hover
@@ -3338,7 +3451,7 @@ function initMap() {
         var fouraHoverCard = new google.maps.InfoWindow({
             content: fouraHover,
         });
-        fouraMarker.addListener('click', function(){
+        function fouraMarkerOpenClose(){
             var check = $("#fouraHover").hasClass("hoverOpen");
             if (check === false){
                 closeAllHover();
@@ -3348,6 +3461,9 @@ function initMap() {
                 $("#fouraHover").removeClass("hoverOpen");
                 closeAllHover();
             }
+        }
+        fouraMarker.addListener('click', function(){
+            fouraMarkerOpenClose();
         });
 
         // lot 16 hover
@@ -3355,7 +3471,7 @@ function initMap() {
         var sixteenHoverCard = new google.maps.InfoWindow({
             content: sixteenHover,
         });
-        sixteenMarker.addListener('click', function(){
+        function sixteenMarkerOpenClose(){
             var check = $("#sixteenHover").hasClass("hoverOpen");
             if (check === false){
                 closeAllHover();
@@ -3365,6 +3481,9 @@ function initMap() {
                 $("#sixteenHover").removeClass("hoverOpen");
                 closeAllHover();
             }
+        }
+        sixteenMarker.addListener('click', function(){
+            sixteenMarkerOpenClose();
         });
 
         // lot 17 hover
@@ -3372,7 +3491,8 @@ function initMap() {
         var seventeenHoverCard = new google.maps.InfoWindow({
             content: seventeenHover,
         });
-        seventeenMarker.addListener('click', function(){
+
+        function seventeenMarkerOpenClose(){
             var check = $("#seventeenHover").hasClass("hoverOpen");
             if (check === false){
                 closeAllHover();
@@ -3382,6 +3502,9 @@ function initMap() {
                 $("#seventeenHover").removeClass("hoverOpen");
                 closeAllHover();
             }
+        }
+        seventeenMarker.addListener('click', function(){
+            seventeenMarkerOpenClose();
         });
 
         // lot 29 hover
@@ -3389,7 +3512,7 @@ function initMap() {
         var twentynineHoverCard = new google.maps.InfoWindow({
             content: twentynineHover,
         });
-            twentynineMarker.addListener('click', function(){
+        function twentynineMarkerOpenClose(){
             var check = $("#twentynineHover").hasClass("hoverOpen");
             if (check === false){
                   closeAllHover();
@@ -3399,6 +3522,9 @@ function initMap() {
                   $("#twentynineHover").removeClass("hoverOpen");
                   closeAllHover();
               }
+        }
+        twentynineMarker.addListener('click', function(){
+            twentynineMarkerOpenClose();
         });
 
         // lot 25 hover
@@ -3406,7 +3532,7 @@ function initMap() {
         var twentyfiveHoverCard = new google.maps.InfoWindow({
             content: twentyfiveHover,
         });
-        twentyfiveMarker.addListener('click', function(){
+        function twentyfiveMarkerOpenClose(){
             var check = $("#twentyfiveHover").hasClass("hoverOpen");
             if (check === false){
                 closeAllHover();
@@ -3416,6 +3542,9 @@ function initMap() {
                 $("#twentyfiveHover").removeClass("hoverOpen");
                 closeAllHover();
             }
+        }
+        twentyfiveMarker.addListener('click', function(){
+            twentyfiveMarkerOpenClose();
         });
 
         // lot 8 hover
@@ -3423,16 +3552,19 @@ function initMap() {
         var eightHoverCard = new google.maps.InfoWindow({
             content: eightHover,
         });
-        eightMarker.addListener('click', function(){
+        function eightMarkerOpenClose(){
             var check = $("#eightHover").hasClass("hoverOpen");
-                if (check === false){
-                closeAllHover();
-                eightHoverCard.open(map, eightMarker);
-                $("#eightHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#eightHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
+            if (check === false){
+            closeAllHover();
+            eightHoverCard.open(map, eightMarker);
+            $("#eightHover").addClass("hoverOpen");
+        } else if (check === true){
+            $("#eightHover").removeClass("hoverOpen");
+            closeAllHover();
+        }
+        }
+        eightMarker.addListener('click', function(){
+            eightMarkerOpenClose();
         });
 
         // lot 33 hover
@@ -3440,7 +3572,7 @@ function initMap() {
         var thirtythreeHoverCard = new google.maps.InfoWindow({
             content: thirtythreeHover,
         });
-        thirtythreeMarker.addListener('click', function(){
+        function thirtythreeMarkerOpenClose(){
             var check = $("#thirtythreeHover").hasClass("hoverOpen");
             if (check === false){
                 closeAllHover();
@@ -3450,6 +3582,9 @@ function initMap() {
                 $("#thirtythreeHover").removeClass("hoverOpen");
                 closeAllHover();
             }
+        }
+        thirtythreeMarker.addListener('click', function(){
+            thirtythreeMarkerOpenClose();
         });
 
         // lot 34 hover
@@ -3457,7 +3592,7 @@ function initMap() {
         var thirtyfourHoverCard = new google.maps.InfoWindow({
             content: thirtyfourHover,
         });
-        thirtyfourMarker.addListener('click', function(){
+        function thirtyfourMarkerOpenClose(){
             var check = $("#thirtyfourHover").hasClass("hoverOpen");
             if (check === false){
                 closeAllHover();
@@ -3467,6 +3602,9 @@ function initMap() {
                 $("#thirtyfourHover").removeClass("hoverOpen");
                 closeAllHover();
             }
+        }
+        thirtyfourMarker.addListener('click', function(){
+            thirtyfourMarkerOpenClose();
         });
 
         // lot 28 hover
@@ -3474,7 +3612,7 @@ function initMap() {
         var twentyeightHoverCard = new google.maps.InfoWindow({
             content: twentyeightHover,
         });
-        twentyeightMarker.addListener('click', function(){
+        function twentyeightMarkerOpenClose(){
             var check = $("#twentyeightHover").hasClass("hoverOpen");
             if (check === false){
                 closeAllHover();
@@ -3484,6 +3622,9 @@ function initMap() {
                 $("#twentyeightHover").removeClass("hoverOpen");
                 closeAllHover();
             }
+        }
+        twentyeightMarker.addListener('click', function(){
+            twentyeightMarkerOpenClose();
         });
 
         // lot 23 hover
@@ -3491,7 +3632,7 @@ function initMap() {
         var twentythreeHoverCard = new google.maps.InfoWindow({
             content: twentythreeHover,
         });
-        twentythreeMarker.addListener('click', function(){
+        function twentythreeMarkerOpenClose(){
             var check = $("#twentythreeHover").hasClass("hoverOpen");
             if (check === false){
                 closeAllHover();
@@ -3501,6 +3642,9 @@ function initMap() {
                 $("#twentythreeHover").removeClass("hoverOpen");
                 closeAllHover();
             }
+        }
+        twentythreeMarker.addListener('click', function(){
+            twentythreeMarkerOpenClose();
         });
 
         // lot 14a hover
@@ -3508,7 +3652,7 @@ function initMap() {
         var fourteenaHoverCard = new google.maps.InfoWindow({
             content: fourteenaHover,
         });
-        fourteenaMarker.addListener('click', function(){
+        function fourteenaMarkerOpenClose(){
             var check = $("#fourteenaHover").hasClass("hoverOpen");
             if (check === false){
                 closeAllHover();
@@ -3518,6 +3662,9 @@ function initMap() {
                 $("#fourteenaHover").removeClass("hoverOpen");
                 closeAllHover();
             }
+        }
+        fourteenaMarker.addListener('click', function(){
+            fourteenaMarkerOpenClose();
         });
 
         // lot 14b hover
@@ -3525,7 +3672,7 @@ function initMap() {
         var fourteenbHoverCard = new google.maps.InfoWindow({
             content: fourteenbHover,
         });
-        fourteenbMarker.addListener('click', function(){
+        function fourteenbMarkerOpenClose(){
             var check = $("#fourteenbHover").hasClass("hoverOpen");
             if (check === false){
                 closeAllHover();
@@ -3535,6 +3682,9 @@ function initMap() {
                 $("#fourteenbHover").removeClass("hoverOpen");
                 closeAllHover();
             }
+        }
+        fourteenbMarker.addListener('click', function(){
+            fourteenbMarkerOpenClose();
         });
 
         // lot 14c hover
@@ -3542,7 +3692,7 @@ function initMap() {
         var fourteencHoverCard = new google.maps.InfoWindow({
             content: fourteencHover,
         });
-        fourteencMarker.addListener('click', function(){
+        function fourteencMarkerOpenClose(){
             var check = $("#fourteencHover").hasClass("hoverOpen");
             if (check === false){
                 closeAllHover();
@@ -3552,6 +3702,9 @@ function initMap() {
                 $("#fourteencHover").removeClass("hoverOpen");
                 closeAllHover();
                 }
+        }
+        fourteencMarker.addListener('click', function(){
+            fourteencMarkerOpenClose();
         });
 
         // lot 7 hover
@@ -3559,8 +3712,8 @@ function initMap() {
         var sevenHoverCard = new google.maps.InfoWindow({
             content: sevenHover,
         });
-        sevenMarker.addListener('click', function(){
-        var check = $("#sevenHover").hasClass("hoverOpen");
+        function sevenMarkerOpenClose(){
+            var check = $("#sevenHover").hasClass("hoverOpen");
             if (check === false){
                 closeAllHover();
                 sevenHoverCard.open(map, sevenMarker);
@@ -3569,6 +3722,9 @@ function initMap() {
                 $("#sevenHover").removeClass("hoverOpen");
                 closeAllHover();
             }
+        }
+        sevenMarker.addListener('click', function(){
+            sevenMarkerOpenClose();
         });
 
         // lot 5a hover
@@ -3576,7 +3732,7 @@ function initMap() {
         var fiveaHoverCard = new google.maps.InfoWindow({
             content: fiveaHover,
         });
-        fiveaMarker.addListener('click', function(){
+        function fiveaMarkerOpenClose(){
             var check = $("#fiveaHover").hasClass("hoverOpen");
             if (check === false){
                 closeAllHover();
@@ -3586,6 +3742,9 @@ function initMap() {
                 $("#fiveaHover").removeClass("hoverOpen");
                 closeAllHover();
             }
+        }
+        fiveaMarker.addListener('click', function(){
+            fiveaMarkerOpenClose();
         });
 
         // lot 5 hover
@@ -3593,7 +3752,7 @@ function initMap() {
         var fiveHoverCard = new google.maps.InfoWindow({
             content: fiveHover,
         });
-        fiveMarker.addListener('click', function(){
+        function fiveMarkerOpenClose(){
             var check = $("#fiveHover").hasClass("hoverOpen");
             if (check === false){
                 closeAllHover();
@@ -3603,6 +3762,9 @@ function initMap() {
                 $("#fiveHover").removeClass("hoverOpen");
                 closeAllHover();
             }
+        }
+        fiveMarker.addListener('click', function(){
+            fiveMarkerOpenClose();
         });
 
         // lot 7a hover
@@ -3610,7 +3772,7 @@ function initMap() {
         var sevenaHoverCard = new google.maps.InfoWindow({
             content: sevenaHover,
         });
-        sevenaMarker.addListener('click', function(){
+        function sevenaMarkerOpenClose(){
             var check = $("#sevenaHover").hasClass("hoverOpen");
             if (check === false){
                 closeAllHover();
@@ -3620,6 +3782,9 @@ function initMap() {
                 $("#sevenaHover").removeClass("hoverOpen");
                 closeAllHover();
             }
+        }
+        sevenaMarker.addListener('click', function(){
+            sevenaMarkerOpenClose();
         });
 
         // lot 15 hover
@@ -3627,16 +3792,19 @@ function initMap() {
         var fifteenHoverCard = new google.maps.InfoWindow({
             content: fifteenHover,
         });
-        fifteenMarker.addListener('click', function(){
+        function fifteenMarkerOpenClose(){
             var check = $("#fifteenHover").hasClass("hoverOpen");
-                if (check === false){
-                closeAllHover();
-                fifteenHoverCard.open(map, fifteenMarker);
-                $("#fifteenHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#fifteenHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
+            if (check === false){
+            closeAllHover();
+            fifteenHoverCard.open(map, fifteenMarker);
+            $("#fifteenHover").addClass("hoverOpen");
+        } else if (check === true){
+            $("#fifteenHover").removeClass("hoverOpen");
+            closeAllHover();
+        }
+        }
+        fifteenMarker.addListener('click', function(){
+            fifteenMarkerOpenClose();
         });
 
         // lot 32 hover
@@ -3644,7 +3812,7 @@ function initMap() {
         var thirtytwoHoverCard = new google.maps.InfoWindow({
             content: thirtytwoHover,
         });
-        thirtytwoMarker.addListener('click', function(){
+        function thirtytwoMarkerOpenClose(){
             var check = $("#thirtytwoHover").hasClass("hoverOpen");
             if (check === false){
                 closeAllHover();
@@ -3654,6 +3822,9 @@ function initMap() {
                 $("#thirtytwoHover").removeClass("hoverOpen");
                 closeAllHover();
             }
+        }
+        thirtytwoMarker.addListener('click', function(){
+            thirtytwoMarkerOpenClose();
         });
 
         // lot 13 hover
@@ -3661,7 +3832,7 @@ function initMap() {
         var thirteenHoverCard = new google.maps.InfoWindow({
             content: thirteenHover,
         });
-        thirteenMarker.addListener('click', function(){
+        function thirteenMarkerOpenClose(){
             var check = $("#thirteenHover").hasClass("hoverOpen");
             if (check === false){
                 closeAllHover();
@@ -3671,6 +3842,9 @@ function initMap() {
                 $("#thirteenHover").removeClass("hoverOpen");
                 closeAllHover();
             }
+        }
+        thirteenMarker.addListener('click', function(){
+            thirteenMarkerOpenClose();
         });
 
         // lot 12 hover
@@ -3678,7 +3852,7 @@ function initMap() {
         var twelveHoverCard = new google.maps.InfoWindow({
             content: twelveHover,
         });
-        twelveMarker.addListener('click', function(){
+        function twelveMarkerOpenClose(){
             var check = $("#twelveHover").hasClass("hoverOpen");
             if (check === false){
                 closeAllHover();
@@ -3688,6 +3862,9 @@ function initMap() {
                 $("#twelveHover").removeClass("hoverOpen");
                 closeAllHover();
             }
+        }
+        twelveMarker.addListener('click', function(){
+            twelveMarkerOpenClose();
         });
 
         // lot 6a hover
@@ -3695,7 +3872,7 @@ function initMap() {
         var sixaHoverCard = new google.maps.InfoWindow({
             content: sixaHover,
         });
-        sixaMarker.addListener('click', function(){
+        function sixaMarkerOpenClose(){
             var check = $("#sixaHover").hasClass("hoverOpen");
             if (check === false){
                 closeAllHover();
@@ -3705,6 +3882,9 @@ function initMap() {
                 $("#sixaHover").removeClass("hoverOpen");
                 closeAllHover();
             }
+        }
+        sixaMarker.addListener('click', function(){
+            sixaMarkerOpenClose();
         });
 
         // lot 6 hover
@@ -3712,7 +3892,7 @@ function initMap() {
         var sixHoverCard = new google.maps.InfoWindow({
             content: sixHover,
         });
-        sixMarker.addListener('click', function(){
+        function sixMarkerOpenClose(){
             var check = $("#sixHover").hasClass("hoverOpen");
             if (check === false){
                 closeAllHover();
@@ -3722,6 +3902,9 @@ function initMap() {
                 $("#sixHover").removeClass("hoverOpen");
                 closeAllHover();
             }
+        }
+        sixMarker.addListener('click', function(){
+            sixMarkerOpenClose();
         });
 
         // lot 10 hover
@@ -3729,7 +3912,7 @@ function initMap() {
         var tenHoverCard = new google.maps.InfoWindow({
             content: tenHover,
         });
-        tenMarker.addListener('click', function(){
+        function tenMarkerOpenClose(){
             var check = $("#tenHover").hasClass("hoverOpen");
             if (check === false){
                 closeAllHover();
@@ -3739,6 +3922,9 @@ function initMap() {
                 $("#tenHover").removeClass("hoverOpen");
                 closeAllHover();
             }
+        }
+        tenMarker.addListener('click', function(){
+            tenMarkerOpenClose();
         });
 
         // lot 9a hover
@@ -3746,7 +3932,7 @@ function initMap() {
         var nineaHoverCard = new google.maps.InfoWindow({
             content: nineaHover,
         });
-        nineaMarker.addListener('click', function(){
+        function nineaMarkerOpenClose(){
             var check = $("#nineaHover").hasClass("hoverOpen");
             if (check === false){
                 closeAllHover();
@@ -3756,6 +3942,9 @@ function initMap() {
                 $("#nineaHover").removeClass("hoverOpen");
                 closeAllHover();
             }
+        }
+        nineaMarker.addListener('click', function(){
+            nineaMarkerOpenClose();
         });
 
         // lot 9 hover
@@ -3763,7 +3952,7 @@ function initMap() {
         var nineHoverCard = new google.maps.InfoWindow({
             content: nineHover,
         });
-        nineMarker.addListener('click', function(){
+        function nineMarkerOpenClose(){
             var check = $("#nineHover").hasClass("hoverOpen");
             if (check === false){
                 closeAllHover();
@@ -3773,6 +3962,9 @@ function initMap() {
                 $("#nineHover").removeClass("hoverOpen");
                 closeAllHover();
             }
+        }
+        nineMarker.addListener('click', function(){
+            nineMarkerOpenClose();
         });
 
         // lot 18 hover
@@ -3780,7 +3972,7 @@ function initMap() {
         var eighteenHoverCard = new google.maps.InfoWindow({
             content: eighteenHover,
         });
-        eighteenMarker.addListener('click', function(){
+        function eighteenMarkerOpenClose(){
             var check = $("#eighteenHover").hasClass("hoverOpen");
             if (check === false){
                 closeAllHover();
@@ -3790,6 +3982,9 @@ function initMap() {
                 $("#eighteenHover").removeClass("hoverOpen");
                 closeAllHover();
             }
+        }
+        eighteenMarker.addListener('click', function(){
+            eighteenMarkerOpenClose();
         });
 
         // lot 30 hover
@@ -3797,7 +3992,7 @@ function initMap() {
         var thirtyHoverCard = new google.maps.InfoWindow({
             content: thirtyHover,
         });
-        thirtyMarker.addListener('click', function(){
+        function thirtyMarkerOpenClose(){
             var check = $("#thirtyHover").hasClass("hoverOpen");
             if (check === false){
                 closeAllHover();
@@ -3807,6 +4002,9 @@ function initMap() {
                 $("#thirtyHover").removeClass("hoverOpen");
                 closeAllHover();
             }
+        }
+        thirtyMarker.addListener('click', function(){
+            thirtyMarkerOpenClose();
         });
 
         // lot 39 hover
@@ -3814,7 +4012,7 @@ function initMap() {
         var thirtynineHoverCard = new google.maps.InfoWindow({
             content: thirtynineHover,
         });
-        thirtynineMarker.addListener('click', function(){
+        function thirtynineMarkerOpenClose(){
             var check = $("#thirtynineHover").hasClass("hoverOpen");
             if (check === false){
                 closeAllHover();
@@ -3824,6 +4022,9 @@ function initMap() {
                 $("#thirtynineHover").removeClass("hoverOpen");
                 closeAllHover();
             }
+        }
+        thirtynineMarker.addListener('click', function(){
+            thirtynineMarkerOpenClose();
         });
 
 
@@ -3954,15 +4155,7 @@ function initMap() {
         });
 
         acAccEntMarker.addListener('click', function(){
-            var check = $("#acHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                acHoverCard.open(map,acAccEntMarker);
-                $("#acHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#acHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
+            acMarkerOpenClose();
         });
 
         blackhawkAccEntMarker.addListener('click', function(){
@@ -4231,165 +4424,53 @@ function initMap() {
         });
         //  hover event listeners for accessible parking here
         elevenAccParMarker.addListener('click', function(){
-            var check = $("#elevenHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                elevenHoverCard.open(map, elevenAccParMarker);
-                $("#elevenHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#elevenHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
+            elevenMarkerOpenClose();
         });
         fourAccParMarker.addListener('click', function(){
-            var check = $("#fourHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                fourHoverCard.open(map, fourAccParMarker);
-                $("#fourHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#fourHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
+            fourMarkerOpenClose();
         });
         fouraAccParMarker.addListener('click', function(){
-            var check = $("#fouraHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                fouraHoverCard.open(map, fouraAccParMarker);
-                $("#fouraHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#fouraHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
+            fouraMarkerOpenClose();
         });
         sixteenAccParMarker.addListener('click', function(){
-            var check = $("#sixteenHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                sixteenHoverCard.open(map, sixteenAccParMarker);
-                $("#sixteenHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#sixteenHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
+            sixteenMarkerOpenClose();
         });
         seventeenAccParMarker.addListener('click', function(){
-            var check = $("#seventeenHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                seventeenHoverCard.open(map, seventeenAccParMarker);
-                $("#seventeenHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#seventeenHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
+            seventeenMarkerOpenClose();
         });
         twentynineAccParMarker.addListener('click', function(){
-            var check = $("#twentynineHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                twentynineHoverCard.open(map, twentynineAccParMarker);
-                $("#twentynineHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#twentynineHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
+            twentynineMarkerOpenClose();
         });
         twentyfiveAccParMarker.addListener('click', function(){
-            var check = $("#twentyfiveHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                twentyfiveHoverCard.open(map, twentyfiveAccParMarker);
-                $("#twentyfiveHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#twentyfiveHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
+            twentyfiveMarkerOpenClose();
         });
         thirtythreeAccParMarker.addListener('click', function(){
-            var check = $("#thirtythreeHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                thirtythreeHoverCard.open(map, thirtythreeAccParMarker);
-                $("#thirtythreeHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#thirtythreeHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
+            thirtythreeMarkerOpenClose();
         });
         fourteenaAccParMarker.addListener('click', function(){
-            var check = $("#fourteenaHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                fourteenaHoverCard.open(map, fourteenaAccParMarker);
-                $("#fourteenaHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#fourteenaHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
+            fourteenaMarkerOpenClose();
         });
         sevenaAccParMarker.addListener('click', function(){
-            var check = $("#sevenaHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                sevenaHoverCard.open(map, sevenaAccParMarker);
-                $("#sevenaHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#sevenaHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
+            sevenaMarkerOpenClose();
         });
         thirteenAccParMarker.addListener('click', function(){
-            var check = $("#thirteenHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                thirteenHoverCard.open(map, thirteenAccParMarker);
-                $("#thirteenHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#thirteenHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
+            thirteenMarkerOpenClose();
         });
         thirtyfourAccParMarker.addListener('click', function(){
-            var check = $("#thirtyfourHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                thirtyfourHoverCard.open(map, thirtyfourAccParMarker);
-                $("#thirtyfourHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#thirtyfourHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
+            thirtyfourMarkerOpenClose();
         });
         twentyeightAccParMarker.addListener('click', function(){
-            var check = $("#twentyeightHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                twentyeightHoverCard.open(map, twentyeightAccParMarker);
-                $("#twentyeightHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#twentyeightHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
+            twentyeightMarkerOpenClose();
         });
         twentythreeAccParMarker.addListener('click', function(){
-            var check = $("#twentythreeHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                twentythreeHoverCard.open(map, twentythreeAccParMarker);
-                $("#twentythreeHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#twentythreeHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
+            twentythreeMarkerOpenClose();
         });
         // womens center
         var womensCenterHover = document.getElementById('womensCenterHover');
         var womensCenterHoverCard = new google.maps.InfoWindow({
             content: womensCenterHover,
         });
-        womensCenterMarker.addListener('click', function(){
+        function womensCenterMarkerOpenClose(){
             var check = $("#womensCenterHover").hasClass("hoverOpen");
             if (check === false){
                 closeAllHover();
@@ -4399,87 +4480,34 @@ function initMap() {
                 $("#womensCenterHover").removeClass("hoverOpen");
                 closeAllHover();
             }
+        }
+        womensCenterMarker.addListener('click', function(){
+            womensCenterMarkerOpenClose();
         });
 
         fifteenAccParMarker.addListener('click', function(){
-            var check = $("#fifteenHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                fifteenHoverCard.open(map, fifteenAccParMarker);
-                $("#fifteenHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#fifteenHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
+            fifteenMarkerOpenClose();
         });
         thirtytwoAccParMarker.addListener('click', function(){
-            var check = $("#thirtytwoHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                thirtytwoHoverCard.open(map, thirtytwoAccParMarker);
-                $("#thirtytwoHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#thirtytwoHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
+            thirtytwoMarkerOpenClose();
         });
 
         // parking ramp
 
         tenAccParMarker.addListener('click', function(){
-            var check = $("#tenHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                tenHoverCard.open(map, tenAccParMarker);
-                $("#tenHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#tenHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
+            tenMarkerOpenClose();
         });
         twelveAccParMarker.addListener('click', function(){
-            var check = $("#twelveHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                twelveHoverCard.open(map, twelveAccParMarker);
-                $("#twelveHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#twelveHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
+            twelveMarkerOpenClose();
         });
         sixaAccParMarker.addListener('click', function(){
-            var check = $("#sixaHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                sixaHoverCard.open(map, sixaAccParMarker);
-                $("#sixaHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#sixaHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
+            sixaMarkerOpenClose();
         });
         sixAccParMarker.addListener('click', function(){
-            var check = $("#sixHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                sixHoverCard.open(map, sixAccParMarker);
-                $("#sixHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#sixHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
+            sixMarkerOpenClose();
         });
         eighteenAccParMarker.addListener('click', function(){
-            var check = $("#eighteenHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                eighteenHoverCard.open(map, eighteenAccParMarker);
-                $("#eighteenHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#eighteenHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
+            eighteenMarkerOpenClose();
         });
 
         // titan one
@@ -4487,7 +4515,7 @@ function initMap() {
         var titanOneHoverCard = new google.maps.InfoWindow({
             content: titanOneHover,
         });
-        titanOneMarker.addListener('click', function(){
+        function titanOneMarkerOpenClose(){
             var check = $("#titanOneHover").hasClass("hoverOpen");
             if (check === false){
                 closeAllHover();
@@ -4497,13 +4525,16 @@ function initMap() {
                 $("#titanOneHover").removeClass("hoverOpen");
                 closeAllHover();
             }
+        }
+        titanOneMarker.addListener('click', function(){
+            titanOneMarkerOpenClose();
         });
         // titan two
         var titanTwoHover = document.getElementById('titanTwoHover');
         var titanTwoHoverCard = new google.maps.InfoWindow({
             content: titanTwoHover,
         });
-        titanTwoMarker.addListener('click', function(){
+        function titanTwoMarkerOpenClose(){
             var check = $("#titanTwoHover").hasClass("hoverOpen");
             if (check === false){
                 closeAllHover();
@@ -4513,6 +4544,9 @@ function initMap() {
                 $("#titanTwoHover").removeClass("hoverOpen");
                 closeAllHover();
             }
+        }
+        titanTwoMarker.addListener('click', function(){
+            titanTwoMarkerOpenClose();
         });
 
 
@@ -5065,15 +5099,7 @@ function initMap() {
 
         // gender hover
         acGenderMarker.addListener('click', function(){
-            var check = $("#acHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                acHoverCard.open(map,acGenderMarker);
-                $("#acHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#acHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
+            acMarkerOpenClose();
         });
 
         blackhawkGenderMarker.addListener('click', function(){
@@ -5245,15 +5271,7 @@ function initMap() {
         });
 
         acAccaFMarker.addListener('click', function(){
-            var check = $("#acHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                acHoverCard.open(map,acAccaFMarker);
-                $("#acHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#acHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
+            acMarkerOpenClose();
         });
 
         ceramicsAccaFMarker.addListener('click', function(){
