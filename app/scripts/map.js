@@ -471,6 +471,7 @@ function initMap() {
               $("#albeeHover > img").attr("src"," images/campuspictures/albeehall.jpeg");
           } else if (check === true){
               $("#albeeHover").removeClass("hoverOpen");
+              $("#albeeHover > img").attr("src","");
               closeAllHover();
           }
         }
@@ -579,7 +580,9 @@ function initMap() {
                 closeAllHover();
                 alumniHoverCard.open(map, alumniMarker);
                 $("#alumniHover").addClass("hoverOpen");
+                $("#alumniHover > img").attr("src", "images/campuspictures/awcc-building.jpg");
             } else if (check === true){
+                $("#alumniHover > img").attr("src", "");
                 $("#alumniHover").removeClass("hoverOpen");
                 closeAllHover();
             }
@@ -633,7 +636,9 @@ function initMap() {
                 closeAllHover();
                 acHoverCard.open(map, acMarker);
                 $("#acHover").addClass("hoverOpen");
+                $("#acHover > img").attr("src", "images/campuspictures/artscommunications.jpeg");
             } else if (check === true){
+                $("#acHover > img").attr("src", "");
                 $("#acHover").removeClass("hoverOpen");
                 closeAllHover();
             }
@@ -687,7 +692,9 @@ function initMap() {
                 closeAllHover();
                 athleticHoverCard.open(map, athleticMarker);
                 $("#athleticHover").addClass("hoverOpen");
+                $("#athleticHover > img").attr("src", "images/campuspictures/athleticservice.jpeg");
             } else if (check === true){
+                $("#athleticHover > img").attr("src", "");
                 $("#athleticHover").removeClass("hoverOpen");
                 closeAllHover();
             }
@@ -726,7 +733,9 @@ function initMap() {
                 closeAllHover();
                 blackhawkHoverCard.open(map, blackhawkMarker);
                 $("#blackhawkHover").addClass("hoverOpen");
+                $("#blackhawkHover > img").attr("src", "images/campuspictures/blackhawk.jpeg");
             } else if (check === true){
+                $("#blackhawkHover > img").attr("src", "");
                 $("#blackhawkHover").removeClass("hoverOpen");
                 closeAllHover();
             }
@@ -807,7 +816,9 @@ function initMap() {
                 closeAllHover();
                 biodigesterHoverCard.open(map, biodigesterMarker);
                 $("#biodigesterHover").addClass("hoverOpen");
+                $("#biodigesterHover > img").attr("images/campuspictures/biodigester.jpg");
             } else if (check === true){
+                $("#biodigesterHover > img").attr("");
                 $("#biodigesterHover").removeClass("hoverOpen");
                 closeAllHover();
             }
@@ -848,7 +859,9 @@ function initMap() {
                 closeAllHover();
                 buckstaffHoverCard.open(map, buckstaffMarker);
                 $("#buckstaffHover").addClass("hoverOpen");
+                $("#buckstaffHover > img").attr("src", "images/campuspictures/buckstaff.jpeg");
             } else if (check === true){
+                $("#buckstaffHover > img").attr("src", "");
                 $("#buckstaffHover").removeClass("hoverOpen");
                 closeAllHover();
             }
@@ -889,7 +902,9 @@ function initMap() {
                 closeAllHover();
                 equityHoverCard.open(map, equityMarker);
                 $("#equityHover").addClass("hoverOpen");
+                $("#equityHover > img").attr("src", "images/campuspictures/centerforequity.jpeg");
             } else if (check === true){
+                $("#equityHover > img").attr("src", "");
                 $("#equityHover").removeClass("hoverOpen");
                 closeAllHover();
             }
@@ -943,7 +958,9 @@ function initMap() {
                 closeAllHover();
                 campusHoverCard.open(map, campusMarker);
                 $("#campusHover").addClass("hoverOpen");
+                $("#campusHover > img").attr("src", "images/campuspictures/campus-services.jpg");
             } else if (check === true){
+                $("#campusHover > img").attr("src", "");
                 $("#campusHover").removeClass("hoverOpen");
                 closeAllHover();
             }
@@ -983,7 +1000,9 @@ function initMap() {
                 closeAllHover();
                 ceramicsHoverCard.open(map, ceramicsMarker);
                 $("#ceramicsHover").addClass("hoverOpen");
+                $("#ceramicsHover > img").attr("src", "images/campuspictures/ceramicslab.jpeg");
             } else if (check === true){
+                $("#ceramicsHover > img").attr("src", "");
                 $("#ceramicsHover").removeClass("hoverOpen");
                 closeAllHover();
             }
@@ -1023,7 +1042,9 @@ function initMap() {
                 closeAllHover();
                 clowHoverCard.open(map, clowMarker);
                 $("#clowHover").addClass("hoverOpen");
+                $("#clowHover > img").attr("src", "images/campuspictures/clow.jpeg");
             } else if (check === true){
+                $("#clowHover > img").attr("src", "");
                 $("#clowHover").removeClass("hoverOpen");
                 closeAllHover();
             }
@@ -1082,7 +1103,9 @@ function initMap() {
                 closeAllHover();
                 gardensHoverCard.open(map, gardensMarker);
                 $("#gardensHover").addClass("hoverOpen");
+                $("#gardensHover > img").attr("src", "images/campuspictures/community-gardens.jpg");
             } else if (check === true){
+                $("#gardensHover > img").attr("src", "");
                 $("gardensHover").removeClass("hoverOpen");
                 closeAllHover();
             }
@@ -1123,7 +1146,9 @@ function initMap() {
                 closeAllHover();
                 dempseyHoverCard.open(map, dempseyMarker);
                 $("#dempseyHover").addClass("hoverOpen");
+                $("#dempseyHover > img").attr("src", "images/campuspictures/dempsey.jpeg");
             } else if (check === true){
+                $("#dempseyHover > img").attr("src", "");
                 $("#dempseyHover").removeClass("hoverOpen");
                 closeAllHover();
             }
@@ -1178,7 +1203,9 @@ function initMap() {
                 closeAllHover();
                 donnerHoverCard.open(map, donnerMarker);
                 $("#donnerHover").addClass("hoverOpen");
+                $("#donnerHover > img").attr("src", "images/campuspictures/donner.jpeg");
             } else if (check === true){
+                $("#donnerHover > img").attr("src", "");
                 $("#donnerHover").removeClass("hoverOpen");
                 closeAllHover();
             }
@@ -1219,7 +1246,9 @@ function initMap() {
                 closeAllHover();
                 eastHoverCard.open(map, eastMarker);
                 $("#eastHover").addClass("hoverOpen");
+                $("#eastHover > img").attr("src", "images/campuspictures/easthall.jpg");
             } else if (check === true){
+                $("#eastHover > img").attr("src", "");
                 $("#eastHover").removeClass("hoverOpen");
                 closeAllHover();
             }
@@ -1259,7 +1288,9 @@ function initMap() {
                 closeAllHover();
                 environmentalHoverCard.open(map, environmentalMarker);
                 $("#environmentalHover").addClass("hoverOpen");
+                $("#environmentalHover > img").attr("src", "images/campuspictures/aquaticstudiescenter.jpeg");
             } else if (check === true){
+                $("#environmentalHover > img").attr("src", "");
                 $("#environmentalHover").removeClass("hoverOpen");
                 closeAllHover();
             }
@@ -1299,7 +1330,9 @@ function initMap() {
                 closeAllHover();
                 evansHoverCard.open(map, evansMarker);
                 $("#evansHover").addClass("hoverOpen");
+                $("#evansHover > img").attr("src", "images/campuspictures/evans.jpeg");
             } else if (check === true){
+                $("#evansHover > img").attr("src", "");
                 $("#evansHover").removeClass("hoverOpen");
                 closeAllHover();
             }
@@ -1338,7 +1371,9 @@ function initMap() {
                 closeAllHover();
                 fletcherHoverCard.open(map, fletcherMarker);
                 $("#fletcherHover").addClass("hoverOpen");
+                $("#fletcherHover > img").attr("src", "images/campuspictures/fletcher.jpeg");
             } else if (check === true){
+                $("#fletcherHover > img").attr("src", "");
                 $("#fletcherHover").removeClass("hoverOpen");
                 closeAllHover();
             }
@@ -1378,7 +1413,9 @@ function initMap() {
                 closeAllHover();
                 fredricHoverCard.open(map, fredricMarker);
                 $("#fredricHover").addClass("hoverOpen");
+                $("#fredricHover > img").attr("src", "images/campuspictures/fredricmarch.jpeg");
             } else if (check === true){
+                $("#fredricHover > img").attr("src", "");
                 $("#fredricHover").removeClass("hoverOpen");
                 closeAllHover();
             }
@@ -1422,7 +1459,9 @@ function initMap() {
                 closeAllHover();
                 gruenhagenHoverCard.open(map, gruenhagenMarker);
                 $("#gruenhagenHover").addClass("hoverOpen");
+                $("#gruenhagenHover > img").attr("src", "images/campuspictures/gruenhagen.jpeg");
             } else if (check === true){
+                $("#gruenhagenHover > img").attr("src", "");
                 $("#gruenhagenHover").removeClass("hoverOpen");
                 closeAllHover();
             }
@@ -1463,7 +1502,9 @@ function initMap() {
                 closeAllHover();
                 halseyHoverCard.open(map, halseyMarker);
                 $("#halseyHover").addClass("hoverOpen");
+                $("#halseyHover > img").attr("src", "images/campuspictures/halsey.jpeg");
             } else if (check === true){
+                $("#halseyHover > img").attr("src", "");
                 $("#halseyHover").removeClass("hoverOpen");
                 closeAllHover();
             }
@@ -1534,7 +1575,9 @@ function initMap() {
                 closeAllHover();
                 harringtonHoverCard.open(map, harringtonMarker);
                 $("#harringtonHover").addClass("hoverOpen");
+                $("#harringtonHover > img").attr("src", "images/campuspictures/harrington.jpeg");
             } else if (check === true){
+                $("#harringtonHover > img").attr("src", "");
                 $("#harringtonHover").removeClass("hoverOpen");
                 closeAllHover();
             }
@@ -1588,7 +1631,9 @@ function initMap() {
                 closeAllHover();
                 heatingHoverCard.open(map, heatingMarker);
                 $("#heatingHover").addClass("hoverOpen");
+                $("#heatingHover > img").attr("src", "images/campuspictures/heatingplant.jpeg");
             } else if (check === true){
+                $("#heatingHover > img").attr("src", "");
                 $("#heatingHover").removeClass("hoverOpen");
                 closeAllHover();
             }
@@ -1643,7 +1688,9 @@ function initMap() {
                 closeAllHover();
                 parkingRampHoverCard.open(map, parkingRampMarker);
                 $("#parkingRampHover").addClass("hoverOpen");
+                $("#parkingRampHover > img").attr("src", "images/campuspictures/parkingramp.jpeg");
             } else if (check === true){
+                $("#parkingRampHover > img").attr("src", "");
                 $("#parkingRampHover").removeClass("hoverOpen");
                 closeAllHover();
             }
@@ -1701,7 +1748,9 @@ function initMap() {
                 closeAllHover();
                 horizonHoverCard.open(map, horizonMarker);
                 $("#horizonHover").addClass("hoverOpen");
+                $("#horizonHover > img").attr("src", "images/campuspictures/horizon.jpeg");
             } else if (check === true){
+                $("#horizonHover > img").attr("src", "");
                 $("#horizonHover").removeClass("hoverOpen");
                 closeAllHover();
             }
@@ -1755,7 +1804,9 @@ function initMap() {
                 closeAllHover();
                 kolfHoverCard.open(map, kolfMarker);
                 $("#kolfHover").addClass("hoverOpen");
+                $("#kolfHover > img").attr("src", "images/campuspictures/kolf.jpeg");
             } else if (check === true){
+                $("#kolfHover > img").attr("src", "");
                 $("#kolfHover").removeClass("hoverOpen");
                 closeAllHover();
             }
@@ -1809,7 +1860,9 @@ function initMap() {
                 closeAllHover();
                 lincolnHoverCard.open(map, lincolnMarker);
                 $("#lincolnHover").addClass("hoverOpen");
+                $("#lincolnHover > img").attr("src", "images/campuspictures/lincoln-hall.jpg");
             } else if (check === true){
+                $("#lincolnHover > img").attr("src", "");
                 $("#lincolnHover").removeClass("hoverOpen");
                 closeAllHover();
             }
@@ -1849,7 +1902,9 @@ function initMap() {
                 closeAllHover();
                 multiculturalHoverCard.open(map, multiculturalMarker);
                 $("#multiculturalHover").addClass("hoverOpen");
+                $("#multiculturalHover > img").attr("src", "images/campuspictures/multiculturaleducation.jpeg");
             } else if (check === true){
+                $("#multiculturalHover > img").attr("src", "");
                 $("#multiculturalHover").removeClass("hoverOpen");
                 closeAllHover();
             }
@@ -1889,7 +1944,9 @@ function initMap() {
                 closeAllHover();
                 nursingHoverCard.open(map, nursingMarker);
                 $("#nursingHover").addClass("hoverOpen");
+                $("#nursingHover > img").attr("src", "images/campuspictures/nursingeducation.jpeg");
             } else if (check === true){
+                $("#nursingHover > img").attr("src", "");
                 $("#nursingHover").removeClass("hoverOpen");
                 closeAllHover();
             }
@@ -1942,7 +1999,9 @@ function initMap() {
                 closeAllHover();
                 oviattHoverCard.open(map, oviattMarker);
                 $("#oviattHover").addClass("hoverOpen");
+                $("#oviattHover > img").attr("src", "images/campuspictures/oviatt.jpeg");
             } else if (check === true){
+                $("#oviattHover > img").attr("src", "");
                 $("#oviattHover").removeClass("hoverOpen");
                 closeAllHover();
             }
@@ -1982,7 +2041,9 @@ function initMap() {
                 closeAllHover();
                 pollockHoverCard.open(map, pollockMarker);
                 $("#pollockHover").addClass("hoverOpen");
+                $("#pollockHover > img").attr("src", "images/campuspictures/pollock.jpeg");
             } else if (check === true){
+                $("#pollockHover > img").attr("src", "");
                 $("#pollockHover").removeClass("hoverOpen");
                 closeAllHover();
             }
@@ -2020,7 +2081,9 @@ function initMap() {
                 closeAllHover();
                 polkHoverCard.open(map, polkMarker);
                 $("#polkHover").addClass("hoverOpen");
+                $("#polkHover > img").attr("src", "images/campuspictures/polk.jpeg");
             } else if (check === true){
+                $("#polkHover > img").attr("src", "");
                 $("#polkHover").removeClass("hoverOpen");
                 closeAllHover();
             }
@@ -2079,7 +2142,9 @@ function initMap() {
                 closeAllHover();
                 radfordHoverCard.open(map, radfordMarker);
                 $("#radfordHover").addClass("hoverOpen");
+                $("#radfordHover > img").attr("src", "images/campuspictures/radford.jpeg");
             } else if (check === true){
+                $("#radfordHover > img").attr("src", "");
                 $("#radfordHover").removeClass("hoverOpen");
                 closeAllHover();
             }
@@ -2119,7 +2184,9 @@ function initMap() {
                 closeAllHover();
                 reeveHoverCard.open(map, reeveMarker);
                 $("#reeveHover").addClass("hoverOpen");
+                $("#reeveHover > img").attr("src", "images/campuspictures/reeve.jpeg");
             } else if (check === true){
+                $("#reeveHover > img").attr("src", "");
                 $("#reeveHover").removeClass("hoverOpen");
                 closeAllHover();
             }
@@ -2221,7 +2288,9 @@ function initMap() {
                 closeAllHover();
                 sageHoverCard.open(map, sageMarker);
                 $("#sageHover").addClass("hoverOpen");
+                $("#sageHover > img").attr("src", "images/campuspictures/sage.jpeg");
             } else if (check === true){
+                $("#sageHover > img").attr("src", "");
                 $("#sageHover").removeClass("hoverOpen");
                 closeAllHover();
             }
@@ -2322,7 +2391,9 @@ function initMap() {
                 closeAllHover();
                 scottHoverCard.open(map, scottMarker);
                 $("#scottHover").addClass("hoverOpen");
+                $("#scottHover > img").attr("src", "images/campuspictures/scott.jpeg");
             } else if (check === true){
+                $("#scottHover > img").attr("src", "");
                 $("#scottHover").removeClass("hoverOpen");
                 closeAllHover();
             }
@@ -2379,7 +2450,9 @@ function initMap() {
                 closeAllHover();
                 stewartHoverCard.open(map, stewartMarker);
                 $("#stewartHover").addClass("hoverOpen");
+                $("#stewartHover > img").attr("src", "images/campuspictures/stewart.jpeg");
             } else if (check === true){
+                $("#stewartHover > img").attr("src", "");
                 $("#stewartHover").removeClass("hoverOpen");
                 closeAllHover();
             }
@@ -2420,7 +2493,9 @@ function initMap() {
                 closeAllHover();
                 recreationHoverCard.open(map, recreationMarker);
                 $("#recreationHover").addClass("hoverOpen");
+                $("#recreationHover > img").attr("src", "images/campuspictures/srwc.jpeg");
             } else if (check === true){
+                $("#recreationHover > img").attr("src", "");
                 $("#recreationHover").removeClass("hoverOpen");
                 closeAllHover();
             }
@@ -2483,7 +2558,9 @@ function initMap() {
                 closeAllHover();
                 successHoverCard.open(map, successMarker);
                 $("#successHover").addClass("hoverOpen");
+                $("#successHover > img").attr("src", "images/campuspictures/studentsuccess.jpeg");
             } else if (check === true){
+                $("#successHover > img").attr("src", "");
                 $("#successHover").removeClass("hoverOpen");
                 closeAllHover();
             }
@@ -2564,7 +2641,9 @@ function initMap() {
                 closeAllHover();
                 swartHoverCard.open(map, swartMarker);
                 $("#swartHover").addClass("hoverOpen");
+                $("#swartHover > img").attr("src", "images/campuspictures/swart.jpeg");
             } else if (check === true){
+                $("#swartHover > img").attr("src", "");
                 $("#swartHover").removeClass("hoverOpen");
                 closeAllHover();
             }
@@ -2618,7 +2697,9 @@ function initMap() {
                 closeAllHover();
                 taylorHoverCard.open(map, taylorMarker);
                 $("#taylorHover").addClass("hoverOpen");
+                $("#taylorHover > img").attr("src", "images/campuspictures/taylor.jpeg");
             } else if (check === true){
+                $("#taylorHover > img").attr("src", "");
                 $("#taylorHover").removeClass("hoverOpen");
                 closeAllHover();
             }
@@ -2672,7 +2753,9 @@ function initMap() {
                 closeAllHover();
                 titanHoverCard.open(map, titanMarker);
                 $("#titanHover").addClass("hoverOpen");
+                $("#titanHover > img").attr("src", "images/campuspictures/titanstadium.jpeg");
             } else if (check === true){
+                $("#titanHover > img").attr("src", "");
                 $("#titanHover").removeClass("hoverOpen");
                 closeAllHover();
             }
@@ -2727,7 +2810,9 @@ function initMap() {
                 closeAllHover();
                 policeHoverCard.open(map, policeMarker);
                 $("#policeHover").addClass("hoverOpen");
+                $("#policeHover > img").attr("src", "images/campuspictures/universitypolice.jpeg");
             } else if (check === true){
+                $("#policeHover > img").attr("src", "");
                 $("#policeHover").removeClass("hoverOpen");
                 closeAllHover();
             }
@@ -2782,7 +2867,9 @@ function initMap() {
                 closeAllHover();
                 websterHoverCard.open(map, websterMarker);
                 $("#websterHover").addClass("hoverOpen");
+                $("#websterHover > img").attr("src", "images/campuspictures/webster.jpeg");
             } else if (check === true){
+                $("#websterHover > img").attr("src", "");
                 $("#websterHover").removeClass("hoverOpen");
                 closeAllHover();
             }
