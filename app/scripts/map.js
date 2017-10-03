@@ -514,7 +514,7 @@ function initMap() {
             "images/campuspictures/nursingeducation.jpeg",
             //29 oviatt
             "images/campuspictures/oviatt.jpeg",
-            //20 pollock
+            //30 pollock
             "images/campuspictures/pollock.jpeg",
             //31 polk
             "images/campuspictures/polk.jpeg",
@@ -2136,7 +2136,7 @@ function initMap() {
                 closeAllHover();
                 pollockHoverCard.open(map, pollockMarker);
                 $("#pollockHover").addClass("hoverOpen");
-                $("#pollockHover > img").attr("src", "images/campuspictures/pollock.jpeg");
+                $("#pollockHover > img").attr("src", markerHoverImages[30]);
             } else if (check === true){
                 $("#pollockHover > img").attr("src", "");
                 $("#pollockHover").removeClass("hoverOpen");
@@ -2176,7 +2176,7 @@ function initMap() {
                 closeAllHover();
                 polkHoverCard.open(map, polkMarker);
                 $("#polkHover").addClass("hoverOpen");
-                $("#polkHover > img").attr("src", "images/campuspictures/polk.jpeg");
+                $("#polkHover > img").attr("src", markerHoverImages[31]);
             } else if (check === true){
                 $("#polkHover > img").attr("src", "");
                 $("#polkHover").removeClass("hoverOpen");
@@ -2237,7 +2237,7 @@ function initMap() {
                 closeAllHover();
                 radfordHoverCard.open(map, radfordMarker);
                 $("#radfordHover").addClass("hoverOpen");
-                $("#radfordHover > img").attr("src", "images/campuspictures/radford.jpeg");
+                $("#radfordHover > img").attr("src", markerHoverImages[32]);
             } else if (check === true){
                 $("#radfordHover > img").attr("src", "");
                 $("#radfordHover").removeClass("hoverOpen");
@@ -2279,7 +2279,7 @@ function initMap() {
                 closeAllHover();
                 reeveHoverCard.open(map, reeveMarker);
                 $("#reeveHover").addClass("hoverOpen");
-                $("#reeveHover > img").attr("src", "images/campuspictures/reeve.jpeg");
+                $("#reeveHover > img").attr("src", markerHoverImages[33]);
             } else if (check === true){
                 $("#reeveHover > img").attr("src", "");
                 $("#reeveHover").removeClass("hoverOpen");
@@ -2383,7 +2383,7 @@ function initMap() {
                 closeAllHover();
                 sageHoverCard.open(map, sageMarker);
                 $("#sageHover").addClass("hoverOpen");
-                $("#sageHover > img").attr("src", "images/campuspictures/sage.jpeg");
+                $("#sageHover > img").attr("src", markerHoverImages[34]);
             } else if (check === true){
                 $("#sageHover > img").attr("src", "");
                 $("#sageHover").removeClass("hoverOpen");
@@ -2486,7 +2486,7 @@ function initMap() {
                 closeAllHover();
                 scottHoverCard.open(map, scottMarker);
                 $("#scottHover").addClass("hoverOpen");
-                $("#scottHover > img").attr("src", "images/campuspictures/scott.jpeg");
+                $("#scottHover > img").attr("src", markerHoverImages[35]);
             } else if (check === true){
                 $("#scottHover > img").attr("src", "");
                 $("#scottHover").removeClass("hoverOpen");
@@ -2545,7 +2545,7 @@ function initMap() {
                 closeAllHover();
                 stewartHoverCard.open(map, stewartMarker);
                 $("#stewartHover").addClass("hoverOpen");
-                $("#stewartHover > img").attr("src", "images/campuspictures/stewart.jpeg");
+                $("#stewartHover > img").attr("src", markerHoverImages[36]);
             } else if (check === true){
                 $("#stewartHover > img").attr("src", "");
                 $("#stewartHover").removeClass("hoverOpen");
@@ -2588,7 +2588,7 @@ function initMap() {
                 closeAllHover();
                 recreationHoverCard.open(map, recreationMarker);
                 $("#recreationHover").addClass("hoverOpen");
-                $("#recreationHover > img").attr("src", "images/campuspictures/srwc.jpeg");
+                $("#recreationHover > img").attr("src", markerHoverImages[37]);
             } else if (check === true){
                 $("#recreationHover > img").attr("src", "");
                 $("#recreationHover").removeClass("hoverOpen");
@@ -2653,7 +2653,7 @@ function initMap() {
                 closeAllHover();
                 successHoverCard.open(map, successMarker);
                 $("#successHover").addClass("hoverOpen");
-                $("#successHover > img").attr("src", "images/campuspictures/studentsuccess.jpeg");
+                $("#successHover > img").attr("src", markerHoverImages[38]);
             } else if (check === true){
                 $("#successHover > img").attr("src", "");
                 $("#successHover").removeClass("hoverOpen");
@@ -2736,7 +2736,7 @@ function initMap() {
                 closeAllHover();
                 swartHoverCard.open(map, swartMarker);
                 $("#swartHover").addClass("hoverOpen");
-                $("#swartHover > img").attr("src", "images/campuspictures/swart.jpeg");
+                $("#swartHover > img").attr("src", markerHoverImages[39]);
             } else if (check === true){
                 $("#swartHover > img").attr("src", "");
                 $("#swartHover").removeClass("hoverOpen");
@@ -2792,7 +2792,7 @@ function initMap() {
                 closeAllHover();
                 taylorHoverCard.open(map, taylorMarker);
                 $("#taylorHover").addClass("hoverOpen");
-                $("#taylorHover > img").attr("src", "images/campuspictures/taylor.jpeg");
+                $("#taylorHover > img").attr("src", markerHoverImages[40]);
             } else if (check === true){
                 $("#taylorHover > img").attr("src", "");
                 $("#taylorHover").removeClass("hoverOpen");
@@ -2848,7 +2848,7 @@ function initMap() {
                 closeAllHover();
                 titanHoverCard.open(map, titanMarker);
                 $("#titanHover").addClass("hoverOpen");
-                $("#titanHover > img").attr("src", "images/campuspictures/titanstadium.jpeg");
+                $("#titanHover > img").attr("src", markerHoverImages[41]);
             } else if (check === true){
                 $("#titanHover > img").attr("src", "");
                 $("#titanHover").removeClass("hoverOpen");
@@ -2905,7 +2905,7 @@ function initMap() {
                 closeAllHover();
                 policeHoverCard.open(map, policeMarker);
                 $("#policeHover").addClass("hoverOpen");
-                $("#policeHover > img").attr("src", "images/campuspictures/universitypolice.jpeg");
+                $("#policeHover > img").attr("src", markerHoverImages[42]);
             } else if (check === true){
                 $("#policeHover > img").attr("src", "");
                 $("#policeHover").removeClass("hoverOpen");
@@ -2962,7 +2962,7 @@ function initMap() {
                 closeAllHover();
                 websterHoverCard.open(map, websterMarker);
                 $("#websterHover").addClass("hoverOpen");
-                $("#websterHover > img").attr("src", "images/campuspictures/webster.jpeg");
+                $("#websterHover > img").attr("src", markerHoverImages[43]);
             } else if (check === true){
                 $("#websterHover > img").attr("src", "");
                 $("#websterHover").removeClass("hoverOpen");
