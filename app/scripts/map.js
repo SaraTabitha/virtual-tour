@@ -557,21 +557,41 @@ function initMap() {
         // at one time
         // also is the click function for the marker opening any hover popup at all
         // so that's important
-        function albeeMarkerOpenClose(){
-          var check = $("#albeeHover").hasClass("hoverOpen");
-          if (check === false){
-              closeAllHover();
-              albeeHoverCard.open(map, albeeMarker);
-              $("#albeeHover").addClass("hoverOpen");
-              $("#albeeHover > img").attr("src", markerHoverImages[0]);
-          } else if (check === true){
-              $("#albeeHover").removeClass("hoverOpen");
-              $("#albeeHover > img").attr("src","");
-              closeAllHover();
-          }
+        function markerOpen(name){
+            if (name === "albee"){
+                albeeHoverCard.open(map, albeeMarker);
+                $("#albeeHover > img").attr("src", "images/campuspictures/albeehall.jpeg");
+            }
         }
+
+        function markerOpenClose(name){
+            closeAllHover();
+            $("#" + name + "Hover").toggleClass("hoverOpen");
+            if($("#" + name + "Hover").hasClass("hoverOpen")){
+                markerOpen(name);
+            } else{
+                $("#" + name + "Hover > img").attr("src", "");
+            }
+        }
+
+        
+        // function albeeMarkerOpenClose(){
+        // //   var check = $("#albeeHover").hasClass("hoverOpen");
+        //   if (check === false){
+        //     //   closeAllHover();
+              
+        //     //   $("#albeeHover").addClass("hoverOpen");
+              
+        //   } else if (check === true){
+        //     //   $("#albeeHover").removeClass("hoverOpen");
+        //     //  
+        //     //   closeAllHover();
+        //   }
+        // }
         albeeMarker.addListener('click', function(){
-            albeeMarkerOpenClose();
+            var albee = "albee";
+            markerOpenClose(albee);
+            // albeeMarkerOpenClose();
         });
 
 
