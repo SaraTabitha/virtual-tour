@@ -565,7 +565,7 @@ function initMap() {
                     }
                     else if (name === "kolf"){
                         kolfHoverCard.open(map, kolfMarker);
-                        $("#kolfHover > img").attr("src", "images/campuspictures/kolf.jpeg"]);
+                        $("#kolfHover > img").attr("src", "images/campuspictures/kolf.jpeg");
                     }
                     else if (name === "lincoln"){
                         lincolnHoverCard.open(map, lincolnMarker);
@@ -4879,7 +4879,7 @@ function initMap() {
         });
 
         clowAccaFMarker.addListener('click', function(){
-            clowMarkerOpenClvar clow = "clow";
+            var clow = "clow";
             markerOpenClose(clow);
         });
 
@@ -5938,7 +5938,14 @@ function initMap() {
              }
         
     }
-
+    
+    //right away trigger buildings to be checked (easier for first time users to see how to use the site)
+    function triggerBuildings(){
+        $("#buildings").trigger("click");
+        setBuilding();
+    }
+    triggerBuildings();
+    
     // all onchange functions for the checkboxes
 
     // checks if the checkbox is checked or not and then sets markers/hover cards accordingly
@@ -6073,3 +6080,6 @@ function initMap() {
 
 
 }
+
+
+

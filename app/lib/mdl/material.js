@@ -830,6 +830,8 @@ MaterialCheckbox.prototype.check = function () {
     this.inputElement_.checked = true;
     this.updateClasses_();
 };
+
+
 MaterialCheckbox.prototype['check'] = MaterialCheckbox.prototype.check;
 /**
    * Uncheck checkbox.
