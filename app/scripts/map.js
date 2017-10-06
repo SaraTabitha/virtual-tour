@@ -196,7 +196,8 @@ function initMap() {
         });
         var dempseyMarker = new google.maps.Marker({
             position: buildings[13],
-            icon: yellowMarker
+            icon: yellowMarker,
+            title: "Dempsey Hall"
         });
         var donnerMarker = new google.maps.Marker({
             position: buildings[14],
@@ -245,7 +246,9 @@ function initMap() {
         });
         var heatingMarker = new google.maps.Marker({
             position: buildings[23],
-            icon: yellowMarker
+            icon: yellowMarker,
+            title: "Heating Plant"
+
         });
         var parkingRampMarker = new google.maps.Marker({
             position: buildings[24],
@@ -279,12 +282,13 @@ function initMap() {
         });
         var oviattMarker = new google.maps.Marker({
             position: buildings[30],
-            icon: yellowMarker
+            icon: yellowMarker,
+            title: "Oviatt House"
         });
         var pollockMarker = new google.maps.Marker({
             position: buildings[31],
             icon: yellowMarker,
-            title: "Oviatt House"
+            title: "Pollock House"
         });
         var polkMarker = new google.maps.Marker({
             position: buildings[32],
@@ -650,6 +654,131 @@ function initMap() {
                 closeAllHover();
             }
         }
+        // when "click for more info" is selected,
+        // make corresponding overlay and popup visible
+        // +animate to fade in
+        function popupOpen(name){
+            $('#overlay').css('visibility', 'visible');
+            $('#overlay').animate({"opacity": "0.3"}, "slow");
+
+            $("#" + name + "Popup").css('visibility', 'visible');
+            $("#" + name + "Popup").animate({"opacity": "1"}, "slow");
+
+            if(name === "albee"){
+                $('#albeeiframe').attr('src',"https://www.youtube.com/embed/AW5cpKVsXWA");
+                $('#albeeAboutImage > img').attr('src',"images/campuspictures/albeehallFull.jpeg");
+            }
+            else if(name === "alumni"){
+                $("#alumniAboutImage > img").attr("src", "images/campuspictures/awcc-buildingFull.jpg");
+            }
+            else if (name === "ac"){
+                $("#acAboutImage > img").attr("src","images/campuspictures/artscommunicationsFull.jpeg");
+            }
+            else if (name === "athletic"){
+                $("#athleticAboutText > img").attr("src", "images/campuspictures/athleticserviceFull.jpeg");
+            } 
+            else if (name === "blackhawk"){
+                $("#blackhawkAboutImage > img").attr("src", "images/campuspictures/blackhawkFull.jpeg");
+            }
+            else if (name === "biodigester"){
+                $("#biodigesterAboutImage > img").attr("src", "images/campuspictures/biodigesterFull.jpg");
+            }
+            else if (name === "buckstaff"){
+                $("#buckstaffAboutImage > img").attr("src", "images/campuspictures/buckstaffFull.jpeg");
+            }
+            else if (name === "equity"){
+                $("#equityAboutImage > img").attr("src", "images/campuspictures/centerforequityFull.jpeg");
+            }
+            else if (name === "campus"){
+                $("#campusAboutImage > img").attr("src", "images/campuspictures/campus-servicesFull.jpg");
+            }
+            else if (name === "ceramics"){
+                $("#ceramicsAboutImage > img").attr("src", "images/campuspictures/ceramicslabFull.jpeg");
+            }
+            else if (name === "clow"){
+                $("#clowAboutImage > img").attr("src", "images/campuspictures/clowFull.jpeg");
+            }
+            else if (name === "gardens"){
+                $("#gardensAboutImage > img").attr("src", "images/campuspictures/community-gardensFull.jpg");
+            }
+            else if (name === "dempsey"){
+                $("#dempseyAboutImage > img").attr("src", "images/campuspictures/dempseyFull.jpeg");
+            }
+            else if (name === "donner"){
+                $("#donnerAboutImage > img").attr("src", "images/campuspictures/donnerFull.jpeg");
+            }
+            else if (name === "east"){
+                $("#eastAboutImage > img").attr("src", "images/campuspictures/easthallFull.jpg");
+            }
+            else if (name === "environmental"){
+                $("#environmentalAboutImage > img").attr("src", "images/campuspictures/aquaticstudiescenterFull.jpeg");
+            }
+            else if (name === "evans"){
+                $("#evansAboutImage > img").attr("src", "images/campuspictures/evansFull.jpeg");
+            }
+            else if (name === "fletcher"){
+                $("#fletcherAboutImage > img").attr("src", "images/campuspictures/fletcherFull.jpeg");
+            }
+            else if (name === "fredric"){
+                $("#fredricAboutImage > img").attr("src", "images/campuspictures/fredricmarchFull.jpeg");
+            }
+            else if (name === "gruenhagen"){
+                $("#gruenhagenAboutImage > img").attr("src", "images/campuspictures/gruenhagenFull.jpeg");
+            }
+            else if (name === "halsey"){
+                $("#halseyAboutImage > img").attr("src", "images/campuspictures/halseyFull.jpeg");
+            }
+            else if (name === "harrington"){
+                $("#harringtonAboutImage > img").attr("src", "images/campuspictures/harringtonFull.jpeg");
+            }
+            else if (name === "heating"){
+                $("#heatingAboutImage > img").attr("src", "images/campuspictures/heatingplantFull.jpeg");
+            }
+            else if (name === "parkingRamp"){
+                $("#parkingAboutImage > img").attr("src", "images/campuspictures/parkingrampFull.jpeg");
+            }
+            else if (name === "horizon"){
+                $("#horizonAboutImage > img").attr("src", "images/campuspictures/horizonFull.jpeg");
+            }
+            else if (name === "kolf"){
+                $("#kolfAboutImage > img").attr("src", "images/campuspictures/kolfFull.jpeg");
+            }
+            else if (name === "lincoln"){
+                $("#lincolnAboutImage > img").attr("src", "images/campuspictures/lincoln-hallFull.jpg");
+            }
+            else if (name === "multicultural"){
+                $("#multiculturalAboutImage > img").attr("src", "images/campuspictures/multiculturaleducationFull.jpeg");
+            }
+            else if (name === "nursing"){
+                $("#nursingAboutImage > img").attr("src", "images/campuspictures/nursingeducationFull.jpeg");
+
+            }
+        }
+        //function for all popupclosure
+        function popupClose(name){
+            $('#overlay').animate({"opacity": "0"}, "slow");
+            $('#overlay').css('visibility', 'hidden');
+
+            $("#" + name + "Popup").animate({"opacity": "0"}, "slow");
+            $("#" + name + "Popup").css('visibility', 'hidden');
+            //all of them have an AboutImage 
+            $("#" + name + "AboutImage > img").attr('src',"");
+
+            //some have iframe/dining tab/parking tab images wowwwee
+            if (name === "albee" || name === "polk" || name === "reeve" || name === "sage" || name === "success"){
+                //iframe
+                $("#" + name + "iframe").attr('src',"");
+            }
+            else if (name === "blackhawk" || name === "clow" || name === "halsey" || name === "reeve"|| name === "sage"
+                    || name === "dining"){
+                //dining tab image
+                $("#" + name + "DiningImage > img").attr("src", "");
+            }
+            else if (name === "parkingRamp"){
+                //parking tab image
+                $("#parkingRampParkingImage> img").attr("src", "");
+            }
+        }
 
         // adding hover cards for building markers
         var albeeHover = document.getElementById('albeeHover');
@@ -661,32 +790,14 @@ function initMap() {
             var albee = "albee";
             markerOpenClose(albee);
         });
-
-
-
-        // when "click for more info" is selected,
-        // make corresponding overlay and popup visible
-        // +animate to fade in
         $("#albeeLink").click(function(){
-            $('#overlay').css('visibility', 'visible');
-            $('#overlay').animate({"opacity": "0.3"}, "slow");
-            $('#albeeiframe').attr('src',"https://www.youtube.com/embed/AW5cpKVsXWA");
-            $('#albeeAboutImage > img').attr('src',"images/campuspictures/albeehallFull.jpeg");
-
-            $("#albeePopup").css('visibility', 'visible');
-            $('#albeePopup').animate({"opacity": "1"}, "slow");
+            var albee = "albee";
+            popupOpen(albee);
         });
         // when x on popup is clicked, close popup
         $("#albeePopupClose").click(function(){
-            // reset src
-            $('#albeeiframe').attr('src',"");
-            $('#albeeAboutImage > img').attr('src',"");
-            
-            $('#overlay').animate({"opacity": "0"}, "slow");
-            $('#overlay').css('visibility', 'hidden');
-
-            $('#albeePopup').animate({"opacity": "0"}, "slow");
-            $("#albeePopup").css('visibility', 'hidden');
+            var albee = "albee";
+            popupClose(albee);
         });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
@@ -729,19 +840,13 @@ function initMap() {
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#baseballLink").click(function(){
-            $('#overlay').css('visibility', 'visible');
-            $('#overlay').animate({"opacity": "0.3"}, "slow");
-
-            $("#baseballPopup").css('visibility', 'visible');
-            $('#baseballPopup').animate({"opacity": "1"}, "slow");
+            var baseball = "baseball";
+            popupOpen(baseball);
         });
         // when x on popup is clicked, close popup
         $("#baseballPopupClose").click(function(){
-            $('#overlay').animate({"opacity": "0"}, "slow");
-            $('#overlay').css('visibility', 'hidden');
-
-            $('#baseballPopup').animate({"opacity": "0"}, "slow");
-            $("#baseballPopup").css('visibility', 'hidden');
+            var baseball = "baseball";
+            popupClose(baseball);
         });
 
         var alumniHover = document.getElementById('alumniHover');
@@ -756,21 +861,13 @@ function initMap() {
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#alumniLink").click(function(){
-            $('#overlay').css('visibility', 'visible');
-            $('#overlay').animate({"opacity": "0.3"}, "slow");
-            
-
-            $("#alumniPopup").css('visibility', 'visible');
-            $('#alumniPopup').animate({"opacity": "1"}, "slow");
+            var alumni = "alumni";
+            popupOpen(alumni);
         });
         // when x on popup is clicked, close popup
         $("#alumniPopupClose").click(function(){
-            $('#overlay').animate({"opacity": "0"}, "slow");
-            $('#overlay').css('visibility', 'hidden');
-            $("#alumniAboutImage > img").attr("src", "");
-
-            $('#alumniPopup').animate({"opacity": "0"}, "slow");
-            $("#alumniPopup").css('visibility', 'hidden');
+            var alumni = "alumni";
+            popupClose(alumni);
         });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
@@ -801,22 +898,13 @@ function initMap() {
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#acLink").click(function(){
-            $('#overlay').css('visibility', 'visible');
-            $('#overlay').animate({"opacity": "0.3"}, "slow");
-            $("#acAboutImage > img").attr("src","images/campuspictures/artscommunicationsFull.jpeg");
-
-            $("#acPopup").css('visibility', 'visible');
-            $('#acPopup').animate({"opacity": "1"}, "slow");
+            var ac = "ac";
+            popupOpen(ac);
         });
         // when x on popup is clicked, close popup
         $("#acPopupClose").click(function(){
-            $("#acAboutImage > img").attr("src","");
-
-            $('#overlay').animate({"opacity": "0"}, "slow");
-            $('#overlay').css('visibility', 'hidden');
-
-            $('#acPopup').animate({"opacity": "0"}, "slow");
-            $("#acPopup").css('visibility', 'hidden');
+            var ac = "ac";
+            popupClose(ac);
         });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
@@ -846,21 +934,13 @@ function initMap() {
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#athleticLink").click(function(){
-            $('#overlay').css('visibility', 'visible');
-            $('#overlay').animate({"opacity": "0.3"}, "slow");
-            $("#athleticAboutText > img").attr("src", "images/campuspictures/athleticserviceFull.jpeg");
-
-            $("#athleticPopup").css('visibility', 'visible');
-            $('#athleticPopup').animate({"opacity": "1"}, "slow");
+            var athletic = "athletic";
+            popupOpen(athletic);
         });
         // when x on popup is clicked, close popup
         $("#athleticPopupClose").click(function(){
-            $('#overlay').animate({"opacity": "0"}, "slow");
-            $('#overlay').css('visibility', 'hidden');
-            $("#athleticAboutText > img").attr("src", "");
-
-            $('#athleticPopup').animate({"opacity": "0"}, "slow");
-            $("#athleticPopup").css('visibility', 'hidden');
+            var athletic = "athletic";
+            popupClose(athletic);
         });
 
         var blackhawkHover = document.getElementById('blackhawkHover');
@@ -875,23 +955,13 @@ function initMap() {
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#blackhawkLink").click(function(){
-            $('#overlay').css('visibility', 'visible');
-            $('#overlay').animate({"opacity": "0.3"}, "slow");
-            $("#blackhawkAboutImage > img").attr("src", "images/campuspictures/blackhawkFull.jpeg");
-
-            $("#blackhawkPopup").css('visibility', 'visible');
-            $('#blackhawkPopup').animate({"opacity": "1"}, "slow");
+            var blackhawk = "blackhawk";
+            popupOpen(blackhawk);
         });
         // when x on popup is clicked, close popup
         $("#blackhawkPopupClose").click(function(){
-            $('#overlay').animate({"opacity": "0"}, "slow");
-            $('#overlay').css('visibility', 'hidden');
-
-            $('#blackhawkPopup').animate({"opacity": "0"}, "slow");
-            $("#blackhawkPopup").css('visibility', 'hidden');
-
-            $("#blackhawkAboutImage > img").attr("src", "");
-            $("#blackhawkDiningImage > img").attr("src", "");
+            var blackhawk = "blackhawk";
+            popupClose(blackhawk);
         });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
@@ -946,22 +1016,13 @@ function initMap() {
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#biodigesterLink").click(function(){
-            $('#overlay').css('visibility', 'visible');
-            $('#overlay').animate({"opacity": "0.3"}, "slow");
-            $("#biodigesterAboutText > div > img").attr("src", "images/campuspictures/biodigesterFull.jpg");
-
-            $("#biodigesterPopup").css('visibility', 'visible');
-            $('#biodigesterPopup').animate({"opacity": "1"}, "slow");
+            var biodigester = "biodigester";
+            popupOpen(biodigester);
         });
         // when x on popup is clicked, close popup
         $("#biodigesterPopupClose").click(function(){
-            $('#overlay').animate({"opacity": "0"}, "slow");
-            $('#overlay').css('visibility', 'hidden');
-
-            $('#biodigesterPopup').animate({"opacity": "0"}, "slow");
-            $("#biodigesterPopup").css('visibility', 'hidden');
-
-            $("#biodigesterAboutText > div > img").attr("src", "");
+            var biodigester = "biodigester";
+            popupClose(biodigester);
         });
 
         var buckstaffHover = document.getElementById('buckstaffHover');
@@ -977,22 +1038,13 @@ function initMap() {
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#buckstaffLink").click(function(){
-            $('#overlay').css('visibility', 'visible');
-            $('#overlay').animate({"opacity": "0.3"}, "slow");
-            $("#buckstaffAboutText > div.imagePopup > img").attr("src", "images/campuspictures/buckstaffFull.jpeg");
-
-            $("#buckstaffPopup").css('visibility', 'visible');
-            $('#buckstaffPopup').animate({"opacity": "1"}, "slow");
+            var buckstaff = "buckstaff";
+            popupOpen(buckstaff);
         });
         // when x on popup is clicked, close popup
         $("#buckstaffPopupClose").click(function(){
-            $('#overlay').animate({"opacity": "0"}, "slow");
-            $('#overlay').css('visibility', 'hidden');
-
-            $('#buckstaffPopup').animate({"opacity": "0"}, "slow");
-            $("#buckstaffPopup").css('visibility', 'hidden');
-
-            $("#buckstaffAboutText > div.imagePopup > img").attr("src", "");
+            var buckstaff = "buckstaff";
+            popupClose(buckstaff);
         });
 
         var equityHover = document.getElementById('equityHover');
@@ -1008,22 +1060,13 @@ function initMap() {
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#equityLink").click(function(){
-            $('#overlay').css('visibility', 'visible');
-            $('#overlay').animate({"opacity": "0.3"}, "slow");
-            
-
-            $("#equityPopup").css('visibility', 'visible');
-            $('#equityPopup').animate({"opacity": "1"}, "slow");
+            var equity = "equity";
+            popupOpen(equity);
         });
         // when x on popup is clicked, close popup
         $("#equityPopupClose").click(function(){
-            $('#overlay').animate({"opacity": "0"}, "slow");
-            $('#overlay').css('visibility', 'hidden');
-
-            $('#equityPopup').animate({"opacity": "0"}, "slow");
-            $("#equityPopup").css('visibility', 'hidden');
-
-            $("#equityAboutImage > img").attr("src", "");
+            var equity = "equity";
+            popupClose(equity);
         });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
@@ -1053,22 +1096,13 @@ function initMap() {
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#campusLink").click(function(){
-            $('#overlay').css('visibility', 'visible');
-            $('#overlay').animate({"opacity": "0.3"}, "slow");
-            $("#campusAboutImage > img").attr("src", "images/campuspictures/campus-servicesFull.jpg");
-
-            $("#campusPopup").css('visibility', 'visible');
-            $('#campusPopup').animate({"opacity": "1"}, "slow");
+            var campus = "campus";
+            popupOpen(campus);
         });
         // when x on popup is clicked, close popup
         $("#campusPopupClose").click(function(){
-            $('#overlay').animate({"opacity": "0"}, "slow");
-            $('#overlay').css('visibility', 'hidden');
-
-            $('#campusPopup').animate({"opacity": "0"}, "slow");
-            $("#campusPopup").css('visibility', 'hidden');
-
-            $("#campusAboutImage > img").attr("src", "");
+            var campus = "campus";
+            popupClose(campus);
         });
 
         var ceramicsHover = document.getElementById('ceramicsHover');
@@ -1083,22 +1117,13 @@ function initMap() {
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#ceramicsLink").click(function(){
-            $('#overlay').css('visibility', 'visible');
-            $('#overlay').animate({"opacity": "0.3"}, "slow");
-            $("#ceramicsAboutImage > img").attr("src", "images/campuspictures/ceramicslabFull.jpeg");
-
-            $("#ceramicsPopup").css('visibility', 'visible');
-            $('#ceramicsPopup').animate({"opacity": "1"}, "slow");
+            var ceramics = "ceramics";
+            popupOpen(ceramics);
         });
         // when x on popup is clicked, close popup
         $("#ceramicsPopupClose").click(function(){
-            $('#overlay').animate({"opacity": "0"}, "slow");
-            $('#overlay').css('visibility', 'hidden');
-
-            $('#ceramicsPopup').animate({"opacity": "0"}, "slow");
-            $("#ceramicsPopup").css('visibility', 'hidden');
-
-            $("#ceramicsAboutImage > img").attr("src", "");
+            var ceramics = "ceramics";
+            popupClose(ceramics);
         });
 
         var clowHover = document.getElementById('clowHover');
@@ -1113,23 +1138,13 @@ function initMap() {
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#clowLink").click(function(){
-            $('#overlay').css('visibility', 'visible');
-            $('#overlay').animate({"opacity": "0.3"}, "slow");
-            $("#clowAboutImage > img").attr("src", "images/campuspictures/clowFull.jpeg");
-
-            $("#clowPopup").css('visibility', 'visible');
-            $('#clowPopup').animate({"opacity": "1"}, "slow");
+            var clow = "clow";
+            popupOpen(clow);
         });
         // when x on popup is clicked, close popup
         $("#clowPopupClose").click(function(){
-            $('#overlay').animate({"opacity": "0"}, "slow");
-            $('#overlay').css('visibility', 'hidden');
-
-            $('#clowPopup').animate({"opacity": "0"}, "slow");
-            $("#clowPopup").css('visibility', 'hidden');
-
-            $("#clowAboutImage > img").attr("src", "");
-            $("#clowDiningImage > img").attr("src", "");
+            var clow = "clow";
+            popupClose(clow);
         });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
@@ -1162,22 +1177,13 @@ function initMap() {
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#gardensLink").click(function(){
-            $('#overlay').css('visibility', 'visible');
-            $('#overlay').animate({"opacity": "0.3"}, "slow");
-            $("#gardensAboutImage > img").attr("src", "images/campuspictures/community-gardensFull.jpg");
-
-            $("#gardensPopup").css('visibility', 'visible');
-            $('#gardensPopup').animate({"opacity": "1"}, "slow");
+            var gardens = "gardens";
+            popupOpen(gardens);
         });
         // when x on popup is clicked, close popup
         $("#gardensPopupClose").click(function(){
-            $('#overlay').animate({"opacity": "0"}, "slow");
-            $('#overlay').css('visibility', 'hidden');
-
-            $('#gardensPopup').animate({"opacity": "0"}, "slow");
-            $("#gardensPopup").css('visibility', 'hidden');
-
-            $("#gardensAboutImage > img").attr("src", "");
+            var gardens = "gardens";
+            popupClose(gardens);
         });
 
 
@@ -1195,22 +1201,13 @@ function initMap() {
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#dempseyLink").click(function(){
-            $('#overlay').css('visibility', 'visible');
-            $('#overlay').animate({"opacity": "0.3"}, "slow");
-            $("#dempseyAboutImage > img").attr("src", "images/campuspictures/dempseyFull.jpeg");
-
-            $("#dempseyPopup").css('visibility', 'visible');
-            $('#dempseyPopup').animate({"opacity": "1"}, "slow");
+            var dempsey = "dempsey";
+            popupOpen(dempsey);
         });
         // when x on popup is clicked, close popup
         $("#dempseyPopupClose").click(function(){
-            $('#overlay').animate({"opacity": "0"}, "slow");
-            $('#overlay').css('visibility', 'hidden');
-
-            $('#dempseyPopup').animate({"opacity": "0"}, "slow");
-            $("#dempseyPopup").css('visibility', 'hidden');
-
-            $("#dempseyAboutImage > img").attr("src", "");
+            var dempsey = "dempsey";
+            popupClose(dempsey);
         });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
@@ -1240,22 +1237,13 @@ function initMap() {
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#donnerLink").click(function(){
-            $('#overlay').css('visibility', 'visible');
-            $('#overlay').animate({"opacity": "0.3"}, "slow");
-            $("#donnerAboutImage > img").attr("src", "images/campuspictures/donnerFull.jpeg");
-
-            $("#donnerPopup").css('visibility', 'visible');
-            $('#donnerPopup').animate({"opacity": "1"}, "slow");
+            var donner = "donner";
+            popupOpen(donner);
         });
         // when x on popup is clicked, close popup
         $("#donnerPopupClose").click(function(){
-            $('#overlay').animate({"opacity": "0"}, "slow");
-            $('#overlay').css('visibility', 'hidden');
-
-            $('#donnerPopup').animate({"opacity": "0"}, "slow");
-            $("#donnerPopup").css('visibility', 'hidden');
-
-            $("#donnerAboutImage > img").attr("src", "");
+            var donner = "donner";
+            popupClose(donner);
         });
 
 
@@ -1272,22 +1260,13 @@ function initMap() {
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#eastLink").click(function(){
-            $('#overlay').css('visibility', 'visible');
-            $('#overlay').animate({"opacity": "0.3"}, "slow");
-            $("#eastAboutImage > img").attr("src", "images/campuspictures/easthallFull.jpg");
-
-            $("#eastPopup").css('visibility', 'visible');
-            $('#eastPopup').animate({"opacity": "1"}, "slow");
+            var east = "east";
+            popupOpen(east);
         });
         // when x on popup is clicked, close popup
         $("#eastPopupClose").click(function(){
-            $('#overlay').animate({"opacity": "0"}, "slow");
-            $('#overlay').css('visibility', 'hidden');
-
-            $('#eastPopup').animate({"opacity": "0"}, "slow");
-            $("#eastPopup").css('visibility', 'hidden');
-
-            $("#eastAboutImage > img").attr("src", "");
+            var east =  "east";
+            popupClose(east);
         });
 
         var environmentalHover = document.getElementById('environmentalHover');
@@ -1302,22 +1281,13 @@ function initMap() {
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#environmentalLink").click(function(){
-            $('#overlay').css('visibility', 'visible');
-            $('#overlay').animate({"opacity": "0.3"}, "slow");
-            $("#environmentalAboutImage > img").attr("src", "images/campuspictures/aquaticstudiescenterFull.jpeg");
-
-            $("#environmentalPopup").css('visibility', 'visible');
-            $('#environmentalPopup').animate({"opacity": "1"}, "slow");
+            var environmental = "environmental";
+            popupOpen(environmental);
         });
         // when x on popup is clicked, close popup
         $("#environmentalPopupClose").click(function(){
-            $('#overlay').animate({"opacity": "0"}, "slow");
-            $('#overlay').css('visibility', 'hidden');
-
-            $('#environmentalPopup').animate({"opacity": "0"}, "slow");
-            $("#environmentalPopup").css('visibility', 'hidden');
-
-            $("#environmentalAboutImage > img").attr("src", "");
+            var environmental = "environmental";
+            popupClose(environmental);
         });
 
         var evansHover = document.getElementById('evansHover');
@@ -1333,21 +1303,13 @@ function initMap() {
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#evansLink").click(function(){
-            $('#overlay').css('visibility', 'visible');
-            $('#overlay').animate({"opacity": "0.3"}, "slow");
-            $("#evansAboutImage > img").attr("src", "images/campuspictures/evansFull.jpeg");
-
-            $("#evansPopup").css('visibility', 'visible');
-            $('#evansPopup').animate({"opacity": "1"}, "slow");
+            var evans = "evans";
+            popupOpen(evans);
         });
         // when x on popup is clicked, close popup
         $("#evansPopupClose").click(function(){
-            $('#overlay').animate({"opacity": "0"}, "slow");
-            $('#overlay').css('visibility', 'hidden');
-
-            $('#evansPopup').animate({"opacity": "0"}, "slow");
-            $("#evansPopup").css('visibility', 'hidden');
-            $("#evansAboutImage > img").attr("src", "");
+            var evans = "evans";
+            popupClose(evans);
         });
 
         var fletcherHover = document.getElementById('fletcherHover');
@@ -1362,22 +1324,13 @@ function initMap() {
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#fletcherLink").click(function(){
-            $('#overlay').css('visibility', 'visible');
-            $('#overlay').animate({"opacity": "0.3"}, "slow");
-            $("#fletcherAboutImage > img").attr("src", "images/campuspictures/fletcherFull.jpeg");
-
-            $("#fletcherPopup").css('visibility', 'visible');
-            $('#fletcherPopup').animate({"opacity": "1"}, "slow");
+            var fletcher = "fletcher";
+            popupOpen(fletcher);
         });
         // when x on popup is clicked, close popup
         $("#fletcherPopupClose").click(function(){
-            $('#overlay').animate({"opacity": "0"}, "slow");
-            $('#overlay').css('visibility', 'hidden');
-
-            $('#fletcherPopup').animate({"opacity": "0"}, "slow");
-            $("#fletcherPopup").css('visibility', 'hidden');
-
-            $("#fletcherAboutImage > img").attr("src", "");
+            var fletcher = "fletcher";
+            popupClose(fletcher);
         });
 
         var fredricHover = document.getElementById('fredricHover');
@@ -1392,22 +1345,13 @@ function initMap() {
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#fredricLink").click(function(){
-            $('#overlay').css('visibility', 'visible');
-            $('#overlay').animate({"opacity": "0.3"}, "slow");
-            $("#fredricAboutImage > img").attr("src", "images/campuspictures/fredricmarchFull.jpeg");
-
-            $("#fredricPopup").css('visibility', 'visible');
-            $('#fredricPopup').animate({"opacity": "1"}, "slow");
+            var fredric = "fredric";
+            popupOpen(fredric);
         });
         // when x on popup is clicked, close popup
         $("#fredricPopupClose").click(function(){
-            $('#overlay').animate({"opacity": "0"}, "slow");
-            $('#overlay').css('visibility', 'hidden');
-
-            $('#fredricPopup').animate({"opacity": "0"}, "slow");
-            $("#fredricPopup").css('visibility', 'hidden');
-
-            $("#fredricAboutImage > img").attr("src", "");
+            var fredric = "fredric";
+            popupClose(fredric);
         });
 
         // GRUENHAGEN
@@ -1425,22 +1369,13 @@ function initMap() {
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#gruenhagenLink").click(function(){
-            $('#overlay').css('visibility', 'visible');
-            $('#overlay').animate({"opacity": "0.3"}, "slow");
-            $("#gruenhagenAboutImage > img").attr("src", "images/campuspictures/gruenhagenFull.jpeg");
-
-            $("#gruenhagenPopup").css('visibility', 'visible');
-            $('#gruenhagenPopup').animate({"opacity": "1"}, "slow");
+            var gruenhagen  = "gruenhagen";
+            popupOpen(gruenhagen);
         });
         // when x on popup is clicked, close popup
         $("#gruenhagenPopupClose").click(function(){
-            $('#overlay').animate({"opacity": "0"}, "slow");
-            $('#overlay').css('visibility', 'hidden');
-
-            $('#gruenhagenPopup').animate({"opacity": "0"}, "slow");
-            $("#gruenhagenPopup").css('visibility', 'hidden');
-
-            $("#gruenhagenAboutImage > img").attr("src", "");
+            var gruenhagen = "gruenhagen";
+            popupClose(gruenhagen);
         });
 
 
@@ -1456,23 +1391,13 @@ function initMap() {
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#halseyLink").click(function(){
-            $('#overlay').css('visibility', 'visible');
-            $('#overlay').animate({"opacity": "0.3"}, "slow");
-            $("#halseyAboutImage > img").attr("src", "images/campuspictures/halseyFull.jpeg");
-
-            $("#halseyPopup").css('visibility', 'visible');
-            $('#halseyPopup').animate({"opacity": "1"}, "slow");
+            var halsey = "halsey";
+            popupOpen(halsey);
         });
         // when x on popup is clicked, close popup
         $("#halseyPopupClose").click(function(){
-            $('#overlay').animate({"opacity": "0"}, "slow");
-            $('#overlay').css('visibility', 'hidden');
-
-            $('#halseyPopup').animate({"opacity": "0"}, "slow");
-            $("#halseyPopup").css('visibility', 'hidden');
-
-            $("#halseyAboutImage > img").attr("src", "");
-            $("#halseyDiningImage > img").attr("src", "");
+            var halsey = "halsey";
+            popupClose(halsey);
         });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
@@ -1517,22 +1442,13 @@ function initMap() {
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#harringtonLink").click(function(){
-            $('#overlay').css('visibility', 'visible');
-            $('#overlay').animate({"opacity": "0.3"}, "slow");
-            $("#harringtonAboutImage > img").attr("src", "images/campuspictures/harringtonFull.jpeg");
-
-            $("#harringtonPopup").css('visibility', 'visible');
-            $('#harringtonPopup').animate({"opacity": "1"}, "slow");
+            var harrington = "harrington";
+            popupOpen(harrington);
         });
         // when x on popup is clicked, close popup
         $("#harringtonPopupClose").click(function(){
-            $('#overlay').animate({"opacity": "0"}, "slow");
-            $('#overlay').css('visibility', 'hidden');
-
-            $('#harringtonPopup').animate({"opacity": "0"}, "slow");
-            $("#harringtonPopup").css('visibility', 'hidden');
-
-            $("#harringtonAboutImage > img").attr("src", "");
+            var harrington = "harrington";
+            popupClose(harrington);
         });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
@@ -1561,22 +1477,13 @@ function initMap() {
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#heatingLink").click(function(){
-            $('#overlay').css('visibility', 'visible');
-            $('#overlay').animate({"opacity": "0.3"}, "slow");
-            $("#heatingAboutImage > img").attr("src", "images/campuspictures/heatingplantFull.jpeg");
-
-            $("#heatingPopup").css('visibility', 'visible');
-            $('#heatingPopup').animate({"opacity": "1"}, "slow");
+            var heating = "heating";
+            popupOpen(heating);
         });
         // when x on popup is clicked, close popup
         $("#heatingPopupClose").click(function(){
-            $('#overlay').animate({"opacity": "0"}, "slow");
-            $('#overlay').css('visibility', 'hidden');
-
-            $('#heatingPopup').animate({"opacity": "0"}, "slow");
-            $("#heatingPopup").css('visibility', 'hidden');
-
-            $("#heatingAboutImage > img").attr("src", "");
+            var heating = "heating";
+            popupClose(heating);
         });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
@@ -1606,23 +1513,13 @@ function initMap() {
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#parkingRampLink").click(function(){
-            $('#overlay').css('visibility', 'visible');
-            $('#overlay').animate({"opacity": "0.3"}, "slow");
-            $("#parkingAboutImage > img").attr("src", "images/campuspictures/parkingrampFull.jpeg");
-
-            $("#parkingRampPopup").css('visibility', 'visible');
-            $('#parkingRampPopup').animate({"opacity": "1"}, "slow");
+            var parkingRamp = "parkingRamp";
+            popupOpen(parkingRamp);
         });
         // when x on popup is clicked, close popup
         $("#parkingRampPopupClose").click(function(){
-            $('#overlay').animate({"opacity": "0"}, "slow");
-            $('#overlay').css('visibility', 'hidden');
-
-            $('#parkingRampPopup').animate({"opacity": "0"}, "slow");
-            $("#parkingRampPopup").css('visibility', 'hidden');
-
-            $("#parkingAboutImage > img").attr("src", "");
-            $("#parkingRampParkingImage> img").attr("src", "");
+            var parkingRamp = "parkingRamp";
+            popupClose(parkingRamp);
         });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
@@ -1654,22 +1551,13 @@ function initMap() {
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#horizonLink").click(function(){
-            $('#overlay').css('visibility', 'visible');
-            $('#overlay').animate({"opacity": "0.3"}, "slow");
-            $("#horizonAboutImage > img").attr("src", "images/campuspictures/horizonFull.jpeg");
-
-            $("#horizonPopup").css('visibility', 'visible');
-            $('#horizonPopup').animate({"opacity": "1"}, "slow");
+            var horizon = "horizon";
+            popupOpen(horizon);
         });
         // when x on popup is clicked, close popup
         $("#horizonPopupClose").click(function(){
-            $('#overlay').animate({"opacity": "0"}, "slow");
-            $('#overlay').css('visibility', 'hidden');
-
-            $('#horizonPopup').animate({"opacity": "0"}, "slow");
-            $("#horizonPopup").css('visibility', 'hidden');
-
-            $("#horizonAboutImage > img").attr("src", "");
+            var horizon = "horizon";
+            popupClose(horizon);
         });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
@@ -1698,22 +1586,13 @@ function initMap() {
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#kolfLink").click(function(){
-            $('#overlay').css('visibility', 'visible');
-            $('#overlay').animate({"opacity": "0.3"}, "slow");
-            $("#kolfAboutImage > img").attr("src", "images/campuspictures/kolfFull.jpeg");
-
-            $("#kolfPopup").css('visibility', 'visible');
-            $('#kolfPopup').animate({"opacity": "1"}, "slow");
+            var kolf = "kolf";
+            popupOpen(kolf);
         });
         // when x on popup is clicked, close popup
         $("#kolfPopupClose").click(function(){
-            $('#overlay').animate({"opacity": "0"}, "slow");
-            $('#overlay').css('visibility', 'hidden');
-
-            $('#kolfPopup').animate({"opacity": "0"}, "slow");
-            $("#kolfPopup").css('visibility', 'hidden');
-
-            $("#kolfAboutImage > img").attr("src", "");
+            var kolf = "kolf";
+            popupClose(kolf);
         });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
@@ -1742,22 +1621,13 @@ function initMap() {
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#lincolnLink").click(function(){
-            $('#overlay').css('visibility', 'visible');
-            $('#overlay').animate({"opacity": "0.3"}, "slow");
-            $("#lincolnAboutImage > img").attr("src", "images/campuspictures/lincoln-hallFull.jpg");
-
-            $("#lincolnPopup").css('visibility', 'visible');
-            $('#lincolnPopup').animate({"opacity": "1"}, "slow");
+            var lincoln = "lincoln";
+            popupOpen(lincoln);
         });
         // when x on popup is clicked, close popup
         $("#lincolnPopupClose").click(function(){
-            $('#overlay').animate({"opacity": "0"}, "slow");
-            $('#overlay').css('visibility', 'hidden');
-
-            $('#lincolnPopup').animate({"opacity": "0"}, "slow");
-            $("#lincolnPopup").css('visibility', 'hidden');
-
-            $("#lincolnAboutImage > img").attr("src", "");
+            var lincoln = "lincoln";
+            popupClose(lincoln);
         });
 
         var multiculturalHover = document.getElementById('multiculturalHover');
@@ -1772,22 +1642,13 @@ function initMap() {
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#multiculturalLink").click(function(){
-            $('#overlay').css('visibility', 'visible');
-            $('#overlay').animate({"opacity": "0.3"}, "slow");
-            $("#multiculturalAboutImage > img").attr("src", "images/campuspictures/multiculturaleducationFull.jpeg");
-
-            $("#multiculturalPopup").css('visibility', 'visible');
-            $('#multiculturalPopup').animate({"opacity": "1"}, "slow");
+            var multicultural = "multicultural";
+            popupOpen(multicultural);
         });
         // when x on popup is clicked, close popup
         $("#multiculturalPopupClose").click(function(){
-            $('#overlay').animate({"opacity": "0"}, "slow");
-            $('#overlay').css('visibility', 'hidden');
-
-            $('#multiculturalPopup').animate({"opacity": "0"}, "slow");
-            $("#multiculturalPopup").css('visibility', 'hidden');
-
-            $("#multiculturalAboutImage > img").attr("src", "");
+            var multicultural = "multicultural";
+            popupClose(multicultural);
         });
 
         var nursingHover = document.getElementById('nursingHover');
@@ -1802,20 +1663,19 @@ function initMap() {
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#nursingLink").click(function(){
-            $('#overlay').css('visibility', 'visible');
-            $('#overlay').animate({"opacity": "0.3"}, "slow");
-            $("#nursingAboutImage > img").attr("src", "images/campuspictures/nursingeducationFull.jpeg");
+            var nursing = "nursing";
+            popupOpen(nursing);
+            // $('#overlay').css('visibility', 'visible');
+            // $('#overlay').animate({"opacity": "0.3"}, "slow");
+            // $("#nursingAboutImage > img").attr("src", "images/campuspictures/nursingeducationFull.jpeg");
 
-            $("#nursingPopup").css('visibility', 'visible');
-            $('#nursingPopup').animate({"opacity": "1"}, "slow");
+            // $("#nursingPopup").css('visibility', 'visible');
+            // $('#nursingPopup').animate({"opacity": "1"}, "slow");
         });
         // when x on popup is clicked, close popup
         $("#nursingPopupClose").click(function(){
-            $('#overlay').animate({"opacity": "0"}, "slow");
-            $('#overlay').css('visibility', 'hidden');
-
-            $('#nursingPopup').animate({"opacity": "0"}, "slow");
-            $("#nursingPopup").css('visibility', 'hidden');
+            var nursing = "nursing";
+            popupClose(nursing);
         });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
@@ -1854,13 +1714,8 @@ function initMap() {
         });
         // when x on popup is clicked, close popup
         $("#oviattPopupClose").click(function(){
-            $('#overlay').animate({"opacity": "0"}, "slow");
-            $('#overlay').css('visibility', 'hidden');
-
-            $('#oviattPopup').animate({"opacity": "0"}, "slow");
-            $("#oviattPopup").css('visibility', 'hidden');
-
-            $("#oviattAboutImage > img").attr("src", "");
+            var oviatt = "oviatt";
+            popupClose(oviatt);
         });
 
         var pollockHover = document.getElementById('pollockHover');
@@ -1885,13 +1740,8 @@ function initMap() {
         });
         // when x on popup is clicked, close popup
         $("#pollockPopupClose").click(function(){
-            $('#overlay').animate({"opacity": "0"}, "slow");
-            $('#overlay').css('visibility', 'hidden');
-
-            $('#pollockPopup').animate({"opacity": "0"}, "slow");
-            $("#pollockPopup").css('visibility', 'hidden');
-
-            $("#pollockAboutImage > img").attr("src", "");
+            var pollock = "pollock";
+            popupClose(pollock);
         });
 
 
@@ -1917,14 +1767,8 @@ function initMap() {
         });
         // when x on popup is clicked, close popup
         $("#polkPopupClose").click(function(){
-            $('#overlay').animate({"opacity": "0"}, "slow");
-            $('#overlay').css('visibility', 'hidden');
-
-            $('#polkPopup').animate({"opacity": "0"}, "slow");
-            $("#polkPopup").css('visibility', 'hidden');
-
-            $('#polkiframe').attr('src',"");
-            $("#polkAboutImage > img").attr("src", "");
+            var polk = "polk";
+            popupClose(polk);
         });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
@@ -1965,13 +1809,8 @@ function initMap() {
         });
         // when x on popup is clicked, close popup
         $("#radfordPopupClose").click(function(){
-            $('#overlay').animate({"opacity": "0"}, "slow");
-            $('#overlay').css('visibility', 'hidden');
-
-            $('#radfordPopup').animate({"opacity": "0"}, "slow");
-            $("#radfordPopup").css('visibility', 'hidden');
-
-            $("#radfordAboutImage > img").attr("src", "");
+            var radford = "radford";
+            popupClose(radford);
         });
 
         var reeveHover = document.getElementById('reeveHover');
@@ -1996,15 +1835,8 @@ function initMap() {
         });
         // when x on popup is clicked, close popup
         $("#reevePopupClose").click(function(){
-            $('#overlay').animate({"opacity": "0"}, "slow");
-            $('#overlay').css('visibility', 'hidden');
-
-            $('#reevePopup').animate({"opacity": "0"}, "slow");
-            $("#reevePopup").css('visibility', 'hidden');
-
-            $('#reeveiframe').attr('src',"");
-            $("#reeveAboutImage > img").attr("src", "");
-            $("#reeveDiningImage > img").attr("src", "");
+            var reeve = "reeve";
+            popupClose(reeve);
         });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
@@ -2088,15 +1920,8 @@ function initMap() {
         });
         // when x on popup is clicked, close popup
         $("#sagePopupClose").click(function(){
-            $('#overlay').animate({"opacity": "0"}, "slow");
-            $('#overlay').css('visibility', 'hidden');
-
-            $('#sagePopup').animate({"opacity": "0"}, "slow");
-            $("#sagePopup").css('visibility', 'hidden');
-
-            $('#sageiframe').attr('src',"");
-            $("#sageAboutImage > img").attr("src", "");
-            $("#sageDiningImage > img").attr("src", "");
+            var sage = "sage";
+            popupClose(sage);
         });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
@@ -2178,14 +2003,8 @@ function initMap() {
         });
         // when x on popup is clicked, close popup
         $("#scottPopupClose").click(function(){
-            $('#overlay').animate({"opacity": "0"}, "slow");
-            $('#overlay').css('visibility', 'hidden');
-
-            $('#scottPopup').animate({"opacity": "0"}, "slow");
-            $("#scottPopup").css('visibility', 'hidden');
-
-            $("#scottAboutImage > img").attr("src", "");
-            $("#scottDiningImage > img").attr("src", "");
+            var scott = "scott";
+            popupClose(scott);
         });
         // tab clicking/content displaying
         $("#scottAboutLi").click(function(){
@@ -2225,13 +2044,8 @@ function initMap() {
         });
         // when x on popup is clicked, close popup
         $("#stewartPopupClose").click(function(){
-            $('#overlay').animate({"opacity": "0"}, "slow");
-            $('#overlay').css('visibility', 'hidden');
-
-            $('#stewartPopup').animate({"opacity": "0"}, "slow");
-            $("#stewartPopup").css('visibility', 'hidden');
-
-            $("#stewartAboutImage > img").attr("src", "");
+            var stewart = "stewart";
+            popupClose(stewart);
         });
 
 
@@ -2256,13 +2070,8 @@ function initMap() {
         });
         // when x on popup is clicked, close popup
         $("#recreationPopupClose").click(function(){
-            $('#overlay').animate({"opacity": "0"}, "slow");
-            $('#overlay').css('visibility', 'hidden');
-
-            $('#recreationPopup').animate({"opacity": "0"}, "slow");
-            $("#recreationPopup").css('visibility', 'hidden');
-
-            $("#recreationAboutImage > img").attr("src", "");
+            var recreation = "recreation";
+            popupClose(recreation);
         });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
@@ -2310,14 +2119,8 @@ function initMap() {
         });
         // when x on popup is clicked, close popup
         $("#successPopupClose").click(function(){
-            $('#overlay').animate({"opacity": "0"}, "slow");
-            $('#overlay').css('visibility', 'hidden');
-
-            $('#successPopup').animate({"opacity": "0"}, "slow");
-            $("#successPopup").css('visibility', 'hidden');
-
-            $('#successiframe').attr('src',"");
-            $("#successAboutImage > img").attr("src", "");
+            var success = "success";
+            popupClose(success);
         });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
@@ -2380,13 +2183,8 @@ function initMap() {
         });
         // when x on popup is clicked, close popup
         $("#swartPopupClose").click(function(){
-            $('#overlay').animate({"opacity": "0"}, "slow");
-            $('#overlay').css('visibility', 'hidden');
-
-            $('#swartPopup').animate({"opacity": "0"}, "slow");
-            $("#swartPopup").css('visibility', 'hidden');
-
-            $("#swartAboutImage > img").attr("src", "");
+            var swart = "swart";
+            popupClose(swart);
         });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
@@ -2424,13 +2222,8 @@ function initMap() {
         });
         // when x on popup is clicked, close popup
         $("#taylorPopupClose").click(function(){
-            $('#overlay').animate({"opacity": "0"}, "slow");
-            $('#overlay').css('visibility', 'hidden');
-
-            $('#taylorPopup').animate({"opacity": "0"}, "slow");
-            $("#taylorPopup").css('visibility', 'hidden');
-
-            $("#taylorAboutImage > img").attr("src", "");
+            var taylor = "taylor";
+            popupClose(taylor);
         });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
@@ -2468,13 +2261,8 @@ function initMap() {
         });
         // when x on popup is clicked, close popup
         $("#titanPopupClose").click(function(){
-            $('#overlay').animate({"opacity": "0"}, "slow");
-            $('#overlay').css('visibility', 'hidden');
-
-            $('#titanPopup').animate({"opacity": "0"}, "slow");
-            $("#titanPopup").css('visibility', 'hidden');
-
-            $("#taylorAboutImage > img").attr("src", "");
+            var titan = "titan";
+            popupClose(titan);
         });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
@@ -2513,13 +2301,8 @@ function initMap() {
         });
         // when x on popup is clicked, close popup
         $("#policePopupClose").click(function(){
-            $('#overlay').animate({"opacity": "0"}, "slow");
-            $('#overlay').css('visibility', 'hidden');
-
-            $('#policePopup').animate({"opacity": "0"}, "slow");
-            $("#policePopup").css('visibility', 'hidden');
-
-            $("#policeAboutImage > img").attr("src", "");
+            var police = "police";
+            popupClose(police);
         });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
@@ -2558,13 +2341,8 @@ function initMap() {
         });
         // when x on popup is clicked, close popup
         $("#websterPopupClose").click(function(){
-            $('#overlay').animate({"opacity": "0"}, "slow");
-            $('#overlay').css('visibility', 'hidden');
-
-            $('#websterPopup').animate({"opacity": "0"}, "slow");
-            $("#websterPopup").css('visibility', 'hidden');
-
-            $("#websterAboutImage > img").attr("src", "");
+            var webster = "webster";
+            popupClose(webster);
         });
 
 
