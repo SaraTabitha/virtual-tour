@@ -1295,7 +1295,7 @@ function initMap() {
             content: environmentalHover,
         });
         environmentalMarker.addListener('click', function(){
-            var environmental = "envirionmental";
+            var environmental = "environmental";
             markerOpenClose(environmental);
         });
         // when "click for more info" is selected,
@@ -3079,7 +3079,7 @@ function initMap() {
         });
         fourMarker.addListener('click', function(){
             var four = "four";
-            parkingOpenClose();
+            parkingOpenClose(four);
         });
 
         // lot 4a hover
@@ -3149,7 +3149,7 @@ function initMap() {
             content: thirtythreeHover,
         });
         thirtythreeMarker.addListener('click', function(){
-            var thirtythree = "thirtyfree";
+            var thirtythree = "thirtythree";
             parkingOpenClose(thirtythree);
         });
 
@@ -3794,7 +3794,7 @@ function initMap() {
         });
         fourAccParMarker.addListener('click', function(){
             var four = "four";
-            parkingOpenClose();
+            parkingOpenClose(four);
         });
         fouraAccParMarker.addListener('click', function(){
             var foura = "foura";
@@ -3817,7 +3817,7 @@ function initMap() {
             parkingOpenClose(twentyfive);
         });
         thirtythreeAccParMarker.addListener('click', function(){
-            var thirtythree = "thirtyfree";
+            var thirtythree = "thirtythree";
             parkingOpenClose(thirtythree);
         });
         fourteenaAccParMarker.addListener('click', function(){
@@ -4661,7 +4661,7 @@ function initMap() {
         });
 
         environmentalAccaFMarker.addListener('click', function(){
-            var environmental = "envirionmental";
+            var environmental = "environmental";
             markerOpenClose(environmental);
         });
 
@@ -4789,7 +4789,8 @@ function initMap() {
         });
 
         baseballAthMarker.addListener('click', function(){
-            baseballMarkerOpenClose();
+            var baseball = "baseball";
+            markerOpenClose(baseball);
         });
 
         eastAthMarker.addListener('click', function(){
