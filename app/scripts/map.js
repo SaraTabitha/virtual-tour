@@ -450,16 +450,19 @@ function initMap() {
             websterMarker.setMap(null);
         }
 
+
         //one function for all open/close
 
         function markerOpenClose(name){
+            // debugger;
             //close all hover when new marker is clicked
-            closeAllHover();
+            
             //toggle hoverOpen/close when marker is clicked
-            $("#" + name + "Hover").toggleClass("hoverOpen");
+            // $("#" + name + "Hover").toggleClass("hoverOpen");
             //if marker is clicked open hover element and set the image on it
-            if($("#" + name + "Hover").hasClass("hoverOpen")){
+            if(!$("#" + name + "Hover").hasClass("hoverOpen")){
                 //depending on the name make sure that the right image and popup are put up
+                closeAllHover();
                     if (name === "albee"){
                         albeeHoverCard.open(map, albeeMarker);
                         $("#albeeHover > img").attr("src", "images/campuspictures/albeehall.jpeg");
@@ -639,9 +642,12 @@ function initMap() {
                         websterHoverCard.open(map, websterMarker);
                         $("#websterHover > img").attr("src", "images/campuspictures/webster.jpeg");
                     }
+                    $("#" + name + "Hover").addClass("hoverOpen");
             //if marker is not clicked/clicked to close change src of image to empty
             } else{
                 $("#" + name + "Hover > img").attr("src", "");
+                $("#" + name + "Hover").removeClass("hoverOpen");
+                closeAllHover();
             }
         }
 
@@ -790,6 +796,7 @@ function initMap() {
             var ac = "ac";
             markerOpenClose(ac);
         });
+        
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
         // +animate to fade in
@@ -1041,6 +1048,7 @@ function initMap() {
             var campus = "campus";
             markerOpenClose(campus);
         });
+        
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
         // +animate to fade in
@@ -1182,6 +1190,7 @@ function initMap() {
             var dempsey = "dempsey";
             markerOpenClose(dempsey);
         });
+       
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
         // +animate to fade in
@@ -1258,6 +1267,7 @@ function initMap() {
             var east = "east";
             markerOpenClose(east);
         });
+        
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
         // +animate to fade in
@@ -2889,25 +2899,50 @@ function initMap() {
             thirtynineMarker.setMap(null);
         }
         // parking marker hovers + marker functionality
-
+        
+ // var check = $("#fiveHover").hasClass("hoverOpen");
+        // if (check === false){
+        //     closeAllHover();
+        //     fiveHoverCard.open(map, fiveMarker);
+        //     $("#fiveHover").addClass("hoverOpen");
+        // } else if (check === true){
+        //     $("#fiveHover").removeClass("hoverOpen");
+        //     closeAllHover();
+        // }
+        // 
+        function parkingOpenClose(name){
+            if(!$("#" + name + "Hover").hasClass("hoverOpen")){
+                closeAllHover();
+                if(name === "eleven"){
+                    elevenHoverCard.open(map, elevenMarker);
+                }
+            $("#" + name + "Hover").addClass("hoverOpen");
+            } else {
+                $("#" + name + "Hover").removeClass("hoverOpen");
+                closeAllHover();
+            }
+        }
         // lot 11 hover
         var elevenHover = document.getElementById('elevenHover');
         var elevenHoverCard = new google.maps.InfoWindow({
             content: elevenHover,
         });
-        function elevenMarkerOpenClose(){
-            var check = $("#elevenHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                elevenHoverCard.open(map, elevenMarker);
-                $("#elevenHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#elevenHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
-        }
+        // function elevenMarkerOpenClose(){
+        //     var check = $("#elevenHover").hasClass("hoverOpen");
+        //     if (check === false){
+        //         closeAllHover();
+                
+        //         $("#elevenHover").addClass("hoverOpen");
+        //     } else if (check === true){
+        //         $("#elevenHover").removeClass("hoverOpen");
+                
+        //     }
+        // }
         elevenMarker.addListener('click', function(){
-            elevenMarkerOpenClose();
+            // elevenMarkerOpenClose();
+            
+            var eleven = "eleven";
+            parkingOpenClose(eleven);
         });
         // lot 35 hover
         var thirtyfiveHover = document.getElementById('thirtyfiveHover');
@@ -3719,7 +3754,8 @@ function initMap() {
         });
 
         acAccEntMarker.addListener('click', function(){
-            acMarkerOpenClose();
+            var ac = "ac";
+            markerOpenClose(ac);
         });
 
         blackhawkAccEntMarker.addListener('click', function(){
@@ -3738,7 +3774,8 @@ function initMap() {
         });
 
         dempseyAccEntMarker.addListener('click', function(){
-            dempseyMarkerOpenClose();
+            var dempsey = "dempsey";
+            markerOpenClose(dempsey);
             
         });
 
@@ -3750,12 +3787,12 @@ function initMap() {
         fletcherAccEntMarker.addListener('click', function(){
             var fletcher = "fletcher";
             markerOpenClose(fletcher);
-                });
+        });
 
         fredricAccEntMarker.addListener('click', function(){
             var fredric = "fredric";
             markerOpenClose(fredric);
-                });
+         });
 
         gruenhagenAccEntMarker.addListener('click', function(){
             var gruenhagen = "gruenhagen";
@@ -4686,7 +4723,8 @@ function initMap() {
 
         // gender hover
         acGenderMarker.addListener('click', function(){
-            acMarkerOpenClose();
+            var ac = "ac";
+            markerOpenClose(ac);
         });
 
         blackhawkGenderMarker.addListener('click', function(){
@@ -4695,11 +4733,13 @@ function initMap() {
         });
 
         campusGenderMarker.addListener('click', function(){
-            campusMarkerOpenClose();
+            var campus = "campus";
+            markerOpenClose(campus);
         });
 
         dempseyGenderMarker.addListener('click', function(){
-            dempseyMarkerOpenClose();
+            var dempsey = "dempsey";
+            markerOpenClose(dempsey);
             
         });
 
@@ -4870,7 +4910,8 @@ function initMap() {
         });
 
         acAccaFMarker.addListener('click', function(){
-            acMarkerOpenClose();
+            var ac = "ac";
+            markerOpenClose(ac);
         });
 
         ceramicsAccaFMarker.addListener('click', function(){
@@ -4886,7 +4927,7 @@ function initMap() {
         environmentalAccaFMarker.addListener('click', function(){
             var environmental = "envirionmental";
             markerOpenClose(environmental);
-                });
+        });
 
         fredricAccaFMarker.addListener('click', function(){
             var fredric = "fredric";
@@ -5016,7 +5057,8 @@ function initMap() {
         });
 
         eastAthMarker.addListener('click', function(){
-            eastMarkerOpenClose();
+            var east = "east";
+            markerOpenClose(east);
         });
 
 
@@ -5163,11 +5205,13 @@ function initMap() {
         });
 
         campusCampSMarker.addListener('click', function(){
-            campusMarkerOpenClose();
+            var campus = "campus";
+            markerOpenClose(campus);
         });
 
         dempseyCampSMarker.addListener('click', function(){
-            dempseyMarkerOpenClose();
+            var dempsey = "dempsey";
+            markerOpenClose(dempsey);
             
         });
 
@@ -5284,17 +5328,17 @@ function initMap() {
         evansResHMarker.addListener('click', function(){
             var evans = "evans";
             markerOpenClose(evans);
-                });
+         });
 
         fletcherResHMarker.addListener('click', function(){
             var fletcher = "fletcher";
             markerOpenClose(fletcher);
-                });
+         });
 
         gruenhagenResHMarker.addListener('click', function(){
             var gruenhagen = "gruenhagen";
             markerOpenClose(gruenhagen);
-                });
+        });
 
         horizonResHMarker.addListener('click', function(){
             var horizon = "horizon";
@@ -5938,7 +5982,7 @@ function initMap() {
              }
         
     }
-    
+
     //right away trigger buildings to be checked (easier for first time users to see how to use the site)
     function triggerBuildings(){
         $("#buildings").trigger("click");
