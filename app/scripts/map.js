@@ -2899,22 +2899,123 @@ function initMap() {
             thirtynineMarker.setMap(null);
         }
         // parking marker hovers + marker functionality
-        
- // var check = $("#fiveHover").hasClass("hoverOpen");
-        // if (check === false){
-        //     closeAllHover();
-        //     fiveHoverCard.open(map, fiveMarker);
-        //     $("#fiveHover").addClass("hoverOpen");
-        // } else if (check === true){
-        //     $("#fiveHover").removeClass("hoverOpen");
-        //     closeAllHover();
-        // }
-        // 
+ 
         function parkingOpenClose(name){
             if(!$("#" + name + "Hover").hasClass("hoverOpen")){
                 closeAllHover();
                 if(name === "eleven"){
                     elevenHoverCard.open(map, elevenMarker);
+                }
+                else if (name === "thirtyfive"){
+                    thirtyfiveHoverCard.open(map, thirtyfiveMarker);
+                }
+                else if (name === "twentyseven"){
+                    twentysevenHoverCard.open(map, twentysevenMarker);
+                }
+                else if (name === "twentyone"){
+                    twentyoneHoverCard.open(map, twentyoneMarker);
+                }
+                else if(name === "twentysix"){
+                    twentysixHoverCard.open(map, twentysixMarker);
+                }
+                else if (name === "four"){
+                    fourHoverCard.open(map, fourMarker);
+                }
+                else if (name === "foura"){
+                    fouraHoverCard.open(map, fouraMarker);
+                }
+                else if (name === "sixteen"){
+                    sixteenHoverCard.open(map, sixteenMarker);
+                }
+                else if (name === "seventeen"){
+                    seventeenHoverCard.open(map, seventeenMarker);
+                }
+                else if (name === "twentynine"){
+                    twentynineHoverCard.open(map, twentynineMarker);
+                }
+                else if (name === "twentyfive"){
+                    twentyfiveHoverCard.open(map, twentyfiveMarker);
+                }
+                else if (name === "eight"){
+                    eightHoverCard.open(map, eightMarker);
+                }
+                else if (name === "thirtythree"){
+                    thirtythreeHoverCard.open(map, thirtythreeMarker);
+                }
+                else if (name === "thirtyfour"){
+                    thirtyfourHoverCard.open(map, thirtyfourMarker);
+                }
+                else if (name === "twentyeight"){
+                    twentyeightHoverCard.open(map, twentyeightMarker);
+                }
+                else if (name === "twentythree"){
+                    twentythreeHoverCard.open(map, twentythreeMarker);
+                }
+                else if (name === "fourteena"){
+                    fourteenaHoverCard.open(map, fourteenaMarker);
+                }
+                else if (name === "fourteenb"){
+                    fourteenbHoverCard.open(map, fourteenbMarker);
+                }
+                else if (name === "fourteenc"){
+                    fourteencHoverCard.open(map, fourteencMarker);
+                }
+                else if (name === "seven"){
+                    sevenHoverCard.open(map, sevenMarker);
+                }
+                else if (name === "fivea"){
+                    fiveaHoverCard.open(map, fiveaMarker);
+                }
+                else if (name === "five"){
+                    fiveHoverCard.open(map, fiveMarker);
+                }
+                else if (name === "sevena"){
+                    sevenaHoverCard.open(map, sevenaMarker);
+                }
+                else if (name === "fifteen"){
+                    fifteenHoverCard.open(map, fifteenMarker);
+                }
+                else if (name === "thirtytwo"){
+                    thirtytwoHoverCard.open(map, thirtytwoMarker);
+                }
+                else if (name === "thirteen"){
+                    thirteenHoverCard.open(map, thirteenMarker);
+                }
+                else if (name === "twelve"){
+                    twelveHoverCard.open(map, twelveMarker);
+                }
+                else if (name === "sixa"){
+                    sixaHoverCard.open(map, sixaMarker);
+                }
+                else if (name === "six"){
+                    sixHoverCard.open(map, sixMarker);
+                }
+                else if (name === "ten"){
+                    tenHoverCard.open(map, tenMarker);
+                }
+                else if (name === "ninea"){
+                    nineaHoverCard.open(map, nineaMarker);
+                }
+                else if (name === "nine"){
+                    nineHoverCard.open(map, nineMarker);
+                }
+                else if (name === "eighteen"){
+                    eighteenHoverCard.open(map, eighteenMarker);
+                }
+                else if (name === "thirty"){
+                    thirtyHoverCard.open(map, thirtyMarker);
+                }
+                else if (name === "thirtynine"){
+                    thirtynineHoverCard.open(map, thirtynineMarker);
+                }
+                else if (name === "womensCenter"){
+                    womensCenterHoverCard.open(map, womensCenterMarker);
+                }
+                else if (name === "titanOne"){
+                    titanOneHoverCard.open(map, titanOneMarker);
+                }
+                else if (name === "titanTwo"){
+                    titanTwoHoverCard.open(map, titanTwoMarker);
                 }
             $("#" + name + "Hover").addClass("hoverOpen");
             } else {
@@ -2927,20 +3028,7 @@ function initMap() {
         var elevenHoverCard = new google.maps.InfoWindow({
             content: elevenHover,
         });
-        // function elevenMarkerOpenClose(){
-        //     var check = $("#elevenHover").hasClass("hoverOpen");
-        //     if (check === false){
-        //         closeAllHover();
-                
-        //         $("#elevenHover").addClass("hoverOpen");
-        //     } else if (check === true){
-        //         $("#elevenHover").removeClass("hoverOpen");
-                
-        //     }
-        // }
         elevenMarker.addListener('click', function(){
-            // elevenMarkerOpenClose();
-            
             var eleven = "eleven";
             parkingOpenClose(eleven);
         });
@@ -2949,19 +3037,9 @@ function initMap() {
         var thirtyfiveHoverCard = new google.maps.InfoWindow({
             content: thirtyfiveHover,
         });
-        function thirtyfiveMarkerOpenClose(){
-            var check = $("#thirtyfiveHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                thirtyfiveHoverCard.open(map, thirtyfiveMarker);
-                $("#thirtyfiveHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#thirtyfiveHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
-        }
         thirtyfiveMarker.addListener('click', function(){
-            thirtyfiveMarkerOpenClose();
+            var thirtyfive = "thirtyfive";
+            parkingOpenClose(thirtyfive);
         });
 
         // lot 27 hover
@@ -2969,19 +3047,9 @@ function initMap() {
         var twentysevenHoverCard = new google.maps.InfoWindow({
             content: twentysevenHover,
         });
-        function twentysevenMarkerOpenClose(){
-            var check = $("#twentysevenHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                twentysevenHoverCard.open(map, twentysevenMarker);
-                $("#twentysevenHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#twentysevenHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
-        }
         twentysevenMarker.addListener('click', function(){
-            twentysevenMarkerOpenClose();
+            var twentyseven = "twentyseven";
+            parkingOpenClose(twentyseven);
         });
 
         // lot 21 hover
@@ -2989,19 +3057,9 @@ function initMap() {
         var twentyoneHoverCard = new google.maps.InfoWindow({
             content: twentyoneHover,
         });
-        function twentyoneMarkerOpenClose(){
-            var check = $("#twentyoneHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                twentyoneHoverCard.open(map, twentyoneMarker);
-                $("#twentyoneHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#twentyoneHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
-        }
         twentyoneMarker.addListener('click', function(){
-            twentyoneMarkerOpenClose();
+            var twentyone = "twentyone";
+            parkingOpenClose(twentyone);
         });
 
         // lot 26 hover
@@ -3009,19 +3067,9 @@ function initMap() {
         var twentysixHoverCard = new google.maps.InfoWindow({
             content: twentysixHover,
         });
-        function twentysixMarkerOpenClose(){
-            var check = $("#twentysixHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                twentysixHoverCard.open(map, twentysixMarker);
-                $("#twentysixHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#twentysixHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
-        }
         twentysixMarker.addListener('click', function(){
-            twentysixMarkerOpenClose();
+            var twentysix = "twentysix";
+            parkingOpenClose(twentysix);
         });
 
         // lot 4 hover
@@ -3029,19 +3077,9 @@ function initMap() {
         var fourHoverCard = new google.maps.InfoWindow({
             content: fourHover,
         });
-        function fourMarkerOpenClose(){
-            var check = $("#fourHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                fourHoverCard.open(map, fourMarker);
-                $("#fourHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#fourHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
-        }
         fourMarker.addListener('click', function(){
-            fourMarkerOpenClose();
+            var four = "four";
+            parkingOpenClose();
         });
 
         // lot 4a hover
@@ -3049,19 +3087,9 @@ function initMap() {
         var fouraHoverCard = new google.maps.InfoWindow({
             content: fouraHover,
         });
-        function fouraMarkerOpenClose(){
-            var check = $("#fouraHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                fouraHoverCard.open(map, fouraMarker);
-                $("#fouraHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#fouraHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
-        }
         fouraMarker.addListener('click', function(){
-            fouraMarkerOpenClose();
+            var foura = "foura";
+            parkingOpenClose(foura);
         });
 
         // lot 16 hover
@@ -3069,19 +3097,9 @@ function initMap() {
         var sixteenHoverCard = new google.maps.InfoWindow({
             content: sixteenHover,
         });
-        function sixteenMarkerOpenClose(){
-            var check = $("#sixteenHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                sixteenHoverCard.open(map, sixteenMarker);
-                $("#sixteenHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#sixteenHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
-        }
         sixteenMarker.addListener('click', function(){
-            sixteenMarkerOpenClose();
+            var sixteen = "sixteen";
+            parkingOpenClose(sixteen);
         });
 
         // lot 17 hover
@@ -3090,19 +3108,9 @@ function initMap() {
             content: seventeenHover,
         });
 
-        function seventeenMarkerOpenClose(){
-            var check = $("#seventeenHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                seventeenHoverCard.open(map, seventeenMarker);
-                $("#seventeenHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#seventeenHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
-        }
         seventeenMarker.addListener('click', function(){
-            seventeenMarkerOpenClose();
+            var seventeen = "seventeen";
+            parkingOpenClose(seventeen);
         });
 
         // lot 29 hover
@@ -3110,19 +3118,9 @@ function initMap() {
         var twentynineHoverCard = new google.maps.InfoWindow({
             content: twentynineHover,
         });
-        function twentynineMarkerOpenClose(){
-            var check = $("#twentynineHover").hasClass("hoverOpen");
-            if (check === false){
-                  closeAllHover();
-                  twentynineHoverCard.open(map, twentynineMarker);
-                  $("#twentynineHover").addClass("hoverOpen");
-            } else if (check === true){
-                  $("#twentynineHover").removeClass("hoverOpen");
-                  closeAllHover();
-              }
-        }
         twentynineMarker.addListener('click', function(){
-            twentynineMarkerOpenClose();
+            var twentynine = "twentynine";
+            parkingOpenClose(twentynine);
         });
 
         // lot 25 hover
@@ -3130,19 +3128,9 @@ function initMap() {
         var twentyfiveHoverCard = new google.maps.InfoWindow({
             content: twentyfiveHover,
         });
-        function twentyfiveMarkerOpenClose(){
-            var check = $("#twentyfiveHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                twentyfiveHoverCard.open(map, twentyfiveMarker);
-                $("#twentyfiveHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#twentyfiveHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
-        }
         twentyfiveMarker.addListener('click', function(){
-            twentyfiveMarkerOpenClose();
+            var twentyfive = "twentyfive";
+            parkingOpenClose(twentyfive);
         });
 
         // lot 8 hover
@@ -3150,19 +3138,9 @@ function initMap() {
         var eightHoverCard = new google.maps.InfoWindow({
             content: eightHover,
         });
-        function eightMarkerOpenClose(){
-            var check = $("#eightHover").hasClass("hoverOpen");
-            if (check === false){
-            closeAllHover();
-            eightHoverCard.open(map, eightMarker);
-            $("#eightHover").addClass("hoverOpen");
-        } else if (check === true){
-            $("#eightHover").removeClass("hoverOpen");
-            closeAllHover();
-        }
-        }
         eightMarker.addListener('click', function(){
-            eightMarkerOpenClose();
+            var eight = "eight";
+            parkingOpenClose(eight);
         });
 
         // lot 33 hover
@@ -3170,19 +3148,9 @@ function initMap() {
         var thirtythreeHoverCard = new google.maps.InfoWindow({
             content: thirtythreeHover,
         });
-        function thirtythreeMarkerOpenClose(){
-            var check = $("#thirtythreeHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                thirtythreeHoverCard.open(map, thirtythreeMarker);
-                $("#thirtythreeHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#thirtythreeHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
-        }
         thirtythreeMarker.addListener('click', function(){
-            thirtythreeMarkerOpenClose();
+            var thirtythree = "thirtyfree";
+            parkingOpenClose(thirtythree);
         });
 
         // lot 34 hover
@@ -3190,19 +3158,9 @@ function initMap() {
         var thirtyfourHoverCard = new google.maps.InfoWindow({
             content: thirtyfourHover,
         });
-        function thirtyfourMarkerOpenClose(){
-            var check = $("#thirtyfourHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                thirtyfourHoverCard.open(map, thirtyfourMarker);
-                $("#thirtyfourHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#thirtyfourHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
-        }
         thirtyfourMarker.addListener('click', function(){
-            thirtyfourMarkerOpenClose();
+            var thirtyfour = "thirtyfour";
+            parkingOpenClose(thirtyfour);
         });
 
         // lot 28 hover
@@ -3210,19 +3168,9 @@ function initMap() {
         var twentyeightHoverCard = new google.maps.InfoWindow({
             content: twentyeightHover,
         });
-        function twentyeightMarkerOpenClose(){
-            var check = $("#twentyeightHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                twentyeightHoverCard.open(map, twentyeightMarker);
-                $("#twentyeightHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#twentyeightHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
-        }
         twentyeightMarker.addListener('click', function(){
-            twentyeightMarkerOpenClose();
+            var twentyeight = "twentyeight";
+            parkingOpenClose(twentyeight);
         });
 
         // lot 23 hover
@@ -3230,19 +3178,9 @@ function initMap() {
         var twentythreeHoverCard = new google.maps.InfoWindow({
             content: twentythreeHover,
         });
-        function twentythreeMarkerOpenClose(){
-            var check = $("#twentythreeHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                twentythreeHoverCard.open(map, twentythreeMarker);
-                $("#twentythreeHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#twentythreeHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
-        }
         twentythreeMarker.addListener('click', function(){
-            twentythreeMarkerOpenClose();
+            var twentythree = "twentythree";
+            parkingOpenClose(twentythree);
         });
 
         // lot 14a hover
@@ -3250,19 +3188,9 @@ function initMap() {
         var fourteenaHoverCard = new google.maps.InfoWindow({
             content: fourteenaHover,
         });
-        function fourteenaMarkerOpenClose(){
-            var check = $("#fourteenaHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                fourteenaHoverCard.open(map, fourteenaMarker);
-                $("#fourteenaHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#fourteenaHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
-        }
         fourteenaMarker.addListener('click', function(){
-            fourteenaMarkerOpenClose();
+            var fourteena = "fourteena";
+            parkingOpenClose(fourteena);
         });
 
         // lot 14b hover
@@ -3270,19 +3198,9 @@ function initMap() {
         var fourteenbHoverCard = new google.maps.InfoWindow({
             content: fourteenbHover,
         });
-        function fourteenbMarkerOpenClose(){
-            var check = $("#fourteenbHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                fourteenbHoverCard.open(map, fourteenbMarker);
-                $("#fourteenbHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#fourteenbHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
-        }
         fourteenbMarker.addListener('click', function(){
-            fourteenbMarkerOpenClose();
+            var fourteenb = "fourteenb";
+            parkingOpenClose(fourteenb);
         });
 
         // lot 14c hover
@@ -3290,19 +3208,9 @@ function initMap() {
         var fourteencHoverCard = new google.maps.InfoWindow({
             content: fourteencHover,
         });
-        function fourteencMarkerOpenClose(){
-            var check = $("#fourteencHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                fourteencHoverCard.open(map, fourteencMarker);
-                $("#fourteencHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#fourteencHover").removeClass("hoverOpen");
-                closeAllHover();
-                }
-        }
         fourteencMarker.addListener('click', function(){
-            fourteencMarkerOpenClose();
+            var fourteenc = "fourteenc";
+            parkingOpenClose(fourteenc);
         });
 
         // lot 7 hover
@@ -3310,19 +3218,9 @@ function initMap() {
         var sevenHoverCard = new google.maps.InfoWindow({
             content: sevenHover,
         });
-        function sevenMarkerOpenClose(){
-            var check = $("#sevenHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                sevenHoverCard.open(map, sevenMarker);
-                $("#sevenHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#sevenHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
-        }
         sevenMarker.addListener('click', function(){
-            sevenMarkerOpenClose();
+            var seven = "seven";
+            parkingOpenClose(seven);
         });
 
         // lot 5a hover
@@ -3330,19 +3228,9 @@ function initMap() {
         var fiveaHoverCard = new google.maps.InfoWindow({
             content: fiveaHover,
         });
-        function fiveaMarkerOpenClose(){
-            var check = $("#fiveaHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                fiveaHoverCard.open(map, fiveaMarker);
-                $("#fiveaHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#fiveaHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
-        }
         fiveaMarker.addListener('click', function(){
-            fiveaMarkerOpenClose();
+            var fivea = "fivea";
+            parkingOpenClose(fivea);
         });
 
         // lot 5 hover
@@ -3350,19 +3238,9 @@ function initMap() {
         var fiveHoverCard = new google.maps.InfoWindow({
             content: fiveHover,
         });
-        function fiveMarkerOpenClose(){
-            var check = $("#fiveHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                fiveHoverCard.open(map, fiveMarker);
-                $("#fiveHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#fiveHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
-        }
         fiveMarker.addListener('click', function(){
-            fiveMarkerOpenClose();
+            var five = "five";
+            parkingOpenClose(five);
         });
 
         // lot 7a hover
@@ -3370,19 +3248,9 @@ function initMap() {
         var sevenaHoverCard = new google.maps.InfoWindow({
             content: sevenaHover,
         });
-        function sevenaMarkerOpenClose(){
-            var check = $("#sevenaHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                sevenaHoverCard.open(map, sevenaMarker);
-                $("#sevenaHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#sevenaHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
-        }
         sevenaMarker.addListener('click', function(){
-            sevenaMarkerOpenClose();
+            var sevena = "sevena";
+            parkingOpenClose(sevena);
         });
 
         // lot 15 hover
@@ -3390,19 +3258,9 @@ function initMap() {
         var fifteenHoverCard = new google.maps.InfoWindow({
             content: fifteenHover,
         });
-        function fifteenMarkerOpenClose(){
-            var check = $("#fifteenHover").hasClass("hoverOpen");
-            if (check === false){
-            closeAllHover();
-            fifteenHoverCard.open(map, fifteenMarker);
-            $("#fifteenHover").addClass("hoverOpen");
-        } else if (check === true){
-            $("#fifteenHover").removeClass("hoverOpen");
-            closeAllHover();
-        }
-        }
         fifteenMarker.addListener('click', function(){
-            fifteenMarkerOpenClose();
+            var fifteen = "fifteen";
+            parkingOpenClose(fifteen);
         });
 
         // lot 32 hover
@@ -3410,19 +3268,9 @@ function initMap() {
         var thirtytwoHoverCard = new google.maps.InfoWindow({
             content: thirtytwoHover,
         });
-        function thirtytwoMarkerOpenClose(){
-            var check = $("#thirtytwoHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                thirtytwoHoverCard.open(map, thirtytwoMarker);
-                $("#thirtytwoHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#thirtytwoHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
-        }
         thirtytwoMarker.addListener('click', function(){
-            thirtytwoMarkerOpenClose();
+            var thirtytwo = "thirtytwo";
+            parkingOpenClose(thirtytwo);
         });
 
         // lot 13 hover
@@ -3430,19 +3278,9 @@ function initMap() {
         var thirteenHoverCard = new google.maps.InfoWindow({
             content: thirteenHover,
         });
-        function thirteenMarkerOpenClose(){
-            var check = $("#thirteenHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                thirteenHoverCard.open(map, thirteenMarker);
-                $("#thirteenHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#thirteenHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
-        }
         thirteenMarker.addListener('click', function(){
-            thirteenMarkerOpenClose();
+            var thirteen = "thirteen";
+            parkingOpenClose(thirteen);
         });
 
         // lot 12 hover
@@ -3450,19 +3288,9 @@ function initMap() {
         var twelveHoverCard = new google.maps.InfoWindow({
             content: twelveHover,
         });
-        function twelveMarkerOpenClose(){
-            var check = $("#twelveHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                twelveHoverCard.open(map, twelveMarker);
-                $("#twelveHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#twelveHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
-        }
         twelveMarker.addListener('click', function(){
-            twelveMarkerOpenClose();
+            var twelve = "twelve";
+            parkingOpenClose(twelve);
         });
 
         // lot 6a hover
@@ -3470,19 +3298,9 @@ function initMap() {
         var sixaHoverCard = new google.maps.InfoWindow({
             content: sixaHover,
         });
-        function sixaMarkerOpenClose(){
-            var check = $("#sixaHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                sixaHoverCard.open(map, sixaMarker);
-                $("#sixaHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#sixaHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
-        }
         sixaMarker.addListener('click', function(){
-            sixaMarkerOpenClose();
+            var sixa = "sixa";
+            parkingOpenClose(sixa);
         });
 
         // lot 6 hover
@@ -3490,19 +3308,9 @@ function initMap() {
         var sixHoverCard = new google.maps.InfoWindow({
             content: sixHover,
         });
-        function sixMarkerOpenClose(){
-            var check = $("#sixHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                sixHoverCard.open(map, sixMarker);
-                $("#sixHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#sixHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
-        }
         sixMarker.addListener('click', function(){
-            sixMarkerOpenClose();
+            var six = "six";
+            parkingOpenClose(six);
         });
 
         // lot 10 hover
@@ -3510,19 +3318,9 @@ function initMap() {
         var tenHoverCard = new google.maps.InfoWindow({
             content: tenHover,
         });
-        function tenMarkerOpenClose(){
-            var check = $("#tenHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                tenHoverCard.open(map, tenMarker);
-                $("#tenHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#tenHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
-        }
         tenMarker.addListener('click', function(){
-            tenMarkerOpenClose();
+            var ten = "ten";
+            parkingOpenClose(ten);
         });
 
         // lot 9a hover
@@ -3530,19 +3328,9 @@ function initMap() {
         var nineaHoverCard = new google.maps.InfoWindow({
             content: nineaHover,
         });
-        function nineaMarkerOpenClose(){
-            var check = $("#nineaHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                nineaHoverCard.open(map, nineaMarker);
-                $("#nineaHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#nineaHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
-        }
         nineaMarker.addListener('click', function(){
-            nineaMarkerOpenClose();
+            var ninea = "ninea";
+            parkingOpenClose(ninea);
         });
 
         // lot 9 hover
@@ -3550,19 +3338,9 @@ function initMap() {
         var nineHoverCard = new google.maps.InfoWindow({
             content: nineHover,
         });
-        function nineMarkerOpenClose(){
-            var check = $("#nineHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                nineHoverCard.open(map, nineMarker);
-                $("#nineHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#nineHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
-        }
         nineMarker.addListener('click', function(){
-            nineMarkerOpenClose();
+            var nine = "nine";
+            parkingOpenClose(nine);
         });
 
         // lot 18 hover
@@ -3570,19 +3348,9 @@ function initMap() {
         var eighteenHoverCard = new google.maps.InfoWindow({
             content: eighteenHover,
         });
-        function eighteenMarkerOpenClose(){
-            var check = $("#eighteenHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                eighteenHoverCard.open(map, eighteenMarker);
-                $("#eighteenHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#eighteenHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
-        }
         eighteenMarker.addListener('click', function(){
-            eighteenMarkerOpenClose();
+            var eighteen = "eighteen";
+            parkingOpenClose(eighteen);
         });
 
         // lot 30 hover
@@ -3590,19 +3358,9 @@ function initMap() {
         var thirtyHoverCard = new google.maps.InfoWindow({
             content: thirtyHover,
         });
-        function thirtyMarkerOpenClose(){
-            var check = $("#thirtyHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                thirtyHoverCard.open(map, thirtyMarker);
-                $("#thirtyHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#thirtyHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
-        }
         thirtyMarker.addListener('click', function(){
-            thirtyMarkerOpenClose();
+            var thirty = "thirty";
+            parkingOpenClose(thirty);
         });
 
         // lot 39 hover
@@ -3610,25 +3368,11 @@ function initMap() {
         var thirtynineHoverCard = new google.maps.InfoWindow({
             content: thirtynineHover,
         });
-        function thirtynineMarkerOpenClose(){
-            var check = $("#thirtynineHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                thirtynineHoverCard.open(map, thirtynineMarker);
-                $("#thirtynineHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#thirtynineHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
-        }
         thirtynineMarker.addListener('click', function(){
-            thirtynineMarkerOpenClose();
+            var thirtynine = "thirtynine";
+            parkingOpenClose(thirtynine);
         });
 
-
-
-
-        
 
         // accEnt markers
         var albeeAccEntMarker = new google.maps.Marker({
@@ -4045,90 +3789,101 @@ function initMap() {
         });
         //  hover event listeners for accessible parking here
         elevenAccParMarker.addListener('click', function(){
-            elevenMarkerOpenClose();
+            var eleven = "eleven";
+            parkingOpenClose(eleven);
         });
         fourAccParMarker.addListener('click', function(){
-            fourMarkerOpenClose();
+            var four = "four";
+            parkingOpenClose();
         });
         fouraAccParMarker.addListener('click', function(){
-            fouraMarkerOpenClose();
+            var foura = "foura";
+            parkingOpenClose(foura);
         });
         sixteenAccParMarker.addListener('click', function(){
-            sixteenMarkerOpenClose();
+            var sixteen = "sixteen";
+            parkingOpenClose(sixteen);
         });
         seventeenAccParMarker.addListener('click', function(){
-            seventeenMarkerOpenClose();
+            var seventeen = "seventeen";
+            parkingOpenClose(seventeen);
         });
         twentynineAccParMarker.addListener('click', function(){
-            twentynineMarkerOpenClose();
+            var twentynine = "twentynine";
+            parkingOpenClose(twentynine);
         });
         twentyfiveAccParMarker.addListener('click', function(){
-            twentyfiveMarkerOpenClose();
+            var twentyfive = "twentyfive";
+            parkingOpenClose(twentyfive);
         });
         thirtythreeAccParMarker.addListener('click', function(){
-            thirtythreeMarkerOpenClose();
+            var thirtythree = "thirtyfree";
+            parkingOpenClose(thirtythree);
         });
         fourteenaAccParMarker.addListener('click', function(){
-            fourteenaMarkerOpenClose();
+            var fourteena = "fourteena";
+            parkingOpenClose(fourteena);
         });
         sevenaAccParMarker.addListener('click', function(){
-            sevenaMarkerOpenClose();
+            var sevena = "sevena";
+            parkingOpenClose(sevena);
         });
         thirteenAccParMarker.addListener('click', function(){
-            thirteenMarkerOpenClose();
+            var thirteen = "thirteen";
+            parkingOpenClose(thirteen);
         });
         thirtyfourAccParMarker.addListener('click', function(){
-            thirtyfourMarkerOpenClose();
+            var thirtyfour = "thirtyfour";
+            parkingOpenClose(thirtyfour);
         });
         twentyeightAccParMarker.addListener('click', function(){
-            twentyeightMarkerOpenClose();
+            var twentyeight = "twentyeight";
+            parkingOpenClose(twentyeight);
         });
         twentythreeAccParMarker.addListener('click', function(){
-            twentythreeMarkerOpenClose();
+            var twentythree = "twentythree";
+            parkingOpenClose(twentythree);
         });
         // womens center
         var womensCenterHover = document.getElementById('womensCenterHover');
         var womensCenterHoverCard = new google.maps.InfoWindow({
             content: womensCenterHover,
         });
-        function womensCenterMarkerOpenClose(){
-            var check = $("#womensCenterHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                womensCenterHoverCard.open(map, womensCenterMarker);
-                $("#womensCenterHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#womensCenterHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
-        }
         womensCenterMarker.addListener('click', function(){
-            womensCenterMarkerOpenClose();
+            var womensCenter = "womensCenter";
+            parkingOpenClose(womensCenter);
         });
 
         fifteenAccParMarker.addListener('click', function(){
-            fifteenMarkerOpenClose();
+            var fifteen = "fifteen";
+            parkingOpenClose(fifteen);
         });
         thirtytwoAccParMarker.addListener('click', function(){
-            thirtytwoMarkerOpenClose();
+            var thirtytwo = "thirtytwo";
+            parkingOpenClose(thirtytwo);
         });
 
         // parking ramp
 
         tenAccParMarker.addListener('click', function(){
-            tenMarkerOpenClose();
+             var ten = "ten";
+            parkingOpenClose(ten);
         });
         twelveAccParMarker.addListener('click', function(){
-            twelveMarkerOpenClose();
+            var twelve = "twelve";
+            parkingOpenClose(twelve);
         });
         sixaAccParMarker.addListener('click', function(){
-            sixaMarkerOpenClose();
+            var sixa = "sixa";
+            parkingOpenClose(sixa);
         });
         sixAccParMarker.addListener('click', function(){
-            sixMarkerOpenClose();
+            var six = "six";
+            parkingOpenClose(six);
         });
         eighteenAccParMarker.addListener('click', function(){
-            eighteenMarkerOpenClose();
+            var eighteen = "eighteen";
+            parkingOpenClose(eighteen);
         });
 
         // titan one
@@ -4136,38 +3891,18 @@ function initMap() {
         var titanOneHoverCard = new google.maps.InfoWindow({
             content: titanOneHover,
         });
-        function titanOneMarkerOpenClose(){
-            var check = $("#titanOneHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                titanOneHoverCard.open(map, titanOneMarker);
-                $("#titanOneHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#titanOneHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
-        }
         titanOneMarker.addListener('click', function(){
-            titanOneMarkerOpenClose();
+            var titanOne = "titanOne";
+            parkingOpenClose(titanOne);
         });
         // titan two
         var titanTwoHover = document.getElementById('titanTwoHover');
         var titanTwoHoverCard = new google.maps.InfoWindow({
             content: titanTwoHover,
         });
-        function titanTwoMarkerOpenClose(){
-            var check = $("#titanTwoHover").hasClass("hoverOpen");
-            if (check === false){
-                closeAllHover();
-                titanTwoHoverCard.open(map, titanTwoMarker);
-                $("#titanTwoHover").addClass("hoverOpen");
-            } else if (check === true){
-                $("#titanTwoHover").removeClass("hoverOpen");
-                closeAllHover();
-            }
-        }
         titanTwoMarker.addListener('click', function(){
-            titanTwoMarkerOpenClose();
+            var titanTwo = "titanTwo";
+            parkingOpenClose(titanTwo);
         });
 
 
@@ -4563,7 +4298,8 @@ function initMap() {
         });
 
         alumniSustMarker.addListener('click', function(){
-            alumniMarkerOpenClose();
+            var alumni = "alumni";
+            markerOpenClose(alumni);
         });
 
         blackhawkSustMarker.addListener('click', function(){
