@@ -646,7 +646,7 @@ function initMap() {
                         websterHoverCard.open(map, websterMarker);
                         $("#websterHover > img").attr("src", "images/campuspictures/webster.jpeg");
                     }
-                    $("#" + name + "Hover").addClass("hoverOpen");
+                 $("#" + name + "Hover").addClass("hoverOpen");
             //if marker is not clicked/clicked to close change src of image to empty
             } else{
                 $("#" + name + "Hover > img").attr("src", "");
@@ -752,6 +752,55 @@ function initMap() {
             else if (name === "nursing"){
                 $("#nursingAboutImage > img").attr("src", "images/campuspictures/nursingeducationFull.jpeg");
 
+            }
+            else if (name === "oviatt"){
+                $("#oviattAboutImage > img").attr("src", "images/campuspictures/oviattFull.jpeg");
+            }
+            else if (name === "pollock"){
+                $("#pollockAboutImage > img").attr("src", "images/campuspictures/pollockFull.jpeg");
+            }
+            else if (name === "polk"){
+                $('#polkiframe').attr('src',"https://www.youtube.com/embed/iHPdc89AD_c");
+                $("#polkAboutImage > img").attr("src", "images/campuspictures/polkFull.jpeg");
+            }
+            else if (name === "radford"){
+                $("#radfordAboutImage > img").attr("src", "images/campuspictures/radfordFull.jpeg");
+            }
+            else if (name === "reeve"){
+                $('#reeveiframe').attr('src',"https://www.youtube.com/embed/QAtW972K3cQ");
+                $("#reeveAboutImage > img").attr("src", "images/campuspictures/reeveFull.jpeg");
+            }
+            else if (name === "sage"){
+                $('#sageiframe').attr('src',"https://www.youtube.com/embed/DVRbh2fCCZ0");
+                $("#sageAboutImage > img").attr("src", "images/campuspictures/sageFull.jpeg");
+            }
+            else if (name === "scott"){
+                $("#scottAboutImage > img").attr("src", "images/campuspictures/scottFull.jpeg");
+            }
+            else if (name === "stewart"){
+                $("#stewartAboutImage > img").attr("src", "images/campuspictures/stewartFull.jpeg");
+            }
+            else if (name === "recreation"){
+                $("#recreationAboutImage > img").attr("src", "images/campuspictures/srwcFull.jpeg");
+            }
+            else if (name === "success"){
+                $('#successiframe').attr('src',"https://www.youtube.com/embed/NjZjuqM7SBg");
+                $("#successAboutImage > img").attr("src", "images/campuspictures/studentsuccessFull.jpeg");
+            }
+            else if (name === "swart"){
+                $("#swartAboutImage > img").attr("src", "images/campuspictures/swartFull.jpeg");
+            }
+            else if (name === "taylor"){
+                $("#taylorAboutImage > img").attr("src", "images/campuspictures/taylorFull.jpeg");
+            }
+            else if (name === "titan"){
+                $("#titanAboutImage > img").attr("src", "images/campuspictures/titanstadiumFull.jpeg");
+            }
+            else if (name === "police"){
+                $("#policeAboutImage > img").attr("src", "images/campuspictures/universitypoliceFull.jpeg");
+            }
+            else if (name === "webster"){
+                $("#websterAboutImage > img").attr("src", "images/campuspictures/websterFull.jpeg");
             }
         }
         //function for all popupclosure
@@ -1665,12 +1714,6 @@ function initMap() {
         $("#nursingLink").click(function(){
             var nursing = "nursing";
             popupOpen(nursing);
-            // $('#overlay').css('visibility', 'visible');
-            // $('#overlay').animate({"opacity": "0.3"}, "slow");
-            // $("#nursingAboutImage > img").attr("src", "images/campuspictures/nursingeducationFull.jpeg");
-
-            // $("#nursingPopup").css('visibility', 'visible');
-            // $('#nursingPopup').animate({"opacity": "1"}, "slow");
         });
         // when x on popup is clicked, close popup
         $("#nursingPopupClose").click(function(){
@@ -1705,12 +1748,8 @@ function initMap() {
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#oviattLink").click(function(){
-            $('#overlay').css('visibility', 'visible');
-            $('#overlay').animate({"opacity": "0.3"}, "slow");
-            $("#oviattAboutImage > img").attr("src", "images/campuspictures/oviattFull.jpeg");
-
-            $("#oviattPopup").css('visibility', 'visible');
-            $('#oviattPopup').animate({"opacity": "1"}, "slow");
+            var oviatt = "oviatt";
+            popupOpen(oviatt);
         });
         // when x on popup is clicked, close popup
         $("#oviattPopupClose").click(function(){
@@ -1731,12 +1770,8 @@ function initMap() {
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#pollockLink").click(function(){
-            $('#overlay').css('visibility', 'visible');
-            $('#overlay').animate({"opacity": "0.3"}, "slow");
-            $("#pollockAboutImage > img").attr("src", "images/campuspictures/pollockFull.jpeg");
-
-            $("#pollockPopup").css('visibility', 'visible');
-            $('#pollockPopup').animate({"opacity": "1"}, "slow");
+            var pollock = "pollock";
+            popupOpen(pollock);
         });
         // when x on popup is clicked, close popup
         $("#pollockPopupClose").click(function(){
@@ -1757,13 +1792,8 @@ function initMap() {
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#polkLink").click(function(){
-            $('#overlay').css('visibility', 'visible');
-            $('#overlay').animate({"opacity": "0.3"}, "slow");
-            $('#polkiframe').attr('src',"https://www.youtube.com/embed/iHPdc89AD_c");
-            $("#polkAboutImage > img").attr("src", "images/campuspictures/polkFull.jpeg");
-
-            $("#polkPopup").css('visibility', 'visible');
-            $('#polkPopup').animate({"opacity": "1"}, "slow");
+            var polk = "polk";
+            popupOpen(polk);
         });
         // when x on popup is clicked, close popup
         $("#polkPopupClose").click(function(){
@@ -1800,12 +1830,8 @@ function initMap() {
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#radfordLink").click(function(){
-            $('#overlay').css('visibility', 'visible');
-            $('#overlay').animate({"opacity": "0.3"}, "slow");
-            $("#radfordAboutImage > img").attr("src", "images/campuspictures/radfordFull.jpeg");
-
-            $("#radfordPopup").css('visibility', 'visible');
-            $('#radfordPopup').animate({"opacity": "1"}, "slow");
+            var radford = "radford";
+            popupOpen(radford);
         });
         // when x on popup is clicked, close popup
         $("#radfordPopupClose").click(function(){
@@ -1825,13 +1851,8 @@ function initMap() {
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#reeveLink").click(function(){
-            $('#overlay').css('visibility', 'visible');
-            $('#overlay').animate({"opacity": "0.3"}, "slow");
-            $('#reeveiframe').attr('src',"https://www.youtube.com/embed/QAtW972K3cQ");
-            $("#reeveAboutImage > img").attr("src", "images/campuspictures/reeveFull.jpeg");
-
-            $("#reevePopup").css('visibility', 'visible');
-            $('#reevePopup').animate({"opacity": "1"}, "slow");
+            var reeve = "reeve";
+            popupOpen(reeve);
         });
         // when x on popup is clicked, close popup
         $("#reevePopupClose").click(function(){
@@ -1910,13 +1931,8 @@ function initMap() {
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#sageLink").click(function(){
-            $('#overlay').css('visibility', 'visible');
-            $('#overlay').animate({"opacity": "0.3"}, "slow");
-            $('#sageiframe').attr('src',"https://www.youtube.com/embed/DVRbh2fCCZ0");
-            $("#sageAboutImage > img").attr("src", "images/campuspictures/sageFull.jpeg");
-
-            $("#sagePopup").css('visibility', 'visible');
-            $('#sagePopup').animate({"opacity": "1"}, "slow");
+            var sage = "sage";
+            popupOpen(sage);
         });
         // when x on popup is clicked, close popup
         $("#sagePopupClose").click(function(){
@@ -1994,12 +2010,8 @@ function initMap() {
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#scottLink").click(function(){
-            $('#overlay').css('visibility', 'visible');
-            $('#overlay').animate({"opacity": "0.3"}, "slow");
-            $("#scottAboutImage > img").attr("src", "images/campuspictures/scottFull.jpeg");
-
-            $("#scottPopup").css('visibility', 'visible');
-            $('#scottPopup').animate({"opacity": "1"}, "slow");
+            var scott = "scott";
+            popupOpen(scott);
         });
         // when x on popup is clicked, close popup
         $("#scottPopupClose").click(function(){
@@ -2035,12 +2047,8 @@ function initMap() {
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#stewartLink").click(function(){
-            $('#overlay').css('visibility', 'visible');
-            $('#overlay').animate({"opacity": "0.3"}, "slow");
-            $("#stewartAboutImage > img").attr("src", "images/campuspictures/stewartFull.jpeg");
-
-            $("#stewartPopup").css('visibility', 'visible');
-            $('#stewartPopup').animate({"opacity": "1"}, "slow");
+            var stewart = "stewart";
+            popupOpen(stewart);
         });
         // when x on popup is clicked, close popup
         $("#stewartPopupClose").click(function(){
@@ -2061,12 +2069,8 @@ function initMap() {
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#recreationLink").click(function(){
-            $('#overlay').css('visibility', 'visible');
-            $('#overlay').animate({"opacity": "0.3"}, "slow");
-            $("#recreationAboutImage > img").attr("src", "images/campuspictures/srwcFull.jpeg");
-
-            $("#recreationPopup").css('visibility', 'visible');
-            $('#recreationPopup').animate({"opacity": "1"}, "slow");
+            var recreation = "recreation";
+            popupOpen(recreation);
         });
         // when x on popup is clicked, close popup
         $("#recreationPopupClose").click(function(){
@@ -2109,13 +2113,8 @@ function initMap() {
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#successLink").click(function(){
-            $('#overlay').css('visibility', 'visible');
-            $('#overlay').animate({"opacity": "0.3"}, "slow");
-            $('#successiframe').attr('src',"https://www.youtube.com/embed/NjZjuqM7SBg");
-            $("#successAboutImage > img").attr("src", "images/campuspictures/studentsuccessFull.jpeg");
-
-            $("#successPopup").css('visibility', 'visible');
-            $('#successPopup').animate({"opacity": "1"}, "slow");
+            var success = "success";
+            popupOpen(success);
         });
         // when x on popup is clicked, close popup
         $("#successPopupClose").click(function(){
@@ -2174,12 +2173,8 @@ function initMap() {
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#swartLink").click(function(){
-            $('#overlay').css('visibility', 'visible');
-            $('#overlay').animate({"opacity": "0.3"}, "slow");
-            $("#swartAboutImage > img").attr("src", "images/campuspictures/swartFull.jpeg");
-
-            $("#swartPopup").css('visibility', 'visible');
-            $('#swartPopup').animate({"opacity": "1"}, "slow");
+           var swart = "swart";
+           popupOpen(swart);
         });
         // when x on popup is clicked, close popup
         $("#swartPopupClose").click(function(){
@@ -2213,12 +2208,8 @@ function initMap() {
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#taylorLink").click(function(){
-            $('#overlay').css('visibility', 'visible');
-            $('#overlay').animate({"opacity": "0.3"}, "slow");
-            $("#taylorAboutImage > img").attr("src", "images/campuspictures/taylorFull.jpeg");
-
-            $("#taylorPopup").css('visibility', 'visible');
-            $('#taylorPopup').animate({"opacity": "1"}, "slow");
+            var taylor = "taylor";
+            popupOpen(taylor);
         });
         // when x on popup is clicked, close popup
         $("#taylorPopupClose").click(function(){
@@ -2252,12 +2243,8 @@ function initMap() {
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#titanLink").click(function(){
-            $('#overlay').css('visibility', 'visible');
-            $('#overlay').animate({"opacity": "0.3"}, "slow");
-            $("#titanAboutImage > img").attr("src", "images/campuspictures/titanstadiumFull.jpeg");
-
-            $("#titanPopup").css('visibility', 'visible');
-            $('#titanPopup').animate({"opacity": "1"}, "slow");
+            var titan = "titan";
+            popupOpen(titan);
         });
         // when x on popup is clicked, close popup
         $("#titanPopupClose").click(function(){
@@ -2292,12 +2279,8 @@ function initMap() {
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#policeLink").click(function(){
-            $('#overlay').css('visibility', 'visible');
-            $('#overlay').animate({"opacity": "0.3"}, "slow");
-            $("#policeAboutImage > img").attr("src", "images/campuspictures/universitypoliceFull.jpeg");
-
-            $("#policePopup").css('visibility', 'visible');
-            $('#policePopup').animate({"opacity": "1"}, "slow");
+            var police = "police";
+            popupOpen(police);
         });
         // when x on popup is clicked, close popup
         $("#policePopupClose").click(function(){
@@ -2332,12 +2315,8 @@ function initMap() {
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#websterLink").click(function(){
-            $('#overlay').css('visibility', 'visible');
-            $('#overlay').animate({"opacity": "0.3"}, "slow");
-            $("#websterAboutImage > img").attr("src", "images/campuspictures/websterFull.jpeg");
-
-            $("#websterPopup").css('visibility', 'visible');
-            $('#websterPopup').animate({"opacity": "1"}, "slow");
+            var webster = "webster";
+            popupOpen(webster);
         });
         // when x on popup is clicked, close popup
         $("#websterPopupClose").click(function(){
