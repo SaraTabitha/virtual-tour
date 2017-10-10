@@ -834,22 +834,31 @@ function initMap() {
         var albeeHoverCard = new google.maps.InfoWindow({
             content: albeeHover,
         });
-
+        //when marker is clicked, open hover 
         albeeMarker.addListener('click', function(){
-            var albee = "albee";
-            markerOpenClose(albee);
+            markerOpenClose("albee");
         });
+        // when link on hover is clicked, open popup
         $("#albeeLink").click(function(){
-            var albee = "albee";
-            popupOpen(albee);
+            popupOpen("albee");
         });
         // when x on popup is clicked, close popup
         $("#albeePopupClose").click(function(){
-            var albee = "albee";
-            popupClose(albee);
+            popupClose("albee");
         });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
+        function tabs(name, tab, openClose){
+            if(openClose === "open"){
+                if (tab === "About"){
+                    $("#" + name + "AboutImage").css('display', "block");
+                    $("#" + name + "AboutText").css('display', "initial");
+                }
+            }
+            else if (openClose === "close"){
+
+            }
+        }
         $("#albeeAboutLi").click(function(){
             $("#albeeTourVideo").css('display', "none");
             $("#albeeTourText").css('display', "none");
@@ -881,21 +890,18 @@ function initMap() {
         });
 
         baseballMarker.addListener('click', function(){
-            var baseball = "baseball";
-            markerOpenClose(baseball);
+            markerOpenClose("baseball");
         });
         
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#baseballLink").click(function(){
-            var baseball = "baseball";
-            popupOpen(baseball);
+            popupOpen("baseball");
         });
         // when x on popup is clicked, close popup
         $("#baseballPopupClose").click(function(){
-            var baseball = "baseball";
-            popupClose(baseball);
+            popupClose("baseball");
         });
 
         var alumniHover = document.getElementById('alumniHover');
@@ -903,20 +909,17 @@ function initMap() {
             content: alumniHover,
         });
         alumniMarker.addListener('click', function(){
-            var alumni = "alumni";
-            markerOpenClose(alumni);
+            markerOpenClose("alumni");
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#alumniLink").click(function(){
-            var alumni = "alumni";
-            popupOpen(alumni);
+            popupOpen("alumni");
         });
         // when x on popup is clicked, close popup
         $("#alumniPopupClose").click(function(){
-            var alumni = "alumni";
-            popupClose(alumni);
+            popupClose("alumni");
         });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
@@ -939,21 +942,18 @@ function initMap() {
             content: acHover,
         });
         acMarker.addListener('click', function(){
-            var ac = "ac";
-            markerOpenClose(ac);
+            markerOpenClose("ac");
         });
         
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#acLink").click(function(){
-            var ac = "ac";
-            popupOpen(ac);
+            popupOpen("ac");
         });
         // when x on popup is clicked, close popup
         $("#acPopupClose").click(function(){
-            var ac = "ac";
-            popupClose(ac);
+            popupClose("ac");
         });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
@@ -976,20 +976,17 @@ function initMap() {
         });
         
         athleticMarker.addListener('click', function(){
-            var athletic = "athletic";
-            markerOpenClose(athletic);
+            markerOpenClose("athletic");
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#athleticLink").click(function(){
-            var athletic = "athletic";
-            popupOpen(athletic);
+            popupOpen("athletic");
         });
         // when x on popup is clicked, close popup
         $("#athleticPopupClose").click(function(){
-            var athletic = "athletic";
-            popupClose(athletic);
+            popupClose("athletic");
         });
 
         var blackhawkHover = document.getElementById('blackhawkHover');
@@ -997,20 +994,17 @@ function initMap() {
             content: blackhawkHover,
         });
         blackhawkMarker.addListener('click', function(){
-            var blackhawk = "blackhawk";
-            markerOpenClose(blackhawk);
+            markerOpenClose("blackhawk");
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#blackhawkLink").click(function(){
-            var blackhawk = "blackhawk";
-            popupOpen(blackhawk);
+            popupOpen("blackhawk");
         });
         // when x on popup is clicked, close popup
         $("#blackhawkPopupClose").click(function(){
-            var blackhawk = "blackhawk";
-            popupClose(blackhawk);
+            popupClose("blackhawk");
         });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
@@ -1058,20 +1052,17 @@ function initMap() {
         });
 
         biodigesterMarker.addListener('click', function(){
-            var biodigester = "biodigester";
-            markerOpenClose(biodigester);
+            markerOpenClose("biodigester");
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#biodigesterLink").click(function(){
-            var biodigester = "biodigester";
-            popupOpen(biodigester);
+            popupOpen("biodigester");
         });
         // when x on popup is clicked, close popup
         $("#biodigesterPopupClose").click(function(){
-            var biodigester = "biodigester";
-            popupClose(biodigester);
+            popupClose("biodigester");
         });
 
         var buckstaffHover = document.getElementById('buckstaffHover');
@@ -1080,20 +1071,17 @@ function initMap() {
         });
         
         buckstaffMarker.addListener('click', function(){
-            var buckstaff = "buckstaff";
-            markerOpenClose(buckstaff);
+            markerOpenClose("buckstaff");
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#buckstaffLink").click(function(){
-            var buckstaff = "buckstaff";
-            popupOpen(buckstaff);
+            popupOpen("buckstaff");
         });
         // when x on popup is clicked, close popup
         $("#buckstaffPopupClose").click(function(){
-            var buckstaff = "buckstaff";
-            popupClose(buckstaff);
+            popupClose("buckstaff");
         });
 
         var equityHover = document.getElementById('equityHover');
@@ -1102,20 +1090,17 @@ function initMap() {
         });
 
         equityMarker.addListener('click', function(){
-            var equity = "equity";
-            markerOpenClose(equity);
+            markerOpenClose("equity");
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#equityLink").click(function(){
-            var equity = "equity";
-            popupOpen(equity);
+            popupOpen("equity");
         });
         // when x on popup is clicked, close popup
         $("#equityPopupClose").click(function(){
-            var equity = "equity";
-            popupClose(equity);
+            popupClose("equity");
         });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
@@ -1137,21 +1122,18 @@ function initMap() {
             content: campusHover,
         });
         campusMarker.addListener('click', function(){
-            var campus = "campus";
-            markerOpenClose(campus);
+            markerOpenClose("campus");
         });
         
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#campusLink").click(function(){
-            var campus = "campus";
-            popupOpen(campus);
+            popupOpen("campus");
         });
         // when x on popup is clicked, close popup
         $("#campusPopupClose").click(function(){
-            var campus = "campus";
-            popupClose(campus);
+            popupClose("campus");
         });
 
         var ceramicsHover = document.getElementById('ceramicsHover');
@@ -1159,20 +1141,17 @@ function initMap() {
             content: ceramicsHover,
         });
         ceramicsMarker.addListener('click', function(){
-            var ceramics = "ceramics";
-            markerOpenClose(ceramics);
+            markerOpenClose("ceramics");
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#ceramicsLink").click(function(){
-            var ceramics = "ceramics";
-            popupOpen(ceramics);
+            popupOpen("ceramics");
         });
         // when x on popup is clicked, close popup
         $("#ceramicsPopupClose").click(function(){
-            var ceramics = "ceramics";
-            popupClose(ceramics);
+            popupClose("ceramics");
         });
 
         var clowHover = document.getElementById('clowHover');
@@ -1180,20 +1159,17 @@ function initMap() {
             content: clowHover,
         });
         clowMarker.addListener('click', function(){
-            var clow = "clow";
-            markerOpenClose(clow);
+            markerOpenClose("clow");
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#clowLink").click(function(){
-            var clow = "clow";
-            popupOpen(clow);
+            popupOpen("clow");
         });
         // when x on popup is clicked, close popup
         $("#clowPopupClose").click(function(){
-            var clow = "clow";
-            popupClose(clow);
+            popupClose("clow");
         });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
@@ -1219,20 +1195,17 @@ function initMap() {
             content: gardensHover,
         });
         gardensMarker.addListener('click', function(){
-            var gardens = "gardens";
-            markerOpenClose(gardens);
+            markerOpenClose("gardens");
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#gardensLink").click(function(){
-            var gardens = "gardens";
-            popupOpen(gardens);
+            popupOpen("gardens");
         });
         // when x on popup is clicked, close popup
         $("#gardensPopupClose").click(function(){
-            var gardens = "gardens";
-            popupClose(gardens);
+            popupClose("gardens");
         });
 
 
@@ -1242,21 +1215,18 @@ function initMap() {
         });
         
         dempseyMarker.addListener('click', function(){
-            var dempsey = "dempsey";
-            markerOpenClose(dempsey);
+            markerOpenClose("dempsey");
         });
        
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#dempseyLink").click(function(){
-            var dempsey = "dempsey";
-            popupOpen(dempsey);
+            popupOpen("dempsey");
         });
         // when x on popup is clicked, close popup
         $("#dempseyPopupClose").click(function(){
-            var dempsey = "dempsey";
-            popupClose(dempsey);
+            popupClose("dempsey");
         });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
@@ -1279,20 +1249,17 @@ function initMap() {
             content: donnerHover,
         });
         donnerMarker.addListener('click', function(){
-            var donner = "donner";
-            markerOpenClose(donner);
+            markerOpenClose("donner");
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#donnerLink").click(function(){
-            var donner = "donner";
-            popupOpen(donner);
+            popupOpen("donner");
         });
         // when x on popup is clicked, close popup
         $("#donnerPopupClose").click(function(){
-            var donner = "donner";
-            popupClose(donner);
+            popupClose("donner");
         });
 
 
@@ -1301,21 +1268,18 @@ function initMap() {
             content: eastHover,
         });
         eastMarker.addListener('click', function(){
-            var east = "east";
-            markerOpenClose(east);
+            markerOpenClose("east");
         });
         
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#eastLink").click(function(){
-            var east = "east";
-            popupOpen(east);
+            popupOpen("east");
         });
         // when x on popup is clicked, close popup
         $("#eastPopupClose").click(function(){
-            var east =  "east";
-            popupClose(east);
+            popupClose("east");
         });
 
         var environmentalHover = document.getElementById('environmentalHover');
@@ -1323,20 +1287,17 @@ function initMap() {
             content: environmentalHover,
         });
         environmentalMarker.addListener('click', function(){
-            var environmental = "environmental";
-            markerOpenClose(environmental);
+            markerOpenClose("environmental");
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#environmentalLink").click(function(){
-            var environmental = "environmental";
-            popupOpen(environmental);
+            popupOpen("environmental");
         });
         // when x on popup is clicked, close popup
         $("#environmentalPopupClose").click(function(){
-            var environmental = "environmental";
-            popupClose(environmental);
+            popupClose("environmental");
         });
 
         var evansHover = document.getElementById('evansHover');
@@ -1379,7 +1340,7 @@ function initMap() {
         // when x on popup is clicked, close popup
         $("#fletcherPopupClose").click(function(){
             var fletcher = "fletcher";
-            popupClose(fletcher);
+            popupClose("fletcher");
         });
 
         var fredricHover = document.getElementById('fredricHover');
