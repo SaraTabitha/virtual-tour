@@ -1306,20 +1306,17 @@ function initMap() {
         });
         
         evansMarker.addListener('click', function(){
-            var evans = "evans";
-            markerOpenClose(evans);
+            markerOpenClose("evans");
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#evansLink").click(function(){
-            var evans = "evans";
-            popupOpen(evans);
+            popupOpen("evans");
         });
         // when x on popup is clicked, close popup
         $("#evansPopupClose").click(function(){
-            var evans = "evans";
-            popupClose(evans);
+            popupClose("evans");
         });
 
         var fletcherHover = document.getElementById('fletcherHover');
@@ -1327,19 +1324,16 @@ function initMap() {
             content: fletcherHover,
         });
         fletcherMarker.addListener('click', function(){
-            var fletcher = "fletcher";
-            markerOpenClose(fletcher);
+            markerOpenClose("fletcher");
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#fletcherLink").click(function(){
-            var fletcher = "fletcher";
-            popupOpen(fletcher);
+            popupOpen("fletcher");
         });
         // when x on popup is clicked, close popup
         $("#fletcherPopupClose").click(function(){
-            var fletcher = "fletcher";
             popupClose("fletcher");
         });
 
@@ -1348,20 +1342,17 @@ function initMap() {
             content: fredricHover,
         });
         fredricMarker.addListener('click', function(){
-            var fredric = "fredric";
-            markerOpenClose(fredric);
+            markerOpenClose("fredric");
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#fredricLink").click(function(){
-            var fredric = "fredric";
-            popupOpen(fredric);
+            popupOpen("fredric");
         });
         // when x on popup is clicked, close popup
         $("#fredricPopupClose").click(function(){
-            var fredric = "fredric";
-            popupClose(fredric);
+            popupClose("fredric");
         });
 
         // GRUENHAGEN
@@ -1372,20 +1363,17 @@ function initMap() {
             content: gruenhagenHover,
         });
         gruenhagenMarker.addListener('click', function(){
-            var gruenhagen = "gruenhagen";
-            markerOpenClose(gruenhagen);
+            markerOpenClose("gruenhagen");
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#gruenhagenLink").click(function(){
-            var gruenhagen  = "gruenhagen";
-            popupOpen(gruenhagen);
+            popupOpen("gruenhagen");
         });
         // when x on popup is clicked, close popup
         $("#gruenhagenPopupClose").click(function(){
-            var gruenhagen = "gruenhagen";
-            popupClose(gruenhagen);
+            popupClose("gruenhagen";
         });
 
 
@@ -1394,20 +1382,17 @@ function initMap() {
             content: halseyHover,
         });
         halseyMarker.addListener('click', function(){
-            var halsey = "halsey";
-            markerOpenClose(halsey);
+            markerOpenClose("halsey");
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#halseyLink").click(function(){
-            var halsey = "halsey";
-            popupOpen(halsey);
+            popupOpen("halsey");
         });
         // when x on popup is clicked, close popup
         $("#halseyPopupClose").click(function(){
-            var halsey = "halsey";
-            popupClose(halsey);
+            popupClose("halsey");
         });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
@@ -1445,20 +1430,17 @@ function initMap() {
             content: harringtonHover,
         });
         harringtonMarker.addListener('click', function(){
-           var harrington = "harrington";
-           markerOpenClose(harrington);
+           markerOpenClose("harrington");
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#harringtonLink").click(function(){
-            var harrington = "harrington";
-            popupOpen(harrington);
+            popupOpen("harrington");
         });
         // when x on popup is clicked, close popup
         $("#harringtonPopupClose").click(function(){
-            var harrington = "harrington";
-            popupClose(harrington);
+            popupClose("harrington");
         });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
@@ -1480,20 +1462,17 @@ function initMap() {
             content: heatingHover,
         });
         heatingMarker.addListener('click', function(){
-            var heating = "heating";
-            markerOpenClose(heating);
+            markerOpenClose("heating");
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#heatingLink").click(function(){
-            var heating = "heating";
-            popupOpen(heating);
+            popupOpen("heating");
         });
         // when x on popup is clicked, close popup
         $("#heatingPopupClose").click(function(){
-            var heating = "heating";
-            popupClose(heating);
+            popupClose("heating");
         });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
@@ -1516,20 +1495,17 @@ function initMap() {
             content: parkingRampHover,
         });
         parkingRampMarker.addListener('click', function(){
-            var parkingRamp = "parkingRamp";
-            markerOpenClose(parkingRamp);
+            markerOpenClose("parkingRamp");
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#parkingRampLink").click(function(){
-            var parkingRamp = "parkingRamp";
-            popupOpen(parkingRamp);
+            popupOpen("parkingRamp");
         });
         // when x on popup is clicked, close popup
         $("#parkingRampPopupClose").click(function(){
-            var parkingRamp = "parkingRamp";
-            popupClose(parkingRamp);
+            popupClose("parkingRamp");
         });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
@@ -1554,20 +1530,17 @@ function initMap() {
             content: horizonHover,
         });
         horizonMarker.addListener('click', function(){
-            var horizon = "horizon";
-            markerOpenClose(horizon);
+            markerOpenClose("horizon");
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#horizonLink").click(function(){
-            var horizon = "horizon";
-            popupOpen(horizon);
+            popupOpen("horizon");
         });
         // when x on popup is clicked, close popup
         $("#horizonPopupClose").click(function(){
-            var horizon = "horizon";
-            popupClose(horizon);
+            popupClose("horizon");
         });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
@@ -1589,20 +1562,17 @@ function initMap() {
             content: kolfHover,
         });
         kolfMarker.addListener('click', function(){
-            var kolf = "kolf";
-            markerOpenClose(kolf);
+            markerOpenClose("kolf");
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#kolfLink").click(function(){
-            var kolf = "kolf";
-            popupOpen(kolf);
+            popupOpen("kolf");
         });
         // when x on popup is clicked, close popup
         $("#kolfPopupClose").click(function(){
-            var kolf = "kolf";
-            popupClose(kolf);
+            popupClose("kolf");
         });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
@@ -1624,20 +1594,17 @@ function initMap() {
             content: lincolnHover,
         });
         lincolnMarker.addListener('click', function(){
-            var lincoln = "lincoln";
-            markerOpenClose(lincoln);
+            markerOpenClose("lincoln");
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#lincolnLink").click(function(){
-            var lincoln = "lincoln";
-            popupOpen(lincoln);
+            popupOpen("lincoln");
         });
         // when x on popup is clicked, close popup
         $("#lincolnPopupClose").click(function(){
-            var lincoln = "lincoln";
-            popupClose(lincoln);
+            popupClose("lincoln");
         });
 
         var multiculturalHover = document.getElementById('multiculturalHover');
@@ -1645,20 +1612,17 @@ function initMap() {
             content: multiculturalHover,
         });
         multiculturalMarker.addListener('click', function(){
-            var multicultural = "multicultural";
-            markerOpenClose(multicultural);
+            markerOpenClose( "multicultural");
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#multiculturalLink").click(function(){
-            var multicultural = "multicultural";
-            popupOpen(multicultural);
+            popupOpen("multicultural");
         });
         // when x on popup is clicked, close popup
         $("#multiculturalPopupClose").click(function(){
-            var multicultural = "multicultural";
-            popupClose(multicultural);
+            popupClose("multicultural");
         });
 
         var nursingHover = document.getElementById('nursingHover');
@@ -1666,20 +1630,17 @@ function initMap() {
             content: nursingHover,
         });
         nursingMarker.addListener('click', function(){
-            var nursing = "nursing";
-            markerOpenClose(nursing);
+            markerOpenClose("nursing");
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#nursingLink").click(function(){
-            var nursing = "nursing";
-            popupOpen(nursing);
+            popupOpen("nursing");
         });
         // when x on popup is clicked, close popup
         $("#nursingPopupClose").click(function(){
-            var nursing = "nursing";
-            popupClose(nursing);
+            popupClose("nursing");
         });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
@@ -1702,20 +1663,17 @@ function initMap() {
             content: oviattHover,
         });
         oviattMarker.addListener('click', function(){
-            var oviatt = "oviatt";
-            markerOpenClose(oviatt);
+            markerOpenClose("oviatt");
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#oviattLink").click(function(){
-            var oviatt = "oviatt";
-            popupOpen(oviatt);
+            popupOpen("oviatt");
         });
         // when x on popup is clicked, close popup
         $("#oviattPopupClose").click(function(){
-            var oviatt = "oviatt";
-            popupClose(oviatt);
+            popupClose("oviatt");
         });
 
         var pollockHover = document.getElementById('pollockHover');
@@ -1723,21 +1681,17 @@ function initMap() {
             content: pollockHover,
         });
         pollockMarker.addListener('click', function(){
-        
-        var pollock = "pollock";
-        markerOpenClose(pollock);
+        markerOpenClose("pollock");
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#pollockLink").click(function(){
-            var pollock = "pollock";
-            popupOpen(pollock);
+            popupOpen("pollock");
         });
         // when x on popup is clicked, close popup
         $("#pollockPopupClose").click(function(){
-            var pollock = "pollock";
-            popupClose(pollock);
+            popupClose("pollock");
         });
 
 
@@ -1746,20 +1700,17 @@ function initMap() {
             content: polkHover,
         });
         polkMarker.addListener('click', function(){
-            var polk = "polk";
-            markerOpenClose(polk);
+            markerOpenClose("polk");
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#polkLink").click(function(){
-            var polk = "polk";
-            popupOpen(polk);
+            popupOpen("polk");
         });
         // when x on popup is clicked, close popup
         $("#polkPopupClose").click(function(){
-            var polk = "polk";
-            popupClose(polk);
+            popupClose("polk");
         });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
@@ -1784,20 +1735,17 @@ function initMap() {
             content: radfordHover,
         });
         radfordMarker.addListener('click', function(){
-            var radford = "radford";
-            markerOpenClose(radford);
+            markerOpenClose("radford");
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#radfordLink").click(function(){
-            var radford = "radford";
-            popupOpen(radford);
+            popupOpen("radford");
         });
         // when x on popup is clicked, close popup
         $("#radfordPopupClose").click(function(){
-            var radford = "radford";
-            popupClose(radford);
+            popupClose("radford");
         });
 
         var reeveHover = document.getElementById('reeveHover');
@@ -1805,20 +1753,17 @@ function initMap() {
             content: reeveHover,
         });
         reeveMarker.addListener('click', function(){
-            var reeve = "reeve";
-            markerOpenClose(reeve);
+            markerOpenClose("reeve");
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#reeveLink").click(function(){
-            var reeve = "reeve";
-            popupOpen(reeve);
+            popupOpen("reeve");
         });
         // when x on popup is clicked, close popup
         $("#reevePopupClose").click(function(){
-            var reeve = "reeve";
-            popupClose(reeve);
+            popupClose("reeve");
         });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
@@ -1885,20 +1830,17 @@ function initMap() {
             content: sageHover,
         });
         sageMarker.addListener('click', function(){
-            var sage = "sage";
-            markerOpenClose(sage);
+            markerOpenClose("sage");
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#sageLink").click(function(){
-            var sage = "sage";
-            popupOpen(sage);
+            popupOpen("sage");
         });
         // when x on popup is clicked, close popup
         $("#sagePopupClose").click(function(){
-            var sage = "sage";
-            popupClose(sage);
+            popupClose("sage");
         });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
@@ -1964,20 +1906,17 @@ function initMap() {
             content: scottHover,
         });
         scottMarker.addListener('click', function(){
-            var scott = "scott";
-            markerOpenClose(scott);
+            markerOpenClose("scott");
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#scottLink").click(function(){
-            var scott = "scott";
-            popupOpen(scott);
+            popupOpen("scott");
         });
         // when x on popup is clicked, close popup
         $("#scottPopupClose").click(function(){
-            var scott = "scott";
-            popupClose(scott);
+            popupClose("scott");
         });
         // tab clicking/content displaying
         $("#scottAboutLi").click(function(){
@@ -2000,21 +1939,18 @@ function initMap() {
         var stewartHoverCard = new google.maps.InfoWindow({
             content: stewartHover,
         });
-        stewartMarker.addListener('click', function(){
-            var stewart = "stewart";
-            markerOpenClose(stewart);
+        stewartMarker.addListener('click', function(){ 
+            markerOpenClose("stewart");
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
         // +animate to fade in
-        $("#stewartLink").click(function(){
-            var stewart = "stewart";
-            popupOpen(stewart);
+        $("#stewartLink").click(function(){ 
+            popupOpen("stewart");
         });
         // when x on popup is clicked, close popup
-        $("#stewartPopupClose").click(function(){
-            var stewart = "stewart";
-            popupClose(stewart);
+        $("#stewartPopupClose").click(function(){ 
+            popupClose("stewart");
         });
 
 
@@ -2023,20 +1959,17 @@ function initMap() {
             content: recreationHover,
         });
         recreationMarker.addListener('click', function(){
-            var recreation = "recreation";
-            markerOpenClose(recreation);
+            markerOpenClose("recreation");
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#recreationLink").click(function(){
-            var recreation = "recreation";
-            popupOpen(recreation);
+            popupOpen("recreation");
         });
         // when x on popup is clicked, close popup
         $("#recreationPopupClose").click(function(){
-            var recreation = "recreation";
-            popupClose(recreation);
+            popupClose("recreation");
         });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
@@ -2067,20 +2000,17 @@ function initMap() {
             content: successHover,
         });
         successMarker.addListener('click', function(){
-            var success = "success";
-            markerOpenClose(success);
+            markerOpenClose("success");
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#successLink").click(function(){
-            var success = "success";
-            popupOpen(success);
+            popupOpen("success");
         });
         // when x on popup is clicked, close popup
         $("#successPopupClose").click(function(){
-            var success = "success";
-            popupClose(success);
+            popupClose("success");
         });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
@@ -2126,21 +2056,18 @@ function initMap() {
         var swartHoverCard = new google.maps.InfoWindow({
             content: swartHover,
         });
-        swartMarker.addListener('click', function(){
-            var swart = "swart";
-            markerOpenClose(swart);
+        swartMarker.addListener('click', function(){ 
+            markerOpenClose("swart");
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
         // +animate to fade in
-        $("#swartLink").click(function(){
-           var swart = "swart";
-           popupOpen(swart);
+        $("#swartLink").click(function(){ 
+           popupOpen("swart");
         });
         // when x on popup is clicked, close popup
-        $("#swartPopupClose").click(function(){
-            var swart = "swart";
-            popupClose(swart);
+        $("#swartPopupClose").click(function(){ 
+            popupClose("swart");
         });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
@@ -2162,20 +2089,17 @@ function initMap() {
             content: taylorHover,
         });
         taylorMarker.addListener('click', function(){
-            var taylor = "taylor";
-            markerOpenClose(taylor);
+            markerOpenClose("taylor");
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#taylorLink").click(function(){
-            var taylor = "taylor";
-            popupOpen(taylor);
+            popupOpen("taylor");
         });
         // when x on popup is clicked, close popup
         $("#taylorPopupClose").click(function(){
-            var taylor = "taylor";
-            popupClose(taylor);
+            popupClose("taylor");
         });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
@@ -2197,20 +2121,17 @@ function initMap() {
             content: titanHover,
         });
         titanMarker.addListener('click', function(){
-            var titan = "titan";
-            markerOpenClose(titan);
+            markerOpenClose("titan");
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#titanLink").click(function(){
-            var titan = "titan";
-            popupOpen(titan);
+            popupOpen("titan");
         });
         // when x on popup is clicked, close popup
         $("#titanPopupClose").click(function(){
-            var titan = "titan";
-            popupClose(titan);
+            popupClose("titan");
         });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
@@ -2233,20 +2154,17 @@ function initMap() {
             content: policeHover,
         });
         policeMarker.addListener('click', function(){
-            var police = "police";
-            markerOpenClose(police);
+            markerOpenClose("police");
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#policeLink").click(function(){
-            var police = "police";
-            popupOpen(police);
+            popupOpen("police");
         });
         // when x on popup is clicked, close popup
         $("#policePopupClose").click(function(){
-            var police = "police";
-            popupClose(police);
+            popupClose("police");
         });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
@@ -2269,20 +2187,17 @@ function initMap() {
             content: websterHover,
         });
         websterMarker.addListener('click', function(){
-            var webster = "webster";
-            markerOpenClose(webster);
+            markerOpenClose("webster");
         });
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
         // +animate to fade in
         $("#websterLink").click(function(){
-            var webster = "webster";
-            popupOpen(webster);
+            popupOpen("webster");
         });
         // when x on popup is clicked, close popup
         $("#websterPopupClose").click(function(){
-            var webster = "webster";
-            popupClose(webster);
+            popupClose("webster");
         });
 
 
@@ -2747,8 +2662,7 @@ function initMap() {
             content: elevenHover,
         });
         elevenMarker.addListener('click', function(){
-            var eleven = "eleven";
-            parkingOpenClose(eleven);
+            parkingOpenClose("eleven");
         });
         // lot 35 hover
         var thirtyfiveHover = document.getElementById('thirtyfiveHover');
@@ -2756,8 +2670,7 @@ function initMap() {
             content: thirtyfiveHover,
         });
         thirtyfiveMarker.addListener('click', function(){
-            var thirtyfive = "thirtyfive";
-            parkingOpenClose(thirtyfive);
+            parkingOpenClose("thirtyfive");
         });
 
         // lot 27 hover
@@ -2766,8 +2679,7 @@ function initMap() {
             content: twentysevenHover,
         });
         twentysevenMarker.addListener('click', function(){
-            var twentyseven = "twentyseven";
-            parkingOpenClose(twentyseven);
+            parkingOpenClose("twentyseven");
         });
 
         // lot 21 hover
@@ -2776,8 +2688,7 @@ function initMap() {
             content: twentyoneHover,
         });
         twentyoneMarker.addListener('click', function(){
-            var twentyone = "twentyone";
-            parkingOpenClose(twentyone);
+            parkingOpenClose("twentyone");
         });
 
         // lot 26 hover
@@ -2786,8 +2697,7 @@ function initMap() {
             content: twentysixHover,
         });
         twentysixMarker.addListener('click', function(){
-            var twentysix = "twentysix";
-            parkingOpenClose(twentysix);
+            parkingOpenClose("twentysix");
         });
 
         // lot 4 hover
@@ -2796,8 +2706,7 @@ function initMap() {
             content: fourHover,
         });
         fourMarker.addListener('click', function(){
-            var four = "four";
-            parkingOpenClose(four);
+            parkingOpenClose("four");
         });
 
         // lot 4a hover
@@ -2806,8 +2715,7 @@ function initMap() {
             content: fouraHover,
         });
         fouraMarker.addListener('click', function(){
-            var foura = "foura";
-            parkingOpenClose(foura);
+            parkingOpenClose("foura");
         });
 
         // lot 16 hover
@@ -2816,8 +2724,7 @@ function initMap() {
             content: sixteenHover,
         });
         sixteenMarker.addListener('click', function(){
-            var sixteen = "sixteen";
-            parkingOpenClose(sixteen);
+            parkingOpenClose("sixteen");
         });
 
         // lot 17 hover
@@ -2827,8 +2734,7 @@ function initMap() {
         });
 
         seventeenMarker.addListener('click', function(){
-            var seventeen = "seventeen";
-            parkingOpenClose(seventeen);
+            parkingOpenClose("seventeen");
         });
 
         // lot 29 hover
@@ -2837,8 +2743,7 @@ function initMap() {
             content: twentynineHover,
         });
         twentynineMarker.addListener('click', function(){
-            var twentynine = "twentynine";
-            parkingOpenClose(twentynine);
+            parkingOpenClose("twentynine");
         });
 
         // lot 25 hover
@@ -2847,8 +2752,7 @@ function initMap() {
             content: twentyfiveHover,
         });
         twentyfiveMarker.addListener('click', function(){
-            var twentyfive = "twentyfive";
-            parkingOpenClose(twentyfive);
+            parkingOpenClose("twentyfive");
         });
 
         // lot 8 hover
@@ -2857,8 +2761,7 @@ function initMap() {
             content: eightHover,
         });
         eightMarker.addListener('click', function(){
-            var eight = "eight";
-            parkingOpenClose(eight);
+            parkingOpenClose("eight");
         });
 
         // lot 33 hover
@@ -2867,8 +2770,7 @@ function initMap() {
             content: thirtythreeHover,
         });
         thirtythreeMarker.addListener('click', function(){
-            var thirtythree = "thirtythree";
-            parkingOpenClose(thirtythree);
+            parkingOpenClose("thirtythree");
         });
 
         // lot 34 hover
@@ -2877,8 +2779,7 @@ function initMap() {
             content: thirtyfourHover,
         });
         thirtyfourMarker.addListener('click', function(){
-            var thirtyfour = "thirtyfour";
-            parkingOpenClose(thirtyfour);
+            parkingOpenClose("thirtyfour");
         });
 
         // lot 28 hover
@@ -2887,8 +2788,7 @@ function initMap() {
             content: twentyeightHover,
         });
         twentyeightMarker.addListener('click', function(){
-            var twentyeight = "twentyeight";
-            parkingOpenClose(twentyeight);
+            parkingOpenClose("twentyeight");
         });
 
         // lot 23 hover
@@ -2897,8 +2797,7 @@ function initMap() {
             content: twentythreeHover,
         });
         twentythreeMarker.addListener('click', function(){
-            var twentythree = "twentythree";
-            parkingOpenClose(twentythree);
+            parkingOpenClose("twentythree");
         });
 
         // lot 14a hover
@@ -2907,8 +2806,7 @@ function initMap() {
             content: fourteenaHover,
         });
         fourteenaMarker.addListener('click', function(){
-            var fourteena = "fourteena";
-            parkingOpenClose(fourteena);
+            parkingOpenClose("fourteena");
         });
 
         // lot 14b hover
@@ -2917,8 +2815,7 @@ function initMap() {
             content: fourteenbHover,
         });
         fourteenbMarker.addListener('click', function(){
-            var fourteenb = "fourteenb";
-            parkingOpenClose(fourteenb);
+            parkingOpenClose("fourteenb");
         });
 
         // lot 14c hover
@@ -2927,8 +2824,7 @@ function initMap() {
             content: fourteencHover,
         });
         fourteencMarker.addListener('click', function(){
-            var fourteenc = "fourteenc";
-            parkingOpenClose(fourteenc);
+            parkingOpenClose("fourteenc");
         });
 
         // lot 7 hover
@@ -2937,8 +2833,7 @@ function initMap() {
             content: sevenHover,
         });
         sevenMarker.addListener('click', function(){
-            var seven = "seven";
-            parkingOpenClose(seven);
+            parkingOpenClose("seven");
         });
 
         // lot 5a hover
@@ -2947,8 +2842,7 @@ function initMap() {
             content: fiveaHover,
         });
         fiveaMarker.addListener('click', function(){
-            var fivea = "fivea";
-            parkingOpenClose(fivea);
+            parkingOpenClose("fivea");
         });
 
         // lot 5 hover
@@ -2957,8 +2851,7 @@ function initMap() {
             content: fiveHover,
         });
         fiveMarker.addListener('click', function(){
-            var five = "five";
-            parkingOpenClose(five);
+            parkingOpenClose("five");
         });
 
         // lot 7a hover
@@ -2967,8 +2860,7 @@ function initMap() {
             content: sevenaHover,
         });
         sevenaMarker.addListener('click', function(){
-            var sevena = "sevena";
-            parkingOpenClose(sevena);
+            parkingOpenClose("sevena");
         });
 
         // lot 15 hover
@@ -2977,8 +2869,7 @@ function initMap() {
             content: fifteenHover,
         });
         fifteenMarker.addListener('click', function(){
-            var fifteen = "fifteen";
-            parkingOpenClose(fifteen);
+            parkingOpenClose("fifteen");
         });
 
         // lot 32 hover
@@ -2987,8 +2878,7 @@ function initMap() {
             content: thirtytwoHover,
         });
         thirtytwoMarker.addListener('click', function(){
-            var thirtytwo = "thirtytwo";
-            parkingOpenClose(thirtytwo);
+            parkingOpenClose("thirtytwo");
         });
 
         // lot 13 hover
@@ -2997,8 +2887,7 @@ function initMap() {
             content: thirteenHover,
         });
         thirteenMarker.addListener('click', function(){
-            var thirteen = "thirteen";
-            parkingOpenClose(thirteen);
+            parkingOpenClose("thirteen");
         });
 
         // lot 12 hover
@@ -3007,8 +2896,7 @@ function initMap() {
             content: twelveHover,
         });
         twelveMarker.addListener('click', function(){
-            var twelve = "twelve";
-            parkingOpenClose(twelve);
+            parkingOpenClose("twelve");
         });
 
         // lot 6a hover
@@ -3017,8 +2905,7 @@ function initMap() {
             content: sixaHover,
         });
         sixaMarker.addListener('click', function(){
-            var sixa = "sixa";
-            parkingOpenClose(sixa);
+            parkingOpenClose("sixa");
         });
 
         // lot 6 hover
@@ -3027,8 +2914,7 @@ function initMap() {
             content: sixHover,
         });
         sixMarker.addListener('click', function(){
-            var six = "six";
-            parkingOpenClose(six);
+            parkingOpenClose("six");
         });
 
         // lot 10 hover
@@ -3037,8 +2923,7 @@ function initMap() {
             content: tenHover,
         });
         tenMarker.addListener('click', function(){
-            var ten = "ten";
-            parkingOpenClose(ten);
+            parkingOpenClose("ten");
         });
 
         // lot 9a hover
@@ -3047,8 +2932,7 @@ function initMap() {
             content: nineaHover,
         });
         nineaMarker.addListener('click', function(){
-            var ninea = "ninea";
-            parkingOpenClose(ninea);
+            parkingOpenClose("ninea");
         });
 
         // lot 9 hover
@@ -3057,8 +2941,7 @@ function initMap() {
             content: nineHover,
         });
         nineMarker.addListener('click', function(){
-            var nine = "nine";
-            parkingOpenClose(nine);
+            parkingOpenClose("nine");
         });
 
         // lot 18 hover
@@ -3067,8 +2950,7 @@ function initMap() {
             content: eighteenHover,
         });
         eighteenMarker.addListener('click', function(){
-            var eighteen = "eighteen";
-            parkingOpenClose(eighteen);
+            parkingOpenClose("eighteen");
         });
 
         // lot 30 hover
@@ -3077,8 +2959,7 @@ function initMap() {
             content: thirtyHover,
         });
         thirtyMarker.addListener('click', function(){
-            var thirty = "thirty";
-            parkingOpenClose(thirty);
+            parkingOpenClose("thirty");
         });
 
         // lot 39 hover
@@ -3087,8 +2968,7 @@ function initMap() {
             content: thirtynineHover,
         });
         thirtynineMarker.addListener('click', function(){
-            var thirtynine = "thirtynine";
-            parkingOpenClose(thirtynine);
+            parkingOpenClose("thirtynine");
         });
 
 
@@ -3211,119 +3091,96 @@ function initMap() {
 
         // accEnt hover cards for markers
         albeeAccEntMarker.addListener('click', function(){
-            var albee = "albee";
-            markerOpenClose(albee);
+            markerOpenClose("albee");
         });
 
         acAccEntMarker.addListener('click', function(){
-            var ac = "ac";
-            markerOpenClose(ac);
+            markerOpenClose("ac");
         });
 
         blackhawkAccEntMarker.addListener('click', function(){
-            var blackhawk = "blackhawk";
-            markerOpenClose(blackhawk);
+            markerOpenClose("blackhawk");
         });
 
         equityAccEntMarker.addListener('click', function(){
-            var equity = "equity";
-            markerOpenClose(equity);
+            markerOpenClose("equity");
         });
 
         clowAccEntMarker.addListener('click', function(){
-            var clow = "clow";
-            markerOpenClose(clow);
+            markerOpenClose("clow");
         });
 
         dempseyAccEntMarker.addListener('click', function(){
-            var dempsey = "dempsey";
-            markerOpenClose(dempsey);
+            markerOpenClose("dempsey");
             
         });
 
         donnerAccEntMarker.addListener('click', function(){
-            var donner = "donner";
-            markerOpenClose(donner);
+            markerOpenClose("donner");
         });
 
         fletcherAccEntMarker.addListener('click', function(){
-            var fletcher = "fletcher";
-            markerOpenClose(fletcher);
+            markerOpenClose("fletcher");
         });
 
         fredricAccEntMarker.addListener('click', function(){
-            var fredric = "fredric";
-            markerOpenClose(fredric);
+            markerOpenClose("fredric");
          });
 
         gruenhagenAccEntMarker.addListener('click', function(){
-            var gruenhagen = "gruenhagen";
-            markerOpenClose(gruenhagen);
+            markerOpenClose("gruenhagen");
         });
 
         halseyAccEntMarker.addListener('click', function(){
-            var halsey = "halsey";
-            markerOpenClose(halsey);
+            markerOpenClose("halsey");
         });
 
         harringtonAccEntMarker.addListener('click', function(){
-            var harrington = "harrington";
-            markerOpenClose(harrington);
+            markerOpenClose("harrington");
         });
 
         kolfAccEntMarker.addListener('click', function(){
-            var kolf = "kolf";
-            markerOpenClose(kolf);
+            markerOpenClose("kolf");
         });
 
         nursingAccEntMarker.addListener('click', function(){
-            var nursing = "nursing";
-            markerOpenClose(nursing);
+            markerOpenClose("nursing");
         });
 
         polkAccEntMarker.addListener('click', function(){
-            var polk = "polk";
-            markerOpenClose(polk);
+            markerOpenClose("polk");
         });
 
         radfordAccEntMarker.addListener('click', function(){
-            var radford = "radford";
-            markerOpenClose(radford);
+            markerOpenClose("radford");
         });
 
         reeveAccEntMarker.addListener('click', function(){
-            var reeve = "reeve";
-            markerOpenClose(reeve);
+            markerOpenClose("reeve");
         });
 
         scottAccEntMarker.addListener('click', function(){
-            var scott = "scott";
-            markerOpenClose(scott);
+            markerOpenClose("scott");
         });
 
         stewartAccEntMarker.addListener('click', function(){
-            var stewart = "stewart";
-            markerOpenClose(stewart);
+            markerOpenClose("stewart");
         });
 
         successAccEntMarker.addListener('click', function(){
-            var success = "success";
-            markerOpenClose(success);
+            markerOpenClose("success");
         });
 
         swartAccEntMarker.addListener('click', function(){
-            var swart = "swart";
-            markerOpenClose(swart);
+            markerOpenClose("swart");
         });
 
         taylorAccEntMarker.addListener('click', function(){
-            var taylor = "taylor";
-            markerOpenClose(taylor);
+            markerOpenClose("taylor");
         });
 
         websterAccEntMarker.addListener('click', function(){
-            var webster = "webster";
-            markerOpenClose(webster);
+            markerOpenClose("webster");
         });
 
 
