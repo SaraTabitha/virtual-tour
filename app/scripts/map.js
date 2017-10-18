@@ -120,11 +120,15 @@ function initMap() {
             // webster hall [44]
             {lat: 44.025002, lng: -88.551681}
         ];
+        
         // create markers for buildings
         var albeeMarker = new google.maps.Marker({
             position: buildings[0],
             icon: yellowMarker,
             title: "Albee Hall"
+        });
+        albeeMarker.addListener('click', function(){
+            albeeMarker.setIcon(redMarker);
         });
         var baseballMarker = new google.maps.Marker({
             position: buildings[1],
