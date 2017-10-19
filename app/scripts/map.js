@@ -28,7 +28,12 @@ function initMap() {
         var brownMarker = "images/markers/brown.png";
 
         // buildings array, sets locations for all of the places
+        //0-44 = buildings
+        //45-82 = parking lots
+        //83-110 = emergency phones
         var locations = [
+
+            //buildings
             // albee hall [0]
             {lat: 44.025729, lng: -88.550248},
             // alumni baseball stadium [1]
@@ -118,11 +123,150 @@ function initMap() {
             // university police [43]
             {lat: 44.023763, lng: -88.549972},
             // webster hall [44]
-            {lat: 44.025002, lng: -88.551681}
+            {lat: 44.025002, lng: -88.551681},
+
+            //parking lots
+            // [45] Lot 11
+            {lat: 44.030449, lng: -88.552415},
+            // [46] Lot 35
+            {lat: 44.029428, lng: -88.558183},
+            // [47] Lot 27
+            {lat: 44.029026, lng: -88.554960},
+            // [48] Lot 21
+            {lat: 44.029123, lng: -88.553173},
+            // [49] Lot 26
+            {lat: 44.029838, lng: -88.551684},
+            // [50] Lot 4
+            {lat: 44.029100, lng: -88.551581},
+            // [51] Lot 4a
+            {lat: 44.028586, lng: -88.552649},
+            // [52] Lot 16
+            {lat: 44.028822, lng: -88.550956},
+            // [53] Lot 17
+            {lat: 44.028648, lng: -88.549711},
+            // [54] Lot 29
+            {lat: 44.027825, lng: -88.553434},
+            // [55] Lot 25
+            {lat: 44.027233, lng: -88.553602},
+            // [56] Lot 8
+            {lat: 44.026371, lng: -88.554322},
+            // [57] Lot 33
+            {lat: 44.025668, lng: -88.555558},
+            // [58] Lot 34
+            {lat: 44.027133, lng: -88.548009},
+            // [59] Lot 28
+            {lat: 44.025858, lng: -88.548893},
+            // [60] Lot 23
+            {lat: 44.025511, lng: -88.546748},
+            // [61] Lot 14a
+            {lat: 44.025828, lng: -88.552416},
+            // [62] Lot 14b
+            {lat: 44.025673, lng: -88.551929},
+            // [63] Lot 14c
+            {lat: 44.025302, lng: -88.551711},
+            // [64] Lot 7
+            {lat: 44.025023, lng: -88.553519},
+            // [65] Lot 5a
+            {lat: 44.024150, lng: -88.554291},
+            // [66] Lot 5
+            {lat: 44.023717, lng: -88.553693},
+            // [67] Lot 7a
+            {lat: 44.023897, lng: -88.552670},
+            // [68] Lot 15
+            {lat: 44.024142, lng: -88.549694},
+            // [69] Lot 32
+            {lat: 44.023912, lng: -88.550031},
+            // [70] Lot 13
+            {lat: 44.023505, lng: -88.551579},
+            // [71] Lot 12
+            {lat: 44.022135, lng: -88.551702},
+            // [72] Lot 6a
+            {lat: 44.021216, lng: -88.551093},
+            // [73] Lot 6
+            {lat: 44.020887, lng: -88.549848},
+            // [74] Lot 10
+            {lat: 44.021857, lng: -88.548831},
+            // [75] Lot 9a
+            {lat: 44.022435, lng: -88.548564},
+            // [76] Lot 9
+            {lat: 44.021955, lng:  -88.548167},
+            // [77] Lot 18
+            {lat: 44.022368, lng: -88.546827},
+            // [78] Lot 30
+            {lat: 44.021440, lng: -88.547947},
+            // [79] Lot 39
+            {lat: 44.018367, lng: -88.556821},
+            //[80] womens center
+            {lat: 44.024816, lng: -88.546638},
+            //[81] titan one
+            {lat: 44.024401, lng: -88.564253},
+            //[82] titan two
+            {lat: 44.023007, lng:  -88.564339},
+
+            //emergency phones
+            // Phone[83] Lot 35, phonezero
+            {lat: 44.029568, lng: -88.557150},
+            // Phone[84] Lot 40, phoneone
+            {lat: 44.029075, lng: -88.558184},
+            // Phone[85] lot 27, phonetwo
+            {lat: 44.028831, lng: -88.555125},
+            // Phone[86] heating plant, phonethree
+            {lat: 44.028514, lng: -88.554386},
+            // Phone[87] behind a & c,phonefour 
+            {lat: 44.029626, lng: -88.552936},
+            // Phone[88] in between halsey and swart,phonefive 
+            {lat: 44.028456, lng: -88.551907},
+            // Phone[89] lot 25, phonesix
+            {lat: 44.027457	, lng: -88.553422},
+            // Phone[90] lot 17,phoneseven 
+            {lat: 44.028501, lng: -88.549911},
+            // Phone[91] Wiouwash Trail Oshkosh, WI 54901,phoneeight 
+            {lat: 44.025255, lng: -88.555618},
+            // Phone[92] in front of clow,phonenine 
+            {lat: 44.026028, lng: -88.552211},
+            // Phone[93] behind dempsey,phoneten 
+            {lat: 44.026556, lng: -88.550250},
+            // Phone[94] lot 34,phoneeleven 
+            {lat: 44.026670, lng: -88.547795},
+            // Phone[95] in between fletcher, stewart and evans,phonetwelve 
+            {lat: 44.025771, lng: -88.547412},
+            // Phone[96] center for equity and diversity,phonethirteen 
+            {lat: 44.024777, lng: -88.546711},
+            // Phone[97] in between reeve and horizon,phonefourteen 
+            {lat: 44.024921, lng: -88.548533},
+            // Phone[98] lot 7,phonefifteen 
+            {lat: 44.024921, lng: -88.548533},
+            // Phone[99] lot 5,phonesixteen 
+            {lat: 44.023941, lng: -88.554160},
+            // Phone[100] environmental research and innovation center,phoneseventeen 
+            {lat: 44.023489, lng: -88.553277},
+            // Phone[101] behind student recreation and wellness center,phoneeighteen 
+            {lat: 44.022102, lng: -88.552487},
+            // Phone[102] path to student rec center,phonenineteen 
+            {lat: 44.023313, lng: -88.551255},
+            // Phone[103] between taylor and webster,phonetwenty 
+            {lat: 44.024791, lng: -88.551402},
+            // Phone[104] lot 15,phonetwentyone 
+            {lat: 44.024395, lng:  -88.550325},
+            // Phone[105] behind blackhawk,phonetwentytwo 
+            {lat: 44.023321, lng: -88.548516},
+            // Phone[106] wellness center front,phonetwentythree 
+            {lat: 44.021428, lng: -88.550672},
+            // Phone[107]wellness center  behind,phonetwentyfour 
+            {lat: 44.021057, lng: -88.551801},
+            // Phone[108] lot 30,phonetwentyfive 
+            {lat: 44.021727, lng: -88.548169},
+            // Phone[109] lot 18,phonetwentysix 
+            {lat: 44.022676, lng:  -88.546843},
+            // Phone[110] lot 39,phonetwentyseven 
+            {lat: 44.018830, lng: -88.556802}
         ];
         
         //array containing all marker information: positiong and title 
         //position is a separate array with the lat/lngs of the where the markers will go
+        //0-44 = buildings
+        //45-82 = parking lots
+        //83-110 = emergency phones
         var allMarkersInfo = [
             //0 albee
             {position: locations[0], title: "Albee Hall"},
@@ -213,8 +357,143 @@ function initMap() {
             //43 police
             {position: locations[43],title: "University Police"},
             //44 webster
-            {position: locations[44],title: "Webster Hall" }
+            {position: locations[44],title: "Webster Hall" },
             
+            //parking lots
+            // [45] Lot 11
+            {position: locations[45],title: "Lot 11"},
+            // [46] Lot 35
+            { position: locations[46], title: "Lot 35"},
+            // [47] Lot 27
+            {position: locations[47], title: "Lot 27"},
+            // [48] Lot 21
+            {position: locations[48],title: "Lot 21"},
+            // [49] Lot 26
+            {position: locations[49],  title: "Lot 26"},
+            // [50] Lot 4
+            {position: locations[50],title: "Lot 4"},
+            // [51] Lot 4a
+            {position: locations[51],  title: "Lot 4a"},
+            // [52] Lot 16
+            {position: locations[52],title: "Lot 16"},
+            // [53] Lot 17
+            {position: locations[53],title: "Lot 17"},
+            // [54] Lot 29
+            { position: locations[54], title: "Lot 29"},
+            // [55] Lot 25
+            {position: locations[55], title: "Lot 25"},
+            // [56] Lot 8
+            {position: locations[56], title: "Lot 8"},
+            // [57] Lot 33
+            {position: locations[57],   title: "Lot 33"},
+            // [58] Lot 34
+            {position: locations[58],title: "Lot 34"},
+            // [59] Lot 28
+            {position: locations[59],title: "Lot 28"},
+            // [60] Lot 23
+            {position: locations[60],   title: "Lot 23"},
+            // [61] Lot 14a
+            {position: locations[61],title: "Lot 14a"},
+            // [62] Lot 14b
+            {position: locations[62],title: "Lot 14b"},
+            // [63] Lot 14c
+            {position: locations[63],title: "Lot 14c"},
+            // [64] Lot 7
+            {position: locations[64],title: "Lot 7"},
+            // [65] Lot 5a
+            {position: locations[65],title: "Lot 5a"},
+            // [66] Lot 5
+            {position: locations[66], title: "Lot 5"},
+            // [67] Lot 7a
+            {position: locations[67], title: "Lot 7a"},
+            // [68] Lot 15
+            {position: locations[68],title: "Lot 15"},
+            // [69] Lot 32
+            {position: locations[69],title: "Lot 32"},
+            // [70] Lot 13
+            {position: locations[70],title: "Lot 13"},
+            // [71] Lot 12
+            {position: locations[71], title: "Lot 12"},
+            // [72] Lot 6a
+            {position: locations[72], title: "Lot 6a"},
+            // [73] Lot 6
+            {position: locations[73], title: "Lot 6"},
+            // [74] Lot 10
+            {position: locations[74],title: "Lot 10"},
+            // [75] Lot 9a
+            {position: locations[75],title: "Lot 9a"},
+            // [76] Lot 9
+            {position: locations[76],title: "Lot 9"},
+            // [77] Lot 18
+            {position: locations[77],title: "Lot 18"},
+            // [78] Lot 30
+            {position: locations[78],title: "Lot 30"},
+            // [79] Lot 39
+            {position: locations[79],title: "Lot 39"},
+            //[80] womens center lot
+            { position: locations[80],title: "Women's Center"},
+            //[81] titan one lot
+            { position: locations[81],title: "Titan One"},
+            //[82] titan two lot
+            { position: locations[82],title: "Titan Two"},
+
+            //emergency phones
+            //[83] phonezero
+            {position: locations[83],title: "Emergency Phone"},
+            //[84] phoneone
+            {position: locations[84],title: "Emergency Phone"},
+            //[85] phonetwo
+            {position: locations[85],title: "Emergency Phone"},
+            //[86] phonethree
+            {position: locations[86],title: "Emergency Phone"},
+            //[87] phonefour
+            {position: locations[87],title: "Emergency Phone"},
+            //[88] phonefive
+            {position: locations[88],title: "Emergency Phone"},
+            //[89] phonesix
+            {position: locations[89],title: "Emergency Phone"},
+            //[90] phoneseven
+            {position: locations[90],title: "Emergency Phone"},
+            //[91] phoneeight
+            {position: locations[91],title: "Emergency Phone"},
+            //[92] phonenine
+            {position: locations[92],title: "Emergency Phone" },
+            //[93] phoneten
+            {position: locations[93],title: "Emergency Phone"},
+            //[94] phoneeleven
+            {position: locations[94],title: "Emergency Phone"},
+            //[95] phonetwelve
+            {position: locations[95],title: "Emergency Phone"},
+            //[96] phonethirteen
+            {position: locations[96],title: "Emergency Phone" },
+            //[97] phonefourteen
+            {position: locations[97],title: "Emergency Phone"},
+            //[98] phonefifteen
+            {position: locations[98],title: "Emergency Phone" },
+            //[99] phonesixteen
+            {position: locations[99],title: "Emergency Phone" },
+            //[100] phoneseventeen
+            { position: locations[100],title: "Emergency Phone"},
+            //[101] phoneeighteen
+            {position: locations[101],title: "Emergency Phone" },
+            //[102] phonenineteen
+            { position: locations[102],title: "Emergency Phone" },
+            //[103] phonetwenty
+            {position: locations[103], title: "Emergency Phone" },
+            //[104] phonetwentyone
+            { position: locations[104],title: "Emergency Phone"},
+            //[105] phonetwentytwo
+            {position: locations[105],title: "Emergency Phone" },
+            //[106] phonetwentythree
+            {position: locations[106], title: "Emergency Phone" },
+            //[107] phonetwentyfour
+            {position: locations[107],title: "Emergency Phone"},
+            //[108] phonetwentyfive
+            {position: locations[108],title: "Emergency Phone" },
+            //[109] phonetwentysix
+            {position: locations[109],title: "Emergency Phone" },
+            //[110] phonetwentyseven
+            {position: locations[110], title: "Emergency Phone"}
             
         ]
         //the list that will contain all of the buildingMarker objects made with "new google.maps.Marker"
@@ -584,7 +863,8 @@ function initMap() {
 
 
         //one function for all open/close
-
+        //for the hover thingaroos not the popups
+        //set images to the thumbnails of the places
         function markerOpenClose(name){
             // debugger;
             //close all hover when new marker is clicked
@@ -785,6 +1065,7 @@ function initMap() {
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
         // +animate to fade in
+        //set src values
         function popupOpen(name){
             $('#overlay').css('visibility', 'visible');
             $('#overlay').animate({"opacity": "0.3"}, "slow");
@@ -932,6 +1213,7 @@ function initMap() {
             }
         }
         //function for all popupclosure
+        //close all of the popups themselves and remove src values
         function popupClose(name){
             $('#overlay').animate({"opacity": "0"}, "slow");
             $('#overlay').css('visibility', 'hidden');
@@ -958,9 +1240,13 @@ function initMap() {
         }
 
         // adding hover cards for building markers
-        var albeeHover = document.getElementById('albeeHover');
+        // var albeeHover = ;
+       var hoverContentSelectors = [
+           //0 albee
+             document.getElementById('albeeHover'),
+        ];
         var albeeHoverCard = new google.maps.InfoWindow({
-            content: albeeHover,
+            content: hoverContentSelectors[0],
         });
         //when marker is clicked, open hover 
         allMarkers[0].addListener('click', function(){
@@ -2332,334 +2618,343 @@ function initMap() {
         
 
         // array for parking lots
-        var parkingLots = [
-            // [0] Lot 11
-            {lat: 44.030449, lng: -88.552415},
-            // [1] Lot 35
-            {lat: 44.029428, lng: -88.558183},
-            // [2] Lot 27
-            {lat: 44.029026, lng: -88.554960},
-            // [3] Lot 21
-            {lat: 44.029123, lng: -88.553173},
-            // [4] Lot 26
-            {lat: 44.029838, lng: -88.551684},
-            // [5] Lot 4
-            {lat: 44.029100, lng: -88.551581},
-            // [6] Lot 4a
-            {lat: 44.028586, lng: -88.552649},
-            // [7] Lot 16
-            {lat: 44.028822, lng: -88.550956},
-            // [8] Lot 17
-            {lat: 44.028648, lng: -88.549711},
-            // [9] Lot 29
-            {lat: 44.027825, lng: -88.553434},
-            // [10] Lot 25
-            {lat: 44.027233, lng: -88.553602},
-            // [11] Lot 8
-            {lat: 44.026371, lng: -88.554322},
-            // [12] Lot 33
-            {lat: 44.025668, lng: -88.555558},
-            // [13] Lot 34
-            {lat: 44.027133, lng: -88.548009},
-            // [14] Lot 28
-            {lat: 44.025858, lng: -88.548893},
-            // [15] Lot 23
-            {lat: 44.025511, lng: -88.546748},
-            // [16] Lot 14a
-            {lat: 44.025828, lng: -88.552416},
-            // [17] Lot 14b
-            {lat: 44.025673, lng: -88.551929},
-            // [18] Lot 14c
-            {lat: 44.025302, lng: -88.551711},
-            // [19] Lot 7
-            {lat: 44.025023, lng: -88.553519},
-            // [20] Lot 5a
-            {lat: 44.024150, lng: -88.554291},
-            // [21] Lot 5
-            {lat: 44.023717, lng: -88.553693},
-            // [22] Lot 7a
-            {lat: 44.023897, lng: -88.552670},
-            // [23] Lot 15
-            {lat: 44.024142, lng: -88.549694},
-            // [24] Lot 32
-            {lat: 44.023912, lng: -88.550031},
-            // [25] Lot 13
-            {lat: 44.023505, lng: -88.551579},
-            // [26] Lot 12
-            {lat: 44.022135, lng: -88.551702},
-            // [27] Lot 6a
-            {lat: 44.021216, lng: -88.551093},
-            // [28] Lot 6
-            {lat: 44.020887, lng: -88.549848},
-            // [29] Lot 10
-            {lat: 44.021857, lng: -88.548831},
-            // [30] Lot 9a
-            {lat: 44.022435, lng: -88.548564},
-            // [31] Lot 9
-            {lat: 44.021955, lng:  -88.548167},
-            // [32] Lot 18
-            {lat: 44.022368, lng: -88.546827},
-            // [33] Lot 30
-            {lat: 44.021440, lng: -88.547947},
-            // [34] Lot 39
-            {lat: 44.018367, lng: -88.556821}
-        ];
+        // var parkingLots = [
+        //     // [0] Lot 11
+        //     {lat: 44.030449, lng: -88.552415},
+        //     // [1] Lot 35
+        //     {lat: 44.029428, lng: -88.558183},
+        //     // [2] Lot 27
+        //     {lat: 44.029026, lng: -88.554960},
+        //     // [3] Lot 21
+        //     {lat: 44.029123, lng: -88.553173},
+        //     // [4] Lot 26
+        //     {lat: 44.029838, lng: -88.551684},
+        //     // [5] Lot 4
+        //     {lat: 44.029100, lng: -88.551581},
+        //     // [6] Lot 4a
+        //     {lat: 44.028586, lng: -88.552649},
+        //     // [7] Lot 16
+        //     {lat: 44.028822, lng: -88.550956},
+        //     // [8] Lot 17
+        //     {lat: 44.028648, lng: -88.549711},
+        //     // [9] Lot 29
+        //     {lat: 44.027825, lng: -88.553434},
+        //     // [10] Lot 25
+        //     {lat: 44.027233, lng: -88.553602},
+        //     // [11] Lot 8
+        //     {lat: 44.026371, lng: -88.554322},
+        //     // [12] Lot 33
+        //     {lat: 44.025668, lng: -88.555558},
+        //     // [13] Lot 34
+        //     {lat: 44.027133, lng: -88.548009},
+        //     // [14] Lot 28
+        //     {lat: 44.025858, lng: -88.548893},
+        //     // [15] Lot 23
+        //     {lat: 44.025511, lng: -88.546748},
+        //     // [16] Lot 14a
+        //     {lat: 44.025828, lng: -88.552416},
+        //     // [17] Lot 14b
+        //     {lat: 44.025673, lng: -88.551929},
+        //     // [18] Lot 14c
+        //     {lat: 44.025302, lng: -88.551711},
+        //     // [19] Lot 7
+        //     {lat: 44.025023, lng: -88.553519},
+        //     // [20] Lot 5a
+        //     {lat: 44.024150, lng: -88.554291},
+        //     // [21] Lot 5
+        //     {lat: 44.023717, lng: -88.553693},
+        //     // [22] Lot 7a
+        //     {lat: 44.023897, lng: -88.552670},
+        //     // [23] Lot 15
+        //     {lat: 44.024142, lng: -88.549694},
+        //     // [24] Lot 32
+        //     {lat: 44.023912, lng: -88.550031},
+        //     // [25] Lot 13
+        //     {lat: 44.023505, lng: -88.551579},
+        //     // [26] Lot 12
+        //     {lat: 44.022135, lng: -88.551702},
+        //     // [27] Lot 6a
+        //     {lat: 44.021216, lng: -88.551093},
+        //     // [28] Lot 6
+        //     {lat: 44.020887, lng: -88.549848},
+        //     // [29] Lot 10
+        //     {lat: 44.021857, lng: -88.548831},
+        //     // [30] Lot 9a
+        //     {lat: 44.022435, lng: -88.548564},
+        //     // [31] Lot 9
+        //     {lat: 44.021955, lng:  -88.548167},
+        //     // [32] Lot 18
+        //     {lat: 44.022368, lng: -88.546827},
+        //     // [33] Lot 30
+        //     {lat: 44.021440, lng: -88.547947},
+        //     // [34] Lot 39
+        //     {lat: 44.018367, lng: -88.556821}
+        // ];
         // parking lots markers
-        var elevenMarker = new google.maps.Marker({
-            position: parkingLots[0],
-            title: "Lot 11"
-        });
-        var thirtyfiveMarker = new google.maps.Marker({
-            position: parkingLots[1],
-            title: "Lot 35"
-        });
-        var twentysevenMarker = new google.maps.Marker({
-            position: parkingLots[2],
-            title: "Lot 27"
-        });
-        var twentyoneMarker = new google.maps.Marker({
-            position: parkingLots[3],
-            title: "Lot 21"
-        });
-        var twentysixMarker = new google.maps.Marker({
-            position: parkingLots[4],
-            title: "Lot 26"
-        });
-        var fourMarker = new google.maps.Marker({
-            position: parkingLots[5],
-            title: "Lot 4"
-        });
-        var fouraMarker = new google.maps.Marker({
-            position: parkingLots[6],
-            title: "Lot 4a"
-        });
-        var sixteenMarker = new google.maps.Marker({
-            position: parkingLots[7],
-            title: "Lot 16"
-        });
-        var seventeenMarker = new google.maps.Marker({
-            position: parkingLots[8],
-            title: "Lot 17"
-        });
-        var twentynineMarker = new google.maps.Marker({
-            position: parkingLots[9],
-            title: "Lot 29"
-        });
-        var twentyfiveMarker = new google.maps.Marker({
-            position: parkingLots[10],
-            title: "Lot 25"
-        });
-        var eightMarker = new google.maps.Marker({
-            position: parkingLots[11],
-            title: "Lot 8"
-        });
-        var thirtythreeMarker = new google.maps.Marker({
-            position: parkingLots[12],
-            title: "Lot 33"
-        });
-        var thirtyfourMarker = new google.maps.Marker({
-            position: parkingLots[13],
-            title: "Lot 34"
-        });
-        var twentyeightMarker = new google.maps.Marker({
-            position: parkingLots[14],
-            title: "Lot 28"
-        });
-        var twentythreeMarker = new google.maps.Marker({
-            position: parkingLots[15],
-            title: "Lot 23"
-        });
-        var fourteenaMarker = new google.maps.Marker({
-            position: parkingLots[16],
-            title: "Lot 14a"
-        });
-        var fourteenbMarker = new google.maps.Marker({
-            position: parkingLots[17],
-            title: "Lot 14b"
-        });
-        var fourteencMarker = new google.maps.Marker({
-            position: parkingLots[18],
-            title: "Lot 14c"
-        });
-        var sevenMarker = new google.maps.Marker({
-            position: parkingLots[19],
-            title: "Lot 7"
-        });
-        var fiveaMarker = new google.maps.Marker({
-            position: parkingLots[20],
-            title: "Lot 5a"
-        });
-        var fiveMarker = new google.maps.Marker({
-            position: parkingLots[21],
-            title: "Lot 5"
-        });
-        var sevenaMarker = new google.maps.Marker({
-            position: parkingLots[22],
-            title: "Lot 7a"
-        });
-        var fifteenMarker = new google.maps.Marker({
-            position: parkingLots[23],
-            title: "Lot 15"
-        });
-        var thirtytwoMarker = new google.maps.Marker({
-            position: parkingLots[24],
-            title: "Lot 32"
-        });
-        var thirteenMarker = new google.maps.Marker({
-            position: parkingLots[25],
-            title: "Lot 13"
-        });
-        var twelveMarker = new google.maps.Marker({
-            position: parkingLots[26],
-            title: "Lot 12"
-        });
-        var sixaMarker = new google.maps.Marker({
-            position: parkingLots[27],
-            title: "Lot 6a"
-        });
-        var sixMarker = new google.maps.Marker({
-            position: parkingLots[28],
-            title: "Lot 6"
-        });
-        var tenMarker = new google.maps.Marker({
-            position: parkingLots[29],
-            title: "Lot 10"
-        });
-        var nineaMarker = new google.maps.Marker({
-            position: parkingLots[30],
-            title: "Lot 9a"
-        });
-        var nineMarker = new google.maps.Marker({
-            position: parkingLots[31],
-            title: "Lot 9"
-        });
-        var eighteenMarker = new google.maps.Marker({
-            position: parkingLots[32],
-            title: "Lot 18"
-        });
-        var thirtyMarker = new google.maps.Marker({
-            position: parkingLots[33],
-            title: "Lot 30"
-        });
-        var thirtynineMarker = new google.maps.Marker({
-            position: parkingLots[34],
-            title: "Lot 39"
-        });
+        // var elevenMarker = new google.maps.Marker({
+        //     position: parkingLots[0],
+        //     title: "Lot 11"
+        // });
+        // var thirtyfiveMarker = new google.maps.Marker({
+        //     position: parkingLots[1],
+        //     title: "Lot 35"
+        // });
+        // var twentysevenMarker = new google.maps.Marker({
+        //     position: parkingLots[2],
+        //     title: "Lot 27"
+        // });
+        // var twentyoneMarker = new google.maps.Marker({
+        //     position: parkingLots[3],
+        //     title: "Lot 21"
+        // });
+        // var twentysixMarker = new google.maps.Marker({
+        //     position: parkingLots[4],
+        //     title: "Lot 26"
+        // });
+        // var fourMarker = new google.maps.Marker({
+        //     position: parkingLots[5],
+        //     title: "Lot 4"
+        // });
+        // var fouraMarker = new google.maps.Marker({
+        //     position: parkingLots[6],
+        //     title: "Lot 4a"
+        // });
+        // var sixteenMarker = new google.maps.Marker({
+        //     position: parkingLots[7],
+        //     title: "Lot 16"
+        // });
+        // var seventeenMarker = new google.maps.Marker({
+        //     position: parkingLots[8],
+        //     title: "Lot 17"
+        // });
+        // var twentynineMarker = new google.maps.Marker({
+        //     position: parkingLots[9],
+        //     title: "Lot 29"
+        // });
+        // var twentyfiveMarker = new google.maps.Marker({
+        //     position: parkingLots[10],
+        //     title: "Lot 25"
+        // });
+        // var eightMarker = new google.maps.Marker({
+        //     position: parkingLots[11],
+        //     title: "Lot 8"
+        // });
+        // var thirtythreeMarker = new google.maps.Marker({
+        //     position: parkingLots[12],
+        //     title: "Lot 33"
+        // });
+        // var twentyeightMarker = new google.maps.Marker({
+        //     position: parkingLots[14],
+        //     title: "Lot 28"
+        // });
+        // var twentythreeMarker = new google.maps.Marker({
+        //     position: parkingLots[15],
+        //     title: "Lot 23"
+        // });
+        // var fourteenaMarker = new google.maps.Marker({
+        //     position: parkingLots[16],
+        //     title: "Lot 14a"
+        // });
+        // var fourteenbMarker = new google.maps.Marker({
+        //     position: parkingLots[17],
+        //     title: "Lot 14b"
+        // });
+        // var fourteencMarker = new google.maps.Marker({
+        //     position: parkingLots[18],
+        //     title: "Lot 14c"
+        // });
+        // var sevenMarker = new google.maps.Marker({
+        //     position: parkingLots[19],
+        //     title: "Lot 7"
+        // });
+        // var fiveaMarker = new google.maps.Marker({
+        //     position: parkingLots[20],
+        //     title: "Lot 5a"
+        // });
+        // var fiveMarker = new google.maps.Marker({
+        //     position: parkingLots[21],
+        //     title: "Lot 5"
+        // });
+        // var sevenaMarker = new google.maps.Marker({
+        //     position: parkingLots[22],
+        //     title: "Lot 7a"
+        // });
+        // var fifteenMarker = new google.maps.Marker({
+        //     position: parkingLots[23],
+        //     title: "Lot 15"
+        // });
+        // var thirtytwoMarker = new google.maps.Marker({
+        //     position: parkingLots[24],
+        //     title: "Lot 32"
+        // });
+        // var thirteenMarker = new google.maps.Marker({
+        //     position: parkingLots[25],
+        //     title: "Lot 13"
+        // });
+        // var twelveMarker = new google.maps.Marker({
+        //     position: parkingLots[26],
+        //     title: "Lot 12"
+        // });
+        // var sixaMarker = new google.maps.Marker({
+        //     position: parkingLots[27],
+        //     title: "Lot 6a"
+        // });
+        // var sixMarker = new google.maps.Marker({
+        //     position: parkingLots[28],
+        //     title: "Lot 6"
+        // });
+        // var tenMarker = new google.maps.Marker({
+        //     position: parkingLots[29],
+        //     title: "Lot 10"
+        // });
+        // var nineaMarker = new google.maps.Marker({
+        //     position: parkingLots[30],
+        //     title: "Lot 9a"
+        // });
+        // var nineMarker = new google.maps.Marker({
+        //     position: parkingLots[31],
+        //     title: "Lot 9"
+        // });
+        // var eighteenMarker = new google.maps.Marker({
+        //     position: parkingLots[32],
+        //     title: "Lot 18"
+        // });
+        // var thirtyMarker = new google.maps.Marker({
+        //     position: parkingLots[33],
+        //     title: "Lot 30"
+        // });
+        // var thirtynineMarker = new google.maps.Marker({
+        //     position: parkingLots[34],
+        //     title: "Lot 39"
+        // });
 
         // set parking lot markers
         function setParkingLots(){
-            parkingRampMarker.setMap(map);
-            elevenMarker.setMap(map);
-            thirtyfiveMarker.setMap(map);
-            twentysevenMarker.setMap(map);
-            twentyoneMarker.setMap(map);
-            twentysixMarker.setMap(map);
-            fourMarker.setMap(map);
-            fouraMarker.setMap(map);
-            sixteenMarker.setMap(map);
-            seventeenMarker.setMap(map);
-            twentynineMarker.setMap(map);
-            twentyfiveMarker.setMap(map);
-            eightMarker.setMap(map);
-            thirtythreeMarker.setMap(map);
-            thirtyfourMarker.setMap(map);
-            twentyeightMarker.setMap(map);
-            twentythreeMarker.setMap(map);
-            fourteenaMarker.setMap(map);
-            fourteenbMarker.setMap(map);
-            fourteencMarker.setMap(map);
-            sevenMarker.setMap(map);
-            fiveaMarker.setMap(map);
-            fiveMarker.setMap(map);
-            sevenaMarker.setMap(map);
-            fifteenMarker.setMap(map);
-            thirtytwoMarker.setMap(map);
-            thirteenMarker.setMap(map);
-            twelveMarker.setMap(map);
-            sixaMarker.setMap(map);
-            sixMarker.setMap(map);
-            tenMarker.setMap(map);
-            nineaMarker.setMap(map);
-            nineMarker.setMap(map);
-            eighteenMarker.setMap(map);
-            thirtyMarker.setMap(map);
-            thirtynineMarker.setMap(map);
+            //parking ramp
+            allMarkers[24].setMap(map);
+            allMarkers[24].setIcon(pinkMarker);
+            //45-82 of the markers array
+            for (i = 45; i < 83; i++){
+                allMarkers[i].setMap(map);
+                allMarkers[i].setIcon(pinkMarker);
+            }
+            // elevenMarker.setMap(map);
+            // thirtyfiveMarker.setMap(map);
+            // twentysevenMarker.setMap(map);
+            // twentyoneMarker.setMap(map);
+            // twentysixMarker.setMap(map);
+            // fourMarker.setMap(map);
+            // fouraMarker.setMap(map);
+            // sixteenMarker.setMap(map);
+            // seventeenMarker.setMap(map);
+            // twentynineMarker.setMap(map);
+            // twentyfiveMarker.setMap(map);
+            // eightMarker.setMap(map);
+            // thirtythreeMarker.setMap(map);
+            // thirtyfourMarker.setMap(map);
+            // twentyeightMarker.setMap(map);
+            // twentythreeMarker.setMap(map);
+            // fourteenaMarker.setMap(map);
+            // fourteenbMarker.setMap(map);
+            // fourteencMarker.setMap(map);
+            // sevenMarker.setMap(map);
+            // fiveaMarker.setMap(map);
+            // fiveMarker.setMap(map);
+            // sevenaMarker.setMap(map);
+            // fifteenMarker.setMap(map);
+            // thirtytwoMarker.setMap(map);
+            // thirteenMarker.setMap(map);
+            // twelveMarker.setMap(map);
+            // sixaMarker.setMap(map);
+            // sixMarker.setMap(map);
+            // tenMarker.setMap(map);
+            // nineaMarker.setMap(map);
+            // nineMarker.setMap(map);
+            // eighteenMarker.setMap(map);
+            // thirtyMarker.setMap(map);
+            // thirtynineMarker.setMap(map);
 
-            parkingRampMarker.setIcon(pinkMarker);
-            elevenMarker.setIcon(pinkMarker);
-            thirtyfiveMarker.setIcon(pinkMarker);
-            twentysevenMarker.setIcon(pinkMarker);
-            twentyoneMarker.setIcon(pinkMarker);
-            twentysixMarker.setIcon(pinkMarker);
-            fourMarker.setIcon(pinkMarker);
-            fouraMarker.setIcon(pinkMarker);
-            sixteenMarker.setIcon(pinkMarker);
-            seventeenMarker.setIcon(pinkMarker);
-            twentynineMarker.setIcon(pinkMarker);
-            twentyfiveMarker.setIcon(pinkMarker);
-            eightMarker.setIcon(pinkMarker);
-            thirtythreeMarker.setIcon(pinkMarker);
-            thirtyfourMarker.setIcon(pinkMarker);
-            twentyeightMarker.setIcon(pinkMarker);
-            twentythreeMarker.setIcon(pinkMarker);
-            fourteenaMarker.setIcon(pinkMarker);
-            fourteenbMarker.setIcon(pinkMarker);
-            fourteencMarker.setIcon(pinkMarker);
-            sevenMarker.setIcon(pinkMarker);
-            fiveaMarker.setIcon(pinkMarker);
-            fiveMarker.setIcon(pinkMarker);
-            sevenaMarker.setIcon(pinkMarker);
-            fifteenMarker.setIcon(pinkMarker);
-            thirtytwoMarker.setIcon(pinkMarker);
-            thirteenMarker.setIcon(pinkMarker);
-            twelveMarker.setIcon(pinkMarker);
-            sixaMarker.setIcon(pinkMarker);
-            sixMarker.setIcon(pinkMarker);
-            tenMarker.setIcon(pinkMarker);
-            nineaMarker.setIcon(pinkMarker);
-            nineMarker.setIcon(pinkMarker);
-            eighteenMarker.setIcon(pinkMarker);
-            thirtyMarker.setIcon(pinkMarker);
-            thirtynineMarker.setIcon(pinkMarker);
+            // allMarkers[24].setIcon(pinkMarker);
+
+            // elevenMarker.setIcon(pinkMarker);
+            // thirtyfiveMarker.setIcon(pinkMarker);
+            // twentysevenMarker.setIcon(pinkMarker);
+            // twentyoneMarker.setIcon(pinkMarker);
+            // twentysixMarker.setIcon(pinkMarker);
+            // fourMarker.setIcon(pinkMarker);
+            // fouraMarker.setIcon(pinkMarker);
+            // sixteenMarker.setIcon(pinkMarker);
+            // seventeenMarker.setIcon(pinkMarker);
+            // twentynineMarker.setIcon(pinkMarker);
+            // twentyfiveMarker.setIcon(pinkMarker);
+            // eightMarker.setIcon(pinkMarker);
+            // thirtythreeMarker.setIcon(pinkMarker);
+            // thirtyfourMarker.setIcon(pinkMarker);
+            // twentyeightMarker.setIcon(pinkMarker);
+            // twentythreeMarker.setIcon(pinkMarker);
+            // fourteenaMarker.setIcon(pinkMarker);
+            // fourteenbMarker.setIcon(pinkMarker);
+            // fourteencMarker.setIcon(pinkMarker);
+            // sevenMarker.setIcon(pinkMarker);
+            // fiveaMarker.setIcon(pinkMarker);
+            // fiveMarker.setIcon(pinkMarker);
+            // sevenaMarker.setIcon(pinkMarker);
+            // fifteenMarker.setIcon(pinkMarker);
+            // thirtytwoMarker.setIcon(pinkMarker);
+            // thirteenMarker.setIcon(pinkMarker);
+            // twelveMarker.setIcon(pinkMarker);
+            // sixaMarker.setIcon(pinkMarker);
+            // sixMarker.setIcon(pinkMarker);
+            // tenMarker.setIcon(pinkMarker);
+            // nineaMarker.setIcon(pinkMarker);
+            // nineMarker.setIcon(pinkMarker);
+            // eighteenMarker.setIcon(pinkMarker);
+            // thirtyMarker.setIcon(pinkMarker);
+            // thirtynineMarker.setIcon(pinkMarker);
         }
         // remove parking lot markers
         function removeParkingLots(){
-            parkingRampMarker.setMap(null);
-            elevenMarker.setMap(null);
-            thirtyfiveMarker.setMap(null);
-            twentysevenMarker.setMap(null);
-            twentyoneMarker.setMap(null);
-            twentysixMarker.setMap(null);
-            fourMarker.setMap(null);
-            fouraMarker.setMap(null);
-            sixteenMarker.setMap(null);
-            seventeenMarker.setMap(null);
-            twentynineMarker.setMap(null);
-            twentyfiveMarker.setMap(null);
-            eightMarker.setMap(null);
-            thirtythreeMarker.setMap(null);
-            thirtyfourMarker.setMap(null);
-            twentyeightMarker.setMap(null);
-            twentythreeMarker.setMap(null);
-            fourteenaMarker.setMap(null);
-            fourteenbMarker.setMap(null);
-            fourteencMarker.setMap(null);
-            sevenMarker.setMap(null);
-            fiveaMarker.setMap(null);
-            fiveMarker.setMap(null);
-            sevenaMarker.setMap(null);
-            fifteenMarker.setMap(null);
-            thirtytwoMarker.setMap(null);
-            thirteenMarker.setMap(null);
-            twelveMarker.setMap(null);
-            sixaMarker.setMap(null);
-            sixMarker.setMap(null);
-            tenMarker.setMap(null);
-            nineaMarker.setMap(null);
-            nineMarker.setMap(null);
-            eighteenMarker.setMap(null);
-            thirtyMarker.setMap(null);
-            thirtynineMarker.setMap(null);
+            //parking ramp
+            allMarkers[24].setMap(null);
+            //45-82 of the markers array
+            for (i = 45; i < 83; i++){
+                allMarkers[i].setMap(null);
+            }
+            // elevenMarker.setMap(null);
+            // thirtyfiveMarker.setMap(null);
+            // twentysevenMarker.setMap(null);
+            // twentyoneMarker.setMap(null);
+            // twentysixMarker.setMap(null);
+            // fourMarker.setMap(null);
+            // fouraMarker.setMap(null);
+            // sixteenMarker.setMap(null);
+            // seventeenMarker.setMap(null);
+            // twentynineMarker.setMap(null);
+            // twentyfiveMarker.setMap(null);
+            // eightMarker.setMap(null);
+            // thirtythreeMarker.setMap(null);
+            // thirtyfourMarker.setMap(null);
+            // twentyeightMarker.setMap(null);
+            // twentythreeMarker.setMap(null);
+            // fourteenaMarker.setMap(null);
+            // fourteenbMarker.setMap(null);
+            // fourteencMarker.setMap(null);
+            // sevenMarker.setMap(null);
+            // fiveaMarker.setMap(null);
+            // fiveMarker.setMap(null);
+            // sevenaMarker.setMap(null);
+            // fifteenMarker.setMap(null);
+            // thirtytwoMarker.setMap(null);
+            // thirteenMarker.setMap(null);
+            // twelveMarker.setMap(null);
+            // sixaMarker.setMap(null);
+            // sixMarker.setMap(null);
+            // tenMarker.setMap(null);
+            // nineaMarker.setMap(null);
+            // nineMarker.setMap(null);
+            // eighteenMarker.setMap(null);
+            // thirtyMarker.setMap(null);
+            // thirtynineMarker.setMap(null);
         }
         // parking marker hovers + marker functionality
  
@@ -2667,118 +2962,118 @@ function initMap() {
             if(!$("#" + name + "Hover").hasClass("hoverOpen")){
                 closeAllHover();
                 if(name === "eleven"){
-                    elevenHoverCard.open(map, elevenMarker);
+                    elevenHoverCard.open(map, allMarkers[45]);
                 }
                 else if (name === "thirtyfive"){
-                    thirtyfiveHoverCard.open(map, thirtyfiveMarker);
+                    thirtyfiveHoverCard.open(map, allMarkers[46]);
                 }
                 else if (name === "twentyseven"){
-                    twentysevenHoverCard.open(map, twentysevenMarker);
+                    twentysevenHoverCard.open(map, allMarkers[47]);
                 }
                 else if (name === "twentyone"){
-                    twentyoneHoverCard.open(map, twentyoneMarker);
+                    twentyoneHoverCard.open(map, allMarkers[48]);
                 }
                 else if(name === "twentysix"){
-                    twentysixHoverCard.open(map, twentysixMarker);
+                    twentysixHoverCard.open(map, allMarkers[49]);
                 }
                 else if (name === "four"){
-                    fourHoverCard.open(map, fourMarker);
+                    fourHoverCard.open(map, allMarkers[50]);
                 }
                 else if (name === "foura"){
-                    fouraHoverCard.open(map, fouraMarker);
+                    fouraHoverCard.open(map, allMarkers[51]);
                 }
                 else if (name === "sixteen"){
-                    sixteenHoverCard.open(map, sixteenMarker);
+                    sixteenHoverCard.open(map, allMarkers[52]);
                 }
                 else if (name === "seventeen"){
-                    seventeenHoverCard.open(map, seventeenMarker);
+                    seventeenHoverCard.open(map, allMarkers[53]);
                 }
                 else if (name === "twentynine"){
-                    twentynineHoverCard.open(map, twentynineMarker);
+                    twentynineHoverCard.open(map, allMarkers[54]);
                 }
                 else if (name === "twentyfive"){
-                    twentyfiveHoverCard.open(map, twentyfiveMarker);
+                    twentyfiveHoverCard.open(map, allMarkers[55]);
                 }
                 else if (name === "eight"){
-                    eightHoverCard.open(map, eightMarker);
+                    eightHoverCard.open(map, allMarkers[56]);
                 }
                 else if (name === "thirtythree"){
-                    thirtythreeHoverCard.open(map, thirtythreeMarker);
+                    thirtythreeHoverCard.open(map, allMarkers[57]);
                 }
                 else if (name === "thirtyfour"){
-                    thirtyfourHoverCard.open(map, thirtyfourMarker);
+                    thirtyfourHoverCard.open(map, allMarkers[58]);
                 }
                 else if (name === "twentyeight"){
-                    twentyeightHoverCard.open(map, twentyeightMarker);
+                    twentyeightHoverCard.open(map, allMarkers[59]);
                 }
                 else if (name === "twentythree"){
-                    twentythreeHoverCard.open(map, twentythreeMarker);
+                    twentythreeHoverCard.open(map, allMarkers[60]);
                 }
                 else if (name === "fourteena"){
-                    fourteenaHoverCard.open(map, fourteenaMarker);
+                    fourteenaHoverCard.open(map, allMarkers[61]);
                 }
                 else if (name === "fourteenb"){
-                    fourteenbHoverCard.open(map, fourteenbMarker);
+                    fourteenbHoverCard.open(map, allMarkers[62]);
                 }
                 else if (name === "fourteenc"){
-                    fourteencHoverCard.open(map, fourteencMarker);
+                    fourteencHoverCard.open(map, allMarkers[63]);
                 }
                 else if (name === "seven"){
-                    sevenHoverCard.open(map, sevenMarker);
+                    sevenHoverCard.open(map, allMarkers[64]);
                 }
                 else if (name === "fivea"){
-                    fiveaHoverCard.open(map, fiveaMarker);
+                    fiveaHoverCard.open(map, allMarkers[65]);
                 }
                 else if (name === "five"){
-                    fiveHoverCard.open(map, fiveMarker);
+                    fiveHoverCard.open(map, allMarkers[66]);
                 }
                 else if (name === "sevena"){
-                    sevenaHoverCard.open(map, sevenaMarker);
+                    sevenaHoverCard.open(map, allMarkers[67]);
                 }
                 else if (name === "fifteen"){
-                    fifteenHoverCard.open(map, fifteenMarker);
+                    fifteenHoverCard.open(map, allMarkers[68]);
                 }
                 else if (name === "thirtytwo"){
-                    thirtytwoHoverCard.open(map, thirtytwoMarker);
+                    thirtytwoHoverCard.open(map, allMarkers[69]);
                 }
                 else if (name === "thirteen"){
-                    thirteenHoverCard.open(map, thirteenMarker);
+                    thirteenHoverCard.open(map, allMarkers[70]);
                 }
                 else if (name === "twelve"){
-                    twelveHoverCard.open(map, twelveMarker);
+                    twelveHoverCard.open(map, allMarkers[71]);
                 }
                 else if (name === "sixa"){
-                    sixaHoverCard.open(map, sixaMarker);
+                    sixaHoverCard.open(map, allMarkers[72]);
                 }
                 else if (name === "six"){
-                    sixHoverCard.open(map, sixMarker);
+                    sixHoverCard.open(map, allMarkers[73]);
                 }
                 else if (name === "ten"){
-                    tenHoverCard.open(map, tenMarker);
+                    tenHoverCard.open(map, allMarkers[74]);
                 }
                 else if (name === "ninea"){
-                    nineaHoverCard.open(map, nineaMarker);
+                    nineaHoverCard.open(map, allMarkers[75]);
                 }
                 else if (name === "nine"){
-                    nineHoverCard.open(map, nineMarker);
+                    nineHoverCard.open(map, allMarkers[76]);
                 }
                 else if (name === "eighteen"){
-                    eighteenHoverCard.open(map, eighteenMarker);
+                    eighteenHoverCard.open(map, allMarkers[77]);
                 }
                 else if (name === "thirty"){
-                    thirtyHoverCard.open(map, thirtyMarker);
+                    thirtyHoverCard.open(map, allMarkers[78]);
                 }
                 else if (name === "thirtynine"){
-                    thirtynineHoverCard.open(map, thirtynineMarker);
+                    thirtynineHoverCard.open(map, allMarkers[79]);
                 }
                 else if (name === "womensCenter"){
-                    womensCenterHoverCard.open(map, womensCenterMarker);
+                    womensCenterHoverCard.open(map, allMarkers[80]);
                 }
                 else if (name === "titanOne"){
-                    titanOneHoverCard.open(map, titanOneMarker);
+                    titanOneHoverCard.open(map, allMarkers[81]);
                 }
                 else if (name === "titanTwo"){
-                    titanTwoHoverCard.open(map, titanTwoMarker);
+                    titanTwoHoverCard.open(map, allMarkers[82]);
                 }
             $("#" + name + "Hover").addClass("hoverOpen");
             } else {
@@ -2791,7 +3086,7 @@ function initMap() {
         var elevenHoverCard = new google.maps.InfoWindow({
             content: elevenHover,
         });
-        elevenMarker.addListener('click', function(){
+        allMarkers[45].addListener('click', function(){
             parkingOpenClose("eleven");
         });
         // lot 35 hover
@@ -2799,7 +3094,7 @@ function initMap() {
         var thirtyfiveHoverCard = new google.maps.InfoWindow({
             content: thirtyfiveHover,
         });
-        thirtyfiveMarker.addListener('click', function(){
+        allMarkers[46].addListener('click', function(){
             parkingOpenClose("thirtyfive");
         });
 
@@ -2808,7 +3103,7 @@ function initMap() {
         var twentysevenHoverCard = new google.maps.InfoWindow({
             content: twentysevenHover,
         });
-        twentysevenMarker.addListener('click', function(){
+        allMarkers[47].addListener('click', function(){
             parkingOpenClose("twentyseven");
         });
 
@@ -2817,7 +3112,7 @@ function initMap() {
         var twentyoneHoverCard = new google.maps.InfoWindow({
             content: twentyoneHover,
         });
-        twentyoneMarker.addListener('click', function(){
+        allMarkers[48].addListener('click', function(){
             parkingOpenClose("twentyone");
         });
 
@@ -2826,7 +3121,7 @@ function initMap() {
         var twentysixHoverCard = new google.maps.InfoWindow({
             content: twentysixHover,
         });
-        twentysixMarker.addListener('click', function(){
+        allMarkers[49].addListener('click', function(){
             parkingOpenClose("twentysix");
         });
 
@@ -2835,7 +3130,7 @@ function initMap() {
         var fourHoverCard = new google.maps.InfoWindow({
             content: fourHover,
         });
-        fourMarker.addListener('click', function(){
+        allMarkers[50].addListener('click', function(){
             parkingOpenClose("four");
         });
 
@@ -2844,7 +3139,7 @@ function initMap() {
         var fouraHoverCard = new google.maps.InfoWindow({
             content: fouraHover,
         });
-        fouraMarker.addListener('click', function(){
+        allMarkers[51].addListener('click', function(){
             parkingOpenClose("foura");
         });
 
@@ -2853,7 +3148,7 @@ function initMap() {
         var sixteenHoverCard = new google.maps.InfoWindow({
             content: sixteenHover,
         });
-        sixteenMarker.addListener('click', function(){
+        allMarkers[52].addListener('click', function(){
             parkingOpenClose("sixteen");
         });
 
@@ -2863,7 +3158,7 @@ function initMap() {
             content: seventeenHover,
         });
 
-        seventeenMarker.addListener('click', function(){
+        allMarkers[53].addListener('click', function(){
             parkingOpenClose("seventeen");
         });
 
@@ -2872,7 +3167,7 @@ function initMap() {
         var twentynineHoverCard = new google.maps.InfoWindow({
             content: twentynineHover,
         });
-        twentynineMarker.addListener('click', function(){
+        allMarkers[54].addListener('click', function(){
             parkingOpenClose("twentynine");
         });
 
@@ -2881,7 +3176,7 @@ function initMap() {
         var twentyfiveHoverCard = new google.maps.InfoWindow({
             content: twentyfiveHover,
         });
-        twentyfiveMarker.addListener('click', function(){
+        allMarkers[55].addListener('click', function(){
             parkingOpenClose("twentyfive");
         });
 
@@ -2890,7 +3185,7 @@ function initMap() {
         var eightHoverCard = new google.maps.InfoWindow({
             content: eightHover,
         });
-        eightMarker.addListener('click', function(){
+        allMarkers[56].addListener('click', function(){
             parkingOpenClose("eight");
         });
 
@@ -2899,7 +3194,7 @@ function initMap() {
         var thirtythreeHoverCard = new google.maps.InfoWindow({
             content: thirtythreeHover,
         });
-        thirtythreeMarker.addListener('click', function(){
+        allMarkers[57].addListener('click', function(){
             parkingOpenClose("thirtythree");
         });
 
@@ -2908,7 +3203,7 @@ function initMap() {
         var thirtyfourHoverCard = new google.maps.InfoWindow({
             content: thirtyfourHover,
         });
-        thirtyfourMarker.addListener('click', function(){
+        allMarkers[58].addListener('click', function(){
             parkingOpenClose("thirtyfour");
         });
 
@@ -2917,7 +3212,7 @@ function initMap() {
         var twentyeightHoverCard = new google.maps.InfoWindow({
             content: twentyeightHover,
         });
-        twentyeightMarker.addListener('click', function(){
+        allMarkers[59].addListener('click', function(){
             parkingOpenClose("twentyeight");
         });
 
@@ -2926,7 +3221,7 @@ function initMap() {
         var twentythreeHoverCard = new google.maps.InfoWindow({
             content: twentythreeHover,
         });
-        twentythreeMarker.addListener('click', function(){
+        allMarkers[60].addListener('click', function(){
             parkingOpenClose("twentythree");
         });
 
@@ -2935,7 +3230,7 @@ function initMap() {
         var fourteenaHoverCard = new google.maps.InfoWindow({
             content: fourteenaHover,
         });
-        fourteenaMarker.addListener('click', function(){
+        allMarkers[61].addListener('click', function(){
             parkingOpenClose("fourteena");
         });
 
@@ -2944,7 +3239,7 @@ function initMap() {
         var fourteenbHoverCard = new google.maps.InfoWindow({
             content: fourteenbHover,
         });
-        fourteenbMarker.addListener('click', function(){
+        allMarkers[62].addListener('click', function(){
             parkingOpenClose("fourteenb");
         });
 
@@ -2953,7 +3248,7 @@ function initMap() {
         var fourteencHoverCard = new google.maps.InfoWindow({
             content: fourteencHover,
         });
-        fourteencMarker.addListener('click', function(){
+        allMarkers[63].addListener('click', function(){
             parkingOpenClose("fourteenc");
         });
 
@@ -2962,7 +3257,7 @@ function initMap() {
         var sevenHoverCard = new google.maps.InfoWindow({
             content: sevenHover,
         });
-        sevenMarker.addListener('click', function(){
+        allMarkers[64].addListener('click', function(){
             parkingOpenClose("seven");
         });
 
@@ -2971,7 +3266,7 @@ function initMap() {
         var fiveaHoverCard = new google.maps.InfoWindow({
             content: fiveaHover,
         });
-        fiveaMarker.addListener('click', function(){
+        allMarkers[65].addListener('click', function(){
             parkingOpenClose("fivea");
         });
 
@@ -2980,7 +3275,7 @@ function initMap() {
         var fiveHoverCard = new google.maps.InfoWindow({
             content: fiveHover,
         });
-        fiveMarker.addListener('click', function(){
+        allMarkers[66].addListener('click', function(){
             parkingOpenClose("five");
         });
 
@@ -2989,7 +3284,7 @@ function initMap() {
         var sevenaHoverCard = new google.maps.InfoWindow({
             content: sevenaHover,
         });
-        sevenaMarker.addListener('click', function(){
+        allMarkers[67].addListener('click', function(){
             parkingOpenClose("sevena");
         });
 
@@ -2998,7 +3293,7 @@ function initMap() {
         var fifteenHoverCard = new google.maps.InfoWindow({
             content: fifteenHover,
         });
-        fifteenMarker.addListener('click', function(){
+        allMarkers[68].addListener('click', function(){
             parkingOpenClose("fifteen");
         });
 
@@ -3007,7 +3302,7 @@ function initMap() {
         var thirtytwoHoverCard = new google.maps.InfoWindow({
             content: thirtytwoHover,
         });
-        thirtytwoMarker.addListener('click', function(){
+        allMarkers[69].addListener('click', function(){
             parkingOpenClose("thirtytwo");
         });
 
@@ -3016,7 +3311,7 @@ function initMap() {
         var thirteenHoverCard = new google.maps.InfoWindow({
             content: thirteenHover,
         });
-        thirteenMarker.addListener('click', function(){
+        allMarkers[70].addListener('click', function(){
             parkingOpenClose("thirteen");
         });
 
@@ -3025,7 +3320,7 @@ function initMap() {
         var twelveHoverCard = new google.maps.InfoWindow({
             content: twelveHover,
         });
-        twelveMarker.addListener('click', function(){
+        allMarkers[71].addListener('click', function(){
             parkingOpenClose("twelve");
         });
 
@@ -3034,7 +3329,7 @@ function initMap() {
         var sixaHoverCard = new google.maps.InfoWindow({
             content: sixaHover,
         });
-        sixaMarker.addListener('click', function(){
+        allMarkers[72].addListener('click', function(){
             parkingOpenClose("sixa");
         });
 
@@ -3043,7 +3338,7 @@ function initMap() {
         var sixHoverCard = new google.maps.InfoWindow({
             content: sixHover,
         });
-        sixMarker.addListener('click', function(){
+        allMarkers[73].addListener('click', function(){
             parkingOpenClose("six");
         });
 
@@ -3052,7 +3347,7 @@ function initMap() {
         var tenHoverCard = new google.maps.InfoWindow({
             content: tenHover,
         });
-        tenMarker.addListener('click', function(){
+        allMarkers[74].addListener('click', function(){
             parkingOpenClose("ten");
         });
 
@@ -3061,7 +3356,7 @@ function initMap() {
         var nineaHoverCard = new google.maps.InfoWindow({
             content: nineaHover,
         });
-        nineaMarker.addListener('click', function(){
+        allMarkers[75].addListener('click', function(){
             parkingOpenClose("ninea");
         });
 
@@ -3070,7 +3365,7 @@ function initMap() {
         var nineHoverCard = new google.maps.InfoWindow({
             content: nineHover,
         });
-        nineMarker.addListener('click', function(){
+        allMarkers[76].addListener('click', function(){
             parkingOpenClose("nine");
         });
 
@@ -3079,7 +3374,7 @@ function initMap() {
         var eighteenHoverCard = new google.maps.InfoWindow({
             content: eighteenHover,
         });
-        eighteenMarker.addListener('click', function(){
+        allMarkers[77].addListener('click', function(){
             parkingOpenClose("eighteen");
         });
 
@@ -3088,7 +3383,7 @@ function initMap() {
         var thirtyHoverCard = new google.maps.InfoWindow({
             content: thirtyHover,
         });
-        thirtyMarker.addListener('click', function(){
+        allMarkers[78].addListener('click', function(){
             parkingOpenClose("thirty");
         });
 
@@ -3097,7 +3392,7 @@ function initMap() {
         var thirtynineHoverCard = new google.maps.InfoWindow({
             content: thirtynineHover,
         });
-        thirtynineMarker.addListener('click', function(){
+        allMarkers[79].addListener('click', function(){
             parkingOpenClose("thirtynine");
         });
 
@@ -3313,209 +3608,260 @@ function initMap() {
         //     markerOpenClose("webster");
         // });
 
-
         // accessible entries (buildings)
         function setAccEnt(){
+            
             allMarkers[0].setMap(map);
-            acMarker.setMap(map);
-            blackhawkMarker.setMap(map);
-            equityMarker.setMap(map);
-            clowMarker.setMap(map);
-            dempseyMarker.setMap(map);
-            donnerMarker.setMap(map);
-            fletcherMarker.setMap(map);
-            fredricMarker.setMap(map);
-            gruenhagenMarker.setMap(map);
-            halseyMarker.setMap(map);
-            harringtonMarker.setMap(map);
-            kolfMarker.setMap(map);
-            nursingMarker.setMap(map);
-            polkMarker.setMap(map);
-            radfordMarker.setMap(map);
-            reeveMarker.setMap(map);
-            scottMarker.setMap(map);
-            stewartMarker.setMap(map);
-            successMarker.setMap(map);
-            swartMarker.setMap(map);
-            taylorMarker.setMap(map);
-            websterMarker.setMap(map);
+            allMarkers[3].setMap(map);
+            allMarkers[5].setMap(map);
+            allMarkers[8].setMap(map);
+            allMarkers[11].setMap(map);
+            allMarkers[13].setMap(map);
+            allMarkers[14].setMap(map);
+            allMarkers[26].setMap(map);
+            allMarkers[29].setMap(map);
+            allMarkers[36].setMap(map);
+            allMarkers[37].setMap(map);
+            allMarkers[44].setMap(map);
+            //18-22
+            for(i = 18; i < 23; i++){
+                allMarkers[i].setMap(map);
+            }
+            //32-34
+            for(i = 32; i < 35; i++){
+                allMarkers[i].setMap(map);
+            }
+            //39-41
+            for (i = 39; i < 42; i++){
+                allMarkers[i].setMap(map);
+            }
 
             allMarkers[0].setIcon(redMarker);
-            acMarker.setIcon(redMarker);
-            blackhawkMarker.setIcon(redMarker);
-            equityMarker.setIcon(redMarker);
-            clowMarker.setIcon(redMarker);
-            dempseyMarker.setIcon(redMarker);
-            donnerMarker.setIcon(redMarker);
-            fletcherMarker.setIcon(redMarker);
-            fredricMarker.setIcon(redMarker);
-            gruenhagenMarker.setIcon(redMarker);
-            halseyMarker.setIcon(redMarker);
-            harringtonMarker.setIcon(redMarker);
-            kolfMarker.setIcon(redMarker);
-            nursingMarker.setIcon(redMarker);
-            polkMarker.setIcon(redMarker);
-            radfordMarker.setIcon(redMarker);
-            reeveMarker.setIcon(redMarker);
-            scottMarker.setIcon(redMarker);
-            stewartMarker.setIcon(redMarker);
-            successMarker.setIcon(redMarker);
-            swartMarker.setIcon(redMarker);
-            taylorMarker.setIcon(redMarker);
-            websterMarker.setIcon(redMarker);
+            allMarkers[3].setIcon(redMarker);
+            allMarkers[5].setIcon(redMarker);
+            allMarkers[8].setIcon(redMarker);
+            allMarkers[11].setIcon(redMarker);
+            allMarkers[13].setIcon(redMarker);
+            allMarkers[14].setIcon(redMarker);
+            allMarkers[26].setIcon(redMarker);
+            allMarkers[29].setIcon(redMarker);
+            allMarkers[36].setIcon(redMarker);
+            allMarkers[37].setIcon(redMarker);
+            allMarkers[44].setIcon(redMarker);
+            //18-22
+            for(i = 18; i < 23; i++){
+                allMarkers[i].setIcon(redMarker);
+            }
+            //32-34
+            for(i = 32; i < 35; i++){
+                allMarkers[i].setIcon(redMarker);
+            }
+            //39-41
+            for (i = 39; i < 42; i++){
+                allMarkers[i].setIcon(redMarker);
+            }
+
+            // allMarkers[0].setIcon(redMarker);
+            // acMarker.setIcon(redMarker);
+            // blackhawkMarker.setIcon(redMarker);
+            // equityMarker.setIcon(redMarker);
+            // clowMarker.setIcon(redMarker);
+            // dempseyMarker.setIcon(redMarker);
+            // donnerMarker.setIcon(redMarker);
+            // fletcherMarker.setIcon(redMarker);
+            // fredricMarker.setIcon(redMarker);
+            // gruenhagenMarker.setIcon(redMarker);
+            // halseyMarker.setIcon(redMarker);
+            // harringtonMarker.setIcon(redMarker);
+            // kolfMarker.setIcon(redMarker);
+            // nursingMarker.setIcon(redMarker);
+            // polkMarker.setIcon(redMarker);
+            // radfordMarker.setIcon(redMarker);
+            // reeveMarker.setIcon(redMarker);
+            // scottMarker.setIcon(redMarker);
+            // stewartMarker.setIcon(redMarker);
+            // successMarker.setIcon(redMarker);
+            // swartMarker.setIcon(redMarker);
+            // taylorMarker.setIcon(redMarker);
+            // websterMarker.setIcon(redMarker);
         }
         function removeAccEnt(){
             allMarkers[0].setMap(null);
-            acMarker.setMap(null);
-            blackhawkMarker.setMap(null);
-            equityMarker.setMap(null);
-            clowMarker.setMap(null);
-            dempseyMarker.setMap(null);
-            donnerMarker.setMap(null);
-            fletcherMarker.setMap(null);
-            fredricMarker.setMap(null);
-            gruenhagenMarker.setMap(null);
-            halseyMarker.setMap(null);
-            harringtonMarker.setMap(null);
-            kolfMarker.setMap(null);
-            nursingMarker.setMap(null);
-            polkMarker.setMap(null);
-            radfordMarker.setMap(null);
-            reeveMarker.setMap(null);
-            scottMarker.setMap(null);
-            stewartMarker.setMap(null);
-            successMarker.setMap(null);
-            swartMarker.setMap(null);
-            taylorMarker.setMap(null);
-            websterMarker.setMap(null);
+            allMarkers[3].setMap(null);
+            allMarkers[5].setMap(null);
+            allMarkers[8].setMap(null);
+            allMarkers[11].setMap(null);
+            allMarkers[13].setMap(null);
+            allMarkers[14].setMap(null);
+            allMarkers[26].setMap(null);
+            allMarkers[29].setMap(null);
+            allMarkers[36].setMap(null);
+            allMarkers[37].setMap(null);
+            allMarkers[44].setMap(null);
+            //18-22
+            for(i = 18; i < 23; i++){
+                allMarkers[i].setMap(null);
+            }
+            //32-34
+            for(i = 32; i < 35; i++){
+                allMarkers[i].setMap(null);
+            }
+            //39-41
+            for (i = 39; i < 42; i++){
+                allMarkers[i].setMap(null);
+            }
+
+            // allMarkers[0].setMap(null);
+            // acMarker.setMap(null);
+            // blackhawkMarker.setMap(null);
+            // equityMarker.setMap(null);
+            // clowMarker.setMap(null);
+            // dempseyMarker.setMap(null);
+            // donnerMarker.setMap(null);
+            // fletcherMarker.setMap(null);
+            // fredricMarker.setMap(null);
+            // gruenhagenMarker.setMap(null);
+            // halseyMarker.setMap(null);
+            // harringtonMarker.setMap(null);
+            // kolfMarker.setMap(null);
+            // nursingMarker.setMap(null);
+            // polkMarker.setMap(null);
+            // radfordMarker.setMap(null);
+            // reeveMarker.setMap(null);
+            // scottMarker.setMap(null);
+            // stewartMarker.setMap(null);
+            // successMarker.setMap(null);
+            // swartMarker.setMap(null);
+            // taylorMarker.setMap(null);
+            // websterMarker.setMap(null);
         }
         
         // markers for accessible parking locations
-        var womensCenter = {lat: 44.024816, lng: -88.546638};
-        var womensCenterMarker = new google.maps.Marker({
-            position: womensCenter,
-            icon: tealMarker,
-            title: "Women's Center"
-        });
+        // var womensCenter = {lat: 44.024816, lng: -88.546638};
+        // var womensCenterMarker = new google.maps.Marker({
+        //     position: womensCenter,
+        //     icon: tealMarker,
+        //     title: "Women's Center"
+        // });
 
-        var titanOne = {lat: 44.024401, lng: -88.564253};
-        var titanOneMarker = new google.maps.Marker({
-            position: titanOne,
-            icon: tealMarker,
-            title: "Titan One"
-        });
+        // var titanOne = {lat: 44.024401, lng: -88.564253};
+        // var titanOneMarker = new google.maps.Marker({
+        //     position: titanOne,
+        //     icon: tealMarker,
+        //     title: "Titan One"
+        // });
 
-        var titanTwo = {lat: 44.023007, lng:  -88.564339};
-        var titanTwoMarker = new google.maps.Marker({
-            position: titanTwo,
-            icon: tealMarker,
-            title: "Titan Two"
-        });
-        var elevenAccParMarker = new google.maps.Marker({
-            position: parkingLots[0],
-            icon: tealMarker,
-            title: "Lot 11"
-        });
-        var fourAccParMarker = new google.maps.Marker({
-            position: parkingLots[5],
-            icon:  tealMarker,
-            title: "Lot 4"
-        });
-        var fouraAccParMarker = new google.maps.Marker({
-            position: parkingLots[6],
-            icon:  tealMarker,
-            title: "Lot 4a"
-        });
-        var sixteenAccParMarker = new google.maps.Marker({
-            position: parkingLots[7],
-            icon:  tealMarker,
-            title: "Lot 16"
-        });
-        var seventeenAccParMarker = new google.maps.Marker({
-            position: parkingLots[8],
-            icon:  tealMarker,
-            title: "Lot 17"
-        });
-        var twentynineAccParMarker = new google.maps.Marker({
-            position: parkingLots[9],
-            icon: tealMarker,
-            title: "Lot 29"
-        });
-        var twentyfiveAccParMarker = new google.maps.Marker({
-            position: parkingLots[10],
-            icon: tealMarker,
-            title: "Lot 25"
-        });
-        var thirtythreeAccParMarker = new google.maps.Marker({
-            position: parkingLots[12],
-            icon: tealMarker,
-            title: "Lot 33"
-        });
-        var fourteenaAccParMarker = new google.maps.Marker({
-            position: parkingLots[16],
-            icon: tealMarker,
-            title: "Lot 14a"
-        });
-        var sevenaAccParMarker = new google.maps.Marker({
-            position: parkingLots[22],
-            icon: tealMarker,
-            title: "Lot 7a"
-        });
-        var thirteenAccParMarker = new google.maps.Marker({
-            position: parkingLots[25],
-            icon: tealMarker,
-            title: "Lot 13"
-        });
-        var thirtyfourAccParMarker = new google.maps.Marker({
-            position: parkingLots[13],
-            icon: tealMarker,
-            title: "Lot 34"
-        });
-        var twentyeightAccParMarker = new google.maps.Marker({
-            position: parkingLots[14],
-            icon: tealMarker,
-            title: "Lot 28"
-        });
-        var twentythreeAccParMarker = new google.maps.Marker({
-            position: parkingLots[15],
-            icon: tealMarker,
-            title: "Lot 23"
-        });
-        var fifteenAccParMarker = new google.maps.Marker({
-            position: parkingLots[23],
-            icon:  tealMarker,
-            title: "Lot 15"
-        });
-        var thirtytwoAccParMarker = new google.maps.Marker({
-            position: parkingLots[24],
-            icon:  tealMarker,
-            title: "Lot 32"
-        });
-        var tenAccParMarker = new google.maps.Marker({
-            position: parkingLots[29],
-            icon:  tealMarker,
-            title: "Lot 10"
-        });
-        var twelveAccParMarker = new google.maps.Marker({
-            position: parkingLots[26],
-            icon:  tealMarker,
-            title: "Lot 12"
-        });
-        var sixaAccParMarker = new google.maps.Marker({
-            position: parkingLots[27],
-            icon:  tealMarker,
-            title: "Lot 6a"
-        });
-        var sixAccParMarker = new google.maps.Marker({
-            position: parkingLots[28],
-            icon: tealMarker,
-            title: "Lot 6"
-        });
-        var eighteenAccParMarker = new google.maps.Marker({
-            position: parkingLots[32],
-            icon: tealMarker,
-            title: "Lot 18"
-        });
+        // var titanTwo = {lat: 44.023007, lng:  -88.564339};
+        // var titanTwoMarker = new google.maps.Marker({
+        //     position: titanTwo,
+        //     icon: tealMarker,
+        //     title: "Titan Two"
+        // });
+        // var elevenAccParMarker = new google.maps.Marker({
+        //     position: parkingLots[0],
+        //     icon: tealMarker,
+        //     title: "Lot 11"
+        // });
+        // var fourAccParMarker = new google.maps.Marker({
+        //     position: parkingLots[5],
+        //     icon:  tealMarker,
+        //     title: "Lot 4"
+        // });
+        // var fouraAccParMarker = new google.maps.Marker({
+        //     position: parkingLots[6],
+        //     icon:  tealMarker,
+        //     title: "Lot 4a"
+        // });
+        // var sixteenAccParMarker = new google.maps.Marker({
+        //     position: parkingLots[7],
+        //     icon:  tealMarker,
+        //     title: "Lot 16"
+        // });
+        // var seventeenAccParMarker = new google.maps.Marker({
+        //     position: parkingLots[8],
+        //     icon:  tealMarker,
+        //     title: "Lot 17"
+        // });
+        // var twentynineAccParMarker = new google.maps.Marker({
+        //     position: parkingLots[9],
+        //     icon: tealMarker,
+        //     title: "Lot 29"
+        // });
+        // var twentyfiveAccParMarker = new google.maps.Marker({
+        //     position: parkingLots[10],
+        //     icon: tealMarker,
+        //     title: "Lot 25"
+        // });
+        // var thirtythreeAccParMarker = new google.maps.Marker({
+        //     position: parkingLots[12],
+        //     icon: tealMarker,
+        //     title: "Lot 33"
+        // });
+        // var fourteenaAccParMarker = new google.maps.Marker({
+        //     position: parkingLots[16],
+        //     icon: tealMarker,
+        //     title: "Lot 14a"
+        // });
+        // var sevenaAccParMarker = new google.maps.Marker({
+        //     position: parkingLots[22],
+        //     icon: tealMarker,
+        //     title: "Lot 7a"
+        // });
+        // var thirteenAccParMarker = new google.maps.Marker({
+        //     position: parkingLots[25],
+        //     icon: tealMarker,
+        //     title: "Lot 13"
+        // });
+        // var thirtyfourAccParMarker = new google.maps.Marker({
+        //     position: parkingLots[13],
+        //     icon: tealMarker,
+        //     title: "Lot 34"
+        // });
+        // var twentyeightAccParMarker = new google.maps.Marker({
+        //     position: parkingLots[14],
+        //     icon: tealMarker,
+        //     title: "Lot 28"
+        // });
+        // var twentythreeAccParMarker = new google.maps.Marker({
+        //     position: parkingLots[15],
+        //     icon: tealMarker,
+        //     title: "Lot 23"
+        // });
+        // var fifteenAccParMarker = new google.maps.Marker({
+        //     position: parkingLots[23],
+        //     icon:  tealMarker,
+        //     title: "Lot 15"
+        // });
+        // var thirtytwoAccParMarker = new google.maps.Marker({
+        //     position: parkingLots[24],
+        //     icon:  tealMarker,
+        //     title: "Lot 32"
+        // });
+        // var tenAccParMarker = new google.maps.Marker({
+        //     position: parkingLots[29],
+        //     icon:  tealMarker,
+        //     title: "Lot 10"
+        // });
+        // var twelveAccParMarker = new google.maps.Marker({
+        //     position: parkingLots[26],
+        //     icon:  tealMarker,
+        //     title: "Lot 12"
+        // });
+        // var sixaAccParMarker = new google.maps.Marker({
+        //     position: parkingLots[27],
+        //     icon:  tealMarker,
+        //     title: "Lot 6a"
+        // });
+        // var sixAccParMarker = new google.maps.Marker({
+        //     position: parkingLots[28],
+        //     icon: tealMarker,
+        //     title: "Lot 6"
+        // });
+        // var eighteenAccParMarker = new google.maps.Marker({
+        //     position: parkingLots[32],
+        //     icon: tealMarker,
+        //     title: "Lot 18"
+        // });
         //  hover event listeners for accessible parking here
         elevenAccParMarker.addListener('click', function(){
             var eleven = "eleven";
@@ -3655,7 +4001,7 @@ function initMap() {
             womensCenterMarker.setMap(map);
             fifteenAccParMarker.setMap(map);
             thirtytwoAccParMarker.setMap(map);
-            parkingRampMarker.setMap(map);
+            allMarkers[24].setMap(map);
             tenAccParMarker.setMap(map);
             twelveAccParMarker.setMap(map);
             sixaAccParMarker.setMap(map);
@@ -3684,7 +4030,7 @@ function initMap() {
             womensCenterMarker.setMap(null);
             fifteenAccParMarker.setMap(null);
             thirtytwoAccParMarker.setMap(null);
-            parkingRampMarker.setMap(null);
+            allMarkers[24].setMap(null);
             tenAccParMarker.setMap(null);
             twelveAccParMarker.setMap(null);
             sixaAccParMarker.setMap(null);
@@ -3695,330 +4041,336 @@ function initMap() {
         }
         
         // Emergency phones
-        var emergencyPhones = [
-            // Phone[0] Lot 35
-            {lat: 44.029568, lng: -88.557150},
-            // Phone[1] Lot 40
-            {lat: 44.029075, lng: -88.558184},
-            // Phone[2] lot 27
-            {lat: 44.028831, lng: -88.555125},
-            // Phone[3] heating plant
-            {lat: 44.028514, lng: -88.554386},
-            // Phone[4] behind a & c
-            {lat: 44.029626, lng: -88.552936},
-            // Phone[5] in between halsey and swart
-            {lat: 44.028456, lng: -88.551907},
-            // Phone[6] lot 25
-            {lat: 44.027457	, lng: -88.553422},
-            // Phone[7] lot 17
-            {lat: 44.028501, lng: -88.549911},
-            // Phone[8] Wiouwash Trail Oshkosh, WI 54901
-            {lat: 44.025255, lng: -88.555618},
-            // Phone[9] in front of slow
-            {lat: 44.026028, lng: -88.552211},
-            // Phone[10] behind dempsey
-            {lat: 44.026556, lng: -88.550250},
-            // Phone[11] lot 34
-            {lat: 44.026670, lng: -88.547795},
-            // Phone[12] in between fletcher, stewart and evans
-            {lat: 44.025771, lng: -88.547412},
-            // Phone[13] center for equity and diversity
-            {lat: 44.024777, lng: -88.546711},
-            // Phone[14] in between reeve and horizon
-            {lat: 44.024921, lng: -88.548533},
-            // Phone[15] lot 7
-            {lat: 44.024921, lng: -88.548533},
-            // Phone[16] lot 5
-            {lat: 44.023941, lng: -88.554160},
-            // Phone[17] environmental research and innovation center
-            {lat: 44.023489, lng: -88.553277},
-            // Phone[18] behind student recreation and wellness center
-            {lat: 44.022102, lng: -88.552487},
-            // Phone[19] path to student rec center
-            {lat: 44.023313, lng: -88.551255},
-            // Phone[20] between taylor and webster
-            {lat: 44.024791, lng: -88.551402},
-            // Phone[21] lot 15
-            {lat: 44.024395, lng:  -88.550325},
-            // Phone[22] behind blackhawk
-            {lat: 44.023321, lng: -88.548516},
-            // Phone[23] wellness center front
-            {lat: 44.021428, lng: -88.550672},
-            // Phone[24]wellness center  behind
-            {lat: 44.021057, lng: -88.551801},
-            // Phone[25] lot 30
-            {lat: 44.021727, lng: -88.548169},
-            // Phone[26] lot 18
-            {lat: 44.022676, lng:  -88.546843},
-            // Phone[27] lot 39
-            {lat: 44.018830, lng: -88.556802}
-        ];
+        // var emergencyPhones = [
+        //     // Phone[0] Lot 35
+        //     {lat: 44.029568, lng: -88.557150},
+        //     // Phone[1] Lot 40
+        //     {lat: 44.029075, lng: -88.558184},
+        //     // Phone[2] lot 27
+        //     {lat: 44.028831, lng: -88.555125},
+        //     // Phone[3] heating plant
+        //     {lat: 44.028514, lng: -88.554386},
+        //     // Phone[4] behind a & c
+        //     {lat: 44.029626, lng: -88.552936},
+        //     // Phone[5] in between halsey and swart
+        //     {lat: 44.028456, lng: -88.551907},
+        //     // Phone[6] lot 25
+        //     {lat: 44.027457	, lng: -88.553422},
+        //     // Phone[7] lot 17
+        //     {lat: 44.028501, lng: -88.549911},
+        //     // Phone[8] Wiouwash Trail Oshkosh, WI 54901
+        //     {lat: 44.025255, lng: -88.555618},
+        //     // Phone[9] in front of slow
+        //     {lat: 44.026028, lng: -88.552211},
+        //     // Phone[10] behind dempsey
+        //     {lat: 44.026556, lng: -88.550250},
+        //     // Phone[11] lot 34
+        //     {lat: 44.026670, lng: -88.547795},
+        //     // Phone[12] in between fletcher, stewart and evans
+        //     {lat: 44.025771, lng: -88.547412},
+        //     // Phone[13] center for equity and diversity
+        //     {lat: 44.024777, lng: -88.546711},
+        //     // Phone[14] in between reeve and horizon
+        //     {lat: 44.024921, lng: -88.548533},
+        //     // Phone[15] lot 7
+        //     {lat: 44.024921, lng: -88.548533},
+        //     // Phone[16] lot 5
+        //     {lat: 44.023941, lng: -88.554160},
+        //     // Phone[17] environmental research and innovation center
+        //     {lat: 44.023489, lng: -88.553277},
+        //     // Phone[18] behind student recreation and wellness center
+        //     {lat: 44.022102, lng: -88.552487},
+        //     // Phone[19] path to student rec center
+        //     {lat: 44.023313, lng: -88.551255},
+        //     // Phone[20] between taylor and webster
+        //     {lat: 44.024791, lng: -88.551402},
+        //     // Phone[21] lot 15
+        //     {lat: 44.024395, lng:  -88.550325},
+        //     // Phone[22] behind blackhawk
+        //     {lat: 44.023321, lng: -88.548516},
+        //     // Phone[23] wellness center front
+        //     {lat: 44.021428, lng: -88.550672},
+        //     // Phone[24]wellness center  behind
+        //     {lat: 44.021057, lng: -88.551801},
+        //     // Phone[25] lot 30
+        //     {lat: 44.021727, lng: -88.548169},
+        //     // Phone[26] lot 18
+        //     {lat: 44.022676, lng:  -88.546843},
+        //     // Phone[27] lot 39
+        //     {lat: 44.018830, lng: -88.556802}
+        // ];
         // creating emergency phone markers
-        var phoneZero = new google.maps.Marker({
-            position: emergencyPhones[0],
-            icon: blueMarker,
-            title: "Emergency Phone"
-        });
-        var phoneOne = new google.maps.Marker({
-            position: emergencyPhones[1],
-            icon: blueMarker,
-            title: "Emergency Phone"
-        });
-        var phoneTwo = new google.maps.Marker({
-            position: emergencyPhones[2],
-            icon: blueMarker,
-            title: "Emergency Phone"
-        });
-        var phoneThree = new google.maps.Marker({
-            position: emergencyPhones[3],
-            icon: blueMarker,
-            title: "Emergency Phone"
-        });
-        var phoneFour = new google.maps.Marker({
-            position: emergencyPhones[4],
-            icon: blueMarker,
-            title: "Emergency Phone"
-        });
-        var phoneFive= new google.maps.Marker({
-            position: emergencyPhones[5],
-            icon: blueMarker,
-            title: "Emergency Phone"
-        });
-        var phoneSix = new google.maps.Marker({
-            position: emergencyPhones[6],
-            icon: blueMarker,
-            title: "Emergency Phone"
-        });
-        var phoneSeven = new google.maps.Marker({
-            position: emergencyPhones[7],
-            icon: blueMarker,
-            title: "Emergency Phone"
-        });
-        var phoneEight = new google.maps.Marker({
-            position: emergencyPhones[8],
-            icon: blueMarker,
-            title: "Emergency Phone"
-        });
-        var phoneNine = new google.maps.Marker({
-            position: emergencyPhones[9],
-            icon: blueMarker,
-            title: "Emergency Phone"
-        });
-        var phoneTen = new google.maps.Marker({
-            position: emergencyPhones[10],
-            icon: blueMarker,
-            title: "Emergency Phone"
-        });
-        var phoneEleven = new google.maps.Marker({
-            position: emergencyPhones[11],
-            icon: blueMarker,
-            title: "Emergency Phone"
-        });
-        var phoneTwelve = new google.maps.Marker({
-            position: emergencyPhones[12],
-            icon: blueMarker,
-            title: "Emergency Phone"
-        });
-        var phoneThirteen = new google.maps.Marker({
-            position: emergencyPhones[13],
-            icon: blueMarker,
-            title: "Emergency Phone"
-        });
-        var phoneFourteen = new google.maps.Marker({
-            position: emergencyPhones[14],
-            icon: blueMarker,
-            title: "Emergency Phone"
-        });
-        var phoneFifteen = new google.maps.Marker({
-            position: emergencyPhones[15],
-            icon: blueMarker,
-            title: "Emergency Phone"
-        });
-        var phoneSixteen = new google.maps.Marker({
-            position: emergencyPhones[16],
-            icon: blueMarker,
-            title: "Emergency Phone"
-        });
-        var phoneSeventeen = new google.maps.Marker({
-            position: emergencyPhones[17],
-            icon: blueMarker,
-            title: "Emergency Phone"
-        });
-        var phoneEighteen = new google.maps.Marker({
-            position: emergencyPhones[18],
-            icon: blueMarker,
-            title: "Emergency Phone"
-        });
-        var phoneNineteen = new google.maps.Marker({
-            position: emergencyPhones[19],
-            icon: blueMarker,
-            title: "Emergency Phone"
-        });
-        var phoneTwenty = new google.maps.Marker({
-            position: emergencyPhones[20],
-            icon: blueMarker,
-            title: "Emergency Phone"
-        });
-        var phoneTwentyOne = new google.maps.Marker({
-            position: emergencyPhones[21],
-            icon: blueMarker,
-            title: "Emergency Phone"
-        });
-        var phoneTwentyTwo = new google.maps.Marker({
-            position: emergencyPhones[22],
-            icon: blueMarker,
-            title: "Emergency Phone"
-        });
-        var phoneTwentyThree = new google.maps.Marker({
-            position: emergencyPhones[23],
-            icon: blueMarker,
-            title: "Emergency Phone"
-        });
-        var phoneTwentyFour = new google.maps.Marker({
-            position: emergencyPhones[24],
-            icon: blueMarker,
-            title: "Emergency Phone"
-        });
-        var phoneTwentyFive = new google.maps.Marker({
-            position: emergencyPhones[25],
-            icon: blueMarker,
-            title: "Emergency Phone"
-        });
-        var phoneTwentySix = new google.maps.Marker({
-            position: emergencyPhones[26],
-            icon: blueMarker,
-            title: "Emergency Phone"
-        });
-        var phoneTwentySeven = new google.maps.Marker({
-            position: emergencyPhones[27],
-            icon: blueMarker,
-            title: "Emergency Phone"
-        });
+        // var phoneZero = new google.maps.Marker({
+        //     position: emergencyPhones[0],
+        //     icon: blueMarker,
+        //     title: "Emergency Phone"
+        // });
+        // var phoneOne = new google.maps.Marker({
+        //     position: emergencyPhones[1],
+        //     icon: blueMarker,
+        //     title: "Emergency Phone"
+        // });
+        // var phoneTwo = new google.maps.Marker({
+        //     position: emergencyPhones[2],
+        //     icon: blueMarker,
+        //     title: "Emergency Phone"
+        // });
+        // var phoneThree = new google.maps.Marker({
+        //     position: emergencyPhones[3],
+        //     icon: blueMarker,
+        //     title: "Emergency Phone"
+        // });
+        // var phoneFour = new google.maps.Marker({
+        //     position: emergencyPhones[4],
+        //     icon: blueMarker,
+        //     title: "Emergency Phone"
+        // });
+        // var phoneFive= new google.maps.Marker({
+        //     position: emergencyPhones[5],
+        //     icon: blueMarker,
+        //     title: "Emergency Phone"
+        // });
+        // var phoneSix = new google.maps.Marker({
+        //     position: emergencyPhones[6],
+        //     icon: blueMarker,
+        //     title: "Emergency Phone"
+        // });
+        // var phoneSeven = new google.maps.Marker({
+        //     position: emergencyPhones[7],
+        //     icon: blueMarker,
+        //     title: "Emergency Phone"
+        // });
+        // var phoneEight = new google.maps.Marker({
+        //     position: emergencyPhones[8],
+        //     icon: blueMarker,
+        //     title: "Emergency Phone"
+        // });
+        // var phoneNine = new google.maps.Marker({
+        //     position: emergencyPhones[9],
+        //     icon: blueMarker,
+        //     title: "Emergency Phone"
+        // });
+        // var phoneTen = new google.maps.Marker({
+        //     position: emergencyPhones[10],
+        //     icon: blueMarker,
+        //     title: "Emergency Phone"
+        // });
+        // var phoneEleven = new google.maps.Marker({
+        //     position: emergencyPhones[11],
+        //     icon: blueMarker,
+        //     title: "Emergency Phone"
+        // });
+        // var phoneTwelve = new google.maps.Marker({
+        //     position: emergencyPhones[12],
+        //     icon: blueMarker,
+        //     title: "Emergency Phone"
+        // });
+        // var phoneThirteen = new google.maps.Marker({
+        //     position: emergencyPhones[13],
+        //     icon: blueMarker,
+        //     title: "Emergency Phone"
+        // });
+        // var phoneFourteen = new google.maps.Marker({
+        //     position: emergencyPhones[14],
+        //     icon: blueMarker,
+        //     title: "Emergency Phone"
+        // });
+        // var phoneFifteen = new google.maps.Marker({
+        //     position: emergencyPhones[15],
+        //     icon: blueMarker,
+        //     title: "Emergency Phone"
+        // });
+        // var phoneSixteen = new google.maps.Marker({
+        //     position: emergencyPhones[16],
+        //     icon: blueMarker,
+        //     title: "Emergency Phone"
+        // });
+        // var phoneSeventeen = new google.maps.Marker({
+        //     position: emergencyPhones[17],
+        //     icon: blueMarker,
+        //     title: "Emergency Phone"
+        // });
+        // var phoneEighteen = new google.maps.Marker({
+        //     position: emergencyPhones[18],
+        //     icon: blueMarker,
+        //     title: "Emergency Phone"
+        // });
+        // var phoneNineteen = new google.maps.Marker({
+        //     position: emergencyPhones[19],
+        //     icon: blueMarker,
+        //     title: "Emergency Phone"
+        // });
+        // var phoneTwenty = new google.maps.Marker({
+        //     position: emergencyPhones[20],
+        //     icon: blueMarker,
+        //     title: "Emergency Phone"
+        // });
+        // var phoneTwentyOne = new google.maps.Marker({
+        //     position: emergencyPhones[21],
+        //     icon: blueMarker,
+        //     title: "Emergency Phone"
+        // });
+        // var phoneTwentyTwo = new google.maps.Marker({
+        //     position: emergencyPhones[22],
+        //     icon: blueMarker,
+        //     title: "Emergency Phone"
+        // });
+        // var phoneTwentyThree = new google.maps.Marker({
+        //     position: emergencyPhones[23],
+        //     icon: blueMarker,
+        //     title: "Emergency Phone"
+        // });
+        // var phoneTwentyFour = new google.maps.Marker({
+        //     position: emergencyPhones[24],
+        //     icon: blueMarker,
+        //     title: "Emergency Phone"
+        // });
+        // var phoneTwentyFive = new google.maps.Marker({
+        //     position: emergencyPhones[25],
+        //     icon: blueMarker,
+        //     title: "Emergency Phone"
+        // });
+        // var phoneTwentySix = new google.maps.Marker({
+        //     position: emergencyPhones[26],
+        //     icon: blueMarker,
+        //     title: "Emergency Phone"
+        // });
+        // var phoneTwentySeven = new google.maps.Marker({
+        //     position: emergencyPhones[27],
+        //     icon: blueMarker,
+        //     title: "Emergency Phone"
+        // });
         // function for setting emergency phone markers
         function setEmergencyPhones(){
-            phoneZero.setMap(map);
-            phoneOne.setMap(map);
-            phoneTwo.setMap(map);
-            phoneThree.setMap(map);
-            phoneFour.setMap(map);
-            phoneFive.setMap(map);
-            phoneSix.setMap(map);
-            phoneSeven.setMap(map);
-            phoneEight.setMap(map);
-            phoneNine.setMap(map);
-            phoneTen.setMap(map);
-            phoneEleven.setMap(map);
-            phoneTwelve.setMap(map);
-            phoneThirteen.setMap(map);
-            phoneFourteen.setMap(map);
-            phoneFifteen.setMap(map);
-            phoneSixteen.setMap(map);
-            phoneSeventeen.setMap(map);
-            phoneEighteen.setMap(map);
-            phoneNineteen.setMap(map);
-            phoneTwenty.setMap(map);
-            phoneTwentyOne.setMap(map);
-            phoneTwentyTwo.setMap(map);
-            phoneTwentyThree.setMap(map);
-            phoneTwentyFour.setMap(map);
-            phoneTwentyFive.setMap(map);
-            phoneTwentySix.setMap(map);
-            phoneTwentySeven.setMap(map);
+            for(i = 83; i < 111; i++){
+                allMarkers[i].setMap(map);
+            }
+            // phoneZero.setMap(map);
+            // phoneOne.setMap(map);
+            // phoneTwo.setMap(map);
+            // phoneThree.setMap(map);
+            // phoneFour.setMap(map);
+            // phoneFive.setMap(map);
+            // phoneSix.setMap(map);
+            // phoneSeven.setMap(map);
+            // phoneEight.setMap(map);
+            // phoneNine.setMap(map);
+            // phoneTen.setMap(map);
+            // phoneEleven.setMap(map);
+            // phoneTwelve.setMap(map);
+            // phoneThirteen.setMap(map);
+            // phoneFourteen.setMap(map);
+            // phoneFifteen.setMap(map);
+            // phoneSixteen.setMap(map);
+            // phoneSeventeen.setMap(map);
+            // phoneEighteen.setMap(map);
+            // phoneNineteen.setMap(map);
+            // phoneTwenty.setMap(map);
+            // phoneTwentyOne.setMap(map);
+            // phoneTwentyTwo.setMap(map);
+            // phoneTwentyThree.setMap(map);
+            // phoneTwentyFour.setMap(map);
+            // phoneTwentyFive.setMap(map);
+            // phoneTwentySix.setMap(map);
+            // phoneTwentySeven.setMap(map);
         }
         // function for removing emergency phone markers
         function removeEmergencyPhones(){
-            phoneZero.setMap(null);
-            phoneOne.setMap(null);
-            phoneTwo.setMap(null);
-            phoneThree.setMap(null);
-            phoneFour.setMap(null);
-            phoneFive.setMap(null);
-            phoneSix.setMap(null);
-            phoneSeven.setMap(null);
-            phoneEight.setMap(null);
-            phoneNine.setMap(null);
-            phoneTen.setMap(null);
-            phoneEleven.setMap(null);
-            phoneTwelve.setMap(null);
-            phoneThirteen.setMap(null);
-            phoneFourteen.setMap(null);
-            phoneFifteen.setMap(null);
-            phoneSixteen.setMap(null);
-            phoneSeventeen.setMap(null);
-            phoneEighteen.setMap(null);
-            phoneNineteen.setMap(null);
-            phoneTwenty.setMap(null);
-            phoneTwentyOne.setMap(null);
-            phoneTwentyTwo.setMap(null);
-            phoneTwentyThree.setMap(null);
-            phoneTwentyFour.setMap(null);
-            phoneTwentyFive.setMap(null);
-            phoneTwentySix.setMap(null);
-            phoneTwentySeven.setMap(null);
+            for(i = 83; i < 111; i++){
+                allMarkers[i].setMap(null);
+            }
+            // phoneZero.setMap(null);
+            // phoneOne.setMap(null);
+            // phoneTwo.setMap(null);
+            // phoneThree.setMap(null);
+            // phoneFour.setMap(null);
+            // phoneFive.setMap(null);
+            // phoneSix.setMap(null);
+            // phoneSeven.setMap(null);
+            // phoneEight.setMap(null);
+            // phoneNine.setMap(null);
+            // phoneTen.setMap(null);
+            // phoneEleven.setMap(null);
+            // phoneTwelve.setMap(null);
+            // phoneThirteen.setMap(null);
+            // phoneFourteen.setMap(null);
+            // phoneFifteen.setMap(null);
+            // phoneSixteen.setMap(null);
+            // phoneSeventeen.setMap(null);
+            // phoneEighteen.setMap(null);
+            // phoneNineteen.setMap(null);
+            // phoneTwenty.setMap(null);
+            // phoneTwentyOne.setMap(null);
+            // phoneTwentyTwo.setMap(null);
+            // phoneTwentyThree.setMap(null);
+            // phoneTwentyFour.setMap(null);
+            // phoneTwentyFive.setMap(null);
+            // phoneTwentySix.setMap(null);
+            // phoneTwentySeven.setMap(null);
         }
         
 
         // creating sust markers
-        var albeeSustMarker = new google.maps.Marker({
-            position: buildings[0],
-            icon: greenMarker,
-            title: "Albee Hall"
-        });
-        var alumniSustMarker = new google.maps.Marker({
-            position: buildings[2],
-            icon: greenMarker,
-            title: "Alumni Welcome and Conference Center"
-        });
-        var blackhawkSustMarker = new google.maps.Marker({
-            position: buildings[5],
-            icon: greenMarker,
-            title: "Blackhawk Commons"
-        });
-        var biodigesterSustMarker = new google.maps.Marker({
-            position: buildings[6],
-            icon: greenMarker,
-            title: "Biodigester"
-        });
-        var heatingSustMarker = new google.maps.Marker({
-            position: buildings[23],
-            icon: greenMarker,
-            title: "Heating Plant"
-        });
-        var horizonSustMarker = new google.maps.Marker({
-            position: buildings[25],
-            icon: greenMarker,
-            title: "Horizon Village"
-        });
-        var reeveSustMarker = new google.maps.Marker({
-            position: buildings[34],
-            icon: greenMarker,
-            title: "Reeve Memorial Union"
-        });
-        var sageSustMarker = new google.maps.Marker({
-            position: buildings[35],
-            icon: greenMarker,
-            title: "Sage Hall"
-        });
-        var recreationSustMarker = new google.maps.Marker({
-            position: buildings[38],
-            icon: greenMarker,
-            title: "Student Recreation and Conference Center"
-        });
-        var successSustMarker = new google.maps.Marker({
-            position: buildings[39],
-            icon: greenMarker,
-            title: "Student Success Center"
-        });
-        var taylorSustMarker = new google.maps.Marker({
-            position: buildings[41],
-            icon: greenMarker,
-            title: "Taylor Hall"
-        });
-        var titanSustMarker = new google.maps.Marker({
-            position: buildings[42],
-            icon: greenMarker,
-            title: "Titan Stadium"
-        });
+        // var albeeSustMarker = new google.maps.Marker({
+        //     position: buildings[0],
+        //     icon: greenMarker,
+        //     title: "Albee Hall"
+        // });
+        // var alumniSustMarker = new google.maps.Marker({
+        //     position: buildings[2],
+        //     icon: greenMarker,
+        //     title: "Alumni Welcome and Conference Center"
+        // });
+        // var blackhawkSustMarker = new google.maps.Marker({
+        //     position: buildings[5],
+        //     icon: greenMarker,
+        //     title: "Blackhawk Commons"
+        // });
+        // var biodigesterSustMarker = new google.maps.Marker({
+        //     position: buildings[6],
+        //     icon: greenMarker,
+        //     title: "Biodigester"
+        // });
+        // var heatingSustMarker = new google.maps.Marker({
+        //     position: buildings[23],
+        //     icon: greenMarker,
+        //     title: "Heating Plant"
+        // });
+        // var horizonSustMarker = new google.maps.Marker({
+        //     position: buildings[25],
+        //     icon: greenMarker,
+        //     title: "Horizon Village"
+        // });
+        // var reeveSustMarker = new google.maps.Marker({
+        //     position: buildings[34],
+        //     icon: greenMarker,
+        //     title: "Reeve Memorial Union"
+        // });
+        // var sageSustMarker = new google.maps.Marker({
+        //     position: buildings[35],
+        //     icon: greenMarker,
+        //     title: "Sage Hall"
+        // });
+        // var recreationSustMarker = new google.maps.Marker({
+        //     position: buildings[38],
+        //     icon: greenMarker,
+        //     title: "Student Recreation and Conference Center"
+        // });
+        // var successSustMarker = new google.maps.Marker({
+        //     position: buildings[39],
+        //     icon: greenMarker,
+        //     title: "Student Success Center"
+        // });
+        // var taylorSustMarker = new google.maps.Marker({
+        //     position: buildings[41],
+        //     icon: greenMarker,
+        //     title: "Taylor Hall"
+        // });
+        // var titanSustMarker = new google.maps.Marker({
+        //     position: buildings[42],
+        //     icon: greenMarker,
+        //     title: "Titan Stadium"
+        // });
 
         // sust hovers
         albeeSustMarker.addListener('click', function(){
@@ -4114,76 +4466,76 @@ function initMap() {
         }
        
         // create gender markers
-        var acGenderMarker = new google.maps.Marker({
-            position: buildings[3],
-            icon: lightpurpleMarker,
-            title: "Arts and Communications"
-        });
-        var blackhawkGenderMarker = new google.maps.Marker({
-            position: buildings[5],
-            icon: lightpurpleMarker,
-            title: "Blackhawk Commons"
-        });
-        var campusGenderMarker = new google.maps.Marker({
-            position: buildings[9],
-            icon: lightpurpleMarker,
-            title: "Campus Center for Equity and Diversity"
-        });
-        var dempseyGenderMarker = new google.maps.Marker({
-            position: buildings[13],
-            icon: lightpurpleMarker,
-            title: "Dempsey Hall"
-        });
-        var halseyGenderMarker = new google.maps.Marker({
-            position: buildings[21],
-            icon: lightpurpleMarker,
-            title: "Halsey Science Center"
-        });
-        var harringtonGenderMarker = new google.maps.Marker({
-            position: buildings[22],
-            icon: lightpurpleMarker,
-            title: "Harrington Hall"
-        });
-        var kolfGenderMarker = new google.maps.Marker({
-            position: buildings[26],
-            icon: lightpurpleMarker,
-            title: "Kolf Sports Center"
-        });
-        var nursingGenderMarker = new google.maps.Marker({
-            position: buildings[29],
-            icon: lightpurpleMarker,
-            title: "Nursing and Education Building"
-        });
-        var reeveGenderMarker = new google.maps.Marker({
-            position: buildings[34],
-            icon: lightpurpleMarker,
-            title: "Reeve Memorial Union"
-        });
-        var sageGenderMarker = new google.maps.Marker({
-            position: buildings[35],
-            icon: lightpurpleMarker,
-            title: "Sage Hall"
-        });
-        var recreationGenderMarker = new google.maps.Marker({
-            position: buildings[38],
-            icon: lightpurpleMarker,
-            title: "Student Recreation and Wellness Center"
-        });
-        var successGenderMarker = new google.maps.Marker({
-            position: buildings[39],
-            icon: lightpurpleMarker,
-            title: "Student Success Center"
-        });
-        var swartGenderMarker = new google.maps.Marker({
-            position: buildings[40],
-            icon: lightpurpleMarker,
-            title: "Swart Hall"
-        });
-        var policeGenderMarker = new google.maps.Marker({
-            position: buildings[43],
-            icon: lightpurpleMarker,
-            title: "University Police"
-        });
+        // var acGenderMarker = new google.maps.Marker({
+        //     position: buildings[3],
+        //     icon: lightpurpleMarker,
+        //     title: "Arts and Communications"
+        // });
+        // var blackhawkGenderMarker = new google.maps.Marker({
+        //     position: buildings[5],
+        //     icon: lightpurpleMarker,
+        //     title: "Blackhawk Commons"
+        // });
+        // var campusGenderMarker = new google.maps.Marker({
+        //     position: buildings[9],
+        //     icon: lightpurpleMarker,
+        //     title: "Campus Center for Equity and Diversity"
+        // });
+        // var dempseyGenderMarker = new google.maps.Marker({
+        //     position: buildings[13],
+        //     icon: lightpurpleMarker,
+        //     title: "Dempsey Hall"
+        // });
+        // var halseyGenderMarker = new google.maps.Marker({
+        //     position: buildings[21],
+        //     icon: lightpurpleMarker,
+        //     title: "Halsey Science Center"
+        // });
+        // var harringtonGenderMarker = new google.maps.Marker({
+        //     position: buildings[22],
+        //     icon: lightpurpleMarker,
+        //     title: "Harrington Hall"
+        // });
+        // var kolfGenderMarker = new google.maps.Marker({
+        //     position: buildings[26],
+        //     icon: lightpurpleMarker,
+        //     title: "Kolf Sports Center"
+        // });
+        // var nursingGenderMarker = new google.maps.Marker({
+        //     position: buildings[29],
+        //     icon: lightpurpleMarker,
+        //     title: "Nursing and Education Building"
+        // });
+        // var reeveGenderMarker = new google.maps.Marker({
+        //     position: buildings[34],
+        //     icon: lightpurpleMarker,
+        //     title: "Reeve Memorial Union"
+        // });
+        // var sageGenderMarker = new google.maps.Marker({
+        //     position: buildings[35],
+        //     icon: lightpurpleMarker,
+        //     title: "Sage Hall"
+        // });
+        // var recreationGenderMarker = new google.maps.Marker({
+        //     position: buildings[38],
+        //     icon: lightpurpleMarker,
+        //     title: "Student Recreation and Wellness Center"
+        // });
+        // var successGenderMarker = new google.maps.Marker({
+        //     position: buildings[39],
+        //     icon: lightpurpleMarker,
+        //     title: "Student Success Center"
+        // });
+        // var swartGenderMarker = new google.maps.Marker({
+        //     position: buildings[40],
+        //     icon: lightpurpleMarker,
+        //     title: "Swart Hall"
+        // });
+        // var policeGenderMarker = new google.maps.Marker({
+        //     position: buildings[43],
+        //     icon: lightpurpleMarker,
+        //     title: "University Police"
+        // });
 
 
         // gender hover
@@ -4297,76 +4649,76 @@ function initMap() {
         
 
         // AccaF markers
-        var albeeAccaFMarker = new google.maps.Marker({
-            position: buildings[0],
-            icon: maroonMarker,
-            title: "Albee Hall"
-        });
-        var acAccaFMarker = new google.maps.Marker({
-            position: buildings[3],
-            icon: maroonMarker,
-            title: "Arts and Communications"
-        });
-        var ceramicsAccaFMarker = new google.maps.Marker({
-            position: buildings[10],
-            icon: maroonMarker,
-            title: "Ceramics Laboratory"
-        });
-        var clowAccaFMarker = new google.maps.Marker({
-            position: buildings[11],
-            icon: maroonMarker,
-            title: "Clow Social Science Center"
-        });
-        var environmentalAccaFMarker = new google.maps.Marker({
-            position: buildings[16],
-            icon: maroonMarker,
-            title: "Environmental Science and Research Center"
-        });
-        var fredricAccaFMarker = new google.maps.Marker({
-            position: buildings[19],
-            icon: maroonMarker,
-            title: "Fredric March Theater"
-        });
-        var halseyAccaFMarker = new google.maps.Marker({
-            position: buildings[21],
-            icon: maroonMarker,
-            title: "Halsey Science Center"
-        });
-        var harringtonAccaFMarker = new google.maps.Marker({
-            position: buildings[22],
-            icon: maroonMarker,
-            title: "Harrington Hall"
-        });
-        var kolfAccaFMarker = new google.maps.Marker({
-            position: buildings[26],
-            icon: maroonMarker,
-            title: "Kolf Sports Center"
-        });
-        var nursingAccaFMarker = new google.maps.Marker({
-            position: buildings[29],
-            icon: maroonMarker,
-            title: "Nursing and Education Building"
-        });
-        var polkAccaFMarker = new google.maps.Marker({
-            position: buildings[32],
-            icon: maroonMarker,
-            title: "Polk Library"
-        });
-        var radfordAccaFMarker = new google.maps.Marker({
-            position: buildings[33],
-            icon: maroonMarker,
-            title: "Radford Hall and Student Health Center"
-        });
-        var sageAccaFMarker = new google.maps.Marker({
-            position: buildings[35],
-            icon: maroonMarker,
-            title: "Sage Hall"
-        });
-        var swartAccaFMarker = new google.maps.Marker({
-            position: buildings[40],
-            icon: maroonMarker,
-            title: "Swart Hall"
-        });
+        // var albeeAccaFMarker = new google.maps.Marker({
+        //     position: buildings[0],
+        //     icon: maroonMarker,
+        //     title: "Albee Hall"
+        // });
+        // var acAccaFMarker = new google.maps.Marker({
+        //     position: buildings[3],
+        //     icon: maroonMarker,
+        //     title: "Arts and Communications"
+        // });
+        // var ceramicsAccaFMarker = new google.maps.Marker({
+        //     position: buildings[10],
+        //     icon: maroonMarker,
+        //     title: "Ceramics Laboratory"
+        // });
+        // var clowAccaFMarker = new google.maps.Marker({
+        //     position: buildings[11],
+        //     icon: maroonMarker,
+        //     title: "Clow Social Science Center"
+        // });
+        // var environmentalAccaFMarker = new google.maps.Marker({
+        //     position: buildings[16],
+        //     icon: maroonMarker,
+        //     title: "Environmental Science and Research Center"
+        // });
+        // var fredricAccaFMarker = new google.maps.Marker({
+        //     position: buildings[19],
+        //     icon: maroonMarker,
+        //     title: "Fredric March Theater"
+        // });
+        // var halseyAccaFMarker = new google.maps.Marker({
+        //     position: buildings[21],
+        //     icon: maroonMarker,
+        //     title: "Halsey Science Center"
+        // });
+        // var harringtonAccaFMarker = new google.maps.Marker({
+        //     position: buildings[22],
+        //     icon: maroonMarker,
+        //     title: "Harrington Hall"
+        // });
+        // var kolfAccaFMarker = new google.maps.Marker({
+        //     position: buildings[26],
+        //     icon: maroonMarker,
+        //     title: "Kolf Sports Center"
+        // });
+        // var nursingAccaFMarker = new google.maps.Marker({
+        //     position: buildings[29],
+        //     icon: maroonMarker,
+        //     title: "Nursing and Education Building"
+        // });
+        // var polkAccaFMarker = new google.maps.Marker({
+        //     position: buildings[32],
+        //     icon: maroonMarker,
+        //     title: "Polk Library"
+        // });
+        // var radfordAccaFMarker = new google.maps.Marker({
+        //     position: buildings[33],
+        //     icon: maroonMarker,
+        //     title: "Radford Hall and Student Health Center"
+        // });
+        // var sageAccaFMarker = new google.maps.Marker({
+        //     position: buildings[35],
+        //     icon: maroonMarker,
+        //     title: "Sage Hall"
+        // });
+        // var swartAccaFMarker = new google.maps.Marker({
+        //     position: buildings[40],
+        //     icon: maroonMarker,
+        //     title: "Swart Hall"
+        // });
 
         // hover for AccaF
         albeeAccaFMarker.addListener('click', function(){
@@ -4475,68 +4827,68 @@ function initMap() {
         }
         
         // create markers for athletics
-        var albeeAthMarker = new google.maps.Marker({
-            position: buildings[0],
-            icon: orangeMarker,
-            title: "Albee Hall"
-        });
-        var baseballAthMarker = new google.maps.Marker({
-            position: buildings[1],
-            icon: orangeMarker,
-            title: "Alumni Baseball Stadium"
-        });
-        var athleticAthMarker = new google.maps.Marker({
-            position: buildings[4],
-            icon: orangeMarker,
-            title: "Athletic Service Building"
-        });
-        var eastAthMarker = new google.maps.Marker({
-            position: buildings[15],
-            icon: orangeMarker,
-            title: "East Hall"
-        });
-        var kolfAthMarker = new google.maps.Marker({
-            position: buildings[26],
-            icon: orangeMarker,
-            title: "Kolf Sports Center"
-        });
+        // var albeeAthMarker = new google.maps.Marker({
+        //     position: buildings[0],
+        //     icon: orangeMarker,
+        //     title: "Albee Hall"
+        // });
+        // var baseballAthMarker = new google.maps.Marker({
+        //     position: buildings[1],
+        //     icon: orangeMarker,
+        //     title: "Alumni Baseball Stadium"
+        // });
+        // var athleticAthMarker = new google.maps.Marker({
+        //     position: buildings[4],
+        //     icon: orangeMarker,
+        //     title: "Athletic Service Building"
+        // });
+        // var eastAthMarker = new google.maps.Marker({
+        //     position: buildings[15],
+        //     icon: orangeMarker,
+        //     title: "East Hall"
+        // });
+        // var kolfAthMarker = new google.maps.Marker({
+        //     position: buildings[26],
+        //     icon: orangeMarker,
+        //     title: "Kolf Sports Center"
+        // });
 
-        var titanAthMarker = new google.maps.Marker({
-            position: buildings[42],
-            icon: orangeMarker,
-            title: "Titan Stadium"
-        });
-        // athletics marker hover
-        albeeAthMarker.addListener('click', function(){
-            var albee = "albee";
-            markerOpenClose(albee);        
-        });
+        // var titanAthMarker = new google.maps.Marker({
+        //     position: buildings[42],
+        //     icon: orangeMarker,
+        //     title: "Titan Stadium"
+        // });
+        // // athletics marker hover
+        // albeeAthMarker.addListener('click', function(){
+        //     var albee = "albee";
+        //     markerOpenClose(albee);        
+        // });
 
-        athleticAthMarker.addListener('click', function(){
-            var athletic = "athletic";
-            markerOpenClose(athletic);
-        });
+        // athleticAthMarker.addListener('click', function(){
+        //     var athletic = "athletic";
+        //     markerOpenClose(athletic);
+        // });
 
-        baseballAthMarker.addListener('click', function(){
-            var baseball = "baseball";
-            markerOpenClose(baseball);
-        });
+        // baseballAthMarker.addListener('click', function(){
+        //     var baseball = "baseball";
+        //     markerOpenClose(baseball);
+        // });
 
-        eastAthMarker.addListener('click', function(){
-            var east = "east";
-            markerOpenClose(east);
-        });
+        // eastAthMarker.addListener('click', function(){
+        //     var east = "east";
+        //     markerOpenClose(east);
+        // });
 
 
-        kolfAthMarker.addListener('click', function(){
-            var kolf = "kolf";
-            markerOpenClose(kolf);
-        });
+        // kolfAthMarker.addListener('click', function(){
+        //     var kolf = "kolf";
+        //     markerOpenClose(kolf);
+        // });
 
-        titanAthMarker.addListener('click', function(){
-            var titan = "titan";
-            markerOpenClose(titan);
-        });
+        // titanAthMarker.addListener('click', function(){
+        //     var titan = "titan";
+        //     markerOpenClose(titan);
+        // });
 
 
         function setAth(){
@@ -4557,26 +4909,26 @@ function initMap() {
         }
        
         // AccaS markers
-        var equityAccaSMarker = new google.maps.Marker({
-            position: buildings[8],
-            icon: brownMarker,
-            title: "Campus Center for Diversity and Equity"
-        });
-        var nursingAccaSMarker = new google.maps.Marker({
-            position: buildings[29],
-            icon: brownMarker,
-            title: "Nursing and Education Building"
-        });
-        var successAccaSMarker = new google.maps.Marker({
-            position: buildings[39],
-            icon: brownMarker,
-            title: "Student Success Center"
-        });
-        var swartAccaSMarker = new google.maps.Marker({
-            position: buildings[40],
-            icon: brownMarker,
-            title: "Swart Hall"
-        });
+        // var equityAccaSMarker = new google.maps.Marker({
+        //     position: buildings[8],
+        //     icon: brownMarker,
+        //     title: "Campus Center for Diversity and Equity"
+        // });
+        // var nursingAccaSMarker = new google.maps.Marker({
+        //     position: buildings[29],
+        //     icon: brownMarker,
+        //     title: "Nursing and Education Building"
+        // });
+        // var successAccaSMarker = new google.maps.Marker({
+        //     position: buildings[39],
+        //     icon: brownMarker,
+        //     title: "Student Success Center"
+        // });
+        // var swartAccaSMarker = new google.maps.Marker({
+        //     position: buildings[40],
+        //     icon: brownMarker,
+        //     title: "Swart Hall"
+        // });
 
         // AccaS hover
         equityAccaSMarker.addListener('click', function(){
@@ -4617,51 +4969,51 @@ function initMap() {
         }
         
         // CampS markers
-        var equityCampSMarker = new google.maps.Marker({
-            position: buildings[8],
-            icon: darkgreenMarker,
-            title: "Campus Center for Diversity and Equity"
-        });
-        var campusCampSMarker = new google.maps.Marker({
-            position: buildings[9],
-            icon: darkgreenMarker,
-            title: "Campus Services"
-        });
-        var dempseyCampSMarker = new google.maps.Marker({
-            position: buildings[13],
-            icon: darkgreenMarker,
-            title: "Dempsey Hall"
-        });
-        var multiculturalCampSMarker = new google.maps.Marker({
-            position: buildings[28],
-            icon: darkgreenMarker,
-            title: "Multicultural Education Center"
-        });
-        var pollockCampSMarker = new google.maps.Marker({
-            position: buildings[31],
-            icon: darkgreenMarker,
-            title: "Pollock House"
-        });
-        var radfordCampSMarker = new google.maps.Marker({
-            position: buildings[33],
-            icon: darkgreenMarker,
-            title: "Radford Hall and Student Health Center"
-        });
-        var reeveCampSMarker = new google.maps.Marker({
-            position: buildings[34],
-            icon: darkgreenMarker,
-            title: "Reeve Memorial Union"
-        });
-        var recreationCampSMarker = new google.maps.Marker({
-            position: buildings[38],
-            icon: darkgreenMarker,
-            title: "Student Recreation and Wellness Center"
-        });
-        var successCampSMarker = new google.maps.Marker({
-            position: buildings[39],
-            icon: darkgreenMarker,
-            title: "Student Success Center"
-        });
+        // var equityCampSMarker = new google.maps.Marker({
+        //     position: buildings[8],
+        //     icon: darkgreenMarker,
+        //     title: "Campus Center for Diversity and Equity"
+        // });
+        // var campusCampSMarker = new google.maps.Marker({
+        //     position: buildings[9],
+        //     icon: darkgreenMarker,
+        //     title: "Campus Services"
+        // });
+        // var dempseyCampSMarker = new google.maps.Marker({
+        //     position: buildings[13],
+        //     icon: darkgreenMarker,
+        //     title: "Dempsey Hall"
+        // });
+        // var multiculturalCampSMarker = new google.maps.Marker({
+        //     position: buildings[28],
+        //     icon: darkgreenMarker,
+        //     title: "Multicultural Education Center"
+        // });
+        // var pollockCampSMarker = new google.maps.Marker({
+        //     position: buildings[31],
+        //     icon: darkgreenMarker,
+        //     title: "Pollock House"
+        // });
+        // var radfordCampSMarker = new google.maps.Marker({
+        //     position: buildings[33],
+        //     icon: darkgreenMarker,
+        //     title: "Radford Hall and Student Health Center"
+        // });
+        // var reeveCampSMarker = new google.maps.Marker({
+        //     position: buildings[34],
+        //     icon: darkgreenMarker,
+        //     title: "Reeve Memorial Union"
+        // });
+        // var recreationCampSMarker = new google.maps.Marker({
+        //     position: buildings[38],
+        //     icon: darkgreenMarker,
+        //     title: "Student Recreation and Wellness Center"
+        // });
+        // var successCampSMarker = new google.maps.Marker({
+        //     position: buildings[39],
+        //     icon: darkgreenMarker,
+        //     title: "Student Success Center"
+        // });
 
 
         // CampS hover
@@ -4739,51 +5091,51 @@ function initMap() {
         }
         
         // ResH markers
-        var donnerResHMarker = new google.maps.Marker({
-            position: buildings[14],
-            icon: lightblueMarker,
-            title: "Donner Hall"
-        });
-        var evansResHMarker = new google.maps.Marker({
-            position: buildings[17],
-            icon: lightblueMarker,
-            title: "Evans Hall"
-        });
-        var fletcherResHMarker = new google.maps.Marker({
-            position: buildings[18],
-            icon: lightblueMarker,
-            title: "Fletcher Hall"
-        });
-        var gruenhagenResHMarker = new google.maps.Marker({
-            position: buildings[20],
-            icon: lightblueMarker,
-            title: "Gruenhagen Conference Center"
-        });
-        var horizonResHMarker = new google.maps.Marker({
-            position: buildings[25],
-            icon: lightblueMarker,
-            title: "Horizon Village"
-        });
-        var stewartResHMarker = new google.maps.Marker({
-            position: buildings[37],
-            icon: lightblueMarker,
-            title: "Stewart Hall"
-        });
-        var scottResHMarker = new google.maps.Marker({
-            position: buildings[36],
-            icon: lightblueMarker,
-            title: "Scott Hall"
-        });
-        var taylorResHMarker = new google.maps.Marker({
-            position: buildings[41],
-            icon: lightblueMarker,
-            title: "Taylor Hall"
-        });
-        var websterResHMarker = new google.maps.Marker({
-            position: buildings[44],
-            icon: lightblueMarker,
-            title: "Webster Hall"
-        });
+        // var donnerResHMarker = new google.maps.Marker({
+        //     position: buildings[14],
+        //     icon: lightblueMarker,
+        //     title: "Donner Hall"
+        // });
+        // var evansResHMarker = new google.maps.Marker({
+        //     position: buildings[17],
+        //     icon: lightblueMarker,
+        //     title: "Evans Hall"
+        // });
+        // var fletcherResHMarker = new google.maps.Marker({
+        //     position: buildings[18],
+        //     icon: lightblueMarker,
+        //     title: "Fletcher Hall"
+        // });
+        // var gruenhagenResHMarker = new google.maps.Marker({
+        //     position: buildings[20],
+        //     icon: lightblueMarker,
+        //     title: "Gruenhagen Conference Center"
+        // });
+        // var horizonResHMarker = new google.maps.Marker({
+        //     position: buildings[25],
+        //     icon: lightblueMarker,
+        //     title: "Horizon Village"
+        // });
+        // var stewartResHMarker = new google.maps.Marker({
+        //     position: buildings[37],
+        //     icon: lightblueMarker,
+        //     title: "Stewart Hall"
+        // });
+        // var scottResHMarker = new google.maps.Marker({
+        //     position: buildings[36],
+        //     icon: lightblueMarker,
+        //     title: "Scott Hall"
+        // });
+        // var taylorResHMarker = new google.maps.Marker({
+        //     position: buildings[41],
+        //     icon: lightblueMarker,
+        //     title: "Taylor Hall"
+        // });
+        // var websterResHMarker = new google.maps.Marker({
+        //     position: buildings[44],
+        //     icon: lightblueMarker,
+        //     title: "Webster Hall"
+        // });
 
         // ResH hover
         donnerResHMarker.addListener('click', function(){
@@ -4858,36 +5210,36 @@ function initMap() {
         }
         
         // dining markers
-        var blackhawkDiningMarker = new google.maps.Marker({
-            position: buildings[5],
-            icon: navyMarker,
-            title: "Blackhawk Commons"
-        });
-        var clowDiningMarker = new google.maps.Marker({
-            position: buildings[11],
-            icon: navyMarker,
-            title: "Clow Social Science Center"
-        });
-        var halseyDiningMarker = new google.maps.Marker({
-            position: buildings[21],
-            icon: navyMarker,
-            title: "Halsey Science Center"
-        });
-        var reeveDiningMarker = new google.maps.Marker({
-            position: buildings[34],
-            icon: navyMarker,
-            title: "Reeve Memorial Union"
-        });
-        var sageDiningMarker = new google.maps.Marker({
-            position: buildings[35],
-            icon: navyMarker,
-            title: "Sage Hall"
-        });
-        var scottDiningMarker = new google.maps.Marker({
-            position: buildings[36],
-            icon: navyMarker,
-            title: "Scott Hall"
-        });
+        // var blackhawkDiningMarker = new google.maps.Marker({
+        //     position: buildings[5],
+        //     icon: navyMarker,
+        //     title: "Blackhawk Commons"
+        // });
+        // var clowDiningMarker = new google.maps.Marker({
+        //     position: buildings[11],
+        //     icon: navyMarker,
+        //     title: "Clow Social Science Center"
+        // });
+        // var halseyDiningMarker = new google.maps.Marker({
+        //     position: buildings[21],
+        //     icon: navyMarker,
+        //     title: "Halsey Science Center"
+        // });
+        // var reeveDiningMarker = new google.maps.Marker({
+        //     position: buildings[34],
+        //     icon: navyMarker,
+        //     title: "Reeve Memorial Union"
+        // });
+        // var sageDiningMarker = new google.maps.Marker({
+        //     position: buildings[35],
+        //     icon: navyMarker,
+        //     title: "Sage Hall"
+        // });
+        // var scottDiningMarker = new google.maps.Marker({
+        //     position: buildings[36],
+        //     icon: navyMarker,
+        //     title: "Scott Hall"
+        // });
 
         // dining hover
         blackhawkDiningMarker.addListener('click', function(){
@@ -4940,16 +5292,16 @@ function initMap() {
         }
         
         // StuR markers
-        var reeveStuRMarker = new google.maps.Marker({
-            position: buildings[34],
-            icon: darkpurpleMarker,
-            title: "Reeve Memorial Union"
-        });
-        var recreationStuRMarker = new google.maps.Marker({
-            position: buildings[38],
-            icon: darkpurpleMarker,
-            title: "Student Recreation and Wellness Center"
-        });
+        // var reeveStuRMarker = new google.maps.Marker({
+        //     position: buildings[34],
+        //     icon: darkpurpleMarker,
+        //     title: "Reeve Memorial Union"
+        // });
+        // var recreationStuRMarker = new google.maps.Marker({
+        //     position: buildings[38],
+        //     icon: darkpurpleMarker,
+        //     title: "Student Recreation and Wellness Center"
+        // });
 
         // StuR hover
         recreationStuRMarker.addListener('click', function(){
@@ -5220,50 +5572,50 @@ function initMap() {
         // close all hover cards
         function closeAllHover(){
             albeeHoverCard.close(map, allMarkers[0]);
-            baseballHoverCard.close(map, baseballMarker);
-            alumniHoverCard.close(map, alumniMarker);
-            acHoverCard.close(map,acMarker);
-            athleticHoverCard.close(map, athleticMarker);
-            blackhawkHoverCard.close(map, blackhawkMarker);
-            biodigesterHoverCard.close(map, biodigesterMarker);
-            buckstaffHoverCard.close(map,buckstaffMarker);
-            equityHoverCard.close(map, equityMarker);
-            campusHoverCard.close(map, campusMarker);
-            ceramicsHoverCard.close(map, ceramicsMarker);
-            clowHoverCard.close(map, clowMarker);
-            gardensHoverCard.close(map, gardensMarker);
-            dempseyHoverCard.close(map, dempseyMarker);
-            donnerHoverCard.close(map, donnerMarker);
-            eastHoverCard.close(map,eastMarker);
-            environmentalHoverCard.close(map, environmentalMarker);
-            evansHoverCard.close(map, evansMarker);
-            fletcherHoverCard.close(map, fletcherMarker);
-            fredricHoverCard.close(map,fredricMarker);
-            gruenhagenHoverCard.close(map,gruenhagenMarker);
-            halseyHoverCard.close(map, halseyMarker);
-            harringtonHoverCard.close(map, harringtonMarker);
-            heatingHoverCard.close(map,heatingMarker);
-            parkingRampHoverCard.close(map, parkingRampMarker);
-            horizonHoverCard.close(map, horizonMarker);
-            kolfHoverCard.close(map, kolfMarker);
-            lincolnHoverCard.close(map, lincolnMarker);
-            multiculturalHoverCard.close(map, multiculturalMarker);
-            nursingHoverCard.close(map, nursingMarker);
-            oviattHoverCard.close(map, oviattMarker);
-            pollockHoverCard.close(map, pollockMarker);
-            polkHoverCard.close(map, polkMarker);
-            radfordHoverCard.close(map, radfordMarker);
-            reeveHoverCard.close(map, reeveMarker);
-            sageHoverCard.close(map, sageMarker);
-            scottHoverCard.close(map, scottMarker);
-            stewartHoverCard.close(map, stewartMarker);
-            recreationHoverCard.close(map, recreationMarker);
-            successHoverCard.close(map, successMarker);
-            swartHoverCard.close(map, swartMarker);
-            taylorHoverCard.close(map, taylorMarker);
-            titanHoverCard.close(map, titanMarker);
-            policeHoverCard.close(map, policeMarker);
-            websterHoverCard.close(map, websterMarker);
+            baseballHoverCard.close(map, allMarkers[1]);
+            alumniHoverCard.close(map, allMarkers[2]);
+            acHoverCard.close(map,allMarkers[3]);
+            athleticHoverCard.close(map, allMarkers[4]);
+            blackhawkHoverCard.close(map, allMarkers[5]);
+            biodigesterHoverCard.close(map, allMarkers[6]);
+            buckstaffHoverCard.close(map,allMarkers[7]);
+            equityHoverCard.close(map, allMarkers[8]);
+            campusHoverCard.close(map, allMarkers[9]);
+            ceramicsHoverCard.close(map, allMarkers[10]);
+            clowHoverCard.close(map, allMarkers[11]);
+            gardensHoverCard.close(map, allMarkers[12]);
+            dempseyHoverCard.close(map, allMarkers[13]);
+            donnerHoverCard.close(map, allMarkers[14]);
+            eastHoverCard.close(map,allMarkers[15]);
+            environmentalHoverCard.close(map, allMarkers[16]);
+            evansHoverCard.close(map, allMarkers[17]);
+            fletcherHoverCard.close(map, allMarkers[18]);
+            fredricHoverCard.close(map,allMarkers[19]);
+            gruenhagenHoverCard.close(map,allMarkers[20]);
+            halseyHoverCard.close(map, allMarkers[21]);
+            harringtonHoverCard.close(map, allMarkers[22]);
+            heatingHoverCard.close(map,allMarkers[23]);
+            parkingRampHoverCard.close(map, allMarkers[24]);
+            horizonHoverCard.close(map, allMarkers[25]);
+            kolfHoverCard.close(map, allMarkers[26]);
+            lincolnHoverCard.close(map, allMarkers[27]);
+            multiculturalHoverCard.close(map, allMarkers[28]);
+            nursingHoverCard.close(map, allMarkers[29]);
+            oviattHoverCard.close(map, allMarkers[30]);
+            pollockHoverCard.close(map, allMarkers[31]);
+            polkHoverCard.close(map, allMarkers[32]);
+            radfordHoverCard.close(map, allMarkers[33]);
+            reeveHoverCard.close(map, allMarkers[34]);
+            sageHoverCard.close(map, allMarkers[35]);
+            scottHoverCard.close(map, allMarkers[36]);
+            stewartHoverCard.close(map, allMarkers[37]);
+            recreationHoverCard.close(map, allMarkers[38]);
+            successHoverCard.close(map, allMarkers[39]);
+            swartHoverCard.close(map, allMarkers[40]);
+            taylorHoverCard.close(map, allMarkers[41]);
+            titanHoverCard.close(map, allMarkers[42]);
+            policeHoverCard.close(map, allMarkers[43]);
+            websterHoverCard.close(map, allMarkers[44]);
             elevenHoverCard.close(map, elevenMarker);
             thirtyfiveHoverCard.close(map, thirtyfiveMarker);
             twentysevenHoverCard.close(map, twentysevenMarker);
@@ -5463,72 +5815,50 @@ function initMap() {
     // selector for .change function should use the id for the input element 
    $("#buildings").change(function(){
     // sets up parameter as string
-       var buildings = "buildings";
-       checkIfChecked(buildings);
+       checkIfChecked("buildings");
    });
    $("#parking").change(function(){
-       var parking = "parking";
-       checkIfChecked(parking);
+       checkIfChecked("parking");
    });
    $("#accEnt").change(function(){
-        var accEnt = "accEnt";
-        checkIfChecked(accEnt);
+        checkIfChecked("accEnt");
    });
    $("#accPar").change(function(){
-        var accPar = "accPar";
-        checkIfChecked(accPar);
+        checkIfChecked( "accPar");
    });
    $("#emergency").change(function(){
-        var emergency = "emergency";
-        checkIfChecked(emergency);
+        checkIfChecked("emergency");
    });
    $("#sust").change(function(){
-        var sust = "sust";
-        checkIfChecked(sust);
+        checkIfChecked("sust");
    });
    $("#gender").change(function(){
-        var gender = "gender";
-        checkIfChecked(gender);
+        checkIfChecked("gender");
    });
    $("#accaF").change(function(){
-        var accaF = "accaF";
-        checkIfChecked(accaF);
+        checkIfChecked("accaF");
     });
     $("#ath").change(function(){
-        var ath= "ath";
-        checkIfChecked(ath);
+        checkIfChecked("ath");
      });
      $("#accS").change(function(){
-        var accS = "accS";
-        checkIfChecked(accS);
+        checkIfChecked("accS");
      });
      $("#campS").change(function(){
-        var campS = "campS";
-        checkIfChecked(campS);
+        checkIfChecked("campS");
      });
      $("#resH").change(function(){
-        var resH = "resH";
-        checkIfChecked(resH);
+        checkIfChecked("resH");
      });
      $("#dining").change(function(){
-        var dining = "dining";
-        checkIfChecked(dining);
+        checkIfChecked("dining");
      });
      $("#stuR").change(function(){
-        var stuR = "stuR";
-        checkIfChecked(stuR);
+        checkIfChecked("stuR");
      });
 
 
  $("#selectAllOne").change(function(){
-   var buildings = "buildings";
-   var parking = "parking";
-   var accEnt = "accEnt";
-   var accPar = "accPar";
-   var emergency = "emergency";
-   var sust = "sust";
-   var gender = "gender";
-
        if( !$("#selectAllOne").hasClass("is-checked") ){
          //if select all is unchecked, all others should be unchecked
         //  uncheck: unchecks checkbox and removes markers and hover cards
@@ -5536,54 +5866,47 @@ function initMap() {
         // HAS TO COME BEFORE UNCHECK IS TRIGGERED
          closeAllHover();
 
-         triggerUncheck(buildings);
-         triggerUncheck(parking);
-         triggerUncheck(accEnt);
-         triggerUncheck(accPar);
-         triggerUncheck(emergency);
-         triggerUncheck(sust);
-         triggerUncheck(gender);
+         triggerUncheck("buildings");
+         triggerUncheck("parking");
+         triggerUncheck("accEnt");
+         triggerUncheck("accPar");
+         triggerUncheck("emergency");
+         triggerUncheck("sust");
+         triggerUncheck("gender");
        }else{
          //if selectall is checked, all others should be checked
         //  check: checks checkbox and sets markers 
-         triggerCheck(buildings);
-         triggerCheck(parking);
-         triggerCheck(accEnt);
-         triggerCheck(accPar);
-         triggerCheck(emergency);
-         triggerCheck(sust);
-         triggerCheck(gender);
+         triggerCheck("buildings");
+         triggerCheck("parking");
+         triggerCheck("accEnt");
+         triggerCheck("accPar");
+         triggerCheck("emergency");
+         triggerCheck("sust");
+         triggerCheck("gender");
        }
 
  });
 
  $("#selectAllTwo").change(function(){
-          var accaF = "accaF";
-          var ath = "ath";
-          var accS = "accS";
-          var campS = "campS";
-          var resH = "resH";
-          var dining = "dining";
-          var stuR = "stuR";
 
           if( !$("#selectAllTwo").hasClass("is-checked") ){
               // HAS TO COME BEFORE UNCHECK IS TRIGGERED
              closeAllHover();
-            triggerUncheck(accaF);
-            triggerUncheck(ath);
-            triggerUncheck(accS);
-            triggerUncheck(campS);
-            triggerUncheck(resH);
-            triggerUncheck(dining);
-            triggerUncheck(stuR);
+            triggerUncheck("accaF");
+            triggerUncheck("ath");
+            triggerUncheck("accS");
+            triggerUncheck("campS");
+            triggerUncheck("resH");
+            triggerUncheck("dining");
+            triggerUncheck("stuR");
           } else {
-            triggerCheck(accaF);
-            triggerCheck(ath);
-            triggerCheck(accS);
-            triggerCheck(campS);
-            triggerCheck(resH);
-            triggerCheck(dining);
-            triggerCheck(stuR);
+            triggerCheck("accaF");
+            triggerCheck("ath");
+            triggerCheck("accS");
+            triggerCheck("campS");
+            triggerCheck("resH");
+            triggerCheck("dining");
+            triggerCheck("stuR");
           }
   
     });
