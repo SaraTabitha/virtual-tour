@@ -121,25 +121,37 @@ function initMap() {
             {lat: 44.025002, lng: -88.551681}
         ];
         
+        //array containing all marker information: positiong and title 
+        //position is a separate array with the lat/lngs of the where the markers will go
         var buildingMarkersInfo = [
             //0 albee
             {position: buildings[0], title: "Albee Hall"},
         ]
+        //the list that will contain all of the buildingMarker objects made with "new google.maps.Marker"
+        //has to be initiliazed outside of a function to use the list items with event listeners and other methods in any other functions
+        var buildingMarkers = [];
+
+        //function for creating marker objects and adding them to the buildingMarkers list using the data from the buildingMarkerInfo array
         function createMarkers(){
-            var buildingMarkers = [];
+            
             for(i = 0; i < buildingMarkersInfo.length; i++){
                     buildingMarkers[i] = new google.maps.Marker({
                     position: buildingMarkersInfo[i].position, title: buildingMarkersInfo[i].title
                 });
             }
-            buildingMarkers[0].setMap(map);
-            buildingMarkers[0].setIcon(yellowMarker);
-            buildingMarkers[0].addListener('click', function(){
-                buildingMarkers[0].setIcon(redMarker);
-            });
-            return buildingMarkers;
+            
         }
         createMarkers();
+        
+        //sets marker on the map
+        // buildingMarkers[0].setMap(map);
+        //sets the png image for the marker (if no icon is set it defaults to the google red marker)
+        // buildingMarkers[0].setIcon(yellowMarker);
+        //adds click event listener to the object 
+        // buildingMarkers[0].addListener('click', function(){
+        //     buildingMarkers[0].setIcon(redMarker);
+        // });
+        
        
 
         // create markers for buildings
@@ -330,7 +342,7 @@ function initMap() {
 
         // declaring set and remove functions for buildings
         function setBuilding(){
-            // albeeMarker.setMap(map);
+            buildingMarkers[0].setMap(map);
             baseballMarker.setMap(map);
             alumniMarker.setMap(map);
             acMarker.setMap(map);
@@ -376,7 +388,7 @@ function initMap() {
             policeMarker.setMap(map);
             websterMarker.setMap(map);
 
-            // albeeMarker.setIcon(yellowMarker);
+            buildingMarkers[0].setIcon(yellowMarker);
             baseballMarker.setIcon(yellowMarker);
             alumniMarker.setIcon(yellowMarker);
             acMarker.setIcon(yellowMarker);
@@ -425,7 +437,7 @@ function initMap() {
         }
         // remove all buildings
         function removeBuilding(){
-            // albeeMarker.setMap(null);
+            buildingMarkers[0].setMap(null);
             baseballMarker.setMap(null);
             alumniMarker.setMap(null);
             acMarker.setMap(null);
@@ -486,7 +498,7 @@ function initMap() {
                 //depending on the name make sure that the right image and popup are put up
                 closeAllHover();
                     if (name === "albee"){
-                        // albeeHoverCard.open(map, albeeMarker);
+                        albeeHoverCard.open(map, buildingMarkers[0]);
                         $("#albeeHover > img").attr("src", "images/campuspictures/albeehall.jpeg");
                     }
                     else if (name === "baseball"){
@@ -853,9 +865,9 @@ function initMap() {
             content: albeeHover,
         });
         //when marker is clicked, open hover 
-        // albeeMarker.addListener('click', function(){
-        //     markerOpenClose("albee");
-        // });
+        buildingMarkers[0].addListener('click', function(){
+            markerOpenClose("albee");
+        });
         // when link on hover is clicked, open popup
         $("#albeeLink").click(function(){
             popupOpen("albee");
@@ -3206,7 +3218,7 @@ function initMap() {
 
         // accessible entries (buildings)
         function setAccEnt(){
-            // albeeMarker.setMap(map);
+            buildingMarkers[0].setMap(map);
             acMarker.setMap(map);
             blackhawkMarker.setMap(map);
             equityMarker.setMap(map);
@@ -3230,7 +3242,7 @@ function initMap() {
             taylorMarker.setMap(map);
             websterMarker.setMap(map);
 
-            // albeeMarker.setIcon(redMarker);
+            buildingMarkers[0].setIcon(redMarker);
             acMarker.setIcon(redMarker);
             blackhawkMarker.setIcon(redMarker);
             equityMarker.setIcon(redMarker);
@@ -3255,7 +3267,7 @@ function initMap() {
             websterMarker.setIcon(redMarker);
         }
         function removeAccEnt(){
-            // albeeMarker.setMap(null);
+            buildingMarkers[0].setMap(null);
             acMarker.setMap(null);
             blackhawkMarker.setMap(null);
             equityMarker.setMap(null);
@@ -4864,7 +4876,7 @@ function initMap() {
         
         // close all buildings
         function closeAllBuildings(){
-        //   albeeHoverCard.close(map, albeeMarker);
+          albeeHoverCard.close(map, buildingMarkers[0]);
           baseballHoverCard.close(map, baseballMarker);
           alumniHoverCard.close(map, alumniMarker);
           acHoverCard.close(map,acMarker);
@@ -4953,7 +4965,7 @@ function initMap() {
         }
         // close all accEnt cards
         function closeAllAccEnt(){
-        //   albeeHoverCard.close(map, albeeMarker);
+          albeeHoverCard.close(map, buildingMarkers[0]);
           acHoverCard.close(map,acMarker);
           blackhawkHoverCard.close(map, blackhawkMarker);
           equityHoverCard.close(map, equityMarker);
@@ -5006,7 +5018,7 @@ function initMap() {
         }
         //close all sust cards
         function closeAllSust(){
-        //   albeeHoverCard.close(map, albeeMarker);
+          albeeHoverCard.close(map, buildingMarkers[0]);
           alumniHoverCard.close(map, alumniMarker);
           blackhawkHoverCard.close(map, blackhawkMarker);
           biodigesterHoverCard.close(map, biodigesterMarker);
@@ -5038,7 +5050,7 @@ function initMap() {
         }
         //close all AccaF cards
         function closeAllAccaF(){
-        //   albeeHoverCard.close(map, albeeMarker);
+          albeeHoverCard.close(map, buildingMarkers[0]);
           acHoverCard.close(map,acMarker);
           ceramicsHoverCard.close(map, ceramicsMarker);
           clowHoverCard.close(map, clowMarker);
@@ -5055,7 +5067,7 @@ function initMap() {
         }
         //close all athletics cards
         function closeAllAth(){
-        //   albeeHoverCard.close(map, albeeMarker);
+          albeeHoverCard.close(map, buildingMarkers[0]);
           baseballHoverCard.close(map, baseballMarker);
           athleticHoverCard.close(map, athleticMarker);
           eastHoverCard.close(map,eastMarker);
@@ -5109,7 +5121,7 @@ function initMap() {
         }
         // close all hover cards
         function closeAllHover(){
-            // albeeHoverCard.close(map, albeeMarker);
+            albeeHoverCard.close(map, buildingMarkers[0]);
             baseballHoverCard.close(map, baseballMarker);
             alumniHoverCard.close(map, alumniMarker);
             acHoverCard.close(map,acMarker);
