@@ -28,7 +28,7 @@ function initMap() {
         var brownMarker = "images/markers/brown.png";
 
         // buildings array, sets locations for all of the places
-        var buildings = [
+        var locations = [
             // albee hall [0]
             {lat: 44.025729, lng: -88.550248},
             // alumni baseball stadium [1]
@@ -123,20 +123,110 @@ function initMap() {
         
         //array containing all marker information: positiong and title 
         //position is a separate array with the lat/lngs of the where the markers will go
-        var buildingMarkersInfo = [
+        var allMarkersInfo = [
             //0 albee
-            {position: buildings[0], title: "Albee Hall"},
+            {position: locations[0], title: "Albee Hall"},
+            //1 baseball
+            {position: locations[1],title: "Alumni Baseball Stadium"},
+            //2 alumni
+            {position: locations[2],title: "Alumni Welcome and Conference Center"},
+            //3 ac
+            {position: locations[3],title: "Arts and Communications"},
+            //4 athletic
+            {position: locations[4],title: "Athletic Service Building"},
+            //5 blackhawk
+            {position: locations[5],title: "Blackhawk Commons"},
+            //6 biodigester
+            {position: locations[6],title: "Biodigester"},
+            //7 buckstaff
+            { position: locations[7],title: "Buckstaff Planetarium"},
+            //8 equity 
+            {position: locations[8],title: "Campus Center for Equity and Diversity"},
+            //9 campus services
+            {position: locations[9],title: "Campus Services"},
+            //10 ceramics
+            {position: locations[10],title: "Ceramics Laboratory"},
+            //11 clow
+            {position: locations[11],title: "Clow Social Sciences Center"},
+            //12 gardens
+            {position: locations[12],title: "Community Gardens"},
+            //13 dempsey
+            {position: locations[13],title: "Dempsey Hall"},
+            //14 donner
+            {position: locations[14], title: "Donner Hall" },
+            //15 east
+            {position: locations[15],title: "East Hall"},
+            //16 environmental
+            { position: locations[16], title: "Environmental Science and Research Center"},
+            //17 evans
+            {position: locations[17],title: "Evans Hall" },
+            //18 fletcher
+            { position: locations[18], title: "Fletcher Hall"},
+            //19 fredric
+            {position: locations[19],title: "Fredric March Theater" },
+            //20 gruenhagen
+            { position: locations[20], title: "Gruenhagen Conference Center" },
+            //21 halsey
+            {position: locations[21],title: "Halsey Science Center"},
+            //22 harrington
+            {position: locations[22], title: "Harrington Hall" },
+            //23 heating 
+            {position: locations[23],title: "Heating Plant" },
+            //24 parking ramp
+            {position: locations[24],title: "High Avenue Parking Ramp" },
+            //25 horizon
+            {position: locations[25],title: "Horizon Village" },
+            //26 kolf
+            {position: locations[26],title: "Kolf Sports Center" },
+            //27 lincoln
+            {position: locations[27],title: "Lincoln Hall"  },
+            //28 multicultural
+            { position: locations[28], title: "Multicultural Education Center" },
+            //29 nursing
+            {position: locations[29],title: "Nursing and Education Building" },
+            //30 oviatt
+            {position: locations[30],title: "Oviatt House"},
+            //31 pollock
+            { position: locations[31],title: "Pollock House"  },
+            //32 polk
+            { position: locations[32], title: "Polk Library"},
+            //33 radford
+            { position: locations[33], title: "Radford Hall and Student Health Center"},
+            //34 reeve
+            { position: locations[34], title: "Reeve Memorial Union"  },
+            //35 sage
+            { position: locations[35],  title: "Sage Hall" },
+            //36 scott
+            {position: locations[36],title: "Scott Hall" },
+            //37 stewart
+            {position: locations[37],title: "Stewart Hall" },
+            //38 recreation
+            {position: locations[38],title: "Student Recreation and Wellness Center" },
+            //39 success
+            { position: locations[39],  title: "Student Success Center" },
+            //40 swart
+            { position: locations[40], title: "Swart Hall" },
+            //41 taylor
+            {position: locations[41], title: "Taylor Hall" },
+            //42 titan
+            {position: locations[42],title: "Titan Stadium"},
+            //43 police
+            {position: locations[43],title: "University Police"},
+            //44 webster
+            {position: locations[44],title: "Webster Hall" }
+            
+            
         ]
         //the list that will contain all of the buildingMarker objects made with "new google.maps.Marker"
         //has to be initiliazed outside of a function to use the list items with event listeners and other methods in any other functions
-        var buildingMarkers = [];
+        var allMarkers = [];
 
-        //function for creating marker objects and adding them to the buildingMarkers list using the data from the buildingMarkerInfo array
+        //function for creating marker objects and adding them to the allMarkers list using the data from the buildingMarkerInfo array
         function createMarkers(){
             
-            for(i = 0; i < buildingMarkersInfo.length; i++){
-                    buildingMarkers[i] = new google.maps.Marker({
-                    position: buildingMarkersInfo[i].position, title: buildingMarkersInfo[i].title
+            for(i = 0; i < allMarkersInfo.length; i++){
+                    allMarkers[i] = new google.maps.Marker({
+                    position: allMarkersInfo[i].position, title: allMarkersInfo[i].title
                 });
             }
             
@@ -144,12 +234,12 @@ function initMap() {
         createMarkers();
         
         //sets marker on the map
-        // buildingMarkers[0].setMap(map);
+        // allMarkers[0].setMap(map);
         //sets the png image for the marker (if no icon is set it defaults to the google red marker)
-        // buildingMarkers[0].setIcon(yellowMarker);
+        // allMarkers[0].setIcon(yellowMarker);
         //adds click event listener to the object 
-        // buildingMarkers[0].addListener('click', function(){
-        //     buildingMarkers[0].setIcon(redMarker);
+        // allMarkers[0].addListener('click', function(){
+        //     allMarkers[0].setIcon(redMarker);
         // });
         
        
@@ -162,326 +252,334 @@ function initMap() {
         // albeeMarker.addListener('click', function(){
         //     albeeMarker.setIcon(redMarker);
         // });
-        var baseballMarker = new google.maps.Marker({
-            position: buildings[1],
-            title: "Alumni Baseball Stadium"
-        });
-        var alumniMarker = new google.maps.Marker({
-            position: buildings[2],
-            title: "Alumni Welcome and Conference Center"
-        });
-        var acMarker = new google.maps.Marker({
-            position: buildings[3],
-            title: "Arts and Communications"
-        });
-        var athleticMarker = new google.maps.Marker({
-            position: buildings[4],
-            title: "Athletic Service Building"
-        });
-        var blackhawkMarker = new google.maps.Marker({
-            position: buildings[5],
-            title: "Blackhawk Commons"
-        });
-        var biodigesterMarker = new google.maps.Marker({
-            position: buildings[6],
-            title: "Biodigester"
-        });
-        var buckstaffMarker = new google.maps.Marker({
-            position: buildings[7],
-            title: "Buckstaff Planetarium"
-        });
-        var equityMarker = new google.maps.Marker({
-            position: buildings[8],
-            title: "Campus Center for Equity and Diversity"
-        });
-        var campusMarker = new google.maps.Marker({
-            position: buildings[9],
-            title: "Campus Services"
-        });
-        var ceramicsMarker = new google.maps.Marker({
-            position: buildings[10],
-            title: "Ceramics Laboratory"
-        });
-        var clowMarker = new google.maps.Marker({
-            position: buildings[11],
-            title: "Clow Social Sciences Center"
-        });
-        var gardensMarker = new google.maps.Marker({
-            position: buildings[12],
-            title: "Community Gardens"
-        });
-        var dempseyMarker = new google.maps.Marker({
-            position: buildings[13],
-            title: "Dempsey Hall"
-        });
-        var donnerMarker = new google.maps.Marker({
-            position: buildings[14],
-            title: "Donner Hall"
-        });
-        var eastMarker = new google.maps.Marker({
-            position: buildings[15],
-            title: "East Hall"
-        });
-        var environmentalMarker = new google.maps.Marker({
-            position: buildings[16],
-            title: "Environmental Science and Research Center"
-        });
-        var evansMarker = new google.maps.Marker({
-            position: buildings[17],
-            title: "Evans Hall"
-        });
-        var fletcherMarker = new google.maps.Marker({
-            position: buildings[18],
-            title: "Fletcher Hall"
-        });
-        var fredricMarker = new google.maps.Marker({
-            position: buildings[19],
-            title: "Fredric March Theater"
-        });
-        var gruenhagenMarker = new google.maps.Marker({
-            position: buildings[20],
-            title: "Gruenhagen Conference Center"
-        });
-        var halseyMarker = new google.maps.Marker({
-            position: buildings[21],
-            title: "Halsey Science Center"
-        });
-        var harringtonMarker = new google.maps.Marker({
-            position: buildings[22],
-            title: "Harrington Hall"
-        });
-        var heatingMarker = new google.maps.Marker({
-            position: buildings[23],
-            title: "Heating Plant"
+        // var baseballMarker = new google.maps.Marker({
+        //     position: buildings[1],
+        //     title: "Alumni Baseball Stadium"
+        // });
+        // var alumniMarker = new google.maps.Marker({
+        //     position: buildings[2],
+        //     title: "Alumni Welcome and Conference Center"
+        // });
+        // var acMarker = new google.maps.Marker({
+        //     position: buildings[3],
+        //     title: "Arts and Communications"
+        // });
+        // var athleticMarker = new google.maps.Marker({
+        //     position: buildings[4],
+        //     title: "Athletic Service Building"
+        // });
+        // var blackhawkMarker = new google.maps.Marker({
+        //     position: buildings[5],
+        //     title: "Blackhawk Commons"
+        // });
+        // var biodigesterMarker = new google.maps.Marker({
+        //     position: buildings[6],
+        //     title: "Biodigester"
+        // });
+        // var buckstaffMarker = new google.maps.Marker({
+        //     position: buildings[7],
+        //     title: "Buckstaff Planetarium"
+        // });
+        // var equityMarker = new google.maps.Marker({
+        //     position: buildings[8],
+        //     title: "Campus Center for Equity and Diversity"
+        // });
+        // var campusMarker = new google.maps.Marker({
+        //     position: buildings[9],
+        //     title: "Campus Services"
+        // });
+        // var ceramicsMarker = new google.maps.Marker({
+        //     position: buildings[10],
+        //     title: "Ceramics Laboratory"
+        // });
+        // var clowMarker = new google.maps.Marker({
+        //     position: buildings[11],
+        //     title: "Clow Social Sciences Center"
+        // });
+        // var gardensMarker = new google.maps.Marker({
+        //     position: buildings[12],
+        //     title: "Community Gardens"
+        // });
+        // var dempseyMarker = new google.maps.Marker({
+        //     position: buildings[13],
+        //     title: "Dempsey Hall"
+        // });
+        // var donnerMarker = new google.maps.Marker({
+        //     position: buildings[14],
+        //     title: "Donner Hall"
+        // });
+        // var eastMarker = new google.maps.Marker({
+        //     position: buildings[15],
+        //     title: "East Hall"
+        // });
+        // var environmentalMarker = new google.maps.Marker({
+        //     position: buildings[16],
+        //     title: "Environmental Science and Research Center"
+        // });
+        // var evansMarker = new google.maps.Marker({
+        //     position: buildings[17],
+        //     title: "Evans Hall"
+        // });
+        // var fletcherMarker = new google.maps.Marker({
+        //     position: buildings[18],
+        //     title: "Fletcher Hall"
+        // });
+        // var fredricMarker = new google.maps.Marker({
+        //     position: buildings[19],
+        //     title: "Fredric March Theater"
+        // });
+        // var gruenhagenMarker = new google.maps.Marker({
+        //     position: buildings[20],
+        //     title: "Gruenhagen Conference Center"
+        // });
+        // var halseyMarker = new google.maps.Marker({
+        //     position: buildings[21],
+        //     title: "Halsey Science Center"
+        // });
+        // var harringtonMarker = new google.maps.Marker({
+        //     position: buildings[22],
+        //     title: "Harrington Hall"
+        // });
+        // var heatingMarker = new google.maps.Marker({
+        //     position: buildings[23],
+        //     title: "Heating Plant"
 
-        });
-        var parkingRampMarker = new google.maps.Marker({
-            position: buildings[24],
-            title: "High Avenue Parking Ramp"
-        });
-        var horizonMarker = new google.maps.Marker({
-            position: buildings[25],
-            title: "Horizon Village"
-        });
-        var kolfMarker = new google.maps.Marker({
-            position: buildings[26],
-            title: "Kolf Sports Center"
-        });
-        var lincolnMarker = new google.maps.Marker({
-            position: buildings[27],
-            title: "Lincoln Hall"
-        });
-        var multiculturalMarker = new google.maps.Marker({
-            position: buildings[28],
-            title: "Multicultural Education Center"
-        });
-        var nursingMarker = new google.maps.Marker({
-            position: buildings[29],
-            title: "Nursing and Education Building"
-        });
-        var oviattMarker = new google.maps.Marker({
-            position: buildings[30],
-            title: "Oviatt House"
-        });
-        var pollockMarker = new google.maps.Marker({
-            position: buildings[31],
-            title: "Pollock House"
-        });
-        var polkMarker = new google.maps.Marker({
-            position: buildings[32],
-            title: "Polk Library"
-        });
-        var radfordMarker = new google.maps.Marker({
-            position: buildings[33],
-            title: "Radford Hall and Student Health Center"
-        });
-        var reeveMarker = new google.maps.Marker({
-            position: buildings[34],
-            title: "Reeve Memorial Union"
-        });
-        var sageMarker = new google.maps.Marker({
-            position: buildings[35],
-            title: "Sage Hall"
-        });
-        var scottMarker = new google.maps.Marker({
-            position: buildings[36],
-            title: "Scott Hall"
-        });
-        var stewartMarker = new google.maps.Marker({
-            position: buildings[37],
-            title: "Stewart Hall"
-        });
-        var recreationMarker = new google.maps.Marker({
-            position: buildings[38],
-            title: "Student Recreation and Wellness Center"
-        });
-        var successMarker = new google.maps.Marker({
-            position: buildings[39],
-            title: "Student Success Center"
-        });
-        var swartMarker = new google.maps.Marker({
-            position: buildings[40],
-            title: "Swart Hall"
-        });
-        var taylorMarker = new google.maps.Marker({
-            position: buildings[41],
-            title: "Taylor Hall"
-        });
-        var titanMarker = new google.maps.Marker({
-            position: buildings[42],
-            title: "Titan Stadium"
-        });
-        var policeMarker = new google.maps.Marker({
-            position: buildings[43],
-            title: "University Police"
-        });
-        var websterMarker = new google.maps.Marker({
-            position: buildings[44],
-            title: "Webster Hall"
-        });
+        // });
+        // var parkingRampMarker = new google.maps.Marker({
+        //     position: buildings[24],
+        //     title: "High Avenue Parking Ramp"
+        // });
+        // var horizonMarker = new google.maps.Marker({
+        //     position: buildings[25],
+        //     title: "Horizon Village"
+        // });
+        // var kolfMarker = new google.maps.Marker({
+        //     position: buildings[26],
+        //     title: "Kolf Sports Center"
+        // });
+        // var lincolnMarker = new google.maps.Marker({
+        //     position: buildings[27],
+        //     title: "Lincoln Hall"
+        // });
+        // var multiculturalMarker = new google.maps.Marker({
+        //     position: buildings[28],
+        //     title: "Multicultural Education Center"
+        // });
+        // var nursingMarker = new google.maps.Marker({
+        //     position: buildings[29],
+        //     title: "Nursing and Education Building"
+        // });
+        // var oviattMarker = new google.maps.Marker({
+        //     position: buildings[30],
+        //     title: "Oviatt House"
+        // });
+        // var pollockMarker = new google.maps.Marker({
+        //     position: buildings[31],
+        //     title: "Pollock House"
+        // });
+        // var polkMarker = new google.maps.Marker({
+        //     position: buildings[32],
+        //     title: "Polk Library"
+        // });
+        // var radfordMarker = new google.maps.Marker({
+        //     position: buildings[33],
+        //     title: "Radford Hall and Student Health Center"
+        // });
+        // var reeveMarker = new google.maps.Marker({
+        //     position: buildings[34],
+        //     title: "Reeve Memorial Union"
+        // });
+        // var sageMarker = new google.maps.Marker({
+        //     position: buildings[35],
+        //     title: "Sage Hall"
+        // });
+        // var scottMarker = new google.maps.Marker({
+        //     position: buildings[36],
+        //     title: "Scott Hall"
+        // });
+        // var stewartMarker = new google.maps.Marker({
+        //     position: buildings[37],
+        //     title: "Stewart Hall"
+        // });
+        // var recreationMarker = new google.maps.Marker({
+        //     position: buildings[38],
+        //     title: "Student Recreation and Wellness Center"
+        // });
+        // var successMarker = new google.maps.Marker({
+        //     position: buildings[39],
+        //     title: "Student Success Center"
+        // });
+        // var swartMarker = new google.maps.Marker({
+        //     position: buildings[40],
+        //     title: "Swart Hall"
+        // });
+        // var taylorMarker = new google.maps.Marker({
+        //     position: buildings[41],
+        //     title: "Taylor Hall"
+        // });
+        // var titanMarker = new google.maps.Marker({
+        //     position: buildings[42],
+        //     title: "Titan Stadium"
+        // });
+        // var policeMarker = new google.maps.Marker({
+        //     position: buildings[43],
+        //     title: "University Police"
+        // });
+        // var websterMarker = new google.maps.Marker({
+        //     position: buildings[44],
+        //     title: "Webster Hall"
+        // });
 
         // declaring set and remove functions for buildings
         function setBuilding(){
-            buildingMarkers[0].setMap(map);
-            baseballMarker.setMap(map);
-            alumniMarker.setMap(map);
-            acMarker.setMap(map);
-            athleticMarker.setMap(map);
-            blackhawkMarker.setMap(map);
-            biodigesterMarker.setMap(map);
-            buckstaffMarker.setMap(map);
-            equityMarker.setMap(map);
-            campusMarker.setMap(map);
-            ceramicsMarker.setMap(map);
-            clowMarker.setMap(map);
-            gardensMarker.setMap(map);
-            dempseyMarker.setMap(map);
-            donnerMarker.setMap(map);
-            eastMarker.setMap(map);
-            environmentalMarker.setMap(map);
-            evansMarker.setMap(map);
-            fletcherMarker.setMap(map);
-            fredricMarker.setMap(map);
-            gruenhagenMarker.setMap(map);
-            halseyMarker.setMap(map);
-            harringtonMarker.setMap(map);
-            heatingMarker.setMap(map);
-            parkingRampMarker.setMap(map);
-            horizonMarker.setMap(map);
-            kolfMarker.setMap(map);
-            lincolnMarker.setMap(map);
-            multiculturalMarker.setMap(map);
-            nursingMarker.setMap(map);
-            oviattMarker.setMap(map);
-            pollockMarker.setMap(map);
-            polkMarker.setMap(map);
-            radfordMarker.setMap(map);
-            reeveMarker.setMap(map);
-            sageMarker.setMap(map);
-            scottMarker.setMap(map);
-            stewartMarker.setMap(map);
-            recreationMarker.setMap(map);
-            successMarker.setMap(map);
-            swartMarker.setMap(map);
-            taylorMarker.setMap(map);
-            titanMarker.setMap(map);
-            policeMarker.setMap(map);
-            websterMarker.setMap(map);
+            for (i = 0; i < 45; i++){
+                allMarkers[i].setMap(map);
+                allMarkers[i].setIcon(yellowMarker);
+            }
+            // allMarkers[0].setMap(map);
+            // baseballMarker.setMap(map);
+            // alumniMarker.setMap(map);
+            // acMarker.setMap(map);
+            // athleticMarker.setMap(map);
+            // blackhawkMarker.setMap(map);
+            // biodigesterMarker.setMap(map);
+            // buckstaffMarker.setMap(map);
+            // equityMarker.setMap(map);
+            // campusMarker.setMap(map);
+            // ceramicsMarker.setMap(map);
+            // clowMarker.setMap(map);
+            // gardensMarker.setMap(map);
+            // dempseyMarker.setMap(map);
+            // donnerMarker.setMap(map);
+            // eastMarker.setMap(map);
+            // environmentalMarker.setMap(map);
+            // evansMarker.setMap(map);
+            // fletcherMarker.setMap(map);
+            // fredricMarker.setMap(map);
+            // gruenhagenMarker.setMap(map);
+            // halseyMarker.setMap(map);
+            // harringtonMarker.setMap(map);
+            // heatingMarker.setMap(map);
+            // parkingRampMarker.setMap(map);
+            // horizonMarker.setMap(map);
+            // kolfMarker.setMap(map);
+            // lincolnMarker.setMap(map);
+            // multiculturalMarker.setMap(map);
+            // nursingMarker.setMap(map);
+            // oviattMarker.setMap(map);
+            // pollockMarker.setMap(map);
+            // polkMarker.setMap(map);
+            // radfordMarker.setMap(map);
+            // reeveMarker.setMap(map);
+            // sageMarker.setMap(map);
+            // scottMarker.setMap(map);
+            // stewartMarker.setMap(map);
+            // recreationMarker.setMap(map);
+            // successMarker.setMap(map);
+            // swartMarker.setMap(map);
+            // taylorMarker.setMap(map);
+            // titanMarker.setMap(map);
+            // policeMarker.setMap(map);
+            // websterMarker.setMap(map);
 
-            buildingMarkers[0].setIcon(yellowMarker);
-            baseballMarker.setIcon(yellowMarker);
-            alumniMarker.setIcon(yellowMarker);
-            acMarker.setIcon(yellowMarker);
-            athleticMarker.setIcon(yellowMarker);
-            blackhawkMarker.setIcon(yellowMarker);
-            biodigesterMarker.setIcon(yellowMarker);
-            buckstaffMarker.setIcon(yellowMarker);
-            equityMarker.setIcon(yellowMarker);
-            campusMarker.setIcon(yellowMarker);
-            ceramicsMarker.setIcon(yellowMarker);
-            clowMarker.setIcon(yellowMarker);
-            gardensMarker.setIcon(yellowMarker);
-            dempseyMarker.setIcon(yellowMarker);
-            donnerMarker.setIcon(yellowMarker);
-            eastMarker.setIcon(yellowMarker);
-            environmentalMarker.setIcon(yellowMarker);
-            evansMarker.setIcon(yellowMarker);
-            fletcherMarker.setIcon(yellowMarker);
-            fredricMarker.setIcon(yellowMarker);
-            gruenhagenMarker.setIcon(yellowMarker);
-            halseyMarker.setIcon(yellowMarker);
-            harringtonMarker.setIcon(yellowMarker);
-            heatingMarker.setIcon(yellowMarker);
-            parkingRampMarker.setIcon(yellowMarker);
-            horizonMarker.setIcon(yellowMarker);
-            kolfMarker.setIcon(yellowMarker);
-            lincolnMarker.setIcon(yellowMarker);
-            multiculturalMarker.setIcon(yellowMarker);
-            nursingMarker.setIcon(yellowMarker);
-            oviattMarker.setIcon(yellowMarker);
-            pollockMarker.setIcon(yellowMarker);
-            polkMarker.setIcon(yellowMarker);
-            radfordMarker.setIcon(yellowMarker);
-            reeveMarker.setIcon(yellowMarker);
-            sageMarker.setIcon(yellowMarker);
-            scottMarker.setIcon(yellowMarker);
-            stewartMarker.setIcon(yellowMarker);
-            recreationMarker.setIcon(yellowMarker);
-            successMarker.setIcon(yellowMarker);
-            swartMarker.setIcon(yellowMarker);
-            taylorMarker.setIcon(yellowMarker);
-            titanMarker.setIcon(yellowMarker);
-            policeMarker.setIcon(yellowMarker);
-            websterMarker.setIcon(yellowMarker);
+            // allMarkers[0].setIcon(yellowMarker);
+            // baseballMarker.setIcon(yellowMarker);
+            // alumniMarker.setIcon(yellowMarker);
+            // acMarker.setIcon(yellowMarker);
+            // athleticMarker.setIcon(yellowMarker);
+            // blackhawkMarker.setIcon(yellowMarker);
+            // biodigesterMarker.setIcon(yellowMarker);
+            // buckstaffMarker.setIcon(yellowMarker);
+            // equityMarker.setIcon(yellowMarker);
+            // campusMarker.setIcon(yellowMarker);
+            // ceramicsMarker.setIcon(yellowMarker);
+            // clowMarker.setIcon(yellowMarker);
+            // gardensMarker.setIcon(yellowMarker);
+            // dempseyMarker.setIcon(yellowMarker);
+            // donnerMarker.setIcon(yellowMarker);
+            // eastMarker.setIcon(yellowMarker);
+            // environmentalMarker.setIcon(yellowMarker);
+            // evansMarker.setIcon(yellowMarker);
+            // fletcherMarker.setIcon(yellowMarker);
+            // fredricMarker.setIcon(yellowMarker);
+            // gruenhagenMarker.setIcon(yellowMarker);
+            // halseyMarker.setIcon(yellowMarker);
+            // harringtonMarker.setIcon(yellowMarker);
+            // heatingMarker.setIcon(yellowMarker);
+            // parkingRampMarker.setIcon(yellowMarker);
+            // horizonMarker.setIcon(yellowMarker);
+            // kolfMarker.setIcon(yellowMarker);
+            // lincolnMarker.setIcon(yellowMarker);
+            // multiculturalMarker.setIcon(yellowMarker);
+            // nursingMarker.setIcon(yellowMarker);
+            // oviattMarker.setIcon(yellowMarker);
+            // pollockMarker.setIcon(yellowMarker);
+            // polkMarker.setIcon(yellowMarker);
+            // radfordMarker.setIcon(yellowMarker);
+            // reeveMarker.setIcon(yellowMarker);
+            // sageMarker.setIcon(yellowMarker);
+            // scottMarker.setIcon(yellowMarker);
+            // stewartMarker.setIcon(yellowMarker);
+            // recreationMarker.setIcon(yellowMarker);
+            // successMarker.setIcon(yellowMarker);
+            // swartMarker.setIcon(yellowMarker);
+            // taylorMarker.setIcon(yellowMarker);
+            // titanMarker.setIcon(yellowMarker);
+            // policeMarker.setIcon(yellowMarker);
+            // websterMarker.setIcon(yellowMarker);
 
         }
         // remove all buildings
         function removeBuilding(){
-            buildingMarkers[0].setMap(null);
-            baseballMarker.setMap(null);
-            alumniMarker.setMap(null);
-            acMarker.setMap(null);
-            athleticMarker.setMap(null);
-            blackhawkMarker.setMap(null);
-            biodigesterMarker.setMap(null);
-            buckstaffMarker.setMap(null);
-            equityMarker.setMap(null);
-            campusMarker.setMap(null);
-            ceramicsMarker.setMap(null);
-            clowMarker.setMap(null);
-            gardensMarker.setMap(null);
-            dempseyMarker.setMap(null);
-            donnerMarker.setMap(null);
-            eastMarker.setMap(null);
-            environmentalMarker.setMap(null);
-            evansMarker.setMap(null);
-            fletcherMarker.setMap(null);
-            fredricMarker.setMap(null);
-            gruenhagenMarker.setMap(null);
-            halseyMarker.setMap(null);
-            harringtonMarker.setMap(null);
-            heatingMarker.setMap(null);
-            parkingRampMarker.setMap(null);
-            horizonMarker.setMap(null);
-            kolfMarker.setMap(null);
-            lincolnMarker.setMap(null);
-            multiculturalMarker.setMap(null);
-            nursingMarker.setMap(null);
-            oviattMarker.setMap(null);
-            pollockMarker.setMap(null);
-            polkMarker.setMap(null);
-            radfordMarker.setMap(null);
-            reeveMarker.setMap(null);
-            sageMarker.setMap(null);
-            scottMarker.setMap(null);
-            stewartMarker.setMap(null);
-            recreationMarker.setMap(null);
-            successMarker.setMap(null);
-            swartMarker.setMap(null);
-            taylorMarker.setMap(null);
-            titanMarker.setMap(null);
-            policeMarker.setMap(null);
-            websterMarker.setMap(null);
+            for (i = 0; i < 45; i++){
+                allMarkers[i].setMap(null);
+            }
+            
+            // allMarkers[0].setMap(null);
+            // baseballMarker.setMap(null);
+            // alumniMarker.setMap(null);
+            // acMarker.setMap(null);
+            // athleticMarker.setMap(null);
+            // blackhawkMarker.setMap(null);
+            // biodigesterMarker.setMap(null);
+            // buckstaffMarker.setMap(null);
+            // equityMarker.setMap(null);
+            // campusMarker.setMap(null);
+            // ceramicsMarker.setMap(null);
+            // clowMarker.setMap(null);
+            // gardensMarker.setMap(null);
+            // dempseyMarker.setMap(null);
+            // donnerMarker.setMap(null);
+            // eastMarker.setMap(null);
+            // environmentalMarker.setMap(null);
+            // evansMarker.setMap(null);
+            // fletcherMarker.setMap(null);
+            // fredricMarker.setMap(null);
+            // gruenhagenMarker.setMap(null);
+            // halseyMarker.setMap(null);
+            // harringtonMarker.setMap(null);
+            // heatingMarker.setMap(null);
+            // parkingRampMarker.setMap(null);
+            // horizonMarker.setMap(null);
+            // kolfMarker.setMap(null);
+            // lincolnMarker.setMap(null);
+            // multiculturalMarker.setMap(null);
+            // nursingMarker.setMap(null);
+            // oviattMarker.setMap(null);
+            // pollockMarker.setMap(null);
+            // polkMarker.setMap(null);
+            // radfordMarker.setMap(null);
+            // reeveMarker.setMap(null);
+            // sageMarker.setMap(null);
+            // scottMarker.setMap(null);
+            // stewartMarker.setMap(null);
+            // recreationMarker.setMap(null);
+            // successMarker.setMap(null);
+            // swartMarker.setMap(null);
+            // taylorMarker.setMap(null);
+            // titanMarker.setMap(null);
+            // policeMarker.setMap(null);
+            // websterMarker.setMap(null);
         }
 
 
@@ -498,182 +596,182 @@ function initMap() {
                 //depending on the name make sure that the right image and popup are put up
                 closeAllHover();
                     if (name === "albee"){
-                        albeeHoverCard.open(map, buildingMarkers[0]);
+                        albeeHoverCard.open(map, allMarkers[0]);
                         $("#albeeHover > img").attr("src", "images/campuspictures/albeehall.jpeg");
                     }
                     else if (name === "baseball"){
-                        baseballHoverCard.open(map, baseballMarker);
+                        baseballHoverCard.open(map, allMarkers[1]);
                         //baseball has no image atm
                     }
                     else if (name === "alumni"){
-                        alumniHoverCard.open(map, alumniMarker);
+                        alumniHoverCard.open(map, allMarkers[2]);
                         $("#alumniHover > img").attr("src", "images/campuspictures/awcc-building.jpg");
                     }
                     else if (name === "ac"){
-                        acHoverCard.open(map, acMarker);
+                        acHoverCard.open(map, allMarkers[3]);
                         $("#acHover > img").attr("src", "images/campuspictures/artscommunications.jpeg");
                     }
                     else if (name === "athletic"){
-                        athleticHoverCard.open(map, athleticMarker);
+                        athleticHoverCard.open(map, allMarkers[4]);
                         $("#athleticHover > img").attr("src", "images/campuspictures/athleticservice.jpeg");
                     }
                     else if (name === "blackhawk"){
-                        blackhawkHoverCard.open(map, blackhawkMarker);
+                        blackhawkHoverCard.open(map, allMarkers[5]);
                         $("#blackhawkHover > img").attr("src", "images/campuspictures/blackhawk.jpeg");
                     }
                     else if (name === "biodigester"){
-                        biodigesterHoverCard.open(map, biodigesterMarker);
+                        biodigesterHoverCard.open(map, allMarkers[6]);
                         $("#biodigesterHover > img").attr("src", "images/campuspictures/biodigester.jpg");
                     }
                     else if (name === "buckstaff"){
-                        buckstaffHoverCard.open(map, buckstaffMarker);
+                        buckstaffHoverCard.open(map, allMarkers[7]);
                         $("#buckstaffHover > img").attr("src", "images/campuspictures/buckstaff.jpeg");
                     }
                     else if (name === "equity"){
-                        equityHoverCard.open(map, equityMarker);
+                        equityHoverCard.open(map, allMarkers[8]);
                         $("#equityHover > img").attr("src", "images/campuspictures/centerforequity.jpeg");
                     }
                     else if (name === "campus"){
-                        campusHoverCard.open(map, campusMarker);
+                        campusHoverCard.open(map, allMarkers[9]);
                         $("#campusHover > img").attr("src", "images/campuspictures/campus-services.jpg");
                     }
                     else if (name === "ceramics"){
-                        ceramicsHoverCard.open(map, ceramicsMarker);
+                        ceramicsHoverCard.open(map, allMarkers[10]);
                         $("#ceramicsHover > img").attr("src", "images/campuspictures/ceramicslab.jpeg");
                     }
                     else if (name === "clow"){
-                        clowHoverCard.open(map, clowMarker);
+                        clowHoverCard.open(map, allMarkers[11]);
                         $("#clowHover > img").attr("src", "images/campuspictures/clow.jpeg");
                     }
                     else if (name === "gardens"){
-                        gardensHoverCard.open(map, gardensMarker);
+                        gardensHoverCard.open(map, allMarkers[12]);
                         $("#gardensHover > img").attr("src", "images/campuspictures/community-gardens.jpg");
                     }
                     else if (name === "dempsey"){
-                        dempseyHoverCard.open(map, dempseyMarker);
+                        dempseyHoverCard.open(map, allMarkers[13]);
                         $("#dempseyHover > img").attr("src", "images/campuspictures/dempsey.jpeg");
                     } else if (name === "donner"){
-                        donnerHoverCard.open(map, donnerMarker);
+                        donnerHoverCard.open(map, allMarkers[14]);
                         $("#donnerHover > img").attr("src", "images/campuspictures/donner.jpeg");
                     }
                     else if (name === "east"){
-                        eastHoverCard.open(map, eastMarker);
+                        eastHoverCard.open(map, allMarkers[15]);
                         $("#eastHover > img").attr("src", "images/campuspictures/easthall.jpg");
                     }
                     else if (name === "environmental"){
-                        environmentalHoverCard.open(map, environmentalMarker);
+                        environmentalHoverCard.open(map, allMarkers[16]);
                         $("#environmentalHover > img").attr("src", "images/campuspictures/aquaticstudiescenter.jpeg");
                     }
                     else if (name === "evans"){
-                        evansHoverCard.open(map, evansMarker);
+                        evansHoverCard.open(map, allMarkers[17]);
                         $("#evansHover > img").attr("src", "images/campuspictures/evans.jpeg");
                     }
                     else if (name === "fletcher"){
-                        fletcherHoverCard.open(map, fletcherMarker);
+                        fletcherHoverCard.open(map, allMarkers[18]);
                         $("#fletcherHover > img").attr("src", "images/campuspictures/fletcher.jpeg");
                     }
                     else if (name === "fredric"){
-                        fredricHoverCard.open(map, fredricMarker);
+                        fredricHoverCard.open(map, allMarkers[19]);
                         $("#fredricHover > img").attr("src", "images/campuspictures/fredricmarch.jpeg");
                     }
                     else if (name === "gruenhagen"){
-                        gruenhagenHoverCard.open(map, gruenhagenMarker);
+                        gruenhagenHoverCard.open(map, allMarkers[20]);
                         $("#gruenhagenHover > img").attr("src", "images/campuspictures/gruenhagen.jpeg");
                     }
                     else if (name === "halsey"){
-                        halseyHoverCard.open(map, halseyMarker);
+                        halseyHoverCard.open(map, allMarkers[21]);
                         $("#halseyHover > img").attr("src", "images/campuspictures/halsey.jpeg");
                     }
                     else if (name === "harrington"){
-                        harringtonHoverCard.open(map, harringtonMarker);
+                        harringtonHoverCard.open(map, allMarkers[22]);
                         $("#harringtonHover > img").attr("src", "images/campuspictures/harrington.jpeg");
                     }
                     else if (name === "heating"){
-                        heatingHoverCard.open(map, heatingMarker);
+                        heatingHoverCard.open(map, allMarkers[23]);
                         $("#heatingHover > img").attr("src", "images/campuspictures/heatingplant.jpeg");
                     }
                     else if (name === "parkingRamp"){
-                        parkingRampHoverCard.open(map, parkingRampMarker);
+                        parkingRampHoverCard.open(map, allMarkers[24]);
                         $("#parkingRampHover > img").attr("src", "images/campuspictures/parkingramp.jpeg");
                     }
                     else if (name === "horizon"){
-                        horizonHoverCard.open(map, horizonMarker);
+                        horizonHoverCard.open(map, allMarkers[25]);
                         $("#horizonHover > img").attr("src", "images/campuspictures/horizon.jpeg");
                     }
                     else if (name === "kolf"){
-                        kolfHoverCard.open(map, kolfMarker);
+                        kolfHoverCard.open(map, allMarkers[26]);
                         $("#kolfHover > img").attr("src", "images/campuspictures/kolf.jpeg");
                     }
                     else if (name === "lincoln"){
-                        lincolnHoverCard.open(map, lincolnMarker);
+                        lincolnHoverCard.open(map, allMarkers[27]);
                         $("#lincolnHover > img").attr("src", "images/campuspictures/lincoln-hall.jpg");
                     }
                     else if (name === "multicultural"){
-                        multiculturalHoverCard.open(map, multiculturalMarker);
+                        multiculturalHoverCard.open(map, allMarkers[28]);
                         $("#multiculturalHover > img").attr("src", "images/campuspictures/multiculturaleducation.jpeg");
                     }
                     else if (name === "nursing"){
-                        nursingHoverCard.open(map, nursingMarker);
+                        nursingHoverCard.open(map, allMarkers[29]);
                         $("#nursingHover > img").attr("src", "images/campuspictures/nursingeducation.jpeg");
                     }
                     else if (name === "oviatt"){
-                        oviattHoverCard.open(map, oviattMarker);
+                        oviattHoverCard.open(map, allMarkers[30]);
                         $("#oviattHover > img").attr("src", "images/campuspictures/oviatt.jpeg");
                     }
                     else if (name === "pollock"){
-                        pollockHoverCard.open(map, pollockMarker);
+                        pollockHoverCard.open(map, allMarkers[31]);
                         $("#pollockHover > img").attr("src", "images/campuspictures/pollock.jpeg");
                     }
                     else if (name === "polk"){
-                        polkHoverCard.open(map, polkMarker);
+                        polkHoverCard.open(map, allMarkers[32]);
                         $("#polkHover > img").attr("src", "images/campuspictures/polk.jpeg");
                     }
                     else if (name === "radford"){
-                        radfordHoverCard.open(map, radfordMarker);
+                        radfordHoverCard.open(map, allMarkers[33]);
                         $("#radfordHover > img").attr("src",  "images/campuspictures/radford.jpeg");
                     }
                     else if (name === "reeve"){
-                        reeveHoverCard.open(map, reeveMarker);
+                        reeveHoverCard.open(map, allMarkers[34]);
                         $("#reeveHover > img").attr("src", "images/campuspictures/reeve.jpeg");
                     }
                     else if (name === "sage"){
-                        sageHoverCard.open(map, sageMarker);
+                        sageHoverCard.open(map, allMarkers[35]);
                         $("#sageHover > img").attr("src", "images/campuspictures/sage.jpeg");
                     }
                     else if (name === "scott"){
-                        scottHoverCard.open(map, scottMarker);
+                        scottHoverCard.open(map, allMarkers[36]);
                         $("#scottHover > img").attr("src", "images/campuspictures/scott.jpeg");
                     }
                     else if (name === "stewart"){
-                        stewartHoverCard.open(map, stewartMarker);
+                        stewartHoverCard.open(map, allMarkers[37]);
                         $("#stewartHover > img").attr("src", "images/campuspictures/stewart.jpeg");
                     }
                     else if (name === "recreation"){
-                        recreationHoverCard.open(map, recreationMarker);
+                        recreationHoverCard.open(map, allMarkers[38]);
                         $("#recreationHover > img").attr("src", "images/campuspictures/srwc.jpeg");
                     }
                     else if (name === "success"){
-                        successHoverCard.open(map, successMarker);
+                        successHoverCard.open(map, allMarkers[39]);
                         $("#successHover > img").attr("src", "images/campuspictures/studentsuccess.jpeg");
                     }
                     else if (name === "swart"){
-                        swartHoverCard.open(map, swartMarker);
+                        swartHoverCard.open(map, allMarkers[40]);
                         $("#swartHover > img").attr("src", "images/campuspictures/swart.jpeg");
                     }
                     else if (name === "taylor"){
-                        taylorHoverCard.open(map, taylorMarker);
+                        taylorHoverCard.open(map, allMarkers[41]);
                         $("#taylorHover > img").attr("src", "images/campuspictures/taylor.jpeg");
                     }
                     else if (name === "titan"){
-                        titanHoverCard.open(map, titanMarker);
+                        titanHoverCard.open(map, allMarkers[42]);
                         $("#titanHover > img").attr("src", "images/campuspictures/titanstadium.jpeg");
                     }
                     else if (name === "police"){
-                        policeHoverCard.open(map, policeMarker);
+                        policeHoverCard.open(map, allMarkers[43]);
                         $("#policeHover > img").attr("src", "images/campuspictures/universitypolice.jpeg");
                     }
                     else if (name === "webster"){
-                        websterHoverCard.open(map, websterMarker);
+                        websterHoverCard.open(map, allMarkers[44]);
                         $("#websterHover > img").attr("src", "images/campuspictures/webster.jpeg");
                     }
                  $("#" + name + "Hover").addClass("hoverOpen");
@@ -865,7 +963,7 @@ function initMap() {
             content: albeeHover,
         });
         //when marker is clicked, open hover 
-        buildingMarkers[0].addListener('click', function(){
+        allMarkers[0].addListener('click', function(){
             markerOpenClose("albee");
         });
         // when link on hover is clicked, open popup
@@ -919,7 +1017,7 @@ function initMap() {
             content: baseballHover,
         });
 
-        baseballMarker.addListener('click', function(){
+        allMarkers[1].addListener('click', function(){
             markerOpenClose("baseball");
         });
         
@@ -938,7 +1036,7 @@ function initMap() {
         var alumniHoverCard = new google.maps.InfoWindow({
             content: alumniHover,
         });
-        alumniMarker.addListener('click', function(){
+        allMarkers[2].addListener('click', function(){
             markerOpenClose("alumni");
         });
         // when "click for more info" is selected,
@@ -971,7 +1069,7 @@ function initMap() {
         var acHoverCard = new google.maps.InfoWindow({
             content: acHover,
         });
-        acMarker.addListener('click', function(){
+        allMarkers[3].addListener('click', function(){
             markerOpenClose("ac");
         });
         
@@ -1005,7 +1103,7 @@ function initMap() {
             content: athleticHover,
         });
         
-        athleticMarker.addListener('click', function(){
+        allMarkers[4].addListener('click', function(){
             markerOpenClose("athletic");
         });
         // when "click for more info" is selected,
@@ -1023,7 +1121,7 @@ function initMap() {
         var blackhawkHoverCard = new google.maps.InfoWindow({
             content: blackhawkHover,
         });
-        blackhawkMarker.addListener('click', function(){
+        allMarkers[5].addListener('click', function(){
             markerOpenClose("blackhawk");
         });
         // when "click for more info" is selected,
@@ -1081,7 +1179,7 @@ function initMap() {
             content: biodigesterHover,
         });
 
-        biodigesterMarker.addListener('click', function(){
+        allMarkers[6].addListener('click', function(){
             markerOpenClose("biodigester");
         });
         // when "click for more info" is selected,
@@ -1100,7 +1198,7 @@ function initMap() {
             content: buckstaffHover,
         });
         
-        buckstaffMarker.addListener('click', function(){
+        allMarkers[7].addListener('click', function(){
             markerOpenClose("buckstaff");
         });
         // when "click for more info" is selected,
@@ -1119,7 +1217,7 @@ function initMap() {
             content: equityHover,
         });
 
-        equityMarker.addListener('click', function(){
+        allMarkers[8].addListener('click', function(){
             markerOpenClose("equity");
         });
         // when "click for more info" is selected,
@@ -1151,7 +1249,7 @@ function initMap() {
         var campusHoverCard = new google.maps.InfoWindow({
             content: campusHover,
         });
-        campusMarker.addListener('click', function(){
+        allMarkers[9].addListener('click', function(){
             markerOpenClose("campus");
         });
         
@@ -1170,7 +1268,7 @@ function initMap() {
         var ceramicsHoverCard = new google.maps.InfoWindow({
             content: ceramicsHover,
         });
-        ceramicsMarker.addListener('click', function(){
+        allMarkers[10].addListener('click', function(){
             markerOpenClose("ceramics");
         });
         // when "click for more info" is selected,
@@ -1188,7 +1286,7 @@ function initMap() {
         var clowHoverCard = new google.maps.InfoWindow({
             content: clowHover,
         });
-        clowMarker.addListener('click', function(){
+        allMarkers[11].addListener('click', function(){
             markerOpenClose("clow");
         });
         // when "click for more info" is selected,
@@ -1224,7 +1322,7 @@ function initMap() {
         var gardensHoverCard = new google.maps.InfoWindow({
             content: gardensHover,
         });
-        gardensMarker.addListener('click', function(){
+        allMarkers[12].addListener('click', function(){
             markerOpenClose("gardens");
         });
         // when "click for more info" is selected,
@@ -1244,7 +1342,7 @@ function initMap() {
             content: dempseyHover,
         });
         
-        dempseyMarker.addListener('click', function(){
+        allMarkers[13].addListener('click', function(){
             markerOpenClose("dempsey");
         });
        
@@ -1278,7 +1376,7 @@ function initMap() {
         var donnerHoverCard = new google.maps.InfoWindow({
             content: donnerHover,
         });
-        donnerMarker.addListener('click', function(){
+        allMarkers[14].addListener('click', function(){
             markerOpenClose("donner");
         });
         // when "click for more info" is selected,
@@ -1297,7 +1395,7 @@ function initMap() {
         var eastHoverCard = new google.maps.InfoWindow({
             content: eastHover,
         });
-        eastMarker.addListener('click', function(){
+        allMarkers[15].addListener('click', function(){
             markerOpenClose("east");
         });
         
@@ -1316,7 +1414,7 @@ function initMap() {
         var environmentalHoverCard = new google.maps.InfoWindow({
             content: environmentalHover,
         });
-        environmentalMarker.addListener('click', function(){
+        allMarkers[16].addListener('click', function(){
             markerOpenClose("environmental");
         });
         // when "click for more info" is selected,
@@ -1335,7 +1433,7 @@ function initMap() {
             content: evansHover,
         });
         
-        evansMarker.addListener('click', function(){
+        allMarkers[17].addListener('click', function(){
             markerOpenClose("evans");
         });
         // when "click for more info" is selected,
@@ -1353,7 +1451,7 @@ function initMap() {
         var fletcherHoverCard = new google.maps.InfoWindow({
             content: fletcherHover,
         });
-        fletcherMarker.addListener('click', function(){
+        allMarkers[18].addListener('click', function(){
             markerOpenClose("fletcher");
         });
         // when "click for more info" is selected,
@@ -1371,7 +1469,7 @@ function initMap() {
         var fredricHoverCard = new google.maps.InfoWindow({
             content: fredricHover,
         });
-        fredricMarker.addListener('click', function(){
+        allMarkers[19].addListener('click', function(){
             markerOpenClose("fredric");
         });
         // when "click for more info" is selected,
@@ -1392,7 +1490,7 @@ function initMap() {
         var gruenhagenHoverCard = new google.maps.InfoWindow({
             content: gruenhagenHover,
         });
-        gruenhagenMarker.addListener('click', function(){
+        allMarkers[20].addListener('click', function(){
             markerOpenClose("gruenhagen");
         });
         // when "click for more info" is selected,
@@ -1411,7 +1509,7 @@ function initMap() {
         var halseyHoverCard = new google.maps.InfoWindow({
             content: halseyHover,
         });
-        halseyMarker.addListener('click', function(){
+        allMarkers[21].addListener('click', function(){
             markerOpenClose("halsey");
         });
         // when "click for more info" is selected,
@@ -1459,7 +1557,7 @@ function initMap() {
         var harringtonHoverCard = new google.maps.InfoWindow({
             content: harringtonHover,
         });
-        harringtonMarker.addListener('click', function(){
+        allMarkers[22].addListener('click', function(){
            markerOpenClose("harrington");
         });
         // when "click for more info" is selected,
@@ -1491,7 +1589,7 @@ function initMap() {
         var heatingHoverCard = new google.maps.InfoWindow({
             content: heatingHover,
         });
-        heatingMarker.addListener('click', function(){
+        allMarkers[23].addListener('click', function(){
             markerOpenClose("heating");
         });
         // when "click for more info" is selected,
@@ -1524,7 +1622,7 @@ function initMap() {
         var parkingRampHoverCard = new google.maps.InfoWindow({
             content: parkingRampHover,
         });
-        parkingRampMarker.addListener('click', function(){
+        allMarkers[24].addListener('click', function(){
             markerOpenClose("parkingRamp");
         });
         // when "click for more info" is selected,
@@ -1559,7 +1657,7 @@ function initMap() {
         var horizonHoverCard = new google.maps.InfoWindow({
             content: horizonHover,
         });
-        horizonMarker.addListener('click', function(){
+        allMarkers[25].addListener('click', function(){
             markerOpenClose("horizon");
         });
         // when "click for more info" is selected,
@@ -1591,7 +1689,7 @@ function initMap() {
         var kolfHoverCard = new google.maps.InfoWindow({
             content: kolfHover,
         });
-        kolfMarker.addListener('click', function(){
+        allMarkers[26].addListener('click', function(){
             markerOpenClose("kolf");
         });
         // when "click for more info" is selected,
@@ -1623,7 +1721,7 @@ function initMap() {
         var lincolnHoverCard = new google.maps.InfoWindow({
             content: lincolnHover,
         });
-        lincolnMarker.addListener('click', function(){
+        allMarkers[27].addListener('click', function(){
             markerOpenClose("lincoln");
         });
         // when "click for more info" is selected,
@@ -1641,7 +1739,7 @@ function initMap() {
         var multiculturalHoverCard = new google.maps.InfoWindow({
             content: multiculturalHover,
         });
-        multiculturalMarker.addListener('click', function(){
+        allMarkers[28].addListener('click', function(){
             markerOpenClose( "multicultural");
         });
         // when "click for more info" is selected,
@@ -1659,7 +1757,7 @@ function initMap() {
         var nursingHoverCard = new google.maps.InfoWindow({
             content: nursingHover,
         });
-        nursingMarker.addListener('click', function(){
+        allMarkers[29].addListener('click', function(){
             markerOpenClose("nursing");
         });
         // when "click for more info" is selected,
@@ -1692,7 +1790,7 @@ function initMap() {
         var oviattHoverCard = new google.maps.InfoWindow({
             content: oviattHover,
         });
-        oviattMarker.addListener('click', function(){
+        allMarkers[30].addListener('click', function(){
             markerOpenClose("oviatt");
         });
         // when "click for more info" is selected,
@@ -1710,7 +1808,7 @@ function initMap() {
         var pollockHoverCard = new google.maps.InfoWindow({
             content: pollockHover,
         });
-        pollockMarker.addListener('click', function(){
+        allMarkers[31].addListener('click', function(){
         markerOpenClose("pollock");
         });
         // when "click for more info" is selected,
@@ -1729,7 +1827,7 @@ function initMap() {
         var polkHoverCard = new google.maps.InfoWindow({
             content: polkHover,
         });
-        polkMarker.addListener('click', function(){
+        allMarkers[32].addListener('click', function(){
             markerOpenClose("polk");
         });
         // when "click for more info" is selected,
@@ -1764,7 +1862,7 @@ function initMap() {
         var radfordHoverCard = new google.maps.InfoWindow({
             content: radfordHover,
         });
-        radfordMarker.addListener('click', function(){
+        allMarkers[33].addListener('click', function(){
             markerOpenClose("radford");
         });
         // when "click for more info" is selected,
@@ -1782,7 +1880,7 @@ function initMap() {
         var reeveHoverCard = new google.maps.InfoWindow({
             content: reeveHover,
         });
-        reeveMarker.addListener('click', function(){
+        allMarkers[34].addListener('click', function(){
             markerOpenClose("reeve");
         });
         // when "click for more info" is selected,
@@ -1859,7 +1957,7 @@ function initMap() {
         var sageHoverCard = new google.maps.InfoWindow({
             content: sageHover,
         });
-        sageMarker.addListener('click', function(){
+        allMarkers[35].addListener('click', function(){
             markerOpenClose("sage");
         });
         // when "click for more info" is selected,
@@ -1935,7 +2033,7 @@ function initMap() {
         var scottHoverCard = new google.maps.InfoWindow({
             content: scottHover,
         });
-        scottMarker.addListener('click', function(){
+        allMarkers[36].addListener('click', function(){
             markerOpenClose("scott");
         });
         // when "click for more info" is selected,
@@ -1969,7 +2067,7 @@ function initMap() {
         var stewartHoverCard = new google.maps.InfoWindow({
             content: stewartHover,
         });
-        stewartMarker.addListener('click', function(){ 
+        allMarkers[37].addListener('click', function(){ 
             markerOpenClose("stewart");
         });
         // when "click for more info" is selected,
@@ -1988,7 +2086,7 @@ function initMap() {
         var recreationHoverCard = new google.maps.InfoWindow({
             content: recreationHover,
         });
-        recreationMarker.addListener('click', function(){
+        allMarkers[38].addListener('click', function(){
             markerOpenClose("recreation");
         });
         // when "click for more info" is selected,
@@ -2029,7 +2127,7 @@ function initMap() {
         var successHoverCard = new google.maps.InfoWindow({
             content: successHover,
         });
-        successMarker.addListener('click', function(){
+        allMarkers[39].addListener('click', function(){
             markerOpenClose("success");
         });
         // when "click for more info" is selected,
@@ -2086,7 +2184,7 @@ function initMap() {
         var swartHoverCard = new google.maps.InfoWindow({
             content: swartHover,
         });
-        swartMarker.addListener('click', function(){ 
+        allMarkers[40].addListener('click', function(){ 
             markerOpenClose("swart");
         });
         // when "click for more info" is selected,
@@ -2118,7 +2216,7 @@ function initMap() {
         var taylorHoverCard = new google.maps.InfoWindow({
             content: taylorHover,
         });
-        taylorMarker.addListener('click', function(){
+        allMarkers[41].addListener('click', function(){
             markerOpenClose("taylor");
         });
         // when "click for more info" is selected,
@@ -2150,7 +2248,7 @@ function initMap() {
         var titanHoverCard = new google.maps.InfoWindow({
             content: titanHover,
         });
-        titanMarker.addListener('click', function(){
+        allMarkers[42].addListener('click', function(){
             markerOpenClose("titan");
         });
         // when "click for more info" is selected,
@@ -2183,7 +2281,7 @@ function initMap() {
         var policeHoverCard = new google.maps.InfoWindow({
             content: policeHover,
         });
-        policeMarker.addListener('click', function(){
+        allMarkers[43].addListener('click', function(){
             markerOpenClose("police");
         });
         // when "click for more info" is selected,
@@ -2216,7 +2314,7 @@ function initMap() {
         var websterHoverCard = new google.maps.InfoWindow({
             content: websterHover,
         });
-        websterMarker.addListener('click', function(){
+        allMarkers[44].addListener('click', function(){
             markerOpenClose("webster");
         });
         // when "click for more info" is selected,
@@ -3218,7 +3316,7 @@ function initMap() {
 
         // accessible entries (buildings)
         function setAccEnt(){
-            buildingMarkers[0].setMap(map);
+            allMarkers[0].setMap(map);
             acMarker.setMap(map);
             blackhawkMarker.setMap(map);
             equityMarker.setMap(map);
@@ -3242,7 +3340,7 @@ function initMap() {
             taylorMarker.setMap(map);
             websterMarker.setMap(map);
 
-            buildingMarkers[0].setIcon(redMarker);
+            allMarkers[0].setIcon(redMarker);
             acMarker.setIcon(redMarker);
             blackhawkMarker.setIcon(redMarker);
             equityMarker.setIcon(redMarker);
@@ -3267,7 +3365,7 @@ function initMap() {
             websterMarker.setIcon(redMarker);
         }
         function removeAccEnt(){
-            buildingMarkers[0].setMap(null);
+            allMarkers[0].setMap(null);
             acMarker.setMap(null);
             blackhawkMarker.setMap(null);
             equityMarker.setMap(null);
@@ -4876,51 +4974,51 @@ function initMap() {
         
         // close all buildings
         function closeAllBuildings(){
-          albeeHoverCard.close(map, buildingMarkers[0]);
-          baseballHoverCard.close(map, baseballMarker);
-          alumniHoverCard.close(map, alumniMarker);
-          acHoverCard.close(map,acMarker);
-          athleticHoverCard.close(map, athleticMarker);
-          blackhawkHoverCard.close(map, blackhawkMarker);
-          biodigesterHoverCard.close(map, biodigesterMarker);
-          buckstaffHoverCard.close(map,buckstaffMarker);
-          equityHoverCard.close(map, equityMarker);
-          campusHoverCard.close(map, campusMarker);
-          ceramicsHoverCard.close(map, ceramicsMarker);
-          clowHoverCard.close(map, clowMarker);
-          gardensHoverCard.close(map, gardensMarker);
-          dempseyHoverCard.close(map, dempseyMarker);
-          donnerHoverCard.close(map, donnerMarker);
-          eastHoverCard.close(map,eastMarker);
-          environmentalHoverCard.close(map, environmentalMarker);
-          evansHoverCard.close(map, evansMarker);
-          fletcherHoverCard.close(map, fletcherMarker);
-          fredricHoverCard.close(map,fredricMarker);
-          gruenhagenHoverCard.close(map,gruenhagenMarker);
-          halseyHoverCard.close(map, halseyMarker);
-          harringtonHoverCard.close(map, harringtonMarker);
-          heatingHoverCard.close(map,heatingMarker);
-          parkingRampHoverCard.close(map, parkingRampMarker);
-          horizonHoverCard.close(map, horizonMarker);
-          kolfHoverCard.close(map, kolfMarker);
-          lincolnHoverCard.close(map, lincolnMarker);
-          multiculturalHoverCard.close(map, multiculturalMarker);
-          nursingHoverCard.close(map, nursingMarker);
-          oviattHoverCard.close(map, oviattMarker);
-          pollockHoverCard.close(map, pollockMarker);
-          polkHoverCard.close(map, polkMarker);
-          radfordHoverCard.close(map, radfordMarker);
-          reeveHoverCard.close(map, reeveMarker);
-          sageHoverCard.close(map, sageMarker);
-          scottHoverCard.close(map, scottMarker);
-          stewartHoverCard.close(map, stewartMarker);
-          recreationHoverCard.close(map, recreationMarker);
-          successHoverCard.close(map, successMarker);
-          swartHoverCard.close(map, swartMarker);
-          taylorHoverCard.close(map, taylorMarker);
-          titanHoverCard.close(map, titanMarker);
-          policeHoverCard.close(map, policeMarker);
-          websterHoverCard.close(map, websterMarker);
+          albeeHoverCard.close(map, allMarkers[0]);
+          baseballHoverCard.close(map, allMarkers[1]);
+          alumniHoverCard.close(map, allMarkers[2]);
+          acHoverCard.close(map, allMarkers[3]);
+          athleticHoverCard.close(map, allMarkers[4]);
+          blackhawkHoverCard.close(map, allMarkers[5]);
+          biodigesterHoverCard.close(map, allMarkers[6]);
+          buckstaffHoverCard.close(map,allMarkers[7]);
+          equityHoverCard.close(map, allMarkers[8]);
+          campusHoverCard.close(map, allMarkers[9]);
+          ceramicsHoverCard.close(map, allMarkers[10]);
+          clowHoverCard.close(map, allMarkers[11]);
+          gardensHoverCard.close(map, allMarkers[12]);
+          dempseyHoverCard.close(map, allMarkers[13]);
+          donnerHoverCard.close(map, allMarkers[14]);
+          eastHoverCard.close(map,allMarkers[15]);
+          environmentalHoverCard.close(map, allMarkers[16]);
+          evansHoverCard.close(map, allMarkers[17]);
+          fletcherHoverCard.close(map, allMarkers[18]);
+          fredricHoverCard.close(map,allMarkers[19]);
+          gruenhagenHoverCard.close(map,allMarkers[20]);
+          halseyHoverCard.close(map, allMarkers[21]);
+          harringtonHoverCard.close(map, allMarkers[22]);
+          heatingHoverCard.close(map,allMarkers[23]);
+          parkingRampHoverCard.close(map, allMarkers[24]);
+          horizonHoverCard.close(map, allMarkers[25]);
+          kolfHoverCard.close(map, allMarkers[26]);
+          lincolnHoverCard.close(map, allMarkers[27]);
+          multiculturalHoverCard.close(map, allMarkers[28]);
+          nursingHoverCard.close(map, allMarkers[29]);
+          oviattHoverCard.close(map, allMarkers[30]);
+          pollockHoverCard.close(map, allMarkers[31]);
+          polkHoverCard.close(map, allMarkers[32]);
+          radfordHoverCard.close(map, allMarkers[33]);
+          reeveHoverCard.close(map, allMarkers[34]);
+          sageHoverCard.close(map, allMarkers[35]);
+          scottHoverCard.close(map, allMarkers[36]);
+          stewartHoverCard.close(map, allMarkers[37]);
+          recreationHoverCard.close(map, allMarkers[38]);
+          successHoverCard.close(map, allMarkers[39]);
+          swartHoverCard.close(map, allMarkers[40]);
+          taylorHoverCard.close(map, allMarkers[41]);
+          titanHoverCard.close(map, allMarkers[42]);
+          policeHoverCard.close(map, allMarkers[43]);
+          websterHoverCard.close(map, allMarkers[44]);
         }
         //close parking lots cards
         function closeAllParking(){
@@ -4965,7 +5063,7 @@ function initMap() {
         }
         // close all accEnt cards
         function closeAllAccEnt(){
-          albeeHoverCard.close(map, buildingMarkers[0]);
+          albeeHoverCard.close(map, allMarkers[0]);
           acHoverCard.close(map,acMarker);
           blackhawkHoverCard.close(map, blackhawkMarker);
           equityHoverCard.close(map, equityMarker);
@@ -5018,7 +5116,7 @@ function initMap() {
         }
         //close all sust cards
         function closeAllSust(){
-          albeeHoverCard.close(map, buildingMarkers[0]);
+          albeeHoverCard.close(map, allMarkers[0]);
           alumniHoverCard.close(map, alumniMarker);
           blackhawkHoverCard.close(map, blackhawkMarker);
           biodigesterHoverCard.close(map, biodigesterMarker);
@@ -5050,7 +5148,7 @@ function initMap() {
         }
         //close all AccaF cards
         function closeAllAccaF(){
-          albeeHoverCard.close(map, buildingMarkers[0]);
+          albeeHoverCard.close(map, allMarkers[0]);
           acHoverCard.close(map,acMarker);
           ceramicsHoverCard.close(map, ceramicsMarker);
           clowHoverCard.close(map, clowMarker);
@@ -5067,7 +5165,7 @@ function initMap() {
         }
         //close all athletics cards
         function closeAllAth(){
-          albeeHoverCard.close(map, buildingMarkers[0]);
+          albeeHoverCard.close(map, allMarkers[0]);
           baseballHoverCard.close(map, baseballMarker);
           athleticHoverCard.close(map, athleticMarker);
           eastHoverCard.close(map,eastMarker);
@@ -5121,7 +5219,7 @@ function initMap() {
         }
         // close all hover cards
         function closeAllHover(){
-            albeeHoverCard.close(map, buildingMarkers[0]);
+            albeeHoverCard.close(map, allMarkers[0]);
             baseballHoverCard.close(map, baseballMarker);
             alumniHoverCard.close(map, alumniMarker);
             acHoverCard.close(map,acMarker);
