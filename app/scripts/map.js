@@ -261,7 +261,6 @@ function initMap() {
             // Phone[110] lot 39,phonetwentyseven 
             {lat: 44.018830, lng: -88.556802}
         ];
-        
         //array containing all marker information: positiong and title 
         //position is a separate array with the lat/lngs of the where the markers will go
         //0-44 = buildings
@@ -499,7 +498,7 @@ function initMap() {
         //the list that will contain all of the buildingMarker objects made with "new google.maps.Marker"
         //has to be initiliazed outside of a function to use the list items with event listeners and other methods in any other functions
         var allMarkers = [];
-
+        var buildingMarkers = [];
         //function for creating marker objects and adding them to the allMarkers list using the data from the buildingMarkerInfo array
         function createMarkers(){
             
@@ -512,6 +511,10 @@ function initMap() {
         }
         createMarkers();
         
+        //create parking array of markers from allMarkers
+        
+
+
         //sets marker on the map
         // allMarkers[0].setMap(map);
         //sets the png image for the marker (if no icon is set it defaults to the google red marker)
@@ -523,17 +526,16 @@ function initMap() {
         
        
         //setting all markers /removing them from the map 
-
-        // declaring set and remove functions for buildings
+        //setting all buildings markers to the map and making them yellow
         function setBuilding(){
             for (i = 0; i < 45; i++){
                 allMarkers[i].setMap(map);
                 allMarkers[i].setIcon(yellowMarker);
             }
-            
-
         }
-        // remove all buildings
+        // remove all buildings from the map
+        //(problematic; if other checkboxes are selected they need to reset and color their markers 
+        //(if they share common markers with this set))
         function removeBuilding(){
             for (i = 0; i < 45; i++){
                 allMarkers[i].setMap(null);
@@ -565,7 +567,8 @@ function initMap() {
         }
         // accessible entries (buildings)
         function setAccEnt(){
-            
+            //accEnt buildings: albee, ac, blackhawk, equity, clow, dempsey, donner, kolf, nursing, scott, stewart, webster
+            //fletcher, fredric, gruenhagen, halsey, harrington, polk, radford, reeve, success, swart, taylor
             allMarkers[0].setMap(map);
             allMarkers[3].setMap(map);
             allMarkers[5].setMap(map);
@@ -578,19 +581,6 @@ function initMap() {
             allMarkers[36].setMap(map);
             allMarkers[37].setMap(map);
             allMarkers[44].setMap(map);
-            //18-22
-            for(i = 18; i < 23; i++){
-                allMarkers[i].setMap(map);
-            }
-            //32-34
-            for(i = 32; i < 35; i++){
-                allMarkers[i].setMap(map);
-            }
-            //39-41
-            for (i = 39; i < 42; i++){
-                allMarkers[i].setMap(map);
-            }
-
             allMarkers[0].setIcon(redMarker);
             allMarkers[3].setIcon(redMarker);
             allMarkers[5].setIcon(redMarker);
@@ -605,20 +595,24 @@ function initMap() {
             allMarkers[44].setIcon(redMarker);
             //18-22
             for(i = 18; i < 23; i++){
+                allMarkers[i].setMap(map);
                 allMarkers[i].setIcon(redMarker);
             }
             //32-34
             for(i = 32; i < 35; i++){
+                allMarkers[i].setMap(map);
                 allMarkers[i].setIcon(redMarker);
             }
             //39-41
             for (i = 39; i < 42; i++){
+                allMarkers[i].setMap(map);
                 allMarkers[i].setIcon(redMarker);
             }
-
-            
+             
         }
         function removeAccEnt(){
+             //accEnt buildings: albee, ac, blackhawk, equity, clow, dempsey, donner, kolf, nursing, scott, stewart, webster
+            //fletcher, fredric, gruenhagen, halsey, harrington, polk, radford, reeve, success, swart, taylor
             allMarkers[0].setMap(null);
             allMarkers[3].setMap(null);
             allMarkers[5].setMap(null);
@@ -647,73 +641,76 @@ function initMap() {
         }
         // accessible parking set markers
         function setAccPar(){
-            elevenAccParMarker.setMap(map);
-            fourAccParMarker.setMap(map);
-            fouraAccParMarker.setMap(map);
-            sixteenAccParMarker.setMap(map);
-            seventeenAccParMarker.setMap(map);
-            twentynineAccParMarker.setMap(map);
-            twentyfiveAccParMarker.setMap(map);
-            thirtythreeAccParMarker.setMap(map);
-            fourteenaAccParMarker.setMap(map);
-            sevenaAccParMarker.setMap(map);
-            thirteenAccParMarker.setMap(map);
-            thirtyfourAccParMarker.setMap(map);
-            twentyeightAccParMarker.setMap(map);
-            twentythreeAccParMarker.setMap(map);
-            womensCenterMarker.setMap(map);
-            fifteenAccParMarker.setMap(map);
-            thirtytwoAccParMarker.setMap(map);
+            //accPar Lots: 11, 4, 4a, 16, 17, 29, 25, 33, 14, 7a, 13, 34, 28, 23, womens center parking, 
+            //15, 32, parking ramp, 10, 12, 6a, 6, 18, titanOne, titanTwo
             allMarkers[24].setMap(map);
-            tenAccParMarker.setMap(map);
-            twelveAccParMarker.setMap(map);
-            sixaAccParMarker.setMap(map);
-            sixAccParMarker.setMap(map);
-            eighteenAccParMarker.setMap(map);
-            titanOneMarker.setMap(map);
-            titanTwoMarker.setMap(map);
+            allMarkers[45].setMap(map);
+            allMarkers[77].setMap(map);
+            allMarkers[24].setIcon(tealMarker);
+            allMarkers[45].setIcon(tealMarker);
+            allMarkers[77].setIcon(tealMarker);
+            //50-55
+            for(i = 50; i < 56; i++){
+                allMarkers[i].setMap(map);
+                allMarkers[i].setIcon(tealMarker);
+            }
+            //57-61
+            for(i = 57; i < 62; i++){
+                allMarkers[i].setMap(map);
+                allMarkers[i].setIcon(tealMarker);
+            }
+            //67-74
+            for(i = 67; i < 75; i++){
+                allMarkers[i].setMap(map);
+                allMarkers[i].setIcon(tealMarker);
+            }
+            //80-82
+            for(i = 80; i < 83; i++){
+                allMarkers[i].setMap(map);
+                allMarkers[i].setIcon(tealMarker);
+            }
+            
 
         }
         // remove accessible parking markers
         function removeAccPar(){
-            elevenAccParMarker.setMap(null);
-            fourAccParMarker.setMap(null);
-            fouraAccParMarker.setMap(null);
-            sixteenAccParMarker.setMap(null);
-            seventeenAccParMarker.setMap(null);
-            twentynineAccParMarker.setMap(null);
-            twentyfiveAccParMarker.setMap(null);
-            thirtythreeAccParMarker.setMap(null);
-            fourteenaAccParMarker.setMap(null);
-            sevenaAccParMarker.setMap(null);
-            thirteenAccParMarker.setMap(null);
-            thirtyfourAccParMarker.setMap(null);
-            twentyeightAccParMarker.setMap(null);
-            twentythreeAccParMarker.setMap(null);
-            womensCenterMarker.setMap(null);
-            fifteenAccParMarker.setMap(null);
-            thirtytwoAccParMarker.setMap(null);
+            //accPar Lots: 11, 4, 4a, 16, 17, 29, 25, 33, 14, 7a, 13, 34, 28, 23, womens center parking, 
+            //15, 32, parking ramp, 10, 12, 6a, 6, 18, titanOne, titanTwo
             allMarkers[24].setMap(null);
-            tenAccParMarker.setMap(null);
-            twelveAccParMarker.setMap(null);
-            sixaAccParMarker.setMap(null);
-            sixAccParMarker.setMap(null);
-            eighteenAccParMarker.setMap(null);
-            titanOneMarker.setMap(null);
-            titanTwoMarker.setMap(null);
+            allMarkers[45].setMap(null);
+            allMarkers[77].setMap(null);
+            //50-55
+            for(i = 50; i < 56; i++){
+                allMarkers[i].setMap(null);
+            }
+            //57-61
+            for(i = 57; i < 62; i++){
+                allMarkers[i].setMap(null);
+            }
+            //67-74
+            for(i = 67; i < 75; i++){
+                allMarkers[i].setMap(null);
+            }
+            //80-82
+            for(i = 80; i < 83; i++){
+                allMarkers[i].setMap(null);
+            }
         }
         
         
         
         // function for setting emergency phone markers
         function setEmergencyPhones(){
+            //83-110 
             for(i = 83; i < 111; i++){
                 allMarkers[i].setMap(map);
+                allMarkers[i].setIcon(blueMarker);
             }
             
         }
         // function for removing emergency phone markers
         function removeEmergencyPhones(){
+            //83-110 
             for(i = 83; i < 111; i++){
                 allMarkers[i].setMap(null);
             }
@@ -721,220 +718,314 @@ function initMap() {
         }
         // setting sustainability markers
         function setSust(){
-            albeeSustMarker.setMap(map);
-            alumniSustMarker.setMap(map);
-            blackhawkSustMarker.setMap(map);
-            biodigesterSustMarker.setMap(map);
-            heatingSustMarker.setMap(map);
-            horizonSustMarker.setMap(map);
-            reeveSustMarker.setMap(map);
-            sageSustMarker.setMap(map);
-            recreationSustMarker.setMap(map);
-            successSustMarker.setMap(map);
-            taylorSustMarker.setMap(map);
-            titanSustMarker.setMap(map);
+            //sust buildings: albee, alumni, blackhawk, biodigester, heating, horizon, reeve, sage, recreation
+            //success, taylor, titanStadium
+            allMarkers[0].setMap(map);
+            allMarkers[2].setMap(map);
+            allMarkers[5].setMap(map);
+            allMarkers[6].setMap(map);
+            allMarkers[23].setMap(map);
+            allMarkers[25].setMap(map);
+            allMarkers[34].setMap(map);
+            allMarkers[35].setMap(map);
+            allMarkers[38].setMap(map);
+            allMarkers[39].setMap(map);
+            allMarkers[41].setMap(map);
+            allMarkers[42].setMap(map);
+            allMarkers[0].setIcon(greenMarker);
+            allMarkers[2].setIcon(greenMarker);
+            allMarkers[5].setIcon(greenMarker);
+            allMarkers[6].setIcon(greenMarker);
+            allMarkers[23].setIcon(greenMarker);
+            allMarkers[25].setIcon(greenMarker);
+            allMarkers[34].setIcon(greenMarker);
+            allMarkers[35].setIcon(greenMarker);
+            allMarkers[38].setIcon(greenMarker);
+            allMarkers[39].setIcon(greenMarker);
+            allMarkers[41].setIcon(greenMarker);
+            allMarkers[42].setIcon(greenMarker);
+
         }
         // remove sustainability markers
         function removeSust(){
-            albeeSustMarker.setMap(null);
-            alumniSustMarker.setMap(null);
-            blackhawkSustMarker.setMap(null);
-            biodigesterSustMarker.setMap(null);
-            heatingSustMarker.setMap(null);
-            horizonSustMarker.setMap(null);
-            reeveSustMarker.setMap(null);
-            sageSustMarker.setMap(null);
-            recreationSustMarker.setMap(null);
-            successSustMarker.setMap(null);
-            taylorSustMarker.setMap(null);
-            titanSustMarker.setMap(null);
+            //sust buildings: albee, alumni, blackhawk, biodigester, heating, horizon, reeve, sage, recreation
+            //success, taylor, titanStadium
+            allMarkers[0].setMap(null);
+            allMarkers[2].setMap(null);
+            allMarkers[5].setMap(null);
+            allMarkers[6].setMap(null);
+            allMarkers[23].setMap(null);
+            allMarkers[25].setMap(null);
+            allMarkers[34].setMap(null);
+            allMarkers[35].setMap(null);
+            allMarkers[38].setMap(null);
+            allMarkers[39].setMap(null);
+            allMarkers[41].setMap(null);
+            allMarkers[42].setMap(null);
         }
        
        
         // setting gender markers
         function setGender(){
-            acGenderMarker.setMap(map);
-            blackhawkGenderMarker.setMap(map);
-            campusGenderMarker.setMap(map);
-            dempseyGenderMarker.setMap(map);
-            halseyGenderMarker.setMap(map);
-            harringtonGenderMarker.setMap(map);
-            kolfGenderMarker.setMap(map);
-            nursingGenderMarker.setMap(map);
-            reeveGenderMarker.setMap(map);
-            sageGenderMarker.setMap(map);
-            recreationGenderMarker.setMap(map);
-            successGenderMarker.setMap(map);
-            swartGenderMarker.setMap(map);
-            policeGenderMarker.setMap(map);
+            //gender buildings: ac, blackhawk, campus, dempsey, halsey, harrington, nursing, reeve, sage
+            //recreation, success, swart, police
+            allMarkers[0].setMap(map);
+            allMarkers[5].setMap(map);
+            allMarkers[9].setMap(map);
+            allMarkers[13].setMap(map);
+            allMarkers[21].setMap(map);
+            allMarkers[22].setMap(map);
+            allMarkers[26].setMap(map);
+            allMarkers[29].setMap(map);
+            allMarkers[34].setMap(map);
+            allMarkers[35].setMap(map);
+            allMarkers[38].setMap(map);
+            allMarkers[39].setMap(map);
+            allMarkers[40].setMap(map);
+            allMarkers[43].setMap(map);
+            allMarkers[0].setIcon(lightpurpleMarker);
+            allMarkers[5].setIcon(lightpurpleMarker);
+            allMarkers[9].setIcon(lightpurpleMarker);
+            allMarkers[13].setIcon(lightpurpleMarker);
+            allMarkers[21].setIcon(lightpurpleMarker);
+            allMarkers[22].setIcon(lightpurpleMarker);
+            allMarkers[26].setIcon(lightpurpleMarker);
+            allMarkers[29].setIcon(lightpurpleMarker);
+            allMarkers[34].setIcon(lightpurpleMarker);
+            allMarkers[35].setIcon(lightpurpleMarker);
+            allMarkers[38].setIcon(lightpurpleMarker);
+            allMarkers[39].setIcon(lightpurpleMarker);
+            allMarkers[40].setIcon(lightpurpleMarker);
+            allMarkers[43].setIcon(lightpurpleMarker);
 
         }
         // removing gender markers
         function removeGender(){
-            acGenderMarker.setMap(null);
-            blackhawkGenderMarker.setMap(null);
-            campusGenderMarker.setMap(null);
-            dempseyGenderMarker.setMap(null);
-            halseyGenderMarker.setMap(null);
-            harringtonGenderMarker.setMap(null);
-            kolfGenderMarker.setMap(null);
-            nursingGenderMarker.setMap(null);
-            reeveGenderMarker.setMap(null);
-            sageGenderMarker.setMap(null);
-            recreationGenderMarker.setMap(null);
-            successGenderMarker.setMap(null);
-            swartGenderMarker.setMap(null);
-            policeGenderMarker.setMap(null);
+            //gender buildings: ac, blackhawk, campus, dempsey, halsey, harrington, nursing, reeve, sage
+            //recreation, success, swart, police
+            allMarkers[0].setMap(null);
+            allMarkers[5].setMap(null);
+            allMarkers[9].setMap(null);
+            allMarkers[13].setMap(null);
+            allMarkers[21].setMap(null);
+            allMarkers[22].setMap(null);
+            allMarkers[26].setMap(null);
+            allMarkers[29].setMap(null);
+            allMarkers[34].setMap(null);
+            allMarkers[35].setMap(null);
+            allMarkers[38].setMap(null);
+            allMarkers[39].setMap(null);
+            allMarkers[40].setMap(null);
+            allMarkers[43].setMap(null);
         }
         // functions for categories select/remove markers
         function setAccaF(){
-            acAccaFMarker.setMap(map);
-            albeeAccaFMarker.setMap(map);
-            ceramicsAccaFMarker.setMap(map);
-            clowAccaFMarker.setMap(map);
-            environmentalAccaFMarker.setMap(map);
-            fredricAccaFMarker.setMap(map);
-            halseyAccaFMarker.setMap(map);
-            harringtonAccaFMarker.setMap(map);
-            kolfAccaFMarker.setMap(map);
-            swartAccaFMarker.setMap(map);
-            nursingAccaFMarker.setMap(map);
-            polkAccaFMarker.setMap(map);
-            radfordAccaFMarker.setMap(map);
-            sageAccaFMarker.setMap(map);
+            //accaF buildings: ac, albee, ceramics, clow, environmental, fredric, halsey, harrington, swart, nursing, polk, radford, sage
+            allMarkers[0].setMap(map);
+            allMarkers[3].setMap(map);
+            allMarkers[10].setMap(map);
+            allMarkers[11].setMap(map);
+            allMarkers[16].setMap(map);
+            allMarkers[19].setMap(map);
+            allMarkers[21].setMap(map);
+            allMarkers[22].setMap(map);
+            allMarkers[26].setMap(map);
+            allMarkers[29].setMap(map);
+            allMarkers[32].setMap(map);
+            allMarkers[33].setMap(map);
+            allMarkers[35].setMap(map);
+            allMarkers[40].setMap(map);
+            allMarkers[0].setIcon(maroonMarker);
+            allMarkers[3].setIcon(maroonMarker);
+            allMarkers[10].setIcon(maroonMarker);
+            allMarkers[11].setIcon(maroonMarker);
+            allMarkers[16].setIcon(maroonMarker);
+            allMarkers[19].setIcon(maroonMarker);
+            allMarkers[21].setIcon(maroonMarker);
+            allMarkers[26].setIcon(maroonMarker);
+            allMarkers[29].setIcon(maroonMarker);
+            allMarkers[32].setIcon(maroonMarker);
+            allMarkers[33].setIcon(maroonMarker);
+            allMarkers[35].setIcon(maroonMarker);
+            allMarkers[40].setIcon(maroonMarker);
 
         }
         function removeAccaF(){
-            acAccaFMarker.setMap(null);
-            albeeAccaFMarker.setMap(null);
-            ceramicsAccaFMarker.setMap(null);
-            clowAccaFMarker.setMap(null);
-            environmentalAccaFMarker.setMap(null);
-            fredricAccaFMarker.setMap(null);
-            halseyAccaFMarker.setMap(null);
-            harringtonAccaFMarker.setMap(null);
-            kolfAccaFMarker.setMap(null);
-            swartAccaFMarker.setMap(null);
-            nursingAccaFMarker.setMap(null);
-            polkAccaFMarker.setMap(null);
-            radfordAccaFMarker.setMap(null);
-            sageAccaFMarker.setMap(null);
+             //accaF buildings: ac, albee, ceramics, clow, environmental, fredric, halsey, harrington, swart, nursing, polk, radford, sage
+             allMarkers[0].setMap(null);
+             allMarkers[3].setMap(null);
+             allMarkers[10].setMap(null);
+             allMarkers[11].setMap(null);
+             allMarkers[16].setMap(null);
+             allMarkers[19].setMap(null);
+             allMarkers[21].setMap(null);
+             allMarkers[22].setMap(null);
+             allMarkers[26].setMap(null);
+             allMarkers[29].setMap(null);
+             allMarkers[32].setMap(null);
+             allMarkers[33].setMap(null);
+             allMarkers[35].setMap(null);
+             allMarkers[40].setMap(null);
         }
         function setAth(){
-            albeeAthMarker.setMap(map);
-            athleticAthMarker.setMap(map);
-            baseballAthMarker.setMap(map);
-            eastAthMarker.setMap(map);
-            kolfAthMarker.setMap(map);
-            titanAthMarker.setMap(map);
+            //ath buildings: albee, athletic, baseball, east, kolf, titanstadium
+            allMarkers[0].setMap(map);
+            allMarkers[1].setMap(map);
+            allMarkers[4].setMap(map);
+            allMarkers[15].setMap(map);
+            allMarkers[26].setMap(map);
+            allMarkers[42].setMap(map);
+            allMarkers[0].setIcon(orangeMarker);
+            allMarkers[1].setIcon(orangeMarker);
+            allMarkers[4].setIcon(orangeMarker);
+            allMarkers[15].setIcon(orangeMarker);
+            allMarkers[26].setIcon(orangeMarker);
+            allMarkers[42].setIcon(orangeMarker);
         }
         function removeAth(){
-            albeeAthMarker.setMap(null);
-            athleticAthMarker.setMap(null);
-            baseballAthMarker.setMap(null);
-            eastAthMarker.setMap(null);
-            kolfAthMarker.setMap(null);
-            titanAthMarker.setMap(null);
+            //ath buildings: albee, athletic, baseball, east, kolf, titanstadium
+            allMarkers[0].setMap(null);
+            allMarkers[1].setMap(null);
+            allMarkers[4].setMap(null);
+            allMarkers[15].setMap(null);
+            allMarkers[26].setMap(null);
+            allMarkers[42].setMap(null);
         }
         // set/remove AccaS
         function setAccaS(){
-            equityAccaSMarker.setMap(map);
-            nursingAccaSMarker.setMap(map);
-            successAccaSMarker.setMap(map);
-            swartAccaSMarker.setMap(map);
+            //accaS buildings: equity, nursing, success, swart
+            allMarkers[8].setMap(map);
+            allMarkers[29].setMap(map);
+            allMarkers[39].setMap(map);
+            allMarkers[40].setMap(map);
+            allMarkers[8].setIcon(brownMarker);
+            allMarkers[29].setIcon(brownMarker);
+            allMarkers[39].setIcon(brownMarker);
+            allMarkers[40].setIcon(brownMarker);
 
         }
         function removeAccaS(){
-            equityAccaSMarker.setMap(null);
-            nursingAccaSMarker.setMap(null);
-            successAccaSMarker.setMap(null);
-            swartAccaSMarker.setMap(null);
+            //accaS buildings: equity, nursing, success, swart
+            allMarkers[8].setMap(null);
+            allMarkers[29].setMap(null);
+            allMarkers[39].setMap(null);
+            allMarkers[40].setMap(null);
 
         }
         function setCampS(){
-            equityCampSMarker.setMap(map);
-            campusCampSMarker.setMap(map);
-            dempseyCampSMarker.setMap(map);
-            multiculturalCampSMarker.setMap(map);
-            pollockCampSMarker.setMap(map);
-            recreationCampSMarker.setMap(map);
-            radfordCampSMarker.setMap(map);
-            reeveCampSMarker.setMap(map);
-            successCampSMarker.setMap(map);
+            //campS buildings: equity, campus, dempsey, multicultural, pollock, recreation, radford, reeve, success
+            allMarkers[8].setMap(map);
+            allMarkers[9].setMap(map);
+            allMarkers[13].setMap(map);
+            allMarkers[28].setMap(map);
+            allMarkers[31].setMap(map);
+            allMarkers[38].setMap(map);
+            allMarkers[33].setMap(map);
+            allMarkers[34].setMap(map);
+            allMarkers[39].setMap(map);
+            allMarkers[8].setIcon(darkgreenMarker);
+            allMarkers[9].setIcon(darkgreenMarker);
+            allMarkers[13].setIcon(darkgreenMarker);
+            allMarkers[28].setIcon(darkgreenMarker);
+            allMarkers[31].setIcon(darkgreenMarker);
+            allMarkers[38].setIcon(darkgreenMarker);
+            allMarkers[33].setIcon(darkgreenMarker);
+            allMarkers[34].setIcon(darkgreenMarker);
+            allMarkers[39].setIcon(darkgreenMarker);
 
         }
         function removeCampS(){
-            equityCampSMarker.setMap(null);
-            campusCampSMarker.setMap(null);
-            dempseyCampSMarker.setMap(null);
-            multiculturalCampSMarker.setMap(null);
-            pollockCampSMarker.setMap(null);
-            recreationCampSMarker.setMap(null);
-            radfordCampSMarker.setMap(null);
-            reeveCampSMarker.setMap(null);
-            successCampSMarker.setMap(null);
+             //campS buildings: equity, campus, dempsey, multicultural, pollock, recreation, radford, reeve, success
+             allMarkers[8].setMap(null);
+             allMarkers[9].setMap(null);
+             allMarkers[13].setMap(null);
+             allMarkers[28].setMap(null);
+             allMarkers[31].setMap(null);
+             allMarkers[38].setMap(null);
+             allMarkers[33].setMap(null);
+             allMarkers[34].setMap(null);
+             allMarkers[39].setMap(null);
         }
         // ResH set/remove
         function setResH(){
-            donnerResHMarker.setMap(map);
-            evansResHMarker.setMap(map);
-            fletcherResHMarker.setMap(map);
-            gruenhagenResHMarker.setMap(map);
-            horizonResHMarker.setMap(map);
-            stewartResHMarker.setMap(map);
-            scottResHMarker.setMap(map);
-            taylorResHMarker.setMap(map);
-            websterResHMarker.setMap(map);
+            //resH buildings: donner, evans, fletcher, gruenhagen, horizon, stewart, scott, taylor, webster
+            allMarkers[14].setMap(map);
+            allMarkers[17].setMap(map);
+            allMarkers[18].setMap(map);
+            allMarkers[20].setMap(map);
+            allMarkers[25].setMap(map);
+            allMarkers[37].setMap(map);
+            allMarkers[36].setMap(map);
+            allMarkers[41].setMap(map);
+            allMarkers[44].setMap(map);
+            allMarkers[14].setIcon(lightblueMarker);
+            allMarkers[17].setIcon(lightblueMarker);
+            allMarkers[18].setIcon(lightblueMarker);
+            allMarkers[20].setIcon(lightblueMarker);
+            allMarkers[25].setIcon(lightblueMarker);
+            allMarkers[37].setIcon(lightblueMarker);
+            allMarkers[36].setIcon(lightblueMarker);
+            allMarkers[41].setIcon(lightblueMarker);
+            allMarkers[44].setIcon(lightblueMarker);
 
         }
         function removeResH(){
-            donnerResHMarker.setMap(null);
-            evansResHMarker.setMap(null);
-            fletcherResHMarker.setMap(null);
-            gruenhagenResHMarker.setMap(null);
-            horizonResHMarker.setMap(null);
-            stewartResHMarker.setMap(null);
-            scottResHMarker.setMap(null);
-            taylorResHMarker.setMap(null);
-            websterResHMarker.setMap(null);
+            //resH buildings: donner, evans, fletcher, gruenhagen, horizon, stewart, scott, taylor, webster
+            allMarkers[14].setMap(null);
+            allMarkers[17].setMap(null);
+            allMarkers[18].setMap(null);
+            allMarkers[20].setMap(null);
+            allMarkers[25].setMap(null);
+            allMarkers[37].setMap(null);
+            allMarkers[36].setMap(null);
+            allMarkers[41].setMap(null);
+            allMarkers[44].setMap(null);
         }
         // set/remove dining
         function setDining(){
-            blackhawkDiningMarker.setMap(map);
-            clowDiningMarker.setMap(map);
-            halseyDiningMarker.setMap(map);
-            reeveDiningMarker.setMap(map);
-            sageDiningMarker.setMap(map);
-            scottDiningMarker.setMap(map);
+            //dining buildings: blackhawk, clow, halsey, reeve, sage, scott
+            allMarkers[5].setMap(map);
+            allMarkers[11].setMap(map);
+            allMarkers[21].setMap(map);
+            allMarkers[34].setMap(map);
+            allMarkers[35].setMap(map);
+            allMarkers[36].setMap(map);
+            allMarkers[5].setIcon(navyMarker);
+            allMarkers[11].setIcon(navyMarker);
+            allMarkers[21].setIcon(navyMarker);
+            allMarkers[34].setIcon(navyMarker);
+            allMarkers[35].setIcon(navyMarker);
+            allMarkers[36].setIcon(navyMarker);
 
         }
         function removeDining(){
-            blackhawkDiningMarker.setMap(null);
-            clowDiningMarker.setMap(null);
-            halseyDiningMarker.setMap(null);
-            reeveDiningMarker.setMap(null);
-            sageDiningMarker.setMap(null);
-            scottDiningMarker.setMap(null);
+            //dining buildings: blackhawk, clow, halsey, reeve, sage, scott
+            allMarkers[5].setMap(null);
+            allMarkers[11].setMap(null);
+            allMarkers[21].setMap(null);
+            allMarkers[34].setMap(null);
+            allMarkers[35].setMap(null);
+            allMarkers[36].setMap(null);
         }
         
         
 
         // StuR set/remove
         function setStuR(){
-            reeveStuRMarker.setMap(map);
-            recreationStuRMarker.setMap(map);
+            //buildings stuR: reeve, recreation
+            allMarkers[34].setMap(map);
+            allMarkers[38].setMap(map);
+            allMarkers[34].setIcon(darkpurpleMarker);
+            allMarkers[38].setIcon(darkpurpleMarker);
         }
         function removeStuR(){
-            reeveStuRMarker.setMap(null);
-            recreationStuRMarker.setMap(null);
+            //buildings stuR: reeve, recreation
+            allMarkers[34].setMap(null);
+            allMarkers[38].setMap(null);
         }
         
 
-
-
-        
-        //close all hovers 
-        // close all buildings
+        // close all hovers attached to buildings
         function closeAllBuildings(){
           albeeHoverCard.close(map, allMarkers[0]);
           baseballHoverCard.close(map, allMarkers[1]);
@@ -1593,7 +1684,7 @@ function initMap() {
         
 
         // adding hover cards for building markers
-        // var albeeHover = ;
+        // var albeeHover =  document.getElementById('albeeHover');
        var hoverContentSelectors = [
            //0 albee
              document.getElementById('albeeHover'),
@@ -2219,12 +2310,12 @@ function initMap() {
         });
         allMarkers[79].addListener('click', function(){
             parkingOpenClose("thirtynine");
-        // });
+         });
 
-        titanOneMarker.addListener('click', function(){
+         allMarkers[81].addListener('click', function(){
             parkingOpenClose("titanOne");
         });
-        titanTwoMarker.addListener('click', function(){
+        allMarkers[82].addListener('click', function(){
             parkingOpenClose("titanTwo");
         });
 
@@ -3151,7 +3242,7 @@ function initMap() {
             $("#sageAboutText").css('display', "initial");
         });
         $("#sageTourLi").click(function(){
-        $("#sageAboutImage").css('display', "none");
+             $("#sageAboutImage").css('display', "none");
             $("#sageAboutText").css('display', "none");
             $("#sageSustainability").css('display', "none");
             $("#sageBathrooms").css('display', "none");
@@ -3628,61 +3719,63 @@ function initMap() {
      });
 
 
- $("#selectAllOne").change(function(){
-       if( !$("#selectAllOne").hasClass("is-checked") ){
-         //if select all is unchecked, all others should be unchecked
-        //  uncheck: unchecks checkbox and removes markers and hover cards
-        
-        // HAS TO COME BEFORE UNCHECK IS TRIGGERED
-         closeAllHover();
+        $("#selectAllOne").change(function(){
+                if( !$("#selectAllOne").hasClass("is-checked") ){
+                    //if select all is unchecked, all others should be unchecked
+                    //  uncheck: unchecks checkbox and removes markers and hover cards
+                    
+                    // HAS TO COME BEFORE UNCHECK IS TRIGGERED
+                    closeAllHover();
 
-         triggerUncheck("buildings");
-         triggerUncheck("parking");
-         triggerUncheck("accEnt");
-         triggerUncheck("accPar");
-         triggerUncheck("emergency");
-         triggerUncheck("sust");
-         triggerUncheck("gender");
-       }else{
-         //if selectall is checked, all others should be checked
-        //  check: checks checkbox and sets markers 
-         triggerCheck("buildings");
-         triggerCheck("parking");
-         triggerCheck("accEnt");
-         triggerCheck("accPar");
-         triggerCheck("emergency");
-         triggerCheck("sust");
-         triggerCheck("gender");
-       }
+                    triggerUncheck("buildings");
+                    triggerUncheck("parking");
+                    triggerUncheck("accEnt");
+                    triggerUncheck("accPar");
+                    triggerUncheck("emergency");
+                    triggerUncheck("sust");
+                    triggerUncheck("gender");
+                }else{
+                    //if selectall is checked, all others should be checked
+                    //  check: checks checkbox and sets markers 
+                    triggerCheck("buildings");
+                    triggerCheck("parking");
+                    triggerCheck("accEnt");
+                    triggerCheck("accPar");
+                    triggerCheck("emergency");
+                    triggerCheck("sust");
+                    triggerCheck("gender");
+                }
+        });
 
- });
+        $("#selectAllTwo").change(function(){
 
- $("#selectAllTwo").change(function(){
-
-          if( !$("#selectAllTwo").hasClass("is-checked") ){
-              // HAS TO COME BEFORE UNCHECK IS TRIGGERED
-             closeAllHover();
-            triggerUncheck("accaF");
-            triggerUncheck("ath");
-            triggerUncheck("accS");
-            triggerUncheck("campS");
-            triggerUncheck("resH");
-            triggerUncheck("dining");
-            triggerUncheck("stuR");
-          } else {
-            triggerCheck("accaF");
-            triggerCheck("ath");
-            triggerCheck("accS");
-            triggerCheck("campS");
-            triggerCheck("resH");
-            triggerCheck("dining");
-            triggerCheck("stuR");
-          }
+                if( !$("#selectAllTwo").hasClass("is-checked") ){
+                    // HAS TO COME BEFORE UNCHECK IS TRIGGERED
+                    closeAllHover();
+                    triggerUncheck("accaF");
+                    triggerUncheck("ath");
+                    triggerUncheck("accS");
+                    triggerUncheck("campS");
+                    triggerUncheck("resH");
+                    triggerUncheck("dining");
+                    triggerUncheck("stuR");
+                } else {
+                    triggerCheck("accaF");
+                    triggerCheck("ath");
+                    triggerCheck("accS");
+                    triggerCheck("campS");
+                    triggerCheck("resH");
+                    triggerCheck("dining");
+                    triggerCheck("stuR");
+                }
   
-    });
+         });
 
 
-    //here lie ye old code
+    
+}
+
+//here lie ye old code
 
     // array for parking lots
         // var parkingLots = [
@@ -5835,4 +5928,3 @@ function initMap() {
             // phoneTwentyFive.setMap(null);
             // phoneTwentySix.setMap(null);
             // phoneTwentySeven.setMap(null);
-}

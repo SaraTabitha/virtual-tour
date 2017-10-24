@@ -171,10 +171,7 @@ Accessible Parking (34)
 5. lot 16
 6. lot 17
 7. lot 29
-8. lot 29
-9. lot 29
-10. lot 25
-11. lot 25
+
 12. lot 25
 13. lot 33
 14. lot 14a
