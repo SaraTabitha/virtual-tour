@@ -2,10 +2,9 @@
 // function for intitial map load (what appears when the page first loads)
 function initMap() {
         // center of map (UWO coordinates)
-        var uwo = {lat: 44.025319, lng: -88.551021};
-
+        var uwo = {lat: 44.025098, lng: -88.554610};
         var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 15,
+            zoom: 16,
             center: uwo
         });
         
@@ -27,482 +26,416 @@ function initMap() {
         var darkpurpleMarker = "images/markers/darkpurple.png";
         var brownMarker = "images/markers/brown.png";
 
-        // buildings array, sets locations for all of the places
-        //0-44 = buildings
-        //45-82 = parking lots
-        //83-110 = emergency phones
-        var locations = [
-
-            //buildings
-            // albee hall [0]
-            {lat: 44.025729, lng: -88.550248},
-            // alumni baseball stadium [1]
-            {lat: 44.023042, lng: -88.561892},
-            // alumni welcome and conference center [2]
-            {lat: 44.020528, lng: -88.550432},
-            // A&C [3]
-            {lat: 44.029640, lng: -88.552137},
-            // athletic service building [4]
-            {lat: 44.023077, lng: -88.561081},
-            // blackhawk commons [5]
-            {lat: 44.023591, lng: -88.549157},
-            // biodigester [6]
-            {lat: 44.018897, lng: -88.558015},
-            // Buckstaff Planetarium [7]
-            {lat: 44.028428, lng: -88.551581},
-            // campus center for equity and diversity [8]
-            {lat: 44.024655, lng: -88.547217},
-            // campus services [9]
-            {lat: 44.017782, lng: -88.556446},
-            // ceramics laboratory [10]
-            {lat: 44.025559, lng: -88.555515},
-            //  clow [11]
-            {lat: 44.026306, lng: -88.552268},
-            // community gardens [12]
-            {lat: 44.015573, lng: -88.555929},
-            // Dempsey hall [13]
-            {lat: 44.026603, lng: -88.550707},
-            // donner hall [14]
-            {lat: 44.025420, lng: -88.552287},
-            // East Hall [15]
-            {lat: 44.031217, lng: -88.543806},
-            // environmental science and research center [16]
-            {lat: 44.023518, lng: -88.553851},
-            // evans hall [17]
-            {lat: 44.026168, lng: -88.547397},
-            // fletcher hall [18]
-            {lat: 44.025332, lng: -88.547240},
-            // Fredric March Theater [19]
-            {lat:  44.029000, lng:-88.552919},
-            // gruenhagen [20]
-            {lat: 44.022405, lng:  -88.548824},
-            // Halsey Science Center [21]
-            {lat:  44.028497, lng: -88.551027},
-            // Harrington Hall [22]
-            {lat:  44.027736, lng: -88.550172},
-            // Heating Plant [23]
-            {lat: 44.028235, lng: -88.554312},
-            // high avenue parking ramp [24]
-            {lat: 44.022960, lng: -88.549791},
-            // horizon village [25]
-            {lat: 44.024363, lng: -88.547972},
-            // kolf sports center [26]
-            {lat: 44.024323, lng: -88.552214},
-            // lincoln hall [27]
-            {lat: 44.023204, lng: -88.546359},
-            // multicultural education center [28]
-            {lat: 44.024842, lng: -88.550613},
-            // Nursing and Education Building [29]
-            {lat: 44.027051, lng: -88.552813},
-            // Oviatt House [30]
-            {lat:  44.027156, lng: -88.551466},
-            // pollock house [31]
-            {lat: 44.025227, lng:  -88.551292},
-            // polk library [32]
-            {lat: 44.026379, lng: -88.549602},
-            // radford hall & student health center [33]
-            {lat: 44.025671, lng: -88.551561},
-            // reeve memorial union [34]
-            {lat: 44.024934, lng: -88.549448},
-            // sage hall [35]
-            {lat: 44.025720, lng: -88.553770},
-            // scott hall [36]
-            {lat: 44.022556, lng: -88.547344},
-            // stewart hall [37]
-            {lat: 44.026060, lng: -88.546952},
-            // student recreation and wellness center [38]
-            {lat: 44.021752, lng: -88.551694},
-            // student success center [39]
-            {lat: 44.026205, lng: -88.548163},
-            // Swart Hall [40]
-            {lat:  44.027872, lng:  -88.551962},
-            //  taylor hall [41]
-            {lat: 44.024577, lng: -88.551215},
-            // titan stadium [42]
-            {lat: 44.023671, lng: -88.562917},
-            // university police [43]
-            {lat: 44.023763, lng: -88.549972},
-            // webster hall [44]
-            {lat: 44.025002, lng: -88.551681},
-
-            //parking lots
-            // [45] Lot 11
-            {lat: 44.030449, lng: -88.552415},
-            // [46] Lot 35
-            {lat: 44.029428, lng: -88.558183},
-            // [47] Lot 27
-            {lat: 44.029026, lng: -88.554960},
-            // [48] Lot 21
-            {lat: 44.029123, lng: -88.553173},
-            // [49] Lot 26
-            {lat: 44.029838, lng: -88.551684},
-            // [50] Lot 4
-            {lat: 44.029100, lng: -88.551581},
-            // [51] Lot 4a
-            {lat: 44.028586, lng: -88.552649},
-            // [52] Lot 16
-            {lat: 44.028822, lng: -88.550956},
-            // [53] Lot 17
-            {lat: 44.028648, lng: -88.549711},
-            // [54] Lot 29
-            {lat: 44.027825, lng: -88.553434},
-            // [55] Lot 25
-            {lat: 44.027233, lng: -88.553602},
-            // [56] Lot 8
-            {lat: 44.026371, lng: -88.554322},
-            // [57] Lot 33
-            {lat: 44.025668, lng: -88.555558},
-            // [58] Lot 34
-            {lat: 44.027133, lng: -88.548009},
-            // [59] Lot 28
-            {lat: 44.025858, lng: -88.548893},
-            // [60] Lot 23
-            {lat: 44.025511, lng: -88.546748},
-            // [61] Lot 14a
-            {lat: 44.025828, lng: -88.552416},
-            // [62] Lot 14b
-            {lat: 44.025673, lng: -88.551929},
-            // [63] Lot 14c
-            {lat: 44.025302, lng: -88.551711},
-            // [64] Lot 7
-            {lat: 44.025023, lng: -88.553519},
-            // [65] Lot 5a
-            {lat: 44.024150, lng: -88.554291},
-            // [66] Lot 5
-            {lat: 44.023717, lng: -88.553693},
-            // [67] Lot 7a
-            {lat: 44.023897, lng: -88.552670},
-            // [68] Lot 15
-            {lat: 44.024142, lng: -88.549694},
-            // [69] Lot 32
-            {lat: 44.023912, lng: -88.550031},
-            // [70] Lot 13
-            {lat: 44.023505, lng: -88.551579},
-            // [71] Lot 12
-            {lat: 44.022135, lng: -88.551702},
-            // [72] Lot 6a
-            {lat: 44.021216, lng: -88.551093},
-            // [73] Lot 6
-            {lat: 44.020887, lng: -88.549848},
-            // [74] Lot 10
-            {lat: 44.021857, lng: -88.548831},
-            // [75] Lot 9a
-            {lat: 44.022435, lng: -88.548564},
-            // [76] Lot 9
-            {lat: 44.021955, lng:  -88.548167},
-            // [77] Lot 18
-            {lat: 44.022368, lng: -88.546827},
-            // [78] Lot 30
-            {lat: 44.021440, lng: -88.547947},
-            // [79] Lot 39
-            {lat: 44.018367, lng: -88.556821},
-            //[80] womens center
-            {lat: 44.024816, lng: -88.546638},
-            //[81] titan one
-            {lat: 44.024401, lng: -88.564253},
-            //[82] titan two
-            {lat: 44.023007, lng:  -88.564339},
-
-            //emergency phones
-            // Phone[83] Lot 35, phonezero
-            {lat: 44.029568, lng: -88.557150},
-            // Phone[84] Lot 40, phoneone
-            {lat: 44.029075, lng: -88.558184},
-            // Phone[85] lot 27, phonetwo
-            {lat: 44.028831, lng: -88.555125},
-            // Phone[86] heating plant, phonethree
-            {lat: 44.028514, lng: -88.554386},
-            // Phone[87] behind a & c,phonefour 
-            {lat: 44.029626, lng: -88.552936},
-            // Phone[88] in between halsey and swart,phonefive 
-            {lat: 44.028456, lng: -88.551907},
-            // Phone[89] lot 25, phonesix
-            {lat: 44.027457	, lng: -88.553422},
-            // Phone[90] lot 17,phoneseven 
-            {lat: 44.028501, lng: -88.549911},
-            // Phone[91] Wiouwash Trail Oshkosh, WI 54901,phoneeight 
-            {lat: 44.025255, lng: -88.555618},
-            // Phone[92] in front of clow,phonenine 
-            {lat: 44.026028, lng: -88.552211},
-            // Phone[93] behind dempsey,phoneten 
-            {lat: 44.026556, lng: -88.550250},
-            // Phone[94] lot 34,phoneeleven 
-            {lat: 44.026670, lng: -88.547795},
-            // Phone[95] in between fletcher, stewart and evans,phonetwelve 
-            {lat: 44.025771, lng: -88.547412},
-            // Phone[96] center for equity and diversity,phonethirteen 
-            {lat: 44.024777, lng: -88.546711},
-            // Phone[97] in between reeve and horizon,phonefourteen 
-            {lat: 44.024921, lng: -88.548533},
-            // Phone[98] lot 7,phonefifteen 
-            {lat: 44.024921, lng: -88.548533},
-            // Phone[99] lot 5,phonesixteen 
-            {lat: 44.023941, lng: -88.554160},
-            // Phone[100] environmental research and innovation center,phoneseventeen 
-            {lat: 44.023489, lng: -88.553277},
-            // Phone[101] behind student recreation and wellness center,phoneeighteen 
-            {lat: 44.022102, lng: -88.552487},
-            // Phone[102] path to student rec center,phonenineteen 
-            {lat: 44.023313, lng: -88.551255},
-            // Phone[103] between taylor and webster,phonetwenty 
-            {lat: 44.024791, lng: -88.551402},
-            // Phone[104] lot 15,phonetwentyone 
-            {lat: 44.024395, lng:  -88.550325},
-            // Phone[105] behind blackhawk,phonetwentytwo 
-            {lat: 44.023321, lng: -88.548516},
-            // Phone[106] wellness center front,phonetwentythree 
-            {lat: 44.021428, lng: -88.550672},
-            // Phone[107]wellness center  behind,phonetwentyfour 
-            {lat: 44.021057, lng: -88.551801},
-            // Phone[108] lot 30,phonetwentyfive 
-            {lat: 44.021727, lng: -88.548169},
-            // Phone[109] lot 18,phonetwentysix 
-            {lat: 44.022676, lng:  -88.546843},
-            // Phone[110] lot 39,phonetwentyseven 
-            {lat: 44.018830, lng: -88.556802}
-        ];
-        //array containing all marker information: positiong and title 
-        //position is a separate array with the lat/lngs of the where the markers will go
+        
+        //list of all the things you could possibly need for buildings/parking lots/phones
         //0-44 = buildings
         //45-82 = parking lots
         //83-110 = emergency phones
         var allMarkersInfo = [
             //0 albee
-            {position: locations[0], title: "Albee Hall"},
+            //position: lat, lng, title: are all used for creating the markers that go on the map
+            {position: {lat: 44.025729, lng: -88.550248}, title: "Albee Hall",
+            //thumbnail is for the infowindow that pops up when you click on a marker, hoverSelector is the selector for the 
+            //html element in index.html that is the content for the infoWindow 
+            thumbnail: "images/campuspictures/albeehall.jpeg", hoverSelector: document.getElementById('albeeHover')
+            },
             //1 baseball
-            {position: locations[1],title: "Alumni Baseball Stadium"},
+            {position: {lat: 44.023042, lng: -88.561892},title: "Alumni Baseball Stadium",
+            thumbnail:"images/campuspictures/baseball.jpg",  hoverSelector: document.getElementById('baseballHover')
+            },
             //2 alumni
-            {position: locations[2],title: "Alumni Welcome and Conference Center"},
+            {position: {lat: 44.020528, lng: -88.550432},title: "Alumni Welcome and Conference Center",
+            thumbnail: "images/campuspictures/awcc-building.jpg", hoverSelector: document.getElementById('alumniHover')
+            },
             //3 ac
-            {position: locations[3],title: "Arts and Communications"},
+            {position: {lat: 44.029640, lng: -88.552137},title: "Arts and Communications",
+            thumbnail: "images/campuspictures/artscommunications.jpeg", hoverSelector: document.getElementById('acHover')
+            },
             //4 athletic
-            {position: locations[4],title: "Athletic Service Building"},
+            {position: {lat: 44.023077, lng: -88.561081},title: "Athletic Service Building",
+            thumbnail: "images/campuspictures/athleticservice.jpeg", hoverSelector:document.getElementById('athleticHover') 
+            },
             //5 blackhawk
-            {position: locations[5],title: "Blackhawk Commons"},
+            {position: {lat: 44.023591, lng: -88.549157},title: "Blackhawk Commons",
+            thumbnail: "images/campuspictures/blackhawk.jpeg", hoverSelector: document.getElementById('blackhawkHover')
+            },
             //6 biodigester
-            {position: locations[6],title: "Biodigester"},
+            {position: {lat: 44.018897, lng: -88.558015},title: "Biodigester",
+            thumbnail:"images/campuspictures/biodigester.jpg",  hoverSelector:document.getElementById('biodigesterHover')
+            },
             //7 buckstaff
-            { position: locations[7],title: "Buckstaff Planetarium"},
+            { position: {lat: 44.028428, lng: -88.551581},title: "Buckstaff Planetarium",
+            thumbnail: "images/campuspictures/buckstaff.jpeg",  hoverSelector: document.getElementById('buckstaffHover')
+            },
             //8 equity 
-            {position: locations[8],title: "Campus Center for Equity and Diversity"},
+            {position: {lat: 44.024655, lng: -88.547217},title: "Campus Center for Equity and Diversity",
+            thumbnail: "images/campuspictures/centerforequity.jpeg", hoverSelector: document.getElementById('equityHover')
+            },
             //9 campus services
-            {position: locations[9],title: "Campus Services"},
+            {position: {lat: 44.017782, lng: -88.556446},title: "Campus Services",
+            thumbnail: "images/campuspictures/campus-services.jpg", hoverSelector: document.getElementById('campusHover')
+            },
             //10 ceramics
-            {position: locations[10],title: "Ceramics Laboratory"},
+            {position: {lat: 44.025559, lng: -88.555515},title: "Ceramics Laboratory",
+            thumbnail: "images/campuspictures/ceramicslab.jpeg", hoverSelector: document.getElementById('ceramicsHover')
+            },
             //11 clow
-            {position: locations[11],title: "Clow Social Sciences Center"},
+            {position: {lat: 44.026306, lng: -88.552268},title: "Clow Social Sciences Center",
+            thumbnail:"images/campuspictures/clow.jpeg",  hoverSelector: document.getElementById('clowHover')
+            },
             //12 gardens
-            {position: locations[12],title: "Community Gardens"},
+            {position: {lat: 44.015573, lng: -88.555929},title: "Community Gardens",
+            thumbnail:"images/campuspictures/community-gardens.jpg",  hoverSelector: document.getElementById('gardensHover')
+            },
             //13 dempsey
-            {position: locations[13],title: "Dempsey Hall"},
+            {position: {lat: 44.026603, lng: -88.550707},title: "Dempsey Hall",
+            thumbnail:"images/campuspictures/dempsey.jpeg",  hoverSelector: document.getElementById('dempseyHover')
+            },
             //14 donner
-            {position: locations[14], title: "Donner Hall" },
+            {position: {lat: 44.025420, lng: -88.552287}, title: "Donner Hall",
+            thumbnail:"images/campuspictures/donner.jpeg",  hoverSelector:document.getElementById('donnerHover')
+             },
             //15 east
-            {position: locations[15],title: "East Hall"},
+            {position: {lat: 44.031217, lng: -88.543806},title: "East Hall",
+            thumbnail: "images/campuspictures/easthall.jpg", hoverSelector: document.getElementById('eastHover')
+            },
             //16 environmental
-            { position: locations[16], title: "Environmental Science and Research Center"},
+            { position: {lat: 44.023518, lng: -88.553851}, title: "Environmental Science and Research Center",
+            thumbnail:"images/campuspictures/aquaticstudiescenter.jpeg",  hoverSelector: document.getElementById('environmentalHover')
+            },
             //17 evans
-            {position: locations[17],title: "Evans Hall" },
+            {position: {lat: 44.026168, lng: -88.547397},title: "Evans Hall",
+            thumbnail:"images/campuspictures/evans.jpeg", hoverSelector: document.getElementById('evansHover')
+             },
             //18 fletcher
-            { position: locations[18], title: "Fletcher Hall"},
+            { position: {lat: 44.025332, lng: -88.547240}, title: "Fletcher Hall",
+            thumbnail: "images/campuspictures/fletcher.jpeg",hoverSelector: document.getElementById('fletcherHover')
+            },
             //19 fredric
-            {position: locations[19],title: "Fredric March Theater" },
+            {position: {lat:  44.029000, lng:-88.552919},title: "Fredric March Theater",
+            thumbnail:"images/campuspictures/fredricmarch.jpeg", hoverSelector: document.getElementById('fredricHover')
+             },
             //20 gruenhagen
-            { position: locations[20], title: "Gruenhagen Conference Center" },
+            { position: {lat: 44.022405, lng:  -88.548824}, title: "Gruenhagen Conference Center",
+            thumbnail:"images/campuspictures/gruenhagen.jpeg", hoverSelector: document.getElementById('gruenhagenHover')
+             },
             //21 halsey
-            {position: locations[21],title: "Halsey Science Center"},
+            {position: {lat:  44.028497, lng: -88.551027},title: "Halsey Science Center",
+            thumbnail:"images/campuspictures/halsey.jpeg", hoverSelector: document.getElementById('halseyHover')
+            },
             //22 harrington
-            {position: locations[22], title: "Harrington Hall" },
+            {position: {lat:  44.027736, lng: -88.550172}, title: "Harrington Hall",
+            thumbnail:"images/campuspictures/harrington.jpeg", hoverSelector: document.getElementById('harringtonHover')
+             },
             //23 heating 
-            {position: locations[23],title: "Heating Plant" },
+            {position: {lat: 44.028235, lng: -88.554312},title: "Heating Plant",
+            thumbnail:"images/campuspictures/heatingplant.jpeg", hoverSelector: document.getElementById('heatingHover')
+             },
             //24 parking ramp
-            {position: locations[24],title: "High Avenue Parking Ramp" },
+            {position: {lat: 44.022960, lng: -88.549791},title: "High Avenue Parking Ramp",
+            thumbnail:"images/campuspictures/parkingramp.jpeg", hoverSelector: document.getElementById('parkingRampHover')
+             },
             //25 horizon
-            {position: locations[25],title: "Horizon Village" },
+            {position: {lat: 44.024363, lng: -88.547972},title: "Horizon Village",
+            thumbnail:"images/campuspictures/horizon.jpeg", hoverSelector: document.getElementById('horizonHover')
+             },
             //26 kolf
-            {position: locations[26],title: "Kolf Sports Center" },
+            {position: {lat: 44.024323, lng: -88.552214},title: "Kolf Sports Center",
+            thumbnail:"images/campuspictures/kolf.jpeg", hoverSelector: document.getElementById('kolfHover')
+             },
             //27 lincoln
-            {position: locations[27],title: "Lincoln Hall"  },
+            {position: {lat: 44.023204, lng: -88.546359},title: "Lincoln Hall",
+            thumbnail:"images/campuspictures/lincoln-hall.jpg", hoverSelector: document.getElementById('lincolnHover')
+              },
             //28 multicultural
-            { position: locations[28], title: "Multicultural Education Center" },
+            { position: {lat: 44.024842, lng: -88.550613}, title: "Multicultural Education Center",
+            thumbnail:"images/campuspictures/multiculturaleducation.jpeg", hoverSelector: document.getElementById('multiculturalHover')
+             },
             //29 nursing
-            {position: locations[29],title: "Nursing and Education Building" },
+            {position: {lat: 44.027051, lng: -88.552813},title: "Nursing and Education Building",
+            thumbnail:"images/campuspictures/nursingeducation.jpeg", hoverSelector: document.getElementById('nursingHover')
+             },
             //30 oviatt
-            {position: locations[30],title: "Oviatt House"},
+            {position: {lat:  44.027156, lng: -88.551466},title: "Oviatt House",
+            thumbnail:"images/campuspictures/oviatt.jpeg", hoverSelector: document.getElementById('oviattHover')
+            },
             //31 pollock
-            { position: locations[31],title: "Pollock House"  },
+            { position:  {lat: 44.025227, lng:  -88.551292},title: "Pollock House",
+            thumbnail:"images/campuspictures/pollock.jpeg", hoverSelector: document.getElementById('pollockHover')
+              },
             //32 polk
-            { position: locations[32], title: "Polk Library"},
+            { position: {lat: 44.026379, lng: -88.549602}, title: "Polk Library",
+            thumbnail:"images/campuspictures/polk.jpeg", hoverSelector: document.getElementById('polkHover')
+            },
             //33 radford
-            { position: locations[33], title: "Radford Hall and Student Health Center"},
+            { position: {lat: 44.025671, lng: -88.551561}, title: "Radford Hall and Student Health Center",
+            thumbnail:"images/campuspictures/radford.jpeg", hoverSelector: document.getElementById('radfordHover')
+            },
             //34 reeve
-            { position: locations[34], title: "Reeve Memorial Union"  },
+            { position: {lat: 44.024934, lng: -88.549448}, title: "Reeve Memorial Union",
+            thumbnail:"images/campuspictures/reeve.jpeg", hoverSelector: document.getElementById('reeveHover')
+              },
             //35 sage
-            { position: locations[35],  title: "Sage Hall" },
+            { position: {lat: 44.025720, lng: -88.553770},  title: "Sage Hall",
+            thumbnail:"images/campuspictures/sage.jpeg", hoverSelector: document.getElementById('sageHover')
+             },
             //36 scott
-            {position: locations[36],title: "Scott Hall" },
+            {position: {lat: 44.022556, lng: -88.547344},title: "Scott Hall",
+            thumbnail:"images/campuspictures/scott.jpeg", hoverSelector: document.getElementById('scottHover')
+             },
             //37 stewart
-            {position: locations[37],title: "Stewart Hall" },
+            {position: {lat: 44.026060, lng: -88.546952},title: "Stewart Hall",
+            thumbnail: "images/campuspictures/stewart.jpeg", hoverSelector: document.getElementById('stewartHover')
+             },
             //38 recreation
-            {position: locations[38],title: "Student Recreation and Wellness Center" },
+            {position: {lat: 44.021752, lng: -88.551694},title: "Student Recreation and Wellness Center",
+            thumbnail:"images/campuspictures/srwc.jpeg", hoverSelector: document.getElementById('recreationHover')
+             },
             //39 success
-            { position: locations[39],  title: "Student Success Center" },
+            { position: {lat: 44.026205, lng: -88.548163},  title: "Student Success Center",
+            thumbnail:"images/campuspictures/studentsuccess.jpeg", hoverSelector: document.getElementById('successHover')
+             },
             //40 swart
-            { position: locations[40], title: "Swart Hall" },
+            { position: {lat:  44.027872, lng:  -88.551962}, title: "Swart Hall",
+            thumbnail:"images/campuspictures/swart.jpeg", hoverSelector: document.getElementById('swartHover')  
+             },
             //41 taylor
-            {position: locations[41], title: "Taylor Hall" },
+            {position:  {lat: 44.024577, lng: -88.551215}, title: "Taylor Hall",
+            thumbnail:"images/campuspictures/taylor.jpeg", hoverSelector: document.getElementById('taylorHover')
+             },
             //42 titan
-            {position: locations[42],title: "Titan Stadium"},
+            {position:  {lat: 44.023671, lng: -88.562917},title: "Titan Stadium",
+            thumbnail:"images/campuspictures/titanstadium.jpeg", hoverSelector: document.getElementById('titanHover')
+            },
             //43 police
-            {position: locations[43],title: "University Police"},
+            {position:  {lat: 44.023763, lng: -88.549972},title: "University Police",
+            thumbnail:"images/campuspictures/universitypolice.jpeg", hoverSelector: document.getElementById('policeHover')
+            },
             //44 webster
-            {position: locations[44],title: "Webster Hall" },
+            {position: {lat: 44.025002, lng: -88.551681},title: "Webster Hall",
+            thumbnail:"images/campuspictures/webster.jpeg", hoverSelector: document.getElementById('websterHover')
+            },
             
             //parking lots
             // [45] Lot 11
-            {position: locations[45],title: "Lot 11"},
+            {position: {lat: 44.030449, lng: -88.552415},title: "Lot 11",
+            hoverSelector: document.getElementById('elevenHover')
+            },
             // [46] Lot 35
-            { position: locations[46], title: "Lot 35"},
+            { position: {lat: 44.029428, lng: -88.558183}, title: "Lot 35",
+            hoverSelector: document.getElementById('thirtyfiveHover')
+            },
             // [47] Lot 27
-            {position: locations[47], title: "Lot 27"},
+            {position: {lat: 44.029026, lng: -88.554960}, title: "Lot 27",
+            hoverSelector: document.getElementById('twentysevenHover')
+            },
             // [48] Lot 21
-            {position: locations[48],title: "Lot 21"},
+            {position: {lat: 44.029123, lng: -88.553173},title: "Lot 21",
+            hoverSelector: document.getElementById('twentyoneHover')
+            },
             // [49] Lot 26
-            {position: locations[49],  title: "Lot 26"},
+            {position: {lat: 44.029838, lng: -88.551684},  title: "Lot 26",
+            hoverSelector: document.getElementById('twentysixHover')
+            },
             // [50] Lot 4
-            {position: locations[50],title: "Lot 4"},
+            {position: {lat: 44.029100, lng: -88.551581},title: "Lot 4",
+            hoverSelector: document.getElementById('fourHover')
+            },
             // [51] Lot 4a
-            {position: locations[51],  title: "Lot 4a"},
+            {position: {lat: 44.028586, lng: -88.552649},  title: "Lot 4a",
+            hoverSelector: document.getElementById('fouraHover')
+            },
             // [52] Lot 16
-            {position: locations[52],title: "Lot 16"},
+            {position: {lat: 44.028822, lng: -88.550956},title: "Lot 16",
+            hoverSelector: document.getElementById('sixteenHover')
+            },
             // [53] Lot 17
-            {position: locations[53],title: "Lot 17"},
+            {position: {lat: 44.028648, lng: -88.549711},title: "Lot 17",
+            hoverSelector: document.getElementById('seventeenHover')
+            },
             // [54] Lot 29
-            { position: locations[54], title: "Lot 29"},
+            { position: {lat: 44.027825, lng: -88.553434}, title: "Lot 29",
+            hoverSelector: document.getElementById('twentynineHover')
+            },
             // [55] Lot 25
-            {position: locations[55], title: "Lot 25"},
+            {position: {lat: 44.027233, lng: -88.553602}, title: "Lot 25",
+            hoverSelector: document.getElementById('twentyfiveHover')
+            },
             // [56] Lot 8
-            {position: locations[56], title: "Lot 8"},
+            {position: {lat: 44.026371, lng: -88.554322}, title: "Lot 8",
+            hoverSelector: document.getElementById('eightHover')
+            },
             // [57] Lot 33
-            {position: locations[57],   title: "Lot 33"},
+            {position: {lat: 44.025668, lng: -88.555558},   title: "Lot 33",
+            hoverSelector: document.getElementById('thirtythreeHover')
+            },
             // [58] Lot 34
-            {position: locations[58],title: "Lot 34"},
+            {position: {lat: 44.027133, lng: -88.548009},title: "Lot 34",
+            hoverSelector: document.getElementById('thirtyfourHover')
+            },
             // [59] Lot 28
-            {position: locations[59],title: "Lot 28"},
+            {position: {lat: 44.025858, lng: -88.548893},title: "Lot 28",
+            hoverSelector: document.getElementById('twentyeightHover')
+            },
             // [60] Lot 23
-            {position: locations[60],   title: "Lot 23"},
+            {position: {lat: 44.025511, lng: -88.546748},   title: "Lot 23",
+            hoverSelector: document.getElementById('twentythreeHover')
+            },
             // [61] Lot 14a
-            {position: locations[61],title: "Lot 14a"},
+            {position: {lat: 44.025828, lng: -88.552416},title: "Lot 14a",
+            hoverSelector: document.getElementById('fourteenaHover')
+            },
             // [62] Lot 14b
-            {position: locations[62],title: "Lot 14b"},
+            {position: {lat: 44.025673, lng: -88.551929},title: "Lot 14b",
+            hoverSelector: document.getElementById('fourteenbHover')
+            },
             // [63] Lot 14c
-            {position: locations[63],title: "Lot 14c"},
+            {position: {lat: 44.025302, lng: -88.551711},title: "Lot 14c",
+            hoverSelector: document.getElementById('fourteencHover')
+            },
             // [64] Lot 7
-            {position: locations[64],title: "Lot 7"},
+            {position: {lat: 44.025023, lng: -88.553519},title: "Lot 7",
+            hoverSelector: document.getElementById('sevenHover')
+            },
             // [65] Lot 5a
-            {position: locations[65],title: "Lot 5a"},
+            {position: {lat: 44.024150, lng: -88.554291},title: "Lot 5a",
+            hoverSelector: document.getElementById('fiveaHover')
+            },
             // [66] Lot 5
-            {position: locations[66], title: "Lot 5"},
+            {position: {lat: 44.023717, lng: -88.553693}, title: "Lot 5",
+            hoverSelector: document.getElementById('fiveHover')
+            },
             // [67] Lot 7a
-            {position: locations[67], title: "Lot 7a"},
+            {position: {lat: 44.023897, lng: -88.552670}, title: "Lot 7a",
+            hoverSelector: document.getElementById('sevenaHover')
+            },
             // [68] Lot 15
-            {position: locations[68],title: "Lot 15"},
+            {position: {lat: 44.024142, lng: -88.549694},title: "Lot 15",
+            hoverSelector: document.getElementById('fifteenHover')
+            },
             // [69] Lot 32
-            {position: locations[69],title: "Lot 32"},
+            {position: {lat: 44.023912, lng: -88.550031},title: "Lot 32",
+            hoverSelector: document.getElementById('thirtytwoHover')
+            },
             // [70] Lot 13
-            {position: locations[70],title: "Lot 13"},
+            {position: {lat: 44.023505, lng: -88.551579},title: "Lot 13",
+            hoverSelector: document.getElementById('thirteenHover')
+            },
             // [71] Lot 12
-            {position: locations[71], title: "Lot 12"},
+            {position: {lat: 44.022135, lng: -88.551702}, title: "Lot 12",
+            hoverSelector: document.getElementById('twelveHover')
+            },
             // [72] Lot 6a
-            {position: locations[72], title: "Lot 6a"},
+            {position: {lat: 44.021216, lng: -88.551093}, title: "Lot 6a",
+            hoverSelector: document.getElementById('sixaHover')
+            },
             // [73] Lot 6
-            {position: locations[73], title: "Lot 6"},
+            {position: {lat: 44.020887, lng: -88.549848}, title: "Lot 6",
+            hoverSelector: document.getElementById('sixHover')
+            },
             // [74] Lot 10
-            {position: locations[74],title: "Lot 10"},
+            {position: {lat: 44.021857, lng: -88.548831},title: "Lot 10",
+            hoverSelector: document.getElementById('tenHover')
+            },
             // [75] Lot 9a
-            {position: locations[75],title: "Lot 9a"},
+            {position: {lat: 44.022435, lng: -88.548564},title: "Lot 9a",
+            hoverSelector: document.getElementById('nineaHover')
+            },
             // [76] Lot 9
-            {position: locations[76],title: "Lot 9"},
+            {position: {lat: 44.021955, lng:  -88.548167},title: "Lot 9",
+            hoverSelector: document.getElementById('nineHover')
+            },
             // [77] Lot 18
-            {position: locations[77],title: "Lot 18"},
+            {position: {lat: 44.022368, lng: -88.546827},title: "Lot 18",
+            hoverSelector: document.getElementById('eighteenHover')
+            },
             // [78] Lot 30
-            {position: locations[78],title: "Lot 30"},
+            {position: {lat: 44.021440, lng: -88.547947},title: "Lot 30",
+            hoverSelector: document.getElementById('thirtyHover')
+            },
             // [79] Lot 39
-            {position: locations[79],title: "Lot 39"},
+            {position: {lat: 44.018367, lng: -88.556821},title: "Lot 39",
+            hoverSelector: document.getElementById('thirtynineHover')
+            },
             //[80] womens center lot
-            { position: locations[80],title: "Women's Center"},
+            { position: {lat: 44.024816, lng: -88.546638},title: "Women's Center",
+            hoverSelector: document.getElementById('womensCenterHover')
+            },
             //[81] titan one lot
-            { position: locations[81],title: "Titan One"},
+            { position: {lat: 44.024401, lng: -88.564253},title: "Titan One",
+            hoverSelector: document.getElementById('titanOneHover')
+            },
             //[82] titan two lot
-            { position: locations[82],title: "Titan Two"},
+            { position: {lat: 44.023007, lng:  -88.564339},title: "Titan Two",
+            hoverSelector: document.getElementById('titanTwoHover')
+            },
 
             //emergency phones
             //[83] phonezero
-            {position: locations[83],title: "Emergency Phone"},
+            {position: {lat: 44.029568, lng: -88.557150},title: "Emergency Phone"},
             //[84] phoneone
-            {position: locations[84],title: "Emergency Phone"},
+            {position: {lat: 44.029075, lng: -88.558184},title: "Emergency Phone"},
             //[85] phonetwo
-            {position: locations[85],title: "Emergency Phone"},
+            {position: {lat: 44.028831, lng: -88.555125},title: "Emergency Phone"},
             //[86] phonethree
-            {position: locations[86],title: "Emergency Phone"},
+            {position: {lat: 44.028514, lng: -88.554386},title: "Emergency Phone"},
             //[87] phonefour
-            {position: locations[87],title: "Emergency Phone"},
+            {position: {lat: 44.029626, lng: -88.552936},title: "Emergency Phone"},
             //[88] phonefive
-            {position: locations[88],title: "Emergency Phone"},
+            {position: {lat: 44.028456, lng: -88.551907},title: "Emergency Phone"},
             //[89] phonesix
-            {position: locations[89],title: "Emergency Phone"},
+            {position: {lat: 44.027457	, lng: -88.553422},title: "Emergency Phone"},
             //[90] phoneseven
-            {position: locations[90],title: "Emergency Phone"},
+            {position: {lat: 44.028501, lng: -88.549911},title: "Emergency Phone"},
             //[91] phoneeight
-            {position: locations[91],title: "Emergency Phone"},
+            {position: {lat: 44.025255, lng: -88.555618},title: "Emergency Phone"},
             //[92] phonenine
-            {position: locations[92],title: "Emergency Phone" },
+            {position: {lat: 44.026028, lng: -88.552211},title: "Emergency Phone" },
             //[93] phoneten
-            {position: locations[93],title: "Emergency Phone"},
+            {position: {lat: 44.026556, lng: -88.550250},title: "Emergency Phone"},
             //[94] phoneeleven
-            {position: locations[94],title: "Emergency Phone"},
+            {position: {lat: 44.026670, lng: -88.547795},title: "Emergency Phone"},
             //[95] phonetwelve
-            {position: locations[95],title: "Emergency Phone"},
+            {position:{lat: 44.025771, lng: -88.547412},title: "Emergency Phone"},
             //[96] phonethirteen
-            {position: locations[96],title: "Emergency Phone" },
+            {position: {lat: 44.024777, lng: -88.546711},title: "Emergency Phone" },
             //[97] phonefourteen
-            {position: locations[97],title: "Emergency Phone"},
+            {position: {lat: 44.024921, lng: -88.548533},title: "Emergency Phone"},
             //[98] phonefifteen
-            {position: locations[98],title: "Emergency Phone" },
+            {position: {lat: 44.024921, lng: -88.548533},title: "Emergency Phone" },
             //[99] phonesixteen
-            {position: locations[99],title: "Emergency Phone" },
+            {position: {lat: 44.023941, lng: -88.554160},title: "Emergency Phone" },
             //[100] phoneseventeen
-            { position: locations[100],title: "Emergency Phone"},
+            { position: {lat: 44.023489, lng: -88.553277},title: "Emergency Phone"},
             //[101] phoneeighteen
-            {position: locations[101],title: "Emergency Phone" },
+            {position: {lat: 44.022102, lng: -88.552487},title: "Emergency Phone" },
             //[102] phonenineteen
-            { position: locations[102],title: "Emergency Phone" },
+            { position: {lat: 44.023313, lng: -88.551255},title: "Emergency Phone" },
             //[103] phonetwenty
-            {position: locations[103], title: "Emergency Phone" },
+            {position:{lat: 44.024791, lng: -88.551402}, title: "Emergency Phone" },
             //[104] phonetwentyone
-            { position: locations[104],title: "Emergency Phone"},
+            { position:{lat: 44.024395, lng:  -88.550325},title: "Emergency Phone"},
             //[105] phonetwentytwo
-            {position: locations[105],title: "Emergency Phone" },
+            {position:{lat: 44.023321, lng: -88.548516},title: "Emergency Phone" },
             //[106] phonetwentythree
-            {position: locations[106], title: "Emergency Phone" },
+            {position: {lat: 44.021428, lng: -88.550672}, title: "Emergency Phone" },
             //[107] phonetwentyfour
-            {position: locations[107],title: "Emergency Phone"},
+            {position: {lat: 44.021057, lng: -88.551801},title: "Emergency Phone"},
             //[108] phonetwentyfive
-            {position: locations[108],title: "Emergency Phone" },
+            {position: {lat: 44.021727, lng: -88.548169},title: "Emergency Phone" },
             //[109] phonetwentysix
-            {position: locations[109],title: "Emergency Phone" },
+            {position: {lat: 44.022676, lng:  -88.546843},title: "Emergency Phone" },
             //[110] phonetwentyseven
-            {position: locations[110], title: "Emergency Phone"}
+            {position: {lat: 44.018830, lng: -88.556802}, title: "Emergency Phone"}
             
         ]
+        
         //the list that will contain all of the buildingMarker objects made with "new google.maps.Marker"
         //has to be initiliazed outside of a function to use the list items with event listeners and other methods in any other functions
         var allMarkers = [];
-        var buildingMarkers = [];
         //function for creating marker objects and adding them to the allMarkers list using the data from the buildingMarkerInfo array
         function createMarkers(){
-            
-            for(i = 0; i < allMarkersInfo.length; i++){
+            for(i = 0, len = allMarkersInfo.length; i < len; i++){
                     allMarkers[i] = new google.maps.Marker({
                     position: allMarkersInfo[i].position, title: allMarkersInfo[i].title
                 });
@@ -1372,182 +1305,182 @@ function initMap() {
                 closeAllHover();
                     if (name === "albee"){
                         albeeHoverCard.open(map, allMarkers[0]);
-                        $("#albeeHover > img").attr("src", "images/campuspictures/albeehall.jpeg");
+                        $("#albeeHover > img").attr("src", allMarkersInfo[0].thumbnail);
                     }
                     else if (name === "baseball"){
-                        baseballHoverCard.open(map, allMarkers[1]);
+                        baseballHoverCard.open(map, allMarkersInfo[].thumbnail);
                         //baseball has no image atm
                     }
                     else if (name === "alumni"){
                         alumniHoverCard.open(map, allMarkers[2]);
-                        $("#alumniHover > img").attr("src", "images/campuspictures/awcc-building.jpg");
+                        $("#alumniHover > img").attr("src", allMarkersInfo[].thumbnail);
                     }
                     else if (name === "ac"){
                         acHoverCard.open(map, allMarkers[3]);
-                        $("#acHover > img").attr("src", "images/campuspictures/artscommunications.jpeg");
+                        $("#acHover > img").attr("src", allMarkersInfo[].thumbnail);
                     }
                     else if (name === "athletic"){
                         athleticHoverCard.open(map, allMarkers[4]);
-                        $("#athleticHover > img").attr("src", "images/campuspictures/athleticservice.jpeg");
+                        $("#athleticHover > img").attr("src",allMarkersInfo[].thumbnail);
                     }
                     else if (name === "blackhawk"){
                         blackhawkHoverCard.open(map, allMarkers[5]);
-                        $("#blackhawkHover > img").attr("src", "images/campuspictures/blackhawk.jpeg");
+                        $("#blackhawkHover > img").attr("src", allMarkersInfo[].thumbnail);
                     }
                     else if (name === "biodigester"){
                         biodigesterHoverCard.open(map, allMarkers[6]);
-                        $("#biodigesterHover > img").attr("src", "images/campuspictures/biodigester.jpg");
+                        $("#biodigesterHover > img").attr("src", allMarkersInfo[].thumbnail);
                     }
                     else if (name === "buckstaff"){
                         buckstaffHoverCard.open(map, allMarkers[7]);
-                        $("#buckstaffHover > img").attr("src", "images/campuspictures/buckstaff.jpeg");
+                        $("#buckstaffHover > img").attr("src",allMarkersInfo[].thumbnail);
                     }
                     else if (name === "equity"){
                         equityHoverCard.open(map, allMarkers[8]);
-                        $("#equityHover > img").attr("src", "images/campuspictures/centerforequity.jpeg");
+                        $("#equityHover > img").attr("src",allMarkersInfo[].thumbnail);
                     }
                     else if (name === "campus"){
                         campusHoverCard.open(map, allMarkers[9]);
-                        $("#campusHover > img").attr("src", "images/campuspictures/campus-services.jpg");
+                        $("#campusHover > img").attr("src", allMarkersInfo[].thumbnail);
                     }
                     else if (name === "ceramics"){
                         ceramicsHoverCard.open(map, allMarkers[10]);
-                        $("#ceramicsHover > img").attr("src", "images/campuspictures/ceramicslab.jpeg");
+                        $("#ceramicsHover > img").attr("src", allMarkersInfo[].thumbnail);
                     }
                     else if (name === "clow"){
                         clowHoverCard.open(map, allMarkers[11]);
-                        $("#clowHover > img").attr("src", "images/campuspictures/clow.jpeg");
+                        $("#clowHover > img").attr("src",allMarkersInfo[].thumbnail);
                     }
                     else if (name === "gardens"){
                         gardensHoverCard.open(map, allMarkers[12]);
-                        $("#gardensHover > img").attr("src", "images/campuspictures/community-gardens.jpg");
+                        $("#gardensHover > img").attr("src", allMarkersInfo[].thumbnail);
                     }
                     else if (name === "dempsey"){
                         dempseyHoverCard.open(map, allMarkers[13]);
-                        $("#dempseyHover > img").attr("src", "images/campuspictures/dempsey.jpeg");
+                        $("#dempseyHover > img").attr("src", allMarkersInfo[].thumbnail);
                     } else if (name === "donner"){
                         donnerHoverCard.open(map, allMarkers[14]);
-                        $("#donnerHover > img").attr("src", "images/campuspictures/donner.jpeg");
+                        $("#donnerHover > img").attr("src",allMarkersInfo[].thumbnail);
                     }
                     else if (name === "east"){
                         eastHoverCard.open(map, allMarkers[15]);
-                        $("#eastHover > img").attr("src", "images/campuspictures/easthall.jpg");
+                        $("#eastHover > img").attr("src", allMarkersInfo[].thumbnail);
                     }
                     else if (name === "environmental"){
                         environmentalHoverCard.open(map, allMarkers[16]);
-                        $("#environmentalHover > img").attr("src", "images/campuspictures/aquaticstudiescenter.jpeg");
+                        $("#environmentalHover > img").attr("src", allMarkersInfo[].thumbnail);
                     }
                     else if (name === "evans"){
                         evansHoverCard.open(map, allMarkers[17]);
-                        $("#evansHover > img").attr("src", "images/campuspictures/evans.jpeg");
+                        $("#evansHover > img").attr("src", allMarkersInfo[].thumbnail);
                     }
                     else if (name === "fletcher"){
                         fletcherHoverCard.open(map, allMarkers[18]);
-                        $("#fletcherHover > img").attr("src", "images/campuspictures/fletcher.jpeg");
+                        $("#fletcherHover > img").attr("src", allMarkersInfo[].thumbnail);
                     }
                     else if (name === "fredric"){
                         fredricHoverCard.open(map, allMarkers[19]);
-                        $("#fredricHover > img").attr("src", "images/campuspictures/fredricmarch.jpeg");
+                        $("#fredricHover > img").attr("src", allMarkersInfo[].thumbnail);
                     }
                     else if (name === "gruenhagen"){
                         gruenhagenHoverCard.open(map, allMarkers[20]);
-                        $("#gruenhagenHover > img").attr("src", "images/campuspictures/gruenhagen.jpeg");
+                        $("#gruenhagenHover > img").attr("src", allMarkersInfo[].thumbnail);
                     }
                     else if (name === "halsey"){
                         halseyHoverCard.open(map, allMarkers[21]);
-                        $("#halseyHover > img").attr("src", "images/campuspictures/halsey.jpeg");
+                        $("#halseyHover > img").attr("src", allMarkersInfo[].thumbnail);
                     }
                     else if (name === "harrington"){
                         harringtonHoverCard.open(map, allMarkers[22]);
-                        $("#harringtonHover > img").attr("src", "images/campuspictures/harrington.jpeg");
+                        $("#harringtonHover > img").attr("src", allMarkersInfo[].thumbnail);
                     }
                     else if (name === "heating"){
                         heatingHoverCard.open(map, allMarkers[23]);
-                        $("#heatingHover > img").attr("src", "images/campuspictures/heatingplant.jpeg");
+                        $("#heatingHover > img").attr("src", allMarkersInfo[].thumbnail);
                     }
                     else if (name === "parkingRamp"){
                         parkingRampHoverCard.open(map, allMarkers[24]);
-                        $("#parkingRampHover > img").attr("src", "images/campuspictures/parkingramp.jpeg");
+                        $("#parkingRampHover > img").attr("src", allMarkersInfo[].thumbnail);
                     }
                     else if (name === "horizon"){
                         horizonHoverCard.open(map, allMarkers[25]);
-                        $("#horizonHover > img").attr("src", "images/campuspictures/horizon.jpeg");
+                        $("#horizonHover > img").attr("src", allMarkersInfo[].thumbnail);
                     }
                     else if (name === "kolf"){
                         kolfHoverCard.open(map, allMarkers[26]);
-                        $("#kolfHover > img").attr("src", "images/campuspictures/kolf.jpeg");
+                        $("#kolfHover > img").attr("src", allMarkersInfo[].thumbnail);
                     }
                     else if (name === "lincoln"){
                         lincolnHoverCard.open(map, allMarkers[27]);
-                        $("#lincolnHover > img").attr("src", "images/campuspictures/lincoln-hall.jpg");
+                        $("#lincolnHover > img").attr("src", allMarkersInfo[].thumbnail);
                     }
                     else if (name === "multicultural"){
                         multiculturalHoverCard.open(map, allMarkers[28]);
-                        $("#multiculturalHover > img").attr("src", "images/campuspictures/multiculturaleducation.jpeg");
+                        $("#multiculturalHover > img").attr("src", allMarkersInfo[].thumbnail);
                     }
                     else if (name === "nursing"){
                         nursingHoverCard.open(map, allMarkers[29]);
-                        $("#nursingHover > img").attr("src", "images/campuspictures/nursingeducation.jpeg");
+                        $("#nursingHover > img").attr("src", allMarkersInfo[].thumbnail);
                     }
                     else if (name === "oviatt"){
                         oviattHoverCard.open(map, allMarkers[30]);
-                        $("#oviattHover > img").attr("src", "images/campuspictures/oviatt.jpeg");
+                        $("#oviattHover > img").attr("src", allMarkersInfo[].thumbnail);
                     }
                     else if (name === "pollock"){
                         pollockHoverCard.open(map, allMarkers[31]);
-                        $("#pollockHover > img").attr("src", "images/campuspictures/pollock.jpeg");
+                        $("#pollockHover > img").attr("src",allMarkersInfo[].thumbnail);
                     }
                     else if (name === "polk"){
                         polkHoverCard.open(map, allMarkers[32]);
-                        $("#polkHover > img").attr("src", "images/campuspictures/polk.jpeg");
+                        $("#polkHover > img").attr("src", allMarkersInfo[].thumbnail);
                     }
                     else if (name === "radford"){
                         radfordHoverCard.open(map, allMarkers[33]);
-                        $("#radfordHover > img").attr("src",  "images/campuspictures/radford.jpeg");
+                        $("#radfordHover > img").attr("src",  allMarkersInfo[].thumbnail);
                     }
                     else if (name === "reeve"){
                         reeveHoverCard.open(map, allMarkers[34]);
-                        $("#reeveHover > img").attr("src", "images/campuspictures/reeve.jpeg");
+                        $("#reeveHover > img").attr("src", allMarkersInfo[].thumbnail);
                     }
                     else if (name === "sage"){
                         sageHoverCard.open(map, allMarkers[35]);
-                        $("#sageHover > img").attr("src", "images/campuspictures/sage.jpeg");
+                        $("#sageHover > img").attr("src", allMarkersInfo[].thumbnail);
                     }
                     else if (name === "scott"){
                         scottHoverCard.open(map, allMarkers[36]);
-                        $("#scottHover > img").attr("src", "images/campuspictures/scott.jpeg");
+                        $("#scottHover > img").attr("src", allMarkersInfo[].thumbnail);
                     }
                     else if (name === "stewart"){
                         stewartHoverCard.open(map, allMarkers[37]);
-                        $("#stewartHover > img").attr("src", "images/campuspictures/stewart.jpeg");
+                        $("#stewartHover > img").attr("src",allMarkersInfo[].thumbnail);
                     }
                     else if (name === "recreation"){
                         recreationHoverCard.open(map, allMarkers[38]);
-                        $("#recreationHover > img").attr("src", "images/campuspictures/srwc.jpeg");
+                        $("#recreationHover > img").attr("src", allMarkersInfo[].thumbnail);
                     }
                     else if (name === "success"){
                         successHoverCard.open(map, allMarkers[39]);
-                        $("#successHover > img").attr("src", "images/campuspictures/studentsuccess.jpeg");
+                        $("#successHover > img").attr("src",allMarkersInfo[].thumbnail);
                     }
                     else if (name === "swart"){
                         swartHoverCard.open(map, allMarkers[40]);
-                        $("#swartHover > img").attr("src", "images/campuspictures/swart.jpeg");
+                        $("#swartHover > img").attr("src", allMarkersInfo[].thumbnail);
                     }
                     else if (name === "taylor"){
                         taylorHoverCard.open(map, allMarkers[41]);
-                        $("#taylorHover > img").attr("src", "images/campuspictures/taylor.jpeg");
+                        $("#taylorHover > img").attr("src", allMarkersInfo[].thumbnail);
                     }
                     else if (name === "titan"){
                         titanHoverCard.open(map, allMarkers[42]);
-                        $("#titanHover > img").attr("src", "images/campuspictures/titanstadium.jpeg");
+                        $("#titanHover > img").attr("src", allMarkersInfo[].thumbnail);
                     }
                     else if (name === "police"){
                         policeHoverCard.open(map, allMarkers[43]);
-                        $("#policeHover > img").attr("src", "images/campuspictures/universitypolice.jpeg");
+                        $("#policeHover > img").attr("src", allMarkersInfo[].thumbnail);
                     }
                     else if (name === "webster"){
                         websterHoverCard.open(map, allMarkers[44]);
-                        $("#websterHover > img").attr("src", "images/campuspictures/webster.jpeg");
+                        $("#websterHover > img").attr("src", allMarkersInfo[].thumbnail);
                     }
                  $("#" + name + "Hover").addClass("hoverOpen");
             //if marker is not clicked/clicked to close change src of image to empty
@@ -1684,388 +1617,27 @@ function initMap() {
         
 
         // adding hover cards for building markers
+        //ex of what it looks like to set the content for just one building
         // var albeeHover =  document.getElementById('albeeHover');
-       var hoverContentSelectors = [
-           //0 albee
-             document.getElementById('albeeHover'),
-        ];
-        //object creation for all hover infoWindows that popup when a marker is clicked
-        var albeeHoverCard = new google.maps.InfoWindow({
-            content: hoverContentSelectors[0],
-        });
+    //    var hoverContentSelectors = [
+    //          //0 albee
+    //          document.getElementById('albeeHover'),
+             
+    //     ];
+        var hoverCardsAll = [
         
-        var baseballHover = document.getElementById('baseballHover');
-        var baseballHoverCard = new google.maps.InfoWindow({
-            content: baseballHover,
-        });
-        var alumniHover = document.getElementById('alumniHover');
-        var alumniHoverCard = new google.maps.InfoWindow({
-            content: alumniHover,
-        });
-        // a&c hover
-        var acHover = document.getElementById('acHover');
-        var acHoverCard = new google.maps.InfoWindow({
-            content: acHover,
-        });
-        var athleticHover = document.getElementById('athleticHover');
-        var athleticHoverCard = new google.maps.InfoWindow({
-            content: athleticHover,
-        });
-        var blackhawkHover = document.getElementById('blackhawkHover');
-        var blackhawkHoverCard = new google.maps.InfoWindow({
-            content: blackhawkHover,
-        });
-        var biodigesterHover = document.getElementById('biodigesterHover');
-        var biodigesterHoverCard = new google.maps.InfoWindow({
-            content: biodigesterHover,
-        });
-        var buckstaffHover = document.getElementById('buckstaffHover');
-        var buckstaffHoverCard = new google.maps.InfoWindow({
-            content: buckstaffHover,
-        });
-        var equityHover = document.getElementById('equityHover');
-        var equityHoverCard = new google.maps.InfoWindow({
-            content: equityHover,
-        });
-        var campusHover = document.getElementById('campusHover');
-        var campusHoverCard = new google.maps.InfoWindow({
-            content: campusHover,
-        });
-        var ceramicsHover = document.getElementById('ceramicsHover');
-        var ceramicsHoverCard = new google.maps.InfoWindow({
-            content: ceramicsHover,
-        });
-        var clowHover = document.getElementById('clowHover');
-        var clowHoverCard = new google.maps.InfoWindow({
-            content: clowHover,
-        });
-        var gardensHover = document.getElementById('gardensHover');
-        var gardensHoverCard = new google.maps.InfoWindow({
-            content: gardensHover,
-        });
-        var dempseyHover = document.getElementById('dempseyHover');
-        var dempseyHoverCard = new google.maps.InfoWindow({
-            content: dempseyHover,
-        });
-        var donnerHover = document.getElementById('donnerHover');
-        var donnerHoverCard = new google.maps.InfoWindow({
-            content: donnerHover,
-        });
-        var eastHover = document.getElementById('eastHover');
-        var eastHoverCard = new google.maps.InfoWindow({
-            content: eastHover,
-        });
-        var environmentalHover = document.getElementById('environmentalHover');
-        var environmentalHoverCard = new google.maps.InfoWindow({
-            content: environmentalHover,
-        });
-        var evansHover = document.getElementById('evansHover');
-        var evansHoverCard = new google.maps.InfoWindow({
-            content: evansHover,
-        });
-        var fletcherHover = document.getElementById('fletcherHover');
-        var fletcherHoverCard = new google.maps.InfoWindow({
-            content: fletcherHover,
-        });
-        var fredricHover = document.getElementById('fredricHover');
-        var fredricHoverCard = new google.maps.InfoWindow({
-            content: fredricHover,
-        });
+        ]
+        //basic single object creation for all hover infoWindows that popup when a marker is clicked
+        // var albeeHoverCard = new google.maps.InfoWindow({
+        //     content: hoverContentSelectors[0],
+        // });
+        //loop to take the info from hoverContentSelectors and make a new array of hover InfoWindows
+        for(i = 0; i < 83; i++){
+            hoverCardsAll[i] = new google.maps.InfoWindow({
+                content: buildingExtras[i].thumbnail,
+            });
+        }
         
-        // GRUENHAGEN
-        // declare variable
-        var gruenhagenHover = document.getElementById('gruenhagenHover');
-        // create variable as content card
-        var gruenhagenHoverCard = new google.maps.InfoWindow({
-            content: gruenhagenHover,
-        });
-        var halseyHover = document.getElementById('halseyHover');
-        var halseyHoverCard = new google.maps.InfoWindow({
-            content: halseyHover,
-        });
-        var harringtonHover = document.getElementById('harringtonHover');
-        var harringtonHoverCard = new google.maps.InfoWindow({
-            content: harringtonHover,
-        });
-        var heatingHover = document.getElementById('heatingHover');
-        var heatingHoverCard = new google.maps.InfoWindow({
-            content: heatingHover,
-        });
-        var parkingRampHover = document.getElementById('parkingRampHover');
-        var parkingRampHoverCard = new google.maps.InfoWindow({
-            content: parkingRampHover,
-        });
-        var horizonHover = document.getElementById('horizonHover');
-        var horizonHoverCard = new google.maps.InfoWindow({
-            content: horizonHover,
-        });
-        var kolfHover = document.getElementById('kolfHover');
-        var kolfHoverCard = new google.maps.InfoWindow({
-            content: kolfHover,
-        });
-        var lincolnHover = document.getElementById('lincolnHover');
-        var lincolnHoverCard = new google.maps.InfoWindow({
-            content: lincolnHover,
-        });
-        var multiculturalHover = document.getElementById('multiculturalHover');
-        var multiculturalHoverCard = new google.maps.InfoWindow({
-            content: multiculturalHover,
-        });
-        var nursingHover = document.getElementById('nursingHover');
-        var nursingHoverCard = new google.maps.InfoWindow({
-            content: nursingHover,
-        });
-        var oviattHover = document.getElementById('oviattHover');
-        var oviattHoverCard = new google.maps.InfoWindow({
-            content: oviattHover,
-        });
-        var pollockHover = document.getElementById('pollockHover');
-        var pollockHoverCard = new google.maps.InfoWindow({
-            content: pollockHover,
-        });
-        var polkHover = document.getElementById('polkHover');
-        var polkHoverCard = new google.maps.InfoWindow({
-            content: polkHover,
-        });
-        var radfordHover = document.getElementById('radfordHover');
-        var radfordHoverCard = new google.maps.InfoWindow({
-            content: radfordHover,
-        });
-        var reeveHover = document.getElementById('reeveHover');
-        var reeveHoverCard = new google.maps.InfoWindow({
-            content: reeveHover,
-        });
-        var sageHover = document.getElementById('sageHover');
-        var sageHoverCard = new google.maps.InfoWindow({
-            content: sageHover,
-        });
-        var scottHover = document.getElementById('scottHover');
-        var scottHoverCard = new google.maps.InfoWindow({
-            content: scottHover,
-        });
-        var stewartHover = document.getElementById('stewartHover');
-        var stewartHoverCard = new google.maps.InfoWindow({
-            content: stewartHover,
-        });
-        var recreationHover = document.getElementById('recreationHover');
-        var recreationHoverCard = new google.maps.InfoWindow({
-            content: recreationHover,
-        });
-        var successHover = document.getElementById('successHover');
-        var successHoverCard = new google.maps.InfoWindow({
-            content: successHover,
-        });
-        var swartHover = document.getElementById('swartHover');
-        var swartHoverCard = new google.maps.InfoWindow({
-            content: swartHover,
-        });
-        var taylorHover = document.getElementById('taylorHover');
-        var taylorHoverCard = new google.maps.InfoWindow({
-            content: taylorHover,
-        });
-        var titanHover = document.getElementById('titanHover');
-        var titanHoverCard = new google.maps.InfoWindow({
-            content: titanHover,
-        });
-        var policeHover = document.getElementById('policeHover');
-        var policeHoverCard = new google.maps.InfoWindow({
-            content: policeHover,
-        });
-        var websterHover = document.getElementById('websterHover');
-        var websterHoverCard = new google.maps.InfoWindow({
-            content: websterHover,
-        });
-        // lot 11 hover
-        var elevenHover = document.getElementById('elevenHover');
-        var elevenHoverCard = new google.maps.InfoWindow({
-            content: elevenHover,
-        });
-        // lot 35 hover
-        var thirtyfiveHover = document.getElementById('thirtyfiveHover');
-        var thirtyfiveHoverCard = new google.maps.InfoWindow({
-            content: thirtyfiveHover,
-        });
-        // lot 27 hover
-        var twentysevenHover = document.getElementById('twentysevenHover');
-        var twentysevenHoverCard = new google.maps.InfoWindow({
-            content: twentysevenHover,
-        });
-        // lot 21 hover
-        var twentyoneHover = document.getElementById('twentyoneHover');
-        var twentyoneHoverCard = new google.maps.InfoWindow({
-            content: twentyoneHover,
-        });
-        // lot 26 hover
-        var twentysixHover = document.getElementById('twentysixHover');
-        var twentysixHoverCard = new google.maps.InfoWindow({
-            content: twentysixHover,
-        });
-        // lot 4 hover
-        var fourHover = document.getElementById('fourHover');
-        var fourHoverCard = new google.maps.InfoWindow({
-            content: fourHover,
-        });
-        // lot 4a hover
-        var fouraHover = document.getElementById('fouraHover');
-        var fouraHoverCard = new google.maps.InfoWindow({
-            content: fouraHover,
-        });
-        // lot 16 hover
-        var sixteenHover = document.getElementById('sixteenHover');
-        var sixteenHoverCard = new google.maps.InfoWindow({
-            content: sixteenHover,
-        });
-        // lot 17 hover
-        var seventeenHover = document.getElementById('seventeenHover');
-        var seventeenHoverCard = new google.maps.InfoWindow({
-            content: seventeenHover,
-        });
-        // lot 29 hover
-        var twentynineHover = document.getElementById('twentynineHover');
-        var twentynineHoverCard = new google.maps.InfoWindow({
-            content: twentynineHover,
-        });
-        // lot 25 hover
-        var twentyfiveHover = document.getElementById('twentyfiveHover');
-        var twentyfiveHoverCard = new google.maps.InfoWindow({
-            content: twentyfiveHover,
-        });
-        // lot 8 hover
-        var eightHover = document.getElementById('eightHover');
-        var eightHoverCard = new google.maps.InfoWindow({
-            content: eightHover,
-        });
-        // lot 33 hover
-        var thirtythreeHover = document.getElementById('thirtythreeHover');
-        var thirtythreeHoverCard = new google.maps.InfoWindow({
-            content: thirtythreeHover,
-        });
-        // lot 34 hover
-        var thirtyfourHover = document.getElementById('thirtyfourHover');
-        var thirtyfourHoverCard = new google.maps.InfoWindow({
-            content: thirtyfourHover,
-        });
-        // lot 28 hover
-        var twentyeightHover = document.getElementById('twentyeightHover');
-        var twentyeightHoverCard = new google.maps.InfoWindow({
-            content: twentyeightHover,
-        });
-        // lot 23 hover
-        var twentythreeHover = document.getElementById('twentythreeHover');
-        var twentythreeHoverCard = new google.maps.InfoWindow({
-            content: twentythreeHover,
-        });
-        // lot 14a hover
-        var fourteenaHover = document.getElementById('fourteenaHover');
-        var fourteenaHoverCard = new google.maps.InfoWindow({
-            content: fourteenaHover,
-        });
-        // lot 14b hover
-        var fourteenbHover = document.getElementById('fourteenbHover');
-        var fourteenbHoverCard = new google.maps.InfoWindow({
-            content: fourteenbHover,
-        });
-        // lot 14c hover
-        var fourteencHover = document.getElementById('fourteencHover');
-        var fourteencHoverCard = new google.maps.InfoWindow({
-            content: fourteencHover,
-        });
-        // lot 7 hover
-        var sevenHover = document.getElementById('sevenHover');
-        var sevenHoverCard = new google.maps.InfoWindow({
-            content: sevenHover,
-        });
-        // lot 5a hover
-        var fiveaHover = document.getElementById('fiveaHover');
-        var fiveaHoverCard = new google.maps.InfoWindow({
-            content: fiveaHover,
-        });
-         // lot 5 hover
-         var fiveHover = document.getElementById('fiveHover');
-         var fiveHoverCard = new google.maps.InfoWindow({
-             content: fiveHover,
-         });
-         // lot 7a hover
-        var sevenaHover = document.getElementById('sevenaHover');
-        var sevenaHoverCard = new google.maps.InfoWindow({
-            content: sevenaHover,
-        });
-        // lot 15 hover
-        var fifteenHover = document.getElementById('fifteenHover');
-        var fifteenHoverCard = new google.maps.InfoWindow({
-            content: fifteenHover,
-        });
-        // lot 32 hover
-        var thirtytwoHover = document.getElementById('thirtytwoHover');
-        var thirtytwoHoverCard = new google.maps.InfoWindow({
-            content: thirtytwoHover,
-        });
-        // lot 13 hover
-        var thirteenHover = document.getElementById('thirteenHover');
-        var thirteenHoverCard = new google.maps.InfoWindow({
-            content: thirteenHover,
-        });
-        // lot 12 hover
-        var twelveHover = document.getElementById('twelveHover');
-        var twelveHoverCard = new google.maps.InfoWindow({
-            content: twelveHover,
-        });
-        // lot 6a hover
-        var sixaHover = document.getElementById('sixaHover');
-        var sixaHoverCard = new google.maps.InfoWindow({
-            content: sixaHover,
-        });
-        
-        // lot 6 hover
-        var sixHover = document.getElementById('sixHover');
-        var sixHoverCard = new google.maps.InfoWindow({
-            content: sixHover,
-        });
-        // lot 10 hover
-        var tenHover = document.getElementById('tenHover');
-        var tenHoverCard = new google.maps.InfoWindow({
-            content: tenHover,
-        });
-        // lot 9a hover
-        var nineaHover = document.getElementById('nineaHover');
-        var nineaHoverCard = new google.maps.InfoWindow({
-            content: nineaHover,
-        });
-        // lot 9 hover
-        var nineHover = document.getElementById('nineHover');
-        var nineHoverCard = new google.maps.InfoWindow({
-            content: nineHover,
-        });
-        // lot 18 hover
-        var eighteenHover = document.getElementById('eighteenHover');
-        var eighteenHoverCard = new google.maps.InfoWindow({
-            content: eighteenHover,
-        });
-         // lot 30 hover
-         var thirtyHover = document.getElementById('thirtyHover');
-         var thirtyHoverCard = new google.maps.InfoWindow({
-             content: thirtyHover,
-         });
-         // lot 39 hover
-         var thirtynineHover = document.getElementById('thirtynineHover');
-         var thirtynineHoverCard = new google.maps.InfoWindow({
-             content: thirtynineHover,
-         });
-         // womens center
-         var womensCenterHover = document.getElementById('womensCenterHover');
-         var womensCenterHoverCard = new google.maps.InfoWindow({
-             content: womensCenterHover,
-         });
-         // titan one
-         var titanOneHover = document.getElementById('titanOneHover');
-         var titanOneHoverCard = new google.maps.InfoWindow({
-             content: titanOneHover,
-         });
-         // titan two
-         var titanTwoHover = document.getElementById('titanTwoHover');
-         var titanTwoHoverCard = new google.maps.InfoWindow({
-             content: titanTwoHover,
-         });
 
 
         //click event listeners for all markers
@@ -3776,7 +3348,752 @@ function initMap() {
 }
 
 //here lie ye old code
+//lot 11 hover
+// var elevenHover = document.getElementById('elevenHover');
+// var elevenHoverCard = new google.maps.InfoWindow({
+//     content: elevenHover,
+// });
+// // lot 35 hover
+// var thirtyfiveHover = document.getElementById('thirtyfiveHover');
+// var thirtyfiveHoverCard = new google.maps.InfoWindow({
+//     content: thirtyfiveHover,
+// });
+// // lot 27 hover
+// var twentysevenHover = document.getElementById('twentysevenHover');
+// var twentysevenHoverCard = new google.maps.InfoWindow({
+//     content: twentysevenHover,
+// });
+// // lot 21 hover
+// var twentyoneHover = document.getElementById('twentyoneHover');
+// var twentyoneHoverCard = new google.maps.InfoWindow({
+//     content: twentyoneHover,
+// });
+// // lot 26 hover
+// var twentysixHover = document.getElementById('twentysixHover');
+// var twentysixHoverCard = new google.maps.InfoWindow({
+//     content: twentysixHover,
+// });
+// // lot 4 hover
+// var fourHover = document.getElementById('fourHover');
+// var fourHoverCard = new google.maps.InfoWindow({
+//     content: fourHover,
+// });
+// // lot 4a hover
+// var fouraHover = document.getElementById('fouraHover');
+// var fouraHoverCard = new google.maps.InfoWindow({
+//     content: fouraHover,
+// });
+// // lot 16 hover
+// var sixteenHover = document.getElementById('sixteenHover');
+// var sixteenHoverCard = new google.maps.InfoWindow({
+//     content: sixteenHover,
+// });
+// // lot 17 hover
+// var seventeenHover = document.getElementById('seventeenHover');
+// var seventeenHoverCard = new google.maps.InfoWindow({
+//     content: seventeenHover,
+// });
+// // lot 29 hover
+// var twentynineHover = document.getElementById('twentynineHover');
+// var twentynineHoverCard = new google.maps.InfoWindow({
+//     content: twentynineHover,
+// });
+// // lot 25 hover
+// var twentyfiveHover = document.getElementById('twentyfiveHover');
+// var twentyfiveHoverCard = new google.maps.InfoWindow({
+//     content: twentyfiveHover,
+// });
+// // lot 8 hover
+// var eightHover = document.getElementById('eightHover');
+// var eightHoverCard = new google.maps.InfoWindow({
+//     content: eightHover,
+// });
+// // lot 33 hover
+// var thirtythreeHover = document.getElementById('thirtythreeHover');
+// var thirtythreeHoverCard = new google.maps.InfoWindow({
+//     content: thirtythreeHover,
+// });
+// // lot 34 hover
+// var thirtyfourHover = document.getElementById('thirtyfourHover');
+// var thirtyfourHoverCard = new google.maps.InfoWindow({
+//     content: thirtyfourHover,
+// });
+// // lot 28 hover
+// var twentyeightHover = document.getElementById('twentyeightHover');
+// var twentyeightHoverCard = new google.maps.InfoWindow({
+//     content: twentyeightHover,
+// });
+// // lot 23 hover
+// var twentythreeHover = document.getElementById('twentythreeHover');
+// var twentythreeHoverCard = new google.maps.InfoWindow({
+//     content: twentythreeHover,
+// });
+// // lot 14a hover
+// var fourteenaHover = document.getElementById('fourteenaHover');
+// var fourteenaHoverCard = new google.maps.InfoWindow({
+//     content: fourteenaHover,
+// });
+// // lot 14b hover
+// var fourteenbHover = document.getElementById('fourteenbHover');
+// var fourteenbHoverCard = new google.maps.InfoWindow({
+//     content: fourteenbHover,
+// });
+// // lot 14c hover
+// var fourteencHover = document.getElementById('fourteencHover');
+// var fourteencHoverCard = new google.maps.InfoWindow({
+//     content: fourteencHover,
+// });
+// // lot 7 hover
+// var sevenHover = document.getElementById('sevenHover');
+// var sevenHoverCard = new google.maps.InfoWindow({
+//     content: sevenHover,
+// });
+// // lot 5a hover
+// var fiveaHover = document.getElementById('fiveaHover');
+// var fiveaHoverCard = new google.maps.InfoWindow({
+//     content: fiveaHover,
+// });
+//  // lot 5 hover
+//  var fiveHover = document.getElementById('fiveHover');
+//  var fiveHoverCard = new google.maps.InfoWindow({
+//      content: fiveHover,
+//  });
+//  // lot 7a hover
+// var sevenaHover = document.getElementById('sevenaHover');
+// var sevenaHoverCard = new google.maps.InfoWindow({
+//     content: sevenaHover,
+// });
+// // lot 15 hover
+// var fifteenHover = document.getElementById('fifteenHover');
+// var fifteenHoverCard = new google.maps.InfoWindow({
+//     content: fifteenHover,
+// });
+// // lot 32 hover
+// var thirtytwoHover = document.getElementById('thirtytwoHover');
+// var thirtytwoHoverCard = new google.maps.InfoWindow({
+//     content: thirtytwoHover,
+// });
+// // lot 13 hover
+// var thirteenHover = document.getElementById('thirteenHover');
+// var thirteenHoverCard = new google.maps.InfoWindow({
+//     content: thirteenHover,
+// });
+// // lot 12 hover
+// var twelveHover = document.getElementById('twelveHover');
+// var twelveHoverCard = new google.maps.InfoWindow({
+//     content: twelveHover,
+// });
+// // lot 6a hover
+// var sixaHover = document.getElementById('sixaHover');
+// var sixaHoverCard = new google.maps.InfoWindow({
+//     content: sixaHover,
+// });
 
+// // lot 6 hover
+// var sixHover = document.getElementById('sixHover');
+// var sixHoverCard = new google.maps.InfoWindow({
+//     content: sixHover,
+// });
+// // lot 10 hover
+// var tenHover = document.getElementById('tenHover');
+// var tenHoverCard = new google.maps.InfoWindow({
+//     content: tenHover,
+// });
+// // lot 9a hover
+// var nineaHover = document.getElementById('nineaHover');
+// var nineaHoverCard = new google.maps.InfoWindow({
+//     content: nineaHover,
+// });
+// // lot 9 hover
+// var nineHover = document.getElementById('nineHover');
+// var nineHoverCard = new google.maps.InfoWindow({
+//     content: nineHover,
+// });
+// // lot 18 hover
+// var eighteenHover = document.getElementById('eighteenHover');
+// var eighteenHoverCard = new google.maps.InfoWindow({
+//     content: eighteenHover,
+// });
+//  // lot 30 hover
+//  var thirtyHover = document.getElementById('thirtyHover');
+//  var thirtyHoverCard = new google.maps.InfoWindow({
+//      content: thirtyHover,
+//  });
+//  // lot 39 hover
+//  var thirtynineHover = document.getElementById('thirtynineHover');
+//  var thirtynineHoverCard = new google.maps.InfoWindow({
+//      content: thirtynineHover,
+//  });
+//  // womens center
+//  var womensCenterHover = document.getElementById('womensCenterHover');
+//  var womensCenterHoverCard = new google.maps.InfoWindow({
+//      content: womensCenterHover,
+//  });
+//  // titan one
+//  var titanOneHover = document.getElementById('titanOneHover');
+//  var titanOneHoverCard = new google.maps.InfoWindow({
+//      content: titanOneHover,
+//  });
+//  // titan two
+//  var titanTwoHover = document.getElementById('titanTwoHover');
+//  var titanTwoHoverCard = new google.maps.InfoWindow({
+//      content: titanTwoHover,
+//  });
+//var baseballHover = document.getElementById('baseballHover');
+// var baseballHoverCard = new google.maps.InfoWindow({
+//     content: baseballHover,
+// });
+// var alumniHover = document.getElementById('alumniHover');
+// var alumniHoverCard = new google.maps.InfoWindow({
+//     content: alumniHover,
+// });
+// // a&c hover
+// var acHover = document.getElementById('acHover');
+// var acHoverCard = new google.maps.InfoWindow({
+//     content: acHover,
+// });
+// var athleticHover = document.getElementById('athleticHover');
+// var athleticHoverCard = new google.maps.InfoWindow({
+//     content: athleticHover,
+// });
+// var blackhawkHover = document.getElementById('blackhawkHover');
+// var blackhawkHoverCard = new google.maps.InfoWindow({
+//     content: blackhawkHover,
+// });
+// var biodigesterHover = document.getElementById('biodigesterHover');
+// var biodigesterHoverCard = new google.maps.InfoWindow({
+//     content: biodigesterHover,
+// });
+// var buckstaffHover = document.getElementById('buckstaffHover');
+// var buckstaffHoverCard = new google.maps.InfoWindow({
+//     content: buckstaffHover,
+// });
+// var equityHover = document.getElementById('equityHover');
+// var equityHoverCard = new google.maps.InfoWindow({
+//     content: equityHover,
+// });
+// var campusHover = document.getElementById('campusHover');
+// var campusHoverCard = new google.maps.InfoWindow({
+//     content: campusHover,
+// });
+// var ceramicsHover = document.getElementById('ceramicsHover');
+// var ceramicsHoverCard = new google.maps.InfoWindow({
+//     content: ceramicsHover,
+// });
+// var clowHover = document.getElementById('clowHover');
+// var clowHoverCard = new google.maps.InfoWindow({
+//     content: clowHover,
+// });
+// var gardensHover = document.getElementById('gardensHover');
+// var gardensHoverCard = new google.maps.InfoWindow({
+//     content: gardensHover,
+// });
+// var dempseyHover = document.getElementById('dempseyHover');
+// var dempseyHoverCard = new google.maps.InfoWindow({
+//     content: dempseyHover,
+// });
+// var donnerHover = document.getElementById('donnerHover');
+// var donnerHoverCard = new google.maps.InfoWindow({
+//     content: donnerHover,
+// });
+// var eastHover = document.getElementById('eastHover');
+// var eastHoverCard = new google.maps.InfoWindow({
+//     content: eastHover,
+// });
+// var environmentalHover = document.getElementById('environmentalHover');
+// var environmentalHoverCard = new google.maps.InfoWindow({
+//     content: environmentalHover,
+// });
+// var evansHover = document.getElementById('evansHover');
+// var evansHoverCard = new google.maps.InfoWindow({
+//     content: evansHover,
+// });
+// var fletcherHover = document.getElementById('fletcherHover');
+// var fletcherHoverCard = new google.maps.InfoWindow({
+//     content: fletcherHover,
+// });
+// var fredricHover = document.getElementById('fredricHover');
+// var fredricHoverCard = new google.maps.InfoWindow({
+//     content: fredricHover,
+// });
+
+// // GRUENHAGEN
+// // declare variable
+// var gruenhagenHover = document.getElementById('gruenhagenHover');
+// // create variable as content card
+// var gruenhagenHoverCard = new google.maps.InfoWindow({
+//     content: gruenhagenHover,
+// });
+// var halseyHover = document.getElementById('halseyHover');
+// var halseyHoverCard = new google.maps.InfoWindow({
+//     content: halseyHover,
+// });
+// var harringtonHover = document.getElementById('harringtonHover');
+// var harringtonHoverCard = new google.maps.InfoWindow({
+//     content: harringtonHover,
+// });
+// var heatingHover = document.getElementById('heatingHover');
+// var heatingHoverCard = new google.maps.InfoWindow({
+//     content: heatingHover,
+// });
+// var parkingRampHover = document.getElementById('parkingRampHover');
+// var parkingRampHoverCard = new google.maps.InfoWindow({
+//     content: parkingRampHover,
+// });
+// var horizonHover = document.getElementById('horizonHover');
+// var horizonHoverCard = new google.maps.InfoWindow({
+//     content: horizonHover,
+// });
+// var kolfHover = document.getElementById('kolfHover');
+// var kolfHoverCard = new google.maps.InfoWindow({
+//     content: kolfHover,
+// });
+// var lincolnHover = document.getElementById('lincolnHover');
+// var lincolnHoverCard = new google.maps.InfoWindow({
+//     content: lincolnHover,
+// });
+// var multiculturalHover = document.getElementById('multiculturalHover');
+// var multiculturalHoverCard = new google.maps.InfoWindow({
+//     content: multiculturalHover,
+// });
+// var nursingHover = document.getElementById('nursingHover');
+// var nursingHoverCard = new google.maps.InfoWindow({
+//     content: nursingHover,
+// });
+// var oviattHover = document.getElementById('oviattHover');
+// var oviattHoverCard = new google.maps.InfoWindow({
+//     content: oviattHover,
+// });
+// var pollockHover = document.getElementById('pollockHover');
+// var pollockHoverCard = new google.maps.InfoWindow({
+//     content: pollockHover,
+// });
+// var polkHover = document.getElementById('polkHover');
+// var polkHoverCard = new google.maps.InfoWindow({
+//     content: polkHover,
+// });
+// var radfordHover = document.getElementById('radfordHover');
+// var radfordHoverCard = new google.maps.InfoWindow({
+//     content: radfordHover,
+// });
+// var reeveHover = document.getElementById('reeveHover');
+// var reeveHoverCard = new google.maps.InfoWindow({
+//     content: reeveHover,
+// });
+// var sageHover = document.getElementById('sageHover');
+// var sageHoverCard = new google.maps.InfoWindow({
+//     content: sageHover,
+// });
+// var scottHover = document.getElementById('scottHover');
+// var scottHoverCard = new google.maps.InfoWindow({
+//     content: scottHover,
+// });
+// var stewartHover = document.getElementById('stewartHover');
+// var stewartHoverCard = new google.maps.InfoWindow({
+//     content: stewartHover,
+// });
+// var recreationHover = document.getElementById('recreationHover');
+// var recreationHoverCard = new google.maps.InfoWindow({
+//     content: recreationHover,
+// });
+// var successHover = document.getElementById('successHover');
+// var successHoverCard = new google.maps.InfoWindow({
+//     content: successHover,
+// });
+// var swartHover = document.getElementById('swartHover');
+// var swartHoverCard = new google.maps.InfoWindow({
+//     content: swartHover,
+// });
+// var taylorHover = document.getElementById('taylorHover');
+// var taylorHoverCard = new google.maps.InfoWindow({
+//     content: taylorHover,
+// });
+// var titanHover = document.getElementById('titanHover');
+// var titanHoverCard = new google.maps.InfoWindow({
+//     content: titanHover,
+// });
+// var policeHover = document.getElementById('policeHover');
+// var policeHoverCard = new google.maps.InfoWindow({
+//     content: policeHover,
+// });
+// var websterHover = document.getElementById('websterHover');
+// var websterHoverCard = new google.maps.InfoWindow({
+//     content: websterHover,
+// });
+//all of the thumbnail images for the infowindows that open when a marker is clicked
+        //order of buildings is very important that they stay the same between arrays otherwise
+        //they wont match up when they are put together in loops
+        // var buildingExtras= [
+        //     //0 albee
+        //     {thumbnail: "images/campuspictures/albeehall.jpeg", 
+        //      hoverSelector: document.getElementById('albeeHover')},
+        //     //1 baseball
+        //     {thumbnail:"images/campuspictures/baseball.jpg",  hoverSelector: document.getElementById('baseballHover') },
+            
+        //     //2 alumni
+        //     {thumbnail: "images/campuspictures/awcc-building.jpg", hoverSelector: document.getElementById('alumniHover')},
+            
+        //     //3 ac
+        //     {thumbnail: "images/campuspictures/artscommunications.jpeg", hoverSelector: document.getElementById('acHover')},
+            
+        //     //4 athletic
+        //     {thumbnail: "images/campuspictures/athleticservice.jpeg", hoverSelector:document.getElementById('athleticHover') },
+            
+        //     //5 blackhawk
+        //     {thumbnail: "images/campuspictures/blackhawk.jpeg", hoverSelector: document.getElementById('blackhawkHover')},
+            
+        //     //6 biodigester
+        //     {thumbnail:"images/campuspictures/biodigester.jpg",  hoverSelector:document.getElementById('biodigesterHover') },
+            
+        //     //7 buckstaff
+        //     {thumbnail: "images/campuspictures/buckstaff.jpeg",  hoverSelector: document.getElementById('buckstaffHover')},
+            
+        //     //8 equity
+        //     {thumbnail: "images/campuspictures/centerforequity.jpeg", hoverSelector: document.getElementById('equityHover')},
+            
+        //     //9 campus
+        //     {thumbnail: "images/campuspictures/campus-services.jpg", hoverSelector: document.getElementById('campusHover')},
+            
+        //     //10 ceramics
+        //     {thumbnail: "images/campuspictures/ceramicslab.jpeg", hoverSelector: document.getElementById('ceramicsHover')},
+            
+        //     //11 clow
+        //     {thumbnail:"images/campuspictures/clow.jpeg",  hoverSelector: document.getElementById('clowHover')},
+            
+        //     //12 gardens
+        //     {thumbnail:"images/campuspictures/community-gardens.jpg",  hoverSelector: document.getElementById('gardensHover')},
+            
+        //     //13 dempsey
+        //     {thumbnail:"images/campuspictures/dempsey.jpeg",  hoverSelector: document.getElementById('dempseyHover')},
+            
+        //     //14 donner
+        //     {thumbnail:"images/campuspictures/donner.jpeg",  hoverSelector:document.getElementById('donnerHover')},
+            
+        //     //15 east
+        //     {thumbnail: "images/campuspictures/easthall.jpg", hoverSelector: document.getElementById('eastHover')},
+            
+        //     //16 environmental
+        //     {thumbnail:"images/campuspictures/aquaticstudiescenter.jpeg",  hoverSelector: document.getElementById('environmentalHover')},
+            
+        //     //17 evans
+        //     {thumbnail:"images/campuspictures/evans.jpeg", hoverSelector: document.getElementById('evansHover')},
+            
+        //     //18 fletcher
+        //     {thumbnail: "images/campuspictures/fletcher.jpeg",hoverSelector: document.getElementById('fletcherHover')},
+            
+        //     //19 fredric
+        //     {thumbnail:"images/campuspictures/fredricmarch.jpeg", hoverSelector: document.getElementById('fredricHover')},
+            
+        //     //20 gruenhagen
+        //     {thumbnail:"images/campuspictures/gruenhagen.jpeg", hoverSelector: document.getElementById('gruenhagenHover')},
+            
+        //     //21 halsey
+        //     {thumbnail:"images/campuspictures/halsey.jpeg", hoverSelector: document.getElementById('halseyHover')},
+            
+        //     //22 harrington
+        //     {thumbnail:"images/campuspictures/harrington.jpeg", hoverSelector: document.getElementById('harringtonHover')},
+            
+        //     //23 heating
+        //     {thumbnail:"images/campuspictures/heatingplant.jpeg", hoverSelector: document.getElementById('heatingHover')},
+            
+        //     //24 parkingRamp
+        //     {thumbnail:"images/campuspictures/parkingramp.jpeg", hoverSelector: document.getElementById('parkingRampHover')},
+            
+        //     //25 horizon
+        //     {thumbnail:"images/campuspictures/horizon.jpeg", hoverSelector: document.getElementById('horizonHover')},
+            
+        //     //26 kolf
+        //     {thumbnail:"images/campuspictures/kolf.jpeg", hoverSelector: document.getElementById('kolfHover')},
+            
+        //     //27 lincoln
+        //     {thumbnail:"images/campuspictures/lincoln-hall.jpg", hoverSelector: document.getElementById('lincolnHover')},
+            
+        //     //28 multicultural
+        //     {thumbnail:"images/campuspictures/multiculturaleducation.jpeg", hoverSelector: document.getElementById('multiculturalHover')},
+            
+        //     //29 nursing
+        //     {thumbnail:"images/campuspictures/nursingeducation.jpeg", hoverSelector: document.getElementById('nursingHover')},
+            
+        //     //30 oviatt
+        //     {thumbnail:"images/campuspictures/oviatt.jpeg", hoverSelector: document.getElementById('oviattHover')},
+            
+        //     //31 pollock
+        //     {thumbnail:"images/campuspictures/pollock.jpeg", hoverSelector: document.getElementById('pollockHover')},
+            
+        //     //32 polk
+        //     {thumbnail:"images/campuspictures/polk.jpeg", hoverSelector: document.getElementById('polkHover')},
+            
+        //     //33 radford
+        //     {thumbnail:"images/campuspictures/radford.jpeg", hoverSelector: document.getElementById('radfordHover')},
+            
+        //     //34 reeve
+        //     {thumbnail:"images/campuspictures/reeve.jpeg", hoverSelector: document.getElementById('reeveHover')},
+            
+        //     //35 sage
+        //     {thumbnail:"images/campuspictures/sage.jpeg", hoverSelector: document.getElementById('sageHover')},
+            
+        //     //36 scott
+        //     {thumbnail:"images/campuspictures/scott.jpeg", hoverSelector: document.getElementById('scottHover')},
+            
+        //     //37 stewart
+        //     {thumbnail: "images/campuspictures/stewart.jpeg", hoverSelector: document.getElementById('stewartHover')},
+           
+        //     //38 recreation
+        //     {thumbnail:"images/campuspictures/srwc.jpeg", hoverSelector: document.getElementById('recreationHover')},
+            
+        //     //39 success
+        //     {thumbnail:"images/campuspictures/studentsuccess.jpeg", hoverSelector: document.getElementById('successHover')},
+            
+        //     //40 swart
+        //     {thumbnail:"images/campuspictures/swart.jpeg", hoverSelector: document.getElementById('swartHover')},
+            
+        //     //41 taylor
+        //     {thumbnail:"images/campuspictures/taylor.jpeg", hoverSelector: document.getElementById('taylorHover')},
+            
+        //     //42 titan
+        //     {thumbnail:"images/campuspictures/titanstadium.jpeg", hoverSelector: document.getElementById('titanHover')},
+            
+        //     //43 police
+        //     {thumbnail:"images/campuspictures/universitypolice.jpeg", hoverSelector: document.getElementById('policeHover')},
+            
+        //     //44 webster
+        //     {thumbnail:"images/campuspictures/webster.jpeg", hoverSelector: document.getElementById('websterHover')},
+            
+        // ]
+// buildings array, sets locations for all of the places
+        //0-44 = buildings
+        //45-82 = parking lots
+        //83-110 = emergency phones
+        // var locations = [
+            
+        //                 //buildings
+        //                 // albee hall [0]
+        //                 {lat: 44.025729, lng: -88.550248},
+        //                 // alumni baseball stadium [1]
+        //                 {lat: 44.023042, lng: -88.561892},
+        //                 // alumni welcome and conference center [2]
+        //                 {lat: 44.020528, lng: -88.550432},
+        //                 // A&C [3]
+        //                 {lat: 44.029640, lng: -88.552137},
+        //                 // athletic service building [4]
+        //                 {lat: 44.023077, lng: -88.561081},
+        //                 // blackhawk commons [5]
+        //                 {lat: 44.023591, lng: -88.549157},
+        //                 // biodigester [6]
+        //                 {lat: 44.018897, lng: -88.558015},
+        //                 // Buckstaff Planetarium [7]
+        //                 {lat: 44.028428, lng: -88.551581},
+        //                 // campus center for equity and diversity [8]
+        //                 {lat: 44.024655, lng: -88.547217},
+        //                 // campus services [9]
+        //                 {lat: 44.017782, lng: -88.556446},
+        //                 // ceramics laboratory [10]
+        //                 {lat: 44.025559, lng: -88.555515},
+        //                 //  clow [11]
+        //                 {lat: 44.026306, lng: -88.552268},
+        //                 // community gardens [12]
+        //                 {lat: 44.015573, lng: -88.555929},
+        //                 // Dempsey hall [13]
+        //                 {lat: 44.026603, lng: -88.550707},
+        //                 // donner hall [14]
+        //                 {lat: 44.025420, lng: -88.552287},
+        //                 // East Hall [15]
+        //                 {lat: 44.031217, lng: -88.543806},
+        //                 // environmental science and research center [16]
+        //                 {lat: 44.023518, lng: -88.553851},
+        //                 // evans hall [17]
+        //                 {lat: 44.026168, lng: -88.547397},
+        //                 // fletcher hall [18]
+        //                 {lat: 44.025332, lng: -88.547240},
+        //                 // Fredric March Theater [19]
+        //                 {lat:  44.029000, lng:-88.552919},
+        //                 // gruenhagen [20]
+        //                 {lat: 44.022405, lng:  -88.548824},
+        //                 // Halsey Science Center [21]
+        //                 {lat:  44.028497, lng: -88.551027},
+        //                 // Harrington Hall [22]
+        //                 {lat:  44.027736, lng: -88.550172},
+        //                 // Heating Plant [23]
+        //                 {lat: 44.028235, lng: -88.554312},
+        //                 // high avenue parking ramp [24]
+        //                 {lat: 44.022960, lng: -88.549791},
+        //                 // horizon village [25]
+        //                 {lat: 44.024363, lng: -88.547972},
+        //                 // kolf sports center [26]
+        //                 {lat: 44.024323, lng: -88.552214},
+        //                 // lincoln hall [27]
+        //                 {lat: 44.023204, lng: -88.546359},
+        //                 // multicultural education center [28]
+        //                 {lat: 44.024842, lng: -88.550613},
+        //                 // Nursing and Education Building [29]
+        //                 {lat: 44.027051, lng: -88.552813},
+        //                 // Oviatt House [30]
+        //                 {lat:  44.027156, lng: -88.551466},
+        //                 // pollock house [31]
+        //                 {lat: 44.025227, lng:  -88.551292},
+        //                 // polk library [32]
+        //                 {lat: 44.026379, lng: -88.549602},
+        //                 // radford hall & student health center [33]
+        //                 {lat: 44.025671, lng: -88.551561},
+        //                 // reeve memorial union [34]
+        //                 {lat: 44.024934, lng: -88.549448},
+        //                 // sage hall [35]
+        //                 {lat: 44.025720, lng: -88.553770},
+        //                 // scott hall [36]
+        //                 {lat: 44.022556, lng: -88.547344},
+        //                 // stewart hall [37]
+        //                 {lat: 44.026060, lng: -88.546952},
+        //                 // student recreation and wellness center [38]
+        //                 {lat: 44.021752, lng: -88.551694},
+        //                 // student success center [39]
+        //                 {lat: 44.026205, lng: -88.548163},
+        //                 // Swart Hall [40]
+        //                 {lat:  44.027872, lng:  -88.551962},
+        //                 //  taylor hall [41]
+        //                 {lat: 44.024577, lng: -88.551215},
+        //                 // titan stadium [42]
+        //                 {lat: 44.023671, lng: -88.562917},
+        //                 // university police [43]
+        //                 {lat: 44.023763, lng: -88.549972},
+        //                 // webster hall [44]
+        //                 {lat: 44.025002, lng: -88.551681},
+            
+        //                 //parking lots
+        //                 // [45] Lot 11
+        //                 {lat: 44.030449, lng: -88.552415},
+        //                 // [46] Lot 35
+        //                 {lat: 44.029428, lng: -88.558183},
+        //                 // [47] Lot 27
+        //                 {lat: 44.029026, lng: -88.554960},
+        //                 // [48] Lot 21
+        //                 {lat: 44.029123, lng: -88.553173},
+        //                 // [49] Lot 26
+        //                 {lat: 44.029838, lng: -88.551684},
+        //                 // [50] Lot 4
+        //                 {lat: 44.029100, lng: -88.551581},
+        //                 // [51] Lot 4a
+        //                 {lat: 44.028586, lng: -88.552649},
+        //                 // [52] Lot 16
+        //                 {lat: 44.028822, lng: -88.550956},
+        //                 // [53] Lot 17
+        //                 {lat: 44.028648, lng: -88.549711},
+        //                 // [54] Lot 29
+        //                 {lat: 44.027825, lng: -88.553434},
+        //                 // [55] Lot 25
+        //                 {lat: 44.027233, lng: -88.553602},
+        //                 // [56] Lot 8
+        //                 {lat: 44.026371, lng: -88.554322},
+        //                 // [57] Lot 33
+        //                 {lat: 44.025668, lng: -88.555558},
+        //                 // [58] Lot 34
+        //                 {lat: 44.027133, lng: -88.548009},
+        //                 // [59] Lot 28
+        //                 {lat: 44.025858, lng: -88.548893},
+        //                 // [60] Lot 23
+        //                 {lat: 44.025511, lng: -88.546748},
+        //                 // [61] Lot 14a
+        //                 {lat: 44.025828, lng: -88.552416},
+        //                 // [62] Lot 14b
+        //                 {lat: 44.025673, lng: -88.551929},
+        //                 // [63] Lot 14c
+        //                 {lat: 44.025302, lng: -88.551711},
+        //                 // [64] Lot 7
+        //                 {lat: 44.025023, lng: -88.553519},
+        //                 // [65] Lot 5a
+        //                 {lat: 44.024150, lng: -88.554291},
+        //                 // [66] Lot 5
+        //                 {lat: 44.023717, lng: -88.553693},
+        //                 // [67] Lot 7a
+        //                 {lat: 44.023897, lng: -88.552670},
+        //                 // [68] Lot 15
+        //                 {lat: 44.024142, lng: -88.549694},
+        //                 // [69] Lot 32
+        //                 {lat: 44.023912, lng: -88.550031},
+        //                 // [70] Lot 13
+        //                 {lat: 44.023505, lng: -88.551579},
+        //                 // [71] Lot 12
+        //                 {lat: 44.022135, lng: -88.551702},
+        //                 // [72] Lot 6a
+        //                 {lat: 44.021216, lng: -88.551093},
+        //                 // [73] Lot 6
+        //                 {lat: 44.020887, lng: -88.549848},
+        //                 // [74] Lot 10
+        //                 {lat: 44.021857, lng: -88.548831},
+        //                 // [75] Lot 9a
+        //                 {lat: 44.022435, lng: -88.548564},
+        //                 // [76] Lot 9
+        //                 {lat: 44.021955, lng:  -88.548167},
+        //                 // [77] Lot 18
+        //                 {lat: 44.022368, lng: -88.546827},
+        //                 // [78] Lot 30
+        //                 {lat: 44.021440, lng: -88.547947},
+        //                 // [79] Lot 39
+        //                 {lat: 44.018367, lng: -88.556821},
+        //                 //[80] womens center
+        //                 {lat: 44.024816, lng: -88.546638},
+        //                 //[81] titan one
+        //                 {lat: 44.024401, lng: -88.564253},
+        //                 //[82] titan two
+        //                 {lat: 44.023007, lng:  -88.564339},
+            
+        //                 //emergency phones
+        //                 // Phone[83] Lot 35, phonezero
+        //                 {lat: 44.029568, lng: -88.557150},
+        //                 // Phone[84] Lot 40, phoneone
+        //                 {lat: 44.029075, lng: -88.558184},
+        //                 // Phone[85] lot 27, phonetwo
+        //                 {lat: 44.028831, lng: -88.555125},
+        //                 // Phone[86] heating plant, phonethree
+        //                 {lat: 44.028514, lng: -88.554386},
+        //                 // Phone[87] behind a & c,phonefour 
+        //                 {lat: 44.029626, lng: -88.552936},
+        //                 // Phone[88] in between halsey and swart,phonefive 
+        //                 {lat: 44.028456, lng: -88.551907},
+        //                 // Phone[89] lot 25, phonesix
+        //                 {lat: 44.027457	, lng: -88.553422},
+        //                 // Phone[90] lot 17,phoneseven 
+        //                 {lat: 44.028501, lng: -88.549911},
+        //                 // Phone[91] Wiouwash Trail Oshkosh, WI 54901,phoneeight 
+        //                 {lat: 44.025255, lng: -88.555618},
+        //                 // Phone[92] in front of clow,phonenine 
+        //                 {lat: 44.026028, lng: -88.552211},
+        //                 // Phone[93] behind dempsey,phoneten 
+        //                 {lat: 44.026556, lng: -88.550250},
+        //                 // Phone[94] lot 34,phoneeleven 
+        //                 {lat: 44.026670, lng: -88.547795},
+        //                 // Phone[95] in between fletcher, stewart and evans,phonetwelve 
+        //                 {lat: 44.025771, lng: -88.547412},
+        //                 // Phone[96] center for equity and diversity,phonethirteen 
+        //                 {lat: 44.024777, lng: -88.546711},
+        //                 // Phone[97] in between reeve and horizon,phonefourteen 
+        //                 {lat: 44.024921, lng: -88.548533},
+        //                 // Phone[98] lot 7,phonefifteen 
+        //                 {lat: 44.024921, lng: -88.548533},
+        //                 // Phone[99] lot 5,phonesixteen 
+        //                 {lat: 44.023941, lng: -88.554160},
+        //                 // Phone[100] environmental research and innovation center,phoneseventeen 
+        //                 {lat: 44.023489, lng: -88.553277},
+        //                 // Phone[101] behind student recreation and wellness center,phoneeighteen 
+        //                 {lat: 44.022102, lng: -88.552487},
+        //                 // Phone[102] path to student rec center,phonenineteen 
+        //                 {lat: 44.023313, lng: -88.551255},
+        //                 // Phone[103] between taylor and webster,phonetwenty 
+        //                 {lat: 44.024791, lng: -88.551402},
+        //                 // Phone[104] lot 15,phonetwentyone 
+        //                 {lat: 44.024395, lng:  -88.550325},
+        //                 // Phone[105] behind blackhawk,phonetwentytwo 
+        //                 {lat: 44.023321, lng: -88.548516},
+        //                 // Phone[106] wellness center front,phonetwentythree 
+        //                 {lat: 44.021428, lng: -88.550672},
+        //                 // Phone[107]wellness center  behind,phonetwentyfour 
+        //                 {lat: 44.021057, lng: -88.551801},
+        //                 // Phone[108] lot 30,phonetwentyfive 
+        //                 {lat: 44.021727, lng: -88.548169},
+        //                 // Phone[109] lot 18,phonetwentysix 
+        //                 {lat: 44.022676, lng:  -88.546843},
+        //                 // Phone[110] lot 39,phonetwentyseven 
+        //                 {lat: 44.018830, lng: -88.556802}
+        //             ];
     // array for parking lots
         // var parkingLots = [
         //     // [0] Lot 11
