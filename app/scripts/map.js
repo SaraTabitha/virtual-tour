@@ -434,17 +434,32 @@ function initMap() {
         //has to be initiliazed outside of a function to use the list items with event listeners and other methods in any other functions
         var allMarkers = [];
         //function for creating marker objects and adding them to the allMarkers list using the data from the buildingMarkerInfo array
-        function createMarkers(){
-            for(i = 0, len = allMarkersInfo.length; i < len; i++){
+         for(i = 0, len = allMarkersInfo.length; i < len; i++){
                     allMarkers[i] = new google.maps.Marker({
                     position: allMarkersInfo[i].position, title: allMarkersInfo[i].title
                 });
-            }
-            
         }
-        createMarkers();
+            
         
-        //create parking array of markers from allMarkers
+        // adding hover cards for building markers
+        //ex of what it looks like to set the content for just one building
+        // var albeeHover =  document.getElementById('albeeHover');
+        //    var hoverContentSelectors = [
+        //          document.getElementById('albeeHover'),
+        //     ];
+        var hoverCardsAll = [
+                
+         ]
+        //basic single object creation for all hover infoWindows that popup when a marker is clicked
+        // var albeeHoverCard = new google.maps.InfoWindow({
+         //     content: hoverContentSelectors[0],
+        // });
+         //loop to take the info from hoverContentSelectors and make a new array of hover InfoWindows
+         for(i = 0; i < 83; i++){
+            hoverCardsAll[i] = new google.maps.InfoWindow({
+                 content: buildingExtras[i].thumbnail,
+             });
+         }
         
 
 
@@ -1616,27 +1631,7 @@ function initMap() {
         }
         
 
-        // adding hover cards for building markers
-        //ex of what it looks like to set the content for just one building
-        // var albeeHover =  document.getElementById('albeeHover');
-    //    var hoverContentSelectors = [
-    //          //0 albee
-    //          document.getElementById('albeeHover'),
-             
-    //     ];
-        var hoverCardsAll = [
-        
-        ]
-        //basic single object creation for all hover infoWindows that popup when a marker is clicked
-        // var albeeHoverCard = new google.maps.InfoWindow({
-        //     content: hoverContentSelectors[0],
-        // });
-        //loop to take the info from hoverContentSelectors and make a new array of hover InfoWindows
-        for(i = 0; i < 83; i++){
-            hoverCardsAll[i] = new google.maps.InfoWindow({
-                content: buildingExtras[i].thumbnail,
-            });
-        }
+       
         
 
 
