@@ -1,12 +1,12 @@
 // google map!
-//what you need to know: there are markers which are objects that are created and need a lat/lng of where they are on the map
+// what you need to know: there are markers which are objects that are created and need a lat/lng of where they are on the map
 // a title (so when you hover over the marker you know what it is called), and an icon image (made by the artists!)
-//when you click on a marker there is an InfoWindow that pops up (also objects that have their content set to a selector for an 
+// when you click on a marker there is an InfoWindow that pops up (also objects that have their content set to a selector for an 
 // element in index.html)
 // each InfoWindow for a Building has a thumbnail and a link that says "click here" which opens a Popup that has all of the information about 
 // the building and tabs for things like bathrooms, sustainability etc. 
 // all of this is handled in this file!
-//recap: Markers, InfoWindows(might be referred to as Hover or Hovercards), and Popups
+// recap: Markers, InfoWindows(might be referred to as Hover or Hovercards), and Popups
 //
 // function for intitial map load (what appears when the page first loads)
 function initMap() {
@@ -43,340 +43,303 @@ function initMap() {
         var allMarkersInfo = [
             //0 albee
             //position: lat, lng, title: are all used for creating the markers that go on the map
-            {position: {lat: 44.025729, lng: -88.550248}, title: "Albee Hall",
+            //the shorthand is for html element selectors, ex "$("#albeeHover") can be accessed now with allMarkersInfo.shortHand[0] replacing "albee" in a loop
+            {position: {lat: 44.025729, lng: -88.550248}, title: "Albee Hall", shortHand: "albee",
             //thumbnail is for the infowindow that pops up when you click on a marker, hoverSelector is the selector for the 
             //html element in index.html that is the content for the infoWindow 
-            thumbnail: "images/campuspictures/albeehall.jpeg", hoverSelector: document.getElementById('albeeHover')
+            thumbnail: "images/campuspictures/albeehall.jpeg"
             },
             //1 baseball
-            {position: {lat: 44.023042, lng: -88.561892},title: "Alumni Baseball Stadium",
-            thumbnail:"images/campuspictures/baseball.jpg",  hoverSelector: document.getElementById('baseballHover')
+            {position: {lat: 44.023042, lng: -88.561892},title: "Alumni Baseball Stadium", shortHand: "baseball",
+            thumbnail:"images/campuspictures/baseball.jpg"
             },
             //2 alumni
-            {position: {lat: 44.020528, lng: -88.550432},title: "Alumni Welcome and Conference Center",
-            thumbnail: "images/campuspictures/awcc-building.jpg", hoverSelector: document.getElementById('alumniHover')
+            {position: {lat: 44.020528, lng: -88.550432},title: "Alumni Welcome and Conference Center", shortHand: "alumni",
+            thumbnail: "images/campuspictures/awcc-building.jpg"
             },
             //3 ac
-            {position: {lat: 44.029640, lng: -88.552137},title: "Arts and Communications",
-            thumbnail: "images/campuspictures/artscommunications.jpeg", hoverSelector: document.getElementById('acHover')
+            {position: {lat: 44.029640, lng: -88.552137},title: "Arts and Communications", shortHand: "ac",
+            thumbnail: "images/campuspictures/artscommunications.jpeg"
             },
             //4 athletic
-            {position: {lat: 44.023077, lng: -88.561081},title: "Athletic Service Building",
-            thumbnail: "images/campuspictures/athleticservice.jpeg", hoverSelector:document.getElementById('athleticHover') 
+            {position: {lat: 44.023077, lng: -88.561081},title: "Athletic Service Building", shortHand: "athletic",
+            thumbnail: "images/campuspictures/athleticservice.jpeg" 
             },
             //5 blackhawk
-            {position: {lat: 44.023591, lng: -88.549157},title: "Blackhawk Commons",
-            thumbnail: "images/campuspictures/blackhawk.jpeg", hoverSelector: document.getElementById('blackhawkHover')
+            {position: {lat: 44.023591, lng: -88.549157},title: "Blackhawk Commons", shortHand: "blackhawk",
+            thumbnail: "images/campuspictures/blackhawk.jpeg"
             },
             //6 biodigester
-            {position: {lat: 44.018897, lng: -88.558015},title: "Biodigester",
-            thumbnail:"images/campuspictures/biodigester.jpg",  hoverSelector:document.getElementById('biodigesterHover')
+            {position: {lat: 44.018897, lng: -88.558015},title: "Biodigester",shortHand: "biodigester",
+            thumbnail:"images/campuspictures/biodigester.jpg"
             },
             //7 buckstaff
-            { position: {lat: 44.028428, lng: -88.551581},title: "Buckstaff Planetarium",
-            thumbnail: "images/campuspictures/buckstaff.jpeg",  hoverSelector: document.getElementById('buckstaffHover')
+            { position: {lat: 44.028428, lng: -88.551581},title: "Buckstaff Planetarium", shortHand: "buckstaff",
+            thumbnail: "images/campuspictures/buckstaff.jpeg"
             },
             //8 equity 
-            {position: {lat: 44.024655, lng: -88.547217},title: "Campus Center for Equity and Diversity",
-            thumbnail: "images/campuspictures/centerforequity.jpeg", hoverSelector: document.getElementById('equityHover')
+            {position: {lat: 44.024655, lng: -88.547217},title: "Campus Center for Equity and Diversity",shortHand: "equity",
+            thumbnail: "images/campuspictures/centerforequity.jpeg"
             },
             //9 campus services
-            {position: {lat: 44.017782, lng: -88.556446},title: "Campus Services",
-            thumbnail: "images/campuspictures/campus-services.jpg", hoverSelector: document.getElementById('campusHover')
+            {position: {lat: 44.017782, lng: -88.556446},title: "Campus Services", shortHand: "campus",
+            thumbnail: "images/campuspictures/campus-services.jpg"
             },
             //10 ceramics
-            {position: {lat: 44.025559, lng: -88.555515},title: "Ceramics Laboratory",
-            thumbnail: "images/campuspictures/ceramicslab.jpeg", hoverSelector: document.getElementById('ceramicsHover')
+            {position: {lat: 44.025559, lng: -88.555515},title: "Ceramics Laboratory",shortHand: "ceramics",
+            thumbnail: "images/campuspictures/ceramicslab.jpeg"
             },
             //11 clow
-            {position: {lat: 44.026306, lng: -88.552268},title: "Clow Social Sciences Center",
-            thumbnail:"images/campuspictures/clow.jpeg",  hoverSelector: document.getElementById('clowHover')
+            {position: {lat: 44.026306, lng: -88.552268},title: "Clow Social Sciences Center",shortHand: "clow",
+            thumbnail:"images/campuspictures/clow.jpeg"
             },
             //12 gardens
-            {position: {lat: 44.015573, lng: -88.555929},title: "Community Gardens",
-            thumbnail:"images/campuspictures/community-gardens.jpg",  hoverSelector: document.getElementById('gardensHover')
+            {position: {lat: 44.015573, lng: -88.555929},title: "Community Gardens",shortHand: "gardens",
+            thumbnail:"images/campuspictures/community-gardens.jpg"
             },
             //13 dempsey
-            {position: {lat: 44.026603, lng: -88.550707},title: "Dempsey Hall",
-            thumbnail:"images/campuspictures/dempsey.jpeg",  hoverSelector: document.getElementById('dempseyHover')
+            {position: {lat: 44.026603, lng: -88.550707},title: "Dempsey Hall",shortHand: "dempsey",
+            thumbnail:"images/campuspictures/dempsey.jpeg"
             },
             //14 donner
-            {position: {lat: 44.025420, lng: -88.552287}, title: "Donner Hall",
-            thumbnail:"images/campuspictures/donner.jpeg",  hoverSelector:document.getElementById('donnerHover')
+            {position: {lat: 44.025420, lng: -88.552287}, title: "Donner Hall",shortHand: "donner",
+            thumbnail:"images/campuspictures/donner.jpeg"
              },
             //15 east
-            {position: {lat: 44.031217, lng: -88.543806},title: "East Hall",
-            thumbnail: "images/campuspictures/easthall.jpg", hoverSelector: document.getElementById('eastHover')
+            {position: {lat: 44.031217, lng: -88.543806},title: "East Hall",shortHand: "east",
+            thumbnail: "images/campuspictures/easthall.jpg"
             },
             //16 environmental
-            { position: {lat: 44.023518, lng: -88.553851}, title: "Environmental Science and Research Center",
-            thumbnail:"images/campuspictures/aquaticstudiescenter.jpeg",  hoverSelector: document.getElementById('environmentalHover')
+            { position: {lat: 44.023518, lng: -88.553851}, title: "Environmental Science and Research Center",shortHand: "environmental",
+            thumbnail:"images/campuspictures/aquaticstudiescenter.jpeg"
             },
             //17 evans
-            {position: {lat: 44.026168, lng: -88.547397},title: "Evans Hall",
-            thumbnail:"images/campuspictures/evans.jpeg", hoverSelector: document.getElementById('evansHover')
+            {position: {lat: 44.026168, lng: -88.547397},title: "Evans Hall",shortHand: "evans",
+            thumbnail:"images/campuspictures/evans.jpeg"
              },
             //18 fletcher
-            { position: {lat: 44.025332, lng: -88.547240}, title: "Fletcher Hall",
-            thumbnail: "images/campuspictures/fletcher.jpeg",hoverSelector: document.getElementById('fletcherHover')
+            { position: {lat: 44.025332, lng: -88.547240}, title: "Fletcher Hall",shortHand: "fletcher",
+            thumbnail: "images/campuspictures/fletcher.jpeg"
             },
             //19 fredric
-            {position: {lat:  44.029000, lng:-88.552919},title: "Fredric March Theater",
-            thumbnail:"images/campuspictures/fredricmarch.jpeg", hoverSelector: document.getElementById('fredricHover')
+            {position: {lat:  44.029000, lng:-88.552919},title: "Fredric March Theater",shortHand: "fredric",
+            thumbnail:"images/campuspictures/fredricmarch.jpeg"
              },
             //20 gruenhagen
-            { position: {lat: 44.022405, lng:  -88.548824}, title: "Gruenhagen Conference Center",
-            thumbnail:"images/campuspictures/gruenhagen.jpeg", hoverSelector: document.getElementById('gruenhagenHover')
+            { position: {lat: 44.022405, lng:  -88.548824}, title: "Gruenhagen Conference Center",shortHand: "gruenhagen",
+            thumbnail:"images/campuspictures/gruenhagen.jpeg"
              },
             //21 halsey
-            {position: {lat:  44.028497, lng: -88.551027},title: "Halsey Science Center",
-            thumbnail:"images/campuspictures/halsey.jpeg", hoverSelector: document.getElementById('halseyHover')
+            {position: {lat:  44.028497, lng: -88.551027},title: "Halsey Science Center",shortHand: "halsey",
+            thumbnail:"images/campuspictures/halsey.jpeg"
             },
             //22 harrington
-            {position: {lat:  44.027736, lng: -88.550172}, title: "Harrington Hall",
-            thumbnail:"images/campuspictures/harrington.jpeg", hoverSelector: document.getElementById('harringtonHover')
+            {position: {lat:  44.027736, lng: -88.550172}, title: "Harrington Hall",shortHand: "harrington",
+            thumbnail:"images/campuspictures/harrington.jpeg"
              },
             //23 heating 
-            {position: {lat: 44.028235, lng: -88.554312},title: "Heating Plant",
-            thumbnail:"images/campuspictures/heatingplant.jpeg", hoverSelector: document.getElementById('heatingHover')
+            {position: {lat: 44.028235, lng: -88.554312},title: "Heating Plant",shortHand: "heating",
+            thumbnail:"images/campuspictures/heatingplant.jpeg"
              },
             //24 parking ramp
-            {position: {lat: 44.022960, lng: -88.549791},title: "High Avenue Parking Ramp",
-            thumbnail:"images/campuspictures/parkingramp.jpeg", hoverSelector: document.getElementById('parkingRampHover')
+            {position: {lat: 44.022960, lng: -88.549791},title: "High Avenue Parking Ramp",shortHand: "parkingRamp",
+            thumbnail:"images/campuspictures/parkingramp.jpeg"
              },
             //25 horizon
-            {position: {lat: 44.024363, lng: -88.547972},title: "Horizon Village",
-            thumbnail:"images/campuspictures/horizon.jpeg", hoverSelector: document.getElementById('horizonHover')
+            {position: {lat: 44.024363, lng: -88.547972},title: "Horizon Village",shortHand: "horizon",
+            thumbnail:"images/campuspictures/horizon.jpeg"
              },
             //26 kolf
-            {position: {lat: 44.024323, lng: -88.552214},title: "Kolf Sports Center",
-            thumbnail:"images/campuspictures/kolf.jpeg", hoverSelector: document.getElementById('kolfHover')
+            {position: {lat: 44.024323, lng: -88.552214},title: "Kolf Sports Center",shortHand: "kolf",
+            thumbnail:"images/campuspictures/kolf.jpeg"
              },
             //27 lincoln
-            {position: {lat: 44.023204, lng: -88.546359},title: "Lincoln Hall",
-            thumbnail:"images/campuspictures/lincoln-hall.jpg", hoverSelector: document.getElementById('lincolnHover')
+            {position: {lat: 44.023204, lng: -88.546359},title: "Lincoln Hall",shortHand: "lincoln",
+            thumbnail:"images/campuspictures/lincoln-hall.jpg"
               },
             //28 multicultural
-            { position: {lat: 44.024842, lng: -88.550613}, title: "Multicultural Education Center",
-            thumbnail:"images/campuspictures/multiculturaleducation.jpeg", hoverSelector: document.getElementById('multiculturalHover')
+            { position: {lat: 44.024842, lng: -88.550613}, title: "Multicultural Education Center",shortHand: "multicultural",
+            thumbnail:"images/campuspictures/multiculturaleducation.jpeg"
              },
             //29 nursing
-            {position: {lat: 44.027051, lng: -88.552813},title: "Nursing and Education Building",
-            thumbnail:"images/campuspictures/nursingeducation.jpeg", hoverSelector: document.getElementById('nursingHover')
+            {position: {lat: 44.027051, lng: -88.552813},title: "Nursing and Education Building",shortHand: "nursing",
+            thumbnail:"images/campuspictures/nursingeducation.jpeg"
              },
             //30 oviatt
-            {position: {lat:  44.027156, lng: -88.551466},title: "Oviatt House",
-            thumbnail:"images/campuspictures/oviatt.jpeg", hoverSelector: document.getElementById('oviattHover')
+            {position: {lat:  44.027156, lng: -88.551466},title: "Oviatt House",shortHand: "oviatt",
+            thumbnail:"images/campuspictures/oviatt.jpeg"
             },
             //31 pollock
-            { position:  {lat: 44.025227, lng:  -88.551292},title: "Pollock House",
-            thumbnail:"images/campuspictures/pollock.jpeg", hoverSelector: document.getElementById('pollockHover')
+            { position:  {lat: 44.025227, lng:  -88.551292},title: "Pollock House",shortHand: "pollock",
+            thumbnail:"images/campuspictures/pollock.jpeg"
               },
             //32 polk
-            { position: {lat: 44.026379, lng: -88.549602}, title: "Polk Library",
-            thumbnail:"images/campuspictures/polk.jpeg", hoverSelector: document.getElementById('polkHover')
+            { position: {lat: 44.026379, lng: -88.549602}, title: "Polk Library",shortHand: "polk",
+            thumbnail:"images/campuspictures/polk.jpeg"
             },
             //33 radford
-            { position: {lat: 44.025671, lng: -88.551561}, title: "Radford Hall and Student Health Center",
-            thumbnail:"images/campuspictures/radford.jpeg", hoverSelector: document.getElementById('radfordHover')
+            { position: {lat: 44.025671, lng: -88.551561}, title: "Radford Hall and Student Health Center",shortHand: "radford",
+            thumbnail:"images/campuspictures/radford.jpeg"
             },
             //34 reeve
-            { position: {lat: 44.024934, lng: -88.549448}, title: "Reeve Memorial Union",
-            thumbnail:"images/campuspictures/reeve.jpeg", hoverSelector: document.getElementById('reeveHover')
+            { position: {lat: 44.024934, lng: -88.549448}, title: "Reeve Memorial Union",shortHand: "reeve",
+            thumbnail:"images/campuspictures/reeve.jpeg"
               },
             //35 sage
-            { position: {lat: 44.025720, lng: -88.553770},  title: "Sage Hall",
-            thumbnail:"images/campuspictures/sage.jpeg", hoverSelector: document.getElementById('sageHover')
+            { position: {lat: 44.025720, lng: -88.553770},  title: "Sage Hall",shortHand: "sage",
+            thumbnail:"images/campuspictures/sage.jpeg"
              },
             //36 scott
-            {position: {lat: 44.022556, lng: -88.547344},title: "Scott Hall",
-            thumbnail:"images/campuspictures/scott.jpeg", hoverSelector: document.getElementById('scottHover')
+            {position: {lat: 44.022556, lng: -88.547344},title: "Scott Hall",shortHand: "scott",
+            thumbnail:"images/campuspictures/scott.jpeg"
              },
             //37 stewart
-            {position: {lat: 44.026060, lng: -88.546952},title: "Stewart Hall",
-            thumbnail: "images/campuspictures/stewart.jpeg", hoverSelector: document.getElementById('stewartHover')
+            {position: {lat: 44.026060, lng: -88.546952},title: "Stewart Hall",shortHand: "stewart",
+            thumbnail: "images/campuspictures/stewart.jpeg"
              },
             //38 recreation
-            {position: {lat: 44.021752, lng: -88.551694},title: "Student Recreation and Wellness Center",
-            thumbnail:"images/campuspictures/srwc.jpeg", hoverSelector: document.getElementById('recreationHover')
+            {position: {lat: 44.021752, lng: -88.551694},title: "Student Recreation and Wellness Center",shortHand: "recreation",
+            thumbnail:"images/campuspictures/srwc.jpeg"
              },
             //39 success
-            { position: {lat: 44.026205, lng: -88.548163},  title: "Student Success Center",
-            thumbnail:"images/campuspictures/studentsuccess.jpeg", hoverSelector: document.getElementById('successHover')
+            { position: {lat: 44.026205, lng: -88.548163},  title: "Student Success Center",shortHand: "success",
+            thumbnail:"images/campuspictures/studentsuccess.jpeg"
              },
             //40 swart
-            { position: {lat:  44.027872, lng:  -88.551962}, title: "Swart Hall",
-            thumbnail:"images/campuspictures/swart.jpeg", hoverSelector: document.getElementById('swartHover')  
+            { position: {lat:  44.027872, lng:  -88.551962}, title: "Swart Hall",shortHand: "swart",
+            thumbnail:"images/campuspictures/swart.jpeg"
              },
             //41 taylor
-            {position:  {lat: 44.024577, lng: -88.551215}, title: "Taylor Hall",
-            thumbnail:"images/campuspictures/taylor.jpeg", hoverSelector: document.getElementById('taylorHover')
+            {position:  {lat: 44.024577, lng: -88.551215}, title: "Taylor Hall",shortHand: "taylor",
+            thumbnail:"images/campuspictures/taylor.jpeg"
              },
             //42 titan
-            {position:  {lat: 44.023671, lng: -88.562917},title: "Titan Stadium",
-            thumbnail:"images/campuspictures/titanstadium.jpeg", hoverSelector: document.getElementById('titanHover')
+            {position:  {lat: 44.023671, lng: -88.562917},title: "Titan Stadium",shortHand: "titan",
+            thumbnail:"images/campuspictures/titanstadium.jpeg"
             },
             //43 police
-            {position:  {lat: 44.023763, lng: -88.549972},title: "University Police",
-            thumbnail:"images/campuspictures/universitypolice.jpeg", hoverSelector: document.getElementById('policeHover')
+            {position:  {lat: 44.023763, lng: -88.549972},title: "University Police",shortHand: "police",
+            thumbnail:"images/campuspictures/universitypolice.jpeg"
             },
             //44 webster
-            {position: {lat: 44.025002, lng: -88.551681},title: "Webster Hall",
-            thumbnail:"images/campuspictures/webster.jpeg", hoverSelector: document.getElementById('websterHover')
+            {position: {lat: 44.025002, lng: -88.551681},title: "Webster Hall",shortHand: "webster",
+            thumbnail:"images/campuspictures/webster.jpeg"
             },
             
             //parking lots
             // [45] Lot 11
-            {position: {lat: 44.030449, lng: -88.552415},title: "Lot 11",
-            hoverSelector: document.getElementById('elevenHover')
+            {position: {lat: 44.030449, lng: -88.552415},title: "Lot 11",shortHand: "eleven"
             },
             // [46] Lot 35
-            { position: {lat: 44.029428, lng: -88.558183}, title: "Lot 35",
-            hoverSelector: document.getElementById('thirtyfiveHover')
+            { position: {lat: 44.029428, lng: -88.558183}, title: "Lot 35",shortHand: "thirtyfive"
             },
             // [47] Lot 27
-            {position: {lat: 44.029026, lng: -88.554960}, title: "Lot 27",
-            hoverSelector: document.getElementById('twentysevenHover')
+            {position: {lat: 44.029026, lng: -88.554960}, title: "Lot 27",shortHand: "twentyseven"
             },
             // [48] Lot 21
-            {position: {lat: 44.029123, lng: -88.553173},title: "Lot 21",
-            hoverSelector: document.getElementById('twentyoneHover')
+            {position: {lat: 44.029123, lng: -88.553173},title: "Lot 21",shortHand: "twentyone"
             },
             // [49] Lot 26
-            {position: {lat: 44.029838, lng: -88.551684},  title: "Lot 26",
-            hoverSelector: document.getElementById('twentysixHover')
+            {position: {lat: 44.029838, lng: -88.551684},  title: "Lot 26",shortHand: "twentysix"
             },
             // [50] Lot 4
-            {position: {lat: 44.029100, lng: -88.551581},title: "Lot 4",
-            hoverSelector: document.getElementById('fourHover')
+            {position: {lat: 44.029100, lng: -88.551581},title: "Lot 4",shortHand: "four"
             },
             // [51] Lot 4a
-            {position: {lat: 44.028586, lng: -88.552649},  title: "Lot 4a",
-            hoverSelector: document.getElementById('fouraHover')
+            {position: {lat: 44.028586, lng: -88.552649},  title: "Lot 4a",shortHand: "foura"
             },
             // [52] Lot 16
-            {position: {lat: 44.028822, lng: -88.550956},title: "Lot 16",
-            hoverSelector: document.getElementById('sixteenHover')
+            {position: {lat: 44.028822, lng: -88.550956},title: "Lot 16",shortHand: "sixteen"
             },
             // [53] Lot 17
-            {position: {lat: 44.028648, lng: -88.549711},title: "Lot 17",
-            hoverSelector: document.getElementById('seventeenHover')
+            {position: {lat: 44.028648, lng: -88.549711},title: "Lot 17",shortHand: "seventeen"
             },
             // [54] Lot 29
-            { position: {lat: 44.027825, lng: -88.553434}, title: "Lot 29",
-            hoverSelector: document.getElementById('twentynineHover')
+            { position: {lat: 44.027825, lng: -88.553434}, title: "Lot 29",shortHand: "twentynine"
             },
             // [55] Lot 25
-            {position: {lat: 44.027233, lng: -88.553602}, title: "Lot 25",
-            hoverSelector: document.getElementById('twentyfiveHover')
+            {position: {lat: 44.027233, lng: -88.553602}, title: "Lot 25",shortHand: "twentyfive"
             },
             // [56] Lot 8
-            {position: {lat: 44.026371, lng: -88.554322}, title: "Lot 8",
-            hoverSelector: document.getElementById('eightHover')
+            {position: {lat: 44.026371, lng: -88.554322}, title: "Lot 8",shortHand: "eight"
             },
             // [57] Lot 33
-            {position: {lat: 44.025668, lng: -88.555558},   title: "Lot 33",
-            hoverSelector: document.getElementById('thirtythreeHover')
+            {position: {lat: 44.025668, lng: -88.555558},   title: "Lot 33",shortHand: "thirtythree"
             },
             // [58] Lot 34
-            {position: {lat: 44.027133, lng: -88.548009},title: "Lot 34",
-            hoverSelector: document.getElementById('thirtyfourHover')
+            {position: {lat: 44.027133, lng: -88.548009},title: "Lot 34",shortHand: "thirtyfour"
             },
             // [59] Lot 28
-            {position: {lat: 44.025858, lng: -88.548893},title: "Lot 28",
-            hoverSelector: document.getElementById('twentyeightHover')
+            {position: {lat: 44.025858, lng: -88.548893},title: "Lot 28",shortHand: "twentyeight"
             },
             // [60] Lot 23
-            {position: {lat: 44.025511, lng: -88.546748},   title: "Lot 23",
-            hoverSelector: document.getElementById('twentythreeHover')
+            {position: {lat: 44.025511, lng: -88.546748},   title: "Lot 23",shortHand: "twentythree"
             },
             // [61] Lot 14a
-            {position: {lat: 44.025828, lng: -88.552416},title: "Lot 14a",
-            hoverSelector: document.getElementById('fourteenaHover')
+            {position: {lat: 44.025828, lng: -88.552416},title: "Lot 14a",shortHand: "fourteena"
             },
             // [62] Lot 14b
-            {position: {lat: 44.025673, lng: -88.551929},title: "Lot 14b",
-            hoverSelector: document.getElementById('fourteenbHover')
+            {position: {lat: 44.025673, lng: -88.551929},title: "Lot 14b",shortHand: "fourteenb"
             },
             // [63] Lot 14c
-            {position: {lat: 44.025302, lng: -88.551711},title: "Lot 14c",
-            hoverSelector: document.getElementById('fourteencHover')
+            {position: {lat: 44.025302, lng: -88.551711},title: "Lot 14c",shortHand: "fourteenc"
             },
             // [64] Lot 7
-            {position: {lat: 44.025023, lng: -88.553519},title: "Lot 7",
-            hoverSelector: document.getElementById('sevenHover')
+            {position: {lat: 44.025023, lng: -88.553519},title: "Lot 7",shortHand: "seven"
             },
             // [65] Lot 5a
-            {position: {lat: 44.024150, lng: -88.554291},title: "Lot 5a",
-            hoverSelector: document.getElementById('fiveaHover')
+            {position: {lat: 44.024150, lng: -88.554291},title: "Lot 5a",shortHand: "fivea"
             },
             // [66] Lot 5
-            {position: {lat: 44.023717, lng: -88.553693}, title: "Lot 5",
-            hoverSelector: document.getElementById('fiveHover')
+            {position: {lat: 44.023717, lng: -88.553693}, title: "Lot 5",shortHand: "five"
             },
             // [67] Lot 7a
-            {position: {lat: 44.023897, lng: -88.552670}, title: "Lot 7a",
-            hoverSelector: document.getElementById('sevenaHover')
+            {position: {lat: 44.023897, lng: -88.552670}, title: "Lot 7a",shortHand: "sevena"
             },
             // [68] Lot 15
-            {position: {lat: 44.024142, lng: -88.549694},title: "Lot 15",
-            hoverSelector: document.getElementById('fifteenHover')
+            {position: {lat: 44.024142, lng: -88.549694},title: "Lot 15",shortHand: "fifteen"
             },
             // [69] Lot 32
-            {position: {lat: 44.023912, lng: -88.550031},title: "Lot 32",
-            hoverSelector: document.getElementById('thirtytwoHover')
+            {position: {lat: 44.023912, lng: -88.550031},title: "Lot 32",shortHand: "thirtytwo"
             },
             // [70] Lot 13
-            {position: {lat: 44.023505, lng: -88.551579},title: "Lot 13",
-            hoverSelector: document.getElementById('thirteenHover')
+            {position: {lat: 44.023505, lng: -88.551579},title: "Lot 13",shortHand: "thirteen"
             },
             // [71] Lot 12
-            {position: {lat: 44.022135, lng: -88.551702}, title: "Lot 12",
-            hoverSelector: document.getElementById('twelveHover')
+            {position: {lat: 44.022135, lng: -88.551702}, title: "Lot 12",shortHand: "twelve"
             },
             // [72] Lot 6a
-            {position: {lat: 44.021216, lng: -88.551093}, title: "Lot 6a",
-            hoverSelector: document.getElementById('sixaHover')
+            {position: {lat: 44.021216, lng: -88.551093}, title: "Lot 6a",shortHand: "sixa"
             },
             // [73] Lot 6
-            {position: {lat: 44.020887, lng: -88.549848}, title: "Lot 6",
-            hoverSelector: document.getElementById('sixHover')
+            {position: {lat: 44.020887, lng: -88.549848}, title: "Lot 6",shortHand: "six"
             },
             // [74] Lot 10
-            {position: {lat: 44.021857, lng: -88.548831},title: "Lot 10",
-            hoverSelector: document.getElementById('tenHover')
+            {position: {lat: 44.021857, lng: -88.548831},title: "Lot 10",shortHand: "ten"
             },
             // [75] Lot 9a
-            {position: {lat: 44.022435, lng: -88.548564},title: "Lot 9a",
-            hoverSelector: document.getElementById('nineaHover')
+            {position: {lat: 44.022435, lng: -88.548564},title: "Lot 9a",shortHand: "ninea"
             },
             // [76] Lot 9
-            {position: {lat: 44.021955, lng:  -88.548167},title: "Lot 9",
-            hoverSelector: document.getElementById('nineHover')
+            {position: {lat: 44.021955, lng:  -88.548167},title: "Lot 9",shortHand: "nine"
             },
             // [77] Lot 18
-            {position: {lat: 44.022368, lng: -88.546827},title: "Lot 18",
-            hoverSelector: document.getElementById('eighteenHover')
+            {position: {lat: 44.022368, lng: -88.546827},title: "Lot 18",shortHand: "eighteen"
             },
             // [78] Lot 30
-            {position: {lat: 44.021440, lng: -88.547947},title: "Lot 30",
-            hoverSelector: document.getElementById('thirtyHover')
+            {position: {lat: 44.021440, lng: -88.547947},title: "Lot 30",shortHand: "thirty"
             },
             // [79] Lot 39
-            {position: {lat: 44.018367, lng: -88.556821},title: "Lot 39",
-            hoverSelector: document.getElementById('thirtynineHover')
+            {position: {lat: 44.018367, lng: -88.556821},title: "Lot 39",shortHand: "thirtynine"
             },
             //[80] womens center lot
-            { position: {lat: 44.024816, lng: -88.546638},title: "Women's Center",
-            hoverSelector: document.getElementById('womensCenterHover')
+            { position: {lat: 44.024816, lng: -88.546638},title: "Women's Center",shortHand: "womensCenter"
             },
             //[81] titan one lot
-            { position: {lat: 44.024401, lng: -88.564253},title: "Titan One",
-            hoverSelector: document.getElementById('titanOneHover')
+            { position: {lat: 44.024401, lng: -88.564253},title: "Titan One",shortHand: "titanOne"
             },
             //[82] titan two lot
-            { position: {lat: 44.023007, lng:  -88.564339},title: "Titan Two",
-            hoverSelector: document.getElementById('titanTwoHover')
+            { position: {lat: 44.023007, lng:  -88.564339},title: "Titan Two",shortHand: "titanTwo"
             },
 
             //emergency phones
@@ -443,40 +406,32 @@ function initMap() {
         //has to be initiliazed outside of a function to use the list items with event listeners and other methods in any other functions
         var allMarkers = [];
         //function for creating marker objects and adding them to the allMarkers list using the data from the buildingMarkerInfo array
-         for(i = 0, len = allMarkersInfo.length; i < len; i++){
-                    allMarkers[i] = new google.maps.Marker({
-                    position: allMarkersInfo[i].position, title: allMarkersInfo[i].title
+         for(a = 0, len = allMarkersInfo.length; a < len; a++){
+                    allMarkers[a] = new google.maps.Marker({
+                    position: allMarkersInfo[a].position, title: allMarkersInfo[a].title
                 });
         }
-            
-        
-        // adding hover cards for building markers
-        //ex of what it looks like to set the content for just one building
-        // var albeeHover =  document.getElementById('albeeHover');
-        //    var hoverContentSelectors = [
-        //          document.getElementById('albeeHover'),
-        //     ];
-        var hoverCardsAll = [
-                
-         ]
-        //basic single object creation for all hover infoWindows that popup when a marker is clicked
+        // adding infoWindows for building markers 
+        var infoWindowsAll = [];
+          //basic single object creation for all hover infoWindows that popup when a marker is clicked
+         //ex of what it looks like to set the content for just one building
+        // var albeeHover =  document.getElementById('albeeHover'); (these are now the "hoverSelector:" part of the allInfo array)
         // var albeeHoverCard = new google.maps.InfoWindow({
          //     content: hoverContentSelectors[0],
         // });
          //loop to take the info from hoverContentSelectors and make a new array of hover InfoWindows
-         for(i = 0; i < 83; i++){
-            hoverCardsAll[i] = new google.maps.InfoWindow({
-                 content: buildingExtras[i].thumbnail,
+         for(b = 0; b < 83; b++){
+            infoWindowsAll[b] = new google.maps.InfoWindow({
+                 content: document.getElementById(allMarkersInfo[b].shortHand + "Hover"),
              });
          }
-        
 
-
-        //sets marker on the map
+        //example of original code that might be useful for understanding what is happening throughout
+        //sets marker on the map:
         // allMarkers[0].setMap(map);
-        //sets the png image for the marker (if no icon is set it defaults to the google red marker)
+        //sets the png image for the marker (if no icon is set it defaults to the google red marker):
         // allMarkers[0].setIcon(yellowMarker);
-        //adds click event listener to the object 
+        //adds click event listener to the object (and will change icon color when clicked):
         // allMarkers[0].addListener('click', function(){
         //     allMarkers[0].setIcon(redMarker);
         // });
@@ -485,20 +440,18 @@ function initMap() {
         //setting all markers /removing them from the map 
         //setting all buildings markers to the map and making them yellow
         function setBuilding(){
-            for (i = 0; i < 45; i++){
-                allMarkers[i].setMap(map);
-                allMarkers[i].setIcon(yellowMarker);
+            for (c = 0; c < 45; c++){
+                allMarkers[c].setMap(map);
+                allMarkers[c].setIcon(yellowMarker);
             }
         }
         // remove all buildings from the map
         //(problematic; if other checkboxes are selected they need to reset and color their markers 
         //(if they share common markers with this set))
         function removeBuilding(){
-            for (i = 0; i < 45; i++){
-                allMarkers[i].setMap(null);
+            for (d = 0; d < 45; d++){
+                allMarkers[d].setMap(null);
             }
-            
-            
         }
         // set parking lot markers
         function setParkingLots(){
@@ -506,21 +459,19 @@ function initMap() {
             allMarkers[24].setMap(map);
             allMarkers[24].setIcon(pinkMarker);
             //45-82 of the markers array
-            for (i = 45; i < 83; i++){
-                allMarkers[i].setMap(map);
-                allMarkers[i].setIcon(pinkMarker);
+            for (e = 45; e < 83; e++){
+                allMarkers[e].setMap(map);
+                allMarkers[e].setIcon(pinkMarker);
             }
-        
         }
         // remove parking lot markers
         function removeParkingLots(){
             //parking ramp
             allMarkers[24].setMap(null);
             //45-82 of the markers array
-            for (i = 45; i < 83; i++){
-                allMarkers[i].setMap(null);
+            for (f = 45; f < 83; f++){
+                allMarkers[f].setMap(null);
             }
-            
         }
         // accessible entries (buildings)
         function setAccEnt(){
@@ -551,21 +502,20 @@ function initMap() {
             allMarkers[37].setIcon(redMarker);
             allMarkers[44].setIcon(redMarker);
             //18-22
-            for(i = 18; i < 23; i++){
-                allMarkers[i].setMap(map);
-                allMarkers[i].setIcon(redMarker);
+            for(g = 18; g < 23; g++){
+                allMarkers[g].setMap(map);
+                allMarkers[g].setIcon(redMarker);
             }
             //32-34
-            for(i = 32; i < 35; i++){
-                allMarkers[i].setMap(map);
-                allMarkers[i].setIcon(redMarker);
+            for(h = 32; h < 35; h++){
+                allMarkers[h].setMap(map);
+                allMarkers[h].setIcon(redMarker);
             }
             //39-41
             for (i = 39; i < 42; i++){
                 allMarkers[i].setMap(map);
                 allMarkers[i].setIcon(redMarker);
             }
-             
         }
         function removeAccEnt(){
              //accEnt buildings: albee, ac, blackhawk, equity, clow, dempsey, donner, kolf, nursing, scott, stewart, webster
@@ -583,18 +533,17 @@ function initMap() {
             allMarkers[37].setMap(null);
             allMarkers[44].setMap(null);
             //18-22
-            for(i = 18; i < 23; i++){
-                allMarkers[i].setMap(null);
+            for(j = 18; j < 23; j++){
+                allMarkers[j].setMap(null);
             }
             //32-34
-            for(i = 32; i < 35; i++){
-                allMarkers[i].setMap(null);
+            for(k = 32; k < 35; k++){
+                allMarkers[k].setMap(null);
             }
             //39-41
-            for (i = 39; i < 42; i++){
-                allMarkers[i].setMap(null);
+            for (l = 39; l< 42; l++){
+                allMarkers[l].setMap(null);
             }
-
         }
         // accessible parking set markers
         function setAccPar(){
@@ -607,27 +556,25 @@ function initMap() {
             allMarkers[45].setIcon(tealMarker);
             allMarkers[77].setIcon(tealMarker);
             //50-55
-            for(i = 50; i < 56; i++){
-                allMarkers[i].setMap(map);
-                allMarkers[i].setIcon(tealMarker);
+            for(m = 50; m < 56; m++){
+                allMarkers[m].setMap(map);
+                allMarkers[m].setIcon(tealMarker);
             }
             //57-61
-            for(i = 57; i < 62; i++){
-                allMarkers[i].setMap(map);
-                allMarkers[i].setIcon(tealMarker);
+            for(n = 57; n < 62; n++){
+                allMarkers[n].setMap(map);
+                allMarkers[n].setIcon(tealMarker);
             }
             //67-74
-            for(i = 67; i < 75; i++){
-                allMarkers[i].setMap(map);
-                allMarkers[i].setIcon(tealMarker);
+            for(o = 67; o < 75; o++){
+                allMarkers[o].setMap(map);
+                allMarkers[o].setIcon(tealMarker);
             }
             //80-82
-            for(i = 80; i < 83; i++){
-                allMarkers[i].setMap(map);
-                allMarkers[i].setIcon(tealMarker);
+            for(p = 80; p < 83; p++){
+                allMarkers[p].setMap(map);
+                allMarkers[p].setIcon(tealMarker);
             }
-            
-
         }
         // remove accessible parking markers
         function removeAccPar(){
@@ -637,20 +584,20 @@ function initMap() {
             allMarkers[45].setMap(null);
             allMarkers[77].setMap(null);
             //50-55
-            for(i = 50; i < 56; i++){
-                allMarkers[i].setMap(null);
+            for(q = 50; q < 56; q++){
+                allMarkers[q].setMap(null);
             }
             //57-61
-            for(i = 57; i < 62; i++){
-                allMarkers[i].setMap(null);
+            for(r = 57; r < 62; r++){
+                allMarkers[r].setMap(null);
             }
             //67-74
-            for(i = 67; i < 75; i++){
-                allMarkers[i].setMap(null);
+            for(s = 67; s < 75; s++){
+                allMarkers[s].setMap(null);
             }
             //80-82
-            for(i = 80; i < 83; i++){
-                allMarkers[i].setMap(null);
+            for(t = 80; t < 83; t++){
+                allMarkers[t].setMap(null);
             }
         }
         
@@ -659,19 +606,17 @@ function initMap() {
         // function for setting emergency phone markers
         function setEmergencyPhones(){
             //83-110 
-            for(i = 83; i < 111; i++){
-                allMarkers[i].setMap(map);
-                allMarkers[i].setIcon(blueMarker);
+            for(u = 83; u < 111; u++){
+                allMarkers[u].setMap(map);
+                allMarkers[u].setIcon(blueMarker);
             }
-            
         }
         // function for removing emergency phone markers
         function removeEmergencyPhones(){
             //83-110 
-            for(i = 83; i < 111; i++){
-                allMarkers[i].setMap(null);
+            for(v = 83; v < 111; v++){
+                allMarkers[v].setMap(null);
             }
-           
         }
         // setting sustainability markers
         function setSust(){
@@ -982,918 +927,1015 @@ function initMap() {
         }
         
 
-        // close all hovers attached to buildings
-        function closeAllBuildings(){
-          albeeHoverCard.close(map, allMarkers[0]);
-          baseballHoverCard.close(map, allMarkers[1]);
-          alumniHoverCard.close(map, allMarkers[2]);
-          acHoverCard.close(map, allMarkers[3]);
-          athleticHoverCard.close(map, allMarkers[4]);
-          blackhawkHoverCard.close(map, allMarkers[5]);
-          biodigesterHoverCard.close(map, allMarkers[6]);
-          buckstaffHoverCard.close(map,allMarkers[7]);
-          equityHoverCard.close(map, allMarkers[8]);
-          campusHoverCard.close(map, allMarkers[9]);
-          ceramicsHoverCard.close(map, allMarkers[10]);
-          clowHoverCard.close(map, allMarkers[11]);
-          gardensHoverCard.close(map, allMarkers[12]);
-          dempseyHoverCard.close(map, allMarkers[13]);
-          donnerHoverCard.close(map, allMarkers[14]);
-          eastHoverCard.close(map,allMarkers[15]);
-          environmentalHoverCard.close(map, allMarkers[16]);
-          evansHoverCard.close(map, allMarkers[17]);
-          fletcherHoverCard.close(map, allMarkers[18]);
-          fredricHoverCard.close(map,allMarkers[19]);
-          gruenhagenHoverCard.close(map,allMarkers[20]);
-          halseyHoverCard.close(map, allMarkers[21]);
-          harringtonHoverCard.close(map, allMarkers[22]);
-          heatingHoverCard.close(map,allMarkers[23]);
-          parkingRampHoverCard.close(map, allMarkers[24]);
-          horizonHoverCard.close(map, allMarkers[25]);
-          kolfHoverCard.close(map, allMarkers[26]);
-          lincolnHoverCard.close(map, allMarkers[27]);
-          multiculturalHoverCard.close(map, allMarkers[28]);
-          nursingHoverCard.close(map, allMarkers[29]);
-          oviattHoverCard.close(map, allMarkers[30]);
-          pollockHoverCard.close(map, allMarkers[31]);
-          polkHoverCard.close(map, allMarkers[32]);
-          radfordHoverCard.close(map, allMarkers[33]);
-          reeveHoverCard.close(map, allMarkers[34]);
-          sageHoverCard.close(map, allMarkers[35]);
-          scottHoverCard.close(map, allMarkers[36]);
-          stewartHoverCard.close(map, allMarkers[37]);
-          recreationHoverCard.close(map, allMarkers[38]);
-          successHoverCard.close(map, allMarkers[39]);
-          swartHoverCard.close(map, allMarkers[40]);
-          taylorHoverCard.close(map, allMarkers[41]);
-          titanHoverCard.close(map, allMarkers[42]);
-          policeHoverCard.close(map, allMarkers[43]);
-          websterHoverCard.close(map, allMarkers[44]);
-        }
-        //close parking lots cards
-        function closeAllParking(){
-          elevenHoverCard.close(map, elevenMarker);
-          thirtyfiveHoverCard.close(map, thirtyfiveMarker);
-          twentysevenHoverCard.close(map, twentysevenMarker);
-          twentyoneHoverCard.close(map, twentyoneMarker);
-          twentysixHoverCard.close(map, twentysixMarker);
-          fourHoverCard.close(map, fourMarker);
-          fouraHoverCard.close(map, fourMarker);
-          sixteenHoverCard.close(map, sixteenMarker);
-          seventeenHoverCard.close(map, seventeenMarker);
-          twentynineHoverCard.close(map, twentynineMarker);
-          twentyfiveHoverCard.close(map, twentyfiveMarker);
-          eightHoverCard.close(map, eightMarker);
-          thirtythreeHoverCard.close(map, thirtythreeMarker);
-          thirtyfourHoverCard.close(map, thirtyfourMarker);
-          twentyeightHoverCard.close(map, twentyeightMarker);
-          twentythreeHoverCard.close(map, twentythreeMarker);
-          fourteenaHoverCard.close(map, fourteenaMarker);
-          fourteenbHoverCard.close(map, fourteenbMarker);
-          fourteencHoverCard.close(map, fourteencMarker);
-          sevenHoverCard.close(map, sevenMarker);
-          fiveaHoverCard.close(map, fiveaMarker);
-          fiveHoverCard.close(map, fiveMarker);
-          sevenaHoverCard.close(map, sevenaMarker);
-          fifteenHoverCard.close(map, fifteenMarker);
-          thirtytwoHoverCard.close(map, thirtytwoMarker);
-          thirteenHoverCard.close(map, thirteenMarker);
-          twelveHoverCard.close(map, twelveMarker);
-          sixaHoverCard.close(map, sixaMarker);
-          sixHoverCard.close(map, sixMarker);
-          tenHoverCard.close(map, tenMarker);
-          nineaHoverCard.close(map, nineaMarker);
-          nineHoverCard.close(map, nineMarker);
-          eighteenHoverCard.close(map, eighteenMarker);
-          thirtyHoverCard.close(map, thirtyMarker);
-          thirtynineHoverCard.close(map, thirtynineMarker);
-          womensCenterHoverCard.close(map, womensCenterMarker);
-          titanOneHoverCard.close(map, titanOneMarker);
-          titanTwoHoverCard.close(map, titanTwoMarker);
-        }
-        // close all accEnt cards
-        function closeAllAccEnt(){
-          albeeHoverCard.close(map, allMarkers[0]);
-          acHoverCard.close(map,acMarker);
-          blackhawkHoverCard.close(map, blackhawkMarker);
-          equityHoverCard.close(map, equityMarker);
-          clowHoverCard.close(map, clowMarker);
-          dempseyHoverCard.close(map, dempseyMarker);
-          donnerHoverCard.close(map, donnerMarker);
-          fletcherHoverCard.close(map, fletcherMarker);
-          fredricHoverCard.close(map,fredricMarker);
-          gruenhagenHoverCard.close(map,gruenhagenMarker);
-          halseyHoverCard.close(map, halseyMarker);
-          harringtonHoverCard.close(map, harringtonMarker);
-          kolfHoverCard.close(map, kolfMarker);
-          nursingHoverCard.close(map, nursingMarker);
-          polkHoverCard.close(map, polkMarker);
-          radfordHoverCard.close(map, radfordMarker);
-          reeveHoverCard.close(map, reeveMarker);
-          scottHoverCard.close(map, scottMarker);
-          stewartHoverCard.close(map, stewartMarker);
-          successHoverCard.close(map, successMarker);
-          swartHoverCard.close(map, swartMarker);
-          taylorHoverCard.close(map, taylorMarker);
-          websterHoverCard.close(map, websterMarker);
-        }
-        //close all AccPark cards
-        function closeAllAccPark(){
-          womensCenterHoverCard.close(map, womensCenterMarker);
-          titanOneHoverCard.close(map, titanOneMarker);
-          titanTwoHoverCard.close(map, titanTwoMarker);
-          elevenHoverCard.close(map, elevenMarker);
-          fourHoverCard.close(map, fourMarker);
-          fouraHoverCard.close(map, fourMarker);
-          sixteenHoverCard.close(map, sixteenMarker);
-          seventeenHoverCard.close(map, seventeenMarker);
-          twentynineHoverCard.close(map, twentynineMarker);
-          twentyfiveHoverCard.close(map, twentyfiveMarker);
-          thirtythreeHoverCard.close(map, thirtythreeMarker);
-          fourteenaHoverCard.close(map, fourteenaMarker);
-          sevenaHoverCard.close(map, sevenaMarker);
-          thirteenHoverCard.close(map, thirteenMarker);
-          thirtyfourHoverCard.close(map, thirtyfourMarker);
-          twentyeightHoverCard.close(map, twentyeightMarker);
-          twentythreeHoverCard.close(map, twentythreeMarker);
-          fifteenHoverCard.close(map, fifteenMarker);
-          thirtytwoHoverCard.close(map, thirtytwoMarker);
-          tenHoverCard.close(map, tenMarker);
-          twelveHoverCard.close(map, twelveMarker);
-          sixaHoverCard.close(map, sixaMarker);
-          sixHoverCard.close(map, sixMarker);
-          eighteenHoverCard.close(map, eighteenMarker);
-        }
-        //close all sust cards
-        function closeAllSust(){
-          albeeHoverCard.close(map, allMarkers[0]);
-          alumniHoverCard.close(map, alumniMarker);
-          blackhawkHoverCard.close(map, blackhawkMarker);
-          biodigesterHoverCard.close(map, biodigesterMarker);
-          heatingHoverCard.close(map,heatingMarker);
-          horizonHoverCard.close(map, horizonMarker);
-          reeveHoverCard.close(map, reeveMarker);
-          sageHoverCard.close(map, sageMarker);
-          recreationHoverCard.close(map, recreationMarker);
-          successHoverCard.close(map, successMarker);
-          taylorHoverCard.close(map, taylorMarker);
-          titanHoverCard.close(map, titanMarker);
-        }
-        //close all gender cards
-        function closeAllGender(){
-          acHoverCard.close(map,acMarker);
-          blackhawkHoverCard.close(map, blackhawkMarker);
-          campusHoverCard.close(map, campusMarker);
-          dempseyHoverCard.close(map, dempseyMarker);
-          halseyHoverCard.close(map, halseyMarker);
-          harringtonHoverCard.close(map, harringtonMarker);
-          kolfHoverCard.close(map, kolfMarker);
-          nursingHoverCard.close(map, nursingMarker);
-          reeveHoverCard.close(map, reeveMarker);
-          sageHoverCard.close(map, sageMarker);
-          recreationHoverCard.close(map, recreationMarker);
-          successHoverCard.close(map, successMarker);
-          swartHoverCard.close(map, swartMarker);
-          policeHoverCard.close(map, policeMarker);
-        }
-        //close all AccaF cards
-        function closeAllAccaF(){
-          albeeHoverCard.close(map, allMarkers[0]);
-          acHoverCard.close(map,acMarker);
-          ceramicsHoverCard.close(map, ceramicsMarker);
-          clowHoverCard.close(map, clowMarker);
-          environmentalHoverCard.close(map, environmentalMarker);
-          fredricHoverCard.close(map,fredricMarker);
-          halseyHoverCard.close(map, halseyMarker);
-          harringtonHoverCard.close(map, harringtonMarker);
-          kolfHoverCard.close(map, kolfMarker);
-          nursingHoverCard.close(map, nursingMarker);
-          polkHoverCard.close(map, polkMarker);
-          radfordHoverCard.close(map, radfordMarker);
-          sageHoverCard.close(map, sageMarker);
-          swartHoverCard.close(map, swartMarker);
-        }
-        //close all athletics cards
-        function closeAllAth(){
-          albeeHoverCard.close(map, allMarkers[0]);
-          baseballHoverCard.close(map, baseballMarker);
-          athleticHoverCard.close(map, athleticMarker);
-          eastHoverCard.close(map,eastMarker);
-          kolfHoverCard.close(map, kolfMarker);
-          titanHoverCard.close(map, titanMarker);
-        }
-        //close all AccaS cards
-        function closeAllAccaS(){
-          equityHoverCard.close(map, equityMarker);
-          nursingHoverCard.close(map, nursingMarker);
-          successHoverCard.close(map, successMarker);
-          swartHoverCard.close(map, swartMarker);
-        }
-        //close all CampS cards
-        function closeAllCampS(){
-          equityHoverCard.close(map, equityMarker);
-          campusHoverCard.close(map, campusMarker);
-          dempseyHoverCard.close(map, dempseyMarker);
-          multiculturalHoverCard.close(map, multiculturalMarker);
-          pollockHoverCard.close(map, pollockMarker);
-          radfordHoverCard.close(map, radfordMarker);
-          reeveHoverCard.close(map, reeveMarker);
-          recreationHoverCard.close(map, recreationMarker);
-          successHoverCard.close(map, successMarker);
-        }
-        //close all resH cards
-        function closeAllResH(){
-          donnerHoverCard.close(map, donnerMarker);
-          evansHoverCard.close(map, evansMarker);
-          fletcherHoverCard.close(map, fletcherMarker);
-          gruenhagenHoverCard.close(map,gruenhagenMarker);
-          horizonHoverCard.close(map, horizonMarker);
-          stewartHoverCard.close(map, stewartMarker);
-          scottHoverCard.close(map, scottMarker);
-          taylorHoverCard.close(map, taylorMarker);
-          websterHoverCard.close(map, websterMarker);
-        }
-        //close all dining cards
-        function closeAllDining(){
-          blackhawkHoverCard.close(map, blackhawkMarker);
-          clowHoverCard.close(map, clowMarker);
-          halseyHoverCard.close(map, halseyMarker);
-          reeveHoverCard.close(map, reeveMarker);
-          sageHoverCard.close(map, sageMarker);
-          scottHoverCard.close(map, scottMarker);
-        }
-        //close all StuR cards
-        function closeAllStuR(){
-          reeveHoverCard.close(map, reeveMarker);
-          recreationHoverCard.close(map, recreationMarker);
-        }
+        // // close all hovers attached to buildings
+        // function closeAllBuildings(){
+        //   albeeHoverCard.close(map, allMarkers[0]);
+        //   baseballHoverCard.close(map, allMarkers[1]);
+        //   alumniHoverCard.close(map, allMarkers[2]);
+        //   acHoverCard.close(map, allMarkers[3]);
+        //   athleticHoverCard.close(map, allMarkers[4]);
+        //   blackhawkHoverCard.close(map, allMarkers[5]);
+        //   biodigesterHoverCard.close(map, allMarkers[6]);
+        //   buckstaffHoverCard.close(map,allMarkers[7]);
+        //   equityHoverCard.close(map, allMarkers[8]);
+        //   campusHoverCard.close(map, allMarkers[9]);
+        //   ceramicsHoverCard.close(map, allMarkers[10]);
+        //   clowHoverCard.close(map, allMarkers[11]);
+        //   gardensHoverCard.close(map, allMarkers[12]);
+        //   dempseyHoverCard.close(map, allMarkers[13]);
+        //   donnerHoverCard.close(map, allMarkers[14]);
+        //   eastHoverCard.close(map,allMarkers[15]);
+        //   environmentalHoverCard.close(map, allMarkers[16]);
+        //   evansHoverCard.close(map, allMarkers[17]);
+        //   fletcherHoverCard.close(map, allMarkers[18]);
+        //   fredricHoverCard.close(map,allMarkers[19]);
+        //   gruenhagenHoverCard.close(map,allMarkers[20]);
+        //   halseyHoverCard.close(map, allMarkers[21]);
+        //   harringtonHoverCard.close(map, allMarkers[22]);
+        //   heatingHoverCard.close(map,allMarkers[23]);
+        //   parkingRampHoverCard.close(map, allMarkers[24]);
+        //   horizonHoverCard.close(map, allMarkers[25]);
+        //   kolfHoverCard.close(map, allMarkers[26]);
+        //   lincolnHoverCard.close(map, allMarkers[27]);
+        //   multiculturalHoverCard.close(map, allMarkers[28]);
+        //   nursingHoverCard.close(map, allMarkers[29]);
+        //   oviattHoverCard.close(map, allMarkers[30]);
+        //   pollockHoverCard.close(map, allMarkers[31]);
+        //   polkHoverCard.close(map, allMarkers[32]);
+        //   radfordHoverCard.close(map, allMarkers[33]);
+        //   reeveHoverCard.close(map, allMarkers[34]);
+        //   sageHoverCard.close(map, allMarkers[35]);
+        //   scottHoverCard.close(map, allMarkers[36]);
+        //   stewartHoverCard.close(map, allMarkers[37]);
+        //   recreationHoverCard.close(map, allMarkers[38]);
+        //   successHoverCard.close(map, allMarkers[39]);
+        //   swartHoverCard.close(map, allMarkers[40]);
+        //   taylorHoverCard.close(map, allMarkers[41]);
+        //   titanHoverCard.close(map, allMarkers[42]);
+        //   policeHoverCard.close(map, allMarkers[43]);
+        //   websterHoverCard.close(map, allMarkers[44]);
+        // }
+        // //close parking lots cards
+        // function closeAllParking(){
+        //   elevenHoverCard.close(map, elevenMarker);
+        //   thirtyfiveHoverCard.close(map, thirtyfiveMarker);
+        //   twentysevenHoverCard.close(map, twentysevenMarker);
+        //   twentyoneHoverCard.close(map, twentyoneMarker);
+        //   twentysixHoverCard.close(map, twentysixMarker);
+        //   fourHoverCard.close(map, fourMarker);
+        //   fouraHoverCard.close(map, fourMarker);
+        //   sixteenHoverCard.close(map, sixteenMarker);
+        //   seventeenHoverCard.close(map, seventeenMarker);
+        //   twentynineHoverCard.close(map, twentynineMarker);
+        //   twentyfiveHoverCard.close(map, twentyfiveMarker);
+        //   eightHoverCard.close(map, eightMarker);
+        //   thirtythreeHoverCard.close(map, thirtythreeMarker);
+        //   thirtyfourHoverCard.close(map, thirtyfourMarker);
+        //   twentyeightHoverCard.close(map, twentyeightMarker);
+        //   twentythreeHoverCard.close(map, twentythreeMarker);
+        //   fourteenaHoverCard.close(map, fourteenaMarker);
+        //   fourteenbHoverCard.close(map, fourteenbMarker);
+        //   fourteencHoverCard.close(map, fourteencMarker);
+        //   sevenHoverCard.close(map, sevenMarker);
+        //   fiveaHoverCard.close(map, fiveaMarker);
+        //   fiveHoverCard.close(map, fiveMarker);
+        //   sevenaHoverCard.close(map, sevenaMarker);
+        //   fifteenHoverCard.close(map, fifteenMarker);
+        //   thirtytwoHoverCard.close(map, thirtytwoMarker);
+        //   thirteenHoverCard.close(map, thirteenMarker);
+        //   twelveHoverCard.close(map, twelveMarker);
+        //   sixaHoverCard.close(map, sixaMarker);
+        //   sixHoverCard.close(map, sixMarker);
+        //   tenHoverCard.close(map, tenMarker);
+        //   nineaHoverCard.close(map, nineaMarker);
+        //   nineHoverCard.close(map, nineMarker);
+        //   eighteenHoverCard.close(map, eighteenMarker);
+        //   thirtyHoverCard.close(map, thirtyMarker);
+        //   thirtynineHoverCard.close(map, thirtynineMarker);
+        //   womensCenterHoverCard.close(map, womensCenterMarker);
+        //   titanOneHoverCard.close(map, titanOneMarker);
+        //   titanTwoHoverCard.close(map, titanTwoMarker);
+        // }
+        // // close all accEnt cards
+        // function closeAllAccEnt(){
+        //   albeeHoverCard.close(map, allMarkers[0]);
+        //   acHoverCard.close(map,acMarker);
+        //   blackhawkHoverCard.close(map, blackhawkMarker);
+        //   equityHoverCard.close(map, equityMarker);
+        //   clowHoverCard.close(map, clowMarker);
+        //   dempseyHoverCard.close(map, dempseyMarker);
+        //   donnerHoverCard.close(map, donnerMarker);
+        //   fletcherHoverCard.close(map, fletcherMarker);
+        //   fredricHoverCard.close(map,fredricMarker);
+        //   gruenhagenHoverCard.close(map,gruenhagenMarker);
+        //   halseyHoverCard.close(map, halseyMarker);
+        //   harringtonHoverCard.close(map, harringtonMarker);
+        //   kolfHoverCard.close(map, kolfMarker);
+        //   nursingHoverCard.close(map, nursingMarker);
+        //   polkHoverCard.close(map, polkMarker);
+        //   radfordHoverCard.close(map, radfordMarker);
+        //   reeveHoverCard.close(map, reeveMarker);
+        //   scottHoverCard.close(map, scottMarker);
+        //   stewartHoverCard.close(map, stewartMarker);
+        //   successHoverCard.close(map, successMarker);
+        //   swartHoverCard.close(map, swartMarker);
+        //   taylorHoverCard.close(map, taylorMarker);
+        //   websterHoverCard.close(map, websterMarker);
+        // }
+        // //close all AccPark cards
+        // function closeAllAccPark(){
+        //   womensCenterHoverCard.close(map, womensCenterMarker);
+        //   titanOneHoverCard.close(map, titanOneMarker);
+        //   titanTwoHoverCard.close(map, titanTwoMarker);
+        //   elevenHoverCard.close(map, elevenMarker);
+        //   fourHoverCard.close(map, fourMarker);
+        //   fouraHoverCard.close(map, fourMarker);
+        //   sixteenHoverCard.close(map, sixteenMarker);
+        //   seventeenHoverCard.close(map, seventeenMarker);
+        //   twentynineHoverCard.close(map, twentynineMarker);
+        //   twentyfiveHoverCard.close(map, twentyfiveMarker);
+        //   thirtythreeHoverCard.close(map, thirtythreeMarker);
+        //   fourteenaHoverCard.close(map, fourteenaMarker);
+        //   sevenaHoverCard.close(map, sevenaMarker);
+        //   thirteenHoverCard.close(map, thirteenMarker);
+        //   thirtyfourHoverCard.close(map, thirtyfourMarker);
+        //   twentyeightHoverCard.close(map, twentyeightMarker);
+        //   twentythreeHoverCard.close(map, twentythreeMarker);
+        //   fifteenHoverCard.close(map, fifteenMarker);
+        //   thirtytwoHoverCard.close(map, thirtytwoMarker);
+        //   tenHoverCard.close(map, tenMarker);
+        //   twelveHoverCard.close(map, twelveMarker);
+        //   sixaHoverCard.close(map, sixaMarker);
+        //   sixHoverCard.close(map, sixMarker);
+        //   eighteenHoverCard.close(map, eighteenMarker);
+        // }
+        // //close all sust cards
+        // function closeAllSust(){
+        //   albeeHoverCard.close(map, allMarkers[0]);
+        //   alumniHoverCard.close(map, alumniMarker);
+        //   blackhawkHoverCard.close(map, blackhawkMarker);
+        //   biodigesterHoverCard.close(map, biodigesterMarker);
+        //   heatingHoverCard.close(map,heatingMarker);
+        //   horizonHoverCard.close(map, horizonMarker);
+        //   reeveHoverCard.close(map, reeveMarker);
+        //   sageHoverCard.close(map, sageMarker);
+        //   recreationHoverCard.close(map, recreationMarker);
+        //   successHoverCard.close(map, successMarker);
+        //   taylorHoverCard.close(map, taylorMarker);
+        //   titanHoverCard.close(map, titanMarker);
+        // }
+        // //close all gender cards
+        // function closeAllGender(){
+        //   acHoverCard.close(map,acMarker);
+        //   blackhawkHoverCard.close(map, blackhawkMarker);
+        //   campusHoverCard.close(map, campusMarker);
+        //   dempseyHoverCard.close(map, dempseyMarker);
+        //   halseyHoverCard.close(map, halseyMarker);
+        //   harringtonHoverCard.close(map, harringtonMarker);
+        //   kolfHoverCard.close(map, kolfMarker);
+        //   nursingHoverCard.close(map, nursingMarker);
+        //   reeveHoverCard.close(map, reeveMarker);
+        //   sageHoverCard.close(map, sageMarker);
+        //   recreationHoverCard.close(map, recreationMarker);
+        //   successHoverCard.close(map, successMarker);
+        //   swartHoverCard.close(map, swartMarker);
+        //   policeHoverCard.close(map, policeMarker);
+        // }
+        // //close all AccaF cards
+        // function closeAllAccaF(){
+        //   albeeHoverCard.close(map, allMarkers[0]);
+        //   acHoverCard.close(map,acMarker);
+        //   ceramicsHoverCard.close(map, ceramicsMarker);
+        //   clowHoverCard.close(map, clowMarker);
+        //   environmentalHoverCard.close(map, environmentalMarker);
+        //   fredricHoverCard.close(map,fredricMarker);
+        //   halseyHoverCard.close(map, halseyMarker);
+        //   harringtonHoverCard.close(map, harringtonMarker);
+        //   kolfHoverCard.close(map, kolfMarker);
+        //   nursingHoverCard.close(map, nursingMarker);
+        //   polkHoverCard.close(map, polkMarker);
+        //   radfordHoverCard.close(map, radfordMarker);
+        //   sageHoverCard.close(map, sageMarker);
+        //   swartHoverCard.close(map, swartMarker);
+        // }
+        // //close all athletics cards
+        // function closeAllAth(){
+        //   albeeHoverCard.close(map, allMarkers[0]);
+        //   baseballHoverCard.close(map, baseballMarker);
+        //   athleticHoverCard.close(map, athleticMarker);
+        //   eastHoverCard.close(map,eastMarker);
+        //   kolfHoverCard.close(map, kolfMarker);
+        //   titanHoverCard.close(map, titanMarker);
+        // }
+        // //close all AccaS cards
+        // function closeAllAccaS(){
+        //   equityHoverCard.close(map, equityMarker);
+        //   nursingHoverCard.close(map, nursingMarker);
+        //   successHoverCard.close(map, successMarker);
+        //   swartHoverCard.close(map, swartMarker);
+        // }
+        // //close all CampS cards
+        // function closeAllCampS(){
+        //   equityHoverCard.close(map, equityMarker);
+        //   campusHoverCard.close(map, campusMarker);
+        //   dempseyHoverCard.close(map, dempseyMarker);
+        //   multiculturalHoverCard.close(map, multiculturalMarker);
+        //   pollockHoverCard.close(map, pollockMarker);
+        //   radfordHoverCard.close(map, radfordMarker);
+        //   reeveHoverCard.close(map, reeveMarker);
+        //   recreationHoverCard.close(map, recreationMarker);
+        //   successHoverCard.close(map, successMarker);
+        // }
+        // //close all resH cards
+        // function closeAllResH(){
+        //   donnerHoverCard.close(map, donnerMarker);
+        //   evansHoverCard.close(map, evansMarker);
+        //   fletcherHoverCard.close(map, fletcherMarker);
+        //   gruenhagenHoverCard.close(map,gruenhagenMarker);
+        //   horizonHoverCard.close(map, horizonMarker);
+        //   stewartHoverCard.close(map, stewartMarker);
+        //   scottHoverCard.close(map, scottMarker);
+        //   taylorHoverCard.close(map, taylorMarker);
+        //   websterHoverCard.close(map, websterMarker);
+        // }
+        // //close all dining cards
+        // function closeAllDining(){
+        //   blackhawkHoverCard.close(map, blackhawkMarker);
+        //   clowHoverCard.close(map, clowMarker);
+        //   halseyHoverCard.close(map, halseyMarker);
+        //   reeveHoverCard.close(map, reeveMarker);
+        //   sageHoverCard.close(map, sageMarker);
+        //   scottHoverCard.close(map, scottMarker);
+        // }
+        // //close all StuR cards
+        // function closeAllStuR(){
+        //   reeveHoverCard.close(map, reeveMarker);
+        //   recreationHoverCard.close(map, recreationMarker);
+        // }
         // close all hover cards
         function closeAllHover(){
-            albeeHoverCard.close(map, allMarkers[0]);
-            baseballHoverCard.close(map, allMarkers[1]);
-            alumniHoverCard.close(map, allMarkers[2]);
-            acHoverCard.close(map,allMarkers[3]);
-            athleticHoverCard.close(map, allMarkers[4]);
-            blackhawkHoverCard.close(map, allMarkers[5]);
-            biodigesterHoverCard.close(map, allMarkers[6]);
-            buckstaffHoverCard.close(map,allMarkers[7]);
-            equityHoverCard.close(map, allMarkers[8]);
-            campusHoverCard.close(map, allMarkers[9]);
-            ceramicsHoverCard.close(map, allMarkers[10]);
-            clowHoverCard.close(map, allMarkers[11]);
-            gardensHoverCard.close(map, allMarkers[12]);
-            dempseyHoverCard.close(map, allMarkers[13]);
-            donnerHoverCard.close(map, allMarkers[14]);
-            eastHoverCard.close(map,allMarkers[15]);
-            environmentalHoverCard.close(map, allMarkers[16]);
-            evansHoverCard.close(map, allMarkers[17]);
-            fletcherHoverCard.close(map, allMarkers[18]);
-            fredricHoverCard.close(map,allMarkers[19]);
-            gruenhagenHoverCard.close(map,allMarkers[20]);
-            halseyHoverCard.close(map, allMarkers[21]);
-            harringtonHoverCard.close(map, allMarkers[22]);
-            heatingHoverCard.close(map,allMarkers[23]);
-            parkingRampHoverCard.close(map, allMarkers[24]);
-            horizonHoverCard.close(map, allMarkers[25]);
-            kolfHoverCard.close(map, allMarkers[26]);
-            lincolnHoverCard.close(map, allMarkers[27]);
-            multiculturalHoverCard.close(map, allMarkers[28]);
-            nursingHoverCard.close(map, allMarkers[29]);
-            oviattHoverCard.close(map, allMarkers[30]);
-            pollockHoverCard.close(map, allMarkers[31]);
-            polkHoverCard.close(map, allMarkers[32]);
-            radfordHoverCard.close(map, allMarkers[33]);
-            reeveHoverCard.close(map, allMarkers[34]);
-            sageHoverCard.close(map, allMarkers[35]);
-            scottHoverCard.close(map, allMarkers[36]);
-            stewartHoverCard.close(map, allMarkers[37]);
-            recreationHoverCard.close(map, allMarkers[38]);
-            successHoverCard.close(map, allMarkers[39]);
-            swartHoverCard.close(map, allMarkers[40]);
-            taylorHoverCard.close(map, allMarkers[41]);
-            titanHoverCard.close(map, allMarkers[42]);
-            policeHoverCard.close(map, allMarkers[43]);
-            websterHoverCard.close(map, allMarkers[44]);
-            elevenHoverCard.close(map, elevenMarker);
-            thirtyfiveHoverCard.close(map, thirtyfiveMarker);
-            twentysevenHoverCard.close(map, twentysevenMarker);
-            twentyoneHoverCard.close(map, twentyoneMarker);
-            twentysixHoverCard.close(map, twentysixMarker);
-            fourHoverCard.close(map, fourMarker);
-            fouraHoverCard.close(map, fourMarker);
-            sixteenHoverCard.close(map, sixteenMarker);
-            seventeenHoverCard.close(map, seventeenMarker);
-            twentynineHoverCard.close(map, twentynineMarker);
-            twentyfiveHoverCard.close(map, twentyfiveMarker);
-            eightHoverCard.close(map, eightMarker);
-            thirtythreeHoverCard.close(map, thirtythreeMarker);
-            thirtyfourHoverCard.close(map, thirtyfourMarker);
-            twentyeightHoverCard.close(map, twentyeightMarker);
-            twentythreeHoverCard.close(map, twentythreeMarker);
-            fourteenaHoverCard.close(map, fourteenaMarker);
-            fourteenbHoverCard.close(map, fourteenbMarker);
-            fourteencHoverCard.close(map, fourteencMarker);
-            sevenHoverCard.close(map, sevenMarker);
-            fiveaHoverCard.close(map, fiveaMarker);
-            fiveHoverCard.close(map, fiveMarker);
-            sevenaHoverCard.close(map, sevenaMarker);
-            fifteenHoverCard.close(map, fifteenMarker);
-            thirtytwoHoverCard.close(map, thirtytwoMarker);
-            thirteenHoverCard.close(map, thirteenMarker);
-            twelveHoverCard.close(map, twelveMarker);
-            sixaHoverCard.close(map, sixaMarker);
-            sixHoverCard.close(map, sixMarker);
-            tenHoverCard.close(map, tenMarker);
-            nineaHoverCard.close(map, nineaMarker);
-            nineHoverCard.close(map, nineMarker);
-            eighteenHoverCard.close(map, eighteenMarker);
-            thirtyHoverCard.close(map, thirtyMarker);
-            thirtynineHoverCard.close(map, thirtynineMarker);
-            womensCenterHoverCard.close(map, womensCenterMarker);
-            titanOneHoverCard.close(map, titanOneMarker);
-            titanTwoHoverCard.close(map, titanTwoMarker);
+            //0 - 82 because only buildings and parking lots have infoWindows
+            //goes through all of the infoWindows and closes them for all the markers they are attached to
+            for(w = 0; w < 83; w++){
+                infoWindowsAll[w].close(map, allMarkers[w]);
+            }
+            // albeeHoverCard.close(map, allMarkers[0]);
+            // baseballHoverCard.close(map, allMarkers[1]);
+            // alumniHoverCard.close(map, allMarkers[2]);
+            // acHoverCard.close(map,allMarkers[3]);
+            // athleticHoverCard.close(map, allMarkers[4]);
+            // blackhawkHoverCard.close(map, allMarkers[5]);
+            // biodigesterHoverCard.close(map, allMarkers[6]);
+            // buckstaffHoverCard.close(map,allMarkers[7]);
+            // equityHoverCard.close(map, allMarkers[8]);
+            // campusHoverCard.close(map, allMarkers[9]);
+            // ceramicsHoverCard.close(map, allMarkers[10]);
+            // clowHoverCard.close(map, allMarkers[11]);
+            // gardensHoverCard.close(map, allMarkers[12]);
+            // dempseyHoverCard.close(map, allMarkers[13]);
+            // donnerHoverCard.close(map, allMarkers[14]);
+            // eastHoverCard.close(map,allMarkers[15]);
+            // environmentalHoverCard.close(map, allMarkers[16]);
+            // evansHoverCard.close(map, allMarkers[17]);
+            // fletcherHoverCard.close(map, allMarkers[18]);
+            // fredricHoverCard.close(map,allMarkers[19]);
+            // gruenhagenHoverCard.close(map,allMarkers[20]);
+            // halseyHoverCard.close(map, allMarkers[21]);
+            // harringtonHoverCard.close(map, allMarkers[22]);
+            // heatingHoverCard.close(map,allMarkers[23]);
+            // parkingRampHoverCard.close(map, allMarkers[24]);
+            // horizonHoverCard.close(map, allMarkers[25]);
+            // kolfHoverCard.close(map, allMarkers[26]);
+            // lincolnHoverCard.close(map, allMarkers[27]);
+            // multiculturalHoverCard.close(map, allMarkers[28]);
+            // nursingHoverCard.close(map, allMarkers[29]);
+            // oviattHoverCard.close(map, allMarkers[30]);
+            // pollockHoverCard.close(map, allMarkers[31]);
+            // polkHoverCard.close(map, allMarkers[32]);
+            // radfordHoverCard.close(map, allMarkers[33]);
+            // reeveHoverCard.close(map, allMarkers[34]);
+            // sageHoverCard.close(map, allMarkers[35]);
+            // scottHoverCard.close(map, allMarkers[36]);
+            // stewartHoverCard.close(map, allMarkers[37]);
+            // recreationHoverCard.close(map, allMarkers[38]);
+            // successHoverCard.close(map, allMarkers[39]);
+            // swartHoverCard.close(map, allMarkers[40]);
+            // taylorHoverCard.close(map, allMarkers[41]);
+            // titanHoverCard.close(map, allMarkers[42]);
+            // policeHoverCard.close(map, allMarkers[43]);
+            // websterHoverCard.close(map, allMarkers[44]);
+            // elevenHoverCard.close(map, elevenMarker);
+            // thirtyfiveHoverCard.close(map, thirtyfiveMarker);
+            // twentysevenHoverCard.close(map, twentysevenMarker);
+            // twentyoneHoverCard.close(map, twentyoneMarker);
+            // twentysixHoverCard.close(map, twentysixMarker);
+            // fourHoverCard.close(map, fourMarker);
+            // fouraHoverCard.close(map, fourMarker);
+            // sixteenHoverCard.close(map, sixteenMarker);
+            // seventeenHoverCard.close(map, seventeenMarker);
+            // twentynineHoverCard.close(map, twentynineMarker);
+            // twentyfiveHoverCard.close(map, twentyfiveMarker);
+            // eightHoverCard.close(map, eightMarker);
+            // thirtythreeHoverCard.close(map, thirtythreeMarker);
+            // thirtyfourHoverCard.close(map, thirtyfourMarker);
+            // twentyeightHoverCard.close(map, twentyeightMarker);
+            // twentythreeHoverCard.close(map, twentythreeMarker);
+            // fourteenaHoverCard.close(map, fourteenaMarker);
+            // fourteenbHoverCard.close(map, fourteenbMarker);
+            // fourteencHoverCard.close(map, fourteencMarker);
+            // sevenHoverCard.close(map, sevenMarker);
+            // fiveaHoverCard.close(map, fiveaMarker);
+            // fiveHoverCard.close(map, fiveMarker);
+            // sevenaHoverCard.close(map, sevenaMarker);
+            // fifteenHoverCard.close(map, fifteenMarker);
+            // thirtytwoHoverCard.close(map, thirtytwoMarker);
+            // thirteenHoverCard.close(map, thirteenMarker);
+            // twelveHoverCard.close(map, twelveMarker);
+            // sixaHoverCard.close(map, sixaMarker);
+            // sixHoverCard.close(map, sixMarker);
+            // tenHoverCard.close(map, tenMarker);
+            // nineaHoverCard.close(map, nineaMarker);
+            // nineHoverCard.close(map, nineMarker);
+            // eighteenHoverCard.close(map, eighteenMarker);
+            // thirtyHoverCard.close(map, thirtyMarker);
+            // thirtynineHoverCard.close(map, thirtynineMarker);
+            // womensCenterHoverCard.close(map, womensCenterMarker);
+            // titanOneHoverCard.close(map, titanOneMarker);
+            // titanTwoHoverCard.close(map, titanTwoMarker);
             
         }
         //one function for all open/close
         //for the hover thingaroos not the popups
         //set images to the thumbnails of the places
-        function markerOpenClose(name){
+        function markerOpenClose(name, index){
+            // for(x = 0; x < 45; x++){
+
+            if(index < 45){
+                if(!$("#" + name + "Hover").hasClass("hoverOpen")){
+                     //if marker is clicked open hover element and set the image on it
+                    closeAllHover();
+                    console.log("x: " + index + "name:" + name)
+                    infoWindowsAll[index].open(map, allMarkers[index]);
+                    $("#" + name + "Hover > img").attr("src", allMarkersInfo[index].thumbnail);
+                    $("#" + name + "Hover").addClass("hoverOpen");
+                } else {
+                 //if marker is not clicked/clicked to close, then change src of image to empty
+                    $("#" + name + "Hover > img").attr("src", "");
+                    $("#" + name + "Hover").removeClass("hoverOpen");
+                    closeAllHover();
+                }
+
+            }
+            // }
             // debugger;
             //close all hover when new marker is clicked
             
             //toggle hoverOpen/close when marker is clicked
-            // $("#" + name + "Hover").toggleClass("hoverOpen");
             //if marker is clicked open hover element and set the image on it
-            if(!$("#" + name + "Hover").hasClass("hoverOpen")){
-                //depending on the name make sure that the right image and popup are put up
-                closeAllHover();
-                    if (name === "albee"){
-                        albeeHoverCard.open(map, allMarkers[0]);
-                        $("#albeeHover > img").attr("src", allMarkersInfo[0].thumbnail);
-                    }
-                    else if (name === "baseball"){
-                        baseballHoverCard.open(map, allMarkersInfo[].thumbnail);
-                        //baseball has no image atm
-                    }
-                    else if (name === "alumni"){
-                        alumniHoverCard.open(map, allMarkers[2]);
-                        $("#alumniHover > img").attr("src", allMarkersInfo[].thumbnail);
-                    }
-                    else if (name === "ac"){
-                        acHoverCard.open(map, allMarkers[3]);
-                        $("#acHover > img").attr("src", allMarkersInfo[].thumbnail);
-                    }
-                    else if (name === "athletic"){
-                        athleticHoverCard.open(map, allMarkers[4]);
-                        $("#athleticHover > img").attr("src",allMarkersInfo[].thumbnail);
-                    }
-                    else if (name === "blackhawk"){
-                        blackhawkHoverCard.open(map, allMarkers[5]);
-                        $("#blackhawkHover > img").attr("src", allMarkersInfo[].thumbnail);
-                    }
-                    else if (name === "biodigester"){
-                        biodigesterHoverCard.open(map, allMarkers[6]);
-                        $("#biodigesterHover > img").attr("src", allMarkersInfo[].thumbnail);
-                    }
-                    else if (name === "buckstaff"){
-                        buckstaffHoverCard.open(map, allMarkers[7]);
-                        $("#buckstaffHover > img").attr("src",allMarkersInfo[].thumbnail);
-                    }
-                    else if (name === "equity"){
-                        equityHoverCard.open(map, allMarkers[8]);
-                        $("#equityHover > img").attr("src",allMarkersInfo[].thumbnail);
-                    }
-                    else if (name === "campus"){
-                        campusHoverCard.open(map, allMarkers[9]);
-                        $("#campusHover > img").attr("src", allMarkersInfo[].thumbnail);
-                    }
-                    else if (name === "ceramics"){
-                        ceramicsHoverCard.open(map, allMarkers[10]);
-                        $("#ceramicsHover > img").attr("src", allMarkersInfo[].thumbnail);
-                    }
-                    else if (name === "clow"){
-                        clowHoverCard.open(map, allMarkers[11]);
-                        $("#clowHover > img").attr("src",allMarkersInfo[].thumbnail);
-                    }
-                    else if (name === "gardens"){
-                        gardensHoverCard.open(map, allMarkers[12]);
-                        $("#gardensHover > img").attr("src", allMarkersInfo[].thumbnail);
-                    }
-                    else if (name === "dempsey"){
-                        dempseyHoverCard.open(map, allMarkers[13]);
-                        $("#dempseyHover > img").attr("src", allMarkersInfo[].thumbnail);
-                    } else if (name === "donner"){
-                        donnerHoverCard.open(map, allMarkers[14]);
-                        $("#donnerHover > img").attr("src",allMarkersInfo[].thumbnail);
-                    }
-                    else if (name === "east"){
-                        eastHoverCard.open(map, allMarkers[15]);
-                        $("#eastHover > img").attr("src", allMarkersInfo[].thumbnail);
-                    }
-                    else if (name === "environmental"){
-                        environmentalHoverCard.open(map, allMarkers[16]);
-                        $("#environmentalHover > img").attr("src", allMarkersInfo[].thumbnail);
-                    }
-                    else if (name === "evans"){
-                        evansHoverCard.open(map, allMarkers[17]);
-                        $("#evansHover > img").attr("src", allMarkersInfo[].thumbnail);
-                    }
-                    else if (name === "fletcher"){
-                        fletcherHoverCard.open(map, allMarkers[18]);
-                        $("#fletcherHover > img").attr("src", allMarkersInfo[].thumbnail);
-                    }
-                    else if (name === "fredric"){
-                        fredricHoverCard.open(map, allMarkers[19]);
-                        $("#fredricHover > img").attr("src", allMarkersInfo[].thumbnail);
-                    }
-                    else if (name === "gruenhagen"){
-                        gruenhagenHoverCard.open(map, allMarkers[20]);
-                        $("#gruenhagenHover > img").attr("src", allMarkersInfo[].thumbnail);
-                    }
-                    else if (name === "halsey"){
-                        halseyHoverCard.open(map, allMarkers[21]);
-                        $("#halseyHover > img").attr("src", allMarkersInfo[].thumbnail);
-                    }
-                    else if (name === "harrington"){
-                        harringtonHoverCard.open(map, allMarkers[22]);
-                        $("#harringtonHover > img").attr("src", allMarkersInfo[].thumbnail);
-                    }
-                    else if (name === "heating"){
-                        heatingHoverCard.open(map, allMarkers[23]);
-                        $("#heatingHover > img").attr("src", allMarkersInfo[].thumbnail);
-                    }
-                    else if (name === "parkingRamp"){
-                        parkingRampHoverCard.open(map, allMarkers[24]);
-                        $("#parkingRampHover > img").attr("src", allMarkersInfo[].thumbnail);
-                    }
-                    else if (name === "horizon"){
-                        horizonHoverCard.open(map, allMarkers[25]);
-                        $("#horizonHover > img").attr("src", allMarkersInfo[].thumbnail);
-                    }
-                    else if (name === "kolf"){
-                        kolfHoverCard.open(map, allMarkers[26]);
-                        $("#kolfHover > img").attr("src", allMarkersInfo[].thumbnail);
-                    }
-                    else if (name === "lincoln"){
-                        lincolnHoverCard.open(map, allMarkers[27]);
-                        $("#lincolnHover > img").attr("src", allMarkersInfo[].thumbnail);
-                    }
-                    else if (name === "multicultural"){
-                        multiculturalHoverCard.open(map, allMarkers[28]);
-                        $("#multiculturalHover > img").attr("src", allMarkersInfo[].thumbnail);
-                    }
-                    else if (name === "nursing"){
-                        nursingHoverCard.open(map, allMarkers[29]);
-                        $("#nursingHover > img").attr("src", allMarkersInfo[].thumbnail);
-                    }
-                    else if (name === "oviatt"){
-                        oviattHoverCard.open(map, allMarkers[30]);
-                        $("#oviattHover > img").attr("src", allMarkersInfo[].thumbnail);
-                    }
-                    else if (name === "pollock"){
-                        pollockHoverCard.open(map, allMarkers[31]);
-                        $("#pollockHover > img").attr("src",allMarkersInfo[].thumbnail);
-                    }
-                    else if (name === "polk"){
-                        polkHoverCard.open(map, allMarkers[32]);
-                        $("#polkHover > img").attr("src", allMarkersInfo[].thumbnail);
-                    }
-                    else if (name === "radford"){
-                        radfordHoverCard.open(map, allMarkers[33]);
-                        $("#radfordHover > img").attr("src",  allMarkersInfo[].thumbnail);
-                    }
-                    else if (name === "reeve"){
-                        reeveHoverCard.open(map, allMarkers[34]);
-                        $("#reeveHover > img").attr("src", allMarkersInfo[].thumbnail);
-                    }
-                    else if (name === "sage"){
-                        sageHoverCard.open(map, allMarkers[35]);
-                        $("#sageHover > img").attr("src", allMarkersInfo[].thumbnail);
-                    }
-                    else if (name === "scott"){
-                        scottHoverCard.open(map, allMarkers[36]);
-                        $("#scottHover > img").attr("src", allMarkersInfo[].thumbnail);
-                    }
-                    else if (name === "stewart"){
-                        stewartHoverCard.open(map, allMarkers[37]);
-                        $("#stewartHover > img").attr("src",allMarkersInfo[].thumbnail);
-                    }
-                    else if (name === "recreation"){
-                        recreationHoverCard.open(map, allMarkers[38]);
-                        $("#recreationHover > img").attr("src", allMarkersInfo[].thumbnail);
-                    }
-                    else if (name === "success"){
-                        successHoverCard.open(map, allMarkers[39]);
-                        $("#successHover > img").attr("src",allMarkersInfo[].thumbnail);
-                    }
-                    else if (name === "swart"){
-                        swartHoverCard.open(map, allMarkers[40]);
-                        $("#swartHover > img").attr("src", allMarkersInfo[].thumbnail);
-                    }
-                    else if (name === "taylor"){
-                        taylorHoverCard.open(map, allMarkers[41]);
-                        $("#taylorHover > img").attr("src", allMarkersInfo[].thumbnail);
-                    }
-                    else if (name === "titan"){
-                        titanHoverCard.open(map, allMarkers[42]);
-                        $("#titanHover > img").attr("src", allMarkersInfo[].thumbnail);
-                    }
-                    else if (name === "police"){
-                        policeHoverCard.open(map, allMarkers[43]);
-                        $("#policeHover > img").attr("src", allMarkersInfo[].thumbnail);
-                    }
-                    else if (name === "webster"){
-                        websterHoverCard.open(map, allMarkers[44]);
-                        $("#websterHover > img").attr("src", allMarkersInfo[].thumbnail);
-                    }
-                 $("#" + name + "Hover").addClass("hoverOpen");
-            //if marker is not clicked/clicked to close change src of image to empty
-            } else{
-                $("#" + name + "Hover > img").attr("src", "");
-                $("#" + name + "Hover").removeClass("hoverOpen");
-                closeAllHover();
-            }
+            // if(!$("#" + name + "Hover").hasClass("hoverOpen")){
+            //     //depending on the name make sure that the right image and popup are put up
+            //     closeAllHover();
+            //     //just buildings
+                
+            //         if (name === "albee"){
+            //             albeeHoverCard.open(map, allMarkers[0]);
+            //             $("#albeeHover > img").attr("src", allMarkersInfo[0].thumbnail);
+            //         }
+            //         else if (name === "baseball"){
+            //             baseballHoverCard.open(map, allMarkersInfo[].thumbnail);
+            //             //baseball has no image atm
+            //         }
+            //         else if (name === "alumni"){
+            //             alumniHoverCard.open(map, allMarkers[2]);
+            //             $("#alumniHover > img").attr("src", allMarkersInfo[].thumbnail);
+            //         }
+            //         else if (name === "ac"){
+            //             acHoverCard.open(map, allMarkers[3]);
+            //             $("#acHover > img").attr("src", allMarkersInfo[].thumbnail);
+            //         }
+            //         else if (name === "athletic"){
+            //             athleticHoverCard.open(map, allMarkers[4]);
+            //             $("#athleticHover > img").attr("src",allMarkersInfo[].thumbnail);
+            //         }
+            //         else if (name === "blackhawk"){
+            //             blackhawkHoverCard.open(map, allMarkers[5]);
+            //             $("#blackhawkHover > img").attr("src", allMarkersInfo[].thumbnail);
+            //         }
+            //         else if (name === "biodigester"){
+            //             biodigesterHoverCard.open(map, allMarkers[6]);
+            //             $("#biodigesterHover > img").attr("src", allMarkersInfo[].thumbnail);
+            //         }
+            //         else if (name === "buckstaff"){
+            //             buckstaffHoverCard.open(map, allMarkers[7]);
+            //             $("#buckstaffHover > img").attr("src",allMarkersInfo[].thumbnail);
+            //         }
+            //         else if (name === "equity"){
+            //             equityHoverCard.open(map, allMarkers[8]);
+            //             $("#equityHover > img").attr("src",allMarkersInfo[].thumbnail);
+            //         }
+            //         else if (name === "campus"){
+            //             campusHoverCard.open(map, allMarkers[9]);
+            //             $("#campusHover > img").attr("src", allMarkersInfo[].thumbnail);
+            //         }
+            //         else if (name === "ceramics"){
+            //             ceramicsHoverCard.open(map, allMarkers[10]);
+            //             $("#ceramicsHover > img").attr("src", allMarkersInfo[].thumbnail);
+            //         }
+            //         else if (name === "clow"){
+            //             clowHoverCard.open(map, allMarkers[11]);
+            //             $("#clowHover > img").attr("src",allMarkersInfo[].thumbnail);
+            //         }
+            //         else if (name === "gardens"){
+            //             gardensHoverCard.open(map, allMarkers[12]);
+            //             $("#gardensHover > img").attr("src", allMarkersInfo[].thumbnail);
+            //         }
+            //         else if (name === "dempsey"){
+            //             dempseyHoverCard.open(map, allMarkers[13]);
+            //             $("#dempseyHover > img").attr("src", allMarkersInfo[].thumbnail);
+            //         } else if (name === "donner"){
+            //             donnerHoverCard.open(map, allMarkers[14]);
+            //             $("#donnerHover > img").attr("src",allMarkersInfo[].thumbnail);
+            //         }
+            //         else if (name === "east"){
+            //             eastHoverCard.open(map, allMarkers[15]);
+            //             $("#eastHover > img").attr("src", allMarkersInfo[].thumbnail);
+            //         }
+            //         else if (name === "environmental"){
+            //             environmentalHoverCard.open(map, allMarkers[16]);
+            //             $("#environmentalHover > img").attr("src", allMarkersInfo[].thumbnail);
+            //         }
+            //         else if (name === "evans"){
+            //             evansHoverCard.open(map, allMarkers[17]);
+            //             $("#evansHover > img").attr("src", allMarkersInfo[].thumbnail);
+            //         }
+            //         else if (name === "fletcher"){
+            //             fletcherHoverCard.open(map, allMarkers[18]);
+            //             $("#fletcherHover > img").attr("src", allMarkersInfo[].thumbnail);
+            //         }
+            //         else if (name === "fredric"){
+            //             fredricHoverCard.open(map, allMarkers[19]);
+            //             $("#fredricHover > img").attr("src", allMarkersInfo[].thumbnail);
+            //         }
+            //         else if (name === "gruenhagen"){
+            //             gruenhagenHoverCard.open(map, allMarkers[20]);
+            //             $("#gruenhagenHover > img").attr("src", allMarkersInfo[].thumbnail);
+            //         }
+            //         else if (name === "halsey"){
+            //             halseyHoverCard.open(map, allMarkers[21]);
+            //             $("#halseyHover > img").attr("src", allMarkersInfo[].thumbnail);
+            //         }
+            //         else if (name === "harrington"){
+            //             harringtonHoverCard.open(map, allMarkers[22]);
+            //             $("#harringtonHover > img").attr("src", allMarkersInfo[].thumbnail);
+            //         }
+            //         else if (name === "heating"){
+            //             heatingHoverCard.open(map, allMarkers[23]);
+            //             $("#heatingHover > img").attr("src", allMarkersInfo[].thumbnail);
+            //         }
+            //         else if (name === "parkingRamp"){
+            //             parkingRampHoverCard.open(map, allMarkers[24]);
+            //             $("#parkingRampHover > img").attr("src", allMarkersInfo[].thumbnail);
+            //         }
+            //         else if (name === "horizon"){
+            //             horizonHoverCard.open(map, allMarkers[25]);
+            //             $("#horizonHover > img").attr("src", allMarkersInfo[].thumbnail);
+            //         }
+            //         else if (name === "kolf"){
+            //             kolfHoverCard.open(map, allMarkers[26]);
+            //             $("#kolfHover > img").attr("src", allMarkersInfo[].thumbnail);
+            //         }
+            //         else if (name === "lincoln"){
+            //             lincolnHoverCard.open(map, allMarkers[27]);
+            //             $("#lincolnHover > img").attr("src", allMarkersInfo[].thumbnail);
+            //         }
+            //         else if (name === "multicultural"){
+            //             multiculturalHoverCard.open(map, allMarkers[28]);
+            //             $("#multiculturalHover > img").attr("src", allMarkersInfo[].thumbnail);
+            //         }
+            //         else if (name === "nursing"){
+            //             nursingHoverCard.open(map, allMarkers[29]);
+            //             $("#nursingHover > img").attr("src", allMarkersInfo[].thumbnail);
+            //         }
+            //         else if (name === "oviatt"){
+            //             oviattHoverCard.open(map, allMarkers[30]);
+            //             $("#oviattHover > img").attr("src", allMarkersInfo[].thumbnail);
+            //         }
+            //         else if (name === "pollock"){
+            //             pollockHoverCard.open(map, allMarkers[31]);
+            //             $("#pollockHover > img").attr("src",allMarkersInfo[].thumbnail);
+            //         }
+            //         else if (name === "polk"){
+            //             polkHoverCard.open(map, allMarkers[32]);
+            //             $("#polkHover > img").attr("src", allMarkersInfo[].thumbnail);
+            //         }
+            //         else if (name === "radford"){
+            //             radfordHoverCard.open(map, allMarkers[33]);
+            //             $("#radfordHover > img").attr("src",  allMarkersInfo[].thumbnail);
+            //         }
+            //         else if (name === "reeve"){
+            //             reeveHoverCard.open(map, allMarkers[34]);
+            //             $("#reeveHover > img").attr("src", allMarkersInfo[].thumbnail);
+            //         }
+            //         else if (name === "sage"){
+            //             sageHoverCard.open(map, allMarkers[35]);
+            //             $("#sageHover > img").attr("src", allMarkersInfo[].thumbnail);
+            //         }
+            //         else if (name === "scott"){
+            //             scottHoverCard.open(map, allMarkers[36]);
+            //             $("#scottHover > img").attr("src", allMarkersInfo[].thumbnail);
+            //         }
+            //         else if (name === "stewart"){
+            //             stewartHoverCard.open(map, allMarkers[37]);
+            //             $("#stewartHover > img").attr("src",allMarkersInfo[].thumbnail);
+            //         }
+            //         else if (name === "recreation"){
+            //             recreationHoverCard.open(map, allMarkers[38]);
+            //             $("#recreationHover > img").attr("src", allMarkersInfo[].thumbnail);
+            //         }
+            //         else if (name === "success"){
+            //             successHoverCard.open(map, allMarkers[39]);
+            //             $("#successHover > img").attr("src",allMarkersInfo[].thumbnail);
+            //         }
+            //         else if (name === "swart"){
+            //             swartHoverCard.open(map, allMarkers[40]);
+            //             $("#swartHover > img").attr("src", allMarkersInfo[].thumbnail);
+            //         }
+            //         else if (name === "taylor"){
+            //             taylorHoverCard.open(map, allMarkers[41]);
+            //             $("#taylorHover > img").attr("src", allMarkersInfo[].thumbnail);
+            //         }
+            //         else if (name === "titan"){
+            //             titanHoverCard.open(map, allMarkers[42]);
+            //             $("#titanHover > img").attr("src", allMarkersInfo[].thumbnail);
+            //         }
+            //         else if (name === "police"){
+            //             policeHoverCard.open(map, allMarkers[43]);
+            //             $("#policeHover > img").attr("src", allMarkersInfo[].thumbnail);
+            //         }
+            //         else if (name === "webster"){
+            //             websterHoverCard.open(map, allMarkers[44]);
+            //             $("#websterHover > img").attr("src", allMarkersInfo[].thumbnail);
+            //         }
+            //      $("#" + name + "Hover").addClass("hoverOpen");
+            // //if marker is not clicked/clicked to close change src of image to empty
+            // } else{
+            //     $("#" + name + "Hover > img").attr("src", "");
+            //     $("#" + name + "Hover").removeClass("hoverOpen");
+            //     closeAllHover();
+            // }
         }
          // parking marker hovers + marker functionality
-         function parkingOpenClose(name){
-            if(!$("#" + name + "Hover").hasClass("hoverOpen")){
-                closeAllHover();
-                if(name === "eleven"){
-                    elevenHoverCard.open(map, allMarkers[45]);
+         function parkingOpenClose(name, index){
+             //for parking lots 45-82
+            // for(y = 45; y < 83; y++){
+                if(!$("#" + name + "Hover").hasClass("hoverOpen")){
+                     //if marker is clicked open hover element and set the image on it
+                    closeAllHover();
+                    infoWindowsAll[index].open(map, allMarkers[index]);
+                    
+                    $("#" + name + "Hover").addClass("hoverOpen");
+                } else {
+                 //if marker is not clicked/clicked to close, then change src of image to empty
+                 $("#" + name + "Hover").removeClass("hoverOpen");
+                 closeAllHover();
                 }
-                else if (name === "thirtyfive"){
-                    thirtyfiveHoverCard.open(map, allMarkers[46]);
-                }
-                else if (name === "twentyseven"){
-                    twentysevenHoverCard.open(map, allMarkers[47]);
-                }
-                else if (name === "twentyone"){
-                    twentyoneHoverCard.open(map, allMarkers[48]);
-                }
-                else if(name === "twentysix"){
-                    twentysixHoverCard.open(map, allMarkers[49]);
-                }
-                else if (name === "four"){
-                    fourHoverCard.open(map, allMarkers[50]);
-                }
-                else if (name === "foura"){
-                    fouraHoverCard.open(map, allMarkers[51]);
-                }
-                else if (name === "sixteen"){
-                    sixteenHoverCard.open(map, allMarkers[52]);
-                }
-                else if (name === "seventeen"){
-                    seventeenHoverCard.open(map, allMarkers[53]);
-                }
-                else if (name === "twentynine"){
-                    twentynineHoverCard.open(map, allMarkers[54]);
-                }
-                else if (name === "twentyfive"){
-                    twentyfiveHoverCard.open(map, allMarkers[55]);
-                }
-                else if (name === "eight"){
-                    eightHoverCard.open(map, allMarkers[56]);
-                }
-                else if (name === "thirtythree"){
-                    thirtythreeHoverCard.open(map, allMarkers[57]);
-                }
-                else if (name === "thirtyfour"){
-                    thirtyfourHoverCard.open(map, allMarkers[58]);
-                }
-                else if (name === "twentyeight"){
-                    twentyeightHoverCard.open(map, allMarkers[59]);
-                }
-                else if (name === "twentythree"){
-                    twentythreeHoverCard.open(map, allMarkers[60]);
-                }
-                else if (name === "fourteena"){
-                    fourteenaHoverCard.open(map, allMarkers[61]);
-                }
-                else if (name === "fourteenb"){
-                    fourteenbHoverCard.open(map, allMarkers[62]);
-                }
-                else if (name === "fourteenc"){
-                    fourteencHoverCard.open(map, allMarkers[63]);
-                }
-                else if (name === "seven"){
-                    sevenHoverCard.open(map, allMarkers[64]);
-                }
-                else if (name === "fivea"){
-                    fiveaHoverCard.open(map, allMarkers[65]);
-                }
-                else if (name === "five"){
-                    fiveHoverCard.open(map, allMarkers[66]);
-                }
-                else if (name === "sevena"){
-                    sevenaHoverCard.open(map, allMarkers[67]);
-                }
-                else if (name === "fifteen"){
-                    fifteenHoverCard.open(map, allMarkers[68]);
-                }
-                else if (name === "thirtytwo"){
-                    thirtytwoHoverCard.open(map, allMarkers[69]);
-                }
-                else if (name === "thirteen"){
-                    thirteenHoverCard.open(map, allMarkers[70]);
-                }
-                else if (name === "twelve"){
-                    twelveHoverCard.open(map, allMarkers[71]);
-                }
-                else if (name === "sixa"){
-                    sixaHoverCard.open(map, allMarkers[72]);
-                }
-                else if (name === "six"){
-                    sixHoverCard.open(map, allMarkers[73]);
-                }
-                else if (name === "ten"){
-                    tenHoverCard.open(map, allMarkers[74]);
-                }
-                else if (name === "ninea"){
-                    nineaHoverCard.open(map, allMarkers[75]);
-                }
-                else if (name === "nine"){
-                    nineHoverCard.open(map, allMarkers[76]);
-                }
-                else if (name === "eighteen"){
-                    eighteenHoverCard.open(map, allMarkers[77]);
-                }
-                else if (name === "thirty"){
-                    thirtyHoverCard.open(map, allMarkers[78]);
-                }
-                else if (name === "thirtynine"){
-                    thirtynineHoverCard.open(map, allMarkers[79]);
-                }
-                else if (name === "womensCenter"){
-                    womensCenterHoverCard.open(map, allMarkers[80]);
-                }
-                else if (name === "titanOne"){
-                    titanOneHoverCard.open(map, allMarkers[81]);
-                }
-                else if (name === "titanTwo"){
-                    titanTwoHoverCard.open(map, allMarkers[82]);
-                }
-            $("#" + name + "Hover").addClass("hoverOpen");
-            } else {
-                $("#" + name + "Hover").removeClass("hoverOpen");
-                closeAllHover();
-            }
+            // }
+            // if(!$("#" + name + "Hover").hasClass("hoverOpen")){
+            //     closeAllHover();
+            //     if(name === "eleven"){
+            //         elevenHoverCard.open(map, allMarkers[45]);
+            //     }
+            //     else if (name === "thirtyfive"){
+            //         thirtyfiveHoverCard.open(map, allMarkers[46]);
+            //     }
+            //     else if (name === "twentyseven"){
+            //         twentysevenHoverCard.open(map, allMarkers[47]);
+            //     }
+            //     else if (name === "twentyone"){
+            //         twentyoneHoverCard.open(map, allMarkers[48]);
+            //     }
+            //     else if(name === "twentysix"){
+            //         twentysixHoverCard.open(map, allMarkers[49]);
+            //     }
+            //     else if (name === "four"){
+            //         fourHoverCard.open(map, allMarkers[50]);
+            //     }
+            //     else if (name === "foura"){
+            //         fouraHoverCard.open(map, allMarkers[51]);
+            //     }
+            //     else if (name === "sixteen"){
+            //         sixteenHoverCard.open(map, allMarkers[52]);
+            //     }
+            //     else if (name === "seventeen"){
+            //         seventeenHoverCard.open(map, allMarkers[53]);
+            //     }
+            //     else if (name === "twentynine"){
+            //         twentynineHoverCard.open(map, allMarkers[54]);
+            //     }
+            //     else if (name === "twentyfive"){
+            //         twentyfiveHoverCard.open(map, allMarkers[55]);
+            //     }
+            //     else if (name === "eight"){
+            //         eightHoverCard.open(map, allMarkers[56]);
+            //     }
+            //     else if (name === "thirtythree"){
+            //         thirtythreeHoverCard.open(map, allMarkers[57]);
+            //     }
+            //     else if (name === "thirtyfour"){
+            //         thirtyfourHoverCard.open(map, allMarkers[58]);
+            //     }
+            //     else if (name === "twentyeight"){
+            //         twentyeightHoverCard.open(map, allMarkers[59]);
+            //     }
+            //     else if (name === "twentythree"){
+            //         twentythreeHoverCard.open(map, allMarkers[60]);
+            //     }
+            //     else if (name === "fourteena"){
+            //         fourteenaHoverCard.open(map, allMarkers[61]);
+            //     }
+            //     else if (name === "fourteenb"){
+            //         fourteenbHoverCard.open(map, allMarkers[62]);
+            //     }
+            //     else if (name === "fourteenc"){
+            //         fourteencHoverCard.open(map, allMarkers[63]);
+            //     }
+            //     else if (name === "seven"){
+            //         sevenHoverCard.open(map, allMarkers[64]);
+            //     }
+            //     else if (name === "fivea"){
+            //         fiveaHoverCard.open(map, allMarkers[65]);
+            //     }
+            //     else if (name === "five"){
+            //         fiveHoverCard.open(map, allMarkers[66]);
+            //     }
+            //     else if (name === "sevena"){
+            //         sevenaHoverCard.open(map, allMarkers[67]);
+            //     }
+            //     else if (name === "fifteen"){
+            //         fifteenHoverCard.open(map, allMarkers[68]);
+            //     }
+            //     else if (name === "thirtytwo"){
+            //         thirtytwoHoverCard.open(map, allMarkers[69]);
+            //     }
+            //     else if (name === "thirteen"){
+            //         thirteenHoverCard.open(map, allMarkers[70]);
+            //     }
+            //     else if (name === "twelve"){
+            //         twelveHoverCard.open(map, allMarkers[71]);
+            //     }
+            //     else if (name === "sixa"){
+            //         sixaHoverCard.open(map, allMarkers[72]);
+            //     }
+            //     else if (name === "six"){
+            //         sixHoverCard.open(map, allMarkers[73]);
+            //     }
+            //     else if (name === "ten"){
+            //         tenHoverCard.open(map, allMarkers[74]);
+            //     }
+            //     else if (name === "ninea"){
+            //         nineaHoverCard.open(map, allMarkers[75]);
+            //     }
+            //     else if (name === "nine"){
+            //         nineHoverCard.open(map, allMarkers[76]);
+            //     }
+            //     else if (name === "eighteen"){
+            //         eighteenHoverCard.open(map, allMarkers[77]);
+            //     }
+            //     else if (name === "thirty"){
+            //         thirtyHoverCard.open(map, allMarkers[78]);
+            //     }
+            //     else if (name === "thirtynine"){
+            //         thirtynineHoverCard.open(map, allMarkers[79]);
+            //     }
+            //     else if (name === "womensCenter"){
+            //         womensCenterHoverCard.open(map, allMarkers[80]);
+            //     }
+            //     else if (name === "titanOne"){
+            //         titanOneHoverCard.open(map, allMarkers[81]);
+            //     }
+            //     else if (name === "titanTwo"){
+            //         titanTwoHoverCard.open(map, allMarkers[82]);
+            //     }
+            // $("#" + name + "Hover").addClass("hoverOpen");
+            // } else {
+            //     $("#" + name + "Hover").removeClass("hoverOpen");
+            //     closeAllHover();
+            // }
         }
-        
-
+        //for all buildings markers, add event listener to open infoWindow when clicked based on function markerOpenClose
+        //0-44
        
+        // for(z = 0; z < 45; z++){
+        //    // console.log(z);
+        //    // return z; 
+        //    allMarkers[z].addListener('click', function(){
+        //     var shortHand = allMarkersInfo[z].shortHand ;
+        //     console.log("adding event listener for: " + shortHand );
+        //     markerOpenClose(shortHand, z);
+        // });
+        // }
+        // allMarkers.forEach(function(index){
+        //     this.addListener("click", function(){
+        //         var shortHand = allMarkersInfo[this].shortHand;
+        //         console.log("adding event listener for: " + shortHand);
+        //         markerOpenClose(shortHand);
+        //     })
+            
+        // });
+        allMarkers.forEach(function(thisOne){
+            //thisOne will return the object itself, so we need to get the index of that object in the array
+            
+            //using the index, add an event listener for allMarkers
+            thisOne.addListener('click', function(){
+                index = allMarkers.indexOf(thisOne);
+                console.log("foreach index: " + index);
+                var shortHand = allMarkersInfo[index].shortHand;
+                console.log(shortHand);
+                //if it is a building
+                if(index < 45){
+                    markerOpenClose(shortHand, index);
+                }
+                //if it is a parking lot
+                else if (index >= 45){
+                    parkingOpenClose(shortHand, index);
+                }
+                
+            })
+        });
         
+        // allMarkers[0].addListener('click', function(){
+        //     var shortHand = allMarkersInfo[0].shortHand ;
+        //     console.log("adding event listener for: " + shortHand );
+        //     markerOpenClose(shortHand);
+        // });
+        //for all parking markers, add event listener to open infoWindow when clicked based on function parkingOpenClose
+        //45-82
+        // for(aa = 45; aa < 83; aa++){
+        //    // console.log(aa);
+        //     //return aa;
+        //     allMarkers[aa].addListener('click', function(){
+        //         var shortHand =  allMarkersInfo[aa].shortHand ;
+        //         parkingOpenClose(shortHand, aa);
+        //     });
+           
+        //  }
+         
+        // console.log(allMarkersInfo[0].shortHand);
+        // for(i = 0; i < 45; i++){
+        //     console.log(i);
+        // }
 
 
         //click event listeners for all markers
         //when marker is clicked it will open hover InfoWindow
-        allMarkers[0].addListener('click', function(){
-            markerOpenClose("albee");
-        });
-        allMarkers[1].addListener('click', function(){
-            markerOpenClose("baseball");
-        });
-        allMarkers[2].addListener('click', function(){
-            markerOpenClose("alumni");
-        });
-        allMarkers[3].addListener('click', function(){
-            markerOpenClose("ac");
-        });
-        allMarkers[4].addListener('click', function(){
-            markerOpenClose("athletic");
-        });
-        allMarkers[5].addListener('click', function(){
-            markerOpenClose("blackhawk");
-        });
-        allMarkers[6].addListener('click', function(){
-            markerOpenClose("biodigester");
-        });
-        allMarkers[7].addListener('click', function(){
-            markerOpenClose("buckstaff");
-        });
-        allMarkers[8].addListener('click', function(){
-            markerOpenClose("equity");
-        });
-        allMarkers[9].addListener('click', function(){
-            markerOpenClose("campus");
-        });
-        allMarkers[10].addListener('click', function(){
-            markerOpenClose("ceramics");
-        });
-        allMarkers[11].addListener('click', function(){
-            markerOpenClose("clow");
-        });
-        allMarkers[12].addListener('click', function(){
-            markerOpenClose("gardens");
-        });
-        allMarkers[13].addListener('click', function(){
-            markerOpenClose("dempsey");
-        });
-        allMarkers[14].addListener('click', function(){
-            markerOpenClose("donner");
-        });
-        allMarkers[15].addListener('click', function(){
-            markerOpenClose("east");
-        });
-        allMarkers[16].addListener('click', function(){
-            markerOpenClose("environmental");
-        });
-        allMarkers[17].addListener('click', function(){
-            markerOpenClose("evans");
-        });
-        allMarkers[18].addListener('click', function(){
-            markerOpenClose("fletcher");
-        });
-        allMarkers[19].addListener('click', function(){
-            markerOpenClose("fredric");
-        });
-        allMarkers[20].addListener('click', function(){
-            markerOpenClose("gruenhagen");
-        });
-        allMarkers[21].addListener('click', function(){
-            markerOpenClose("halsey");
-        });
-        allMarkers[22].addListener('click', function(){
-            markerOpenClose("harrington");
-         });
-         allMarkers[23].addListener('click', function(){
-            markerOpenClose("heating");
-        });
-        allMarkers[24].addListener('click', function(){
-            markerOpenClose("parkingRamp");
-        });
-        allMarkers[25].addListener('click', function(){
-            markerOpenClose("horizon");
-        });
-        allMarkers[26].addListener('click', function(){
-            markerOpenClose("kolf");
-        });
-        allMarkers[27].addListener('click', function(){
-            markerOpenClose("lincoln");
-        });
-        allMarkers[28].addListener('click', function(){
-            markerOpenClose( "multicultural");
-        });
-        allMarkers[29].addListener('click', function(){
-            markerOpenClose("nursing");
-        });
-        allMarkers[30].addListener('click', function(){
-            markerOpenClose("oviatt");
-        });
-        allMarkers[31].addListener('click', function(){
-            markerOpenClose("pollock");
-         });
-        allMarkers[32].addListener('click', function(){
-            markerOpenClose("polk");
-         });
-         allMarkers[33].addListener('click', function(){
-            markerOpenClose("radford");
-        });
-        allMarkers[34].addListener('click', function(){
-            markerOpenClose("reeve");
-        });
-        allMarkers[35].addListener('click', function(){
-            markerOpenClose("sage");
-        });
-        allMarkers[36].addListener('click', function(){
-            markerOpenClose("scott");
-        });
-        allMarkers[37].addListener('click', function(){ 
-            markerOpenClose("stewart");
-        });
-        allMarkers[38].addListener('click', function(){
-            markerOpenClose("recreation");
-        });
-        allMarkers[39].addListener('click', function(){
-            markerOpenClose("success");
-        });
-        allMarkers[40].addListener('click', function(){ 
-            markerOpenClose("swart");
-        });
-        allMarkers[41].addListener('click', function(){
-            markerOpenClose("taylor");
-        });
-        allMarkers[42].addListener('click', function(){
-            markerOpenClose("titan");
-        });
-        allMarkers[43].addListener('click', function(){
-            markerOpenClose("police");
-        });
-        allMarkers[44].addListener('click', function(){
-            markerOpenClose("webster");
-        });
-        allMarkers[45].addListener('click', function(){
-            parkingOpenClose("eleven");
-        });
+        // allMarkers[0].addListener('click', function(){
+        //     markerOpenClose("albee");
+        // });
+        // allMarkers[1].addListener('click', function(){
+        //     markerOpenClose("baseball");
+        // });
+        // allMarkers[2].addListener('click', function(){
+        //     markerOpenClose("alumni");
+        // });
+        // allMarkers[3].addListener('click', function(){
+        //     markerOpenClose("ac");
+        // });
+        // allMarkers[4].addListener('click', function(){
+        //     markerOpenClose("athletic");
+        // });
+        // allMarkers[5].addListener('click', function(){
+        //     markerOpenClose("blackhawk");
+        // });
+        // allMarkers[6].addListener('click', function(){
+        //     markerOpenClose("biodigester");
+        // });
+        // allMarkers[7].addListener('click', function(){
+        //     markerOpenClose("buckstaff");
+        // });
+        // allMarkers[8].addListener('click', function(){
+        //     markerOpenClose("equity");
+        // });
+        // allMarkers[9].addListener('click', function(){
+        //     markerOpenClose("campus");
+        // });
+        // allMarkers[10].addListener('click', function(){
+        //     markerOpenClose("ceramics");
+        // });
+        // allMarkers[11].addListener('click', function(){
+        //     markerOpenClose("clow");
+        // });
+        // allMarkers[12].addListener('click', function(){
+        //     markerOpenClose("gardens");
+        // });
+        // allMarkers[13].addListener('click', function(){
+        //     markerOpenClose("dempsey");
+        // });
+        // allMarkers[14].addListener('click', function(){
+        //     markerOpenClose("donner");
+        // });
+        // allMarkers[15].addListener('click', function(){
+        //     markerOpenClose("east");
+        // });
+        // allMarkers[16].addListener('click', function(){
+        //     markerOpenClose("environmental");
+        // });
+        // allMarkers[17].addListener('click', function(){
+        //     markerOpenClose("evans");
+        // });
+        // allMarkers[18].addListener('click', function(){
+        //     markerOpenClose("fletcher");
+        // });
+        // allMarkers[19].addListener('click', function(){
+        //     markerOpenClose("fredric");
+        // });
+        // allMarkers[20].addListener('click', function(){
+        //     markerOpenClose("gruenhagen");
+        // });
+        // allMarkers[21].addListener('click', function(){
+        //     markerOpenClose("halsey");
+        // });
+        // allMarkers[22].addListener('click', function(){
+        //     markerOpenClose("harrington");
+        //  });
+        //  allMarkers[23].addListener('click', function(){
+        //     markerOpenClose("heating");
+        // });
+        // allMarkers[24].addListener('click', function(){
+        //     markerOpenClose("parkingRamp");
+        // });
+        // allMarkers[25].addListener('click', function(){
+        //     markerOpenClose("horizon");
+        // });
+        // allMarkers[26].addListener('click', function(){
+        //     markerOpenClose("kolf");
+        // });
+        // allMarkers[27].addListener('click', function(){
+        //     markerOpenClose("lincoln");
+        // });
+        // allMarkers[28].addListener('click', function(){
+        //     markerOpenClose( "multicultural");
+        // });
+        // allMarkers[29].addListener('click', function(){
+        //     markerOpenClose("nursing");
+        // });
+        // allMarkers[30].addListener('click', function(){
+        //     markerOpenClose("oviatt");
+        // });
+        // allMarkers[31].addListener('click', function(){
+        //     markerOpenClose("pollock");
+        //  });
+        // allMarkers[32].addListener('click', function(){
+        //     markerOpenClose("polk");
+        //  });
+        //  allMarkers[33].addListener('click', function(){
+        //     markerOpenClose("radford");
+        // });
+        // allMarkers[34].addListener('click', function(){
+        //     markerOpenClose("reeve");
+        // });
+        // allMarkers[35].addListener('click', function(){
+        //     markerOpenClose("sage");
+        // });
+        // allMarkers[36].addListener('click', function(){
+        //     markerOpenClose("scott");
+        // });
+        // allMarkers[37].addListener('click', function(){ 
+        //     markerOpenClose("stewart");
+        // });
+        // allMarkers[38].addListener('click', function(){
+        //     markerOpenClose("recreation");
+        // });
+        // allMarkers[39].addListener('click', function(){
+        //     markerOpenClose("success");
+        // });
+        // allMarkers[40].addListener('click', function(){ 
+        //     markerOpenClose("swart");
+        // });
+        // allMarkers[41].addListener('click', function(){
+        //     markerOpenClose("taylor");
+        // });
+        // allMarkers[42].addListener('click', function(){
+        //     markerOpenClose("titan");
+        // });
+        // allMarkers[43].addListener('click', function(){
+        //     markerOpenClose("police");
+        // });
+        // allMarkers[44].addListener('click', function(){
+        //     markerOpenClose("webster");
+        // });
+        // allMarkers[45].addListener('click', function(){
+        //     parkingOpenClose("eleven");
+        // });
         
-        allMarkers[46].addListener('click', function(){
-            parkingOpenClose("thirtyfive");
-        });
-        allMarkers[47].addListener('click', function(){
-            parkingOpenClose("twentyseven");
-        });
-        allMarkers[48].addListener('click', function(){
-            parkingOpenClose("twentyone");
-        });
-        allMarkers[49].addListener('click', function(){
-            parkingOpenClose("twentysix");
-        });
-        allMarkers[50].addListener('click', function(){
-            parkingOpenClose("four");
-        });
-        allMarkers[51].addListener('click', function(){
-            parkingOpenClose("foura");
-        });
-        allMarkers[52].addListener('click', function(){
-            parkingOpenClose("sixteen");
-        });
-        allMarkers[53].addListener('click', function(){
-            parkingOpenClose("seventeen");
-        });
-        allMarkers[54].addListener('click', function(){
-            parkingOpenClose("twentynine");
-        });
-        allMarkers[55].addListener('click', function(){
-            parkingOpenClose("twentyfive");
-        });
-        allMarkers[56].addListener('click', function(){
-            parkingOpenClose("eight");
-        });
-        allMarkers[57].addListener('click', function(){
-            parkingOpenClose("thirtythree");
-        });
-        allMarkers[58].addListener('click', function(){
-            parkingOpenClose("thirtyfour");
-        });
-        allMarkers[59].addListener('click', function(){
-            parkingOpenClose("twentyeight");
-        });
-        allMarkers[60].addListener('click', function(){
-            parkingOpenClose("twentythree");
-        });
-        allMarkers[61].addListener('click', function(){
-            parkingOpenClose("fourteena");
-        });
-        allMarkers[62].addListener('click', function(){
-            parkingOpenClose("fourteenb");
-        });
-        allMarkers[63].addListener('click', function(){
-            parkingOpenClose("fourteenc");
-        });
-        allMarkers[64].addListener('click', function(){
-            parkingOpenClose("seven");
-        });
-        allMarkers[65].addListener('click', function(){
-            parkingOpenClose("fivea");
-        });
-        allMarkers[66].addListener('click', function(){
-            parkingOpenClose("five");
-        });
-        allMarkers[67].addListener('click', function(){
-            parkingOpenClose("sevena");
-        });
-        allMarkers[68].addListener('click', function(){
-            parkingOpenClose("fifteen");
-        });
-        allMarkers[69].addListener('click', function(){
-            parkingOpenClose("thirtytwo");
-        });
-        allMarkers[70].addListener('click', function(){
-            parkingOpenClose("thirteen");
-        });
-        allMarkers[71].addListener('click', function(){
-            parkingOpenClose("twelve");
-        });
-        allMarkers[72].addListener('click', function(){
-            parkingOpenClose("sixa");
-        });
-        allMarkers[73].addListener('click', function(){
-            parkingOpenClose("six");
-        });
-        allMarkers[74].addListener('click', function(){
-            parkingOpenClose("ten");
-        });
-        allMarkers[75].addListener('click', function(){
-            parkingOpenClose("ninea");
-        });
-        allMarkers[76].addListener('click', function(){
-            parkingOpenClose("nine");
-        });
-        allMarkers[77].addListener('click', function(){
-            parkingOpenClose("eighteen");
-        });
-        allMarkers[78].addListener('click', function(){
-            parkingOpenClose("thirty");
-        });
-        allMarkers[79].addListener('click', function(){
-            parkingOpenClose("thirtynine");
-         });
+        // allMarkers[46].addListener('click', function(){
+        //     parkingOpenClose("thirtyfive");
+        // });
+        // allMarkers[47].addListener('click', function(){
+        //     parkingOpenClose("twentyseven");
+        // });
+        // allMarkers[48].addListener('click', function(){
+        //     parkingOpenClose("twentyone");
+        // });
+        // allMarkers[49].addListener('click', function(){
+        //     parkingOpenClose("twentysix");
+        // });
+        // allMarkers[50].addListener('click', function(){
+        //     parkingOpenClose("four");
+        // });
+        // allMarkers[51].addListener('click', function(){
+        //     parkingOpenClose("foura");
+        // });
+        // allMarkers[52].addListener('click', function(){
+        //     parkingOpenClose("sixteen");
+        // });
+        // allMarkers[53].addListener('click', function(){
+        //     parkingOpenClose("seventeen");
+        // });
+        // allMarkers[54].addListener('click', function(){
+        //     parkingOpenClose("twentynine");
+        // });
+        // allMarkers[55].addListener('click', function(){
+        //     parkingOpenClose("twentyfive");
+        // });
+        // allMarkers[56].addListener('click', function(){
+        //     parkingOpenClose("eight");
+        // });
+        // allMarkers[57].addListener('click', function(){
+        //     parkingOpenClose("thirtythree");
+        // });
+        // allMarkers[58].addListener('click', function(){
+        //     parkingOpenClose("thirtyfour");
+        // });
+        // allMarkers[59].addListener('click', function(){
+        //     parkingOpenClose("twentyeight");
+        // });
+        // allMarkers[60].addListener('click', function(){
+        //     parkingOpenClose("twentythree");
+        // });
+        // allMarkers[61].addListener('click', function(){
+        //     parkingOpenClose("fourteena");
+        // });
+        // allMarkers[62].addListener('click', function(){
+        //     parkingOpenClose("fourteenb");
+        // });
+        // allMarkers[63].addListener('click', function(){
+        //     parkingOpenClose("fourteenc");
+        // });
+        // allMarkers[64].addListener('click', function(){
+        //     parkingOpenClose("seven");
+        // });
+        // allMarkers[65].addListener('click', function(){
+        //     parkingOpenClose("fivea");
+        // });
+        // allMarkers[66].addListener('click', function(){
+        //     parkingOpenClose("five");
+        // });
+        // allMarkers[67].addListener('click', function(){
+        //     parkingOpenClose("sevena");
+        // });
+        // allMarkers[68].addListener('click', function(){
+        //     parkingOpenClose("fifteen");
+        // });
+        // allMarkers[69].addListener('click', function(){
+        //     parkingOpenClose("thirtytwo");
+        // });
+        // allMarkers[70].addListener('click', function(){
+        //     parkingOpenClose("thirteen");
+        // });
+        // allMarkers[71].addListener('click', function(){
+        //     parkingOpenClose("twelve");
+        // });
+        // allMarkers[72].addListener('click', function(){
+        //     parkingOpenClose("sixa");
+        // });
+        // allMarkers[73].addListener('click', function(){
+        //     parkingOpenClose("six");
+        // });
+        // allMarkers[74].addListener('click', function(){
+        //     parkingOpenClose("ten");
+        // });
+        // allMarkers[75].addListener('click', function(){
+        //     parkingOpenClose("ninea");
+        // });
+        // allMarkers[76].addListener('click', function(){
+        //     parkingOpenClose("nine");
+        // });
+        // allMarkers[77].addListener('click', function(){
+        //     parkingOpenClose("eighteen");
+        // });
+        // allMarkers[78].addListener('click', function(){
+        //     parkingOpenClose("thirty");
+        // });
+        // allMarkers[79].addListener('click', function(){
+        //     parkingOpenClose("thirtynine");
+        //  });
 
-         allMarkers[81].addListener('click', function(){
-            parkingOpenClose("titanOne");
-        });
-        allMarkers[82].addListener('click', function(){
-            parkingOpenClose("titanTwo");
-        });
+        //  allMarkers[81].addListener('click', function(){
+        //     parkingOpenClose("titanOne");
+        // });
+        // allMarkers[82].addListener('click', function(){
+        //     parkingOpenClose("titanTwo");
+        // });
 
         
 
@@ -3167,20 +3209,20 @@ function initMap() {
         if (name === "buildings"){
             // removes hoverpopups (not markers, the white popups after you click markers)
             // must come before markers are removed
-            closeAllBuildings();
+            closeAllHover();
             // removes building markers
             removeBuilding();
         } 
         else if (name === "parking"){
-            closeAllParking();
+            closeAllHover();
             removeParkingLots();
         }
         else if (name === "accEnt"){
-           closeAllAccEnt();
+           closeAllHover();
             removeAccEnt();
         }
         else if (name === "accPar"){
-            closeAllAccPark();
+            closeAllHover();
             removeAccPar();
          }
          else if (name === "emergency"){
@@ -3188,39 +3230,39 @@ function initMap() {
             // emergency phones do not have any hovercards attached to their markers atm
          }
          else if (name === "sust"){
-            closeAllSust();
+            closeAllHover();
             removeSust();
         }
         else if (name === "gender"){
-            closeAllGender();
+            closeAllHover();
             removeGender();
         }
         else if (name === "accaF"){
-            closeAllAccaF();
+            closeAllHover();
             removeAccaF();
         }
         else if (name === "ath"){
-            closeAllAth();
+            closeAllHover();
             removeAth();
         }
         else if (name === "accS"){
-            closeAllAccaS();
+            closeAllHover();
             removeAccaS();
         }
         else if (name === "campS"){
-            closeAllCampS();
+            closeAllHover();
             removeCampS();
         }
         else if (name === "resH"){
-            closeAllResH();
+            closeAllHover();
             removeResH();
         }
         else if (name === "dining"){
-            closeAllDining();
+            closeAllHover();
             removeDining();
         }
         else if (name === "stuR"){
-            closeAllStuR();
+            closeAllHover();
             removeStuR();
         }
         
