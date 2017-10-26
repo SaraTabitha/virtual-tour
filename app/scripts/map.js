@@ -1,4 +1,13 @@
 // google map!
+//what you need to know: there are markers which are objects that are created and need a lat/lng of where they are on the map
+// a title (so when you hover over the marker you know what it is called), and an icon image (made by the artists!)
+//when you click on a marker there is an InfoWindow that pops up (also objects that have their content set to a selector for an 
+// element in index.html)
+// each InfoWindow for a Building has a thumbnail and a link that says "click here" which opens a Popup that has all of the information about 
+// the building and tabs for things like bathrooms, sustainability etc. 
+// all of this is handled in this file!
+//recap: Markers, InfoWindows(might be referred to as Hover or Hovercards), and Popups
+//
 // function for intitial map load (what appears when the page first loads)
 function initMap() {
         // center of map (UWO coordinates)
