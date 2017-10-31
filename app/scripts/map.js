@@ -425,7 +425,7 @@ function initMap() {
                  content: document.getElementById(allMarkersInfo[b].shortHand + "Hover"),
              });
          }
-
+         
         //example of original code that might be useful for understanding what is happening throughout
         //sets marker on the map:
         // allMarkers[0].setMap(map);
@@ -922,252 +922,6 @@ function initMap() {
             allMarkers[34].setMap(null);
             allMarkers[38].setMap(null);
         }
-        
-        // // close all hovers attached to buildings
-        // function closeAllBuildings(){
-        //   albeeHoverCard.close(map, allMarkers[0]);
-        //   baseballHoverCard.close(map, allMarkers[1]);
-        //   alumniHoverCard.close(map, allMarkers[2]);
-        //   acHoverCard.close(map, allMarkers[3]);
-        //   athleticHoverCard.close(map, allMarkers[4]);
-        //   blackhawkHoverCard.close(map, allMarkers[5]);
-        //   biodigesterHoverCard.close(map, allMarkers[6]);
-        //   buckstaffHoverCard.close(map,allMarkers[7]);
-        //   equityHoverCard.close(map, allMarkers[8]);
-        //   campusHoverCard.close(map, allMarkers[9]);
-        //   ceramicsHoverCard.close(map, allMarkers[10]);
-        //   clowHoverCard.close(map, allMarkers[11]);
-        //   gardensHoverCard.close(map, allMarkers[12]);
-        //   dempseyHoverCard.close(map, allMarkers[13]);
-        //   donnerHoverCard.close(map, allMarkers[14]);
-        //   eastHoverCard.close(map,allMarkers[15]);
-        //   environmentalHoverCard.close(map, allMarkers[16]);
-        //   evansHoverCard.close(map, allMarkers[17]);
-        //   fletcherHoverCard.close(map, allMarkers[18]);
-        //   fredricHoverCard.close(map,allMarkers[19]);
-        //   gruenhagenHoverCard.close(map,allMarkers[20]);
-        //   halseyHoverCard.close(map, allMarkers[21]);
-        //   harringtonHoverCard.close(map, allMarkers[22]);
-        //   heatingHoverCard.close(map,allMarkers[23]);
-        //   parkingRampHoverCard.close(map, allMarkers[24]);
-        //   horizonHoverCard.close(map, allMarkers[25]);
-        //   kolfHoverCard.close(map, allMarkers[26]);
-        //   lincolnHoverCard.close(map, allMarkers[27]);
-        //   multiculturalHoverCard.close(map, allMarkers[28]);
-        //   nursingHoverCard.close(map, allMarkers[29]);
-        //   oviattHoverCard.close(map, allMarkers[30]);
-        //   pollockHoverCard.close(map, allMarkers[31]);
-        //   polkHoverCard.close(map, allMarkers[32]);
-        //   radfordHoverCard.close(map, allMarkers[33]);
-        //   reeveHoverCard.close(map, allMarkers[34]);
-        //   sageHoverCard.close(map, allMarkers[35]);
-        //   scottHoverCard.close(map, allMarkers[36]);
-        //   stewartHoverCard.close(map, allMarkers[37]);
-        //   recreationHoverCard.close(map, allMarkers[38]);
-        //   successHoverCard.close(map, allMarkers[39]);
-        //   swartHoverCard.close(map, allMarkers[40]);
-        //   taylorHoverCard.close(map, allMarkers[41]);
-        //   titanHoverCard.close(map, allMarkers[42]);
-        //   policeHoverCard.close(map, allMarkers[43]);
-        //   websterHoverCard.close(map, allMarkers[44]);
-        // }
-        // //close parking lots cards
-        // function closeAllParking(){
-        //   elevenHoverCard.close(map, elevenMarker);
-        //   thirtyfiveHoverCard.close(map, thirtyfiveMarker);
-        //   twentysevenHoverCard.close(map, twentysevenMarker);
-        //   twentyoneHoverCard.close(map, twentyoneMarker);
-        //   twentysixHoverCard.close(map, twentysixMarker);
-        //   fourHoverCard.close(map, fourMarker);
-        //   fouraHoverCard.close(map, fourMarker);
-        //   sixteenHoverCard.close(map, sixteenMarker);
-        //   seventeenHoverCard.close(map, seventeenMarker);
-        //   twentynineHoverCard.close(map, twentynineMarker);
-        //   twentyfiveHoverCard.close(map, twentyfiveMarker);
-        //   eightHoverCard.close(map, eightMarker);
-        //   thirtythreeHoverCard.close(map, thirtythreeMarker);
-        //   thirtyfourHoverCard.close(map, thirtyfourMarker);
-        //   twentyeightHoverCard.close(map, twentyeightMarker);
-        //   twentythreeHoverCard.close(map, twentythreeMarker);
-        //   fourteenaHoverCard.close(map, fourteenaMarker);
-        //   fourteenbHoverCard.close(map, fourteenbMarker);
-        //   fourteencHoverCard.close(map, fourteencMarker);
-        //   sevenHoverCard.close(map, sevenMarker);
-        //   fiveaHoverCard.close(map, fiveaMarker);
-        //   fiveHoverCard.close(map, fiveMarker);
-        //   sevenaHoverCard.close(map, sevenaMarker);
-        //   fifteenHoverCard.close(map, fifteenMarker);
-        //   thirtytwoHoverCard.close(map, thirtytwoMarker);
-        //   thirteenHoverCard.close(map, thirteenMarker);
-        //   twelveHoverCard.close(map, twelveMarker);
-        //   sixaHoverCard.close(map, sixaMarker);
-        //   sixHoverCard.close(map, sixMarker);
-        //   tenHoverCard.close(map, tenMarker);
-        //   nineaHoverCard.close(map, nineaMarker);
-        //   nineHoverCard.close(map, nineMarker);
-        //   eighteenHoverCard.close(map, eighteenMarker);
-        //   thirtyHoverCard.close(map, thirtyMarker);
-        //   thirtynineHoverCard.close(map, thirtynineMarker);
-        //   womensCenterHoverCard.close(map, womensCenterMarker);
-        //   titanOneHoverCard.close(map, titanOneMarker);
-        //   titanTwoHoverCard.close(map, titanTwoMarker);
-        // }
-        // // close all accEnt cards
-        // function closeAllAccEnt(){
-        //   albeeHoverCard.close(map, allMarkers[0]);
-        //   acHoverCard.close(map,acMarker);
-        //   blackhawkHoverCard.close(map, blackhawkMarker);
-        //   equityHoverCard.close(map, equityMarker);
-        //   clowHoverCard.close(map, clowMarker);
-        //   dempseyHoverCard.close(map, dempseyMarker);
-        //   donnerHoverCard.close(map, donnerMarker);
-        //   fletcherHoverCard.close(map, fletcherMarker);
-        //   fredricHoverCard.close(map,fredricMarker);
-        //   gruenhagenHoverCard.close(map,gruenhagenMarker);
-        //   halseyHoverCard.close(map, halseyMarker);
-        //   harringtonHoverCard.close(map, harringtonMarker);
-        //   kolfHoverCard.close(map, kolfMarker);
-        //   nursingHoverCard.close(map, nursingMarker);
-        //   polkHoverCard.close(map, polkMarker);
-        //   radfordHoverCard.close(map, radfordMarker);
-        //   reeveHoverCard.close(map, reeveMarker);
-        //   scottHoverCard.close(map, scottMarker);
-        //   stewartHoverCard.close(map, stewartMarker);
-        //   successHoverCard.close(map, successMarker);
-        //   swartHoverCard.close(map, swartMarker);
-        //   taylorHoverCard.close(map, taylorMarker);
-        //   websterHoverCard.close(map, websterMarker);
-        // }
-        // //close all AccPark cards
-        // function closeAllAccPark(){
-        //   womensCenterHoverCard.close(map, womensCenterMarker);
-        //   titanOneHoverCard.close(map, titanOneMarker);
-        //   titanTwoHoverCard.close(map, titanTwoMarker);
-        //   elevenHoverCard.close(map, elevenMarker);
-        //   fourHoverCard.close(map, fourMarker);
-        //   fouraHoverCard.close(map, fourMarker);
-        //   sixteenHoverCard.close(map, sixteenMarker);
-        //   seventeenHoverCard.close(map, seventeenMarker);
-        //   twentynineHoverCard.close(map, twentynineMarker);
-        //   twentyfiveHoverCard.close(map, twentyfiveMarker);
-        //   thirtythreeHoverCard.close(map, thirtythreeMarker);
-        //   fourteenaHoverCard.close(map, fourteenaMarker);
-        //   sevenaHoverCard.close(map, sevenaMarker);
-        //   thirteenHoverCard.close(map, thirteenMarker);
-        //   thirtyfourHoverCard.close(map, thirtyfourMarker);
-        //   twentyeightHoverCard.close(map, twentyeightMarker);
-        //   twentythreeHoverCard.close(map, twentythreeMarker);
-        //   fifteenHoverCard.close(map, fifteenMarker);
-        //   thirtytwoHoverCard.close(map, thirtytwoMarker);
-        //   tenHoverCard.close(map, tenMarker);
-        //   twelveHoverCard.close(map, twelveMarker);
-        //   sixaHoverCard.close(map, sixaMarker);
-        //   sixHoverCard.close(map, sixMarker);
-        //   eighteenHoverCard.close(map, eighteenMarker);
-        // }
-        // //close all sust cards
-        // function closeAllSust(){
-        //   albeeHoverCard.close(map, allMarkers[0]);
-        //   alumniHoverCard.close(map, alumniMarker);
-        //   blackhawkHoverCard.close(map, blackhawkMarker);
-        //   biodigesterHoverCard.close(map, biodigesterMarker);
-        //   heatingHoverCard.close(map,heatingMarker);
-        //   horizonHoverCard.close(map, horizonMarker);
-        //   reeveHoverCard.close(map, reeveMarker);
-        //   sageHoverCard.close(map, sageMarker);
-        //   recreationHoverCard.close(map, recreationMarker);
-        //   successHoverCard.close(map, successMarker);
-        //   taylorHoverCard.close(map, taylorMarker);
-        //   titanHoverCard.close(map, titanMarker);
-        // }
-        // //close all gender cards
-        // function closeAllGender(){
-        //   acHoverCard.close(map,acMarker);
-        //   blackhawkHoverCard.close(map, blackhawkMarker);
-        //   campusHoverCard.close(map, campusMarker);
-        //   dempseyHoverCard.close(map, dempseyMarker);
-        //   halseyHoverCard.close(map, halseyMarker);
-        //   harringtonHoverCard.close(map, harringtonMarker);
-        //   kolfHoverCard.close(map, kolfMarker);
-        //   nursingHoverCard.close(map, nursingMarker);
-        //   reeveHoverCard.close(map, reeveMarker);
-        //   sageHoverCard.close(map, sageMarker);
-        //   recreationHoverCard.close(map, recreationMarker);
-        //   successHoverCard.close(map, successMarker);
-        //   swartHoverCard.close(map, swartMarker);
-        //   policeHoverCard.close(map, policeMarker);
-        // }
-        // //close all AccaF cards
-        // function closeAllAccaF(){
-        //   albeeHoverCard.close(map, allMarkers[0]);
-        //   acHoverCard.close(map,acMarker);
-        //   ceramicsHoverCard.close(map, ceramicsMarker);
-        //   clowHoverCard.close(map, clowMarker);
-        //   environmentalHoverCard.close(map, environmentalMarker);
-        //   fredricHoverCard.close(map,fredricMarker);
-        //   halseyHoverCard.close(map, halseyMarker);
-        //   harringtonHoverCard.close(map, harringtonMarker);
-        //   kolfHoverCard.close(map, kolfMarker);
-        //   nursingHoverCard.close(map, nursingMarker);
-        //   polkHoverCard.close(map, polkMarker);
-        //   radfordHoverCard.close(map, radfordMarker);
-        //   sageHoverCard.close(map, sageMarker);
-        //   swartHoverCard.close(map, swartMarker);
-        // }
-        // //close all athletics cards
-        // function closeAllAth(){
-        //   albeeHoverCard.close(map, allMarkers[0]);
-        //   baseballHoverCard.close(map, baseballMarker);
-        //   athleticHoverCard.close(map, athleticMarker);
-        //   eastHoverCard.close(map,eastMarker);
-        //   kolfHoverCard.close(map, kolfMarker);
-        //   titanHoverCard.close(map, titanMarker);
-        // }
-        // //close all AccaS cards
-        // function closeAllAccaS(){
-        //   equityHoverCard.close(map, equityMarker);
-        //   nursingHoverCard.close(map, nursingMarker);
-        //   successHoverCard.close(map, successMarker);
-        //   swartHoverCard.close(map, swartMarker);
-        // }
-        // //close all CampS cards
-        // function closeAllCampS(){
-        //   equityHoverCard.close(map, equityMarker);
-        //   campusHoverCard.close(map, campusMarker);
-        //   dempseyHoverCard.close(map, dempseyMarker);
-        //   multiculturalHoverCard.close(map, multiculturalMarker);
-        //   pollockHoverCard.close(map, pollockMarker);
-        //   radfordHoverCard.close(map, radfordMarker);
-        //   reeveHoverCard.close(map, reeveMarker);
-        //   recreationHoverCard.close(map, recreationMarker);
-        //   successHoverCard.close(map, successMarker);
-        // }
-        // //close all resH cards
-        // function closeAllResH(){
-        //   donnerHoverCard.close(map, donnerMarker);
-        //   evansHoverCard.close(map, evansMarker);
-        //   fletcherHoverCard.close(map, fletcherMarker);
-        //   gruenhagenHoverCard.close(map,gruenhagenMarker);
-        //   horizonHoverCard.close(map, horizonMarker);
-        //   stewartHoverCard.close(map, stewartMarker);
-        //   scottHoverCard.close(map, scottMarker);
-        //   taylorHoverCard.close(map, taylorMarker);
-        //   websterHoverCard.close(map, websterMarker);
-        // }
-        // //close all dining cards
-        // function closeAllDining(){
-        //   blackhawkHoverCard.close(map, blackhawkMarker);
-        //   clowHoverCard.close(map, clowMarker);
-        //   halseyHoverCard.close(map, halseyMarker);
-        //   reeveHoverCard.close(map, reeveMarker);
-        //   sageHoverCard.close(map, sageMarker);
-        //   scottHoverCard.close(map, scottMarker);
-        // }
-        // //close all StuR cards
-        // function closeAllStuR(){
-        //   reeveHoverCard.close(map, reeveMarker);
-        //   recreationHoverCard.close(map, recreationMarker);
-        // }
 
         // close all hover cards (infowindows)
         function closeAllHover(){
@@ -1402,10 +1156,13 @@ function initMap() {
             if (index < 45){
                 var shortHand = allMarkersInfo[index].shortHand;
                 //console.log("shorthand before click: " + shortHand)
+                //event listener for clicks of the More Info link on the InfoWindows
                 $("#" + shortHand + "Link").click(function(){
+                    debugger;
                     //console.log("clicked: " + shortHand);
                     popupOpen(shortHand);
                 });
+                //event listener for the x button on the popups (not the x on the infoWindows)
                 $("#" + shortHand + "PopupClose").click(function(){
                     popupClose(shortHand);
                 });
@@ -1413,17 +1170,17 @@ function initMap() {
         });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
-        function tabs(name, tab, openClose){
-            if(openClose === "open"){
-                if (tab === "About"){
-                    $("#" + name + "AboutImage").css('display', "block");
-                    $("#" + name + "AboutText").css('display', "initial");
-                }
-            }
-            else if (openClose === "close"){
+        // function tabs(name, tab, openClose){
+        //     if(openClose === "open"){
+        //         if (tab === "About"){
+        //             $("#" + name + "AboutImage").css('display', "block");
+        //             $("#" + name + "AboutText").css('display', "initial");
+        //         }
+        //     }
+        //     else if (openClose === "close"){
 
-            }
-        }
+        //     }
+        // }
         $("#albeeAboutLi").click(function(){
             $("#albeeTourVideo").css('display', "none");
             $("#albeeTourText").css('display', "none");
@@ -2214,7 +1971,488 @@ function initMap() {
   
          });
 
-
+         //start of code for search that needs to interact with the infoWindows and Popups here in map.jsz
+         $( "#searchInput" ).keyup(function() {
+            //takes the length of the value of the string in
+            // the search and returns a number
+            // ex. "hello" = 5
+            var characters = $(this).val().length;
+            // console.log("# of characters in search:" + characters);
+        
+            if(characters < 3){
+              $("#searchResults").css("visibility", "hidden");
+                // web adjustment only
+                $(".drawerContentsAdjust").css("top", "0px ");
+        
+            } else if (characters >= 3){
+                  callAjax();
+        
+            }
+            });
+            function closeAllPopup(){
+              $("#albeePopup").css('visibility', 'hidden');
+              $("#acPopup").css('visibility', 'hidden');
+              $("#baseballPopup").css('visibility', 'hidden');
+              $("#alumniPopup").css('visibility', 'hidden');
+              $("#athleticPopup").css('visibility', 'hidden');
+              $("#biodigesterPopup").css('visibility', 'hidden');
+              $("#blackhawkPopup").css('visibility', 'hidden');
+              $("#buckstaffPopup").css('visibility', 'hidden');
+              $("#equityPopup").css('visibility', 'hidden');
+              $("#campusPopup").css('visibility', 'hidden');
+              $("#ceramicsPopup").css('visibility', 'hidden');
+              $("#clowPopup").css('visibility', 'hidden');
+              $("#gardensPopup").css('visibility', 'hidden');
+              $("#dempseyPopup").css('visibility', 'hidden');
+              $("#donnerPopup").css('visibility', 'hidden');
+              $("#eastPopup").css('visibility', 'hidden');
+              $("#environmentalPopup").css('visibility', 'hidden');
+              $("#evansPopup").css('visibility', 'hidden');
+              $("#fletcherPopup").css('visibility', 'hidden');
+              $("#fredericPopup").css('visibility', 'hidden');
+              $("#gruenhagenPopup").css('visibility', 'hidden');
+              $("#halseyPopup").css('visibility', 'hidden');
+              $("#harringtonPopup").css('visibility', 'hidden');
+              $("#heatingPopup").css('visibility', 'hidden');
+              $("#parkingRampPopup").css('visibility', 'hidden');
+              $("#horizonPopup").css('visibility', 'hidden');
+              $("#kolfPopup").css('visibility', 'hidden');
+              $("#lincolnPopup").css('visibility', 'hidden');
+              $("#multiculturalPopup").css('visibility', 'hidden');
+              $("#nursingPopup").css('visibility', 'hidden');
+              $("#oviattPopup").css('visibility', 'hidden');
+              $("#polkPopup").css('visibility', 'hidden');
+              $("#pollockPopup").css('visibility', 'hidden');
+              $("#radfordPopup").css('visibility', 'hidden');
+              $("#reevePopup").css('visibility', 'hidden');
+              $("#sagePopup").css('visibility', 'hidden');
+              $("#scottPopup").css('visibility', 'hidden');
+              $("#stewartPopup").css('visibility', 'hidden');
+              $("#recreationPopup").css('visibility', 'hidden');
+              $("#successPopup").css('visibility', 'hidden');
+              $("#swartPopup").css('visibility', 'hidden');
+              $("#taylorPopup").css('visibility', 'hidden');
+              $("#titanPopup").css('visibility', 'hidden');
+              $("#policePopup").css('visibility', 'hidden');
+              $("#websterPopup").css('visibility', 'hidden');
+            }
+        
+          function callAjax(){
+          $.ajax({
+            type: "GET",
+            url: "../php/search.php",
+            data: ({search: $("#searchInput").val()}),
+            success: function(results){
+        
+              // console.log("success!");
+              // console.log(results);
+        
+              $("#searchResults").css("visibility","visible");
+        
+        
+              var emptyResult = "<ul><li class='firstResults text'><h6>Search Results:</h6></li></ul>";
+              if( emptyResult == results){
+                // note to self: if you want to add class/id to these make sure to use
+                // different quotations than you use to wrap the string~
+                // "" string, '' for classes and ids
+                $("#searchResults").html("<ul><li id='noResults' class='text'> No results</li></ul>");
+        
+              } else if (emptyResult !== results){
+                $("#searchResults").html(results);
+        
+        
+        
+                //do while loop that selects all present list items and creates + assigns a unique id based on their value
+                // which is converted into a lowercase string without spaces (and has "Result" added onto it)
+        
+                var n = 1;
+                // counting number of list items
+                var listItems = $("#searchResults > ul").children().length;
+                do {
+                  n++
+                  // gets value of element
+                  // / /g <- selects all spaces in the string
+                  var hello = $("#searchResults > ul > li:nth-child(" + n + ")").text().toLowerCase().replace(/ /g, "");
+                  // sets the id of the element ^ to the string returned above
+                  $("#searchResults > ul > li:nth-child(" + n + ")").prop("id", hello + "Result");
+                  clickResults(hello);
+                // increase n until it matches the number of listItems that are present
+                } while (n <= listItems);
+        
+                // console.log(n);
+                // console.log("number of list elements:" + listItems);
+                // $("#albeehallResult").click(function(){
+                //   $("#albeeLink").trigger("click");
+                // });
+                function clickResults(id){
+                  // debugger;
+                  // console.log(id);
+                    $("#"+ id + "Result").click(function(){
+                      closeAllPopup();
+                      if(id ==  "albeehall"){
+                        $("#albeeLink").trigger("click");
+                      } else if ( id == "artsandcommunicationscenter"){
+                        $("#acLink").trigger("click");
+                      } else if (id == "alumnibaseballstadium"){
+                        $("#baseballLink").trigger("click");
+                      } else if (id == "alumniwelcomeandconferencecenter"){
+                        $("#alumniLink").trigger("click");
+                      } else if (id == "athleticservicebuilding"){
+                        $("#athleticLink").trigger("click");
+                      } else if (id == "biodigester"){
+                        $("#biodigesterLink").trigger("click");
+                      } else if (id == "blackhawkcommons"){
+                        $("#blackhawkLink").trigger("click");
+                      } else if (id == "buckstaffplanetarium"){
+                        $("#buckstaffLink").trigger("click");
+                      } else if (id == "campuscenterforequityanddiversity"){
+                        $("#equityLink").trigger("click");
+                      } else if (id == "campusservices"){
+                        $("#campusLink").trigger("click");
+                      } else if (id == "ceramicslaboratory"){
+                        $("#ceramicsLink").trigger("click");
+                      } else if (id == "clowsocialsciencecenter"){
+                        $("#clowLink").trigger("click");
+                      } else if (id == "communitygardens"){
+                        $("#gardensLink").trigger("click");
+                      } else if (id == "dempseyhall"){
+                        $("#dempseyLink").trigger("click");
+                      } else if (id == "donnerhall"){
+                        $("#donnerLink").trigger("click");
+                      } else if (id == "easthall"){
+                        $("#eastLink").trigger("click");
+                      } else if (id == "environmentalscienceandresearchcenter"){
+                        $("#environmentalLink").trigger("click");
+                      } else if (id == "evanshall"){
+                        $("#evansLink").trigger("click");
+                      } else if (id == "fletcherhall"){
+                        $("#fletcherLink").trigger("click");
+                      } else if (id == "fredricmarchtheater"){
+                        $("#fredricLink").trigger("click");
+                      } else if (id == "gruenhagenconferencecenter"){
+                        $("#gruenhagenLink").trigger("click");
+                      } else if (id == "halseysciencecenter"){
+                        $("#halseyLink").trigger("click");
+                      } else if (id == "harringtonhall"){
+                        $("#harringtonLink").trigger("click");
+                      } else if (id == "heatingplant"){
+                        $("#heatingLink").trigger("click");
+                      } else if (id == "highavenueparkingramp"){
+                        $("#parkingRampLink").trigger("click");
+                      } else if (id == "horizonvillage"){
+                        $("#horizonLink").trigger("click");
+                      } else if (id == "kolfsportscenter"){
+                        $("#kolfLink").trigger("click");
+                      } else if (id == "lincolnhall"){
+                        $("#lincolnLink").trigger("click");
+                      } else if (id == "multiculturaleducationcenter"){
+                        $("#multiculturalLink").trigger("click");
+                      } else if (id == "nursingeducationbuilding"){
+                        $("#nursingLink").trigger("click");
+                      } else if (id == "oviatthouse"){
+                        $("#oviattLink").trigger("click");
+                      } else if (id == "polklibrary"){
+                        $("#polkLink").trigger("click");
+                      } else if (id == "pollockhouse"){
+                        $("#pollockLink").trigger("click");
+                      } else if (id == "radfordhallandstudenthealthcenter"){
+                        $("#radfordLink").trigger("click");
+                      } else if (id == "reevememorialunion"){
+                        $("#reeveLink").trigger("click");
+                      } else if (id == "sagehall"){
+                        $("#sageLink").trigger("click");
+                      } else if (id == "scotthall"){
+                        $("#scottLink").trigger("click");
+                      } else if (id == "stewarthall"){
+                        $("#stewartLink").trigger("click");
+                      } else if (id == "studentrecreationandwellnesscenter"){
+                        $("#recreationLink").trigger("click");
+                      } else if (id == "studentsuccesscenter"){
+                        $("#successLink").trigger("click");
+                      } else if (id == "swarthall"){
+                        $("#swartLink").trigger("click");
+                      } else if (id == "taylorhall"){
+                        $("#taylorLink").trigger("click");
+                      } else if (id == "titanstadium"){
+                        $("#titanLink").trigger("click");
+                      } else if (id == "universitypolicestation"){
+                        $("#policeLink").trigger("click");
+                      } else if (id == "websterhall"){
+                        $("#websterLink").trigger("click");
+                      }
+                    });
+                }
+              }
+        
+              var check = $("#drawerContents").hasClass("drawerContentsAdjust");
+              if(check === true){
+                // only for desktop
+                // adjust position of menu drawer based on height of search results
+                function getTotalHeight(){
+                  var searchHeight = $("#searchResults").height();
+                  // var mobileHeaderHeight = $("#mobileHeader").height();
+                  // var webSearchHeight = $("#webSearch").height();
+                  return(searchHeight - 3);
+                }
+                // console.log("Height of search div:" + getTotalHeight());
+        
+                // get element, apply css to the element(not to the class)
+                // for mobile: top reset is forced with another .css
+                $(".drawerContentsAdjust").css("top", getTotalHeight());
+        
+              }
+        
+        
+            }
+          })
+        };
+        //end search code
+        //
     
 }
 
+ // // close all hovers attached to buildings
+        // function closeAllBuildings(){
+        //   albeeHoverCard.close(map, allMarkers[0]);
+        //   baseballHoverCard.close(map, allMarkers[1]);
+        //   alumniHoverCard.close(map, allMarkers[2]);
+        //   acHoverCard.close(map, allMarkers[3]);
+        //   athleticHoverCard.close(map, allMarkers[4]);
+        //   blackhawkHoverCard.close(map, allMarkers[5]);
+        //   biodigesterHoverCard.close(map, allMarkers[6]);
+        //   buckstaffHoverCard.close(map,allMarkers[7]);
+        //   equityHoverCard.close(map, allMarkers[8]);
+        //   campusHoverCard.close(map, allMarkers[9]);
+        //   ceramicsHoverCard.close(map, allMarkers[10]);
+        //   clowHoverCard.close(map, allMarkers[11]);
+        //   gardensHoverCard.close(map, allMarkers[12]);
+        //   dempseyHoverCard.close(map, allMarkers[13]);
+        //   donnerHoverCard.close(map, allMarkers[14]);
+        //   eastHoverCard.close(map,allMarkers[15]);
+        //   environmentalHoverCard.close(map, allMarkers[16]);
+        //   evansHoverCard.close(map, allMarkers[17]);
+        //   fletcherHoverCard.close(map, allMarkers[18]);
+        //   fredricHoverCard.close(map,allMarkers[19]);
+        //   gruenhagenHoverCard.close(map,allMarkers[20]);
+        //   halseyHoverCard.close(map, allMarkers[21]);
+        //   harringtonHoverCard.close(map, allMarkers[22]);
+        //   heatingHoverCard.close(map,allMarkers[23]);
+        //   parkingRampHoverCard.close(map, allMarkers[24]);
+        //   horizonHoverCard.close(map, allMarkers[25]);
+        //   kolfHoverCard.close(map, allMarkers[26]);
+        //   lincolnHoverCard.close(map, allMarkers[27]);
+        //   multiculturalHoverCard.close(map, allMarkers[28]);
+        //   nursingHoverCard.close(map, allMarkers[29]);
+        //   oviattHoverCard.close(map, allMarkers[30]);
+        //   pollockHoverCard.close(map, allMarkers[31]);
+        //   polkHoverCard.close(map, allMarkers[32]);
+        //   radfordHoverCard.close(map, allMarkers[33]);
+        //   reeveHoverCard.close(map, allMarkers[34]);
+        //   sageHoverCard.close(map, allMarkers[35]);
+        //   scottHoverCard.close(map, allMarkers[36]);
+        //   stewartHoverCard.close(map, allMarkers[37]);
+        //   recreationHoverCard.close(map, allMarkers[38]);
+        //   successHoverCard.close(map, allMarkers[39]);
+        //   swartHoverCard.close(map, allMarkers[40]);
+        //   taylorHoverCard.close(map, allMarkers[41]);
+        //   titanHoverCard.close(map, allMarkers[42]);
+        //   policeHoverCard.close(map, allMarkers[43]);
+        //   websterHoverCard.close(map, allMarkers[44]);
+        // }
+        // //close parking lots cards
+        // function closeAllParking(){
+        //   elevenHoverCard.close(map, elevenMarker);
+        //   thirtyfiveHoverCard.close(map, thirtyfiveMarker);
+        //   twentysevenHoverCard.close(map, twentysevenMarker);
+        //   twentyoneHoverCard.close(map, twentyoneMarker);
+        //   twentysixHoverCard.close(map, twentysixMarker);
+        //   fourHoverCard.close(map, fourMarker);
+        //   fouraHoverCard.close(map, fourMarker);
+        //   sixteenHoverCard.close(map, sixteenMarker);
+        //   seventeenHoverCard.close(map, seventeenMarker);
+        //   twentynineHoverCard.close(map, twentynineMarker);
+        //   twentyfiveHoverCard.close(map, twentyfiveMarker);
+        //   eightHoverCard.close(map, eightMarker);
+        //   thirtythreeHoverCard.close(map, thirtythreeMarker);
+        //   thirtyfourHoverCard.close(map, thirtyfourMarker);
+        //   twentyeightHoverCard.close(map, twentyeightMarker);
+        //   twentythreeHoverCard.close(map, twentythreeMarker);
+        //   fourteenaHoverCard.close(map, fourteenaMarker);
+        //   fourteenbHoverCard.close(map, fourteenbMarker);
+        //   fourteencHoverCard.close(map, fourteencMarker);
+        //   sevenHoverCard.close(map, sevenMarker);
+        //   fiveaHoverCard.close(map, fiveaMarker);
+        //   fiveHoverCard.close(map, fiveMarker);
+        //   sevenaHoverCard.close(map, sevenaMarker);
+        //   fifteenHoverCard.close(map, fifteenMarker);
+        //   thirtytwoHoverCard.close(map, thirtytwoMarker);
+        //   thirteenHoverCard.close(map, thirteenMarker);
+        //   twelveHoverCard.close(map, twelveMarker);
+        //   sixaHoverCard.close(map, sixaMarker);
+        //   sixHoverCard.close(map, sixMarker);
+        //   tenHoverCard.close(map, tenMarker);
+        //   nineaHoverCard.close(map, nineaMarker);
+        //   nineHoverCard.close(map, nineMarker);
+        //   eighteenHoverCard.close(map, eighteenMarker);
+        //   thirtyHoverCard.close(map, thirtyMarker);
+        //   thirtynineHoverCard.close(map, thirtynineMarker);
+        //   womensCenterHoverCard.close(map, womensCenterMarker);
+        //   titanOneHoverCard.close(map, titanOneMarker);
+        //   titanTwoHoverCard.close(map, titanTwoMarker);
+        // }
+        // // close all accEnt cards
+        // function closeAllAccEnt(){
+        //   albeeHoverCard.close(map, allMarkers[0]);
+        //   acHoverCard.close(map,acMarker);
+        //   blackhawkHoverCard.close(map, blackhawkMarker);
+        //   equityHoverCard.close(map, equityMarker);
+        //   clowHoverCard.close(map, clowMarker);
+        //   dempseyHoverCard.close(map, dempseyMarker);
+        //   donnerHoverCard.close(map, donnerMarker);
+        //   fletcherHoverCard.close(map, fletcherMarker);
+        //   fredricHoverCard.close(map,fredricMarker);
+        //   gruenhagenHoverCard.close(map,gruenhagenMarker);
+        //   halseyHoverCard.close(map, halseyMarker);
+        //   harringtonHoverCard.close(map, harringtonMarker);
+        //   kolfHoverCard.close(map, kolfMarker);
+        //   nursingHoverCard.close(map, nursingMarker);
+        //   polkHoverCard.close(map, polkMarker);
+        //   radfordHoverCard.close(map, radfordMarker);
+        //   reeveHoverCard.close(map, reeveMarker);
+        //   scottHoverCard.close(map, scottMarker);
+        //   stewartHoverCard.close(map, stewartMarker);
+        //   successHoverCard.close(map, successMarker);
+        //   swartHoverCard.close(map, swartMarker);
+        //   taylorHoverCard.close(map, taylorMarker);
+        //   websterHoverCard.close(map, websterMarker);
+        // }
+        // //close all AccPark cards
+        // function closeAllAccPark(){
+        //   womensCenterHoverCard.close(map, womensCenterMarker);
+        //   titanOneHoverCard.close(map, titanOneMarker);
+        //   titanTwoHoverCard.close(map, titanTwoMarker);
+        //   elevenHoverCard.close(map, elevenMarker);
+        //   fourHoverCard.close(map, fourMarker);
+        //   fouraHoverCard.close(map, fourMarker);
+        //   sixteenHoverCard.close(map, sixteenMarker);
+        //   seventeenHoverCard.close(map, seventeenMarker);
+        //   twentynineHoverCard.close(map, twentynineMarker);
+        //   twentyfiveHoverCard.close(map, twentyfiveMarker);
+        //   thirtythreeHoverCard.close(map, thirtythreeMarker);
+        //   fourteenaHoverCard.close(map, fourteenaMarker);
+        //   sevenaHoverCard.close(map, sevenaMarker);
+        //   thirteenHoverCard.close(map, thirteenMarker);
+        //   thirtyfourHoverCard.close(map, thirtyfourMarker);
+        //   twentyeightHoverCard.close(map, twentyeightMarker);
+        //   twentythreeHoverCard.close(map, twentythreeMarker);
+        //   fifteenHoverCard.close(map, fifteenMarker);
+        //   thirtytwoHoverCard.close(map, thirtytwoMarker);
+        //   tenHoverCard.close(map, tenMarker);
+        //   twelveHoverCard.close(map, twelveMarker);
+        //   sixaHoverCard.close(map, sixaMarker);
+        //   sixHoverCard.close(map, sixMarker);
+        //   eighteenHoverCard.close(map, eighteenMarker);
+        // }
+        // //close all sust cards
+        // function closeAllSust(){
+        //   albeeHoverCard.close(map, allMarkers[0]);
+        //   alumniHoverCard.close(map, alumniMarker);
+        //   blackhawkHoverCard.close(map, blackhawkMarker);
+        //   biodigesterHoverCard.close(map, biodigesterMarker);
+        //   heatingHoverCard.close(map,heatingMarker);
+        //   horizonHoverCard.close(map, horizonMarker);
+        //   reeveHoverCard.close(map, reeveMarker);
+        //   sageHoverCard.close(map, sageMarker);
+        //   recreationHoverCard.close(map, recreationMarker);
+        //   successHoverCard.close(map, successMarker);
+        //   taylorHoverCard.close(map, taylorMarker);
+        //   titanHoverCard.close(map, titanMarker);
+        // }
+        // //close all gender cards
+        // function closeAllGender(){
+        //   acHoverCard.close(map,acMarker);
+        //   blackhawkHoverCard.close(map, blackhawkMarker);
+        //   campusHoverCard.close(map, campusMarker);
+        //   dempseyHoverCard.close(map, dempseyMarker);
+        //   halseyHoverCard.close(map, halseyMarker);
+        //   harringtonHoverCard.close(map, harringtonMarker);
+        //   kolfHoverCard.close(map, kolfMarker);
+        //   nursingHoverCard.close(map, nursingMarker);
+        //   reeveHoverCard.close(map, reeveMarker);
+        //   sageHoverCard.close(map, sageMarker);
+        //   recreationHoverCard.close(map, recreationMarker);
+        //   successHoverCard.close(map, successMarker);
+        //   swartHoverCard.close(map, swartMarker);
+        //   policeHoverCard.close(map, policeMarker);
+        // }
+        // //close all AccaF cards
+        // function closeAllAccaF(){
+        //   albeeHoverCard.close(map, allMarkers[0]);
+        //   acHoverCard.close(map,acMarker);
+        //   ceramicsHoverCard.close(map, ceramicsMarker);
+        //   clowHoverCard.close(map, clowMarker);
+        //   environmentalHoverCard.close(map, environmentalMarker);
+        //   fredricHoverCard.close(map,fredricMarker);
+        //   halseyHoverCard.close(map, halseyMarker);
+        //   harringtonHoverCard.close(map, harringtonMarker);
+        //   kolfHoverCard.close(map, kolfMarker);
+        //   nursingHoverCard.close(map, nursingMarker);
+        //   polkHoverCard.close(map, polkMarker);
+        //   radfordHoverCard.close(map, radfordMarker);
+        //   sageHoverCard.close(map, sageMarker);
+        //   swartHoverCard.close(map, swartMarker);
+        // }
+        // //close all athletics cards
+        // function closeAllAth(){
+        //   albeeHoverCard.close(map, allMarkers[0]);
+        //   baseballHoverCard.close(map, baseballMarker);
+        //   athleticHoverCard.close(map, athleticMarker);
+        //   eastHoverCard.close(map,eastMarker);
+        //   kolfHoverCard.close(map, kolfMarker);
+        //   titanHoverCard.close(map, titanMarker);
+        // }
+        // //close all AccaS cards
+        // function closeAllAccaS(){
+        //   equityHoverCard.close(map, equityMarker);
+        //   nursingHoverCard.close(map, nursingMarker);
+        //   successHoverCard.close(map, successMarker);
+        //   swartHoverCard.close(map, swartMarker);
+        // }
+        // //close all CampS cards
+        // function closeAllCampS(){
+        //   equityHoverCard.close(map, equityMarker);
+        //   campusHoverCard.close(map, campusMarker);
+        //   dempseyHoverCard.close(map, dempseyMarker);
+        //   multiculturalHoverCard.close(map, multiculturalMarker);
+        //   pollockHoverCard.close(map, pollockMarker);
+        //   radfordHoverCard.close(map, radfordMarker);
+        //   reeveHoverCard.close(map, reeveMarker);
+        //   recreationHoverCard.close(map, recreationMarker);
+        //   successHoverCard.close(map, successMarker);
+        // }
+        // //close all resH cards
+        // function closeAllResH(){
+        //   donnerHoverCard.close(map, donnerMarker);
+        //   evansHoverCard.close(map, evansMarker);
+        //   fletcherHoverCard.close(map, fletcherMarker);
+        //   gruenhagenHoverCard.close(map,gruenhagenMarker);
+        //   horizonHoverCard.close(map, horizonMarker);
+        //   stewartHoverCard.close(map, stewartMarker);
+        //   scottHoverCard.close(map, scottMarker);
+        //   taylorHoverCard.close(map, taylorMarker);
+        //   websterHoverCard.close(map, websterMarker);
+        // }
+        // //close all dining cards
+        // function closeAllDining(){
+        //   blackhawkHoverCard.close(map, blackhawkMarker);
+        //   clowHoverCard.close(map, clowMarker);
+        //   halseyHoverCard.close(map, halseyMarker);
+        //   reeveHoverCard.close(map, reeveMarker);
+        //   sageHoverCard.close(map, sageMarker);
+        //   scottHoverCard.close(map, scottMarker);
+        // }
+        // //close all StuR cards
+        // function closeAllStuR(){
+        //   reeveHoverCard.close(map, reeveMarker);
+        //   recreationHoverCard.close(map, recreationMarker);
+        // }
