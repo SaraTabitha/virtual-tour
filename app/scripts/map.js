@@ -909,9 +909,6 @@ function initMap() {
             allMarkers[35].setMap(null);
             allMarkers[36].setMap(null);
         }
-        
-        
-
         // StuR set/remove
         function setStuR(){
             //buildings stuR: reeve, recreation
@@ -926,7 +923,6 @@ function initMap() {
             allMarkers[38].setMap(null);
         }
         
-
         // // close all hovers attached to buildings
         // function closeAllBuildings(){
         //   albeeHoverCard.close(map, allMarkers[0]);
@@ -1172,76 +1168,53 @@ function initMap() {
         //   reeveHoverCard.close(map, reeveMarker);
         //   recreationHoverCard.close(map, recreationMarker);
         // }
-        // close all hover cards
+
+        // close all hover cards (infowindows)
         function closeAllHover(){
             //0 - 82 because only buildings and parking lots have infoWindows
             //goes through all of the infoWindows and closes them for all the markers they are attached to
             for(w = 0; w < 83; w++){
                 infoWindowsAll[w].close(map, allMarkers[w]);
             }
-            
-            
         }
         //one function for all open/close
-        //for the hover thingaroos not the popups
+        //for the hover (infowindows) not the popups
         //set images to the thumbnails of the places
         function markerOpenClose(name, index){
-            // for(x = 0; x < 45; x++){
-
-            if(index < 45){
+           //if it is a building (0-44) check if it is being opened:
                 if(!$("#" + name + "Hover").hasClass("hoverOpen")){
-                     //if marker is clicked open hover element and set the image on it
+                    //close all infowindows from previously opened 
                     closeAllHover();
-                    console.log("x: " + index + "name:" + name)
+                    //open the infoWindow attached to the marker
                     infoWindowsAll[index].open(map, allMarkers[index]);
-                    $("#" + name + "Hover > img").attr("src", allMarkersInfo[index].thumbnail);
+                    if(index < 45){
+                       //set the thumbnail image for the infoWindow
+                        $("#" + name + "Hover > img").attr("src", allMarkersInfo[index].thumbnail);
+                    }
+                    // add the open class
                     $("#" + name + "Hover").addClass("hoverOpen");
                 } else {
-                 //if marker is not clicked/clicked to close, then change src of image to empty
-                    $("#" + name + "Hover > img").attr("src", "");
+                 //if marker is not clicked/clicked to close, then change src of image to empty, remove class and close all infowindows
+                     if(index < 45){
+                            $("#" + name + "Hover > img").attr("src", "");
+                     }
                     $("#" + name + "Hover").removeClass("hoverOpen");
                     closeAllHover();
                 }
-
-            }
-            
-        }
-         // parking marker hovers + marker functionality
-         function parkingOpenClose(name, index){
-             //for parking lots 45-82
-            // for(y = 45; y < 83; y++){
-                if(!$("#" + name + "Hover").hasClass("hoverOpen")){
-                     //if marker is clicked open hover element and set the image on it
-                    closeAllHover();
-                    infoWindowsAll[index].open(map, allMarkers[index]);
-                    
-                    $("#" + name + "Hover").addClass("hoverOpen");
-                } else {
-                 //if marker is not clicked/clicked to close, then change src of image to empty
-                 $("#" + name + "Hover").removeClass("hoverOpen");
-                 closeAllHover();
-                }
-            
         }
        
         allMarkers.forEach(function(thisOne){
             //thisOne will return the object itself, so we need to get the index of that object in the array
-            
             //using the index, add an event listener for allMarkers
             thisOne.addListener('click', function(){
-                index = allMarkers.indexOf(thisOne);
-                console.log("foreach index: " + index);
+                var index = allMarkers.indexOf(thisOne);
+               // console.log("foreach index: " + index);
                 var shortHand = allMarkersInfo[index].shortHand;
-                console.log(shortHand);
-                //if it is a building
-                if(index < 45){
+                //console.log(shortHand);
+                //if it is not an emergency phone->open infowindow etc.
+                if(index < 83){
                     markerOpenClose(shortHand, index);
                 }
-                //if it is a parking lot
-                else if ((index < 83)  && (index >= 45)){
-                    parkingOpenClose(shortHand, index);
-                }
-                
             })
         });
         
@@ -1421,13 +1394,22 @@ function initMap() {
                 $("#parkingRampParkingImage> img").attr("src", "");
             }
         }
-        // when link on hover is clicked, open popup
-        $("#albeeLink").click(function(){
-            popupOpen("albee");
-        });
-        // when x on popup is clicked, close popup
-        $("#albeePopupClose").click(function(){
-            popupClose("albee");
+        //for each marker that is a building, there is a link for "more info", when clicked it should open an information popup
+        //about the building; also each popup has a close button that should close each time it is clicked
+        allMarkers.forEach(function(thisOne){
+             var index = allMarkers.indexOf(thisOne);
+            // console.log("Index: " + index);
+            if (index < 45){
+                var shortHand = allMarkersInfo[index].shortHand;
+                //console.log("shorthand before click: " + shortHand)
+                $("#" + shortHand + "Link").click(function(){
+                    //console.log("clicked: " + shortHand);
+                    popupOpen(shortHand);
+                });
+                $("#" + shortHand + "PopupClose").click(function(){
+                    popupClose(shortHand);
+                });
+            }
         });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
@@ -1467,27 +1449,6 @@ function initMap() {
             $("#albeeSustainability ").css('display', "initial");
         });
 
-        // when "click for more info" is selected,
-        // make corresponding overlay and popup visible
-        // +animate to fade in
-        $("#baseballLink").click(function(){
-            popupOpen("baseball");
-        });
-        // when x on popup is clicked, close popup
-        $("#baseballPopupClose").click(function(){
-            popupClose("baseball");
-        });
-
-        // when "click for more info" is selected,
-        // make corresponding overlay and popup visible
-        // +animate to fade in
-        $("#alumniLink").click(function(){
-            popupOpen("alumni");
-        });
-        // when x on popup is clicked, close popup
-        $("#alumniPopupClose").click(function(){
-            popupClose("alumni");
-        });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
         $("#alumniAboutLi").click(function(){
@@ -1503,16 +1464,6 @@ function initMap() {
             $("#alumniSustainability ").css('display', "initial");
         });
 
-        // when "click for more info" is selected,
-        // make corresponding overlay and popup visible
-        // +animate to fade in
-        $("#acLink").click(function(){
-            popupOpen("ac");
-        });
-        // when x on popup is clicked, close popup
-        $("#acPopupClose").click(function(){
-            popupClose("ac");
-        });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
         $("#acAboutLi").click(function(){
@@ -1528,27 +1479,6 @@ function initMap() {
             $("#acBathrooms").css('display', "initial");
         });
 
-        // when "click for more info" is selected,
-        // make corresponding overlay and popup visible
-        // +animate to fade in
-        $("#athleticLink").click(function(){
-            popupOpen("athletic");
-        });
-        // when x on popup is clicked, close popup
-        $("#athleticPopupClose").click(function(){
-            popupClose("athletic");
-        });
-
-        // when "click for more info" is selected,
-        // make corresponding overlay and popup visible
-        // +animate to fade in
-        $("#blackhawkLink").click(function(){
-            popupOpen("blackhawk");
-        });
-        // when x on popup is clicked, close popup
-        $("#blackhawkPopupClose").click(function(){
-            popupClose("blackhawk");
-        });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
         $("#blackhawkAboutLi").click(function(){
@@ -1589,38 +1519,6 @@ function initMap() {
             $("#blackhawkDiningText").css('display', "initial");
         });
 
-        // when "click for more info" is selected,
-        // make corresponding overlay and popup visible
-        // +animate to fade in
-        $("#biodigesterLink").click(function(){
-            popupOpen("biodigester");
-        });
-        // when x on popup is clicked, close popup
-        $("#biodigesterPopupClose").click(function(){
-            popupClose("biodigester");
-        });
-
-        // when "click for more info" is selected,
-        // make corresponding overlay and popup visible
-        // +animate to fade in
-        $("#buckstaffLink").click(function(){
-            popupOpen("buckstaff");
-        });
-        // when x on popup is clicked, close popup
-        $("#buckstaffPopupClose").click(function(){
-            popupClose("buckstaff");
-        });
-
-        // when "click for more info" is selected,
-        // make corresponding overlay and popup visible
-        // +animate to fade in
-        $("#equityLink").click(function(){
-            popupOpen("equity");
-        });
-        // when x on popup is clicked, close popup
-        $("#equityPopupClose").click(function(){
-            popupClose("equity");
-        });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
         $("#equityAboutLi").click(function(){
@@ -1636,38 +1534,6 @@ function initMap() {
             $("#equityBathrooms").css('display', "initial");
         });
 
-        // when "click for more info" is selected,
-        // make corresponding overlay and popup visible
-        // +animate to fade in
-        $("#campusLink").click(function(){
-            popupOpen("campus");
-        });
-        // when x on popup is clicked, close popup
-        $("#campusPopupClose").click(function(){
-            popupClose("campus");
-        });
-
-        // when "click for more info" is selected,
-        // make corresponding overlay and popup visible
-        // +animate to fade in
-        $("#ceramicsLink").click(function(){
-            popupOpen("ceramics");
-        });
-        // when x on popup is clicked, close popup
-        $("#ceramicsPopupClose").click(function(){
-            popupClose("ceramics");
-        });
-
-        // when "click for more info" is selected,
-        // make corresponding overlay and popup visible
-        // +animate to fade in
-        $("#clowLink").click(function(){
-            popupOpen("clow");
-        });
-        // when x on popup is clicked, close popup
-        $("#clowPopupClose").click(function(){
-            popupClose("clow");
-        });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
         $("#clowAboutLi").click(function(){
@@ -1686,27 +1552,6 @@ function initMap() {
             $("#clowDiningText").css('display', "initial");
         });
 
-        // when "click for more info" is selected,
-        // make corresponding overlay and popup visible
-        // +animate to fade in
-        $("#gardensLink").click(function(){
-            popupOpen("gardens");
-        });
-        // when x on popup is clicked, close popup
-        $("#gardensPopupClose").click(function(){
-            popupClose("gardens");
-        });
-
-        // when "click for more info" is selected,
-        // make corresponding overlay and popup visible
-        // +animate to fade in
-        $("#dempseyLink").click(function(){
-            popupOpen("dempsey");
-        });
-        // when x on popup is clicked, close popup
-        $("#dempseyPopupClose").click(function(){
-            popupClose("dempsey");
-        });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
         $("#dempseyAboutLi").click(function(){
@@ -1722,93 +1567,6 @@ function initMap() {
             $("#dempseyBathrooms").css('display', "initial");
         });
 
-        // when "click for more info" is selected,
-        // make corresponding overlay and popup visible
-        // +animate to fade in
-        $("#donnerLink").click(function(){
-            popupOpen("donner");
-        });
-        // when x on popup is clicked, close popup
-        $("#donnerPopupClose").click(function(){
-            popupClose("donner");
-        });
-
-        // when "click for more info" is selected,
-        // make corresponding overlay and popup visible
-        // +animate to fade in
-        $("#eastLink").click(function(){
-            popupOpen("east");
-        });
-        // when x on popup is clicked, close popup
-        $("#eastPopupClose").click(function(){
-            popupClose("east");
-        });
-
-        // when "click for more info" is selected,
-        // make corresponding overlay and popup visible
-        // +animate to fade in
-        $("#environmentalLink").click(function(){
-            popupOpen("environmental");
-        });
-        // when x on popup is clicked, close popup
-        $("#environmentalPopupClose").click(function(){
-            popupClose("environmental");
-        });
-
-        // when "click for more info" is selected,
-        // make corresponding overlay and popup visible
-        // +animate to fade in
-        $("#evansLink").click(function(){
-            popupOpen("evans");
-        });
-        // when x on popup is clicked, close popup
-        $("#evansPopupClose").click(function(){
-            popupClose("evans");
-        });
-
-        // when "click for more info" is selected,
-        // make corresponding overlay and popup visible
-        // +animate to fade in
-        $("#fletcherLink").click(function(){
-            popupOpen("fletcher");
-        });
-        // when x on popup is clicked, close popup
-        $("#fletcherPopupClose").click(function(){
-            popupClose("fletcher");
-        });
-
-        // when "click for more info" is selected,
-        // make corresponding overlay and popup visible
-        // +animate to fade in
-        $("#fredricLink").click(function(){
-            popupOpen("fredric");
-        });
-        // when x on popup is clicked, close popup
-        $("#fredricPopupClose").click(function(){
-            popupClose("fredric");
-        });
-
-        // when "click for more info" is selected,
-        // make corresponding overlay and popup visible
-        // +animate to fade in
-        $("#gruenhagenLink").click(function(){
-            popupOpen("gruenhagen");
-        });
-        // when x on popup is clicked, close popup
-        $("#gruenhagenPopupClose").click(function(){
-            popupClose("gruenhagen");
-        });
-
-        // when "click for more info" is selected,
-        // make corresponding overlay and popup visible
-        // +animate to fade in
-        $("#halseyLink").click(function(){
-            popupOpen("halsey");
-        });
-        // when x on popup is clicked, close popup
-        $("#halseyPopupClose").click(function(){
-            popupClose("halsey");
-        });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
         $("#halseyAboutLi").click(function(){
@@ -1838,16 +1596,6 @@ function initMap() {
 
         });
 
-        // when "click for more info" is selected,
-        // make corresponding overlay and popup visible
-        // +animate to fade in
-        $("#harringtonLink").click(function(){
-            popupOpen("harrington");
-        });
-        // when x on popup is clicked, close popup
-        $("#harringtonPopupClose").click(function(){
-            popupClose("harrington");
-        });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
         $("#harringtonAboutLi").click(function(){
@@ -1863,16 +1611,6 @@ function initMap() {
             $("#harringtonBathrooms").css('display', "initial");
         });
 
-        // when "click for more info" is selected,
-        // make corresponding overlay and popup visible
-        // +animate to fade in
-        $("#heatingLink").click(function(){
-            popupOpen("heating");
-        });
-        // when x on popup is clicked, close popup
-        $("#heatingPopupClose").click(function(){
-            popupClose("heating");
-        });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
         $("#heatingAboutLi").click(function(){
@@ -1888,16 +1626,6 @@ function initMap() {
             $("#heatingSustainability").css('display', "initial");
         });
 
-        // when "click for more info" is selected,
-        // make corresponding overlay and popup visible
-        // +animate to fade in
-        $("#parkingRampLink").click(function(){
-            popupOpen("parkingRamp");
-        });
-        // when x on popup is clicked, close popup
-        $("#parkingRampPopupClose").click(function(){
-            popupClose("parkingRamp");
-        });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
         $("#parkingAboutLi").click(function(){
@@ -1916,16 +1644,6 @@ function initMap() {
             $("#parkingRampParkingText").css('display', "initial");
         });
 
-        // when "click for more info" is selected,
-        // make corresponding overlay and popup visible
-        // +animate to fade in
-        $("#horizonLink").click(function(){
-            popupOpen("horizon");
-        });
-        // when x on popup is clicked, close popup
-        $("#horizonPopupClose").click(function(){
-            popupClose("horizon");
-        });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
         $("#horizonAboutLi").click(function(){
@@ -1941,16 +1659,6 @@ function initMap() {
             $("#horizonSustainability").css('display', "initial");
         });
 
-        // when "click for more info" is selected,
-        // make corresponding overlay and popup visible
-        // +animate to fade in
-        $("#kolfLink").click(function(){
-            popupOpen("kolf");
-        });
-        // when x on popup is clicked, close popup
-        $("#kolfPopupClose").click(function(){
-            popupClose("kolf");
-        });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
         $("#kolfAboutLi").click(function(){
@@ -1966,38 +1674,6 @@ function initMap() {
             $("#kolfBathrooms").css('display', "initial");
         });
 
-        // when "click for more info" is selected,
-        // make corresponding overlay and popup visible
-        // +animate to fade in
-        $("#lincolnLink").click(function(){
-            popupOpen("lincoln");
-        });
-        // when x on popup is clicked, close popup
-        $("#lincolnPopupClose").click(function(){
-            popupClose("lincoln");
-        });
-
-        // when "click for more info" is selected,
-        // make corresponding overlay and popup visible
-        // +animate to fade in
-        $("#multiculturalLink").click(function(){
-            popupOpen("multicultural");
-        });
-        // when x on popup is clicked, close popup
-        $("#multiculturalPopupClose").click(function(){
-            popupClose("multicultural");
-        });
-
-        // when "click for more info" is selected,
-        // make corresponding overlay and popup visible
-        // +animate to fade in
-        $("#nursingLink").click(function(){
-            popupOpen("nursing");
-        });
-        // when x on popup is clicked, close popup
-        $("#nursingPopupClose").click(function(){
-            popupClose("nursing");
-        });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
         $("#nursingAboutLi").click(function(){
@@ -2013,38 +1689,6 @@ function initMap() {
             $("#nursingBathrooms").css('display', "initial");
         });
 
-        // when "click for more info" is selected,
-        // make corresponding overlay and popup visible
-        // +animate to fade in
-        $("#oviattLink").click(function(){
-            popupOpen("oviatt");
-        });
-        // when x on popup is clicked, close popup
-        $("#oviattPopupClose").click(function(){
-            popupClose("oviatt");
-        });
-
-        // when "click for more info" is selected,
-        // make corresponding overlay and popup visible
-        // +animate to fade in
-        $("#pollockLink").click(function(){
-            popupOpen("pollock");
-        });
-        // when x on popup is clicked, close popup
-        $("#pollockPopupClose").click(function(){
-            popupClose("pollock");
-        });
-
-        // when "click for more info" is selected,
-        // make corresponding overlay and popup visible
-        // +animate to fade in
-        $("#polkLink").click(function(){
-            popupOpen("polk");
-        });
-        // when x on popup is clicked, close popup
-        $("#polkPopupClose").click(function(){
-            popupClose("polk");
-        });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
         $("#polkAboutLi").click(function(){
@@ -2062,27 +1706,6 @@ function initMap() {
             $("#polkTourVideo").css('display', "initial");
         });
 
-        // when "click for more info" is selected,
-        // make corresponding overlay and popup visible
-        // +animate to fade in
-        $("#radfordLink").click(function(){
-            popupOpen("radford");
-        });
-        // when x on popup is clicked, close popup
-        $("#radfordPopupClose").click(function(){
-            popupClose("radford");
-        });
-
-        // when "click for more info" is selected,
-        // make corresponding overlay and popup visible
-        // +animate to fade in
-        $("#reeveLink").click(function(){
-            popupOpen("reeve");
-        });
-        // when x on popup is clicked, close popup
-        $("#reevePopupClose").click(function(){
-            popupClose("reeve");
-        });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
         $("#reeveAboutLi").click(function(){
@@ -2142,16 +1765,6 @@ function initMap() {
             $("#reeveDiningText").css('display', "initial");
         });
 
-        // when "click for more info" is selected,
-        // make corresponding overlay and popup visible
-        // +animate to fade in
-        $("#sageLink").click(function(){
-            popupOpen("sage");
-        });
-        // when x on popup is clicked, close popup
-        $("#sagePopupClose").click(function(){
-            popupClose("sage");
-        });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
         $("#sageAboutLi").click(function(){
@@ -2211,16 +1824,6 @@ function initMap() {
             $("#sageDiningText").css('display', "initial");
         });
 
-        // when "click for more info" is selected,
-        // make corresponding overlay and popup visible
-        // +animate to fade in
-        $("#scottLink").click(function(){
-            popupOpen("scott");
-        });
-        // when x on popup is clicked, close popup
-        $("#scottPopupClose").click(function(){
-            popupClose("scott");
-        });
         // tab clicking/content displaying
         $("#scottAboutLi").click(function(){
             $("#scottDiningImage").css('display', "none");
@@ -2238,27 +1841,6 @@ function initMap() {
             $("#scottDiningText").css('display', "initial");
         });
 
-        // when "click for more info" is selected,
-        // make corresponding overlay and popup visible
-        // +animate to fade in
-        $("#stewartLink").click(function(){ 
-            popupOpen("stewart");
-        });
-        // when x on popup is clicked, close popup
-        $("#stewartPopupClose").click(function(){ 
-            popupClose("stewart");
-        });
-
-        // when "click for more info" is selected,
-        // make corresponding overlay and popup visible
-        // +animate to fade in
-        $("#recreationLink").click(function(){
-            popupOpen("recreation");
-        });
-        // when x on popup is clicked, close popup
-        $("#recreationPopupClose").click(function(){
-            popupClose("recreation");
-        });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
         $("#recreationAboutLi").click(function(){
@@ -2283,16 +1865,6 @@ function initMap() {
             $("#recreationBathrooms").css('display', "initial");
         });
 
-        // when "click for more info" is selected,
-        // make corresponding overlay and popup visible
-        // +animate to fade in
-        $("#successLink").click(function(){
-            popupOpen("success");
-        });
-        // when x on popup is clicked, close popup
-        $("#successPopupClose").click(function(){
-            popupClose("success");
-        });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
         $("#successAboutLi").click(function(){
@@ -2332,16 +1904,6 @@ function initMap() {
             $("#successBathrooms").css('display', "initial");
         });
 
-        // when "click for more info" is selected,
-        // make corresponding overlay and popup visible
-        // +animate to fade in
-        $("#swartLink").click(function(){ 
-           popupOpen("swart");
-        });
-        // when x on popup is clicked, close popup
-        $("#swartPopupClose").click(function(){ 
-            popupClose("swart");
-        });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
         $("#swartAboutLi").click(function(){
@@ -2357,16 +1919,6 @@ function initMap() {
             $("#swartBathrooms").css('display', "initial");
         });
 
-        // when "click for more info" is selected,
-        // make corresponding overlay and popup visible
-        // +animate to fade in
-        $("#taylorLink").click(function(){
-            popupOpen("taylor");
-        });
-        // when x on popup is clicked, close popup
-        $("#taylorPopupClose").click(function(){
-            popupClose("taylor");
-        });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
         $("#taylorAboutLi").click(function(){
@@ -2382,16 +1934,6 @@ function initMap() {
             $("#taylorSustainability").css('display', "initial");
         });
 
-        // when "click for more info" is selected,
-        // make corresponding overlay and popup visible
-        // +animate to fade in
-        $("#titanLink").click(function(){
-            popupOpen("titan");
-        });
-        // when x on popup is clicked, close popup
-        $("#titanPopupClose").click(function(){
-            popupClose("titan");
-        });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
         $("#titanAboutLi").click(function(){
@@ -2407,16 +1949,6 @@ function initMap() {
             $("#titanSustainability").css('display', "initial");
         });
 
-        // when "click for more info" is selected,
-        // make corresponding overlay and popup visible
-        // +animate to fade in
-        $("#policeLink").click(function(){
-            popupOpen("police");
-        });
-        // when x on popup is clicked, close popup
-        $("#policePopupClose").click(function(){
-            popupClose("police");
-        });
         // behavior for when tabs are clicked on the popups
         // show content for tab, hide content for other tabs
         $("#policeAboutLi").click(function(){
@@ -2431,18 +1963,6 @@ function initMap() {
 
             $("#policeBathrooms").css('display', "initial");
         });
-
-        // when "click for more info" is selected,
-        // make corresponding overlay and popup visible
-        // +animate to fade in
-        $("#websterLink").click(function(){
-            popupOpen("webster");
-        });
-        // when x on popup is clicked, close popup
-        $("#websterPopupClose").click(function(){
-            popupClose("webster");
-        });
-
 
     //functions for checkboxes
     // naming conventions for checkboxes: ex. "buildingsLabel" "name + Label" is the element that has the class "is-checked" is added to
@@ -2460,9 +1980,8 @@ function initMap() {
     // fancy schmancy method Material Design already gives for unchecking le checkbox
     document.getElementById(name + "Label").MaterialCheckbox.uncheck();
     uncheckMarkersandCards(name);
-  
   }
-    //   the following functions handle setting/removing markers and hover cards when checkboxes are checked or unchecked
+  //the following functions handle setting/removing markers and hover cards when checkboxes are checked or unchecked
 
   //checks if name corresponds with specific ids and sets the buildings & their markers accordingly
   function checkboxMarkersandCards(name){

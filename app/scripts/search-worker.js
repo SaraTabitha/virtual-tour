@@ -213,12 +213,7 @@ $( "#searchInput" ).keyup(function() {
                 $("#websterLink").trigger("click");
               }
             });
-
-
         }
-        //
-
-
       }
 
       var check = $("#drawerContents").hasClass("drawerContentsAdjust");
