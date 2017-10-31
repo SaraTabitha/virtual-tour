@@ -1989,14 +1989,14 @@ function initMap() {
                   callAjax();
         
             }
-            });
-            //function for closing all of the popups (making them invisible)
-            function closeAllPopup(){
-                //debugger;
-                for(cc = 0; cc < 45; cc++){
-                    $("#"+ allMarkersInfo[cc].shortHand + "Popup").css('visibility', 'hidden');
-                }
-            }
+         });
+         //function for closing all of the popups (making them invisible)
+        function closeAllPopup(){
+          //debugger;
+             for(cc = 0; cc < 45; cc++){
+                 $("#"+ allMarkersInfo[cc].shortHand + "Popup").css('visibility', 'hidden');
+             }
+        }
             
           function callAjax(){
           $.ajax({
@@ -2005,237 +2005,147 @@ function initMap() {
             data: ({search: $("#searchInput").val()}),
             success: function(results){
         
-              // console.log("success!");
-              // console.log(results);
-        
-              $("#searchResults").css("visibility","visible");
-        
-        
-              var emptyResult = "<ul><li class='firstResults text'><h6>Search Results:</h6></li></ul>";
+                // console.log("success!");
+                // console.log(results);
+            
+                $("#searchResults").css("visibility","visible");
+            
+            
+                var emptyResult = "<ul><li class='firstResults text'><h6>Search Results:</h6></li></ul>";
               if( emptyResult == results){
-                // note to self: if you want to add class/id to these make sure to use
-                // different quotations than you use to wrap the string~
-                // "" string, '' for classes and ids
-                $("#searchResults").html("<ul><li id='noResults' class='text'> No results</li></ul>");
-        
+                    // note to self: if you want to add class/id to these make sure to use
+                    // different quotations than you use to wrap the string~
+                    // "" string, '' for classes and ids
+                    $("#searchResults").html("<ul><li id='noResults' class='text'> No results</li></ul>");
+            
               } else if (emptyResult !== results){
-                $("#searchResults").html(results);
-                //do while loop that selects all present list items and creates + assigns a unique id based on their value
-                // which is converted into a lowercase string without spaces (and has "Result" added onto it)
-                var n = 1;
-                // counting number of list items
-                var listItems = $("#searchResults > ul").children().length;
-                do {
-                  n++
-                  // gets value of element
-                  // / /g <- selects all spaces in the string
-                  var customId = $("#searchResults > ul > li:nth-child(" + n + ")").text().toLowerCase().replace(/ /g, "");
-                  // sets the id of the element ^ to the string returned above
-                  $("#searchResults > ul > li:nth-child(" + n + ")").prop("id", customId + "Result");
-                  clickResults(customId);
-                // increase n until it matches the number of listItems that are present
-                } while (n <= listItems);
-                var possibleIds = [
-                    //0 albee
-                    "albeehall",
-                    //1 baseball
-                    "alumnibaseballstadium",
-                    //2 
-                    "alumniwelcomeandconferencecenter",
-                    //3 ac
-                    "artsandcommunicationscenter",
-                    //4 athletic
-                    "athleticservicebuilding",
-                    //5 blackhawk
-                    "blackhawkcommons",
-                    //6 biodigester
-                    "biodigester",
-                    //7 buckstaff
-                    "buckstaffplanetarium",
-                    //8 equity 
-                    "campuscenterforequityanddiversity",
-                    //9 campus services
-                    "campusservices",
-                    //10 ceramics
-                    "ceramicslaboratory",
-                    //11 clow
-                    "clowsocialsciencecenter",
-                    //12 gardens
-                    "communitygardens",
-                    //13 dempsey
-                    "dempseyhall",
-                    //14 donner
-                    "donnerhall",
-                    //15 east
-                    "easthall",
-                    //16 environmental
-                    "environmentalscienceandresearchcenter",
-                    //17 evans
-                    "evanshall",
-                    //18 fletcher
-                    "fletcherhall",
-                    //19 fredric
-                    "fredricmarchtheater",
-                    //20 gruenhagen
-                    "gruenhagenconferencecenter",
-                    //21 halsey
-                    "halseysciencecenter",
-                    //22 harrington
-                    "harringtonhall",
-                    //23 heating 
-                    "heatingplant",
-                    //24 parking ramp
-                    "highavenueparkingramp",
-                    //25 horizon
-                    "horizonvillage",
-                    //26 kolf
-                    "kolfsportscenter",
-                    //27 lincoln
-                    "lincolnhall",
-                    //28 multicultural
-                    "multiculturaleducationcenter",
-                    //29 nursing
-                    "nursingeducationbuilding",
-                    //30 oviatt
-                    "oviatthouse",
-                    //31 pollock
-                    "pollockhouse",
-                    //32 polk
-                    "polklibrary",
-                    //33 radford
-                    "radfordhallandstudenthealthcenter",
-                    //34 reeve
-                    "reevememorialunion",
-                    //35 sage
-                    "sagehall",
-                    //36 scott
-                    "scotthall",
-                    //37 stewart
-                    "stewarthall",
-                    //38 recreation
-                    "studentrecreationandwellnesscenter",
-                    //39 success
-                    "studentsuccesscenter",
-                    //40 swart
-                    "swarthall",
-                    //41 taylor
-                    "taylorhall",
-                    //42 titan
-                    "titanstadium",
-                    //43 police
-                    "universitypolicestation",
-                    //44 webster
-                    "websterhall"
-                ]
-                // console.log(n);
-                // console.log("number of list elements:" + listItems);
-                // $("#albeehallResult").click(function(){
-                //   $("#albeeLink").trigger("click");
-                // });
-                function clickResults(id){
-                  // debugger;
-                  // console.log(id);
-                    $("#"+ id + "Result").click(function(){
-                      closeAllPopup();
-                      //checks id of clicked result and triggers a click for the "more info" link on the corresponding infoWindow
-                      //debugger;
-                      for(bb = 0; bb < 45; bb++){
-                        if (id == possibleIds[bb]){
-                            $("#" + allMarkersInfo[bb].shortHand  + "Link").trigger("click");
-                        }
-                      }
-                    //   if(id ==  "albeehall"){
-                    //     $("#albeeLink").trigger("click");
-                    //   } else if ( id == "artsandcommunicationscenter"){
-                    //     $("#acLink").trigger("click");
-                    //   } else if (id == "alumnibaseballstadium"){
-                    //     $("#baseballLink").trigger("click");
-                    //   } else if (id == "alumniwelcomeandconferencecenter"){
-                    //     $("#alumniLink").trigger("click");
-                    //   } else if (id == "athleticservicebuilding"){
-                    //     $("#athleticLink").trigger("click");
-                    //   } else if (id == "biodigester"){
-                    //     $("#biodigesterLink").trigger("click");
-                    //   } else if (id == "blackhawkcommons"){
-                    //     $("#blackhawkLink").trigger("click");
-                    //   } else if (id == "buckstaffplanetarium"){
-                    //     $("#buckstaffLink").trigger("click");
-                    //   } else if (id == "campuscenterforequityanddiversity"){
-                    //     $("#equityLink").trigger("click");
-                    //   } else if (id == "campusservices"){
-                    //     $("#campusLink").trigger("click");
-                    //   } else if (id == "ceramicslaboratory"){
-                    //     $("#ceramicsLink").trigger("click");
-                    //   } else if (id == "clowsocialsciencecenter"){
-                    //     $("#clowLink").trigger("click");
-                    //   } else if (id == "communitygardens"){
-                    //     $("#gardensLink").trigger("click");
-                    //   } else if (id == "dempseyhall"){
-                    //     $("#dempseyLink").trigger("click");
-                    //   } else if (id == "donnerhall"){
-                    //     $("#donnerLink").trigger("click");
-                    //   } else if (id == "easthall"){
-                    //     $("#eastLink").trigger("click");
-                    //   } else if (id == "environmentalscienceandresearchcenter"){
-                    //     $("#environmentalLink").trigger("click");
-                    //   } else if (id == "evanshall"){
-                    //     $("#evansLink").trigger("click");
-                    //   } else if (id == "fletcherhall"){
-                    //     $("#fletcherLink").trigger("click");
-                    //   } else if (id == "fredricmarchtheater"){
-                    //     $("#fredricLink").trigger("click");
-                    //   } else if (id == "gruenhagenconferencecenter"){
-                    //     $("#gruenhagenLink").trigger("click");
-                    //   } else if (id == "halseysciencecenter"){
-                    //     $("#halseyLink").trigger("click");
-                    //   } else if (id == "harringtonhall"){
-                    //     $("#harringtonLink").trigger("click");
-                    //   } else if (id == "heatingplant"){
-                    //     $("#heatingLink").trigger("click");
-                    //   } else if (id == "highavenueparkingramp"){
-                    //     $("#parkingRampLink").trigger("click");
-                    //   } else if (id == "horizonvillage"){
-                    //     $("#horizonLink").trigger("click");
-                    //   } else if (id == "kolfsportscenter"){
-                    //     $("#kolfLink").trigger("click");
-                    //   } else if (id == "lincolnhall"){
-                    //     $("#lincolnLink").trigger("click");
-                    //   } else if (id == "multiculturaleducationcenter"){
-                    //     $("#multiculturalLink").trigger("click");
-                    //   } else if (id == "nursingeducationbuilding"){
-                    //     $("#nursingLink").trigger("click");
-                    //   } else if (id == "oviatthouse"){
-                    //     $("#oviattLink").trigger("click");
-                    //   } else if (id == "polklibrary"){
-                    //     $("#polkLink").trigger("click");
-                    //   } else if (id == "pollockhouse"){
-                    //     $("#pollockLink").trigger("click");
-                    //   } else if (id == "radfordhallandstudenthealthcenter"){
-                    //     $("#radfordLink").trigger("click");
-                    //   } else if (id == "reevememorialunion"){
-                    //     $("#reeveLink").trigger("click");
-                    //   } else if (id == "sagehall"){
-                    //     $("#sageLink").trigger("click");
-                    //   } else if (id == "scotthall"){
-                    //     $("#scottLink").trigger("click");
-                    //   } else if (id == "stewarthall"){
-                    //     $("#stewartLink").trigger("click");
-                    //   } else if (id == "studentrecreationandwellnesscenter"){
-                    //     $("#recreationLink").trigger("click");
-                    //   } else if (id == "studentsuccesscenter"){
-                    //     $("#successLink").trigger("click");
-                    //   } else if (id == "swarthall"){
-                    //     $("#swartLink").trigger("click");
-                    //   } else if (id == "taylorhall"){
-                    //     $("#taylorLink").trigger("click");
-                    //   } else if (id == "titanstadium"){
-                    //     $("#titanLink").trigger("click");
-                    //   } else if (id == "universitypolicestation"){
-                    //     $("#policeLink").trigger("click");
-                    //   } else if (id == "websterhall"){
-                    //     $("#websterLink").trigger("click");
-                    //   }
-                    });
+                    $("#searchResults").html(results);
+                    //do while loop that selects all present list items and creates + assigns a unique id based on their value
+                    // which is converted into a lowercase string without spaces (and has "Result" added onto it)
+                    var n = 1;
+                    // counting number of list items
+                    var listItems = $("#searchResults > ul").children().length;
+                    do {
+                    n++
+                    // gets value of element
+                    // / /g <- selects all spaces in the string
+                    var customId = $("#searchResults > ul > li:nth-child(" + n + ")").text().toLowerCase().replace(/ /g, "");
+                    // sets the id of the element ^ to the string returned above
+                    $("#searchResults > ul > li:nth-child(" + n + ")").prop("id", customId + "Result");
+                    clickResults(customId);
+                    // increase n until it matches the number of listItems that are present
+                    } while (n <= listItems);
+                    var possibleIds = [
+                        //0 albee
+                        "albeehall",
+                        //1 baseball
+                        "alumnibaseballstadium",
+                        //2 
+                        "alumniwelcomeandconferencecenter",
+                        //3 ac
+                        "artsandcommunicationscenter",
+                        //4 athletic
+                        "athleticservicebuilding",
+                        //5 blackhawk
+                        "blackhawkcommons",
+                        //6 biodigester
+                        "biodigester",
+                        //7 buckstaff
+                        "buckstaffplanetarium",
+                        //8 equity 
+                        "campuscenterforequityanddiversity",
+                        //9 campus services
+                        "campusservices",
+                        //10 ceramics
+                        "ceramicslaboratory",
+                        //11 clow
+                        "clowsocialsciencecenter",
+                        //12 gardens
+                        "communitygardens",
+                        //13 dempsey
+                        "dempseyhall",
+                        //14 donner
+                        "donnerhall",
+                        //15 east
+                        "easthall",
+                        //16 environmental
+                        "environmentalscienceandresearchcenter",
+                        //17 evans
+                        "evanshall",
+                        //18 fletcher
+                        "fletcherhall",
+                        //19 fredric
+                        "fredricmarchtheater",
+                        //20 gruenhagen
+                        "gruenhagenconferencecenter",
+                        //21 halsey
+                        "halseysciencecenter",
+                        //22 harrington
+                        "harringtonhall",
+                        //23 heating 
+                        "heatingplant",
+                        //24 parking ramp
+                        "highavenueparkingramp",
+                        //25 horizon
+                        "horizonvillage",
+                        //26 kolf
+                        "kolfsportscenter",
+                        //27 lincoln
+                        "lincolnhall",
+                        //28 multicultural
+                        "multiculturaleducationcenter",
+                        //29 nursing
+                        "nursingeducationbuilding",
+                        //30 oviatt
+                        "oviatthouse",
+                        //31 pollock
+                        "pollockhouse",
+                        //32 polk
+                        "polklibrary",
+                        //33 radford
+                        "radfordhallandstudenthealthcenter",
+                        //34 reeve
+                        "reevememorialunion",
+                        //35 sage
+                        "sagehall",
+                        //36 scott
+                        "scotthall",
+                        //37 stewart
+                        "stewarthall",
+                        //38 recreation
+                        "studentrecreationandwellnesscenter",
+                        //39 success
+                        "studentsuccesscenter",
+                        //40 swart
+                        "swarthall",
+                        //41 taylor
+                        "taylorhall",
+                        //42 titan
+                        "titanstadium",
+                        //43 police
+                        "universitypolicestation",
+                        //44 webster
+                        "websterhall"
+                    ]
+                    // console.log(n);
+                    // console.log("number of list elements:" + listItems);
+                    // $("#albeehallResult").click(function(){
+                    //   $("#albeeLink").trigger("click");
+                    // });
+                     function clickResults(id){
+                    // debugger;
+                    // console.log(id);
+                           $("#"+ id + "Result").click(function(){
+                          closeAllPopup();
+                          //checks id of clicked result and triggers a click for the "more info" link on the corresponding infoWindow
+                          //debugger;
+                         for(bb = 0; bb < 45; bb++){
+                             if (id == possibleIds[bb]){
+                                  markerOpenClose(allMarkersInfo[bb].shortHand, bb);
+                                $("#" + allMarkersInfo[bb].shortHand  + "Link").trigger("click");
+                            }
+                          }
+                     });
                 }
               }
         
