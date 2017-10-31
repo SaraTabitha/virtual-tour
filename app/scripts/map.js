@@ -47,183 +47,188 @@ function initMap() {
             {position: {lat: 44.025729, lng: -88.550248}, title: "Albee Hall", shortHand: "albee",
             //thumbnail is for the infowindow that pops up when you click on a marker, hoverSelector is the selector for the 
             //html element in index.html that is the content for the infoWindow 
-            thumbnail: "images/campuspictures/albeehall.jpeg"
+            thumbnail: "images/campuspictures/albeehall.jpeg", fullImage: "images/campuspictures/albeehallFull.jpeg",
+            iFrame: "https://www.youtube.com/embed/AW5cpKVsXWA"
             },
             //1 baseball
             {position: {lat: 44.023042, lng: -88.561892},title: "Alumni Baseball Stadium", shortHand: "baseball",
-            thumbnail:"images/campuspictures/baseball.jpg"
+            thumbnail:"images/campuspictures/baseball.jpg", fullImage:""
             },
             //2 alumni
             {position: {lat: 44.020528, lng: -88.550432},title: "Alumni Welcome and Conference Center", shortHand: "alumni",
-            thumbnail: "images/campuspictures/awcc-building.jpg"
+            thumbnail: "images/campuspictures/awcc-building.jpg", fullImage: "images/campuspictures/awcc-buildingFull.jpg"
             },
             //3 ac
             {position: {lat: 44.029640, lng: -88.552137},title: "Arts and Communications", shortHand: "ac",
-            thumbnail: "images/campuspictures/artscommunications.jpeg"
+            thumbnail: "images/campuspictures/artscommunications.jpeg", fullImage:"images/campuspictures/artscommunicationsFull.jpeg"
             },
             //4 athletic
             {position: {lat: 44.023077, lng: -88.561081},title: "Athletic Service Building", shortHand: "athletic",
-            thumbnail: "images/campuspictures/athleticservice.jpeg" 
+            thumbnail: "images/campuspictures/athleticservice.jpeg" , fullImage:"images/campuspictures/athleticserviceFull.jpeg"
             },
             //5 blackhawk
             {position: {lat: 44.023591, lng: -88.549157},title: "Blackhawk Commons", shortHand: "blackhawk",
-            thumbnail: "images/campuspictures/blackhawk.jpeg"
+            thumbnail: "images/campuspictures/blackhawk.jpeg", fullImage:"images/campuspictures/blackhawkFull.jpeg"
             },
             //6 biodigester
             {position: {lat: 44.018897, lng: -88.558015},title: "Biodigester",shortHand: "biodigester",
-            thumbnail:"images/campuspictures/biodigester.jpg"
+            thumbnail:"images/campuspictures/biodigester.jpg", fullImage:"images/campuspictures/biodigesterFull.jpg"
             },
             //7 buckstaff
             { position: {lat: 44.028428, lng: -88.551581},title: "Buckstaff Planetarium", shortHand: "buckstaff",
-            thumbnail: "images/campuspictures/buckstaff.jpeg"
+            thumbnail: "images/campuspictures/buckstaff.jpeg", fullImage:"images/campuspictures/buckstaffFull.jpeg"
             },
             //8 equity 
             {position: {lat: 44.024655, lng: -88.547217},title: "Campus Center for Equity and Diversity",shortHand: "equity",
-            thumbnail: "images/campuspictures/centerforequity.jpeg"
+            thumbnail: "images/campuspictures/centerforequity.jpeg", fullImage:"images/campuspictures/centerforequityFull.jpeg"
             },
             //9 campus services
             {position: {lat: 44.017782, lng: -88.556446},title: "Campus Services", shortHand: "campus",
-            thumbnail: "images/campuspictures/campus-services.jpg"
+            thumbnail: "images/campuspictures/campus-services.jpg", fullImage:"images/campuspictures/campus-servicesFull.jpg"
             },
             //10 ceramics
             {position: {lat: 44.025559, lng: -88.555515},title: "Ceramics Laboratory",shortHand: "ceramics",
-            thumbnail: "images/campuspictures/ceramicslab.jpeg"
+            thumbnail: "images/campuspictures/ceramicslab.jpeg", fullImage:"images/campuspictures/ceramicslabFull.jpeg"
             },
             //11 clow
             {position: {lat: 44.026306, lng: -88.552268},title: "Clow Social Sciences Center",shortHand: "clow",
-            thumbnail:"images/campuspictures/clow.jpeg"
+            thumbnail:"images/campuspictures/clow.jpeg", fullImage:"images/campuspictures/clowFull.jpeg"
             },
             //12 gardens
             {position: {lat: 44.015573, lng: -88.555929},title: "Community Gardens",shortHand: "gardens",
-            thumbnail:"images/campuspictures/community-gardens.jpg"
+            thumbnail:"images/campuspictures/community-gardens.jpg", fullImage:"images/campuspictures/community-gardensFull.jpg"
             },
             //13 dempsey
             {position: {lat: 44.026603, lng: -88.550707},title: "Dempsey Hall",shortHand: "dempsey",
-            thumbnail:"images/campuspictures/dempsey.jpeg"
+            thumbnail:"images/campuspictures/dempsey.jpeg", fullImage:"images/campuspictures/dempseyFull.jpeg"
             },
             //14 donner
             {position: {lat: 44.025420, lng: -88.552287}, title: "Donner Hall",shortHand: "donner",
-            thumbnail:"images/campuspictures/donner.jpeg"
+            thumbnail:"images/campuspictures/donner.jpeg", fullImage:"images/campuspictures/donnerFull.jpeg"
              },
             //15 east
             {position: {lat: 44.031217, lng: -88.543806},title: "East Hall",shortHand: "east",
-            thumbnail: "images/campuspictures/easthall.jpg"
+            thumbnail: "images/campuspictures/easthall.jpg", fullImage:"images/campuspictures/easthallFull.jpg"
             },
             //16 environmental
             { position: {lat: 44.023518, lng: -88.553851}, title: "Environmental Science and Research Center",shortHand: "environmental",
-            thumbnail:"images/campuspictures/aquaticstudiescenter.jpeg"
+            thumbnail:"images/campuspictures/aquaticstudiescenter.jpeg", fullImage:"images/campuspictures/aquaticstudiescenterFull.jpeg"
             },
             //17 evans
             {position: {lat: 44.026168, lng: -88.547397},title: "Evans Hall",shortHand: "evans",
-            thumbnail:"images/campuspictures/evans.jpeg"
+            thumbnail:"images/campuspictures/evans.jpeg", fullImage:"images/campuspictures/evansFull.jpeg"
              },
             //18 fletcher
             { position: {lat: 44.025332, lng: -88.547240}, title: "Fletcher Hall",shortHand: "fletcher",
-            thumbnail: "images/campuspictures/fletcher.jpeg"
+            thumbnail: "images/campuspictures/fletcher.jpeg", fullImage:"images/campuspictures/fletcherFull.jpeg"
             },
             //19 fredric
             {position: {lat:  44.029000, lng:-88.552919},title: "Fredric March Theater",shortHand: "fredric",
-            thumbnail:"images/campuspictures/fredricmarch.jpeg"
+            thumbnail:"images/campuspictures/fredricmarch.jpeg", fullImage:"images/campuspictures/fredricmarchFull.jpeg"
              },
             //20 gruenhagen
             { position: {lat: 44.022405, lng:  -88.548824}, title: "Gruenhagen Conference Center",shortHand: "gruenhagen",
-            thumbnail:"images/campuspictures/gruenhagen.jpeg"
+            thumbnail:"images/campuspictures/gruenhagen.jpeg", fullImage:"images/campuspictures/gruenhagenFull.jpeg"
              },
             //21 halsey
             {position: {lat:  44.028497, lng: -88.551027},title: "Halsey Science Center",shortHand: "halsey",
-            thumbnail:"images/campuspictures/halsey.jpeg"
+            thumbnail:"images/campuspictures/halsey.jpeg", fullImage:"images/campuspictures/halseyFull.jpeg"
             },
             //22 harrington
             {position: {lat:  44.027736, lng: -88.550172}, title: "Harrington Hall",shortHand: "harrington",
-            thumbnail:"images/campuspictures/harrington.jpeg"
+            thumbnail:"images/campuspictures/harrington.jpeg", fullImage:"images/campuspictures/harringtonFull.jpeg"
              },
             //23 heating 
             {position: {lat: 44.028235, lng: -88.554312},title: "Heating Plant",shortHand: "heating",
-            thumbnail:"images/campuspictures/heatingplant.jpeg"
+            thumbnail:"images/campuspictures/heatingplant.jpeg", fullImage:"images/campuspictures/heatingplantFull.jpeg"
              },
             //24 parking ramp
             {position: {lat: 44.022960, lng: -88.549791},title: "High Avenue Parking Ramp",shortHand: "parkingRamp",
-            thumbnail:"images/campuspictures/parkingramp.jpeg"
+            thumbnail:"images/campuspictures/parkingramp.jpeg", fullImage:"images/campuspictures/parkingrampFull.jpeg"
              },
             //25 horizon
             {position: {lat: 44.024363, lng: -88.547972},title: "Horizon Village",shortHand: "horizon",
-            thumbnail:"images/campuspictures/horizon.jpeg"
+            thumbnail:"images/campuspictures/horizon.jpeg", fullImage:"images/campuspictures/horizonFull.jpeg"
              },
             //26 kolf
             {position: {lat: 44.024323, lng: -88.552214},title: "Kolf Sports Center",shortHand: "kolf",
-            thumbnail:"images/campuspictures/kolf.jpeg"
+            thumbnail:"images/campuspictures/kolf.jpeg", fullImage:"images/campuspictures/kolfFull.jpeg"
              },
             //27 lincoln
             {position: {lat: 44.023204, lng: -88.546359},title: "Lincoln Hall",shortHand: "lincoln",
-            thumbnail:"images/campuspictures/lincoln-hall.jpg"
+            thumbnail:"images/campuspictures/lincoln-hall.jpg", fullImage:"images/campuspictures/lincoln-hallFull.jpg"
               },
             //28 multicultural
             { position: {lat: 44.024842, lng: -88.550613}, title: "Multicultural Education Center",shortHand: "multicultural",
-            thumbnail:"images/campuspictures/multiculturaleducation.jpeg"
+            thumbnail:"images/campuspictures/multiculturaleducation.jpeg", fullImage:"images/campuspictures/multiculturaleducationFull.jpeg"
              },
             //29 nursing
             {position: {lat: 44.027051, lng: -88.552813},title: "Nursing and Education Building",shortHand: "nursing",
-            thumbnail:"images/campuspictures/nursingeducation.jpeg"
+            thumbnail:"images/campuspictures/nursingeducation.jpeg", fullImage:"images/campuspictures/nursingeducationFull.jpeg"
              },
             //30 oviatt
             {position: {lat:  44.027156, lng: -88.551466},title: "Oviatt House",shortHand: "oviatt",
-            thumbnail:"images/campuspictures/oviatt.jpeg"
+            thumbnail:"images/campuspictures/oviatt.jpeg", fullImage:"images/campuspictures/oviattFull.jpeg"
             },
             //31 pollock
             { position:  {lat: 44.025227, lng:  -88.551292},title: "Pollock House",shortHand: "pollock",
-            thumbnail:"images/campuspictures/pollock.jpeg"
+            thumbnail:"images/campuspictures/pollock.jpeg", fullImage:"images/campuspictures/pollockFull.jpeg"
               },
             //32 polk
             { position: {lat: 44.026379, lng: -88.549602}, title: "Polk Library",shortHand: "polk",
-            thumbnail:"images/campuspictures/polk.jpeg"
+            thumbnail:"images/campuspictures/polk.jpeg", fullImage:"images/campuspictures/polkFull.jpeg",
+            iFrame: "https://www.youtube.com/embed/iHPdc89AD_c"
             },
             //33 radford
             { position: {lat: 44.025671, lng: -88.551561}, title: "Radford Hall and Student Health Center",shortHand: "radford",
-            thumbnail:"images/campuspictures/radford.jpeg"
+            thumbnail:"images/campuspictures/radford.jpeg", fullImage:"images/campuspictures/radfordFull.jpeg"
             },
             //34 reeve
             { position: {lat: 44.024934, lng: -88.549448}, title: "Reeve Memorial Union",shortHand: "reeve",
-            thumbnail:"images/campuspictures/reeve.jpeg"
+            thumbnail:"images/campuspictures/reeve.jpeg", fullImage:"images/campuspictures/reeveFull.jpeg",
+            iFrame: "https://www.youtube.com/embed/QAtW972K3cQ"
               },
             //35 sage
             { position: {lat: 44.025720, lng: -88.553770},  title: "Sage Hall",shortHand: "sage",
-            thumbnail:"images/campuspictures/sage.jpeg"
+            thumbnail:"images/campuspictures/sage.jpeg", fullImage:"images/campuspictures/sageFull.jpeg",
+            iFrame: "https://www.youtube.com/embed/DVRbh2fCCZ0"
              },
             //36 scott
             {position: {lat: 44.022556, lng: -88.547344},title: "Scott Hall",shortHand: "scott",
-            thumbnail:"images/campuspictures/scott.jpeg"
+            thumbnail:"images/campuspictures/scott.jpeg", fullImage:"images/campuspictures/scottFull.jpeg"
              },
             //37 stewart
             {position: {lat: 44.026060, lng: -88.546952},title: "Stewart Hall",shortHand: "stewart",
-            thumbnail: "images/campuspictures/stewart.jpeg"
+            thumbnail: "images/campuspictures/stewart.jpeg", fullImage:"images/campuspictures/stewartFull.jpeg"
              },
             //38 recreation
             {position: {lat: 44.021752, lng: -88.551694},title: "Student Recreation and Wellness Center",shortHand: "recreation",
-            thumbnail:"images/campuspictures/srwc.jpeg"
+            thumbnail:"images/campuspictures/srwc.jpeg", fullImage:"images/campuspictures/srwcFull.jpeg"
              },
             //39 success
             { position: {lat: 44.026205, lng: -88.548163},  title: "Student Success Center",shortHand: "success",
-            thumbnail:"images/campuspictures/studentsuccess.jpeg"
+            thumbnail:"images/campuspictures/studentsuccess.jpeg", fullImage:"images/campuspictures/studentsuccessFull.jpeg",
+            iFrame: "https://www.youtube.com/embed/NjZjuqM7SBg"
              },
             //40 swart
             { position: {lat:  44.027872, lng:  -88.551962}, title: "Swart Hall",shortHand: "swart",
-            thumbnail:"images/campuspictures/swart.jpeg"
+            thumbnail:"images/campuspictures/swart.jpeg", fullImage:"images/campuspictures/swartFull.jpeg"
              },
             //41 taylor
             {position:  {lat: 44.024577, lng: -88.551215}, title: "Taylor Hall",shortHand: "taylor",
-            thumbnail:"images/campuspictures/taylor.jpeg"
+            thumbnail:"images/campuspictures/taylor.jpeg", fullImage:"images/campuspictures/taylorFull.jpeg"
              },
             //42 titan
             {position:  {lat: 44.023671, lng: -88.562917},title: "Titan Stadium",shortHand: "titan",
-            thumbnail:"images/campuspictures/titanstadium.jpeg"
+            thumbnail:"images/campuspictures/titanstadium.jpeg", fullImage:"images/campuspictures/titanstadiumFull.jpeg"
             },
             //43 police
             {position:  {lat: 44.023763, lng: -88.549972},title: "University Police",shortHand: "police",
-            thumbnail:"images/campuspictures/universitypolice.jpeg"
+            thumbnail:"images/campuspictures/universitypolice.jpeg", fullImage:"images/campuspictures/universitypoliceFull.jpeg"
             },
             //44 webster
             {position: {lat: 44.025002, lng: -88.551681},title: "Webster Hall",shortHand: "webster",
-            thumbnail:"images/campuspictures/webster.jpeg"
+            thumbnail:"images/campuspictures/webster.jpeg", fullImage:"images/campuspictures/websterFull.jpeg"
             },
             
             //parking lots
@@ -982,145 +987,23 @@ function initMap() {
 
             $("#" + name + "Popup").css('visibility', 'visible');
             $("#" + name + "Popup").animate({"opacity": "1"}, "slow");
+            for(dd = 0; dd < 45; dd++){
+                $("#" + allMarkersInfo[dd].shortHand + "AboutImage > img").attr("src", allMarkersInfo[dd].fullImage );
 
-            if(name === "albee"){
-                $('#albeeiframe').attr('src',"https://www.youtube.com/embed/AW5cpKVsXWA");
-                $('#albeeAboutImage > img').attr('src',"images/campuspictures/albeehallFull.jpeg");
+                switch(dd){
+                    case 0: $('#albeeiframe').attr('src', allMarkersInfo[0].iFrame);
+                            break;
+                    case 32: $('#polkiframe').attr('src',allMarkersInfo[32].iFrame);
+                             break;
+                    case 34: $('#reeveiframe').attr('src',allMarkersInfo[34].iFrame);
+                             break;
+                    case 35: $('#sageiframe').attr('src',allMarkersInfo[35].iFrame);
+                             break;
+                    case 39: $('#successiframe').attr('src',allMarkersInfo[39].iFrame);
+                            
+                }
             }
-            else if(name === "alumni"){
-                $("#alumniAboutImage > img").attr("src", "images/campuspictures/awcc-buildingFull.jpg");
-            }
-            else if (name === "ac"){
-                $("#acAboutImage > img").attr("src","images/campuspictures/artscommunicationsFull.jpeg");
-            }
-            else if (name === "athletic"){
-                $("#athleticAboutText > img").attr("src", "images/campuspictures/athleticserviceFull.jpeg");
-            } 
-            else if (name === "blackhawk"){
-                $("#blackhawkAboutImage > img").attr("src", "images/campuspictures/blackhawkFull.jpeg");
-            }
-            else if (name === "biodigester"){
-                $("#biodigesterAboutImage > img").attr("src", "images/campuspictures/biodigesterFull.jpg");
-            }
-            else if (name === "buckstaff"){
-                $("#buckstaffAboutImage > img").attr("src", "images/campuspictures/buckstaffFull.jpeg");
-            }
-            else if (name === "equity"){
-                $("#equityAboutImage > img").attr("src", "images/campuspictures/centerforequityFull.jpeg");
-            }
-            else if (name === "campus"){
-                $("#campusAboutImage > img").attr("src", "images/campuspictures/campus-servicesFull.jpg");
-            }
-            else if (name === "ceramics"){
-                $("#ceramicsAboutImage > img").attr("src", "images/campuspictures/ceramicslabFull.jpeg");
-            }
-            else if (name === "clow"){
-                $("#clowAboutImage > img").attr("src", "images/campuspictures/clowFull.jpeg");
-            }
-            else if (name === "gardens"){
-                $("#gardensAboutImage > img").attr("src", "images/campuspictures/community-gardensFull.jpg");
-            }
-            else if (name === "dempsey"){
-                $("#dempseyAboutImage > img").attr("src", "images/campuspictures/dempseyFull.jpeg");
-            }
-            else if (name === "donner"){
-                $("#donnerAboutImage > img").attr("src", "images/campuspictures/donnerFull.jpeg");
-            }
-            else if (name === "east"){
-                $("#eastAboutImage > img").attr("src", "images/campuspictures/easthallFull.jpg");
-            }
-            else if (name === "environmental"){
-                $("#environmentalAboutImage > img").attr("src", "images/campuspictures/aquaticstudiescenterFull.jpeg");
-            }
-            else if (name === "evans"){
-                $("#evansAboutImage > img").attr("src", "images/campuspictures/evansFull.jpeg");
-            }
-            else if (name === "fletcher"){
-                $("#fletcherAboutImage > img").attr("src", "images/campuspictures/fletcherFull.jpeg");
-            }
-            else if (name === "fredric"){
-                $("#fredricAboutImage > img").attr("src", "images/campuspictures/fredricmarchFull.jpeg");
-            }
-            else if (name === "gruenhagen"){
-                $("#gruenhagenAboutImage > img").attr("src", "images/campuspictures/gruenhagenFull.jpeg");
-            }
-            else if (name === "halsey"){
-                $("#halseyAboutImage > img").attr("src", "images/campuspictures/halseyFull.jpeg");
-            }
-            else if (name === "harrington"){
-                $("#harringtonAboutImage > img").attr("src", "images/campuspictures/harringtonFull.jpeg");
-            }
-            else if (name === "heating"){
-                $("#heatingAboutImage > img").attr("src", "images/campuspictures/heatingplantFull.jpeg");
-            }
-            else if (name === "parkingRamp"){
-                $("#parkingAboutImage > img").attr("src", "images/campuspictures/parkingrampFull.jpeg");
-            }
-            else if (name === "horizon"){
-                $("#horizonAboutImage > img").attr("src", "images/campuspictures/horizonFull.jpeg");
-            }
-            else if (name === "kolf"){
-                $("#kolfAboutImage > img").attr("src", "images/campuspictures/kolfFull.jpeg");
-            }
-            else if (name === "lincoln"){
-                $("#lincolnAboutImage > img").attr("src", "images/campuspictures/lincoln-hallFull.jpg");
-            }
-            else if (name === "multicultural"){
-                $("#multiculturalAboutImage > img").attr("src", "images/campuspictures/multiculturaleducationFull.jpeg");
-            }
-            else if (name === "nursing"){
-                $("#nursingAboutImage > img").attr("src", "images/campuspictures/nursingeducationFull.jpeg");
 
-            }
-            else if (name === "oviatt"){
-                $("#oviattAboutImage > img").attr("src", "images/campuspictures/oviattFull.jpeg");
-            }
-            else if (name === "pollock"){
-                $("#pollockAboutImage > img").attr("src", "images/campuspictures/pollockFull.jpeg");
-            }
-            else if (name === "polk"){
-                $('#polkiframe').attr('src',"https://www.youtube.com/embed/iHPdc89AD_c");
-                $("#polkAboutImage > img").attr("src", "images/campuspictures/polkFull.jpeg");
-            }
-            else if (name === "radford"){
-                $("#radfordAboutImage > img").attr("src", "images/campuspictures/radfordFull.jpeg");
-            }
-            else if (name === "reeve"){
-                $('#reeveiframe').attr('src',"https://www.youtube.com/embed/QAtW972K3cQ");
-                $("#reeveAboutImage > img").attr("src", "images/campuspictures/reeveFull.jpeg");
-            }
-            else if (name === "sage"){
-                $('#sageiframe').attr('src',"https://www.youtube.com/embed/DVRbh2fCCZ0");
-                $("#sageAboutImage > img").attr("src", "images/campuspictures/sageFull.jpeg");
-            }
-            else if (name === "scott"){
-                $("#scottAboutImage > img").attr("src", "images/campuspictures/scottFull.jpeg");
-            }
-            else if (name === "stewart"){
-                $("#stewartAboutImage > img").attr("src", "images/campuspictures/stewartFull.jpeg");
-            }
-            else if (name === "recreation"){
-                $("#recreationAboutImage > img").attr("src", "images/campuspictures/srwcFull.jpeg");
-            }
-            else if (name === "success"){
-                $('#successiframe').attr('src',"https://www.youtube.com/embed/NjZjuqM7SBg");
-                $("#successAboutImage > img").attr("src", "images/campuspictures/studentsuccessFull.jpeg");
-            }
-            else if (name === "swart"){
-                $("#swartAboutImage > img").attr("src", "images/campuspictures/swartFull.jpeg");
-            }
-            else if (name === "taylor"){
-                $("#taylorAboutImage > img").attr("src", "images/campuspictures/taylorFull.jpeg");
-            }
-            else if (name === "titan"){
-                $("#titanAboutImage > img").attr("src", "images/campuspictures/titanstadiumFull.jpeg");
-            }
-            else if (name === "police"){
-                $("#policeAboutImage > img").attr("src", "images/campuspictures/universitypoliceFull.jpeg");
-            }
-            else if (name === "webster"){
-                $("#websterAboutImage > img").attr("src", "images/campuspictures/websterFull.jpeg");
-            }
         }
         //function for all popupclosure
         //close all of the popups themselves and remove src values
