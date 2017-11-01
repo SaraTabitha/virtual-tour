@@ -998,11 +998,23 @@ function initMap() {
                 switch(dd){
                     case 0: $('#albeeiframe').attr('src', allMarkersInfo[0].iFrame);
                             break;
+                    case 5: $("#blackhawkDiningImage > img").attr("src", allMarkersInfo[5].diningImage);
+                            break;
+                    case 11: $("#clowDiningImage > img").attr("src", allMarkersInfo[11].diningImage);
+                             break;
+                    case 21: $("#halseyDiningImage > img").attr("src", allMarkersInfo[21].diningImage);
+                             break;
+                    case 24: $("#parkingRampParkingImage> img").attr("src", allMarkersInfo[24].parkingImage);
+                             break;
                     case 32: $('#polkiframe').attr('src',allMarkersInfo[32].iFrame);
                              break;
                     case 34: $('#reeveiframe').attr('src',allMarkersInfo[34].iFrame);
+                             $("#reeveDiningImage > img").attr("src", allMarkersInfo[34].diningImage);
                              break;
                     case 35: $('#sageiframe').attr('src',allMarkersInfo[35].iFrame);
+                             $("#sageDiningImage > img").attr("src", allMarkersInfo[35].diningImage);
+                             break;
+                    case 36: $("#scottDiningImage > img").attr("src", allMarkersInfo[36].diningImage);
                              break;
                     case 39: $('#successiframe').attr('src',allMarkersInfo[39].iFrame);
                             
@@ -1158,8 +1170,8 @@ function initMap() {
             $("#blackhawkAboutText").css('display', "none");
             $("#blackhawkSustainability").css('display', "none");
             $("#blackhawkBathrooms").css('display', "none");
-            $("#blackhawkDiningImage > img").attr("src", "images/campuspictures/blackhawkGif.gif");
 
+            //$("#blackhawkDiningImage > img").attr("src", allMarkersInfo[5].diningImage);
             $("#blackhawkDiningImage").css('display', "block");
             $("#blackhawkDiningText").css('display', "initial");
         });
@@ -1191,8 +1203,8 @@ function initMap() {
         $("#clowDiningLi").click(function(){
             $("#clowAboutImage").css('display', "none");
             $("#clowAboutText").css('display', "none");
-            $("#clowDiningImage > img").attr("src", allMarkersInfo[11].diningImage);
 
+           // $("#clowDiningImage > img").attr("src", allMarkersInfo[11].diningImage);
             $("#clowDiningImage").css('display', "block");
             $("#clowDiningText").css('display', "initial");
         });
@@ -1234,8 +1246,8 @@ function initMap() {
             $("#halseyAboutImage").css('display', "none");
             $("#halseyAboutText").css('display', "none");
             $("#halseyBathrooms").css('display', "none");
-            $("#halseyDiningImage > img").attr("src", allMarkersInfo[21].diningImage);
 
+            //$("#halseyDiningImage > img").attr("src", allMarkersInfo[21].diningImage);
             $("#halseyDiningImage").css('display', "block");
             $("#halseyDiningText").css('display', "initial");
 
@@ -1284,7 +1296,7 @@ function initMap() {
             $("#parkingAboutImage").css('display', "none");
             $("#parkingAboutText").css('display', "none");
 
-            $("#parkingRampParkingImage> img").attr("src", allMarkersInfo[24].parkingImage);
+            //$("#parkingRampParkingImage> img").attr("src", allMarkersInfo[24].parkingImage);
             $("#parkingRampParkingImage").css('display', "initial");
             $("#parkingRampParkingText").css('display', "initial");
         });
@@ -1405,7 +1417,7 @@ function initMap() {
             $("#reeveSustainability").css('display', "none");
             $("#reeveBathrooms").css('display', "none");
 
-            $("#reeveDiningImage > img").attr("src", allMarkersInfo[34].diningImage);
+            //$("#reeveDiningImage > img").attr("src", allMarkersInfo[34].diningImage);
             $("#reeveDiningImage").css('display', "block");
             $("#reeveDiningText").css('display', "initial");
         });
@@ -1464,7 +1476,7 @@ function initMap() {
             $("#sageSustainability").css('display', "none");
             $("#sageBathrooms").css('display', "none");
 
-            $("#sageDiningImage > img").attr("src", allMarkersInfo[35].diningImage);
+            //$("#sageDiningImage > img").attr("src", allMarkersInfo[35].diningImage);
             $("#sageDiningImage").css('display', "block");
             $("#sageDiningText").css('display', "initial");
         });
@@ -1481,7 +1493,7 @@ function initMap() {
             $("#scottAboutImage").css('display', "none");
             $("#scottAboutText").css('display', "none");
 
-            $("#scottDiningImage > img").attr("src", allMarkersInfo[36].diningImage);
+            //$("#scottDiningImage > img").attr("src", allMarkersInfo[36].diningImage);
             $("#scottDiningImage").css('display', "block");
             $("#scottDiningText").css('display', "initial");
         });
