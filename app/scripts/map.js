@@ -68,7 +68,8 @@ function initMap() {
             },
             //5 blackhawk
             {position: {lat: 44.023591, lng: -88.549157},title: "Blackhawk Commons", shortHand: "blackhawk",
-            thumbnail: "images/campuspictures/blackhawk.jpeg", fullImage:"images/campuspictures/blackhawkFull.jpeg"
+            thumbnail: "images/campuspictures/blackhawk.jpeg", fullImage:"images/campuspictures/blackhawkFull.jpeg",
+            diningImage:  "images/campuspictures/blackhawkGif.gif"
             },
             //6 biodigester
             {position: {lat: 44.018897, lng: -88.558015},title: "Biodigester",shortHand: "biodigester",
@@ -92,7 +93,8 @@ function initMap() {
             },
             //11 clow
             {position: {lat: 44.026306, lng: -88.552268},title: "Clow Social Sciences Center",shortHand: "clow",
-            thumbnail:"images/campuspictures/clow.jpeg", fullImage:"images/campuspictures/clowFull.jpeg"
+            thumbnail:"images/campuspictures/clow.jpeg", fullImage:"images/campuspictures/clowFull.jpeg",
+            diningImage: "images/campuspictures/clowGif.gif"
             },
             //12 gardens
             {position: {lat: 44.015573, lng: -88.555929},title: "Community Gardens",shortHand: "gardens",
@@ -132,7 +134,8 @@ function initMap() {
              },
             //21 halsey
             {position: {lat:  44.028497, lng: -88.551027},title: "Halsey Science Center",shortHand: "halsey",
-            thumbnail:"images/campuspictures/halsey.jpeg", fullImage:"images/campuspictures/halseyFull.jpeg"
+            thumbnail:"images/campuspictures/halsey.jpeg", fullImage:"images/campuspictures/halseyFull.jpeg",
+            diningImage: "images/campuspictures/halseyGif.gif"
             },
             //22 harrington
             {position: {lat:  44.027736, lng: -88.550172}, title: "Harrington Hall",shortHand: "harrington",
@@ -144,7 +147,8 @@ function initMap() {
              },
             //24 parking ramp
             {position: {lat: 44.022960, lng: -88.549791},title: "High Avenue Parking Ramp",shortHand: "parkingRamp",
-            thumbnail:"images/campuspictures/parkingramp.jpeg", fullImage:"images/campuspictures/parkingrampFull.jpeg"
+            thumbnail:"images/campuspictures/parkingramp.jpeg", fullImage:"images/campuspictures/parkingrampFull.jpeg",
+            parkingImage: "images/campuspictures/parkingRamp.png"
              },
             //25 horizon
             {position: {lat: 44.024363, lng: -88.547972},title: "Horizon Village",shortHand: "horizon",
@@ -186,16 +190,17 @@ function initMap() {
             //34 reeve
             { position: {lat: 44.024934, lng: -88.549448}, title: "Reeve Memorial Union",shortHand: "reeve",
             thumbnail:"images/campuspictures/reeve.jpeg", fullImage:"images/campuspictures/reeveFull.jpeg",
-            iFrame: "https://www.youtube.com/embed/QAtW972K3cQ"
+            iFrame: "https://www.youtube.com/embed/QAtW972K3cQ", diningImage: "images/campuspictures/reeveGif.gif"
               },
             //35 sage
             { position: {lat: 44.025720, lng: -88.553770},  title: "Sage Hall",shortHand: "sage",
             thumbnail:"images/campuspictures/sage.jpeg", fullImage:"images/campuspictures/sageFull.jpeg",
-            iFrame: "https://www.youtube.com/embed/DVRbh2fCCZ0"
+            iFrame: "https://www.youtube.com/embed/DVRbh2fCCZ0", diningImage: "images/campuspictures/sageGif.gif"
              },
             //36 scott
             {position: {lat: 44.022556, lng: -88.547344},title: "Scott Hall",shortHand: "scott",
-            thumbnail:"images/campuspictures/scott.jpeg", fullImage:"images/campuspictures/scottFull.jpeg"
+            thumbnail:"images/campuspictures/scott.jpeg", fullImage:"images/campuspictures/scottFull.jpeg",
+            diningImage:"images/campuspictures/scottGif.gif"
              },
             //37 stewart
             {position: {lat: 44.026060, lng: -88.546952},title: "Stewart Hall",shortHand: "stewart",
@@ -1086,7 +1091,7 @@ function initMap() {
             $("#albeeTourVideo").css('display', "none");
             $("#albeeTourText").css('display', "none");
 
-            $("#albeeSustainability ").css('display', "initial");
+            $("#albeeSustainability").css('display', "initial");
         });
 
         // behavior for when tabs are clicked on the popups
@@ -1186,7 +1191,7 @@ function initMap() {
         $("#clowDiningLi").click(function(){
             $("#clowAboutImage").css('display', "none");
             $("#clowAboutText").css('display', "none");
-            $("#clowDiningImage > img").attr("src", "images/campuspictures/clowGif.gif");
+            $("#clowDiningImage > img").attr("src", allMarkersInfo[11].diningImage);
 
             $("#clowDiningImage").css('display', "block");
             $("#clowDiningText").css('display', "initial");
@@ -1229,7 +1234,7 @@ function initMap() {
             $("#halseyAboutImage").css('display', "none");
             $("#halseyAboutText").css('display', "none");
             $("#halseyBathrooms").css('display', "none");
-            $("#halseyDiningImage > img").attr("src", "images/campuspictures/halseyGif.gif");
+            $("#halseyDiningImage > img").attr("src", allMarkersInfo[21].diningImage);
 
             $("#halseyDiningImage").css('display', "block");
             $("#halseyDiningText").css('display', "initial");
@@ -1278,8 +1283,8 @@ function initMap() {
         $("#parkingParkingLi").click(function(){
             $("#parkingAboutImage").css('display', "none");
             $("#parkingAboutText").css('display', "none");
-            $("#parkingRampParkingImage> img").attr("src", "images/campuspictures/parkingRamp.png");
 
+            $("#parkingRampParkingImage> img").attr("src", allMarkersInfo[24].parkingImage);
             $("#parkingRampParkingImage").css('display', "initial");
             $("#parkingRampParkingText").css('display', "initial");
         });
@@ -1399,8 +1404,8 @@ function initMap() {
             $("#reeveTourText").css('display', "none");
             $("#reeveSustainability").css('display', "none");
             $("#reeveBathrooms").css('display', "none");
-            $("#reeveDiningImage > img").attr("src", "images/campuspictures/reeveGif.gif");
 
+            $("#reeveDiningImage > img").attr("src", allMarkersInfo[34].diningImage);
             $("#reeveDiningImage").css('display', "block");
             $("#reeveDiningText").css('display', "initial");
         });
@@ -1458,8 +1463,8 @@ function initMap() {
             $("#sageTourText").css('display', "none");
             $("#sageSustainability").css('display', "none");
             $("#sageBathrooms").css('display', "none");
-            $("#sageDiningImage > img").attr("src", "images/campuspictures/sageGif.gif");
 
+            $("#sageDiningImage > img").attr("src", allMarkersInfo[35].diningImage);
             $("#sageDiningImage").css('display', "block");
             $("#sageDiningText").css('display', "initial");
         });
@@ -1475,8 +1480,8 @@ function initMap() {
         $("#scottDiningLi").click(function(){
             $("#scottAboutImage").css('display', "none");
             $("#scottAboutText").css('display', "none");
-            $("#scottDiningImage > img").attr("src", "images/campuspictures/scottGif.gif");
 
+            $("#scottDiningImage > img").attr("src", allMarkersInfo[36].diningImage);
             $("#scottDiningImage").css('display', "block");
             $("#scottDiningText").css('display', "initial");
         });
