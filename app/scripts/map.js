@@ -993,7 +993,7 @@ function initMap() {
             $("#" + name + "Popup").css('visibility', 'visible');
             $("#" + name + "Popup").animate({"opacity": "1"}, "slow");
             for(dd = 0; dd < 45; dd++){
-                $("#" + allMarkersInfo[dd].shortHand + "AboutImage > img").attr("src", allMarkersInfo[dd].fullImage );
+                $("#" + allMarkersInfo[dd].shortHand + "AboutImage > img").attr("src", allMarkersInfo[dd].fullImage);
 
                 switch(dd){
                     case 0: $('#albeeiframe').attr('src', allMarkersInfo[0].iFrame);
@@ -1081,6 +1081,130 @@ function initMap() {
 
         //     }
         // }
+
+        //array for each building with multiple tabs; true = it has that tab, false = it does not have that tab
+        var buildingsTabs = [
+            // 0 albee
+            {   name: "albee",
+                aboutTab: true, tourTab: true, sustainabilityTab: true, bathroomsTab: false, diningTab: false, parkingTab: false},
+            // 1 alumni
+            {   name: "alumni",
+                aboutTab: true, tourTab: false, sustainabilityTab: true, bathroomsTab: false, diningTab: false, parkingTab: false},
+            // 2 ac
+            {   name: "ac",
+                aboutTab: true , tourTab: false, sustainabilityTab: false, bathroomsTab: true, diningTab: false, parkingTab: false},
+            //3 blackhawk
+            {   name: "blackhawk",
+                aboutTab: true, tourTab: false, sustainabilityTab: true, bathroomsTab: true, diningTab: true , parkingTab: false},
+            //4 equity
+            {   name: "equity",
+                aboutTab: true, tourTab: false, sustainabilityTab: false, bathroomsTab: true, diningTab: false, parkingTab: true},
+            //5 clow
+            {   name: "clow",
+                aboutTab: true, tourTab: false, sustainabilityTab: false, bathroomsTab: false, diningTab: true, parkingTab: false},
+            //6 dempsey
+            {   name: "dempsey",
+                aboutTab: true, tourTab: false, sustainabilityTab: false, bathroomsTab: true, diningTab: false, parkingTab: false},
+            //7 halsey
+            {   name: "halsey",
+                aboutTab: true, tourTab: false, sustainabilityTab: false, bathroomsTab: true, diningTab: true, parkingTab: false},
+            //8 harrington
+            {   name: "harrington",
+                aboutTab: true, tourTab: false, sustainabilityTab: false, bathroomsTab: true, diningTab: false, parkingTab: false},
+            //9 heating
+            {   name: "heating",
+                aboutTab: true, tourTab: false, sustainabilityTab: true, bathroomsTab: false, diningTab: true, parkingTab: false},
+            //10 parking
+            {   name: "parkingRamp",
+                aboutTab: true, tourTab: false, sustainabilityTab: false, bathroomsTab: false, diningTab: false, parkingTab: true},
+            //11 horizon
+            {   name: "horizon",
+                aboutTab: true, tourTab: false, sustainabilityTab: true, bathroomsTab: false, diningTab: false, parkingTab: false},
+            //12 kolf
+            {   name: "kolf",
+                aboutTab: true, tourTab: false, sustainabilityTab: false, bathroomsTab: true, diningTab: false, parkingTab: false},
+            //13 nursing
+            {   name: "nursing",
+                aboutTab: true, tourTab: false, sustainabilityTab: false, bathroomsTab: true, diningTab: false, parkingTab: false},
+            //14 polk
+            {   name: "polk",
+                aboutTab: true, tourTab: true, sustainabilityTab: false, bathroomsTab: false, diningTab: false, parkingTab: false},
+            //15 reeve
+            {   name: "reeve",
+                aboutTab: true, tourTab: true, sustainabilityTab: true, bathroomsTab: true, diningTab: true, parkingTab: false},
+            //16 sage
+            {   name: "sage",
+                aboutTab: true, tourTab: true, sustainabilityTab: true, bathroomsTab: true, diningTab: true, parkingTab: false},
+            //17 scott
+            {   name: "scott",
+                aboutTab: true, tourTab: false, sustainabilityTab: false, bathroomsTab: false, diningTab: true, parkingTab: false},
+            //18 recreation
+            {   name: "recreation",
+                aboutTab: true, tourTab: false, sustainabilityTab: true, bathroomsTab: true, diningTab: false, parkingTab: false},
+            //19 success
+            {   name: "success",
+                aboutTab: true, tourTab: true, sustainabilityTab: true, bathroomsTab: true, diningTab: false, parkingTab: false},
+            //20 swart
+            {   name: "swart",
+                aboutTab: true, tourTab: false, sustainabilityTab: false, bathroomsTab: true, diningTab: false, parkingTab: false},
+            //21 taylor
+            {   name: "taylor",
+                aboutTab: true, tourTab: false, sustainabilityTab: true, bathroomsTab: false, diningTab: false, parkingTab: false},
+            //22 titan
+            {   name: "titan",
+                aboutTab: true, tourTab: false, sustainabilityTab: true, bathroomsTab: false, diningTab: false, parkingTab: false},
+            //23 police
+            {   name: "police",
+                aboutTab: true, tourTab: false, sustainabilityTab: false, bathroomsTab: true, diningTab: false, parkingTab: false}
+        ]
+        
+        //checks if the building has each tab and closes/hides all of their content accordingly
+        function closeTabs(index){
+            var name = buildingsTabs[index].name; 
+            if(buildingsTabs[index].aboutTab === true){
+                $("#" + name + "AboutImage").css('display', "none");
+                $("#" + name + "AboutText").css('display', "none");
+            }
+            if(buildingsTabs[index].tourTab === true){
+                $("#" + name + "TourVideo").css('display', "none");
+                $("#" + name + "TourText").css('display', "none");
+            }
+            if(buildingsTabs[index].sustainabilityTab === true){
+                $("#" + name + "Sustainability").css('display', "none");
+            }
+            if(buildingsTabs[index].bathroomsTab === true){
+                $("#" + name + "Bathrooms").css('display', "none");
+            }
+            if(buildingsTabs[index].diningTab === true){
+                $("#" + name + "DiningImage").css('display', "none");
+                $("#" + name + "DiningText").css('display', "none");
+            }
+            if(buildingsTabs[index].parkingTab === true){
+                $("#" + name + "ParkingImage").css('display', "none");
+                $("#" + name + "ParkingText").css('display', "none");
+            }
+
+        }
+        
+         //for loop to set eventlisteners for all tab types
+         for(ee = 0; ee < 24; ee++){
+             var index = ee;
+
+            //set to AboutLi IF the building has that tab to click on
+            if (buildingsTabs[index].aboutTab === true){
+                    $("#" + allMarkersInfo[index].shortHand + "AboutLi").click(function(){
+                        //hide other tabs from object
+                        closeTabs(index);
+
+                        $("#" + allMarkersInfo[index].shortHand + "AboutImage").css('display', "block");
+                        $("#" + allMarkersInfo[index].shortHand + "AboutText").css('display', "initial");
+                    });
+            }
+            
+
+         }
+       
+
         $("#albeeAboutLi").click(function(){
             $("#albeeTourVideo").css('display', "none");
             $("#albeeTourText").css('display', "none");
