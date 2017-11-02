@@ -1185,565 +1185,669 @@ function initMap() {
             }
 
         }
-        
-         //for loop to set eventlisteners for all tab types
-         for(ee = 0; ee < 24; ee++){
-             var index = ee;
-
+         //for each to set eventlisteners for all tab types; if a building has a tab it will create an event listener for when that tab is clicked
+         //for each tab the content for that tab will be set to visible and all the other tabs for that building will be set to invisible
+        buildingsTabs.forEach(function(thisOne){
+            var index = buildingsTabs.indexOf(thisOne);
+            var name = buildingsTabs[index].name;
             //set to AboutLi IF the building has that tab to click on
-            if (buildingsTabs[index].aboutTab === true){
-                    $("#" + allMarkersInfo[index].shortHand + "AboutLi").click(function(){
+                if (buildingsTabs[index].aboutTab === true){
+                    $("#" + buildingsTabs[index].name + "AboutLi").click(function(){
+                        //debugger;
                         //hide other tabs from object
                         closeTabs(index);
 
-                        $("#" + allMarkersInfo[index].shortHand + "AboutImage").css('display', "block");
-                        $("#" + allMarkersInfo[index].shortHand + "AboutText").css('display', "initial");
+                        //content to set for this tab type
+                        $("#" + buildingsTabs[index].name  + "AboutImage").css('display', "block");
+                        $("#" + buildingsTabs[index].name + "AboutText").css('display', "initial");
                     });
-            }
+                 }
+                if(buildingsTabs[index].tourTab === true){
+                        $("#" + buildingsTabs[index].name  + "TourLi").click(function(){
+                            //hide other tabs from object
+                            closeTabs(index);
+                            //content to set for this tab type
+                            $("#" + buildingsTabs[index].name  + "TourVideo").css('display', "initial");
+                            $("#" + buildingsTabs[index].name  + "TourText").css('display', "initial");
+                        });
+                
+                }
+                if(buildingsTabs[index].sustainabilityTab === true){
+                        $("#" + buildingsTabs[index].name  + "SustainabilityLi").click(function(){
+                            //hide other tabs from object
+                            closeTabs(index);
+                            //content to set for this tab type
+                            $("#" + buildingsTabs[index].name  + "Sustainability").css('display', "initial");
+                        });
+                }
+                if(buildingsTabs[index].bathroomsTab === true){
+                        $("#" + buildingsTabs[index].name  + "BathroomsLi").click(function(){
+                            //hide other tabs from object
+                            closeTabs(index);
+                            //content to set for this tab type
+                            $("#" + buildingsTabs[index].name  + "Bathrooms").css('display', "initial");
+                        });
+                }
+                if(buildingsTabs[index].diningTab === true){
+                        $("#" + buildingsTabs[index].name  + "DiningLi").click(function(){
+                            //hide other tabs from object
+                            closeTabs(index);
+                            //content to set for this tab type
+                            $("#" + buildingsTabs[index].name  + "DiningImage").css('display', "block");
+                            $("#" + buildingsTabs[index].name  + "DiningText").css('display', "initial");
+                        });
+                }
+                if(buildingsTabs[index].parkingTab === true){
+                        $("#" + buildingsTabs[index].name  + "ParkingLi").click(function(){
+                            //hide other tabs from object
+                            closeTabs(index);
+                            //content to set for this tab type
+                            $("#" + buildingsTabs[index].name  + "ParkingImage").css('display', "initial");
+                            $("#" + buildingsTabs[index].name  + "ParkingText").css('display', "initial");
+                        });
+                }
+        });
+        //  //for loop to set eventlisteners for all tab types
+        //  for(ee = 0; ee < 24; ee++){
+        //     //set to AboutLi IF the building has that tab to click on
+        //     if (buildingsTabs[ee].aboutTab === true){
+        //             $("#" + buildingsTabs[ee].name + "AboutLi").click(function(){
+        //                 debugger;
+        //                 //hide other tabs from object
+        //                 closeTabs(ee);
+
+        //                 $("#" + buildingsTabs[ee].name  + "AboutImage").css('display', "block");
+        //                 $("#" + buildingsTabs[ee].name + "AboutText").css('display', "initial");
+        //             });
+        //     }
+        //     if(buildingsTabs[ee].tourTab === true){
+        //             $("#" + buildingsTabs[ee].name  + "TourLi").click(function(){
+        //                 //hide other tabs from object
+        //                 closeTabs(ee);
+
+        //                 $("#" + buildingsTabs[ee].name  + "TourVideo").css('display', "initial");
+        //                 $("#" + buildingsTabs[ee].name  + "TourText").css('display', "initial");
+        //             });
+               
+        //     }
+        //     if(buildingsTabs[ee].sustainabilityTab === true){
+        //             $("#" + buildingsTabs[ee].name  + "SustainabilityLi").click(function(){
+        //                 //hide other tabs from object
+        //                 closeTabs(ee);
+
+        //                 $("#" + buildingsTabs[ee].name  + "Sustainability").css('display', "initial");
+        //             });
+        //     }
+        //     if(buildingsTabs[ee].bathroomsTab === true){
+        //             $("#" + buildingsTabs[ee].name  + "BathroomsLi").click(function(){
+        //                 //hide other tabs from object
+        //                 closeTabs(ee);
+
+        //                 $("#" + buildingsTabs[ee].name  + "Bathrooms").css('display', "initial");
+        //             });
+        //     }
+        //     if(buildingsTabs[ee].diningTab === true){
+        //             $("#" + buildingsTabs[ee].name  + "DiningLi").click(function(){
+        //                 //hide other tabs from object
+        //                 closeTabs(ee);
+
+        //                 $("#" + buildingsTabs[ee].name  + "DiningImage").css('display', "block");
+        //                 $("#" + buildingsTabs[ee].name  + "DiningText").css('display', "initial");
+        //             });
+        //     }
+        //     if(buildingsTabs[ee].parkingTab === true){
+        //             $("#" + buildingsTabs[ee].name  + "ParkingLi").click(function(){
+        //                 //hide other tabs from object
+        //                 closeTabs(ee);
+
+        //                 $("#" + buildingsTabs[ee].name  + "DiningImage").css('display', "block");
+        //                 $("#" + buildingsTabs[ee].name  + "DiningText").css('display', "initial");
+        //             });
+        //     }
             
 
-         }
+        //  }
        
 
-        $("#albeeAboutLi").click(function(){
-            $("#albeeTourVideo").css('display', "none");
-            $("#albeeTourText").css('display', "none");
-            $("#albeeSustainability").css('display', "none");
+        // $("#albeeAboutLi").click(function(){
+        //     $("#albeeTourVideo").css('display', "none");
+        //     $("#albeeTourText").css('display', "none");
+        //     $("#albeeSustainability").css('display', "none");
 
-            $("#albeeAboutImage").css('display', "block");
-            $("#albeeAboutText").css('display', "initial");
-        });
-        $("#albeeTourLi").click(function(){
-            $("#albeeAboutImage").css('display', "none");
-            $("#albeeAboutText").css('display', "none");
-            $("#albeeSustainability").css('display', "none");
+        //     $("#albeeAboutImage").css('display', "block");
+        //     $("#albeeAboutText").css('display', "initial");
+        // });
+        // $("#albeeTourLi").click(function(){
+        //     $("#albeeAboutImage").css('display', "none");
+        //     $("#albeeAboutText").css('display', "none");
+        //     $("#albeeSustainability").css('display', "none");
             
-            $("#albeeTourVideo").css('display', "initial");
-            $("#albeeTourText").css('display', "initial");
-        });
-        $("#albeeSustainabilityLi").click(function(){
-            $("#albeeAboutImage").css('display', "none");
-            $("#albeeAboutText").css('display', "none");
-            $("#albeeTourVideo").css('display', "none");
-            $("#albeeTourText").css('display', "none");
-
-            $("#albeeSustainability").css('display', "initial");
-        });
-
-        // behavior for when tabs are clicked on the popups
-        // show content for tab, hide content for other tabs
-        $("#alumniAboutLi").click(function(){
-            $("#alumniSustainability").css('display', "none");
-
-            $("#alumniAboutImage").css('display', "block");
-            $("#alumniAboutText").css('display', "initial");
-        });
-        $("#alumniSustainabilityLi").click(function(){
-            $("#alumniAboutImage").css('display', "none");
-            $("#alumniAboutText").css('display', "none");
-
-            $("#alumniSustainability ").css('display', "initial");
-        });
-
-        // behavior for when tabs are clicked on the popups
-        // show content for tab, hide content for other tabs
-        $("#acAboutLi").click(function(){
-            $("#acBathrooms").css('display', "none");
-
-            $("#acAboutImage").css('display', "block");
-            $("#acAboutText").css('display', "initial");
-        });
-        $("#acBathroomsLi").click(function(){
-            $("#acAboutImage").css('display', "none");
-            $("#acAboutText").css('display', "none");
-
-            $("#acBathrooms").css('display', "initial");
-        });
-
-        // behavior for when tabs are clicked on the popups
-        // show content for tab, hide content for other tabs
-        $("#blackhawkAboutLi").click(function(){
-            $("#blackhawkBathrooms").css('display', "none");
-            $("#blackhawkSustainability").css('display', "none");
-            $("#blackhawkDiningImage").css('display', "none");
-            $("#blackhawkDiningText").css('display', "none");
-
-            $("#blackhawkAboutImage").css('display', "block");
-            $("#blackhawkAboutText").css('display', "initial");
-        });
-        $("#blackhawkSustainabilityLi").click(function(){
-            $("#blackhawkAboutImage").css('display', "none");
-            $("#blackhawkAboutText").css('display', "none");
-            $("#blackhawkBathrooms").css('display', "none");
-            $("#blackhawkDiningImage").css('display', "none");
-            $("#blackhawkDiningText").css('display', "none");
-
-            $("#blackhawkSustainability ").css('display', "initial");
-        });
-        $("#blackhawkBathroomsLi").click(function(){
-            $("#blackhawkAboutImage").css('display', "none");
-            $("#blackhawkAboutText").css('display', "none");
-            $("#blackhawkSustainability").css('display', "none");
-            $("#blackhawkDiningImage").css('display', "none");
-            $("#blackhawkDiningText").css('display', "none");
-
-            $("#blackhawkBathrooms").css('display', "initial");
-        });
-        $("#blackhawkDiningLi").click(function(){
-            $("#blackhawkAboutImage").css('display', "none");
-            $("#blackhawkAboutText").css('display', "none");
-            $("#blackhawkSustainability").css('display', "none");
-            $("#blackhawkBathrooms").css('display', "none");
-
-            //$("#blackhawkDiningImage > img").attr("src", allMarkersInfo[5].diningImage);
-            $("#blackhawkDiningImage").css('display', "block");
-            $("#blackhawkDiningText").css('display', "initial");
-        });
-
-        // behavior for when tabs are clicked on the popups
-        // show content for tab, hide content for other tabs
-        $("#equityAboutLi").click(function(){
-            $("#equityBathrooms").css('display', "none");
-
-            $("#equityAboutImage").css('display', "block");
-            $("#equityAboutText").css('display', "initial");
-        });
-        $("#equityBathroomsLi").click(function(){
-            $("#equityAboutImage").css('display', "none");
-            $("#equityAboutText").css('display', "none");
-
-            $("#equityBathrooms").css('display', "initial");
-        });
-
-        // behavior for when tabs are clicked on the popups
-        // show content for tab, hide content for other tabs
-        $("#clowAboutLi").click(function(){
-            $("#clowDiningImage").css('display', "none");
-            $("#clowDiningText").css('display', "none");
-
-            $("#clowAboutImage").css('display', "block");
-            $("#clowAboutText").css('display', "initial");
-        });
-        $("#clowDiningLi").click(function(){
-            $("#clowAboutImage").css('display', "none");
-            $("#clowAboutText").css('display', "none");
-
-           // $("#clowDiningImage > img").attr("src", allMarkersInfo[11].diningImage);
-            $("#clowDiningImage").css('display', "block");
-            $("#clowDiningText").css('display', "initial");
-        });
-
-        // behavior for when tabs are clicked on the popups
-        // show content for tab, hide content for other tabs
-        $("#dempseyAboutLi").click(function(){
-            $("#dempseyBathrooms").css('display', "none");
-
-            $("#dempseyAboutImage").css('display', "block");
-            $("#dempseyAboutText").css('display', "initial");
-        });
-        $("#dempseyBathroomsLi").click(function(){
-            $("#dempseyAboutImage").css('display', "none");
-            $("#dempseyAboutText").css('display', "none");
-
-            $("#dempseyBathrooms").css('display', "initial");
-        });
-
-        // behavior for when tabs are clicked on the popups
-        // show content for tab, hide content for other tabs
-        $("#halseyAboutLi").click(function(){
-            $("#halseyBathrooms").css('display', "none");
-            $("#halseyDiningImage").css('display', "none");
-            $("#halseyDiningText").css('display', "none");
-
-            $("#halseyAboutImage").css('display', "block");
-            $("#halseyAboutText").css('display', "initial");
-        });
-        $("#halseyBathroomsLi").click(function(){
-            $("#halseyAboutImage").css('display', "none");
-            $("#halseyAboutText").css('display', "none");
-            $("#halseyDiningImage").css('display', "none");
-            $("#halseyDiningText").css('display', "none");
-
-            $("#halseyBathrooms").css('display', "initial");
-        });
-        $("#halseyDiningLi").click(function(){
-            $("#halseyAboutImage").css('display', "none");
-            $("#halseyAboutText").css('display', "none");
-            $("#halseyBathrooms").css('display', "none");
-
-            //$("#halseyDiningImage > img").attr("src", allMarkersInfo[21].diningImage);
-            $("#halseyDiningImage").css('display', "block");
-            $("#halseyDiningText").css('display', "initial");
-
-        });
-
-        // behavior for when tabs are clicked on the popups
-        // show content for tab, hide content for other tabs
-        $("#harringtonAboutLi").click(function(){
-            $("#harringtonBathrooms").css('display', "none");
-
-            $("#harringtonAboutImage").css('display', "block");
-            $("#harringtonAboutText").css('display', "initial");
-        });
-        $("#harringtonBathroomsLi").click(function(){
-            $("#harringtonAboutImage").css('display', "none");
-            $("#harringtonAboutText").css('display', "none");
-
-            $("#harringtonBathrooms").css('display', "initial");
-        });
-
-        // behavior for when tabs are clicked on the popups
-        // show content for tab, hide content for other tabs
-        $("#heatingAboutLi").click(function(){
-            $("#heatingSustainability").css('display', "none");
-
-            $("#heatingAboutImage").css('display', "block");
-            $("#heatingAboutText").css('display', "initial");
-        });
-        $("#heatingSustainabilityLi").click(function(){
-            $("#heatingAboutImage").css('display', "none");
-            $("#heatingAboutText").css('display', "none");
-
-            $("#heatingSustainability").css('display', "initial");
-        });
-
-        // behavior for when tabs are clicked on the popups
-        // show content for tab, hide content for other tabs
-        $("#parkingAboutLi").click(function(){
-            $("#parkingRampParkingImage").css('display', "none");
-            $("#parkingRampParkingText").css('display', "none");
-
-            $("#parkingAboutImage").css('display', "block");
-            $("#parkingAboutText").css('display', "initial");
-        });
-        $("#parkingParkingLi").click(function(){
-            $("#parkingAboutImage").css('display', "none");
-            $("#parkingAboutText").css('display', "none");
-
-            //$("#parkingRampParkingImage> img").attr("src", allMarkersInfo[24].parkingImage);
-            $("#parkingRampParkingImage").css('display', "initial");
-            $("#parkingRampParkingText").css('display', "initial");
-        });
-
-        // behavior for when tabs are clicked on the popups
-        // show content for tab, hide content for other tabs
-        $("#horizonAboutLi").click(function(){
-            $("#horizonSustainability").css('display', "none");
-
-            $("#horizonAboutImage").css('display', "block");
-            $("#horizonAboutText").css('display', "initial");
-        });
-        $("#horizonSustainabilityLi").click(function(){
-            $("#horizonAboutImage").css('display', "none");
-            $("#horizonAboutText").css('display', "none");
-
-            $("#horizonSustainability").css('display', "initial");
-        });
-
-        // behavior for when tabs are clicked on the popups
-        // show content for tab, hide content for other tabs
-        $("#kolfAboutLi").click(function(){
-            $("#kolfBathrooms").css('display', "none");
-
-            $("#kolfAboutImage").css('display', "block");
-            $("#kolfAboutText").css('display', "initial");
-        });
-        $("#kolfBathroomsLi").click(function(){
-            $("#kolfAboutImage").css('display', "none");
-            $("#kolfAboutText").css('display', "none");
-
-            $("#kolfBathrooms").css('display', "initial");
-        });
-
-        // behavior for when tabs are clicked on the popups
-        // show content for tab, hide content for other tabs
-        $("#nursingAboutLi").click(function(){
-            $("#nursingBathrooms").css('display', "none");
-
-            $("#nursingAboutImage").css('display', "block");
-            $("#nursingAboutText").css('display', "initial");
-        });
-        $("#nursingBathroomsLi").click(function(){
-            $("#nursingAboutImage").css('display', "none");
-            $("#nursingAboutText").css('display', "none");
-
-            $("#nursingBathrooms").css('display', "initial");
-        });
-
-        // behavior for when tabs are clicked on the popups
-        // show content for tab, hide content for other tabs
-        $("#polkAboutLi").click(function(){
-            $("#polkTourVideo").css('display', "none");
-            $("#polkTourText").css('display', "none");
-
-            $("#polkAboutImage").css('display', "block");
-            $("#polkAboutText").css('display', "initial");
-        });
-        $("#polkTourLi").click(function(){
-            $("#polkAboutImage").css('display', "none");
-            $("#polkAboutText").css('display', "none");
-
-            $("#polkTourText").css('display', "initial");
-            $("#polkTourVideo").css('display', "initial");
-        });
-
-        // behavior for when tabs are clicked on the popups
-        // show content for tab, hide content for other tabs
-        $("#reeveAboutLi").click(function(){
-            $("#reeveTourVideo").css('display', "none");
-            $("#reeveTourText").css('display', "none");
-            $("#reeveSustainability").css('display', "none");
-            $("#reeveBathrooms").css('display', "none");
-            $("#reeveDiningImage").css('display', "none");
-            $("#reeveDiningText").css('display', "none");
-
-            $("#reeveAboutImage").css('display', "block");
-            $("#reeveAboutText").css('display', "initial");
-        });
-        $("#reeveTourLi").click(function(){
-            $("#reeveAboutImage").css('display', "none");
-            $("#reeveAboutText").css('display', "none");
-            $("#reeveSustainability").css('display', "none");
-            $("#reeveBathrooms").css('display', "none");
-            $("#reeveDiningImage").css('display', "none");
-            $("#reeveDiningText").css('display', "none");
-
-            $("#reeveTourText").css('display', "initial");
-            $("#reeveTourVideo").css('display', "initial");
-        });
-        $("#reeveSustainabilityLi").click(function(){
-            $("#reeveAboutImage").css('display', "none");
-            $("#reeveAboutText").css('display', "none");
-            $("#reeveTourVideo").css('display', "none");
-            $("#reeveTourText").css('display', "none");
-            $("#reeveBathrooms").css('display', "none");
-            $("#reeveDiningImage").css('display', "none");
-            $("#reeveDiningText").css('display', "none");
-
-            $("#reeveSustainability").css('display', "initial");
-        });
-        $("#reeveBathroomsLi").click(function(){
-            $("#reeveAboutImage").css('display', "none");
-            $("#reeveAboutText").css('display', "none");
-            $("#reeveTourVideo").css('display', "none");
-            $("#reeveTourText").css('display', "none");
-            $("#reeveSustainability").css('display', "none");
-            $("#reeveDiningImage").css('display', "none");
-            $("#reeveDiningText").css('display', "none");
-
-            $("#reeveBathrooms").css('display', "initial");
-        });
-        $("#reeveDiningLi").click(function(){
-            $("#reeveAboutImage").css('display', "none");
-            $("#reeveAboutText").css('display', "none");
-            $("#reeveTourVideo").css('display', "none");
-            $("#reeveTourText").css('display', "none");
-            $("#reeveSustainability").css('display', "none");
-            $("#reeveBathrooms").css('display', "none");
-
-            //$("#reeveDiningImage > img").attr("src", allMarkersInfo[34].diningImage);
-            $("#reeveDiningImage").css('display', "block");
-            $("#reeveDiningText").css('display', "initial");
-        });
-
-        // behavior for when tabs are clicked on the popups
-        // show content for tab, hide content for other tabs
-        $("#sageAboutLi").click(function(){
-            $("#sageTourVideo").css('display', "none");
-            $("#sageTourText").css('display', "none");
-            $("#sageSustainability").css('display', "none");
-            $("#sageBathrooms").css('display', "none");
-            $("#sageDiningImage").css('display', "none");
-            $("#sageDiningText").css('display', "none");
-
-            $("#sageAboutImage").css('display', "block");
-            $("#sageAboutText").css('display', "initial");
-        });
-        $("#sageTourLi").click(function(){
-             $("#sageAboutImage").css('display', "none");
-            $("#sageAboutText").css('display', "none");
-            $("#sageSustainability").css('display', "none");
-            $("#sageBathrooms").css('display', "none");
-            $("#sageDiningImage").css('display', "none");
-            $("#sageDiningText").css('display', "none");
-
-            $("#sageTourText").css('display', "initial");
-            $("#sageTourVideo").css('display', "initial");
-        });
-        $("#sageSustainabilityLi").click(function(){
-            $("#sageAboutImage").css('display', "none");
-            $("#sageAboutText").css('display', "none");
-            $("#sageTourVideo").css('display', "none");
-            $("#sageTourText").css('display', "none");
-            $("#sageBathrooms").css('display', "none");
-            $("#sageDiningImage").css('display', "none");
-            $("#sageDiningText").css('display', "none");
-
-            $("#sageSustainability").css('display', "initial");
-        });
-        $("#sageBathroomsLi").click(function(){
-            $("#sageAboutImage").css('display', "none");
-            $("#sageAboutText").css('display', "none");
-            $("#sageTourVideo").css('display', "none");
-            $("#sageTourText").css('display', "none");
-            $("#sageSustainability").css('display', "none");
-            $("#sageDiningImage").css('display', "none");
-            $("#sageDiningText").css('display', "none");
-
-            $("#sageBathrooms").css('display', "initial");
-        });
-        $("#sageDiningLi").click(function(){
-            $("#sageAboutImage").css('display', "none");
-            $("#sageAboutText").css('display', "none");
-            $("#sageTourVideo").css('display', "none");
-            $("#sageTourText").css('display', "none");
-            $("#sageSustainability").css('display', "none");
-            $("#sageBathrooms").css('display', "none");
-
-            //$("#sageDiningImage > img").attr("src", allMarkersInfo[35].diningImage);
-            $("#sageDiningImage").css('display', "block");
-            $("#sageDiningText").css('display', "initial");
-        });
-
-        // tab clicking/content displaying
-        $("#scottAboutLi").click(function(){
-            $("#scottDiningImage").css('display', "none");
-            $("#scottDiningText").css('display', "none");
-
-            $("#scottAboutImage").css('display', "block");
-            $("#scottAboutText").css('display', "initial");
-        });
-        $("#scottDiningLi").click(function(){
-            $("#scottAboutImage").css('display', "none");
-            $("#scottAboutText").css('display', "none");
-
-            //$("#scottDiningImage > img").attr("src", allMarkersInfo[36].diningImage);
-            $("#scottDiningImage").css('display', "block");
-            $("#scottDiningText").css('display', "initial");
-        });
-
-        // behavior for when tabs are clicked on the popups
-        // show content for tab, hide content for other tabs
-        $("#recreationAboutLi").click(function(){
-            $("#recreationSustainability").css('display', "none");
-            $("#recreationBathrooms").css('display', "none");
-
-            $("#recreationAboutImage").css('display', "block");
-            $("#recreationAboutText").css('display', "initial");
-        });
-        $("#recreationSustainabilityLi").click(function(){
-            $("#recreationAboutImage").css('display', "none");
-            $("#recreationAboutText").css('display', "none");
-            $("#recreationBathrooms").css('display', "none");
-
-            $("#recreationSustainability").css('display', "initial");
-        });
-        $("#recreationBathroomsLi").click(function(){
-            $("#recreationAboutImage").css('display', "none");
-            $("#recreationAboutText").css('display', "none");
-            $("#recreationSustainability").css('display', "none");
-
-            $("#recreationBathrooms").css('display', "initial");
-        });
-
-        // behavior for when tabs are clicked on the popups
-        // show content for tab, hide content for other tabs
-        $("#successAboutLi").click(function(){
-            $("#successSustainability").css('display', "none");
-            $("#successBathrooms").css('display', "none");
-            $("#successTourText").css('display', "none");
-            $("#successTourVideo").css('display', "none");
-
-            $("#successAboutImage").css('display', "block");
-            $("#successAboutText").css('display', "initial");
-        });
-        $("#successTourLi").click(function(){
-            $("#successAboutImage").css('display', "none");
-            $("#successAboutText").css('display', "none");
-            $("#successBathrooms").css('display', "none");
-            $("#successSustainability").css('display', "none");
-
-            $("#successTourVideo").css('display', "initial");
-            $("#successTourText").css('display', "initial");
-        });
-        $("#successSustainabilityLi").click(function(){
-            $("#successAboutImage").css('display', "none");
-            $("#successAboutText").css('display', "none");
-            $("#successBathrooms").css('display', "none");
-            $("#successTourText").css('display', "none");
-            $("#successTourVideo").css('display', "none");
-
-            $("#successSustainability").css('display', "initial");
-        });
-        $("#successBathroomsLi").click(function(){
-            $("#successAboutImage").css('display', "none");
-            $("#successAboutText").css('display', "none");
-            $("#successSustainability").css('display', "none");
-            $("#successTourText").css('display', "none");
-            $("#successTourVideo").css('display', "none");
-
-            $("#successBathrooms").css('display', "initial");
-        });
-
-        // behavior for when tabs are clicked on the popups
-        // show content for tab, hide content for other tabs
-        $("#swartAboutLi").click(function(){
-            $("#swartBathrooms").css('display', "none");
-
-            $("#swartAboutImage").css('display', "block");
-            $("#swartAboutText").css('display', "initial");
-        });
-        $("#swartBathroomsLi").click(function(){
-            $("#swartAboutImage").css('display', "none");
-            $("#swartAboutText").css('display', "none");
-
-            $("#swartBathrooms").css('display', "initial");
-        });
-
-        // behavior for when tabs are clicked on the popups
-        // show content for tab, hide content for other tabs
-        $("#taylorAboutLi").click(function(){
-            $("#taylorSustainability").css('display', "none");
-
-            $("#taylorAboutImage").css('display', "block");
-            $("#taylorAboutText").css('display', "initial");
-        });
-        $("#taylorSustainabilityLi").click(function(){
-            $("#taylorAboutImage").css('display', "none");
-            $("#taylorAboutText").css('display', "none");
-
-            $("#taylorSustainability").css('display', "initial");
-        });
-
-        // behavior for when tabs are clicked on the popups
-        // show content for tab, hide content for other tabs
-        $("#titanAboutLi").click(function(){
-            $("#titanSustainability").css('display', "none");
-
-            $("#titanAboutImage").css('display', "block");
-            $("#titanAboutText").css('display', "initial");
-        });
-        $("#titanSustainabilityLi").click(function(){
-            $("#titanAboutImage").css('display', "none");
-            $("#titanAboutText").css('display', "none");
-
-            $("#titanSustainability").css('display', "initial");
-        });
-
-        // behavior for when tabs are clicked on the popups
-        // show content for tab, hide content for other tabs
-        $("#policeAboutLi").click(function(){
-            $("#policeBathrooms").css('display', "none");
-
-            $("#policeAboutImage").css('display', "block");
-            $("#policeAboutText").css('display', "initial");
-        });
-        $("#policeBathroomsLi").click(function(){
-            $("#policeAboutImage").css('display', "none");
-            $("#policeAboutText").css('display', "none");
-
-            $("#policeBathrooms").css('display', "initial");
-        });
+        //     $("#albeeTourVideo").css('display', "initial");
+        //     $("#albeeTourText").css('display', "initial");
+        // });
+        // $("#albeeSustainabilityLi").click(function(){
+        //     $("#albeeAboutImage").css('display', "none");
+        //     $("#albeeAboutText").css('display', "none");
+        //     $("#albeeTourVideo").css('display', "none");
+        //     $("#albeeTourText").css('display', "none");
+
+        //     $("#albeeSustainability").css('display', "initial");
+        // });
+
+        // // behavior for when tabs are clicked on the popups
+        // // show content for tab, hide content for other tabs
+        // $("#alumniAboutLi").click(function(){
+        //     $("#alumniSustainability").css('display', "none");
+
+        //     $("#alumniAboutImage").css('display', "block");
+        //     $("#alumniAboutText").css('display', "initial");
+        // });
+        // $("#alumniSustainabilityLi").click(function(){
+        //     $("#alumniAboutImage").css('display', "none");
+        //     $("#alumniAboutText").css('display', "none");
+
+        //     $("#alumniSustainability ").css('display', "initial");
+        // });
+
+        // // behavior for when tabs are clicked on the popups
+        // // show content for tab, hide content for other tabs
+        // $("#acAboutLi").click(function(){
+        //     $("#acBathrooms").css('display', "none");
+
+        //     $("#acAboutImage").css('display', "block");
+        //     $("#acAboutText").css('display', "initial");
+        // });
+        // $("#acBathroomsLi").click(function(){
+        //     $("#acAboutImage").css('display', "none");
+        //     $("#acAboutText").css('display', "none");
+
+        //     $("#acBathrooms").css('display', "initial");
+        // });
+
+        // // behavior for when tabs are clicked on the popups
+        // // show content for tab, hide content for other tabs
+        // $("#blackhawkAboutLi").click(function(){
+        //     $("#blackhawkBathrooms").css('display', "none");
+        //     $("#blackhawkSustainability").css('display', "none");
+        //     $("#blackhawkDiningImage").css('display', "none");
+        //     $("#blackhawkDiningText").css('display', "none");
+
+        //     $("#blackhawkAboutImage").css('display', "block");
+        //     $("#blackhawkAboutText").css('display', "initial");
+        // });
+        // $("#blackhawkSustainabilityLi").click(function(){
+        //     $("#blackhawkAboutImage").css('display', "none");
+        //     $("#blackhawkAboutText").css('display', "none");
+        //     $("#blackhawkBathrooms").css('display', "none");
+        //     $("#blackhawkDiningImage").css('display', "none");
+        //     $("#blackhawkDiningText").css('display', "none");
+
+        //     $("#blackhawkSustainability ").css('display', "initial");
+        // });
+        // $("#blackhawkBathroomsLi").click(function(){
+        //     $("#blackhawkAboutImage").css('display', "none");
+        //     $("#blackhawkAboutText").css('display', "none");
+        //     $("#blackhawkSustainability").css('display', "none");
+        //     $("#blackhawkDiningImage").css('display', "none");
+        //     $("#blackhawkDiningText").css('display', "none");
+
+        //     $("#blackhawkBathrooms").css('display', "initial");
+        // });
+        // $("#blackhawkDiningLi").click(function(){
+        //     $("#blackhawkAboutImage").css('display', "none");
+        //     $("#blackhawkAboutText").css('display', "none");
+        //     $("#blackhawkSustainability").css('display', "none");
+        //     $("#blackhawkBathrooms").css('display', "none");
+
+        //     //$("#blackhawkDiningImage > img").attr("src", allMarkersInfo[5].diningImage);
+        //     $("#blackhawkDiningImage").css('display', "block");
+        //     $("#blackhawkDiningText").css('display', "initial");
+        // });
+
+        // // behavior for when tabs are clicked on the popups
+        // // show content for tab, hide content for other tabs
+        // $("#equityAboutLi").click(function(){
+        //     $("#equityBathrooms").css('display', "none");
+
+        //     $("#equityAboutImage").css('display', "block");
+        //     $("#equityAboutText").css('display', "initial");
+        // });
+        // $("#equityBathroomsLi").click(function(){
+        //     $("#equityAboutImage").css('display', "none");
+        //     $("#equityAboutText").css('display', "none");
+
+        //     $("#equityBathrooms").css('display', "initial");
+        // });
+
+        // // behavior for when tabs are clicked on the popups
+        // // show content for tab, hide content for other tabs
+        // $("#clowAboutLi").click(function(){
+        //     $("#clowDiningImage").css('display', "none");
+        //     $("#clowDiningText").css('display', "none");
+
+        //     $("#clowAboutImage").css('display', "block");
+        //     $("#clowAboutText").css('display', "initial");
+        // });
+        // $("#clowDiningLi").click(function(){
+        //     $("#clowAboutImage").css('display', "none");
+        //     $("#clowAboutText").css('display', "none");
+
+        //    // $("#clowDiningImage > img").attr("src", allMarkersInfo[11].diningImage);
+        //     $("#clowDiningImage").css('display', "block");
+        //     $("#clowDiningText").css('display', "initial");
+        // });
+
+        // // behavior for when tabs are clicked on the popups
+        // // show content for tab, hide content for other tabs
+        // $("#dempseyAboutLi").click(function(){
+        //     $("#dempseyBathrooms").css('display', "none");
+
+        //     $("#dempseyAboutImage").css('display', "block");
+        //     $("#dempseyAboutText").css('display', "initial");
+        // });
+        // $("#dempseyBathroomsLi").click(function(){
+        //     $("#dempseyAboutImage").css('display', "none");
+        //     $("#dempseyAboutText").css('display', "none");
+
+        //     $("#dempseyBathrooms").css('display', "initial");
+        // });
+
+        // // behavior for when tabs are clicked on the popups
+        // // show content for tab, hide content for other tabs
+        // $("#halseyAboutLi").click(function(){
+        //     $("#halseyBathrooms").css('display', "none");
+        //     $("#halseyDiningImage").css('display', "none");
+        //     $("#halseyDiningText").css('display', "none");
+
+        //     $("#halseyAboutImage").css('display', "block");
+        //     $("#halseyAboutText").css('display', "initial");
+        // });
+        // $("#halseyBathroomsLi").click(function(){
+        //     $("#halseyAboutImage").css('display', "none");
+        //     $("#halseyAboutText").css('display', "none");
+        //     $("#halseyDiningImage").css('display', "none");
+        //     $("#halseyDiningText").css('display', "none");
+
+        //     $("#halseyBathrooms").css('display', "initial");
+        // });
+        // $("#halseyDiningLi").click(function(){
+        //     $("#halseyAboutImage").css('display', "none");
+        //     $("#halseyAboutText").css('display', "none");
+        //     $("#halseyBathrooms").css('display', "none");
+
+        //     //$("#halseyDiningImage > img").attr("src", allMarkersInfo[21].diningImage);
+        //     $("#halseyDiningImage").css('display', "block");
+        //     $("#halseyDiningText").css('display', "initial");
+
+        // });
+
+        // // behavior for when tabs are clicked on the popups
+        // // show content for tab, hide content for other tabs
+        // $("#harringtonAboutLi").click(function(){
+        //     $("#harringtonBathrooms").css('display', "none");
+
+        //     $("#harringtonAboutImage").css('display', "block");
+        //     $("#harringtonAboutText").css('display', "initial");
+        // });
+        // $("#harringtonBathroomsLi").click(function(){
+        //     $("#harringtonAboutImage").css('display', "none");
+        //     $("#harringtonAboutText").css('display', "none");
+
+        //     $("#harringtonBathrooms").css('display', "initial");
+        // });
+
+        // // behavior for when tabs are clicked on the popups
+        // // show content for tab, hide content for other tabs
+        // $("#heatingAboutLi").click(function(){
+        //     $("#heatingSustainability").css('display', "none");
+
+        //     $("#heatingAboutImage").css('display', "block");
+        //     $("#heatingAboutText").css('display', "initial");
+        // });
+        // $("#heatingSustainabilityLi").click(function(){
+        //     $("#heatingAboutImage").css('display', "none");
+        //     $("#heatingAboutText").css('display', "none");
+
+        //     $("#heatingSustainability").css('display', "initial");
+        // });
+
+        // // behavior for when tabs are clicked on the popups
+        // // show content for tab, hide content for other tabs
+        // $("#parkingAboutLi").click(function(){
+        //     $("#parkingRampParkingImage").css('display', "none");
+        //     $("#parkingRampParkingText").css('display', "none");
+
+        //     $("#parkingAboutImage").css('display', "block");
+        //     $("#parkingAboutText").css('display', "initial");
+        // });
+        // $("#parkingParkingLi").click(function(){
+        //     $("#parkingAboutImage").css('display', "none");
+        //     $("#parkingAboutText").css('display', "none");
+
+        //     //$("#parkingRampParkingImage> img").attr("src", allMarkersInfo[24].parkingImage);
+        //     $("#parkingRampParkingImage").css('display', "initial");
+        //     $("#parkingRampParkingText").css('display', "initial");
+        // });
+
+        // // behavior for when tabs are clicked on the popups
+        // // show content for tab, hide content for other tabs
+        // $("#horizonAboutLi").click(function(){
+        //     $("#horizonSustainability").css('display', "none");
+
+        //     $("#horizonAboutImage").css('display', "block");
+        //     $("#horizonAboutText").css('display', "initial");
+        // });
+        // $("#horizonSustainabilityLi").click(function(){
+        //     $("#horizonAboutImage").css('display', "none");
+        //     $("#horizonAboutText").css('display', "none");
+
+        //     $("#horizonSustainability").css('display', "initial");
+        // });
+
+        // // behavior for when tabs are clicked on the popups
+        // // show content for tab, hide content for other tabs
+        // $("#kolfAboutLi").click(function(){
+        //     $("#kolfBathrooms").css('display', "none");
+
+        //     $("#kolfAboutImage").css('display', "block");
+        //     $("#kolfAboutText").css('display', "initial");
+        // });
+        // $("#kolfBathroomsLi").click(function(){
+        //     $("#kolfAboutImage").css('display', "none");
+        //     $("#kolfAboutText").css('display', "none");
+
+        //     $("#kolfBathrooms").css('display', "initial");
+        // });
+
+        // // behavior for when tabs are clicked on the popups
+        // // show content for tab, hide content for other tabs
+        // $("#nursingAboutLi").click(function(){
+        //     $("#nursingBathrooms").css('display', "none");
+
+        //     $("#nursingAboutImage").css('display', "block");
+        //     $("#nursingAboutText").css('display', "initial");
+        // });
+        // $("#nursingBathroomsLi").click(function(){
+        //     $("#nursingAboutImage").css('display', "none");
+        //     $("#nursingAboutText").css('display', "none");
+
+        //     $("#nursingBathrooms").css('display', "initial");
+        // });
+
+        // // behavior for when tabs are clicked on the popups
+        // // show content for tab, hide content for other tabs
+        // $("#polkAboutLi").click(function(){
+        //     $("#polkTourVideo").css('display', "none");
+        //     $("#polkTourText").css('display', "none");
+
+        //     $("#polkAboutImage").css('display', "block");
+        //     $("#polkAboutText").css('display', "initial");
+        // });
+        // $("#polkTourLi").click(function(){
+        //     $("#polkAboutImage").css('display', "none");
+        //     $("#polkAboutText").css('display', "none");
+
+        //     $("#polkTourText").css('display', "initial");
+        //     $("#polkTourVideo").css('display', "initial");
+        // });
+
+        // // behavior for when tabs are clicked on the popups
+        // // show content for tab, hide content for other tabs
+        // $("#reeveAboutLi").click(function(){
+        //     $("#reeveTourVideo").css('display', "none");
+        //     $("#reeveTourText").css('display', "none");
+        //     $("#reeveSustainability").css('display', "none");
+        //     $("#reeveBathrooms").css('display', "none");
+        //     $("#reeveDiningImage").css('display', "none");
+        //     $("#reeveDiningText").css('display', "none");
+
+        //     $("#reeveAboutImage").css('display', "block");
+        //     $("#reeveAboutText").css('display', "initial");
+        // });
+        // $("#reeveTourLi").click(function(){
+        //     $("#reeveAboutImage").css('display', "none");
+        //     $("#reeveAboutText").css('display', "none");
+        //     $("#reeveSustainability").css('display', "none");
+        //     $("#reeveBathrooms").css('display', "none");
+        //     $("#reeveDiningImage").css('display', "none");
+        //     $("#reeveDiningText").css('display', "none");
+
+        //     $("#reeveTourText").css('display', "initial");
+        //     $("#reeveTourVideo").css('display', "initial");
+        // });
+        // $("#reeveSustainabilityLi").click(function(){
+        //     $("#reeveAboutImage").css('display', "none");
+        //     $("#reeveAboutText").css('display', "none");
+        //     $("#reeveTourVideo").css('display', "none");
+        //     $("#reeveTourText").css('display', "none");
+        //     $("#reeveBathrooms").css('display', "none");
+        //     $("#reeveDiningImage").css('display', "none");
+        //     $("#reeveDiningText").css('display', "none");
+
+        //     $("#reeveSustainability").css('display', "initial");
+        // });
+        // $("#reeveBathroomsLi").click(function(){
+        //     $("#reeveAboutImage").css('display', "none");
+        //     $("#reeveAboutText").css('display', "none");
+        //     $("#reeveTourVideo").css('display', "none");
+        //     $("#reeveTourText").css('display', "none");
+        //     $("#reeveSustainability").css('display', "none");
+        //     $("#reeveDiningImage").css('display', "none");
+        //     $("#reeveDiningText").css('display', "none");
+
+        //     $("#reeveBathrooms").css('display', "initial");
+        // });
+        // $("#reeveDiningLi").click(function(){
+        //     $("#reeveAboutImage").css('display', "none");
+        //     $("#reeveAboutText").css('display', "none");
+        //     $("#reeveTourVideo").css('display', "none");
+        //     $("#reeveTourText").css('display', "none");
+        //     $("#reeveSustainability").css('display', "none");
+        //     $("#reeveBathrooms").css('display', "none");
+
+        //     //$("#reeveDiningImage > img").attr("src", allMarkersInfo[34].diningImage);
+        //     $("#reeveDiningImage").css('display', "block");
+        //     $("#reeveDiningText").css('display', "initial");
+        // });
+
+        // // behavior for when tabs are clicked on the popups
+        // // show content for tab, hide content for other tabs
+        // $("#sageAboutLi").click(function(){
+        //     $("#sageTourVideo").css('display', "none");
+        //     $("#sageTourText").css('display', "none");
+        //     $("#sageSustainability").css('display', "none");
+        //     $("#sageBathrooms").css('display', "none");
+        //     $("#sageDiningImage").css('display', "none");
+        //     $("#sageDiningText").css('display', "none");
+
+        //     $("#sageAboutImage").css('display', "block");
+        //     $("#sageAboutText").css('display', "initial");
+        // });
+        // $("#sageTourLi").click(function(){
+        //      $("#sageAboutImage").css('display', "none");
+        //     $("#sageAboutText").css('display', "none");
+        //     $("#sageSustainability").css('display', "none");
+        //     $("#sageBathrooms").css('display', "none");
+        //     $("#sageDiningImage").css('display', "none");
+        //     $("#sageDiningText").css('display', "none");
+
+        //     $("#sageTourText").css('display', "initial");
+        //     $("#sageTourVideo").css('display', "initial");
+        // });
+        // $("#sageSustainabilityLi").click(function(){
+        //     $("#sageAboutImage").css('display', "none");
+        //     $("#sageAboutText").css('display', "none");
+        //     $("#sageTourVideo").css('display', "none");
+        //     $("#sageTourText").css('display', "none");
+        //     $("#sageBathrooms").css('display', "none");
+        //     $("#sageDiningImage").css('display', "none");
+        //     $("#sageDiningText").css('display', "none");
+
+        //     $("#sageSustainability").css('display', "initial");
+        // });
+        // $("#sageBathroomsLi").click(function(){
+        //     $("#sageAboutImage").css('display', "none");
+        //     $("#sageAboutText").css('display', "none");
+        //     $("#sageTourVideo").css('display', "none");
+        //     $("#sageTourText").css('display', "none");
+        //     $("#sageSustainability").css('display', "none");
+        //     $("#sageDiningImage").css('display', "none");
+        //     $("#sageDiningText").css('display', "none");
+
+        //     $("#sageBathrooms").css('display', "initial");
+        // });
+        // $("#sageDiningLi").click(function(){
+        //     $("#sageAboutImage").css('display', "none");
+        //     $("#sageAboutText").css('display', "none");
+        //     $("#sageTourVideo").css('display', "none");
+        //     $("#sageTourText").css('display', "none");
+        //     $("#sageSustainability").css('display', "none");
+        //     $("#sageBathrooms").css('display', "none");
+
+        //     //$("#sageDiningImage > img").attr("src", allMarkersInfo[35].diningImage);
+        //     $("#sageDiningImage").css('display', "block");
+        //     $("#sageDiningText").css('display', "initial");
+        // });
+
+        // // tab clicking/content displaying
+        // $("#scottAboutLi").click(function(){
+        //     $("#scottDiningImage").css('display', "none");
+        //     $("#scottDiningText").css('display', "none");
+
+        //     $("#scottAboutImage").css('display', "block");
+        //     $("#scottAboutText").css('display', "initial");
+        // });
+        // $("#scottDiningLi").click(function(){
+        //     $("#scottAboutImage").css('display', "none");
+        //     $("#scottAboutText").css('display', "none");
+
+        //     //$("#scottDiningImage > img").attr("src", allMarkersInfo[36].diningImage);
+        //     $("#scottDiningImage").css('display', "block");
+        //     $("#scottDiningText").css('display', "initial");
+        // });
+
+        // // behavior for when tabs are clicked on the popups
+        // // show content for tab, hide content for other tabs
+        // $("#recreationAboutLi").click(function(){
+        //     $("#recreationSustainability").css('display', "none");
+        //     $("#recreationBathrooms").css('display', "none");
+
+        //     $("#recreationAboutImage").css('display', "block");
+        //     $("#recreationAboutText").css('display', "initial");
+        // });
+        // $("#recreationSustainabilityLi").click(function(){
+        //     $("#recreationAboutImage").css('display', "none");
+        //     $("#recreationAboutText").css('display', "none");
+        //     $("#recreationBathrooms").css('display', "none");
+
+        //     $("#recreationSustainability").css('display', "initial");
+        // });
+        // $("#recreationBathroomsLi").click(function(){
+        //     $("#recreationAboutImage").css('display', "none");
+        //     $("#recreationAboutText").css('display', "none");
+        //     $("#recreationSustainability").css('display', "none");
+
+        //     $("#recreationBathrooms").css('display', "initial");
+        // });
+
+        // // behavior for when tabs are clicked on the popups
+        // // show content for tab, hide content for other tabs
+        // $("#successAboutLi").click(function(){
+        //     $("#successSustainability").css('display', "none");
+        //     $("#successBathrooms").css('display', "none");
+        //     $("#successTourText").css('display', "none");
+        //     $("#successTourVideo").css('display', "none");
+
+        //     $("#successAboutImage").css('display', "block");
+        //     $("#successAboutText").css('display', "initial");
+        // });
+        // $("#successTourLi").click(function(){
+        //     $("#successAboutImage").css('display', "none");
+        //     $("#successAboutText").css('display', "none");
+        //     $("#successBathrooms").css('display', "none");
+        //     $("#successSustainability").css('display', "none");
+
+        //     $("#successTourVideo").css('display', "initial");
+        //     $("#successTourText").css('display', "initial");
+        // });
+        // $("#successSustainabilityLi").click(function(){
+        //     $("#successAboutImage").css('display', "none");
+        //     $("#successAboutText").css('display', "none");
+        //     $("#successBathrooms").css('display', "none");
+        //     $("#successTourText").css('display', "none");
+        //     $("#successTourVideo").css('display', "none");
+
+        //     $("#successSustainability").css('display', "initial");
+        // });
+        // $("#successBathroomsLi").click(function(){
+        //     $("#successAboutImage").css('display', "none");
+        //     $("#successAboutText").css('display', "none");
+        //     $("#successSustainability").css('display', "none");
+        //     $("#successTourText").css('display', "none");
+        //     $("#successTourVideo").css('display', "none");
+
+        //     $("#successBathrooms").css('display', "initial");
+        // });
+
+        // // behavior for when tabs are clicked on the popups
+        // // show content for tab, hide content for other tabs
+        // $("#swartAboutLi").click(function(){
+        //     $("#swartBathrooms").css('display', "none");
+
+        //     $("#swartAboutImage").css('display', "block");
+        //     $("#swartAboutText").css('display', "initial");
+        // });
+        // $("#swartBathroomsLi").click(function(){
+        //     $("#swartAboutImage").css('display', "none");
+        //     $("#swartAboutText").css('display', "none");
+
+        //     $("#swartBathrooms").css('display', "initial");
+        // });
+
+        // // behavior for when tabs are clicked on the popups
+        // // show content for tab, hide content for other tabs
+        // $("#taylorAboutLi").click(function(){
+        //     $("#taylorSustainability").css('display', "none");
+
+        //     $("#taylorAboutImage").css('display', "block");
+        //     $("#taylorAboutText").css('display', "initial");
+        // });
+        // $("#taylorSustainabilityLi").click(function(){
+        //     $("#taylorAboutImage").css('display', "none");
+        //     $("#taylorAboutText").css('display', "none");
+
+        //     $("#taylorSustainability").css('display', "initial");
+        // });
+
+        // // behavior for when tabs are clicked on the popups
+        // // show content for tab, hide content for other tabs
+        // $("#titanAboutLi").click(function(){
+        //     $("#titanSustainability").css('display', "none");
+
+        //     $("#titanAboutImage").css('display', "block");
+        //     $("#titanAboutText").css('display', "initial");
+        // });
+        // $("#titanSustainabilityLi").click(function(){
+        //     $("#titanAboutImage").css('display', "none");
+        //     $("#titanAboutText").css('display', "none");
+
+        //     $("#titanSustainability").css('display', "initial");
+        // });
+
+        // // behavior for when tabs are clicked on the popups
+        // // show content for tab, hide content for other tabs
+        // $("#policeAboutLi").click(function(){
+        //     $("#policeBathrooms").css('display', "none");
+
+        //     $("#policeAboutImage").css('display', "block");
+        //     $("#policeAboutText").css('display', "initial");
+        // });
+        // $("#policeBathroomsLi").click(function(){
+        //     $("#policeAboutImage").css('display', "none");
+        //     $("#policeAboutText").css('display', "none");
+
+        //     $("#policeBathrooms").css('display', "initial");
+        // });
 
     //functions for checkboxes
     // naming conventions for checkboxes: ex. "buildingsLabel" "name + Label" is the element that has the class "is-checked" is added to
