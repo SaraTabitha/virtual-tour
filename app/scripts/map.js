@@ -1427,24 +1427,17 @@ function initMap() {
                     
                     // HAS TO COME BEFORE UNCHECK IS TRIGGERED
                     closeAllHover();
-
-                    triggerUncheck("buildings");
-                    triggerUncheck("parking");
-                    triggerUncheck("accEnt");
-                    triggerUncheck("accPar");
-                    triggerUncheck("emergency");
-                    triggerUncheck("sust");
-                    triggerUncheck("gender");
+                    for (gg = 0; gg < 7; gg++){
+                        triggerUncheck(checkboxes[gg]);
+                    }
+                    
                 }else{
                     //if selectall is checked, all others should be checked
                     //  check: checks checkbox and sets markers 
-                    triggerCheck("buildings");
-                    triggerCheck("parking");
-                    triggerCheck("accEnt");
-                    triggerCheck("accPar");
-                    triggerCheck("emergency");
-                    triggerCheck("sust");
-                    triggerCheck("gender");
+                    for (gg = 0; gg < 7; gg++){
+                        triggerCheck(checkboxes[gg]);
+                    }
+                    
                 }
         });
 
@@ -1453,21 +1446,15 @@ function initMap() {
                 if( !$("#selectAllTwo").hasClass("is-checked") ){
                     // HAS TO COME BEFORE UNCHECK IS TRIGGERED
                     closeAllHover();
-                    triggerUncheck("accaF");
-                    triggerUncheck("ath");
-                    triggerUncheck("accS");
-                    triggerUncheck("campS");
-                    triggerUncheck("resH");
-                    triggerUncheck("dining");
-                    triggerUncheck("stuR");
+                    for (gg = 7; gg < 14; gg++){
+                        triggerUncheck(checkboxes[gg]);
+                    }
+                    
                 } else {
-                    triggerCheck("accaF");
-                    triggerCheck("ath");
-                    triggerCheck("accS");
-                    triggerCheck("campS");
-                    triggerCheck("resH");
-                    triggerCheck("dining");
-                    triggerCheck("stuR");
+                    for (gg = 7; gg < 14; gg++){
+                        triggerCheck(checkboxes[gg]);
+                    }
+                    
                 }
   
          });
