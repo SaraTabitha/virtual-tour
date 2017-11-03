@@ -1068,21 +1068,9 @@ function initMap() {
                 });
             }
         });
-        // behavior for when tabs are clicked on the popups
-        // show content for tab, hide content for other tabs
-        // function tabs(name, tab, openClose){
-        //     if(openClose === "open"){
-        //         if (tab === "About"){
-        //             $("#" + name + "AboutImage").css('display', "block");
-        //             $("#" + name + "AboutText").css('display', "initial");
-        //         }
-        //     }
-        //     else if (openClose === "close"){
-
-        //     }
-        // }
 
         //array for each building with multiple tabs; true = it has that tab, false = it does not have that tab
+        //(tabs for the popups)
         var buildingsTabs = [
             // 0 albee
             {   name: "albee",
@@ -1256,126 +1244,149 @@ function initMap() {
      //primarily should only be needed for the selectall functions
   function triggerCheck(name){
     // fancy schmancy method Material Design already gives for checking le checkbox
+    //(sets class on checkbox)
     document.getElementById(name + "Label").MaterialCheckbox.check();
     checkboxMarkersandCards(name);
   }
 
   function triggerUncheck(name){
     // fancy schmancy method Material Design already gives for unchecking le checkbox
+    //(removes class on checkbox)
     document.getElementById(name + "Label").MaterialCheckbox.uncheck();
     uncheckMarkersandCards(name);
   }
+  var checkboxes = [
+      //0
+      "buildings",
+      //1
+      "parking",
+      //2
+      "accEnt",
+      //3
+      "accPar",
+      //4
+      "emergency",
+      //5
+      "sust",
+      //6
+      "gender",
+      //7
+      "accaF",
+      //8
+      "ath",
+      //9
+      "accS",
+      //10
+      "campS",
+      //11
+      "resH",
+      //12
+      "dining",
+      //13
+      "stuR"
+  ]
   //the following functions handle setting/removing markers and hover cards when checkboxes are checked or unchecked
 
   //checks if name corresponds with specific ids and sets the buildings & their markers accordingly
   function checkboxMarkersandCards(name){
-        if(name === "buildings"){
-            // if buildings is checked, set all buildings markers
-            setBuilding();
-        } 
-        else if (name === "parking"){
-            setParkingLots();
-        }
-        else if (name === "accEnt"){
-            setAccEnt();
-        }
-        else if (name === "accPar"){
-            setAccPar();
-        }
-        else if (name === "emergency"){
-            setEmergencyPhones();
-        }
-        else if (name === "sust"){
-            setSust();
-        }
-        else if (name === "gender"){
-            setGender();
-        }
-        else if (name === "accaF"){
-            setAccaF();
-        }
-        else if (name === "ath"){
-            setAth();
-        }
-        else if (name === "accS"){
-            setAccaS();
-        }
-        else if (name === "campS"){
-            setCampS();
-        }
-        else if (name === "resH"){
-            setResH();
-        }
-        else if (name === "dining"){
-            setDining();
-        }
-        else if (name === "stuR"){
-            setStuR();
-        }
-    }
-    //checks if name corresponds with specific ids and sets the buildings & their markers accordingly
-   function uncheckMarkersandCards(name){
-        if (name === "buildings"){
-            // removes hoverpopups (not markers, the white popups after you click markers)
-            // must come before markers are removed
-            closeAllHover();
-            // removes building markers
-            removeBuilding();
-        } 
-        else if (name === "parking"){
-            closeAllHover();
-            removeParkingLots();
-        }
-        else if (name === "accEnt"){
-           closeAllHover();
-            removeAccEnt();
-        }
-        else if (name === "accPar"){
-            closeAllHover();
-            removeAccPar();
-         }
-         else if (name === "emergency"){
-            removeEmergencyPhones();
-            // emergency phones do not have any hovercards attached to their markers atm
-         }
-         else if (name === "sust"){
-            closeAllHover();
-            removeSust();
-        }
-        else if (name === "gender"){
-            closeAllHover();
-            removeGender();
-        }
-        else if (name === "accaF"){
-            closeAllHover();
-            removeAccaF();
-        }
-        else if (name === "ath"){
-            closeAllHover();
-            removeAth();
-        }
-        else if (name === "accS"){
-            closeAllHover();
-            removeAccaS();
-        }
-        else if (name === "campS"){
-            closeAllHover();
-            removeCampS();
-        }
-        else if (name === "resH"){
-            closeAllHover();
-            removeResH();
-        }
-        else if (name === "dining"){
-            closeAllHover();
-            removeDining();
-        }
-        else if (name === "stuR"){
-            closeAllHover();
-            removeStuR();
+      switch(name){
+          case "buildings": setBuilding();
+                            break;
+          case "parking": setParkingLots();
+                            break;
+          case "accEnt": setAccEnt();
+                            break;
+          case "accPar": setAccPar();
+                            break;
+          case "emergency": setEmergencyPhones();
+                            break;
+          case "sust": setSust();
+                            break;
+          case "gender": setGender();
+                            break;
+          case "accaF": setAccaF();
+                            break;
+          case "ath": setAth();
+                            break;
+          case "accS": setAccaS();
+                            break;
+          case "campS": setCampS();
+                            break;
+          case "resH":  setResH();
+                             break;
+          case "dining": setDining();
+                             break;
+          case "stuR": setStuR();
+                             break;
         }
         
     }
+    //checks if name corresponds with specific ids and sets the buildings & their markers accordingly
+   function uncheckMarkersandCards(name){
+    switch(name){
+        case "buildings":
+                        // removes hoverpopups (not markers, the white popups after you click markers)
+                        // must come before markers are removed
+                        closeAllHover();
+                        // removes building markers
+                        removeBuilding();
+                        break;
+        case "parking": 
+                        closeAllHover();
+                        removeParkingLots();
+                        break;
+        case "accEnt": 
+                        closeAllHover();
+                        removeAccEnt();
+                        break;
+        case "accPar": 
+                        closeAllHover();
+                        removeAccPar();
+                        break;
+        case "emergency": 
+                        removeEmergencyPhones();
+                        // emergency phones do not have any hovercards attached to their markers atm
+                        break;
+        case "sust": 
+                        closeAllHover();
+                        removeSust();
+                        break;
+        case "gender": closeAllHover();
+                       removeGender();
+                       break;
+        case "accaF": 
+                        closeAllHover();
+                        removeAccaF();
+                        break;
+        case "ath": 
+                        closeAllHover();
+                        removeAth();
+                        break;
+        case "accS":
+                        closeAllHover();
+                        removeAccaS();
+                        break;
+        case "campS": 
+                        closeAllHover();
+                        removeCampS();
+                        break;
+        case "resH":  
+                        closeAllHover();
+                        removeResH();
+                        break;
+        case "dining": 
+                        closeAllHover();
+                        removeDining();
+                        break;
+        case "stuR": 
+                        closeAllHover();
+                        removeStuR();
+                        break;
+      
+        }
+        
+    }
+
     // watches for change event on checkbox, checks if it has class is-checked and then sets the markers and hover cards accordingly
     function checkIfChecked(name){
         // debugger;
@@ -1401,49 +1412,14 @@ function initMap() {
     // checks if the checkbox is checked or not and then sets markers/hover cards accordingly
     // to work: buildings needs to be added to functions: "checkboxMarkersandCards" and "uncheckMarkersandCards"
     // selector for .change function should use the id for the input element 
-   $("#buildings").change(function(){
-    // sets up parameter as string
-       checkIfChecked("buildings");
-   });
-   $("#parking").change(function(){
-       checkIfChecked("parking");
-   });
-   $("#accEnt").change(function(){
-        checkIfChecked("accEnt");
-   });
-   $("#accPar").change(function(){
-        checkIfChecked( "accPar");
-   });
-   $("#emergency").change(function(){
-        checkIfChecked("emergency");
-   });
-   $("#sust").change(function(){
-        checkIfChecked("sust");
-   });
-   $("#gender").change(function(){
-        checkIfChecked("gender");
-   });
-   $("#accaF").change(function(){
-        checkIfChecked("accaF");
+    checkboxes.forEach(function(thisOne){
+        var index = checkboxes.indexOf(thisOne);
+        $("#" + checkboxes[index]).change(function(){
+             // sets up parameter as string
+             checkIfChecked(checkboxes[index]);
+        })
     });
-    $("#ath").change(function(){
-        checkIfChecked("ath");
-     });
-     $("#accS").change(function(){
-        checkIfChecked("accS");
-     });
-     $("#campS").change(function(){
-        checkIfChecked("campS");
-     });
-     $("#resH").change(function(){
-        checkIfChecked("resH");
-     });
-     $("#dining").change(function(){
-        checkIfChecked("dining");
-     });
-     $("#stuR").change(function(){
-        checkIfChecked("stuR");
-     });
+   
 
 
         $("#selectAllOne").change(function(){
@@ -1517,6 +1493,7 @@ function initMap() {
         
             }
          });
+
          //function for closing all of the popups (making them invisible)
         function closeAllPopup(){
           //debugger;
@@ -1702,5 +1679,3 @@ function initMap() {
         //
     
 }
-
- 
