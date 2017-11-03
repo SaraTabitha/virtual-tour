@@ -1419,8 +1419,6 @@ function initMap() {
              checkIfChecked(checkboxes[index]);
         })
     });
-   
-
 
         $("#selectAllOne").change(function(){
                 if( !$("#selectAllOne").hasClass("is-checked") ){
@@ -1539,6 +1537,7 @@ function initMap() {
                     clickResults(customId);
                     // increase n until it matches the number of listItems that are present
                     } while (n <= listItems);
+                    //array of the ids that are generated above for the search result list items
                     var possibleIds = [
                         //0 albee
                         "albeehall",
@@ -1645,8 +1644,7 @@ function initMap() {
                           //debugger;
                          for(bb = 0; bb < 45; bb++){
                              if (id == possibleIds[bb]){
-                                  markerOpenClose(allMarkersInfo[bb].shortHand, bb);
-                                $("#" + allMarkersInfo[bb].shortHand  + "Link").trigger("click");
+                                popupOpen(allMarkersInfo[bb].shortHand);
                             }
                           }
                      });
