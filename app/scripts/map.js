@@ -1323,67 +1323,68 @@ function initMap() {
     }
     //checks if name corresponds with specific ids and sets the buildings & their markers accordingly
    function uncheckMarkersandCards(name){
-    switch(name){
-        case "buildings":
-                        // removes hoverpopups (not markers, the white popups after you click markers)
-                        // must come before markers are removed
-                        closeAllHover();
-                        // removes building markers
-                        removeBuilding();
-                        break;
-        case "parking": 
-                        closeAllHover();
-                        removeParkingLots();
-                        break;
-        case "accEnt": 
-                        closeAllHover();
-                        removeAccEnt();
-                        break;
-        case "accPar": 
-                        closeAllHover();
-                        removeAccPar();
-                        break;
-        case "emergency": 
-                        removeEmergencyPhones();
-                        // emergency phones do not have any hovercards attached to their markers atm
-                        break;
-        case "sust": 
-                        closeAllHover();
-                        removeSust();
-                        break;
-        case "gender": closeAllHover();
-                       removeGender();
-                       break;
-        case "accaF": 
-                        closeAllHover();
-                        removeAccaF();
-                        break;
-        case "ath": 
-                        closeAllHover();
-                        removeAth();
-                        break;
-        case "accS":
-                        closeAllHover();
-                        removeAccaS();
-                        break;
-        case "campS": 
-                        closeAllHover();
-                        removeCampS();
-                        break;
-        case "resH":  
-                        closeAllHover();
-                        removeResH();
-                        break;
-        case "dining": 
-                        closeAllHover();
-                        removeDining();
-                        break;
-        case "stuR": 
-                        closeAllHover();
-                        removeStuR();
-                        break;
-      
-        }
+       
+        switch(name){
+            case "buildings":
+                            // removes hoverpopups (not markers, the white popups after you click markers)
+                            // must come before markers are removed
+                            closeAllHover();
+                            // removes building markers
+                            removeBuilding();
+                            break;
+            case "parking": 
+                            closeAllHover();
+                            removeParkingLots();
+                            break;
+            case "accEnt": 
+                            closeAllHover();
+                            removeAccEnt();
+                            break;
+            case "accPar": 
+                            closeAllHover();
+                            removeAccPar();
+                            break;
+            case "emergency": 
+                            removeEmergencyPhones();
+                            // emergency phones do not have any hovercards attached to their markers atm
+                            break;
+            case "sust": 
+                            closeAllHover();
+                            removeSust();
+                            break;
+            case "gender": closeAllHover();
+                           removeGender();
+                           break;
+            case "accaF": 
+                            closeAllHover();
+                            removeAccaF();
+                            break;
+            case "ath": 
+                            closeAllHover();
+                            removeAth();
+                            break;
+            case "accS":
+                            closeAllHover();
+                            removeAccaS();
+                            break;
+            case "campS": 
+                            closeAllHover();
+                            removeCampS();
+                            break;
+            case "resH":  
+                            closeAllHover();
+                            removeResH();
+                            break;
+            case "dining": 
+                            closeAllHover();
+                            removeDining();
+                            break;
+            case "stuR": 
+                            closeAllHover();
+                            removeStuR();
+                            break;
+        
+            }
         
     }
 
@@ -1396,6 +1397,17 @@ function initMap() {
              } else {
                 //  if checkbox is unchecked, remove markers and hover cards
                 uncheckMarkersandCards(name);
+                //when a marker is unchecked, go through and look at the checkboxes, if they are checked
+                //reset their markers 
+                //for ex. if buildings is unchecked it removes the markers for buildings but it may also remove
+                //markers that overlap with that category and another checkbox's grouping of markers 
+                for(ff = 0; ff < 14; ff++){
+                    //make sure that the one being checked is not the checkbox being unchecked (otherwise it will still see it as checked
+                    // and reset the markers i.e. never remove the markers for that checkbox)
+                    if((checkboxes[ff] != name) && ($("#" + checkboxes[ff] + "Label").hasClass("is-checked"))){
+                        checkboxMarkersandCards(checkboxes[ff]);
+                    }
+                }
              }
         
     }
@@ -1459,7 +1471,7 @@ function initMap() {
   
          });
 
-         //start of code for search that needs to interact with the infoWindows and Popups here in map.jsz
+         //start of code for search that needs to interact with the infoWindows and Popups here in map.js
          $( "#searchInput" ).keyup(function() {
             //takes the length of the value of the string in
             // the search and returns a number
