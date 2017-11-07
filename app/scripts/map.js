@@ -754,6 +754,7 @@ function initMap() {
             allMarkers[16].setIcon(maroonMarker);
             allMarkers[19].setIcon(maroonMarker);
             allMarkers[21].setIcon(maroonMarker);
+            allMarkers[22].setIcon(maroonMarker);
             allMarkers[26].setIcon(maroonMarker);
             allMarkers[29].setIcon(maroonMarker);
             allMarkers[32].setIcon(maroonMarker);
