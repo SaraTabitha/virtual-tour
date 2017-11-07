@@ -109,6 +109,129 @@ a.link{
 .mdl-checkbox__box-outline{
   border: 2px solid #666766;
 }
+/* checkbox color changes to match their marker colors */
+/* .is-checked (!!!) very important to add to selector otherwise the checkbox will always look checked */
+
+/* selectAll */
+/* border outline */
+#selectAllOne.is-checked > span.mdl-checkbox__box-outline{
+  border: #d0cece;
+  }
+  
+  /* checkbox inner color */
+  #selectAllOne.is-checked > span.mdl-checkbox__box-outline > span{
+    background: #d0cece;
+  }
+  /* checkbox ripple effect color */
+  #selectAllOne > span.mdl-checkbox__ripple-container.mdl-js-ripple-effect.mdl-ripple--center > span{
+    background: #d0cece;
+  }
+
+/* buildings */
+/* border outline */
+#buildingsLabel.is-checked > span.mdl-checkbox__box-outline{
+border: #fccd32;
+}
+
+/* checkbox inner color */
+#buildingsLabel.is-checked > span.mdl-checkbox__box-outline > span{
+  background: #fccd32;
+}
+/* checkbox ripple effect color */
+#buildingsLabel > span.mdl-checkbox__ripple-container.mdl-js-ripple-effect.mdl-ripple--center > span{
+  background: #fccd32;
+}
+
+/* parking */
+/* border outline */
+#parkingLabel.is-checked > span.mdl-checkbox__box-outline{
+  border: #ef92ac;
+}
+  
+  /* checkbox inner color */
+#parkingLabel.is-checked > span.mdl-checkbox__box-outline > span{
+    background: #ef92ac;
+}
+  /* checkbox ripple effect color */
+#parkingLabel > span.mdl-checkbox__ripple-container.mdl-js-ripple-effect.mdl-ripple--center > span{
+    background: #ef92ac;
+}
+
+/* accEnt */
+/* border outline */
+#accEntLabel.is-checked > span.mdl-checkbox__box-outline{
+  border: #eb212e;
+}
+  
+  /* checkbox inner color */
+#accEntLabel.is-checked > span.mdl-checkbox__box-outline > span{
+    background: #eb212e;
+}
+  /* checkbox ripple effect color */
+#accEntLabel > span.mdl-checkbox__ripple-container.mdl-js-ripple-effect.mdl-ripple--center > span{
+    background: #eb212e;
+}
+
+/* accPar */
+/* border outline */
+#accParLabel.is-checked > span.mdl-checkbox__box-outline{
+  border: #00a9a2;
+}
+  
+  /* checkbox inner color */
+#accParLabel.is-checked > span.mdl-checkbox__box-outline > span{
+    background: #00a9a2;
+}
+  /* checkbox ripple effect color */
+#accParLabel > span.mdl-checkbox__ripple-container.mdl-js-ripple-effect.mdl-ripple--center > span{
+    background: #00a9a2;
+}
+
+/* emergency phones */
+/* border outline */
+#emergencyLabel.is-checked > span.mdl-checkbox__box-outline{
+  border: #0085c8;
+}
+  
+  /* checkbox inner color */
+#emergencyLabel.is-checked > span.mdl-checkbox__box-outline > span{
+    background: #0085c8;
+}
+  /* checkbox ripple effect color */
+#emergencyLabel > span.mdl-checkbox__ripple-container.mdl-js-ripple-effect.mdl-ripple--center > span{
+    background: #0085c8;
+}
+
+/* sust */
+/* border outline */
+#sustLabel.is-checked > span.mdl-checkbox__box-outline{
+  border: #b3d143;
+}
+  
+  /* checkbox inner color */
+#sustLabel.is-checked > span.mdl-checkbox__box-outline > span{
+    background: #b3d143;
+}
+  /* checkbox ripple effect color */
+#sustLabel > span.mdl-checkbox__ripple-container.mdl-js-ripple-effect.mdl-ripple--center > span{
+    background: #b3d143;
+}
+
+/* gender */
+/* border outline */
+#genderLabel.is-checked > span.mdl-checkbox__box-outline{
+  border: #c1a3cb;
+}
+  
+  /* checkbox inner color */
+#genderLabel.is-checked > span.mdl-checkbox__box-outline > span{
+    background: #c1a3cb;
+}
+  /* checkbox ripple effect color */
+#genderLabel > span.mdl-checkbox__ripple-container.mdl-js-ripple-effect.mdl-ripple--center > span{
+    background: #c1a3cb;
+}
+
 /*repositioning the text for the checkbox lines*/
 span.check{
   position: relative;
