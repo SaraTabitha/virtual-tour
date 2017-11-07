@@ -1300,10 +1300,9 @@ ul#popupNav li:hover{
       left: -14% !important;
     }
     #searchInput{
-      visibility: hidden;
-    }
-    .searchInputOpen{
       visibility: visible !important;
+      width: 50px;
+      /* visibility: hidden; */
     }
     #searchResults{
     max-height: 200px;

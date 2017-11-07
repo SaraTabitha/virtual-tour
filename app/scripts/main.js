@@ -1,6 +1,6 @@
 
 // Author: Sara Tabitha
-// Date: 6/2017
+// Date: 06/2017
 // Description: this file handles all click functions for the menu, as well as changing classes for
 // the site menu to change between desktop and mobile view, and a fix for the opening of drawers for the
 // 360 tour options
@@ -195,34 +195,6 @@ $("#dempseyStart").click(function(){
         $("#stuRCard").hide();
     }
 
-    //searchfield
-
-    $("#searchIcon").click(function(){
-
-      // checking and using if/else prevents the click function
-      //  from having issues with the is-focused class
-      // toggling on/off with material design
-      var check = $("#mobileSearch").hasClass("mobileSearchOpen");
-      if(check === true){
-        $("#mobileSearch").removeClass("is-focused");
-        $("#searchResults").css("visibility","hidden");
-        $(".drawerContentsAdjust").css("top", "0px");
-        $("#mobileSearch").removeClass("mobileSearchOpen");
-        // console.log("I am true");
-      }
-      else if (check === false){
-        // console.log("I am false");
-      $("#mobileSearch").addClass("is-focused");
-      $("#mobileSearch").addClass("mobileSearchOpen");
-
-      $("#searchResults").css("visibility","visibile");
-      }
-      // needs to be: if closed->empty val
-      $("#searchInput").val("");
-      $("#searchInput").toggleClass("searchInputOpen");
-      // $("#searchResults").toggleClass("searchResultsOpen");
-
-    });
 
     // mobile
     // mobile nav opens on menu button click
