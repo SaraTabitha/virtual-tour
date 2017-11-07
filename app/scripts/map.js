@@ -1322,6 +1322,19 @@ function initMap() {
         }
         
     }
+    function catchMarkers(name){
+        //when a marker is unchecked, go through and look at the checkboxes, if they are checked
+                //reset their markers 
+                //for ex. if buildings is unchecked it removes the markers for buildings but it may also remove
+                //markers that overlap with that category and another checkbox's grouping of markers 
+                for(ff = 0; ff < 14; ff++){
+                    //make sure that the one being checked is not the checkbox being unchecked (otherwise it will still see it as checked
+                    // and reset the markers i.e. never remove the markers for that checkbox)
+                    if((checkboxes[ff] != name) && ($("#" + checkboxes[ff] + "Label").hasClass("is-checked"))){
+                        checkboxMarkersandCards(checkboxes[ff]);
+                    }
+                }
+    }
     //checks if name corresponds with specific ids and sets the buildings & their markers accordingly
    function uncheckMarkersandCards(name){
        
@@ -1386,9 +1399,10 @@ function initMap() {
                             break;
         
             }
-        
+            catchMarkers(name);
     }
 
+    
     // watches for change event on checkbox, checks if it has class is-checked and then sets the markers and hover cards accordingly
     function checkIfChecked(name){
         // debugger;
@@ -1398,17 +1412,7 @@ function initMap() {
              } else {
                 //  if checkbox is unchecked, remove markers and hover cards
                 uncheckMarkersandCards(name);
-                //when a marker is unchecked, go through and look at the checkboxes, if they are checked
-                //reset their markers 
-                //for ex. if buildings is unchecked it removes the markers for buildings but it may also remove
-                //markers that overlap with that category and another checkbox's grouping of markers 
-                for(ff = 0; ff < 14; ff++){
-                    //make sure that the one being checked is not the checkbox being unchecked (otherwise it will still see it as checked
-                    // and reset the markers i.e. never remove the markers for that checkbox)
-                    if((checkboxes[ff] != name) && ($("#" + checkboxes[ff] + "Label").hasClass("is-checked"))){
-                        checkboxMarkersandCards(checkboxes[ff]);
-                    }
-                }
+                
              }
         
     }
@@ -1440,6 +1444,7 @@ function initMap() {
                     
                     // HAS TO COME BEFORE UNCHECK IS TRIGGERED
                     closeAllHover();
+                    catchMarkers(name);
                     for (gg = 0; gg < 7; gg++){
                         triggerUncheck(checkboxes[gg]);
                     }
@@ -1459,6 +1464,7 @@ function initMap() {
                 if( !$("#selectAllTwo").hasClass("is-checked") ){
                     // HAS TO COME BEFORE UNCHECK IS TRIGGERED
                     closeAllHover();
+                    
                     for (gg = 7; gg < 14; gg++){
                         triggerUncheck(checkboxes[gg]);
                     }
