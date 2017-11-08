@@ -461,6 +461,24 @@ var mobile = function(){
         // height issue with the tour drop downs
         $("#drawerContents").css("height", "auto");
 
+        //on mobile: if the search is being interacted with and there are more than 3 characters typed: only have the 
+        // search results visible when the search is being interacted with
+        // (people wanted the search to close when they selected something to look at, but then open back up to the search they were doing when they 
+        // clicked back on the search line)
+        $("#mobileSearch").click(function(){
+            var characters = $("#searchInput").val().length;
+
+            if (characters >= 3){
+                if($("#mobileSearch").hasClass("is-focused") === true){
+                    $("#searchResults").css("visibility","visible" );
+                 }
+                 else{
+                    $("#searchResults").css("visibility", "hidden");
+                 }
+            }
+             
+          });
+
 };
 
 

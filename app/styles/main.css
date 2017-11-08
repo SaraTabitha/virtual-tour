@@ -1300,7 +1300,7 @@ ul#popupNav li:hover{
       left: -14% !important;
     }
     #searchInput{
-      visibility: visible !important;
+      visibility: visible ;
       width: 50px;
       /* visibility: hidden; */
     }

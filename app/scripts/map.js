@@ -1487,16 +1487,19 @@ function initMap() {
             // console.log("# of characters in search:" + characters);
 
             //if someone types it opens the search but does not run a search until they've typed at least 3 characters
-            if(characters < 3){
-              $("#searchResults").css("visibility", "hidden");
+            if(  characters < 3 ){
+                $("#searchResults").css("visibility", "hidden");
                 // web adjustment only
                 $(".drawerContentsAdjust").css("top", "0px ");
-        
-            } else if (characters >= 3){
+                //if there are is no input: clear the search result list 
+                $("#searchResults").html("<ul><li id='noResults' class='text'></li></ul>");
+            } else if ( characters >= 3 ) {
                   callAjax();
-        
+                  
             }
          });
+         
+        
 
          //function for closing all of the popups (making them invisible)
         function closeAllPopup(){
