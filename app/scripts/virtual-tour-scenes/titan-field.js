@@ -69,4 +69,21 @@ function loadTitanFieldScene(id) {
 }
 
 // fires on click of #titanField
-document.getElementById("titanField").addEventListener('click', loadTitanFieldVR);
+document.getElementById("titanField").addEventListener('click', function(){
+    //debugger;
+    //if the iframe already exists do not make another
+   // console.log($("#sidewalkTour > iframe").length);
+    if($("#titanFieldVR > iframe").length){
+        //if the iframe is not visible, make it visible
+        if(!$("#titanFieldVR > iframe").hasClass("vr")){
+            $("#titanFieldVR > iframe").addClass("vr");
+        } else {
+            //if it is visible, make it invisible
+            $("#titanFieldVR > iframe").removeClass("vr");
+        }
+    }
+    //if the iframe does not exist, make one
+    else{
+        loadTitanFieldVR();
+    }  
+});

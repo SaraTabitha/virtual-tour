@@ -18,31 +18,33 @@
 // when a new panorama is selected from the menu the
 // hideAllVR function makes sure to hide any possible
 // visible panoramas
-function hideAllVR(){
-  $("#titanFieldVR > iframe").css('visibility', 'hidden');
-  $("#titanField").removeClass("checked");
-  $("#womensCenterVR > iframe").css('visibility', 'hidden');
-  $("#womensCenter").removeClass("checked");
-  $("#executiveRoomVR > iframe").css('visibility', 'hidden');
-  $("#executiveRoom").removeClass("checked");
-  $("#sidewalkTour > iframe").css('visibility', 'hidden');
-  $("#dempseyStart").removeClass("checked");
+// function hideAllVR(){
+//   $("#titanFieldVR > iframe").css('visibility', 'hidden');
+//   $("#titanField").removeClass("checked");
+//   $("#womensCenterVR > iframe").css('visibility', 'hidden');
+//   $("#womensCenter").removeClass("checked");
+//   $("#executiveRoomVR > iframe").css('visibility', 'hidden');
+//   $("#executiveRoom").removeClass("checked");
+//   $("#sidewalkTour > iframe").css('visibility', 'hidden');
+//   $("#dempseyStart").removeClass("checked");
 
-  // close button for panoramas
-  $("#vrCloseButton").css("visibility", "visible");
+//   // close button for panoramas
+//   $("#vrCloseButton").css("visibility", "visible");
 
-}
+// }
 
 // close button click
 $("#vrCloseButton").click(function(){
-  hideAllVR();
+
   $('#overlay').css('visibility', 'hidden');
   $('#overlay').animate({"opacity": "0"}, "slow");
   $("#vrCloseButton").css("visibility", "hidden");
-})
+});
 
 // on click for the menu item that is selected
 // to bring up the iframe and grey overlay
+
+
 $("#titanField").click(function(){
     var check = $(this).hasClass("checked");
     if(check === false){
@@ -70,58 +72,58 @@ $("#titanField").click(function(){
     }
 });
 
-$("#womensCenter").click(function(){
-  var check = $(this).hasClass("checked");
-  if(check === false){
-      hideAllVR();
-      $('#overlay').css('visibility', 'visible');
-      $('#overlay').animate({"opacity": "0.3"}, "slow");
+// $("#womensCenter").click(function(){
+//   var check = $(this).hasClass("checked");
+//   if(check === false){
+//       hideAllVR();
+//       $('#overlay').css('visibility', 'visible');
+//       $('#overlay').animate({"opacity": "0.3"}, "slow");
 
-      $("#womensCenterVR > iframe").css('visibility', 'visible');
+//       $("#womensCenterVR > iframe").css('visibility', 'visible');
 
-      $("#vrCloseButton").css("visibility", "visible");
+//       $("#vrCloseButton").css("visibility", "visible");
 
-      $(this).addClass("checked");
-
-
-  } else if (check === true) {
-      $('#overlay').css('visibility', 'hidden');
-      $('#overlay').animate({"opacity": "0"}, "slow");
-
-      $("#womensCenterVR > iframe").css('visibility', 'hidden');
-
-      $("#vrCloseButton").css("visibility", "hidden");
-
-      $(this).removeClass("checked");
-  }
-});
-
-$("#executiveRoom").click(function(){
-    var check = $(this).hasClass("checked");
-    if(check === false){
-        hideAllVR();
-
-        $('#overlay').css('visibility', 'visible');
-        $('#overlay').animate({"opacity": "0.3"}, "slow");
-
-        $("#executiveRoomVR > iframe").css('visibility', 'visible');
-
-        $("#vrCloseButton").css("visibility", "visible");
-
-        $(this).addClass("checked");
+//       $(this).addClass("checked");
 
 
-    } else if (check === true) {
-        $('#overlay').css('visibility', 'hidden');
-        $('#overlay').animate({"opacity": "0"}, "slow");
+//   } else if (check === true) {
+//       $('#overlay').css('visibility', 'hidden');
+//       $('#overlay').animate({"opacity": "0"}, "slow");
 
-        $("#executiveRoomVR > iframe").css('visibility', 'hidden');
+//       $("#womensCenterVR > iframe").css('visibility', 'hidden');
 
-        $("#vrCloseButton").css("visibility", "hidden");
+//       $("#vrCloseButton").css("visibility", "hidden");
 
-        $(this).removeClass("checked");
-    }
-});
+//       $(this).removeClass("checked");
+//   }
+// });
+
+// $("#executiveRoom").click(function(){
+//     var check = $(this).hasClass("checked");
+//     if(check === false){
+//         hideAllVR();
+
+//         $('#overlay').css('visibility', 'visible');
+//         $('#overlay').animate({"opacity": "0.3"}, "slow");
+
+//         $("#executiveRoomVR > iframe").css('visibility', 'visible');
+
+//         $("#vrCloseButton").css("visibility", "visible");
+
+//         $(this).addClass("checked");
+
+
+//     } else if (check === true) {
+//         $('#overlay').css('visibility', 'hidden');
+//         $('#overlay').animate({"opacity": "0"}, "slow");
+
+//         $("#executiveRoomVR > iframe").css('visibility', 'hidden');
+
+//         $("#vrCloseButton").css("visibility", "hidden");
+
+//         $(this).removeClass("checked");
+//     }
+// });
 
 $("#dempseyStart").click(function(){
     var check = $(this).hasClass("checked");

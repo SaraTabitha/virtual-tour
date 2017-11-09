@@ -18,9 +18,8 @@ function loadExecutiveRoomVR(){
         image: 'images/Panorama/blank.png',
         is_stereo: false,
     });
-
-    // adding our styles to the VR window
     $("#executiveRoomVR > iframe").addClass("vr");
+    
 
     // assigning the functions to perform on ready and click
     executiveRoomVRView.on('ready', onExecutiveRoomVRViewReady);
@@ -69,4 +68,21 @@ function loadExecutiveRoomScene(id) {
 }
 
 // fires on click of #executiveRoom
-document.getElementById("executiveRoom").addEventListener('click', loadExecutiveRoomVR);
+document.getElementById("executiveRoom").addEventListener('click', function(){
+    //debugger;
+    //if the iframe already exists do not make another
+   // console.log($("#executiveRoomVR > iframe").length);
+    if($("#executiveRoomVR > iframe").length){
+        //if the iframe is not visible, make it visible
+        if(!$("#executiveRoomVR  > iframe").hasClass("vr")){
+            $("#executiveRoomVR > iframe").addClass("vr");
+        } else {
+            //if it is visible, make it invisible
+            $("#executiveRoomVR > iframe").removeClass("vr");
+        }
+    }
+    //if the iframe does not exist, make one
+    else{
+        loadExecutiveRoomVR();
+    }  
+});

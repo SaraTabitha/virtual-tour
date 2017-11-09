@@ -68,7 +68,9 @@ function onWomensCenterVRViewReady(e){
 
 // fires when a hotspot gets clicked
 function onWomensCenterVRClick(e) {
-    console.log('onWomensCenterVRClick', e.id);
+    //e.id title of hotspot that is clicked
+    //(load womens center id becomes the title of the scene (same as the hotspot selected))
+    console.log('onWomensCenterVRClick e.id:', e.id);
     if (e.id) {
         loadWomensCenterScene(e.id);
     }
@@ -76,6 +78,7 @@ function onWomensCenterVRClick(e) {
 
 // loads the image and it's hotspots
 function loadWomensCenterScene(id) {
+    //id = title of scene
     console.log('loadWomensCenterScene', id);
 
     // Set the image
@@ -102,4 +105,21 @@ function loadWomensCenterScene(id) {
 }
 
 // fires on click of Women's Center VR
-document.getElementById("womensCenter").addEventListener('click', loadWomensCenterVR);
+document.getElementById("womensCenter").addEventListener('click', function(){
+    //debugger;
+    //if the iframe already exists do not make another
+   // console.log($("#sidewalkTour > iframe").length);
+    if($("#womensCenterVR > iframe").length){
+        //if the iframe is not visible, make it visible
+        if(!$("#womensCenterVR > iframe").hasClass("vr")){
+            $("#womensCenterVR > iframe").addClass("vr");
+        } else {
+            //if it is visible, make it invisible
+            $("#womensCenterVR > iframe").removeClass("vr");
+        }
+    }
+    //if the iframe does not exist, make one
+    else{
+        loadWomensCenterVR();
+    }  
+});

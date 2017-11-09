@@ -54,9 +54,8 @@ function loadtemplateVR(){
         image: 'images/Panorama/blank.png',
         is_stereo: false,
     });
-
-    // adding our styles to the VR window
     $("#templateVR > iframe").addClass("vr");
+    
 
     // assigning the functions to perform on ready and click
     templateVRView.on('ready', ontemplateVRViewReady);
@@ -105,4 +104,22 @@ function loadTemplateScene(id) {
 }
 
 // fires on click of #template
-document.getElementById("template").addEventListener('click', loadtemplateVR);
+document.getElementById("templateRoom").addEventListener('click', function(){
+    //debugger;
+    //if the iframe already exists do not make another
+    //console.log($("#templateVR > iframe").length);
+    if($("#templateVR > iframe").length){
+        //if the iframe is not visible, make it visible
+        if(!$("#templateVR  > iframe").hasClass("vr")){
+            $("#templateVR > iframe").addClass("vr");
+        } else {
+            //if it is visible, make it invisible
+            $("#templateVR > iframe").removeClass("vr");
+        }
+    }
+    //if the iframe does not exist, make one
+    else{
+        //load correct function based 
+        loadtemplateVR();
+    }  
+});

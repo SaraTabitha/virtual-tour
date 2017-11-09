@@ -2,7 +2,7 @@
 var sidewalkTourVRView;
 
 // declaring the scenes for this VRView
-var sidewalkTouScenes = {
+var sidewalkTourScenes = {
     dempseyFront: {
         image: 'images/Panorama/sidewalk/UWO360b_-2.jpg',
         hotspots: {
@@ -352,13 +352,13 @@ function loadSidewalkTourScene(id) {
 
     // Set the image
     sidewalkTourVRView.setContent({
-        image: sidewalkTouScenes[id].image,
+        image: sidewalkTourScenes[id].image,
         is_stereo: false,
         is_autopan_off: true
     });
 
     // Add all the hotspots for the scene
-    var newScene = sidewalkTouScenes[id];
+    var newScene = sidewalkTourScenes[id];
     var sceneHotspots = Object.keys(newScene.hotspots);
     for (var i = 0; i < sceneHotspots.length; i++) {
         var hotspotKey = sceneHotspots[i];
@@ -374,4 +374,21 @@ function loadSidewalkTourScene(id) {
 }
 
 // fires on click of Dempsey Dev
-document.getElementById("dempseyStart").addEventListener('click', loadSidewalkTourVR);
+document.getElementById("dempseyStart").addEventListener('click', function(){
+    //debugger;
+    //if the iframe already exists do not make another
+   // console.log($("#sidewalkTour > iframe").length);
+    if($("#sidewalkTour > iframe").length){
+        //if the iframe is not visible, make it visible
+        if(!$("#sidewalkTour > iframe").hasClass("vr")){
+            $("#sidewalkTour > iframe").addClass("vr");
+        } else {
+            //if it is visible, make it invisible
+            $("#sidewalkTour > iframe").removeClass("vr");
+        }
+    }
+    //if the iframe does not exist, make one
+    else{
+        loadSidewalkTourVR();
+    }  
+});
