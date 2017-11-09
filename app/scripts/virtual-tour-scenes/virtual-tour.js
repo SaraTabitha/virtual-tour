@@ -9,6 +9,13 @@ var VRView;
 
 // declaring the executiveRoom scenes
 var scenes = {
+    //start titanField
+    titanField: {
+        image: 'images/Panorama/titan-field/titanFieldPano.jpg',
+        hotspots: {
+
+        }
+    },
     //start executiveRoom
     executiveRoom: {
         image: 'images/Panorama/executive-board-room/executiveBoardRoom.jpg',
@@ -55,6 +62,318 @@ var scenes = {
                 distance: 1
             }
         }
+    },
+    //start sidewalk tour
+    dempseyFront: {
+        image: 'images/Panorama/sidewalk/UWO360b_-2.jpg',
+        hotspots: {
+            oviattDempseyOne: {
+                pitch: -10,
+                yaw: 55,
+                radius: 0.10,
+                distance: 1
+            }
+        }
+    },
+    oviattDempseyOne: {
+        image: 'images/Panorama/sidewalk/UWO360_-17.jpg',
+        hotspots: {
+            dempseyFront: {
+                pitch: 0,
+                yaw: 163,
+                radius: 0.10,
+                distance: 2
+            },
+            acrossFromClow: {
+                pitch: 0,
+                yaw: 103.5,
+                radius: 0.10,
+                distance: 2
+            },
+            oviattDempseyTwo: {
+                pitch: 0,
+                yaw: -80,
+                radius: 0.10,
+                distance: 1
+            }
+        }
+    },
+    acrossFromClow: {
+        image: 'images/Panorama/sidewalk/UWO360_-5.jpg',
+        hotspots: {
+            oviattDempseyOne: {
+                pitch: 0,
+                yaw: -100,
+                radius: 0.10,
+                distance: 1
+            }
+        }
+    },
+    oviattDempseyTwo: {
+        image: 'images/Panorama/sidewalk/UWO360_-22.jpg',
+        hotspots: {
+            oviattDempseyOne: {
+                pitch: 0,
+                yaw: 88,
+                radius: 0.10,
+                distance: 1
+            },
+            oviattDempseyTrees: {
+                pitch: 0,
+                yaw: -92,
+                radius: 0.10,
+                distance: 1
+            }
+        }
+    },
+    oviattDempseyTrees: {
+        image: 'images/Panorama/sidewalk/UWO360_-28.jpg',
+        hotspots: {
+            oviattDempseyTwo: {
+                pitch: 0,
+                yaw: 95,
+                radius: 0.10,
+                distance: .7
+            },
+            gardenOne: {
+                pitch: 0,
+                yaw: -80,
+                radius: 0.10,
+                distance: .5
+            }
+        }
+    },
+    gardenOne: {
+        image: 'images/Panorama/sidewalk/UWO360_-32.jpg',
+        hotspots: {
+            oviattDempseyTrees: {
+                pitch: -5,
+                yaw: -95,
+                radius: 0.10,
+                distance: .7
+            },
+            gardenTwo: {
+                pitch: -5,
+                yaw: 85,
+                radius: 0.10,
+                distance: .7
+            }
+        }
+    },
+    gardenTwo: {
+        image: 'images/Panorama/sidewalk/UWO360_-35.jpg',
+        hotspots: {
+            gardenOne: {
+                pitch: -5,
+                yaw: -92,
+                radius: 0.10,
+                distance: .7
+            },
+            gardenThree: {
+                pitch: 5,
+                yaw: 160,
+                radius: 0.10,
+                distance: .7
+            }
+        }
+    },
+    gardenThree: {
+        image: 'images/Panorama/sidewalk/UWO360_-39.jpg',
+        hotspots: {
+            gardenTwo: {
+                pitch: 5,
+                yaw: -150,
+                radius: 0.10,
+                distance: .5
+            },
+            gardenFour: {
+                pitch: 5,
+                yaw: 65,
+                radius: 0.10,
+                distance: .5
+            }
+        }
+    },
+    gardenFour: {
+        image: 'images/Panorama/sidewalk/UWO360_-42.jpg',
+        hotspots: {
+            gardenThree: {
+                pitch: 5,
+                yaw: -70,
+                radius: 0.10,
+                distance: .5
+            },
+            swartHalseyOne: {
+                pitch: 5,
+                yaw: 80,
+                radius: 0.10,
+                distance: .5
+            }
+        }
+    },
+    swartHalseyOne: {
+        image: 'images/Panorama/sidewalk/UWO360_-46.jpg',
+        hotspots: {
+            gardenFour: {
+                pitch: 5,
+                yaw: -90,
+                radius: 0.10,
+                distance: .5
+            },
+            swartHalseyTwo: {
+                pitch: 5,
+                yaw: 85,
+                radius: 0.10,
+                distance: .5
+            }
+        }
+    },
+    swartHalseyTwo: {
+        image: 'images/Panorama/sidewalk/UWO360_-53.jpg',
+        hotspots: {
+            swartHalseyOne: {
+                pitch: 5,
+                yaw: -94,
+                radius: 0.10,
+                distance: .5
+            },
+            swartCorner: {
+                pitch: 5,
+                yaw: 90,
+                radius: 0.10,
+                distance: .5
+            }
+        }
+    },
+    swartCorner: {
+        image: 'images/Panorama/sidewalk/UWO360_-58.jpg',
+        hotspots: {
+            swartHalseyTwo: {
+                pitch: 5,
+                yaw: -94,
+                radius: 0.10,
+                distance: .5
+            },
+            swartMiddle:{
+                pitch: 5,
+                yaw: 90,
+                radius: 0.10,
+                distance: .5
+            }
+        }
+    },
+    swartMiddle: {
+        image: 'images/Panorama/sidewalk/UWO360_-62.jpg',
+        hotspots: {
+            swartCorner: {
+                pitch: 5,
+                yaw: -92,
+                radius: 0.10,
+                distance: .5
+            },
+            swartRear: {
+                pitch: 5,
+                yaw: 90,
+                radius: 0.10,
+                distance: .5
+            }
+        }
+    },
+    swartRear: {
+        image: 'images/Panorama/sidewalk/UWO360_-66.jpg',
+        hotspots: {
+            swartMiddle: {
+                pitch: 5,
+                yaw: -92,
+                radius: 0.10,
+                distance: .5
+            },
+            swartBuckstaff: {
+                pitch: 5,
+                yaw: 90,
+                radius: 0.10,
+                distance: .5
+            }
+        }
+    },
+    swartBuckstaff: {
+        image: 'images/Panorama/sidewalk/UWO360_-69.jpg',
+        hotspots: {
+            swartRear: {
+                pitch: 5,
+                yaw: -86,
+                radius: 0.10,
+                distance: .5
+            },
+            swartBuckstaffHalsey: {
+                pitch: 5,
+                yaw: 95,
+                radius: 0.10,
+                distance: .5
+            }
+        }
+    },
+    swartBuckstaffHalsey: {
+        image: 'images/Panorama/sidewalk/UWO360_-73.jpg',
+        hotspots: {
+            swartBuckstaff: {
+                pitch: 5,
+                yaw: -92,
+                radius: 0.10,
+                distance: .5
+            },
+            halseyCorner: {
+                pitch: 5,
+                yaw: 90,
+                radius: 0.10,
+                distance: .5
+            }
+        }
+    },
+    halseyCorner: {
+        image: 'images/Panorama/sidewalk/UWO360_-75.jpg',
+        hotspots: {
+            swartBuckstaffHalsey: {
+                pitch: 5,
+                yaw: -88,
+                radius: 0.10,
+                distance: .5
+            },
+            halseyRear: {
+                pitch: 5,
+                yaw: 95,
+                radius: 0.10,
+                distance: .5
+            }
+        }
+    },
+    halseyRear: {
+        image: 'images/Panorama/sidewalk/UWO360_-81.jpg',
+        hotspots: {
+            halseyCorner: {
+                pitch: 5,
+                yaw: -80,
+                radius: 0.10,
+                distance: .5
+            },
+            ACFront: {
+                pitch: 5,
+                yaw: 100,
+                radius: 0.10,
+                distance: .5
+            }
+        }
+    },
+    ACFront: {
+        image: 'images/Panorama/sidewalk/UWO360_-84.jpg',
+        hotspots: {
+            halseyRear: {
+                pitch: 5,
+                yaw: -85,
+                radius: 0.10,
+                distance: .5
+            }
+        }
     }
 };
 
@@ -79,9 +398,13 @@ function onVRViewReady(name){
     switch(name){
         //put in parameter the name of the SCENE, not the name
         case "executiveRoom": loadScene('executiveRoom');
-                                break;
+                              break;
         case "womensCenter": loadScene('womensCenterFront');
-                                break;
+                             break;
+        case "titanField": loadScene('titanField');
+                            break;
+        case "dempseyStart": loadScene('dempseyFront');
+                             break;
     }
     
 }
@@ -124,7 +447,9 @@ function loadScene(id) {
 //should be the id for the link in the menu that gets selected
 var links = [
     "executiveRoom",
-    "womensCenter"
+    "womensCenter",
+    "titanField",
+    "dempseyStart"
 ]
 // fires on click of #executiveRoom
 //for each possible tour to be selected> add an event listener to hide/show the vr player and set the appropriate scene 

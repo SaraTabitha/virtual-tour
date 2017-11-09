@@ -33,44 +33,44 @@
 
 // }
 
-// close button click
-$("#vrCloseButton").click(function(){
+// // close button click
+// $("#vrCloseButton").click(function(){
 
-  $('#overlay').css('visibility', 'hidden');
-  $('#overlay').animate({"opacity": "0"}, "slow");
-  $("#vrCloseButton").css("visibility", "hidden");
-});
+//   $('#overlay').css('visibility', 'hidden');
+//   $('#overlay').animate({"opacity": "0"}, "slow");
+//   $("#vrCloseButton").css("visibility", "hidden");
+// });
 
 // on click for the menu item that is selected
 // to bring up the iframe and grey overlay
 
 
-$("#titanField").click(function(){
-    var check = $(this).hasClass("checked");
-    if(check === false){
-        hideAllVR();
+// $("#titanField").click(function(){
+//     var check = $(this).hasClass("checked");
+//     if(check === false){
+//         hideAllVR();
 
-        $('#overlay').css('visibility', 'visible');
-        $('#overlay').animate({"opacity": "0.3"}, "slow");
+//         $('#overlay').css('visibility', 'visible');
+//         $('#overlay').animate({"opacity": "0.3"}, "slow");
 
-        $("#vrCloseButton").css("visibility", "visible");
+//         $("#vrCloseButton").css("visibility", "visible");
 
-        $("#titanFieldVR > iframe").css('visibility', 'visible');
+//         $("#titanFieldVR > iframe").css('visibility', 'visible');
 
-        $(this).addClass("checked");
+//         $(this).addClass("checked");
 
 
-    } else if (check === true) {
-        $('#overlay').css('visibility', 'hidden');
-        $('#overlay').animate({"opacity": "0"}, "slow");
+//     } else if (check === true) {
+//         $('#overlay').css('visibility', 'hidden');
+//         $('#overlay').animate({"opacity": "0"}, "slow");
 
-        $("#titanFieldVR > iframe").css('visibility', 'hidden');
+//         $("#titanFieldVR > iframe").css('visibility', 'hidden');
 
-        $("#vrCloseButton").css("visibility", "hidden");
+//         $("#vrCloseButton").css("visibility", "hidden");
 
-        $(this).removeClass("checked");
-    }
-});
+//         $(this).removeClass("checked");
+//     }
+// });
 
 // $("#womensCenter").click(function(){
 //   var check = $(this).hasClass("checked");
@@ -125,32 +125,32 @@ $("#titanField").click(function(){
 //     }
 // });
 
-$("#dempseyStart").click(function(){
-    var check = $(this).hasClass("checked");
-    if(check === false){
-        hideAllVR();
+// $("#dempseyStart").click(function(){
+//     var check = $(this).hasClass("checked");
+//     if(check === false){
+//         hideAllVR();
 
-        $('#overlay').css('visibility', 'visible');
-        $('#overlay').animate({"opacity": "0.3"}, "slow");
+//         $('#overlay').css('visibility', 'visible');
+//         $('#overlay').animate({"opacity": "0.3"}, "slow");
 
-        $("#sidewalkTour > iframe").css('visibility', 'visible');
+//         $("#sidewalkTour > iframe").css('visibility', 'visible');
 
-        $(".vrCloseButton").css("visibility", "visible");
+//         $(".vrCloseButton").css("visibility", "visible");
 
-        $(this).addClass("checked");
+//         $(this).addClass("checked");
 
 
-    } else if (check === true) {
-        $('#overlay').css('visibility', 'hidden');
-        $('#overlay').animate({"opacity": "0"}, "slow");
+//     } else if (check === true) {
+//         $('#overlay').css('visibility', 'hidden');
+//         $('#overlay').animate({"opacity": "0"}, "slow");
 
-        $("#sidewalkTour > iframe").css('visibility', 'hidden');
+//         $("#sidewalkTour > iframe").css('visibility', 'hidden');
 
-        $("#vrCloseButton").css("visibility", "hidden");
+//         $("#vrCloseButton").css("visibility", "hidden");
 
-        $(this).removeClass("checked");
-    }
-});
+//         $(this).removeClass("checked");
+//     }
+// });
 
     // Start hide/show 360 navigation items
     $("#linkOne").click(function(){
