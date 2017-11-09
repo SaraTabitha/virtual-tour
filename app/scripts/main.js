@@ -210,6 +210,10 @@ $("#dempseyStart").click(function(){
       // going between web and mobile if the menu is open
         // $("#drawerContents").toggleClass("active");
     });
+    //if, on mobile, the map is clicked on then the menu will close
+    $("#map").click(function(){
+        $("#drawerContents").removeClass("active");
+    });
 
 
     function closeAllCards(){
