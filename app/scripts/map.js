@@ -21,6 +21,16 @@ function initMap() {
         //first group: yellow, pink, red, teal, green, blue, lightpurple
         //second group: maroon, orange, darkgreen, lightblue, navy, darkpurple, brown
         var pinkMarker = "images/markers/pink.png";
+        var pinkLot23 = "images/markers/parking/pink_lot23.png";
+        var pinkResidentMarker = "images/markers/parking/pink_resident.png";
+        var pinkCommuteMarker = "images/markers/parking/pink_commute.png";
+        var pinkRemoteMarker = "images/markers/parking/pink_remote.png";
+        var pinkResidentMarker = "images/markers/parking/pink_resident.png";
+        var pinkRestrictedMarker = "images/markers/parking/pink_restricted.png";
+        var pinkStaffMarker = "images/markers/parking/pink_staff.png";
+        var pinkVisitorMarker = "images/markers/parking/pink_visitor.png";
+        var pinkCommuterMarker = "images/markers/parking/pink_commuter.png";
+
         var redMarker = "images/markers/red.png";
         var maroonMarker = "images/markers/maroon.png";
         var orangeMarker = "images/markers/orange.png";
@@ -471,8 +481,86 @@ function initMap() {
             //45-82 of the markers array
             for (e = 45; e < 83; e++){
                 allMarkers[e].setMap(map);
-                allMarkers[e].setIcon(pinkMarker);
+                
             }
+            //changing parking to new types with 
+            //11
+            allMarkers[45].setIcon(pinkStaffMarker);
+            //25
+            allMarkers[55].setIcon(pinkStaffMarker);
+            //14a
+            allMarkers[61].setIcon(pinkStaffMarker);
+            //14b
+            allMarkers[62].setIcon(pinkStaffMarker);
+            //14c
+            allMarkers[63].setIcon(pinkStaffMarker);
+            //35
+            allMarkers[46].setIcon(pinkRemoteMarker);
+            //39
+            allMarkers[79].setIcon(pinkRemoteMarker);
+            //27
+            allMarkers[47].setIcon(pinkCommuteMarker);
+            //17
+            allMarkers[53].setIcon(pinkCommuteMarker);
+            //29
+            allMarkers[54].setIcon(pinkCommuterMarker);
+            //8
+            allMarkers[56].setIcon(pinkCommuteMarker);
+            //33
+            allMarkers[57].setIcon(pinkCommuteMarker);
+            //34
+            allMarkers[58].setIcon(pinkCommuteMarker);
+            //7a
+            allMarkers[67].setIcon(pinkCommuteMarker);
+            //13
+            allMarkers[70].setIcon(pinkCommuteMarker);
+            //6a
+            allMarkers[72].setIcon(pinkCommuteMarker);
+            //6
+            allMarkers[73].setIcon(pinkCommuteMarker);
+            //7
+            allMarkers[64].setIcon(pinkCommuteMarker);
+            //23
+            allMarkers[60].setIcon(pinkLot23);
+            //5a
+            allMarkers[65].setIcon(pinkResidentMarker);
+            //18
+            allMarkers[77].setIcon(pinkResidentMarker);
+            //30
+            allMarkers[78].setIcon(pinkResidentMarker);
+            //21
+            allMarkers[48].setIcon(pinkRestrictedMarker);
+            //26
+            allMarkers[49].setIcon(pinkRestrictedMarker);
+            //16
+            allMarkers[52].setIcon(pinkRestrictedMarker);
+            //28
+            allMarkers[59].setIcon(pinkRestrictedMarker);
+            //5
+            allMarkers[66].setIcon(pinkRestrictedMarker);
+            //32
+            allMarkers[69].setIcon(pinkRestrictedMarker);
+            //12
+            allMarkers[71].setIcon(pinkRestrictedMarker);
+            //10
+            allMarkers[74].setIcon(pinkRestrictedMarker);
+            //9a
+            allMarkers[75].setIcon(pinkRestrictedMarker);
+            //9
+            allMarkers[76].setIcon(pinkRestrictedMarker);
+            //womensCenter
+            allMarkers[80].setIcon(pinkRestrictedMarker);
+            //15
+            allMarkers[68].setIcon(pinkVisitorMarker);
+            //titanone
+            allMarkers[81].setIcon(pinkMarker);
+            //titantwo
+            allMarkers[82].setIcon(pinkMarker);
+            //4
+            allMarkers[50].setIcon(pinkMarker);
+            //4a
+            allMarkers[51].setIcon(pinkMarker);
+            
         }
         // remove parking lot markers
         function removeParkingLots(){

@@ -463,13 +463,16 @@ links.forEach(function(thisOne){
         $('#overlay').css('visibility', 'visible');
         $('#overlay').animate({"opacity": "0.3"}, "slow");
         $("#VR > iframe").css('visibility', 'visible');
+        $("#VR").css("display", "initial");
         $("#vrCloseButton").css("visibility", "visible");
+
+        $("#notif").trigger("click");
     })
 
 });
 // VRclose button hides the vr player, close button and overlay
 $("#vrCloseButton").click(function(){
-      $("#VR > iframe").css('visibility', 'hidden');
+      $("#VR").css("display", "none");
       $('#overlay').css('visibility', 'hidden');
       $('#overlay').animate({"opacity": "0"}, "slow");
       $("#vrCloseButton").css("visibility", "hidden");

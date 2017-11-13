@@ -959,8 +959,10 @@ ul#popupNav li:hover{
   /*styling google vr*/
   .vr{
     height: 500px;
+    
   }
   .vrDiv{
+    display: none;
     visibility: hidden;
     z-index: 3;
     position: absolute;
