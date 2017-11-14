@@ -9,6 +9,13 @@ var VRView;
 
 // declaring the executiveRoom scenes
 var scenes = {
+    //start clow
+    clowStudy:{
+        image: 'images/Panorama/clow/study/ClowStudy.jpg',
+        hotspots :{
+
+        }
+    },
     //start titanField
     titanField: {
         image: 'images/Panorama/titan-field/titanFieldPano.jpg',
@@ -405,6 +412,8 @@ function onVRViewReady(name){
                             break;
         case "dempseyStart": loadScene('dempseyFront');
                              break;
+        case "clowStudy": loadScene('clowStudy');
+                            break;
     }
     
 }
@@ -449,7 +458,8 @@ var links = [
     "executiveRoom",
     "womensCenter",
     "titanField",
-    "dempseyStart"
+    "dempseyStart",
+    "clowStudy"
 ]
 // fires on click of #executiveRoom
 //for each possible tour to be selected> add an event listener to hide/show the vr player and set the appropriate scene 
