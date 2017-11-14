@@ -189,8 +189,6 @@ var desktop = function(){
 
         //
         
-        
-
 
 };
 // appearance
@@ -253,7 +251,7 @@ mobile();
 
 // reloads the page if it is resized so that it reloads this file based on window width! :D
 var lastWidth = $(window).width();
-var mobileWidth = 1024;
+var mobileWidth = 1025;
 $(window).resize(function() {
     // if($(this).width() !== lastWidth && $(this).width() <= mobileWidth){
     //     setTimeout(function(){
