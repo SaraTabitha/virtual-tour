@@ -173,10 +173,9 @@ var desktop = function(){
 
         $("#mobileSpacer").removeClass("mdl-layout-spacer");
 
-        // $("#drawerContents").addClass("mdl-layout");
         $("#drawerContents").addClass("mdl-layout--fixed-drawer");
         $("#drawerContents").removeClass("mdl-layout__drawer-right");
-        // $("#drawerDivTwo").addClass("mdl-layout__drawer");
+
         // issue with dynamically changing the css top of
         // drawer contents when the search results come down
         // on web differently than on mobile
@@ -189,36 +188,8 @@ var desktop = function(){
         $("#drawerContents").css("height", "900px");
 
         //
-        // start academic services show and slide out
-
-        // changing height of drawer (for scroll bar) based on if a Building dropdown is selected
-        // virtualTourDropdowns.forEach(function(thisOne){
-        //     var index = virtualTourDropdowns.indexOf(thisOne);
-        //     $("#" + virtualTourDropdowns[index]).click(function(){
-        //         var check = $(this).hasClass("open");
-        //         if(check === false){
-        //             // takes height of drawer and adds 100 to it
-        //             var height = parseInt($("#drawerContents").height());
-        //             var y = 100;
-        //             var added = height + y;
-        //             function adding (value){
-        //                 $(".drawerContentsAdjust").height(value);
-        //             }
-        //             adding(added);
-        //             $(this).addClass("open");
-        //         } else if (check === true) {
-        //         // takes height of drawer and removes 100 from it
-        //             var height = parseInt($("#drawerContents").height());
-        //             var y = 100;
-        //             var added = height - y;
-        //             function adding (value){
-        //                 $(".drawerContentsAdjust").height(value);
-        //             }
-        //             adding(added);
-        //             $(this).removeClass("open");
-        //         }
-        //     })
-        // });
+        
+        
 
 
 };
