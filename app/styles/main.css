@@ -959,7 +959,7 @@ ul#popupNav li:hover{
   /*styling google vr*/
   .vr{
     height: 500px;
-    
+
   }
   .vrDiv{
     display: none;
@@ -1794,6 +1794,7 @@ ul#popupNav li:hover{
 /*vr portrait*/
 @media screen and (max-width: 1024px) and (orientation: portrait){
   .vrDiv{
+    display: none;
     visibility: hidden;
     z-index: 3;
     position: absolute;
@@ -1813,6 +1814,7 @@ ul#popupNav li:hover{
 @media screen and (max-width: 1024px) and (orientation: landscape){
 /*vr landscape */
   .vrDiv{
+    display: none;
     visibility: hidden;
     z-index: 3;
     position: absolute;
@@ -1831,6 +1833,7 @@ ul#popupNav li:hover{
 }
 @media screen and (max-width: 1024px) and (min-width: 920px){
   .vrDiv{
+    display: none;
     visibility: hidden;
     z-index: 3;
     position: absolute;

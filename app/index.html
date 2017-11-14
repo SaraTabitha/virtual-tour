@@ -259,13 +259,12 @@
                                                 <div class="mdl-layout__header-row background666 drawer mdl-shadow--3dp">
                                                         <span class="mdl-layout-title threeSixty text">360 Tours</span>
                                                 </div>
-                                                <!-- placeholder nav -->
-                                                <!-- If new buildings are added they need to have the click function
-                                                     added in main.js for the height change/scroll bar fix-->
-                                                <div id="linkOne" class="mdl-navigation mine">
-                                                        <span class="mdl-navigation__link linkSpan" href="#"><p class="linkText color666 text">Alumni Welcome &amp; Conference Center</p><i id="addOne"class="material-icons color666 add">add</i><i id="removeOne"class="material-icons color666 add remove">remove</i></span>
+                                                <!-- If new buildings are added they need to have their id's added to 
+                                                the main.js arrays virtualTourDropdowns and virtualTourDropdownsButtons-->
+                                                <div id="alumniTour" class="mdl-navigation mine">
+                                                        <span class="mdl-navigation__link linkSpan" href="#"><p class="linkText color666 text">Alumni Welcome &amp; Conference Center</p><i id="addAlumni"class="material-icons color666 add">add</i><i id="removeAlumni"class="material-icons color666 add remove">remove</i></span>
                                                 </div>
-                                                <div id="linkOneOptions"  class="tourDrop">
+                                                <div id="alumniTourOptions"  class="tourDrop">
                                                         <ul class="noPad" >
                                                                 <li id="executiveRoom" class="tourItem text">Executive Board Room</li>
                                                                 <li id="" class="tourItem text">VR</li>
@@ -273,10 +272,10 @@
                                                         </ul>
                                                 </div>
 
-                                                <div id="linkTwo" class="mdl-navigation mine">
-                                                        <span  class="mdl-navigation__link linkSpan " href="#"><p class="linkText color666 text">Campus Center for Equity &amp; Diversity</p><i id="addTwo" class="material-icons color666 add">add</i><i id="removeTwo"class="material-icons color666 add remove">remove</i></span>
+                                                <div id="equityTour" class="mdl-navigation mine">
+                                                        <span  class="mdl-navigation__link linkSpan " href="#"><p class="linkText color666 text">Campus Center for Equity &amp; Diversity</p><i id="addEquity" class="material-icons color666 add">add</i><i id="removeEquity"class="material-icons color666 add remove">remove</i></span>
                                                 </div>
-                                                <div id="linkTwoOptions"   class="tourDrop">
+                                                <div id="equityTourOptions"   class="tourDrop">
                                                         <ul class="noPad">
                                                                 <li id="womensCenter" class="tourItem text">Women's Center</li>
                                                                 <li class="tourItem text">VR</li>
@@ -284,10 +283,10 @@
                                                         </ul>
                                                 </div>
 
-                                                <div id="linkThree" class="mdl-navigation mine">
-                                                        <span  class="mdl-navigation__link linkSpan" href="#"><p class="linkText color666 text">Oshkosh Sports Complex</p><i id="addThree"class="material-icons color666 add">add</i><i id="removeThree"class="material-icons color666 add remove">remove</i></span>
+                                                <div id="sportsTour" class="mdl-navigation mine">
+                                                        <span  class="mdl-navigation__link linkSpan" href="#"><p class="linkText color666 text">Oshkosh Sports Complex</p><i id="addSports"class="material-icons color666 add">add</i><i id="removeSports"class="material-icons color666 add remove">remove</i></span>
                                                 </div>
-                                                <div id="linkThreeOptions" class="tourDrop">
+                                                <div id="sportsTourOptions" class="tourDrop">
                                                         <ul class="noPad">
                                                                 <li id="titanField" class="tourItem text">Titan Field</li>
                                                                 <li class="tourItem text">VR</li>
@@ -295,10 +294,10 @@
                                                         </ul>
                                                 </div>
 
-                                                <div id="linkFour" class="mdl-navigation mine">
-                                                        <span  class="mdl-navigation__link linkSpan" href="#"><p class="linkText color666 text">Sidewalk Tour</p><i id="addFour"class="material-icons color666 add">add</i><i id="removeFour"class="material-icons color666 add remove">remove</i></span>
+                                                <div id="sidewalkTour" class="mdl-navigation mine">
+                                                        <span  class="mdl-navigation__link linkSpan" href="#"><p class="linkText color666 text">Sidewalk Tour</p><i id="addSidewalk"class="material-icons color666 add">add</i><i id="removeSidewalk"class="material-icons color666 add remove">remove</i></span>
                                                 </div>
-                                                <div id="linkFourOptions" class="tourDrop">
+                                                <div id="sidewalkTourOptions" class="tourDrop">
                                                         <ul class="noPad">
                                                                 <li id="dempseyStart" class="tourItem text">Dempsey to Arts &amp; Communication</li>
                                                                 <li class="tourItem text">VR</li>
@@ -2339,7 +2338,10 @@
                         <!--  -->
                         <!-- POPUPS END -->
                         
-                        <p id="vrCloseButton">x</p>
+                        <!-- <p id="vrCloseButton">x</p> -->
+                        <button id="vrCloseButton" class="cardCloseButton mdl-color-text--white mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
+                                        <i  class="material-icons">close</i>
+                        </button>
                         <div id="VR" class="vrDiv"></div>
 
 

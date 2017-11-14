@@ -8,182 +8,32 @@
 // all JS that is not changed depending on the width of the screen
 //
 
-
-   
-
-   
-
-      
-// VR image click function
-// when a new panorama is selected from the menu the
-// hideAllVR function makes sure to hide any possible
-// visible panoramas
-// function hideAllVR(){
-//   $("#titanFieldVR > iframe").css('visibility', 'hidden');
-//   $("#titanField").removeClass("checked");
-//   $("#womensCenterVR > iframe").css('visibility', 'hidden');
-//   $("#womensCenter").removeClass("checked");
-//   $("#executiveRoomVR > iframe").css('visibility', 'hidden');
-//   $("#executiveRoom").removeClass("checked");
-//   $("#sidewalkTour > iframe").css('visibility', 'hidden');
-//   $("#dempseyStart").removeClass("checked");
-
-//   // close button for panoramas
-//   $("#vrCloseButton").css("visibility", "visible");
-
-// }
-
-// // close button click
-// $("#vrCloseButton").click(function(){
-
-//   $('#overlay').css('visibility', 'hidden');
-//   $('#overlay').animate({"opacity": "0"}, "slow");
-//   $("#vrCloseButton").css("visibility", "hidden");
-// });
-
-// on click for the menu item that is selected
-// to bring up the iframe and grey overlay
-
-
-// $("#titanField").click(function(){
-//     var check = $(this).hasClass("checked");
-//     if(check === false){
-//         hideAllVR();
-
-//         $('#overlay').css('visibility', 'visible');
-//         $('#overlay').animate({"opacity": "0.3"}, "slow");
-
-//         $("#vrCloseButton").css("visibility", "visible");
-
-//         $("#titanFieldVR > iframe").css('visibility', 'visible');
-
-//         $(this).addClass("checked");
-
-
-//     } else if (check === true) {
-//         $('#overlay').css('visibility', 'hidden');
-//         $('#overlay').animate({"opacity": "0"}, "slow");
-
-//         $("#titanFieldVR > iframe").css('visibility', 'hidden');
-
-//         $("#vrCloseButton").css("visibility", "hidden");
-
-//         $(this).removeClass("checked");
-//     }
-// });
-
-// $("#womensCenter").click(function(){
-//   var check = $(this).hasClass("checked");
-//   if(check === false){
-//       hideAllVR();
-//       $('#overlay').css('visibility', 'visible');
-//       $('#overlay').animate({"opacity": "0.3"}, "slow");
-
-//       $("#womensCenterVR > iframe").css('visibility', 'visible');
-
-//       $("#vrCloseButton").css("visibility", "visible");
-
-//       $(this).addClass("checked");
-
-
-//   } else if (check === true) {
-//       $('#overlay').css('visibility', 'hidden');
-//       $('#overlay').animate({"opacity": "0"}, "slow");
-
-//       $("#womensCenterVR > iframe").css('visibility', 'hidden');
-
-//       $("#vrCloseButton").css("visibility", "hidden");
-
-//       $(this).removeClass("checked");
-//   }
-// });
-
-// $("#executiveRoom").click(function(){
-//     var check = $(this).hasClass("checked");
-//     if(check === false){
-//         hideAllVR();
-
-//         $('#overlay').css('visibility', 'visible');
-//         $('#overlay').animate({"opacity": "0.3"}, "slow");
-
-//         $("#executiveRoomVR > iframe").css('visibility', 'visible');
-
-//         $("#vrCloseButton").css("visibility", "visible");
-
-//         $(this).addClass("checked");
-
-
-//     } else if (check === true) {
-//         $('#overlay').css('visibility', 'hidden');
-//         $('#overlay').animate({"opacity": "0"}, "slow");
-
-//         $("#executiveRoomVR > iframe").css('visibility', 'hidden');
-
-//         $("#vrCloseButton").css("visibility", "hidden");
-
-//         $(this).removeClass("checked");
-//     }
-// });
-
-// $("#dempseyStart").click(function(){
-//     var check = $(this).hasClass("checked");
-//     if(check === false){
-//         hideAllVR();
-
-//         $('#overlay').css('visibility', 'visible');
-//         $('#overlay').animate({"opacity": "0.3"}, "slow");
-
-//         $("#sidewalkTour > iframe").css('visibility', 'visible');
-
-//         $(".vrCloseButton").css("visibility", "visible");
-
-//         $(this).addClass("checked");
-
-
-//     } else if (check === true) {
-//         $('#overlay').css('visibility', 'hidden');
-//         $('#overlay').animate({"opacity": "0"}, "slow");
-
-//         $("#sidewalkTour > iframe").css('visibility', 'hidden');
-
-//         $("#vrCloseButton").css("visibility", "hidden");
-
-//         $(this).removeClass("checked");
-//     }
-// });
-
-    // Start hide/show 360 navigation items
-    $("#linkOne").click(function(){
-        // add shadow
+//all of the drawers that contain the virtual tours are named linkone, two, three etc
+var virtualTourDropdowns = [
+    "alumniTour",
+    "equityTour",
+    "sportsTour",
+    "sidewalkTour"
+]
+//addOne, two, three etc id's for the + button on the drawer; the element is toggled on/off
+var virtualTourDropdownButtons = [
+    //caps is important because it is the 2nd word in the id
+    "Alumni",
+    "Equity",
+    "Sports",
+    "sidewalk"
+]
+//for every virtual tour drawer, when clicked it slowly shows the options beneath and the + button changes to a - button
+virtualTourDropdowns.forEach(function(thisOne){
+    var index = virtualTourDropdowns.indexOf(thisOne);
+    $("#" + virtualTourDropdowns[index]).click(function(){
         $(this).toggleClass("mdl-shadow--3dp");
-        // div toggle
-        $("#linkOneOptions").toggle("slow");
-        // + symbol toggle
-        $("#addOne").toggle();
-        $("#removeOne").toggleClass("remove");
-    });
-    $("#linkTwo").click(function(){
-      // add shadow
-      $(this).toggleClass("mdl-shadow--3dp");
-        $("#linkTwoOptions").toggle("slow");
-        $("#addTwo").toggle();
-        $("#removeTwo").toggleClass("remove");
-    });
-    $("#linkThree").click(function(){
-      // add shadow
-      $(this).toggleClass("mdl-shadow--3dp");
-        $("#linkThreeOptions").toggle("slow");
-        $("#addThree").toggle();
-        $("#removeThree").toggleClass("remove");
-    });
-    $("#linkFour").click(function(){
-      // add shadow
-      $(this).toggleClass("mdl-shadow--3dp");
-        $("#linkFourOptions").toggle("slow");
-        $("#addFour").toggle();
-        $("#removeFour").toggleClass("remove");
-    });
-    // End hide/show 360 navigation items
+        $("#" + virtualTourDropdowns[index] + "Options").toggle("slow");
+        $("#add" + virtualTourDropdownButtons[index]).toggle();
+        $("#remove" + virtualTourDropdownButtons[index]).toggleClass("remove");
+    })
+});
+  
 
 
     // function for hiding all of the cards beneath the menu for categories
@@ -340,102 +190,32 @@ var desktop = function(){
         // start academic services show and slide out
 
         // changing height of drawer (for scroll bar) based on if a Building dropdown is selected
-        $("#linkOne").click(function(){
-            var check = $(this).hasClass("open");
-            if(check === false){
-                // takes height of drawer and adds 100 to it
-                var height = parseInt($("#drawerContents").height());
-                var y = 100;
-                var added = height + y;
-                function adding (value){
-                    $(".drawerContentsAdjust").height(value);
-                }
-                adding(added);
-                $(this).addClass("open");
-            } else if (check === true) {
-            // takes height of drawer and removes 100 from it
-                var height = parseInt($("#drawerContents").height());
-                var y = 100;
-                var added = height - y;
-                function adding (value){
-                    $(".drawerContentsAdjust").height(value);
-                }
-                adding(added);
-                $(this).removeClass("open");
-            }
-        });
-        // changing height of drawer (for scroll bar) based on if a Building dropdown is selected
-        $("#linkTwo").click(function(){
-            var check = $(this).hasClass("open");
-            if(check === false){
-                // takes height of drawer and adds 100 to it
-                var height = parseInt($("#drawerContents").height());
-                var y = 100;
-                var added = height + y;
-                function adding (value){
-                    $(".drawerContentsAdjust").height(value);
-                }
-                adding(added);
-                $(this).addClass("open");
-            } else if (check === true) {
+        virtualTourDropdowns.forEach(function(thisOne){
+            var index = virtualTourDropdowns.indexOf(thisOne);
+            $("#" + virtualTourDropdowns[index]).click(function(){
+                var check = $(this).hasClass("open");
+                if(check === false){
+                    // takes height of drawer and adds 100 to it
+                    var height = parseInt($("#drawerContents").height());
+                    var y = 100;
+                    var added = height + y;
+                    function adding (value){
+                        $(".drawerContentsAdjust").height(value);
+                    }
+                    adding(added);
+                    $(this).addClass("open");
+                } else if (check === true) {
                 // takes height of drawer and removes 100 from it
-                var height = parseInt($("#drawerContents").height());
-                var y = 100;
-                var added = height - y;
-                function adding (value){
-                    $(".drawerContentsAdjust").height(value);
+                    var height = parseInt($("#drawerContents").height());
+                    var y = 100;
+                    var added = height - y;
+                    function adding (value){
+                        $(".drawerContentsAdjust").height(value);
+                    }
+                    adding(added);
+                    $(this).removeClass("open");
                 }
-                adding(added);
-                $(this).removeClass("open");
-            }
-        });
-        $("#linkThree").click(function(){
-            var check = $(this).hasClass("open");
-            if(check === false){
-                // takes height of drawer and adds 100 to it
-                var height = parseInt($("#drawerContents").height());
-                var y = 100;
-                var added = height + y;
-                function adding (value){
-                    $(".drawerContentsAdjust").height(value);
-                }
-                adding(added);
-                $(this).addClass("open");
-            } else if (check === true) {
-                // takes height of drawer and removes 100 from it
-                var height = parseInt($("#drawerContents").height());
-                var y = 100;
-                var added = height - y;
-                function adding (value){
-                    $(".drawerContentsAdjust").height(value);
-                }
-                adding(added);
-                $(this).removeClass("open");
-            }
-        });
-        $("#linkFour").click(function(){
-            var check = $(this).hasClass("open");
-            if(check === false){
-                // takes height of drawer and adds 100 to it
-                var height = parseInt($("#drawerContents").height());
-                var y = 100;
-                var added = height + y;
-                function adding (value){
-                    $(".drawerContentsAdjust").height(value);
-                }
-                adding(added);
-                $(this).addClass("open");
-            } else if (check === true) {
-                // takes height of drawer and removes 100 from it
-                var height = parseInt($("#drawerContents").height());
-                var y = 100;
-                var added = height - y;
-                function adding (value){
-                    $(".drawerContentsAdjust").height(value);
-                }
-                adding(added);
-                $(this).removeClass("open");
-            }
+            })
         });
 
 

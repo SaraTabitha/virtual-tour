@@ -1071,6 +1071,7 @@ function initMap() {
             })
         });
         
+        
         // when "click for more info" is selected,
         // make corresponding overlay and popup visible
         // +animate to fade in
