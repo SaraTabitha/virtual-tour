@@ -8,22 +8,24 @@
 // all JS that is not changed depending on the width of the screen
 //
 
-//all of the drawers that contain the virtual tours are named linkone, two, three etc
+//all of the drawers that contain the virtual tour ids
 var virtualTourDropdowns = [
     "alumniTour",
     "equityTour",
     "sportsTour",
     "sidewalkTour",
-    "clowTour"
+    "clowTour",
+    "sageTour"
 ]
-//addOne, two, three etc id's for the + button on the drawer; the element is toggled on/off
+//add/remove id's for the + button on the drawer; the element is toggled on/off
 var virtualTourDropdownButtons = [
     //caps is important because it is the 2nd word in the id
     "Alumni",
     "Equity",
     "Sports",
     "Sidewalk",
-    "Clow"
+    "Clow",
+    "Sage"
 ]
 //for every virtual tour drawer, when clicked it slowly shows the options beneath and the + button changes to a - button
 virtualTourDropdowns.forEach(function(thisOne){

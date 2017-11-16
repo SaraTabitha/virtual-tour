@@ -9,6 +9,13 @@ var VRView;
 
 // declaring the executiveRoom scenes
 var scenes = {
+    //start Sage
+    sageLounge:{
+        image: 'images/Panorama/sage/study lounge/SageJournalismStudyLounge.jpg',
+        hotspots :{
+
+        }
+    },
     //start clow
     clowStudy:{
         image: 'images/Panorama/clow/study/ClowStudy.jpg',
@@ -404,6 +411,8 @@ function onVRViewReady(name){
     console.log('onReady', name);
     switch(name){
         //put in parameter the name of the SCENE, not the name
+        //case id is the id of the li from the menu that is clicked
+        //(added to the Links array below)
         case "executiveRoom": loadScene('executiveRoom');
                               break;
         case "womensCenter": loadScene('womensCenterFront');
@@ -413,6 +422,8 @@ function onVRViewReady(name){
         case "dempseyStart": loadScene('dempseyFront');
                              break;
         case "clowStudy": loadScene('clowStudy');
+                            break;
+        case "sageLounge": loadScene("sageLounge");
                             break;
     }
     
@@ -459,7 +470,8 @@ var links = [
     "womensCenter",
     "titanField",
     "dempseyStart",
-    "clowStudy"
+    "clowStudy",
+    "sageLounge"
 ]
 // fires on click of #executiveRoom
 //for each possible tour to be selected> add an event listener to hide/show the vr player and set the appropriate scene 
