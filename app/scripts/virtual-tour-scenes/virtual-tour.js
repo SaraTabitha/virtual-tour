@@ -8,6 +8,7 @@
 var VRView;
 
 // declaring the executiveRoom scenes
+//each scene can have hotspots connected to it> when the hotspot is selected it loads the scene of the same name
 var scenes = {
     //hotspot cheatsheet
     //pitch: degrees, up is positive
