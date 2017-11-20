@@ -9,7 +9,20 @@ var VRView;
 
 // declaring the executiveRoom scenes
 var scenes = {
-    
+    //hotspot cheatsheet
+    //pitch: degrees, up is positive
+    //yaw: degrees, right is positive
+    //radius: radius of circle in meters
+    // distance: distance from camera in meters
+
+
+    //start Kolf 
+    careerFair:{
+        image: 'images/Panorama/kolf/UWO360b_ - 1.jpg',
+        hotspots :{
+
+        }
+    },
     //start Sage
     sageLounge:{
         image: 'images/Panorama/sage/study lounge/SageJournalismStudyLounge.jpg',
@@ -29,6 +42,46 @@ var scenes = {
         image: 'images/Panorama/titan-field/titanFieldPano.jpg',
         hotspots: {
 
+        }
+    },
+    //start sodexoBallroom
+    sodexoBallroomA: {
+        image: 'images/Panorama/awcc/ballroom/AWCC_01_BallroomA.jpg',
+        hotspots: {
+            sodexoBallroomB: {
+                pitch: 30,
+                yaw: -180,
+                radius: 0.30,
+                distance: 1.5
+            }
+        }
+    },
+    sodexoBallroomB: {
+        image: 'images/Panorama/awcc/ballroom/AWCC_01_BallroomB.jpg',
+        hotspots: {
+            sodexoBallroomA: {
+                pitch: -20,
+                yaw: -305,
+                radius: 0.30,
+                distance: 3
+            },
+            sodexoBallroomC: {
+                pitch: 0,
+                yaw: -130,
+                radius: 0.30,
+                distance: 3
+            }
+        }
+    },
+    sodexoBallroomC: {
+        image: 'images/Panorama/awcc/ballroom/AWCC_01_BallroomC.jpg',
+        hotspots: {
+            sodexoBallroomB: {
+                pitch: 0,
+                yaw: 5,
+                radius: 0.30,
+                distance: 3
+            }
         }
     },
     //start executiveRoom
@@ -471,6 +524,10 @@ function onVRViewReady(name){
                             break;
         case "busalacchiRoom": loadScene("busalacchiRoom");
                             break;
+        case "sodexoBallroom": loadScene("sodexoBallroomA");
+                                break;
+        case "careerFair": loadScene("careerFair");
+                            break;
     }
     
 }
@@ -522,7 +579,9 @@ var links = [
     "breakTwo",
     "breakThree",
     "breakFour",
-    "busalacchiRoom"
+    "busalacchiRoom",
+    "careerFair",
+    "sodexoBallroom"
 ]
 // fires on click of #executiveRoom
 //for each possible tour to be selected> add an event listener to hide/show the vr player and set the appropriate scene 
