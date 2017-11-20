@@ -9,6 +9,7 @@ var VRView;
 
 // declaring the executiveRoom scenes
 var scenes = {
+    
     //start Sage
     sageLounge:{
         image: 'images/Panorama/sage/study lounge/SageJournalismStudyLounge.jpg',
@@ -32,9 +33,44 @@ var scenes = {
     },
     //start executiveRoom
     executiveRoom: {
-        image: 'images/Panorama/executive-board-room/executiveBoardRoom.jpg',
+        image: 'images/Panorama/awcc/executive-board-room/executiveBoardRoom.jpg',
         hotspots: {
 
+        }
+    },
+    //start busalacchi room
+    busalacchiRoom: {
+        image: 'images/Panorama/awcc/busalacchiRoom/busalacchi.jpg',
+        hotspots: {
+
+        }
+    },
+     //start breakroom1pt1
+     breakroom1pt1: {
+        image: 'images/Panorama/awcc/breakroom/room1pt1.jpg',
+        hotspots: {
+        }
+    },
+    
+    //start breakroom2
+    breakroom2: {
+        image: 'images/Panorama/awcc/breakroom/room2.jpg',
+        hotspots: {
+           
+        }
+    },
+    //start breakroom3
+    breakroom3: {
+        image: 'images/Panorama/awcc/breakroom/room3.jpg',
+        hotspots: {
+           
+        }
+    },
+    //start breakroom4
+    breakroom4: {
+        image: 'images/Panorama/awcc/breakroom/room4.jpg',
+        hotspots: {
+           
         }
     },
     //start womensCenter
@@ -425,6 +461,16 @@ function onVRViewReady(name){
                             break;
         case "sageLounge": loadScene("sageLounge");
                             break;
+        case "breakOne": loadScene("breakroom1pt1");
+                            break;
+        case "breakTwo": loadScene("breakroom2");
+                            break;
+        case "breakThree": loadScene("breakroom3");
+                            break;
+        case "breakFour": loadScene("breakroom4");
+                            break;
+        case "busalacchiRoom": loadScene("busalacchiRoom");
+                            break;
     }
     
 }
@@ -471,7 +517,12 @@ var links = [
     "titanField",
     "dempseyStart",
     "clowStudy",
-    "sageLounge"
+    "sageLounge",
+    "breakOne",
+    "breakTwo",
+    "breakThree",
+    "breakFour",
+    "busalacchiRoom"
 ]
 // fires on click of #executiveRoom
 //for each possible tour to be selected> add an event listener to hide/show the vr player and set the appropriate scene 
