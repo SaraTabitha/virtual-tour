@@ -128,12 +128,29 @@ var scenes = {
         }
     },
     //start womensCenter
+    womensCenterDoor: {
+        image: 'images/Panorama/womens-center/WomensCenter_Outside_FrontDoor.jpg',
+        hotspots: {
+            womensCenterFront: {
+                pitch: 20,
+                yaw: -180,
+                radius: 0.30,
+                distance: 1.5
+            }
+        }
+    },
     womensCenterFront: {
         image: 'images/Panorama/womens-center/womensCenterFront.jpg',
         hotspots: {
             womensCenterCouch: {
                 pitch: 20,
                 yaw: -125,
+                radius: 0.30,
+                distance: 1.5
+            },
+            womensCenterDoor: {
+                pitch: 0,
+                yaw: 120,
                 radius: 0.30,
                 distance: 1.5
             }
@@ -153,6 +170,23 @@ var scenes = {
                 yaw: -5,
                 radius: 0.30,
                 distance: 2
+            },
+            womensCenterLactationRoom: {
+                pitch: 0,
+                yaw: 95,
+                radius: 0.30,
+                distance: 3
+            }
+        }
+    },
+    womensCenterLactationRoom: {
+        image: 'images/Panorama/womens-center/WomensCenter_01_LactationRoom.jpg',
+        hotspots: {
+            womensCenterCouch: {
+                pitch: 15,
+                yaw: -190,
+                radius: 0.30,
+                distance: 1.5
             }
         }
     },
@@ -163,7 +197,7 @@ var scenes = {
                 pitch: 0,
                 yaw: 17,
                 radius: 0.30,
-                distance: 1
+                distance: 2
             }
         }
     },
@@ -484,7 +518,7 @@ var scenes = {
 //one vr view player to rule them all
 VRView = new VRView.Player('#VR', {
     image: 'images/Panorama/blank.png',
-    is_stereo: false,
+    is_stereo: false
 });
 $("#VR > iframe").addClass("vr");
 
@@ -505,7 +539,7 @@ function onVRViewReady(name){
         //(added to the Links array below)
         case "executiveRoom": loadScene('executiveRoom');
                               break;
-        case "womensCenter": loadScene('womensCenterFront');
+        case "womensCenter": loadScene('womensCenterCouch');
                              break;
         case "titanField": loadScene('titanField');
                             break;
@@ -549,8 +583,8 @@ function loadScene(id) {
      // Set the image
       VRView.setContent({
          image: scenes[id].image,
-         is_stereo: false,
-         is_autopan_off: false
+         //is_stereo: false
+         //is_autopan_off: false
     });
 
     // Add all the hotspots for the scene

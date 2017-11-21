@@ -27,7 +27,7 @@ var virtualTourDropdownButtons = [
     "Sidewalk",
     "Clow",
     "Sage",
-    "Kolf",
+    "Kolf"
 ]
 //for every virtual tour drawer, when clicked it slowly shows the options beneath and the + button changes to a - button
 virtualTourDropdowns.forEach(function(thisOne){
