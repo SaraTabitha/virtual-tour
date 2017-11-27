@@ -16,10 +16,222 @@ var scenes = {
     //radius: radius of circle in meters
     // distance: distance from camera in meters
 
+    //start Lincoln
+    lincolnEntrance:{
+        image: 'images/Panorama/lincoln/Lincoln_01_LLCE_Entrance.jpg',
+        hotspots :{
+            lincolnReceptionist: {
+                pitch: 0,
+                yaw: -10,
+                radius: 0.30,
+                distance: 3
+            }
+        }
+    },
+    lincolnReceptionist:{
+        image: 'images/Panorama/lincoln/Lincoln_02_Reception.jpg',
+        hotspots :{
+            lincolnEntrance: {
+                pitch: 0,
+                yaw: 80,
+                radius: 0.30,
+                distance: 3
+            },
+            lincoln_ten: {
+                pitch: 0,
+                yaw: 40,
+                radius: 0.30,
+                distance: 3
+            }
+        }
+    },
+    lincoln_ten:{
+        image: 'images/Panorama/lincoln/Lincoln_02_10.jpg',
+        hotspots :{
+            lincolnReceptionist: {
+                pitch: 0,
+                yaw: 140,
+                radius: 0.30,
+                distance: 3
+            },
+            lincoln_nine: {
+                pitch: 0,
+                yaw: -25,
+                radius: 0.30,
+                distance: 3
+            },
+         }
+    },
+    lincoln_nine:{
+        image: 'images/Panorama/lincoln/Lincoln_02_09.jpg',
+        hotspots :{
+            lincoln_ten: {
+                pitch: 0,
+                yaw: 110,
+                radius: 0.30,
+                distance: 3
+            },
+            lincoln_eight: {
+                pitch: 0,
+                yaw: -75,
+                radius: 0.30,
+                distance: 2.5
+            }
+         }
+    },
+    lincoln_eight:{
+        image: 'images/Panorama/lincoln/Lincoln_02_08.jpg',
+        hotspots :{
+            lincoln_nine: {
+                pitch: 0,
+                yaw: 55,
+                radius: 0.30,
+                distance: 3
+            },
+            lincoln_seven: {
+                pitch: 0,
+                yaw: -105,
+                radius: 0.30,
+                distance: 3
+            }
+         }
+    },
+    lincoln_seven:{
+        image: 'images/Panorama/lincoln/Lincoln_02_07.jpg',
+        hotspots :{
+            lincoln_eight: {
+                pitch: 0,
+                yaw: 30,
+                radius: 0.30,
+                distance: 3
+            },
+            lincoln_five: {
+                pitch: 0,
+                yaw: -180,
+                radius: 0.30,
+                distance: 2.5
+            }
+         }
+    },
+    lincoln_five:{
+        image: 'images/Panorama/lincoln/Lincoln_02_05.jpg',
+        hotspots :{
+            lincoln_seven: {
+                pitch: 0,
+                yaw: 75,
+                radius: 0.30,
+                distance: 3
+            },
+            lincolnReceptionist: {
+                pitch: 0,
+                yaw: 60,
+                radius: 0.30,
+                distance: 3
+            },
+            lincoln_six: {
+                pitch: 15,
+                yaw: 153,
+                radius: 0.30,
+                distance: 3
+            },
+            lincoln_four: {
+                pitch: 0,
+                yaw: -90,
+                radius: 0.30,
+                distance: 2.5
+            }
+         }
+    },
+    lincoln_six:{
+        image: 'images/Panorama/lincoln/Lincoln_02_06.jpg',
+        hotspots :{
+            lincoln_five: {
+                pitch: 0,
+                yaw: 60,
+                radius: 0.30,
+                distance: 3
+            }
+         }
+    },
+    lincoln_one:{
+        image: 'images/Panorama/lincoln/Lincoln_02_01.jpg',
+        hotspots :{
+            lincoln_two: {
+                pitch: 0,
+                yaw: -175,
+                radius: 0.30,
+                distance: 3
+            },
+            lincoln_four: {
+                pitch: 0,
+                yaw: 30,
+                radius: 0.30,
+                distance: 2.5
+            }
+        }
+    },
+    lincoln_two:{
+        image: 'images/Panorama/lincoln/Lincoln_02_02.jpg',
+        hotspots :{
+            lincoln_one: {
+                pitch: 0,
+                yaw: -85,
+                radius: 0.30,
+                distance: 2.5
+            }
+        }
+    },
+    lincoln_four:{
+        image: 'images/Panorama/lincoln/Lincoln_02_04.jpg',
+        hotspots :{
+            lincoln_one: {
+                pitch: 0,
+                yaw: -15,
+                radius: 0.30,
+                distance: 3
+            },
+            lincolnConference: {
+                pitch: 0,
+                yaw: 0,
+                radius: 0.30,
+                distance: 3
+            },
+            lincoln_five: {
+                pitch: 0,
+                yaw: -110,
+                radius: 0.30,
+                distance: 2
+            }
 
+        }
+    },
+    lincolnConference:{
+        image: 'images/Panorama/lincoln/Lincoln_02_03.jpg',
+        hotspots :{
+            lincoln_four:{
+                pitch: 0,
+                yaw: -145,
+                radius: 0.30,
+                distance: 3
+            }
+        }
+    },
+    //start Albee 
+    albeeWeight:{
+        image: 'images/Panorama/albee/Albee_00_WeightRoom.jpg',
+        hotspots :{
+
+        }
+    },
     //start Kolf 
     careerFair:{
         image: 'images/Panorama/kolf/UWO360b_ - 1.jpg',
+        hotspots :{
+
+        }
+    },
+    athleticTraining:{
+        image: 'images/Panorama/kolf/Kolf_AthleticTraining.jpg',
         hotspots :{
 
         }
@@ -41,6 +253,12 @@ var scenes = {
     //start titanField
     titanField: {
         image: 'images/Panorama/titan-field/titanFieldPano.jpg',
+        hotspots: {
+
+        }
+    },
+    titanAthletic: {
+        image: 'images/Panorama/titan-field/TitanStadium_AthleticTrainingRoom.jpg',
         hotspots: {
 
         }
@@ -518,7 +736,8 @@ var scenes = {
 //one vr view player to rule them all
 VRView = new VRView.Player('#VR', {
     image: 'images/Panorama/blank.png',
-    is_stereo: false
+    is_stereo: false,
+    is_autopan_off: true
 });
 $("#VR > iframe").addClass("vr");
 
@@ -563,6 +782,14 @@ function onVRViewReady(name){
                                 break;
         case "careerFair": loadScene("careerFair");
                             break;
+        case "albeeWeight": loadScene("albeeWeight");
+                            break;
+        case "kolfAthletic": loadScene("athleticTraining");
+                            break;
+        case "titanAthletic": loadScene("titanAthletic");
+                            break;
+        case "lincolnFirst": loadScene("lincolnReceptionist");
+                            break;
     }
     
 }
@@ -583,8 +810,6 @@ function loadScene(id) {
      // Set the image
       VRView.setContent({
          image: scenes[id].image,
-         //is_stereo: false
-         //is_autopan_off: false
     });
 
     // Add all the hotspots for the scene
@@ -616,7 +841,11 @@ var links = [
     "breakFour",
     "busalacchiRoom",
     "careerFair",
-    "sodexoBallroom"
+    "sodexoBallroom",
+    "albeeWeight",
+    "kolfAthletic",
+    "titanAthletic",
+    "lincolnFirst",
 ]
 // fires on click of #executiveRoom
 //for each possible tour to be selected> add an event listener to hide/show the vr player and set the appropriate scene 
