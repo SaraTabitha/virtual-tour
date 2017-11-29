@@ -18,7 +18,9 @@ var virtualTourDropdowns = [
     "sageTour",
     "kolfTour",
     "albeeTour",
-    "lincolnTour"
+    "lincolnTour",
+    "acTour",
+    "appletonTour"
 ]
 //add/remove id's for the + button on the drawer; the element is toggled on/off
 var virtualTourDropdownButtons = [
@@ -31,7 +33,9 @@ var virtualTourDropdownButtons = [
     "Sage",
     "Kolf",
     "Albee",
-    "Lincoln"
+    "Lincoln",
+    "Ac",
+    "Appleton"
 ]
 //for every virtual tour drawer, when clicked it slowly shows the options beneath and the + button changes to a - button
 virtualTourDropdowns.forEach(function(thisOne){

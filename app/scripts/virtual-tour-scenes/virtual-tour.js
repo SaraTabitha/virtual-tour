@@ -3,6 +3,10 @@
 //2. add the intital scene title to onVRViewReady() (first scene you want to load)
 //3. add the id of the html element that is selected from the menu to the links array
 
+//Recommended size of images: 2048x1024, 72dpi
+//Recommended size of previews: 512x256, 72dpi 
+//(these keep the file size small and will load more quickly)
+
 
 // globally declaring the VRView object
 var VRView;
@@ -16,6 +20,101 @@ var scenes = {
     //radius: radius of circle in meters
     // distance: distance from camera in meters
 
+     //start sodexoBallroom
+     sodexoBallroomA: {
+        image: 'images/Panorama/awcc/ballroom/AWCC_01_BallroomA.jpg',
+        hotspots: {
+            sodexoBallroomB: {
+                pitch: 30,
+                yaw: -180,
+                radius: 0.30,
+                distance: 1.5
+            }
+        }
+    },
+    sodexoBallroomB: {
+        image: 'images/Panorama/awcc/ballroom/AWCC_01_BallroomB.jpg',
+        hotspots: {
+            sodexoBallroomA: {
+                pitch: -20,
+                yaw: -305,
+                radius: 0.30,
+                distance: 3
+            },
+            sodexoBallroomC: {
+                pitch: 0,
+                yaw: -130,
+                radius: 0.30,
+                distance: 3
+            }
+        }
+    },
+    sodexoBallroomC: {
+        image: 'images/Panorama/awcc/ballroom/AWCC_01_BallroomC.jpg',
+        hotspots: {
+            sodexoBallroomB: {
+                pitch: 0,
+                yaw: 5,
+                radius: 0.30,
+                distance: 3
+            }
+        }
+    },
+    //start executiveRoom
+    executiveRoom: {
+        image: 'images/Panorama/awcc/executive-board-room/executiveBoardRoom.jpg',
+        hotspots: {
+
+        }
+    },
+    //start busalacchi room
+    busalacchiRoom: {
+        image: 'images/Panorama/awcc/busalacchiRoom/busalacchi.jpg',
+        hotspots: {
+
+        }
+    },
+     //start breakroom1pt1
+     breakroom1pt1: {
+        image: 'images/Panorama/awcc/breakroom/room1pt1.jpg',
+        hotspots: {
+        }
+    },
+    
+    //start breakroom2
+    breakroom2: {
+        image: 'images/Panorama/awcc/breakroom/room2.jpg',
+        hotspots: {
+           
+        }
+    },
+    //start breakroom3
+    breakroom3: {
+        image: 'images/Panorama/awcc/breakroom/room3.jpg',
+        hotspots: {
+           
+        }
+    },
+    //start breakroom4
+    breakroom4: {
+        image: 'images/Panorama/awcc/breakroom/room4.jpg',
+        hotspots: {
+           
+        }
+    },
+    //start ac
+    annexGallery:{
+        image: 'images/Panorama/ac/AC_02_ArtGallery.jpg',
+        hotspots :{
+            
+        }
+    },
+    priebeGallery:{
+        image: 'images/Panorama/ac/AC_01_AllenPriebeArtGallery.jpg',
+        hotspots :{
+            
+        }
+    },
     //start Lincoln
     lincolnEntrance:{
         image: 'images/Panorama/lincoln/Lincoln_01_LLCE_Entrance.jpg',
@@ -263,88 +362,7 @@ var scenes = {
 
         }
     },
-    //start sodexoBallroom
-    sodexoBallroomA: {
-        image: 'images/Panorama/awcc/ballroom/AWCC_01_BallroomA.jpg',
-        hotspots: {
-            sodexoBallroomB: {
-                pitch: 30,
-                yaw: -180,
-                radius: 0.30,
-                distance: 1.5
-            }
-        }
-    },
-    sodexoBallroomB: {
-        image: 'images/Panorama/awcc/ballroom/AWCC_01_BallroomB.jpg',
-        hotspots: {
-            sodexoBallroomA: {
-                pitch: -20,
-                yaw: -305,
-                radius: 0.30,
-                distance: 3
-            },
-            sodexoBallroomC: {
-                pitch: 0,
-                yaw: -130,
-                radius: 0.30,
-                distance: 3
-            }
-        }
-    },
-    sodexoBallroomC: {
-        image: 'images/Panorama/awcc/ballroom/AWCC_01_BallroomC.jpg',
-        hotspots: {
-            sodexoBallroomB: {
-                pitch: 0,
-                yaw: 5,
-                radius: 0.30,
-                distance: 3
-            }
-        }
-    },
-    //start executiveRoom
-    executiveRoom: {
-        image: 'images/Panorama/awcc/executive-board-room/executiveBoardRoom.jpg',
-        hotspots: {
-
-        }
-    },
-    //start busalacchi room
-    busalacchiRoom: {
-        image: 'images/Panorama/awcc/busalacchiRoom/busalacchi.jpg',
-        hotspots: {
-
-        }
-    },
-     //start breakroom1pt1
-     breakroom1pt1: {
-        image: 'images/Panorama/awcc/breakroom/room1pt1.jpg',
-        hotspots: {
-        }
-    },
     
-    //start breakroom2
-    breakroom2: {
-        image: 'images/Panorama/awcc/breakroom/room2.jpg',
-        hotspots: {
-           
-        }
-    },
-    //start breakroom3
-    breakroom3: {
-        image: 'images/Panorama/awcc/breakroom/room3.jpg',
-        hotspots: {
-           
-        }
-    },
-    //start breakroom4
-    breakroom4: {
-        image: 'images/Panorama/awcc/breakroom/room4.jpg',
-        hotspots: {
-           
-        }
-    },
     //start womensCenter
     womensCenterDoor: {
         image: 'images/Panorama/womens-center/WomensCenter_Outside_FrontDoor.jpg',
@@ -730,7 +748,78 @@ var scenes = {
                 distance: .5
             }
         }
+    },
+    //start appleton executive education center
+    appletonConference:{
+        image: 'images/Panorama/appleton_center/AppletonExecutiveEducationCenter_ConferenceRoom.jpg',
+        hotspots :{
+            
+        }
+    },
+    appletonEntrance:{
+        image: 'images/Panorama/appleton_center/AppletonExecutiveEducationCenter_Entrance.jpg',
+        hotspots :{
+            appletonExterior: {
+                pitch: 0,
+                yaw: 115,
+                radius: 0.30,
+                distance: 3
+            },
+            appletonLobby: {
+                pitch: 0,
+                yaw: 0,
+                radius: 0.30,
+                distance: 3
+            }
+            
+        }
+    },
+    appletonLobby:{
+        image: 'images/Panorama/appleton_center/AppletonExecutiveEducationCenter_Lobby.jpg',
+        hotspots :{
+            appletonEntrance: {
+                pitch: 0,
+                yaw: 105,
+                radius: 0.30,
+                distance: 3
+            },
+            appletonHall: {
+                pitch: 0,
+                yaw: 105,
+                radius: 0.30,
+                distance: 3
+            }
+        }
+    },
+    appletonHall:{
+        image: 'images/Panorama/appleton_center/AppletonExecutiveEducationCenter_Lobby.jpg',
+        hotspots :{
+            appletonLobby: {
+                pitch: 0,
+                yaw: 0,
+                radius: 0.30,
+                distance: 3
+            }
+            
+        }
+    },
+    appletonExterior:{
+        image: 'images/Panorama/appleton_center/AppletonExecutiveEducationCenter_Exterior.jpg',
+        hotspots :{
+            appletonEntrance: {
+                pitch: 0,
+                yaw: 150,
+                radius: 0.30,
+                distance: 3
+            }
+        }
     }
+};
+var alumni = {
+   
+};
+var appleton = {
+    
 };
 
 //one vr view player to rule them all
@@ -756,40 +845,51 @@ function onVRViewReady(name){
         //put in parameter the name of the SCENE, not the name
         //case id is the id of the li from the menu that is clicked
         //(added to the Links array below)
-        case "executiveRoom": loadScene('executiveRoom');
+        case "executiveRoom": loadScene( 'executiveRoom');
                               break;
+        case "breakOne": loadScene( "breakroom1pt1");
+                              break;
+        case "breakTwo": loadScene( "breakroom2");
+                              break;
+        case "breakThree": loadScene( "breakroom3");
+                              break;
+        case "breakFour": loadScene( "breakroom4");
+                              break;
+        case "busalacchiRoom": loadScene( "busalacchiRoom");
+                              break;
+        case "sodexoBallroom": loadScene( "sodexoBallroomA");
+                                  break;
         case "womensCenter": loadScene('womensCenterCouch');
                              break;
         case "titanField": loadScene('titanField');
                             break;
         case "dempseyStart": loadScene('dempseyFront');
                              break;
-        case "clowStudy": loadScene('clowStudy');
+        case "clowStudy": loadScene( 'clowStudy');
                             break;
-        case "sageLounge": loadScene("sageLounge");
+        case "sageLounge": loadScene( "sageLounge");
                             break;
-        case "breakOne": loadScene("breakroom1pt1");
-                            break;
-        case "breakTwo": loadScene("breakroom2");
-                            break;
-        case "breakThree": loadScene("breakroom3");
-                            break;
-        case "breakFour": loadScene("breakroom4");
-                            break;
-        case "busalacchiRoom": loadScene("busalacchiRoom");
-                            break;
-        case "sodexoBallroom": loadScene("sodexoBallroomA");
-                                break;
         case "careerFair": loadScene("careerFair");
                             break;
         case "albeeWeight": loadScene("albeeWeight");
                             break;
-        case "kolfAthletic": loadScene("athleticTraining");
+        case "kolfAthletic": loadScene( "athleticTraining");
                             break;
-        case "titanAthletic": loadScene("titanAthletic");
+        case "titanAthletic": loadScene( "titanAthletic");
                             break;
-        case "lincolnFirst": loadScene("lincolnReceptionist");
+        case "lincolnFirst": loadScene( "lincolnConference");
                             break;
+        case "lincolnSecond": loadScene("lincolnReceptionist");
+                            break;
+        case "annexGallery": loadScene( "annexGallery");
+                            break;
+        case "priebeGallery": loadScene( "priebeGallery");
+                            break;
+        case "appletonConference": loadScene( "appletonConference");
+                            break;
+        case "appletonEntrance": loadScene("appletonEntrance");
+                            break;
+                            
     }
     
 }
@@ -798,18 +898,18 @@ function onVRViewReady(name){
 function onVRClick(e) {
     console.log('onVRClick', e.id);
     if (e.id) {
-        loadScene(e.id);
+        loadScene( e.id);
     }
 }
 
-// loads the image and its hotspots
+// loads the image and its hotspots (without array)
 function loadScene(id) {
     //debugger;
     console.log('loadScene', id);
 
      // Set the image
       VRView.setContent({
-         image: scenes[id].image,
+         image: scenes[id].image
     });
 
     // Add all the hotspots for the scene
@@ -827,6 +927,8 @@ function loadScene(id) {
         });
      }
 }
+// loads the image and its hotspots (with array and id)
+
 //should be the id for the link in the menu that gets selected
 var links = [
     "executiveRoom",
@@ -846,6 +948,11 @@ var links = [
     "kolfAthletic",
     "titanAthletic",
     "lincolnFirst",
+    "lincolnSecond",
+    "annexGallery",
+    "priebeGallery",
+    "appletonConference",
+    "appletonEntrance"
 ]
 // fires on click of #executiveRoom
 //for each possible tour to be selected> add an event listener to hide/show the vr player and set the appropriate scene 
