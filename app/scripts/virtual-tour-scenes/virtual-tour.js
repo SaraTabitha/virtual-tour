@@ -25,10 +25,10 @@ var scenes = {
         image: 'images/Panorama/awcc/ballroom/AWCC_01_BallroomA.jpg',
         hotspots: {
             sodexoBallroomB: {
-                pitch: 30,
+                pitch: -10,
                 yaw: -180,
                 radius: 0.30,
-                distance: 1.5
+                distance: 2
             }
         }
     },
@@ -36,7 +36,7 @@ var scenes = {
         image: 'images/Panorama/awcc/ballroom/AWCC_01_BallroomB.jpg',
         hotspots: {
             sodexoBallroomA: {
-                pitch: -20,
+                pitch: -10,
                 yaw: -305,
                 radius: 0.30,
                 distance: 3
@@ -785,14 +785,14 @@ var scenes = {
             },
             appletonHall: {
                 pitch: 0,
-                yaw: 105,
+                yaw: -155,
                 radius: 0.30,
                 distance: 3
             }
         }
     },
     appletonHall:{
-        image: 'images/Panorama/appleton_center/AppletonExecutiveEducationCenter_Lobby.jpg',
+        image: 'images/Panorama/appleton_center/AppletonExecutiveEducationCenter_Hall.jpg',
         hotspots :{
             appletonLobby: {
                 pitch: 0,
@@ -813,13 +813,25 @@ var scenes = {
                 distance: 3
             }
         }
+    },
+    appletonMeeting:{
+        image: 'images/Panorama/appleton_center/AppletonExecutiveEducationCenter_MeetingRoom1.jpg',
+        hotspots :{
+            
+            }
+    },
+    appletonTraining:{
+        image: 'images/Panorama/appleton_center/AppletonExecutiveEducationCenter_TrainingRoom122.jpg',
+        hotspots :{
+            
+            }
+    },
+    appletonWorkroom:{
+        image: 'images/Panorama/appleton_center/AppletonExecutiveEducationCenter_Workroom.jpg',
+        hotspots :{
+            
+            }
     }
-};
-var alumni = {
-   
-};
-var appleton = {
-    
 };
 
 //one vr view player to rule them all
@@ -889,7 +901,13 @@ function onVRViewReady(name){
                             break;
         case "appletonEntrance": loadScene("appletonEntrance");
                             break;
-                            
+        case "appletonMeeting": loadScene("appletonMeeting");
+                            break;
+        case "appletonTraining": loadScene("appletonTraining");
+                            break;
+        case "appletonWorkroom": loadScene("appletonWorkroom");
+                            break;
+                                                                 
     }
     
 }
@@ -952,7 +970,10 @@ var links = [
     "annexGallery",
     "priebeGallery",
     "appletonConference",
-    "appletonEntrance"
+    "appletonEntrance",
+    "appletonMeeting",
+    "appletonTraining",
+    "appletonWorkroom"
 ]
 // fires on click of #executiveRoom
 //for each possible tour to be selected> add an event listener to hide/show the vr player and set the appropriate scene 
