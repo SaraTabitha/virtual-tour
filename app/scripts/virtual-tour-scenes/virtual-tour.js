@@ -16,7 +16,7 @@ var VRView;
 var scenes = {
     //hotspot cheatsheet
     //pitch: degrees, up is positive
-    //yaw: degrees, right is positive
+    //yaw: degrees, left is positive
     //radius: radius of circle in meters
     // distance: distance from camera in meters
 
@@ -753,7 +753,18 @@ var scenes = {
     appletonConference:{
         image: 'images/Panorama/appleton_center/AppletonExecutiveEducationCenter_ConferenceRoom.jpg',
         hotspots :{
-            
+            appletonLobby: {
+                pitch: 0,
+                yaw: -100,
+                radius: 0.30,
+                distance: 3
+            },
+            appletonMain: {
+                pitch: 0,
+                yaw: 40,
+                radius: 0.30,
+                distance: 3
+            }
         }
     },
     appletonEntrance:{
@@ -785,7 +796,13 @@ var scenes = {
             },
             appletonHall: {
                 pitch: 0,
-                yaw: -155,
+                yaw: -153,
+                radius: 0.30,
+                distance: 3.5
+            },
+            appletonConference: {
+                pitch: 0,
+                yaw: -118,
                 radius: 0.30,
                 distance: 3
             }
@@ -796,11 +813,39 @@ var scenes = {
         hotspots :{
             appletonLobby: {
                 pitch: 0,
-                yaw: 0,
+                yaw: 130,
+                radius: 0.30,
+                distance: 3
+            },
+            appletonTraining: {
+                pitch: 0,
+                yaw: -50,
+                radius: 0.30,
+                distance: 2
+            },
+            appletonMain: {
+                pitch: 0,
+                yaw: 40,
                 radius: 0.30,
                 distance: 3
             }
-            
+        }
+    },
+    appletonMain:{
+        image: 'images/Panorama/appleton_center/AppletonExecutiveEducationCenter_Main.jpg',
+        hotspots :{
+            appletonHall: {
+                pitch: 0,
+                yaw: 100,
+                radius: 0.30,
+                distance: 3
+            },
+            appletonMeeting: {
+                pitch: 0,
+                yaw: -107,
+                radius: 0.30,
+                distance: 3
+            }
         }
     },
     appletonExterior:{
@@ -817,13 +862,23 @@ var scenes = {
     appletonMeeting:{
         image: 'images/Panorama/appleton_center/AppletonExecutiveEducationCenter_MeetingRoom1.jpg',
         hotspots :{
-            
+            appletonMain: {
+                pitch: 0,
+                yaw: -168,
+                radius: 0.30,
+                distance: 2
+            }
             }
     },
     appletonTraining:{
         image: 'images/Panorama/appleton_center/AppletonExecutiveEducationCenter_TrainingRoom122.jpg',
         hotspots :{
-            
+            appletonHall: {
+                pitch: 0,
+                yaw: -53,
+                radius: 0.30,
+                distance: 3
+            }
             }
     },
     appletonWorkroom:{
