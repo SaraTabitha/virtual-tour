@@ -74,7 +74,7 @@ function initMap() {
             },
             //4 athletic
             {position: {lat: 44.023077, lng: -88.561081},title: "Athletic Service Building", shortHand: "athletic",
-            thumbnail: "images/campuspictures/athleticservice.jpeg" , fullImage:"images/campuspictures/athleticserviceFull.jpeg"
+            thumbnail: "images/campuspictures/athleticservice.jpeg", fullImage:"images/campuspictures/athleticserviceFull.jpeg"
             },
             //5 blackhawk
             {position: {lat: 44.023591, lng: -88.549157},title: "Blackhawk Commons", shortHand: "blackhawk",
