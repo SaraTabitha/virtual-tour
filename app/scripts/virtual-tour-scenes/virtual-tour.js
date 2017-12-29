@@ -1008,7 +1008,7 @@ function loadVR(name){
 
 // fires when the VRView objects is ready to do stuff
 function onVRViewReady(name){
-    console.log('onReady', name);
+    //console.log('onReady', name);
     switch(name){
         //put in parameter the name of the SCENE, not the name
         //case id is the id of the li from the menu that is clicked
@@ -1091,7 +1091,7 @@ function onVRViewReady(name){
 
 // fires when a hotspot gets clicked
 function onVRClick(e) {
-    console.log('onVRClick', e.id);
+    //console.log('onVRClick', e.id);
     if (e.id) {
         loadScene( e.id);
     }
@@ -1100,7 +1100,7 @@ function onVRClick(e) {
 // loads the image and its hotspots (without array)
 function loadScene(id) {
     //debugger;
-    console.log('loadScene', id);
+    //console.log('loadScene', id);
 
      // Set the image
       VRView.setContent({
