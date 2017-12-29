@@ -20,7 +20,9 @@ var virtualTourDropdowns = [
     "albeeTour",
     "lincolnTour",
     "acTour",
-    "appletonTour"
+    "appletonTour",
+    "eastTour",
+    "studentSuccessTour"
 ]
 //add/remove id's for the + button on the drawer; the element is toggled on/off
 var virtualTourDropdownButtons = [
@@ -35,19 +37,21 @@ var virtualTourDropdownButtons = [
     "Albee",
     "Lincoln",
     "Ac",
-    "Appleton"
+    "Appleton",
+    "East",
+    "StudentSuccess"
 ]
 //for every virtual tour drawer, when clicked it slowly shows the options beneath and the + button changes to a - button
 virtualTourDropdowns.forEach(function(thisOne){
     var index = virtualTourDropdowns.indexOf(thisOne);
     $("#" + virtualTourDropdowns[index]).click(function(){
+        
         $(this).toggleClass("mdl-shadow--3dp");
         $("#" + virtualTourDropdowns[index] + "Options").toggle("slow");
         $("#add" + virtualTourDropdownButtons[index]).toggle();
         $("#remove" + virtualTourDropdownButtons[index]).toggleClass("remove");
     })
 });
-  
 
 
     // function for hiding all of the cards beneath the menu for categories

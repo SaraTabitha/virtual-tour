@@ -62,7 +62,7 @@ function initMap() {
             },
             //1 baseball
             {position: {lat: 44.023042, lng: -88.561892},title: "Alumni Baseball Stadium", shortHand: "baseball",
-            thumbnail:"images/campuspictures/baseball.jpg", fullImage:""
+            thumbnail:"images/campuspictures/baseball.jpg", fullImage:"images/campuspictures/baseballFull.jpg"
             },
             //2 alumni
             {position: {lat: 44.020528, lng: -88.550432},title: "Alumni Welcome and Conference Center", shortHand: "alumni",

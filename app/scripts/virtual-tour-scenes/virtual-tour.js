@@ -102,6 +102,12 @@ var scenes = {
            
         }
     },
+    awccGreatHall:{
+        image: 'images/Panorama/awcc/great_hall/AWCC_01_Great_Hall.jpg',
+        hotspots: {
+           
+        }
+    },
     //start ac
     annexGallery:{
         image: 'images/Panorama/ac/AC_02_ArtGallery.jpg',
@@ -335,9 +341,37 @@ var scenes = {
 
         }
     },
+    kolfGymnastics:{
+        image: 'images/Panorama/kolf/Kolf_Fieldhouse_Gymnastics1.jpg',
+        hotspots :{
+            kolfGymnastics2:{
+                pitch: 10,
+                yaw: 70,
+                radius: 0.30,
+                distance: 3
+            }
+        }
+    },
+    kolfGymnastics2:{
+        image: 'images/Panorama/kolf/Kolf_Fieldhouse_Gymnastics2.jpg',
+        hotspots :{
+            kolfGymnastics:{
+                pitch: 10,
+                yaw: 70,
+                radius: 0.30,
+                distance: 3
+            }
+        }
+    },
     //start Sage
     sageLounge:{
         image: 'images/Panorama/sage/study lounge/SageJournalismStudyLounge.jpg',
+        hotspots :{
+
+        }
+    },
+    sageOffice:{
+        image: 'images/Panorama/sage/office/Sage_04_Office.jpg',
         hotspots :{
 
         }
@@ -887,6 +921,73 @@ var scenes = {
             
             }
     }
+    ,
+    //start east 
+    eastCenter:{
+        image: 'images/Panorama/east_hall/EastHallFields_Center.jpg',
+        hotspots :{
+            
+            }
+    },
+    eastSE:{
+        image: 'images/Panorama/east_hall/EastHallFields_SE.jpg',
+        hotspots :{
+            
+            }
+    },
+    eastSW:{
+        image: 'images/Panorama/east_hall/EastHallFields_SW.jpg',
+        hotspots :{
+            
+            }
+    },
+    eastNE:{
+        image: 'images/Panorama/east_hall/EastHallFields_NE.jpg',
+        hotspots :{
+            
+            }
+    },
+    eastNW:{
+        image: 'images/Panorama/east_hall/EastHallFields_NW.jpg',
+        hotspots :{
+            
+            }
+    },
+    //start student success center
+    ccLobby:{
+        image: 'images/Panorama/student_success/SSC_02_CC_Lobby.jpg',
+        hotspots:{
+            ccWaitingRoom: {
+                pitch: 0,
+                yaw: 120,
+                radius: 0.30,
+                distance: 3
+            }
+            }
+    },
+    ccWaitingRoom:{
+        image: 'images/Panorama/student_success/SSC_02_CC_StaffWaitingArea.jpg',
+        hotspots:{
+            ccLobby: {
+                pitch: 0,
+                yaw: 100,
+                radius: 0.30,
+                distance: 3
+            }
+            }
+    },
+    ccBiofeedback:{
+        image: 'images/Panorama/student_success/SSC_02_CC_BiofeedbackRoom.jpg',
+        hotspots:{
+            
+            }
+    },
+    ccRelaxation:{
+        image: 'images/Panorama/student_success/SSC_02_CC_RelaxationRoom.jpg',
+        hotspots:{
+            
+            }
+    }
 };
 
 //one vr view player to rule them all
@@ -962,7 +1063,28 @@ function onVRViewReady(name){
                             break;
         case "appletonWorkroom": loadScene("appletonWorkroom");
                             break;
-                                                                 
+        case "awccGreatHall": loadScene("awccGreatHall");
+                            break;
+        case "eastField": loadScene("eastCenter");
+                            break;
+        case "eastFieldSE": loadScene("eastSE");
+                            break;
+        case "eastFieldSW": loadScene("eastSW");
+                            break;
+        case "eastFieldNE": loadScene("eastNE");
+                            break;
+        case  "eastFieldNW": loadScene("eastSW");                         
+                            break;
+        case "gymnastics": loadScene("kolfGymnastics");
+                             break;
+        case "sageOffice": loadScene("sageOffice");
+                             break;
+        case "successLobby": loadScene("ccLobby");
+                            break;
+        case "biofeedback": loadScene("ccBiofeedback");
+                            break;
+        case "relaxationRoom": loadScene("ccRelaxation");
+                             break;
     }
     
 }
@@ -1028,7 +1150,18 @@ var links = [
     "appletonEntrance",
     "appletonMeeting",
     "appletonTraining",
-    "appletonWorkroom"
+    "appletonWorkroom",
+    "awccGreatHall",
+    "eastField",
+    "eastFieldSE",
+    "eastFieldSW",
+    "eastFieldNE",
+    "eastFieldNW",
+    "gymnastics",
+    "sageOffice",
+    "successLobby",
+    "biofeedback",
+    "relaxationRoom"
 ]
 // fires on click of #executiveRoom
 //for each possible tour to be selected> add an event listener to hide/show the vr player and set the appropriate scene 
