@@ -203,7 +203,9 @@ var desktop = function(){
         // height issue with the tour drop downs
         $("#drawerContents").css("height", "900px");
 
-        //
+        
+        
+        
         
 
 };
@@ -269,12 +271,7 @@ mobile();
 var lastWidth = $(window).width();
 var mobileWidth = 1025;
 $(window).resize(function() {
-    // if($(this).width() !== lastWidth && $(this).width() <= mobileWidth){
-    //     setTimeout(function(){
-    //       location.reload();
-    //     }, 100);
-    // }
-    // widthFunctions();
+   
     if($(this).width() >= mobileWidth){
       // Screen is desktop
       // console.log("I am going to desktop!");

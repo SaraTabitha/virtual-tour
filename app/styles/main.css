@@ -72,6 +72,13 @@ a.link{
 .text {
   font-family: 'Open Sans', sans-serif;
 }
+
+/* replacing .text on the p children of popups */
+.popupText > p{
+  font-family: 'Open Sans', sans-serif;
+}
+
+
 /*360 grey styling*/
 .mdl-layout-title.threeSixty{
   color: #d0cece;
@@ -602,6 +609,26 @@ ul#popupNav li:hover{
   font-family: "open-sans", sans-serif;
 
 }
+/* popup heading text */
+/* replacing .heading for popup headings*/
+.popupText > h1, h2, h3, h4, h5, h6{
+  /* copied styles from material design for h5 heading */
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: .02em;
+
+  /* virtual tour heading styling */
+  font-family: "open-sans", sans-serif;
+  margin: 0px;
+}
+
+/* popup p text */
+/* replacing .text and .subText for popup text*/
+.popupText > p{
+  font-family: "open-sans", sans-serif;
+
+}
 
 .imagePopup img{
   width: 400px;
@@ -1023,6 +1050,11 @@ ul#popupNav li:hover{
   .heading{
     color: black;
   }
+
+  /* replacing .heading  for popup headings*/
+  .popupText > h1, h2, h3, h4, h5, h6{
+    color: black;
+  }
   .imagePopup{
     float: left;
   }
@@ -1048,6 +1080,16 @@ ul#popupNav li:hover{
     margin-bottom: 0px;
     text-align: justify;
   }
+
+  /* replacing .subText for popup text */
+  .popupText > p{
+    position: relative;
+    padding-top: 10px;
+    color: black;
+    margin-bottom: 0px;
+    text-align: justify;
+  }
+
   li{
     cursor: pointer;
   }
@@ -1792,6 +1834,14 @@ ul#popupNav li:hover{
     margin-top: 10px;
     text-align: justify;
     }
+
+    /* replacing .subText for popup text */
+    .popupText > p{
+      margin-top: 10px;
+      text-align: justify;
+    }
+
+    
 /*end brace for media max-width 1024 (mobile)*/
 }
 /*vr portrait*/

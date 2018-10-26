@@ -198,14 +198,19 @@
 
                                                 <!--Categories-->
                                                 <div class="optionsBox">
-                                                        <ul class="options">
-                                                                <!--Academic Facilities-->
+                                                        <ul id="categories" class="options">
                                                                 <li>
+                                                                    <?php
+                                                                        include 'Building_Categories/categories_checkbox.php';
+                                                                    ?>
+                                                                </li>
+                                                                <!--Academic Facilities-->
+                                                                <!-- <li>
                                                                         <label for="accaF" id="accaFLabel" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
                                                                                 <input type="checkbox" id="accaF" class="mdl-checkbox__input">
                                                                                 <span class="mdl-checkbox__label check one"><i class="material-icons color666">school</i><a href="#" id="accFText" class="link text">Academic Facilities</a></span>
                                                                         </label>
-                                                                </li>
+                                                                </li> -->
                                                                 <!--  Athletics -->
                                                                 <li>
                                                                         <label for="ath" id="athLabel" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
@@ -1599,7 +1604,8 @@
                                                 <button id="lincolnPopupClose" class="closeButton mdl-color-text--white mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
                                                                 <i  class="material-icons">close</i>
                                                         </button>
-                                        <h1 class="text yellow ">Lincoln Hall </h1>
+                                        <h1 id="lincoln-hall-title" class="text yellow "></h1>
+                                        <!-- <h1 class="text yellow ">Lincoln Hall</h1> -->
                                 </div>
 
                                 <!-- <nav class="popupNav mdl-shadow--3dp">
@@ -1611,17 +1617,20 @@
                                 <div class="infoContainer">
                                         <div id="lincolnAboutImage" class="imagePopup">
                                                 <img  src="">
-                                                <p class="address text">
-                                                608 Algoma Blvd., Oshkosh, WI, 54901</p>
+                                                <p id="lincoln_address" class="address text">
+                                                <!-- 608 Algoma Blvd., Oshkosh, WI, 54901 -->
+                                                </p>
                                         </div>
-                                        <div class="popupText">
-                                                <h5 class="heading">About This Building</h5>
+                                        <div id="lincoln_text" class="popupText">
+                                                <!-- <h5 class="heading">About This Building</h5>
                                                 <p class="text">Remodeled in 2014, Lincoln Hall
                                                 houses the Division of Lifelong Learning and
                                                 Community Engagement and the UW Oshkosh Children's
                                                 Learning and Care Center. Lincoln Hall is also
-                                                 home to the UW Oshkosh Learning in Retirement group.</p>
+                                                 home to the UW Oshkosh Learning in Retirement group.</p> -->
+                                                
                                         </div>
+                                        
                                 </div>
                         </div>
 
@@ -3238,6 +3247,9 @@
         <!-- jQuery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         
+        <!-- API -->
+        <script id="headless_wordpress" src="scripts/api-interface.js"></script>
+
         <!-- VR view  -->
         <script src="vrview-master/build/vrview.js"></script>
         <!-- <script src="https://storage.googleapis.com/vrview/2.0/build/vrview.min.js"></script> -->
@@ -3256,6 +3268,8 @@
         
         <!-- Google Maps API -->
         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_4zQ9m4LdUjtmEOJG4g05xf2oipMUDuU&callback=initMap"></script>
+
+        
         
         <!-- Search worker -->
         <!-- code relocated to map.js -->

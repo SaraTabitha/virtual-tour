@@ -170,7 +170,8 @@ function initMap() {
              },
             //27 lincoln
             {position: {lat: 44.023204, lng: -88.546359},title: "Lincoln Hall",shortHand: "lincoln",
-            thumbnail:"images/campuspictures/lincoln-hall.jpg", fullImage:"images/campuspictures/lincoln-hallFull.jpg"
+            thumbnail:"images/campuspictures/lincoln-hall.jpg"
+            // , fullImage:"images/campuspictures/lincoln-hallFull.jpg"
               },
             //28 multicultural
             { position: {lat: 44.024842, lng: -88.550613}, title: "Multicultural Education Center",shortHand: "multicultural",
@@ -353,13 +354,13 @@ function initMap() {
             {position: {lat: 44.018367, lng: -88.556821},title: "Lot 39",shortHand: "thirtynine"
             },
             //[80] womens center lot
-            { position: {lat: 44.024816, lng: -88.546638},title: "Women's Center",shortHand: "womensCenter"
+            { position: {lat: 44.024816, lng: -88.546638},title: "Women's Center Lot",shortHand: "womensCenter"
             },
             //[81] titan one lot
-            { position: {lat: 44.024401, lng: -88.564253},title: "Titan One",shortHand: "titanOne"
+            { position: {lat: 44.024401, lng: -88.564253},title: "Titan One Lot",shortHand: "titanOne"
             },
             //[82] titan two lot
-            { position: {lat: 44.023007, lng:  -88.564339},title: "Titan Two",shortHand: "titanTwo"
+            { position: {lat: 44.023007, lng:  -88.564339},title: "Titan Two Lot",shortHand: "titanTwo"
             },
 
             //emergency phones
@@ -645,7 +646,7 @@ function initMap() {
         }
         // accessible parking set markers
         function setAccPar(){
-            //accPar Lots: 11, 4, 4a, 16, 17, 29, 25, 33, 14, 7a, 13, 34, 28, 23, womens center parking, 
+            //accPar Lots: 11, 4, 4a, 16, 17, 29, 25, 33, 14a, 7a, 13, 34, 28, 23, womens center parking, 
             //15, 32, parking ramp, 10, 12, 6a, 6, 18, titanOne, titanTwo
             allMarkers[24].setMap(map);
             allMarkers[45].setMap(map);
@@ -1121,7 +1122,10 @@ function initMap() {
             $("#" + name + "Popup").animate({"opacity": "0"}, "slow");
             $("#" + name + "Popup").css('visibility', 'hidden');
             //all of them have an AboutImage 
-            $("#" + name + "AboutImage > img").attr('src',"");
+
+            // removed this line so that when a src for an image is loaded it isn't removed after the x button is clicked on a popup 
+            // so we don't have to keep making a new ajax call after every time a popup is clicked
+            // $("#" + name + "AboutImage > img").attr('src',"");
 
             //some have iframe/dining tab/parking tab images wowwwee
             if (name === "albee" || name === "polk" || name === "reeve" || name === "sage" || name === "success"){
@@ -1176,7 +1180,7 @@ function initMap() {
                 aboutTab: true, tourTab: false, sustainabilityTab: true, bathroomsTab: true, diningTab: true , parkingTab: false},
             //4 equity
             {   name: "equity",
-                aboutTab: true, tourTab: false, sustainabilityTab: false, bathroomsTab: true, diningTab: false, parkingTab: true},
+                aboutTab: true, tourTab: false, sustainabilityTab: false, bathroomsTab: true, diningTab: false, parkingTab: false},
             //5 clow
             {   name: "clow",
                 aboutTab: true, tourTab: false, sustainabilityTab: false, bathroomsTab: false, diningTab: true, parkingTab: false},
@@ -1191,7 +1195,7 @@ function initMap() {
                 aboutTab: true, tourTab: false, sustainabilityTab: false, bathroomsTab: true, diningTab: false, parkingTab: false},
             //9 heating
             {   name: "heating",
-                aboutTab: true, tourTab: false, sustainabilityTab: true, bathroomsTab: false, diningTab: true, parkingTab: false},
+                aboutTab: true, tourTab: false, sustainabilityTab: true, bathroomsTab: false, diningTab: false, parkingTab: false},
             //10 parking
             {   name: "parkingRamp",
                 aboutTab: true, tourTab: false, sustainabilityTab: false, bathroomsTab: false, diningTab: false, parkingTab: true},
