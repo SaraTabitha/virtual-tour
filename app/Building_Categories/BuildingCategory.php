@@ -36,6 +36,8 @@ class BuildingCategory{
 
     </script>
 
+    
+
     <?php
     }
 
@@ -69,6 +71,33 @@ class BuildingCategory{
         }
     </script>
 
+    <!-- pre-CMS era styling -->
+    <style>
+            @media screen and (max-width: 1024px){
+                #<?php echo $this->slug ?>Card{
+                    width: 100%;
+                }
+
+                #<?php  echo $this->slug ?>Close{
+                    float: right;
+                    position: relative;
+                    top: 2%;
+                    right: 2%;
+                }
+
+                /*iframe video*/
+                #<?php echo $this->slug ?>Card > div:nth-child(3){
+                    padding-left: 2%;
+                    padding-right: 2%;
+                }
+            }
+            /*when window shrinks under a certain size the category page becomes scrollable*/
+            @media screen and (max-width: 400px) {
+                    #<?php echo $this->Card ?>{
+                        overflow-y:  scroll;
+                    }
+            }
+        </style>
 
     <?php
     }

@@ -163,19 +163,19 @@ virtualTourDropdowns.forEach(function(thisOne){
             $("#diningCard").toggleClass("cardOpen");
         });
 
-        
+
         // start Student Recreation show and slide out
 
-        $("#stuRText").click(function(){
-          closeAllCards();
-            $("#stuRiframe").attr("src", "https://www.youtube.com/embed/Fi7OiNe2TnU");
-            $("#stuRCard").toggleClass("cardOpen");
-            $("#drawerContents").toggleClass("active");
-        });
-        // Student Recreation x button hide
-        $("#stuRClose").click(function(){
-            $("#stuRCard").toggleClass("cardOpen");
-        });
+        // $("#stuRText").click(function(){
+        //   closeAllCards();
+        //     $("#stuRiframe").attr("src", "https://www.youtube.com/embed/Fi7OiNe2TnU");
+        //     $("#stuRCard").toggleClass("cardOpen");
+        //     $("#drawerContents").toggleClass("active");
+        // });
+        // // Student Recreation x button hide
+        // $("#stuRClose").click(function(){
+        //     $("#stuRCard").toggleClass("cardOpen");
+        // });
 
 
 

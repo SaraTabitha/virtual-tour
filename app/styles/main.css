@@ -346,18 +346,18 @@ border: #fccd32;
 
 /* stuR */
 /* border outline */
-#stuRLabel.is-checked > span.mdl-checkbox__box-outline{
+/* #stuRLabel.is-checked > span.mdl-checkbox__box-outline{
   border: #5f318f;
   }
   
   /* checkbox inner color */
-#stuRLabel.is-checked > span.mdl-checkbox__box-outline > span{
+/* #stuRLabel.is-checked > span.mdl-checkbox__box-outline > span{
     background: #5f318f;
-}
+} */
  /* checkbox ripple effect color */
- #stuRLabel > span.mdl-checkbox__ripple-container.mdl-js-ripple-effect.mdl-ripple--center > span{
+ /* #stuRLabel > span.mdl-checkbox__ripple-container.mdl-js-ripple-effect.mdl-ripple--center > span{
     background: #5f318f;
-}
+} */ 
 
 /*repositioning the text for the checkbox lines*/
 span.check{
@@ -1616,7 +1616,7 @@ ul#popupNav li:hover{
         padding-right: 2%;
     }
 
-    #stuRCard{
+    /* #stuRCard{
     width: 100%;
     }
 
@@ -1628,10 +1628,10 @@ ul#popupNav li:hover{
     }
 
     /*iframe video*/
-    #stuRCard > div:nth-child(3){
+    /* #stuRCard > div:nth-child(3){
         padding-left: 2%;
         padding-right: 2%;
-    }
+    } */ 
 
     /*popup css*/
     .generalHover{
@@ -2184,11 +2184,11 @@ ul#popupNav li:hover{
     }
 }
 /*when window shrinks under a certain size the category page becomes scrollable*/
-@media screen and (max-width: 400px) {
+/* @media screen and (max-width: 400px) {
     #stuRCard{
         overflow-y:  scroll;
     }
-}
+} */
 /*popup styling under 500px width*/
 @media screen and (max-width: 500px){
     ul#popupNav {
