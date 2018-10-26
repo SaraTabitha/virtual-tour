@@ -199,18 +199,14 @@
                                                 <!--Categories-->
                                                 <div class="optionsBox">
                                                         <ul id="categories" class="options">
-                                                                <li>
-                                                                    <?php
-                                                                        include 'Building_Categories/categories_checkbox.php';
-                                                                    ?>
-                                                                </li>
+                                                                
                                                                 <!--Academic Facilities-->
-                                                                <!-- <li>
+                                                                <li>
                                                                         <label for="accaF" id="accaFLabel" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
                                                                                 <input type="checkbox" id="accaF" class="mdl-checkbox__input">
                                                                                 <span class="mdl-checkbox__label check one"><i class="material-icons color666">school</i><a href="#" id="accFText" class="link text">Academic Facilities</a></span>
                                                                         </label>
-                                                                </li> -->
+                                                                </li>
                                                                 <!--  Athletics -->
                                                                 <li>
                                                                         <label for="ath" id="athLabel" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
@@ -247,11 +243,17 @@
                                                                         </label>
                                                                 </li>
                                                                 <!-- Student Recreation -->
-                                                                <li>
+                                                                <!-- <li>
                                                                         <label for="stuR" id="stuRLabel" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
                                                                                 <input type="checkbox" id="stuR" class="mdl-checkbox__input">
                                                                                 <span class="mdl-checkbox__label check one"><i class="material-icons color666">fitness_center</i><a href="#" id="stuRText" class="link text">Student Recreation</a></span>
                                                                         </label>
+                                                                </li> -->
+
+                                                                <li>
+                                                                    <?php
+                                                                        include 'Building_Categories/categories_checkbox.php';
+                                                                    ?>
                                                                 </li>
                                                         </ul>
                                                 </div>
@@ -553,7 +555,7 @@
                                 <!-- end Dining card  -->
 
                                 <!-- start Student Recreation card -->
-                                <div id="stuRCard" class="demo-card-wide mdl-card mdl-shadow--2dp cardClosed">
+                                <!-- <div id="stuRCard" class="demo-card-wide mdl-card mdl-shadow--2dp cardClosed">
                                         <button id="stuRClose" class="cardCloseButton mdl-color-text--black mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
                                                 <i  class="material-icons">close</i>
                                         </button>
@@ -573,8 +575,11 @@
                                         <div class="mdl-card__actions mdl-card--border">
                                                 <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect text link" href="https://recreation.uwosh.edu/" target="_blank"> Learn More </a>
                                         </div>
-                                </div>
+                                </div> -->
                                 <!-- end Student Recreation card  -->
+                                <?php
+                                    include 'Building_Categories/categories_card.php';
+                                ?>
                 </div>
         </header>
 

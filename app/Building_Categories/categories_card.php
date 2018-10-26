@@ -1,4 +1,5 @@
 <?php
+
     include_once 'Building_Categories/BuildingCategory.php';
 
     //get the building-categories 
@@ -6,21 +7,14 @@
     $data = file_get_contents($url); //put contents into variable
     $categories = json_decode($data); //decode json feed
 
-    // example $categories[0]->title->rendered;
-    // $categories[0]->slug
-
-    //example list item 
-
     //params: $slug, $title, $media, $content, $learnMoreURL
     $slug = $categories[0]->slug;
     $title = $categories[0]->title->rendered;
-    $media = $categories[0]->youtube_url;
+    $media = $categories[0]->youtube_url[0];
     $content = $categories[0]->content->rendered;
-    $learnMoreURL = $categories[0]->learn_more_url;
+    $learnMoreURL = $categories[0]->learn_more_url[0];
 
     $stuRec = new BuildingCategory( $slug, $title, $media, $content, $learnMoreURL );
-    $stuRec->createListItem();
-
-
+    $stuRec->createCategoryCard();
 
 ?>

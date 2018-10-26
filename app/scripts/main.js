@@ -162,6 +162,8 @@ virtualTourDropdowns.forEach(function(thisOne){
         $("#diningClose").click(function(){
             $("#diningCard").toggleClass("cardOpen");
         });
+
+        
         // start Student Recreation show and slide out
 
         $("#stuRText").click(function(){
