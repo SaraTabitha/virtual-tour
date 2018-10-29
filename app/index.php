@@ -78,6 +78,7 @@
 
 </head>
 <body>
+        
 
         <header id="headerWeb">
                 <div id="menu" class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-drawer">
@@ -201,47 +202,47 @@
                                                         <ul id="categories" class="options">
                                                                 
                                                                 <!--Academic Facilities-->
-                                                                <li>
+                                                                <!-- <li>
                                                                         <label for="accaF" id="accaFLabel" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
                                                                                 <input type="checkbox" id="accaF" class="mdl-checkbox__input">
                                                                                 <span class="mdl-checkbox__label check one"><i class="material-icons color666">school</i><a href="#" id="accFText" class="link text">Academic Facilities</a></span>
                                                                         </label>
-                                                                </li>
+                                                                </li> -->
                                                                 <!--  Athletics -->
-                                                                <li>
+                                                                <!-- <li>
                                                                         <label for="ath" id="athLabel" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
                                                                                 <input type="checkbox" id="ath" class="mdl-checkbox__input">
                                                                                 <span class="mdl-checkbox__label check one"><i class="material-icons color666">directions_run</i><a href="#" id="athText" class="link text">Athletics</a></span>
                                                                         </label>
-                                                                </li>
+                                                                </li> -->
                                                                 <!-- Academic services -->
-                                                                <li>
+                                                                <!-- <li>
                                                                       <label for="accS" id="accSLabel" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
                                                                               <input type="checkbox" id="accS" class="mdl-checkbox__input">
                                                                               <span class="mdl-checkbox__label check one"><i class="material-icons color666">mode_edit</i><a href="#" id="accSText" class="link text">Academic Services</a></span>
                                                                       </label>
-                                                                </li>
+                                                                </li> -->
                                                                 <!-- Campus Services -->
-                                                                <li>
+                                                                <!-- <li>
                                                                         <label for="campS" id="campSLabel" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
                                                                                 <input type="checkbox" id="campS" class="mdl-checkbox__input">
                                                                                 <span class="mdl-checkbox__label check one"><i class="material-icons color666">accessibility</i><a href="#" id="campSText" class="link text">Campus Services</a></span>
                                                                         </label>
-                                                                </li>
+                                                                </li> -->
                                                                 <!-- Residence halls -->
-                                                                <li>
+                                                                <!-- <li>
                                                                         <label for="resH" id="resHLabel" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
                                                                                 <input type="checkbox" id="resH" class="mdl-checkbox__input">
                                                                                 <span class="mdl-checkbox__label check one"><i class="material-icons color666">hotel</i><a href="#" id="resHText" class="link text">Residence Halls</a></span>
                                                                         </label>
-                                                                </li>
+                                                                </li> -->
                                                                 <!-- Dining -->
-                                                                <li>
+                                                                <!-- <li>
                                                                         <label for="dining" id="diningLabel" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
                                                                                 <input type="checkbox" id="dining" class="mdl-checkbox__input">
                                                                                 <span class="mdl-checkbox__label check one"><i class="material-icons color666">restaurant</i><a href="#" id="diningText" class="link text">Dining</a></span>
                                                                         </label>
-                                                                </li>
+                                                                </li> -->
                                                                 <!-- Student Recreation -->
                                                                 <!-- <li>
                                                                         <label for="stuR" id="stuRLabel" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
@@ -3253,7 +3254,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         
         <!-- API -->
-        <script id="headless_wordpress" src="scripts/api-interface.js"></script>
+        <!-- <script id="headless_wordpress" src="scripts/api-interface.js"></script> -->
 
         <!-- VR view  -->
         <script src="vrview-master/build/vrview.js"></script>

@@ -2,7 +2,7 @@
   "name": "uwo-virtual-tour",
   "version": "2.0.0",
   "description": "The virtual tour showing different features of campus with the capability of showing VR.",
-  "main": "index.html",
+  "main": "index.php",
   "scripts": {},
   "babel": {
     "presets": [

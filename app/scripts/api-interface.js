@@ -5,7 +5,7 @@ $(document).ready(function() {
     var image_index; 
         //content
     $.ajax({
-            url: "http://virtualtourv2.local/wp-json/wp/v2/posts?categories=2",
+            url: "https://wwwtest.uwosh.edu/virtual-tour-cms/wp-json/wp/v2/buildings",
             success: function(result) {
                         // console.log(result[0].title.rendered);
 

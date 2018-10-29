@@ -8,12 +8,21 @@ class BuildingCategory{
     private $learnMoreURL;
 
     public function __construct($slug, $title, $media, $content, $learnMoreURL){
-        // Declaring variables
+      
+        //js doesn't like - ... throws console errors :)
+        $slug = str_replace("-", "_", $slug);
         $this->slug = $slug;
+
         $this->title = $title;
+        
+        //embedded youtube url's need /embed/ otherwise it throws console errors :)
+        $media = str_replace("watch?v=", "embed/", $media);
         $this->media = $media;
+        
         $this->content = $content;
         $this->learnMoreURL = $learnMoreURL;
+
+        
     }
 
     //creates the list item that appears on the menu w/ a checkbox
@@ -22,21 +31,19 @@ class BuildingCategory{
         <label for="<?php echo $this->slug ?>" id="<?php echo $this->slug ?>Label" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
             <input type="checkbox" id="<?php echo $this->slug  ?>" class="mdl-checkbox__input">
             <span class="mdl-checkbox__label check one">
-                <a href="#" id="<?php echo $this->slug  ?>Text" onclick="show_category_card()" class="link text"><?php echo $this->title ?></a>
+                <a href="#" id="<?php echo $this->slug  ?>Text" onclick="show_<?php echo $this->slug ?>_card()" class="link text"><?php echo $this->title ?></a>
             </span>
         </label>
 
     <!-- functions for category behavior -->
     <script type="text/javascript">
 
-        function show_category_card(){
+        function show_<?php echo $this->slug ?>_card(){
             $("#<?php echo $this->slug ?>Card").toggleClass("cardOpen");
             $("#drawerContents").toggleClass("active");
         }
 
     </script>
-
-    
 
     <?php
     }
@@ -45,7 +52,7 @@ class BuildingCategory{
     function createCategoryCard(){
     ?>
         <div id="<?php echo $this->slug ?>Card" class="demo-card-wide mdl-card mdl-shadow--2dp cardClosed">
-            <button id="<?php echo $this->slug ?>Close" onclick="category_x_button()" class="cardCloseButton mdl-color-text--black mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
+            <button id="<?php echo $this->slug ?>Close" onclick="<?php echo $this->slug ?>_x_button()" class="cardCloseButton mdl-color-text--black mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
                 <i  class="material-icons">close</i>
             </button>
             <div class="mdl-card__title">
@@ -66,18 +73,20 @@ class BuildingCategory{
     <!-- functions for category behavior -->
     <script type="text/javascript">
 
-        function category_x_button(){
+        function <?php echo $this->slug ?>_x_button(){
             $("#<?php echo $this->slug ?>Card").toggleClass("cardOpen");
         }
     </script>
 
     <!-- pre-CMS era styling -->
     <style>
+        /* mobile styling for the category cards */
             @media screen and (max-width: 1024px){
+                /* card */
                 #<?php echo $this->slug ?>Card{
                     width: 100%;
                 }
-
+                /* close button */
                 #<?php  echo $this->slug ?>Close{
                     float: right;
                     position: relative;
