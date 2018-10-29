@@ -1,8 +1,7 @@
 <?php
-    include_once 'categories.php';
+    include_once 'categories.php'; //where the BuildingCategory objects were created
 
-    // $stuRec->createCategoryCard();
-
+     //create each card element for each BuildingCategory object and includes them in the HTML wherever this file was called
     foreach($category_list as $item){
         $item->createCategoryCard();
     }

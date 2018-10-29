@@ -7,34 +7,28 @@
     $data = file_get_contents($url); //put contents into variable
     $categories = json_decode($data); //decode json feed
 
-    // example $categories[0]->title->rendered;
+    //selector examples
+    // $categories[0]->title->rendered;
     // $categories[0]->slug
 
-    //example list item 
-
-    //params: $slug, $title, $media, $content, $learnMoreURL
-    // $slug = $categories[0]->slug;
-    // $title = $categories[0]->title->rendered;
-    // $media = $categories[0]->youtube_url[0];
-    // $content = $categories[0]->content->rendered;
-    // $learnMoreURL = $categories[0]->learn_more_url[0];
-
-    // $stuRec = new BuildingCategory( $slug, $title, $media, $content, $learnMoreURL );
-    
+    //all variables needed for BuildingCategory object
     $slug;
     $title;
-    $media;
+    $media; 
     $content;
     $learnMoreURL;
+
+    //the array the BuildingCategory objects will be stored in
     $category_list = array();
     $index = 0;
 
+    //creates each BuildingCategory to correspond with the categories added to the CMS
     foreach($categories as $item){
         $slug = $item->slug;
         $title = $item->title->rendered;
-        $media = $item->youtube_url[0];
+        $media = $item->youtube_url[0]; //url comes from an array
         $content = $item->content->rendered;
-        $learnMoreURL = $item->learn_more_url[0];
+        $learnMoreURL = $item->learn_more_url[0]; //url comes from an array
 
         $category_list[$index] = new BuildingCategory($slug, $title, $media, $content, $learnMoreURL);
         $index++;
