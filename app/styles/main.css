@@ -259,93 +259,93 @@ border: #fccd32;
 
 /* accaF */
 /* border outline */
-#accaFLabel.is-checked > span.mdl-checkbox__box-outline{
+/* #accaFLabel.is-checked > span.mdl-checkbox__box-outline{
   border: #981d23;
-  }
+  } */
   
   /* checkbox inner color */
-#accaFLabel.is-checked > span.mdl-checkbox__box-outline > span{
+/* #accaFLabel.is-checked > span.mdl-checkbox__box-outline > span{
     background: #981d23;
-}
+} */
  /* checkbox ripple effect color */
- #accaFLabel > span.mdl-checkbox__ripple-container.mdl-js-ripple-effect.mdl-ripple--center > span{
+ /* #accaFLabel > span.mdl-checkbox__ripple-container.mdl-js-ripple-effect.mdl-ripple--center > span{
     background: #981d23;
-}
+} */
 
 /* ath */
 /* border outline */
-#athLabel.is-checked > span.mdl-checkbox__box-outline{
+/* #athLabel.is-checked > span.mdl-checkbox__box-outline{
   border: #f17844;
-  }
+  } */
   
   /* checkbox inner color */
-#athLabel.is-checked > span.mdl-checkbox__box-outline > span{
+/* #athLabel.is-checked > span.mdl-checkbox__box-outline > span{
     background: #f17844;
-}
+} */
  /* checkbox ripple effect color */
- #athLabel > span.mdl-checkbox__ripple-container.mdl-js-ripple-effect.mdl-ripple--center > span{
+ /* #athLabel > span.mdl-checkbox__ripple-container.mdl-js-ripple-effect.mdl-ripple--center > span{
     background: #f17844;
-}
+} */
 
 /* accS */
 /* border outline */
-#accSLabel.is-checked > span.mdl-checkbox__box-outline{
+/* #accSLabel.is-checked > span.mdl-checkbox__box-outline{
   border: #875547;
-  }
+  } */
   
   /* checkbox inner color */
-#accSLabel.is-checked > span.mdl-checkbox__box-outline > span{
+/* #accSLabel.is-checked > span.mdl-checkbox__box-outline > span{
     background: #875547;
-}
+} */
  /* checkbox ripple effect color */
- #accSLabel > span.mdl-checkbox__ripple-container.mdl-js-ripple-effect.mdl-ripple--center > span{
+ /* #accSLabel > span.mdl-checkbox__ripple-container.mdl-js-ripple-effect.mdl-ripple--center > span{
     background: #875547;
-}
+} */
 
 /* campS */
 /* border outline */
-#campSLabel.is-checked > span.mdl-checkbox__box-outline{
+/* #campSLabel.is-checked > span.mdl-checkbox__box-outline{
   border: #0e5846;
-  }
+  } */
   
   /* checkbox inner color */
-#campSLabel.is-checked > span.mdl-checkbox__box-outline > span{
+/* #campSLabel.is-checked > span.mdl-checkbox__box-outline > span{
     background: #0e5846;
-}
+} */
  /* checkbox ripple effect color */
- #campSLabel > span.mdl-checkbox__ripple-container.mdl-js-ripple-effect.mdl-ripple--center > span{
+ /* #campSLabel > span.mdl-checkbox__ripple-container.mdl-js-ripple-effect.mdl-ripple--center > span{
     background: #0e5846;
-}
+} */
 
 /* resH */
 /* border outline */
-#resHLabel.is-checked > span.mdl-checkbox__box-outline{
+/* #resHLabel.is-checked > span.mdl-checkbox__box-outline{
   border: #8dd4e2;
-  }
+  } */
   
   /* checkbox inner color */
-#resHLabel.is-checked > span.mdl-checkbox__box-outline > span{
+/* #resHLabel.is-checked > span.mdl-checkbox__box-outline > span{
     background: #8dd4e2;
-}
+} */
  /* checkbox ripple effect color */
- #resHLabel > span.mdl-checkbox__ripple-container.mdl-js-ripple-effect.mdl-ripple--center > span{
+ /* #resHLabel > span.mdl-checkbox__ripple-container.mdl-js-ripple-effect.mdl-ripple--center > span{
     background: #8dd4e2;
-}
+} */
 
 /* dining */
 /* border outline */
-#diningLabel.is-checked > span.mdl-checkbox__box-outline{
+/* #diningLabel.is-checked > span.mdl-checkbox__box-outline{
   border: #282a72;
-  }
+  } */
   
   /* checkbox inner color */
-#diningLabel.is-checked > span.mdl-checkbox__box-outline > span{
+/* #diningLabel.is-checked > span.mdl-checkbox__box-outline > span{
     background: #282a72;
-}
+} */
  /* checkbox ripple effect color */
- #diningLabel > span.mdl-checkbox__ripple-container.mdl-js-ripple-effect.mdl-ripple--center > span{
+ /* #diningLabel > span.mdl-checkbox__ripple-container.mdl-js-ripple-effect.mdl-ripple--center > span{
     background: #282a72;
-}
+} */
 
 /* stuR */
 /* border outline */

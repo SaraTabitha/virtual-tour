@@ -1,4 +1,5 @@
 <?php
+include_once 'Marker_Groups/MarkerGroup.php';
 class BuildingCategory{
 
     private $slug;
@@ -6,6 +7,7 @@ class BuildingCategory{
     private $media;
     private $content;
     private $learnMoreURL;
+    private $markerGroup;
 
     public function __construct($slug, $title, $media, $content, $learnMoreURL){
       
@@ -18,7 +20,7 @@ class BuildingCategory{
         //embedded youtube url's need /embed/ otherwise it throws console errors :)
         $media = str_replace("watch?v=", "embed/", $media);
         $this->media = $media;
-        
+
         $this->content = $content;
         $this->learnMoreURL = $learnMoreURL;
 
@@ -90,6 +92,11 @@ class BuildingCategory{
         </style>
 
     <?php
+    }
+
+    function setMarkerGroup($checkboxColor, $markerIcon, $markersArray){
+        $checkboxSlug = $this->slug;
+        $this->markerGroup = new MarkerGroup($checkboxSlug, $checkboxColor, $markerIcon, $markersArray);
     }
 }
 ?>
