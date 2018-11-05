@@ -31,19 +31,9 @@ class BuildingCategory{
         <label for="<?php echo $this->slug ?>" id="<?php echo $this->slug ?>Label" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
             <input type="checkbox" id="<?php echo $this->slug  ?>" class="mdl-checkbox__input">
             <span class="mdl-checkbox__label check one">
-                <a href="#" id="<?php echo $this->slug  ?>Text" onclick="show_<?php echo $this->slug ?>_card()" class="link text"><?php echo $this->title ?></a>
+                <a href="#" id="<?php echo $this->slug  ?>Text" class="link text"><?php echo $this->title ?></a>
             </span>
         </label>
-
-    <!-- functions for category behavior -->
-    <script type="text/javascript">
-
-        function show_<?php echo $this->slug ?>_card(){
-            $("#<?php echo $this->slug ?>Card").toggleClass("cardOpen");
-            $("#drawerContents").toggleClass("active");
-        }
-
-    </script>
 
     <?php
     }
@@ -52,7 +42,7 @@ class BuildingCategory{
     function createCategoryCard(){
     ?>
         <div id="<?php echo $this->slug ?>Card" class="demo-card-wide mdl-card mdl-shadow--2dp cardClosed">
-            <button id="<?php echo $this->slug ?>Close" onclick="<?php echo $this->slug ?>_x_button()" class="cardCloseButton mdl-color-text--black mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
+            <button id="<?php echo $this->slug ?>Close"  class="cardCloseButton mdl-color-text--black mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
                 <i  class="material-icons">close</i>
             </button>
             <div class="mdl-card__title">
@@ -68,15 +58,6 @@ class BuildingCategory{
                     <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect text link" href="<?php echo $this->learnMoreURL ?>" target="_blank"> Learn More </a>
             </div>
         </div>
-
-
-    <!-- functions for category behavior -->
-    <script type="text/javascript">
-
-        function <?php echo $this->slug ?>_x_button(){
-            $("#<?php echo $this->slug ?>Card").toggleClass("cardOpen");
-        }
-    </script>
 
     <!-- pre-CMS era styling -->
     <style>

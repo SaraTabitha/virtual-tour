@@ -55,15 +55,15 @@ virtualTourDropdowns.forEach(function(thisOne){
 
 
     // function for hiding all of the cards beneath the menu for categories
-    function hideAll(){
-        $("#athCard").hide();
-        $("#accSCard").hide();
-        $("#campSCard").hide();
-        $("#accFCard").hide();
-        $("#resHCard").hide();
-        $("#diningCard").hide();
-        $("#stuRCard").hide();
-    }
+    // function hideAll(){
+    //     $("#athCard").hide();
+    //     $("#accSCard").hide();
+    //     $("#campSCard").hide();
+    //     $("#accFCard").hide();
+    //     $("#resHCard").hide();
+    //     $("#diningCard").hide();
+    //     $("#stuRCard").hide();
+    // }
 
 
     // mobile
@@ -86,82 +86,82 @@ virtualTourDropdowns.forEach(function(thisOne){
     });
 
 
-    function closeAllCards(){
-      $("#accFCard").removeClass("cardOpen");
-      $("#athCard").removeClass("cardOpen");
-      $("#accSCard").removeClass("cardOpen");
-      $("#campSCard").removeClass("cardOpen");
-      $("#resHCard").removeClass("cardOpen");
-      $("#diningCard").removeClass("cardOpen");
-      $("#stuRCard").removeClass("cardOpen");
-    }
+    // function closeAllCards(){
+    //   $("#accFCard").removeClass("cardOpen");
+    //   $("#athCard").removeClass("cardOpen");
+    //   $("#accSCard").removeClass("cardOpen");
+    //   $("#campSCard").removeClass("cardOpen");
+    //   $("#resHCard").removeClass("cardOpen");
+    //   $("#diningCard").removeClass("cardOpen");
+    //   $("#stuRCard").removeClass("cardOpen");
+    // }
     // accademic facilities// info bulding card slide in from left (when blue link is clicked)
     // academic facilities show and slide out (if clicked again, slides back in)
-    $("#accFText").click(function(){
-        closeAllCards();
-        $("#accFiframe").attr("src", "https://www.youtube.com/embed/V4404T_b5No");
-        $("#accFCard").toggleClass("cardOpen");
-        $("#drawerContents").toggleClass("active");
-    });
-    // click x button on academic facilities card and it will disappear again
-    $("#accFClose").click(function(){
-        $("#accFCard").toggleClass("cardOpen");
-        });
-        // athletics show and slide out
-        $("#athText").click(function(){
-          closeAllCards();
-            $("#athiframe").attr("src", "https://www.youtube.com/embed/EFlUSVWCA-k");
-            $("#athCard").toggleClass("cardOpen");
-            $("#drawerContents").toggleClass("active");
-        });
-        // athletics x button hide
-        $("#athClose").click(function(){
-            $("#athCard").toggleClass("cardOpen");
-        });
-        // start academic services
-        $("#accSText").click(function(){
-          closeAllCards();
-            $("#accSiframe").attr("src", "https://www.youtube.com/embed/f-KdeyV-_dA");
-            $("#accSCard").toggleClass("cardOpen");
-            $("#drawerContents").toggleClass("active");
-        });
-        // academic services x button hide
-        $("#accSClose").click(function(){
-            $("#accSCard").toggleClass("cardOpen");
-        });
-        // start campus services show and slide out
-        $("#campSText").click(function(){
-          closeAllCards();
-            $("#campSiframe").attr("src", "https://www.youtube.com/embed/6e59ycgCTi4");
-            $("#campSCard").toggleClass("cardOpen");
-            $("#drawerContents").toggleClass("active");
-        });
-        //  campus services x button hide
-        $("#campSClose").click(function(){
-            $("#campSCard").toggleClass("cardOpen");
-        });
-        // start Residence halls show and slide out
-        $("#resHText").click(function(){
-          closeAllCards();
-            $("#resHiframe").attr("src", "https://www.youtube.com/embed/R5RVenezdgM");
-            $("#resHCard").toggleClass("cardOpen");
-            $("#drawerContents").toggleClass("active");
-        });
-        // Residence halls x button hide
-        $("#resHClose").click(function(){
-            $("#resHCard").toggleClass("cardOpen");
-        });
-        // start Dining show and slide out
-        $("#diningText").click(function(){
-          closeAllCards();
-            $("#diningiframe").attr("src", "https://www.youtube.com/embed/QBXee6U14FQ");
-            $("#diningCard").toggleClass("cardOpen");
-            $("#drawerContents").toggleClass("active");
-        });
-        // Dining x button hide
-        $("#diningClose").click(function(){
-            $("#diningCard").toggleClass("cardOpen");
-        });
+    // $("#accFText").click(function(){
+    //     closeAllCards();
+    //     $("#accFiframe").attr("src", "https://www.youtube.com/embed/V4404T_b5No");
+    //     $("#accFCard").toggleClass("cardOpen");
+    //     $("#drawerContents").toggleClass("active");
+    // });
+    // // click x button on academic facilities card and it will disappear again
+    // $("#accFClose").click(function(){
+    //     $("#accFCard").toggleClass("cardOpen");
+    //     });
+    //     // athletics show and slide out
+    //     $("#athText").click(function(){
+    //       closeAllCards();
+    //         $("#athiframe").attr("src", "https://www.youtube.com/embed/EFlUSVWCA-k");
+    //         $("#athCard").toggleClass("cardOpen");
+    //         $("#drawerContents").toggleClass("active");
+    //     });
+    //     // athletics x button hide
+    //     $("#athClose").click(function(){
+    //         $("#athCard").toggleClass("cardOpen");
+    //     });
+    //     // start academic services
+    //     $("#accSText").click(function(){
+    //       closeAllCards();
+    //         $("#accSiframe").attr("src", "https://www.youtube.com/embed/f-KdeyV-_dA");
+    //         $("#accSCard").toggleClass("cardOpen");
+    //         $("#drawerContents").toggleClass("active");
+    //     });
+    //     // academic services x button hide
+    //     $("#accSClose").click(function(){
+    //         $("#accSCard").toggleClass("cardOpen");
+    //     });
+    //     // start campus services show and slide out
+    //     $("#campSText").click(function(){
+    //       closeAllCards();
+    //         $("#campSiframe").attr("src", "https://www.youtube.com/embed/6e59ycgCTi4");
+    //         $("#campSCard").toggleClass("cardOpen");
+    //         $("#drawerContents").toggleClass("active");
+    //     });
+    //     //  campus services x button hide
+    //     $("#campSClose").click(function(){
+    //         $("#campSCard").toggleClass("cardOpen");
+    //     });
+    //     // start Residence halls show and slide out
+    //     $("#resHText").click(function(){
+    //       closeAllCards();
+    //         $("#resHiframe").attr("src", "https://www.youtube.com/embed/R5RVenezdgM");
+    //         $("#resHCard").toggleClass("cardOpen");
+    //         $("#drawerContents").toggleClass("active");
+    //     });
+    //     // Residence halls x button hide
+    //     $("#resHClose").click(function(){
+    //         $("#resHCard").toggleClass("cardOpen");
+    //     });
+    //     // start Dining show and slide out
+    //     $("#diningText").click(function(){
+    //       closeAllCards();
+    //         $("#diningiframe").attr("src", "https://www.youtube.com/embed/QBXee6U14FQ");
+    //         $("#diningCard").toggleClass("cardOpen");
+    //         $("#drawerContents").toggleClass("active");
+    //     });
+    //     // Dining x button hide
+    //     $("#diningClose").click(function(){
+    //         $("#diningCard").toggleClass("cardOpen");
+    //     });
 
 
         // start Student Recreation show and slide out

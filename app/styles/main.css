@@ -88,6 +88,9 @@ a.link{
   font-size: 16px;
 }
 
+label.mdl-checkbox{
+  padding-top: 4px;
+}
 /*grey for select all checkbox lines*/
 .mdl-checkbox__label.selectAll{
   color:  #d0cece;
