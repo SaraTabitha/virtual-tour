@@ -94,9 +94,9 @@ class BuildingCategory{
     <?php
     }
 
-    function setMarkerGroup($checkboxColor, $markerIcon, $markersArray){
+    function setMarkerGroup($checkboxColor, $markerIcon){
         $checkboxSlug = $this->slug;
-        $this->markerGroup = new MarkerGroup($checkboxSlug, $checkboxColor, $markerIcon, $markersArray);
+        $this->markerGroup = new MarkerGroup($checkboxSlug, $checkboxColor, $markerIcon); //sans markersArray
     }
 }
 ?>

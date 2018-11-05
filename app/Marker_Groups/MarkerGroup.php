@@ -3,14 +3,14 @@ class MarkerGroup{
     private $slug;
     private $checkboxColor;
     private $markerIcon;
-    private $markersArray = [];
+    //private $markersArray = [];
 
-    public function __construct($slug, $checkboxColor, $markerIcon, $markersArray){
+    public function __construct($slug, $checkboxColor, $markerIcon){
         $this->slug = $slug . "Label";
 
         $this->checkboxColor = $checkboxColor;
         $this->markerIcon = $markerIcon;
-        $this->markersArray = $markersArray;
+        //$this->markersArray = $markersArray; //remember to add back in param
 
         ?>
         <style>
