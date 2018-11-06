@@ -46,6 +46,40 @@ function create_menu_link_ClickEvent(category_slug){
     });
 }
 
+function uncheckCheckbox(slug){
+    //can only use javascript selector apparently for MaterialCheckbox.function()
+    document.getElementById( slug + "Label").MaterialCheckbox.uncheck();
+}
+function checkCheckbox(slug){
+    //can only use javascript selector apparently for MaterialCheckbox.function()
+    document.getElementById( slug + "Label").MaterialCheckbox.check();
+}
+
+function isChecked(slug){
+    if( $("#" + slug).hasClass("is-checked") ){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+
+//category "Select All" checkbox event
+//if selectall is checked, check all category checkboxes; else uncheck all category checkboxes
+$("#selectAllTwo").change(function(){
+    var id = $(this).attr("id");
+    
+    $.each(category_slug_array, function(i, category_slug){
+        if(isChecked(id)){
+            checkCheckbox(category_slug);
+        }
+        else{
+            uncheckCheckbox(category_slug);
+
+        }
+    });
+});
+
 //loops through all of the slugs in the category_slug_array and makes the click events for the menu <a> tag (open/close card), and x button (close card)
 //
 $.each(category_slug_array, function(i, category_slug){

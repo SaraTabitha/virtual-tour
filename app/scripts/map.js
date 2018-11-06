@@ -1552,24 +1552,24 @@ function initMap() {
                 }
         });
 
-        $("#selectAllTwo").change(function(){
+        // $("#selectAllTwo").change(function(){
 
-                if( !$("#selectAllTwo").hasClass("is-checked") ){
-                    // HAS TO COME BEFORE UNCHECK IS TRIGGERED
-                    closeAllHover();
+        //         // if( !$("#selectAllTwo").hasClass("is-checked") ){
+        //         //     // HAS TO COME BEFORE UNCHECK IS TRIGGERED
+        //         //     closeAllHover();
                     
-                    for (gg = 7; gg < 14; gg++){
-                        triggerUncheck(checkboxes[gg]);
-                    }
+        //         //     for (gg = 7; gg < 14; gg++){
+        //         //         triggerUncheck(checkboxes[gg]);
+        //         //     }
                     
-                } else {
-                    for (gg = 7; gg < 14; gg++){
-                        triggerCheck(checkboxes[gg]);
-                    }
+        //         // } else {
+        //         //     for (gg = 7; gg < 14; gg++){
+        //         //         triggerCheck(checkboxes[gg]);
+        //         //     }
                     
-                }
+        //         // }
   
-         });
+        //  });
 
          //start of code for search that needs to interact with the infoWindows and Popups here in map.js
          $( "#searchInput" ).keyup(function() {
