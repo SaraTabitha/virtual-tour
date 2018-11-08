@@ -65,7 +65,7 @@ function isChecked(slug){
 }
 
 //category "Select All" checkbox event
-//if selectall is checked, check all category checkboxes; else uncheck all category checkboxes
+//if selectall checkbox is checked, check all category checkboxes; else uncheck all category checkboxes
 $("#selectAllTwo").change(function(){
     var id = $(this).attr("id");
     

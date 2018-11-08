@@ -11,7 +11,7 @@ class BuildingCategory{
 
     public function __construct($slug, $title, $media, $content, $learnMoreURL){
       
-        //js doesn't like - ... throws console errors :)
+        //js doesn't like - bc it throws console errors :)
         $slug = str_replace("-", "_", $slug);
         $this->slug = $slug;
 
