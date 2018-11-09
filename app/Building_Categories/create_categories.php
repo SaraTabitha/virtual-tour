@@ -1,11 +1,13 @@
 <?php
 
     include_once 'Building_Categories/BuildingCategory.php';
+    include_once 'php/contactRestAPI.php';
 
     //get the building-categories 
-    $url = "https://wwwtest.uwosh.edu/virtual-tour-cms/wp-json/wp/v2/building-categories"; //path to json 
-    $data = file_get_contents($url); //put contents into variable
-    $categories = json_decode($data); //decode json feed
+    // $url = "https://wwwtest.uwosh.edu/virtual-tour-cms/wp-json/wp/v2/building-categories"; //path to json 
+    // $data = file_get_contents($url); //put contents into variable
+    // $categories = json_decode($data); //decode json feed
+    $categories = connectRestAPI("https://wwwtest.uwosh.edu/virtual-tour-cms/wp-json/wp/v2/building-categories");
 
     //selector examples
     // $categories[0]->title->rendered;
