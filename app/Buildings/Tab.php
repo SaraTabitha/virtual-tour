@@ -1,19 +1,21 @@
 <?php
 class Tab{
+    private $slug;
     private $title;
     private $content;
     private $media;
 
-    public function __construct($title, $content){
+    public function __construct($slug, $title, $content){
         $this->title = $title;
         $this->content = $content;
 
         if(extractMedia($this->content) !== false){
             $this->media = extractMedia($this->content);
         }
+        
     }
 
-    public function extractMedia($content){
+    function extractMedia($content){
         if(hasMedia($content) !== false){
             $start = getStringStart($content);
             $length = getStringLength($content);
@@ -25,7 +27,7 @@ class Tab{
         }
     }
 
-    public function hasMedia($string){
+    function hasMedia($string){
         if( strpos($string, "[embed]") !== false ){
             return 1; //1 = has video
         }
@@ -37,7 +39,7 @@ class Tab{
         }
     }
 
-    public function getStringStart($string){
+    function getStringStart($string){
         if(hasMedia($string) == 1){
             return strpos($string, "[embed]");
         }
@@ -48,7 +50,7 @@ class Tab{
             return false;
         }
     }
-    public function getStringEnd($string){
+    function getStringEnd($string){
         if(hasMedia($string) == 1){
             return strpos($string, "[/embed]");
         }
@@ -59,7 +61,7 @@ class Tab{
             return false;
         }
     }
-    public function getStringLength($string){
+    function getStringLength($string){
         $start = getStringStart($string);
         $end = getStringEnd($string);
 

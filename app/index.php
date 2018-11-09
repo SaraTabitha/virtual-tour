@@ -201,7 +201,7 @@
                                                 <div class="optionsBox">
                                                         <ul id="categories" class="options">
                                                                     <?php
-                                                                        include 'Building_Categories/categories_checkbox.php';
+                                                                        include_once 'Building_Categories/categories_checkbox.php';
                                                                     ?>
                                                                 
                                                         </ul>
@@ -361,7 +361,7 @@
 
                                 <!-- category cards that slide out from beneath the menu -->
                                 <?php
-                                    include 'Building_Categories/categories_card.php';
+                                    include_once 'Building_Categories/categories_card.php';
                                 ?>
                 </div>
         </header>
@@ -369,6 +369,9 @@
 
 
         <main id="mainWeb" class="mdl-layout__content">
+                <?php
+                        include_once 'Buildings/create_buildings.php'
+                ?>
                 <div class="page-content">
                         <!-- POPUPS START -->
                         <!--  -->
