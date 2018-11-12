@@ -1,5 +1,5 @@
 <?php
-    include_once 'create_categories.php'; //where the BuildingCategory objects were created
+    require_once('create_categories.php'); //where the BuildingCategory objects were created
 
     $checkboxColorsArray = array(
         "#981d23" => "images/markers/maroon.png", //maroonMarker

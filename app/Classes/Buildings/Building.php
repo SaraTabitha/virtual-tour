@@ -26,6 +26,8 @@ class Building{
 
     private $tab_array; //array of tab objects
 
+    //building should have: $slug, $title, Marker marker, InfoWindow infowindow, $Tab_Array(array of tabs), Popup (holds all tabs)
+
     public function __construct($slug, $title, $content, $latitude, $longitude, $street, $city, $state, $zip, $isAccessible, $fullImageUrl, $thumbImageUrl,
     $building_categories, $hasTour, $hasSustainability, $hasBathrooms, $hasDining){
 

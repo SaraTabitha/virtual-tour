@@ -1,5 +1,5 @@
 <?php
-include_once 'Marker_Groups/MarkerGroup.php';
+require_once('Classes/Marker_Groups/MarkerGroup.php');
 class BuildingCategory{
 
     private $slug;

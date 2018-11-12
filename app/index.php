@@ -201,7 +201,7 @@
                                                 <div class="optionsBox">
                                                         <ul id="categories" class="options">
                                                                     <?php
-                                                                        include_once 'Building_Categories/categories_checkbox.php';
+                                                                        require_once('Classes/Building_Categories/categories_checkbox.php');
                                                                     ?>
                                                                 
                                                         </ul>
@@ -361,7 +361,7 @@
 
                                 <!-- category cards that slide out from beneath the menu -->
                                 <?php
-                                    include_once 'Building_Categories/categories_card.php';
+                                    require_once('Classes/Building_Categories/categories_card.php');
                                 ?>
                 </div>
         </header>
@@ -370,7 +370,7 @@
 
         <main id="mainWeb" class="mdl-layout__content">
                 <?php
-                        include_once 'Buildings/create_buildings.php'
+                        require_once('Classes/Buildings/create_buildings.php');
                 ?>
                 <div class="page-content">
                         <!-- POPUPS START -->
@@ -3040,7 +3040,7 @@
         
         <!-- API -->
         <!-- <script id="headless_wordpress" src="scripts/api-interface.js"></script> -->
-        <script src="Building_Categories/functions.js"></script>
+        <script src="Classes/Building_Categories/functions.js"></script>
 
         <!-- VR view  -->
         <script src="vrview-master/build/vrview.js"></script>

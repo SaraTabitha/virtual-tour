@@ -1,7 +1,13 @@
 <?php
 
-    include_once 'Building_Categories/BuildingCategory.php';
-    include_once 'php/contactRestAPI.php';
+    require_once('BuildingCategory.php');
+    require_once('php/contactRestAPI.php');
+
+    ?>
+    <script text="text/javascript">
+    console.log("create_categories.php: <?php echo getcwd();?>");
+    </script>
+    <?php
 
     //get the building-categories
     $categories = connectRestAPI("https://wwwtest.uwosh.edu/virtual-tour-cms/wp-json/wp/v2/building-categories");
