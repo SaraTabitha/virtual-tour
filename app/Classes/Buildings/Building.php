@@ -1,57 +1,27 @@
 <?php
-include_once "Tab.php";
+require_once("Popups/Tab.php");
 class Building{
 
     private $slug;
     private $title;
-    private $content;
-
-    private $latitude;
-    private $longitude;
-
-    private $street; 
-    private $city;
-    private $state;
-    private $zip;
-
+    
     private $isAccesible;
-    private $fullImageUrl;
-    private $thumbImageUrl;
     private $building_categories; //array of Building Category titles (strings not the building, category objects)
 
-    private $tourContent;
-    private $sustainabilityContent;
-    private $bathroomsContent;
-    private $diningContent;
 
-    private $tab_array; //array of tab objects
+    private $marker;
+    private $infoWindow;
+    private $popup;
+
 
     //building should have: $slug, $title, Marker marker, InfoWindow infowindow, $Tab_Array(array of tabs), Popup (holds all tabs)
 
-    public function __construct($slug, $title, $content, $latitude, $longitude, $street, $city, $state, $zip, $isAccessible, $fullImageUrl, $thumbImageUrl,
-    $building_categories, $hasTour, $hasSustainability, $hasBathrooms, $hasDining){
+    public function __construct($slug, $title, $isAccessible, $building_categories, $marker, $infoWindow, $popup){
 
         $this->slug = $slug;
         $this->title = $title;
-        $this->content = $content;
-        
-        $this->latitude = $latitude;
-        $this->longitude = $longitude;
-
-        $this->street = $street;
-        $this->city = $city;
-        $this->state = $state;
-        $this->zip = $zip;
-
         $this->isAccessible = $isAccessible;
-        $this->fullImageUrl = $fullImageUrl;
-        $this->thumbImageUrl = $thumbImageUrl;
-
         $this->building_categories = $building_categories;
-        $this->tourContent = $tourContent;
-        $this->sustainabilityContent = $sustainabilityContent;
-        $this->bathroomsContent = $bathroomsContent;
-        $this->diningContent = $diningContent;
 
     }
 
