@@ -17,10 +17,10 @@ class Popup{
     private $aboutContent;
     private $fullImageUrl;
 
-    private $dining_tab;
-    private $bathrooms_tab;
-    private $tour_tab;
-    private $sustainability_tab;
+    private $dining_tab; //Tab object
+    private $bathrooms_tab; //Tab object
+    private $tour_tab; //Tab object
+    private $sustainability_tab; //Tab object
 
     public function __construct($slug, $title, $aboutContent, $fullImageUrl, $dining_tab, $bathrooms_tab, $tour_tab, $sustainability_tab){
         $this->slug = $slug;

@@ -3,7 +3,7 @@
 * Sara Tabitha Mayhew
 * 11/11/18
 *
-* Description: Buildings store all of the information submit by the user through the CMS. 
+* Description: Buildings store all of the information submit by the admin through the CMS. 
 *   All of that information is stored in this classes instance variables, including info 
 *   stored in instantiated objects of Markers, InfoWindows & Popups. 
 */

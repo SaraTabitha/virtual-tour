@@ -1,4 +1,13 @@
 <?php
+/*
+* Sara Tabitha Mayhew
+* 11/11/18
+*
+* Description: BuildingCategory holds the data submit by an admin to the CMS. These correspond 
+*   to the Categories that show up on the Virtual Tour menu under "Categories". Each BuildingCategory 
+*   also has a MarkerGroup associated with them which appear/disappear when the BuildingCategory checkbox 
+*   is checked. 
+*/
 require_once('Classes/Marker_Groups/MarkerGroup.php');
 class BuildingCategory{
 
@@ -7,7 +16,7 @@ class BuildingCategory{
     private $media;
     private $content;
     private $learnMoreURL;
-    private $markerGroup;
+    private $markerGroup; //MarkerGroup object
 
     public function __construct($slug, $title, $media, $content, $learnMoreURL){
       
