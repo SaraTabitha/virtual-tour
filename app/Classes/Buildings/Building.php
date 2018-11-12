@@ -1,17 +1,24 @@
 <?php
-require_once("Popups/Tab.php");
+/*
+* Sara Tabitha Mayhew
+* 11/11/18
+*
+* Description: Buildings store all of the information submit by the user through the CMS. 
+*   All of that information is stored in this classes instance variables, including info 
+*   stored in instantiated objects of Markers, InfoWindows & Popups. 
+*/
 class Building{
 
     private $slug;
     private $title;
     
     private $isAccesible;
-    private $building_categories; //array of Building Category titles (strings not the building, category objects)
+    private $building_categories; //array of Building Category titles (Strings not the BuildingCategory objects)
 
 
-    private $marker;
-    private $infoWindow;
-    private $popup;
+    private $marker;    //marker object (latitude, longitude)
+    private $infoWindow;    //infoWindow object (address, thumbnail object)
+    private $popup; //popup object (tab content & media, fullImage)
 
 
     //building should have: $slug, $title, Marker marker, InfoWindow infowindow, $Tab_Array(array of tabs), Popup (holds all tabs)
