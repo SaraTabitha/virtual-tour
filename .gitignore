@@ -4,3 +4,5 @@ dist/
 app.yaml
 app/config.php
 virtualtourdev.sql
+
+app/php/db-config.php
