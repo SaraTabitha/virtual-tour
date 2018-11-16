@@ -1,4 +1,10 @@
 <?php
+/*
+* Sara Tabitha Mayhew
+* 11/11/18
+*
+* Description: MarkerGroup, a group of markers that corresponds to a checkbox. 
+*/
 class MarkerGroup{
     private $slug;
     private $checkboxColor;
