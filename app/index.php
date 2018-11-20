@@ -3029,6 +3029,7 @@
 
 
                         <!-- end hovers for parking lots  -->
+                        <?php require_once("Classes/Emergency_Phones/create_emergencyphones.php"); ?>
 
                         </div>
                 <!-- end google map -->

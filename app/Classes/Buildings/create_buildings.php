@@ -7,7 +7,7 @@ $buildings = connectRestAPI("https://wwwtest.uwosh.edu/virtual-tour-cms/wp-json/
 foreach($buildings as $item){
     ?>
     <script type="text/javascript">
-    console.log("<?php echo $item->title->rendered; ?>");
+    //console.log("<?php //echo $item->title->rendered; ?>");
     </script>
     <?php
 
