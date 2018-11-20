@@ -427,7 +427,7 @@ function initMap() {
         //has to be initiliazed outside of a function to use the list items with event listeners and other methods in any other functions
         var allMarkers = [];
         //function for creating marker objects and adding them to the allMarkers list using the data from the buildingMarkerInfo array
-         for(a = 0, len = allMarkersInfo.length; a < len; a++){
+        for(a = 0, len = allMarkersInfo.length; a < len; a++){
                     allMarkers[a] = new google.maps.Marker({
                     position: allMarkersInfo[a].position, title: allMarkersInfo[a].title
                 });
