@@ -10,5 +10,21 @@ class EmergencyPhone{
     private $title;
 
     private $marker; //marker object
+
+    public function __construct($slug, $title, $marker){
+        $this->slug = $slug;
+        $this->title = $title;
+        $this->marker = $marker;
+    }
+
+    function getSlug(){
+        return $this->slug;
+    }
+    function getTitle(){
+        return $this->title; 
+    }
+    function getMarker(){
+        return $this->marker;
+    }
 } 
 ?>

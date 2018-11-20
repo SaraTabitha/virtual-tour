@@ -9,6 +9,22 @@ class Marker{
     private $latitude;
     private $longitude;
     private $title;
+
+    public function __construct($lat, $long, $title){
+        $this->latitude = $lat;
+        $this->longitude = $long;
+        $this->title = $title;
+    }
+
+    function getLatitude(){
+        return $this->latitude;
+    }
+    function getLongitude(){
+        return $this->longitude;
+    }
+    function getTitle(){
+        return $this->title;
+    }
 }
 
 ?>
