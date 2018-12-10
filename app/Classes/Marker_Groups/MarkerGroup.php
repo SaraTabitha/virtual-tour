@@ -33,5 +33,19 @@ class MarkerGroup{
         </style>
         <?php
     }
+    
+    function getSlug(){
+        return $this->slug;
+    }
+    function getCheckboxColor(){
+        return $this->checkboxColor;
+    }
+    function getMarkerIcon(){
+        return $this->markerIcon;
+    }
+    function getMarkersArray(){
+        return $this->markersArray;
+    }
+
 }
 ?>

@@ -87,3 +87,7 @@ $.each(category_slug_array, function(i, category_slug){
     create_x_button_clickEvent(category_slug);
 });
 
+
+/*
+*   Functions for 
+*/

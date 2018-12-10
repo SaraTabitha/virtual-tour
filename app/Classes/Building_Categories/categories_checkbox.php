@@ -27,7 +27,10 @@
     }
 
     function createMarkerGroup($category, $checkboxColor, $markerIcon){
-        $category->setMarkerGroup($checkboxColor, $markerIcon);
+        /*
+        * TODO: set up marker groups for categories
+        */
+        //$category->setMarkerGroup($checkboxColor, $markerIcon);
     }
 
 ?>

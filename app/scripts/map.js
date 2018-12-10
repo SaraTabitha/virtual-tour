@@ -9,6 +9,27 @@
 // recap: Markers, InfoWindows(might be referred to as Hover or Hovercards), and Popups
 //
 // function for intitial map load (what appears when the page first loads)
+function testJSON(){
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function(){
+            if(this.readyState == 4 && this.status == 200){
+                console.log(this.readyState + ", " + this.status);
+                
+                var testObj = JSON.parse(this.responseText);
+                console.log(testObj.hello);
+                //console.log(testObj.title);
+
+                // console.log("title: " + testObj.title);
+                // console.log("lat: " + testObj.lat);
+                // console.log("long: " + testObj.long);
+                // console.log("icon: " + testObj.icon);
+            }
+    };
+    xmlhttp.open("GET", "../Classes/Emergency_Phones/create_emergencyphones.php", true); //EmergencyPhone.php gets through but for some reason create_emergencyphones.php doesn't...
+    xmlhttp.send(); 
+}
+
+
 function initMap() {
         // center of map (UWO coordinates)
         var uwo = {lat: 44.025098, lng: -88.554610};
@@ -39,7 +60,7 @@ function initMap() {
         var darkgreenMarker = "images/markers/darkgreen.png";
         var tealMarker = "images/markers/teal.png";
         var lightblueMarker = "images/markers/lightblue.png";
-        var blueMarker = "images/markers/blue.png";
+        //var blueMarker = "images/markers/blue.png";
         var navyMarker = "images/markers/navy.png";
         var lightpurpleMarker = "images/markers/lightpurple.png";
         var darkpurpleMarker = "images/markers/darkpurple.png";
@@ -361,65 +382,65 @@ function initMap() {
             },
             //[82] titan two lot
             { position: {lat: 44.023007, lng:  -88.564339},title: "Titan Two Lot",shortHand: "titanTwo"
-            },
+            }
 
             //emergency phones
             //[83] phonezero
-            {position: {lat: 44.029568, lng: -88.557150},title: "Emergency Phone"},
-            //[84] phoneone
-            {position: {lat: 44.029075, lng: -88.558184},title: "Emergency Phone"},
-            //[85] phonetwo
-            {position: {lat: 44.028831, lng: -88.555125},title: "Emergency Phone"},
-            //[86] phonethree
-            {position: {lat: 44.028514, lng: -88.554386},title: "Emergency Phone"},
-            //[87] phonefour
-            {position: {lat: 44.029626, lng: -88.552936},title: "Emergency Phone"},
-            //[88] phonefive
-            {position: {lat: 44.028456, lng: -88.551907},title: "Emergency Phone"},
-            //[89] phonesix
-            {position: {lat: 44.027457	, lng: -88.553422},title: "Emergency Phone"},
-            //[90] phoneseven
-            {position: {lat: 44.028501, lng: -88.549911},title: "Emergency Phone"},
-            //[91] phoneeight
-            {position: {lat: 44.025255, lng: -88.555618},title: "Emergency Phone"},
-            //[92] phonenine
-            {position: {lat: 44.026028, lng: -88.552211},title: "Emergency Phone" },
-            //[93] phoneten
-            {position: {lat: 44.026556, lng: -88.550250},title: "Emergency Phone"},
-            //[94] phoneeleven
-            {position: {lat: 44.026670, lng: -88.547795},title: "Emergency Phone"},
-            //[95] phonetwelve
-            {position:{lat: 44.025771, lng: -88.547412},title: "Emergency Phone"},
-            //[96] phonethirteen
-            {position: {lat: 44.024777, lng: -88.546711},title: "Emergency Phone" },
-            //[97] phonefourteen
-            {position: {lat: 44.024921, lng: -88.548533},title: "Emergency Phone"},
-            //[98] phonefifteen
-            {position: {lat: 44.024921, lng: -88.548533},title: "Emergency Phone" },
-            //[99] phonesixteen
-            {position: {lat: 44.023941, lng: -88.554160},title: "Emergency Phone" },
-            //[100] phoneseventeen
-            { position: {lat: 44.023489, lng: -88.553277},title: "Emergency Phone"},
-            //[101] phoneeighteen
-            {position: {lat: 44.022102, lng: -88.552487},title: "Emergency Phone" },
-            //[102] phonenineteen
-            { position: {lat: 44.023313, lng: -88.551255},title: "Emergency Phone" },
-            //[103] phonetwenty
-            {position:{lat: 44.024791, lng: -88.551402}, title: "Emergency Phone" },
-            //[104] phonetwentyone
-            { position:{lat: 44.024395, lng:  -88.550325},title: "Emergency Phone"},
-            //[105] phonetwentytwo
-            {position:{lat: 44.023321, lng: -88.548516},title: "Emergency Phone" },
-            //[106] phonetwentythree
-            {position: {lat: 44.021428, lng: -88.550672}, title: "Emergency Phone" },
-            //[107] phonetwentyfour
-            {position: {lat: 44.021057, lng: -88.551801},title: "Emergency Phone"},
-            //[108] phonetwentyfive
-            {position: {lat: 44.021727, lng: -88.548169},title: "Emergency Phone" },
-            //[109] phonetwentysix
-            {position: {lat: 44.022676, lng:  -88.546843},title: "Emergency Phone" },
-            //[110] phonetwentyseven
-            {position: {lat: 44.018830, lng: -88.556802}, title: "Emergency Phone"}
+            // {position: {lat: 44.029568, lng: -88.557150},title: "Emergency Phone"},
+            // //[84] phoneone
+            // {position: {lat: 44.029075, lng: -88.558184},title: "Emergency Phone"},
+            // //[85] phonetwo
+            // {position: {lat: 44.028831, lng: -88.555125},title: "Emergency Phone"},
+            // //[86] phonethree
+            // {position: {lat: 44.028514, lng: -88.554386},title: "Emergency Phone"},
+            // //[87] phonefour
+            // {position: {lat: 44.029626, lng: -88.552936},title: "Emergency Phone"},
+            // //[88] phonefive
+            // {position: {lat: 44.028456, lng: -88.551907},title: "Emergency Phone"},
+            // //[89] phonesix
+            // {position: {lat: 44.027457	, lng: -88.553422},title: "Emergency Phone"},
+            // //[90] phoneseven
+            // {position: {lat: 44.028501, lng: -88.549911},title: "Emergency Phone"},
+            // //[91] phoneeight
+            // {position: {lat: 44.025255, lng: -88.555618},title: "Emergency Phone"},
+            // //[92] phonenine
+            // {position: {lat: 44.026028, lng: -88.552211},title: "Emergency Phone" },
+            // //[93] phoneten
+            // {position: {lat: 44.026556, lng: -88.550250},title: "Emergency Phone"},
+            // //[94] phoneeleven
+            // {position: {lat: 44.026670, lng: -88.547795},title: "Emergency Phone"},
+            // //[95] phonetwelve
+            // {position:{lat: 44.025771, lng: -88.547412},title: "Emergency Phone"},
+            // //[96] phonethirteen
+            // {position: {lat: 44.024777, lng: -88.546711},title: "Emergency Phone" },
+            // //[97] phonefourteen
+            // {position: {lat: 44.024921, lng: -88.548533},title: "Emergency Phone"},
+            // //[98] phonefifteen
+            // {position: {lat: 44.024921, lng: -88.548533},title: "Emergency Phone" },
+            // //[99] phonesixteen
+            // {position: {lat: 44.023941, lng: -88.554160},title: "Emergency Phone" },
+            // //[100] phoneseventeen
+            // { position: {lat: 44.023489, lng: -88.553277},title: "Emergency Phone"},
+            // //[101] phoneeighteen
+            // {position: {lat: 44.022102, lng: -88.552487},title: "Emergency Phone" },
+            // //[102] phonenineteen
+            // { position: {lat: 44.023313, lng: -88.551255},title: "Emergency Phone" },
+            // //[103] phonetwenty
+            // {position:{lat: 44.024791, lng: -88.551402}, title: "Emergency Phone" },
+            // //[104] phonetwentyone
+            // { position:{lat: 44.024395, lng:  -88.550325},title: "Emergency Phone"},
+            // //[105] phonetwentytwo
+            // {position:{lat: 44.023321, lng: -88.548516},title: "Emergency Phone" },
+            // //[106] phonetwentythree
+            // {position: {lat: 44.021428, lng: -88.550672}, title: "Emergency Phone" },
+            // //[107] phonetwentyfour
+            // {position: {lat: 44.021057, lng: -88.551801},title: "Emergency Phone"},
+            // //[108] phonetwentyfive
+            // {position: {lat: 44.021727, lng: -88.548169},title: "Emergency Phone" },
+            // //[109] phonetwentysix
+            // {position: {lat: 44.022676, lng:  -88.546843},title: "Emergency Phone" },
+            // //[110] phonetwentyseven
+            // {position: {lat: 44.018830, lng: -88.556802}, title: "Emergency Phone"}
             
         ]
         
@@ -432,6 +453,11 @@ function initMap() {
                     position: allMarkersInfo[a].position, title: allMarkersInfo[a].title
                 });
         }
+
+        
+        
+        testJSON();
+
         // adding infoWindows for building markers 
         var infoWindowsAll = [];
           //basic single object creation for all hover infoWindows that popup when a marker is clicked
@@ -703,20 +729,20 @@ function initMap() {
         
         
         // function for setting emergency phone markers
-        function setEmergencyPhones(){
-            //83-110 
-            for(u = 83; u < 111; u++){
-                allMarkers[u].setMap(map);
-                allMarkers[u].setIcon(blueMarker);
-            }
-        }
+        // function setEmergencyPhones(){
+        //     //83-110 
+        //     for(u = 83; u < 111; u++){
+        //         allMarkers[u].setMap(map);
+        //         allMarkers[u].setIcon(blueMarker);
+        //     }
+        // }
         // function for removing emergency phone markers
-        function removeEmergencyPhones(){
-            //83-110 
-            for(v = 83; v < 111; v++){
-                allMarkers[v].setMap(null);
-            }
-        }
+        // function removeEmergencyPhones(){
+        //     //83-110 
+        //     for(v = 83; v < 111; v++){
+        //         allMarkers[v].setMap(null);
+        //     }
+        // }
         // setting sustainability markers
         function setSust(){
             //sust buildings: albee, alumni, blackhawk, biodigester, heating, horizon, reeve, sage, recreation

@@ -3029,7 +3029,7 @@
 
 
                         <!-- end hovers for parking lots  -->
-                        <?php require_once("Classes/Emergency_Phones/create_emergencyphones.php"); ?>
+                        <?php //require_once("Classes/Emergency_Phones/create_emergencyphones.php"); ?>
 
                         </div>
                 <!-- end google map -->
@@ -3041,7 +3041,9 @@
         
         <!-- API -->
         <!-- <script id="headless_wordpress" src="scripts/api-interface.js"></script> -->
-        <script src="Classes/Building_Categories/functions.js"></script>
+        
+        <!-- our javascript -->
+        <script src="scripts/functions.js"></script>
 
         <!-- VR view  -->
         <script src="vrview-master/build/vrview.js"></script>

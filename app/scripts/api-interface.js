@@ -188,15 +188,6 @@ $(document).ready(function() {
                         $("#lincoln_text").html(first_page + page_count);
 
                         
-
-                        
-
-                        
-                        
-
-
-                        
-                   
             }
     });
         //featured image     
