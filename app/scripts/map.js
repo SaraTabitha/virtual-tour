@@ -13,11 +13,15 @@ function testJSON(){
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function(){
             if(this.readyState == 4 && this.status == 200){
+                /*
+                NOTE: php file cannot contain or link/require any files that have html/css/js embedded otherwise it breaks the responseText
+                */
                 console.log(this.readyState + ", " + this.status);
                 
                 var testObj = JSON.parse(this.responseText);
-                console.log(testObj.hello);
-                //console.log(testObj.title);
+                //console.log(testObj.hello);
+                
+                console.log(testObj.title);
 
                 // console.log("title: " + testObj.title);
                 // console.log("lat: " + testObj.lat);

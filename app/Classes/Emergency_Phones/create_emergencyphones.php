@@ -29,33 +29,32 @@ foreach($emergencyPhones as $phone){
 
     
 
-    //$emergencyPhone_markers[$index] = new Marker($latitude, $longitude, $title);
+    $emergencyPhone_markers[$index] = new Marker($latitude, $longitude, $title);
 
-    //$emergencyPhone_list[$index] = new EmergencyPhone($slug, $title, $emergencyPhone_markers[$index]);
+    $emergencyPhone_list[$index] = new EmergencyPhone($slug, $title, $emergencyPhone_markers[$index]);
     $index++;
 }
 
-//$emergencyPhones = new MarkerGroup($slug, $checkboxColor, $markerIcon, $emergencyPhone_markers);
-//$phones = $emergencyPhones->getMarkersArray();
-//$test = $phones[0];
-//$icon = $emergencyPhones->getMarkerIcon();
+$emergencyPhones = new MarkerGroup($slug, $checkboxColor, $markerIcon, $emergencyPhone_markers);
+$phones = $emergencyPhones->getMarkersArray();
+$test = $phones[0];
+$icon = $emergencyPhones->getMarkerIcon();
 
 // $myObj = "hi";
-// // $testObj->title = $test->getTitle();
+  $testObj->title = $test->getTitle();
 // // $testObj->lat = $test->getLatitude();
 // // $testObj->long = $test->getLongitude();
 // // $testObj->icon = $icon;
 
 
-// $json = json_encode($testObj);
+ $json = json_encode($testObj);
 
-// echo $json;
+ echo $json;
 
 //$myObj = array("hello", "goodbye");
 
-$myObj->hello = "hello";
-$myObj->goodbye = "goodbye";
-$json = json_encode($myObj);
-echo $json;
-
+//$myObj->hello = "hello";
+//$myObj->goodbye = "goodbye";
+//$json = json_encode($myObj);
+//echo $json;
 ?>
