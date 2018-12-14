@@ -209,7 +209,7 @@
 
                                                 <?php
                                                         require_once('Classes/Emergency_Phones/create_emergencyphones.php');
-                                                        require_once('Classes/Emergency_Phones/test.php');
+                                                        require_once('Classes/Marker_Groups/style_checkboxes.php');
                                                 ?>
 
                                                 <!--black strip-->
