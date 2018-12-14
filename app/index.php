@@ -207,6 +207,11 @@
                                                         </ul>
                                                 </div>
 
+                                                <?php
+                                                        require_once('Classes/Emergency_Phones/create_emergencyphones.php');
+                                                        require_once('Classes/Emergency_Phones/test.php');
+                                                ?>
+
                                                 <!--black strip-->
                                                 <div class="mdl-layout__header-row mdl-color--black drawer">
                                                         <span class="mdl-layout-title mdl-color-text--white text">Virtual Tours</span>
@@ -3029,7 +3034,7 @@
 
 
                         <!-- end hovers for parking lots  -->
-                        <?php //require_once("Classes/Emergency_Phones/create_emergencyphones.php"); ?>
+                        
 
                         </div>
                 <!-- end google map -->

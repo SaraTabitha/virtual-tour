@@ -29,7 +29,7 @@ function testJSON(){
                 // console.log("icon: " + testObj.icon);
             }
     };
-    xmlhttp.open("GET", "../Classes/Emergency_Phones/create_emergencyphones.php", true); //EmergencyPhone.php gets through but for some reason create_emergencyphones.php doesn't...
+    xmlhttp.open("GET", "../Classes/Emergency_Phones/phones_json.php", true); //EmergencyPhone.php gets through but for some reason create_emergencyphones.php doesn't...
     xmlhttp.send(); 
 }
 
