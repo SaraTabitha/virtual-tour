@@ -28,11 +28,10 @@ function get(url){
         xmlhttp.onreadystatechange = function(){
                 if(this.readyState == 4 && this.status == 200){
                     
-                    console.log(this.readyState + ", " + this.status);
+                    //console.log(this.readyState + ", " + this.status);
                     
-                    //return JSON.parse(this.responseText);
-                    resolve(JSON.parse(this.responseText));
-                    
+                    //resolve(JSON.parse(this.responseText));
+                    resolve(this.responseText);
                 }
                 
         };
@@ -42,11 +41,45 @@ function get(url){
         xmlhttp.send(); 
      });
 }
+var test = get("../Classes/Emergency_Phones/phones_json.php");
+console.log("test1: " + test);
+
+//2
 get("../Classes/Emergency_Phones/phones_json.php").then(function(response){
-    console.log("Success!: ", response);
-}, function(error){
-    console.log("Failed!: ", error);
+    console.log("test2: " + response);
 })
+
+//3
+get("../Classes/Emergency_Phones/phones_json.php").then(function(response){
+    return JSON.parse(response);
+}).then(function(response){
+    console.log("test3: " + response);
+})
+
+//4
+function getJSON(url){
+    return get(url).then(JSON.parse);
+}
+var phones = getJSON("../Classes/Emergency_Phones/phones_json.php");
+console.log("test4: "  + phones);
+
+//5
+var title1; 
+get("../Classes/Emergency_Phones/phones_json.php").then(function(response){
+     var parsed = JSON.parse(response);
+     console.log("inside-5-parsed: " + parsed);
+     console.log("inside-5-titles: " + parsed.titles);
+     title1 = parsed.titles[0];
+     console.log("inside-5-title[0]: " + title1);
+})
+console.log("outside-test5: " + title1);
+
+/*
+*   Scope PLAN:
+*   -> because "reponse" values only load inside .then(), put get(url).then() inside of initMap for all of the markers...
+*   -> and do all marker things in the "all markers" array 
+*   hope: get(url).then() chaining can make/return a massive AllMarkersInfo object/array ?
+*/
 
 // function for intitial map load (what appears when the page first loads)
 function initMap() {
@@ -761,6 +794,21 @@ function initMap() {
         //         allMarkers[v].setMap(null);
         //     }
         // }
+        
+        // var phones = get().then(function(response){
+        //     //phones success!
+        //     console.log(response.titles);
+        //     console.log(response.latitudes);
+        //     console.log(response.longitudes);
+        //     console.log(response.icon);
+        //    return response;
+        // }, function(error){
+        //     console.log("Phones Failed!: ", error);
+        // })
+
+        
+        
+
         // setting sustainability markers
         function setSust(){
             //sust buildings: albee, alumni, blackhawk, biodigester, heating, horizon, reeve, sage, recreation
