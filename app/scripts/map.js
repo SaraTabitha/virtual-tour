@@ -8,32 +8,47 @@
 // all of this is handled in this file!
 // recap: Markers, InfoWindows(might be referred to as Hover or Hovercards), and Popups
 //
-// function for intitial map load (what appears when the page first loads)
-function testJSON(){
-    var xmlhttp = new XMLHttpRequest();
-    xmlhttp.onreadystatechange = function(){
-            if(this.readyState == 4 && this.status == 200){
-                /*
-                NOTE: php file cannot contain or link/require any files that have html/css/js embedded otherwise it breaks the responseText
-                */
-                console.log(this.readyState + ", " + this.status);
-                
-                var testObj = JSON.parse(this.responseText);
-                //console.log(testObj.hello);
-                
-                console.log(testObj.title);
 
-                // console.log("title: " + testObj.title);
-                // console.log("lat: " + testObj.lat);
-                // console.log("long: " + testObj.long);
-                // console.log("icon: " + testObj.icon);
-            }
-    };
-    xmlhttp.open("GET", "../Classes/Emergency_Phones/phones_json.php", true); //EmergencyPhone.php gets through but for some reason create_emergencyphones.php doesn't...
-    xmlhttp.send(); 
+
+
+
+/*
+* Promise: https://developers.google.com/web/fundamentals/primers/promises
+* "Promisifying XMLHttpRequest"
+*/
+/*
+* NOTE: url = a php file that cannot contain or link/require any files that have html/css/js embedded otherwise it breaks the responseText
+*/
+function get(url){
+    
+     return new Promise(function(resolve, reject){
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.open("GET", url, true); 
+
+        xmlhttp.onreadystatechange = function(){
+                if(this.readyState == 4 && this.status == 200){
+                    
+                    console.log(this.readyState + ", " + this.status);
+                    
+                    //return JSON.parse(this.responseText);
+                    resolve(JSON.parse(this.responseText));
+                    
+                }
+                
+        };
+        xmlhttp.onerror = function(){
+            reject(Error("Network Error"));
+        };
+        xmlhttp.send(); 
+     });
 }
+get("../Classes/Emergency_Phones/phones_json.php").then(function(response){
+    console.log("Success!: ", response);
+}, function(error){
+    console.log("Failed!: ", error);
+})
 
-
+// function for intitial map load (what appears when the page first loads)
 function initMap() {
         // center of map (UWO coordinates)
         var uwo = {lat: 44.025098, lng: -88.554610};
@@ -460,7 +475,6 @@ function initMap() {
 
         
         
-        testJSON();
 
         // adding infoWindows for building markers 
         var infoWindowsAll = [];

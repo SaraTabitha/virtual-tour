@@ -1,10 +1,9 @@
 <?php
-require_once("EmergencyPhone.php");
+require_once(__DIR__ . "/EmergencyPhone.php");
 
 require_once(__DIR__ . "/../Marker_Groups/MarkerGroup.php");
 require_once(__DIR__ . "/../Marker_Groups/Marker.php");
 require_once(__DIR__ . "/../../php/contactRestAPI.php");
-//var_dump(__DIR__ . "/../../php/contactRestAPI.php");
 
 
 $emergencyPhones = connectRestAPI("https://wwwtest.uwosh.edu/virtual-tour-cms/wp-json/wp/v2/emergency-phones?per_page=100");
