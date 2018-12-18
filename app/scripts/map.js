@@ -828,9 +828,21 @@ function initMap() {
             
             $("#emergency").change(function(){
                 if( !$("#emergencyLabel").hasClass("is-checked")){
+                    //checked
                     setMarkers(emergency_markers, icon);
                 }else{
+                    //unchecked
                     removeMarkers(emergency_markers);
+                }
+            });
+
+            $("#selectAllOne").change(function(){
+                if( !$("#selectAllOne").hasClass("is-checked") ){
+                    //unchecked
+                    removeMarkers(emergency_markers);
+                }else{
+                    //checked
+                    setMarkers(emergency_markers, icon);
                 }
             });
             
