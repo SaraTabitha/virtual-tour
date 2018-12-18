@@ -30,8 +30,8 @@ function get(url){
                     
                     //console.log(this.readyState + ", " + this.status);
                     
-                    //resolve(JSON.parse(this.responseText));
-                    resolve(this.responseText);
+                    resolve(JSON.parse(this.responseText));
+                    //resolve(this.responseText);
                 }
                 
         };
@@ -41,38 +41,41 @@ function get(url){
         xmlhttp.send(); 
      });
 }
-var test = get("../Classes/Emergency_Phones/phones_json.php");
-console.log("test1: " + test);
+/*
+* TESTS
+*/
+// var test = get("../Classes/Emergency_Phones/phones_json.php");
+// console.log("test1: " + test);
 
-//2
-get("../Classes/Emergency_Phones/phones_json.php").then(function(response){
-    console.log("test2: " + response);
-})
+// //2
+// get("../Classes/Emergency_Phones/phones_json.php").then(function(response){
+//     console.log("test2: " + response);
+// })
 
-//3
-get("../Classes/Emergency_Phones/phones_json.php").then(function(response){
-    return JSON.parse(response);
-}).then(function(response){
-    console.log("test3: " + response);
-})
+// //3
+// get("../Classes/Emergency_Phones/phones_json.php").then(function(response){
+//     return JSON.parse(response);
+// }).then(function(response){
+//     console.log("test3: " + response);
+// })
 
-//4
-function getJSON(url){
-    return get(url).then(JSON.parse);
-}
-var phones = getJSON("../Classes/Emergency_Phones/phones_json.php");
-console.log("test4: "  + phones);
+// //4
+// function getJSON(url){
+//     return get(url).then(JSON.parse);
+// }
+// var phones = getJSON("../Classes/Emergency_Phones/phones_json.php");
+// console.log("test4: "  + phones);
 
-//5
-var title1; 
-get("../Classes/Emergency_Phones/phones_json.php").then(function(response){
-     var parsed = JSON.parse(response);
-     console.log("inside-5-parsed: " + parsed);
-     console.log("inside-5-titles: " + parsed.titles);
-     title1 = parsed.titles[0];
-     console.log("inside-5-title[0]: " + title1);
-})
-console.log("outside-test5: " + title1);
+// //5
+// var title1; 
+// get("../Classes/Emergency_Phones/phones_json.php").then(function(response){
+//      var parsed = JSON.parse(response);
+//      console.log("inside-5-parsed: " + parsed);
+//      console.log("inside-5-titles: " + parsed.titles);
+//      title1 = parsed.titles[0];
+//      console.log("inside-5-title[0]: " + title1);
+// })
+// console.log("outside-test5: " + title1);
 
 /*
 *   Scope PLAN:
@@ -112,7 +115,7 @@ function initMap() {
         var darkgreenMarker = "images/markers/darkgreen.png";
         var tealMarker = "images/markers/teal.png";
         var lightblueMarker = "images/markers/lightblue.png";
-        //var blueMarker = "images/markers/blue.png";
+        var blueMarker = "images/markers/blue.png";
         var navyMarker = "images/markers/navy.png";
         var lightpurpleMarker = "images/markers/lightpurple.png";
         var darkpurpleMarker = "images/markers/darkpurple.png";
@@ -806,8 +809,38 @@ function initMap() {
         //     console.log("Phones Failed!: ", error);
         // })
 
+        get("../Classes/Emergency_Phones/phones_json.php").then(function(response){
+            //console.log("inside initMap: " + response);
+            var titles = response.titles;
+            var lat_arr = response.latitudes; //need to be converted to Number
+            var lng_arr = response.longitudes; //need to be converted to Number
+            
+            //console.log(titles);
+            //console.log(lat_arr); 
+            //console.log(lng_arr);
+
+            var emergency_markers = [];
+
+            titles.forEach(function(this_title, index){
+                emergency_markers[index] = new google.maps.Marker({
+                    position: {lat: Number(lat_arr[index]),lng: Number(lng_arr[index])},
+                    title: this_title
+                });
+            });
+
+
+            emergency_markers.forEach(function(this_marker, index){
+                //allMarkers[u].setMap(map);
+                //allMarkers[u].setIcon(blueMarker);
+
+                this_marker.setMap(map);
+                this_marker.setIcon(blueMarker);
+            });
+        })
         
-        
+        // allMarkers[a] = new google.maps.Marker({
+        //     position: allMarkersInfo[a].position, title: allMarkersInfo[a].title
+        // });
 
         // setting sustainability markers
         function setSust(){
