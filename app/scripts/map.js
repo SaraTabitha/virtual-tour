@@ -115,7 +115,7 @@ function initMap() {
         var darkgreenMarker = "images/markers/darkgreen.png";
         var tealMarker = "images/markers/teal.png";
         var lightblueMarker = "images/markers/lightblue.png";
-        var blueMarker = "images/markers/blue.png";
+        //var blueMarker = "images/markers/blue.png";
         var navyMarker = "images/markers/navy.png";
         var lightpurpleMarker = "images/markers/lightpurple.png";
         var darkpurpleMarker = "images/markers/darkpurple.png";
@@ -797,30 +797,25 @@ function initMap() {
         //         allMarkers[v].setMap(null);
         //     }
         // }
-        
-        // var phones = get().then(function(response){
-        //     //phones success!
-        //     console.log(response.titles);
-        //     console.log(response.latitudes);
-        //     console.log(response.longitudes);
-        //     console.log(response.icon);
-        //    return response;
-        // }, function(error){
-        //     console.log("Phones Failed!: ", error);
-        // })
+        function setMarkers(markers_array, icon){
+            markers_array.forEach(function(this_marker, index){
+                this_marker.setMap(map);
+                this_marker.setIcon(icon);
+            });
+        }
+        function removeMarkers(markers_array){
+            markers_array.forEach(function(this_marker, index){
+                this_marker.setMap(null);
+            });
+        }
 
         get("../Classes/Emergency_Phones/phones_json.php").then(function(response){
-            //console.log("inside initMap: " + response);
             var titles = response.titles;
             var lat_arr = response.latitudes; //need to be converted to Number
             var lng_arr = response.longitudes; //need to be converted to Number
-            
-            //console.log(titles);
-            //console.log(lat_arr); 
-            //console.log(lng_arr);
-
+            var icon = response.icon;
             var emergency_markers = [];
-
+        
             titles.forEach(function(this_title, index){
                 emergency_markers[index] = new google.maps.Marker({
                     position: {lat: Number(lat_arr[index]),lng: Number(lng_arr[index])},
@@ -828,14 +823,17 @@ function initMap() {
                 });
             });
 
-
-            emergency_markers.forEach(function(this_marker, index){
-                //allMarkers[u].setMap(map);
-                //allMarkers[u].setIcon(blueMarker);
-
-                this_marker.setMap(map);
-                this_marker.setIcon(blueMarker);
+            
+            
+            
+            $("#emergency").change(function(){
+                if( !$("#emergencyLabel").hasClass("is-checked")){
+                    setMarkers(emergency_markers, icon);
+                }else{
+                    removeMarkers(emergency_markers);
+                }
             });
+            
         })
         
         // allMarkers[a] = new google.maps.Marker({
@@ -1517,8 +1515,8 @@ function initMap() {
                             break;
           case "accPar": setAccPar();
                             break;
-          case "emergency": setEmergencyPhones();
-                            break;
+          //case "emergency" : setEmergencyPhones();
+          //                  break;
           case "sust": setSust();
                             break;
           case "gender": setGender();
@@ -1576,10 +1574,10 @@ function initMap() {
                             closeAllHover();
                             removeAccPar();
                             break;
-            case "emergency": 
-                            removeEmergencyPhones();
+            //case "emergency": 
+             //               removeEmergencyPhones();
                             // emergency phones do not have any hovercards attached to their markers atm
-                            break;
+             //               break;
             case "sust": 
                             closeAllHover();
                             removeSust();
