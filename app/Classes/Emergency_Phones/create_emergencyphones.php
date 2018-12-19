@@ -1,5 +1,4 @@
 <?php
-require_once(__DIR__ . "/EmergencyPhone.php");
 
 require_once(__DIR__ . "/../Marker_Groups/MarkerGroup.php");
 require_once(__DIR__ . "/../Marker_Groups/Marker.php");
@@ -10,7 +9,7 @@ $emergencyPhones = connectRestAPI("https://wwwtest.uwosh.edu/virtual-tour-cms/wp
 
 $emergencyPhone_list = array();
 $emergencyPhone_markers = array();
-$index = 0;
+
 
 $slug;
 $title;
@@ -21,7 +20,7 @@ $checkboxColor = "#0085c8";
 $markerIcon = "images/markers/blue.png";
 
 //create all Emergency Phone objects & their markers
-foreach($emergencyPhones as $phone){
+foreach($emergencyPhones as $index=>$phone){
 
     $slug = $phone->slug;
     $title = $phone->title->rendered;
@@ -31,11 +30,13 @@ foreach($emergencyPhones as $phone){
 
     $emergencyPhone_markers[$index] = new Marker($latitude, $longitude, $title);
 
-    $emergencyPhone_list[$index] = new EmergencyPhone($slug, $title, $emergencyPhone_markers[$index]);
-    $index++;
+   //$emergencyPhone_list[$index] = new EmergencyPhone($slug, $title, $emergencyPhone_markers[$index]);
+    
 
 }
 
 $emergencyPhones = new MarkerGroup($slug, $checkboxColor, $markerIcon, $emergencyPhone_markers);
 
+//2nd half -> phones_json.php
+//3rd half -> style_checkboxes.php
 ?>

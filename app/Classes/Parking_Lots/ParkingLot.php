@@ -11,5 +11,33 @@ class ParkingLot{
     private $marker; //marker object
     private $isAccessible;
     private $lotTypes; //array of strings?
+
+    public function __construct($slug, $title, $marker, $isAccessible, $lotTypes){
+        $this->slug = $slug;
+        $this->title = $title;
+        $this->marker = $marker;
+        $this->isAccessible = $isAccessible;
+        $this->lotTypes = $lotTypes;
+    }
+
+    function getSlug(){
+        return $this->slug;
+    }
+    
+    function getTitle(){
+        return $this->title;
+    }
+
+    function getMarker(){
+        return $this->marker;
+    }
+
+    function getIsAccessible(){
+        return $this->isAccessible;
+    }
+    
+    function getLotTypes(){
+        return $this->lotTypes;
+    }
 }
 ?>
