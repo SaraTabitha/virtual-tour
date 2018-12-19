@@ -781,61 +781,90 @@ function initMap() {
         }
         
         
-        
-        // function for setting emergency phone markers
-        // function setEmergencyPhones(){
-        //     //83-110 
-        //     for(u = 83; u < 111; u++){
-        //         allMarkers[u].setMap(map);
-        //         allMarkers[u].setIcon(blueMarker);
-        //     }
-        // }
-        // function for removing emergency phone markers
-        // function removeEmergencyPhones(){
-        //     //83-110 
-        //     for(v = 83; v < 111; v++){
-        //         allMarkers[v].setMap(null);
-        //     }
-        // }
+        /*
+        * Params: titles_arr(array of strings containing titles for the markers)
+        *         lat_arr(array of strings of the latitudes for the markers)
+        *         lng_array(array of strings of the longitudes for the markers)
+        *  Creates a marker_array that will contain the google.maps.Marker objects
+        *  Loops through the title array (title_arr, lat_arr and lng_arr should all be the same length)
+        *  and puts together new google.maps.Marker objects and adds them to the markers_array array
+        * Return: the markers_array filled with google.maps.Marker objects filled with the data from titles_arr, lat_arr and lng_arr
+        */
+        function createMarkers(titles_arr, lat_arr, lng_arr){
+            var markers_array = [];
+
+            titles_arr.forEach(function(this_title, index){
+                markers_array[index] = new google.maps.Marker({
+                    position: {lat: Number(lat_arr[index]), lng: Number(lng_arr[index])}, //converting strings to Numbers
+                    title: this_title
+                });
+            });
+
+            return markers_array;
+        }
+
+        /*
+        * Params: markers_array (array of google.maps.Marker objects)
+        *         icon (string with the url to the marker icon png)
+        * loops through the markers_array and displays all of the markers on the map and also sets the icon image for each marker
+        */
         function setMarkers(markers_array, icon){
-            markers_array.forEach(function(this_marker, index){
-                this_marker.setMap(map);
-                this_marker.setIcon(icon);
+            markers_array.forEach(function(this_marker){
+                this_marker.setMap(map); //display on map
+                this_marker.setIcon(icon); //display with this icon image
             });
         }
+        /*
+        * Params: markers_array(array of google.maps.Marker objects)
+        * loops through the markers_array and removes all markers from the map
+        */
         function removeMarkers(markers_array){
-            markers_array.forEach(function(this_marker, index){
-                this_marker.setMap(null);
+            markers_array.forEach(function(this_marker){
+                this_marker.setMap(null); //remove from map
             });
         }
 
+        /*
+        * Params: slug (string of id for checkbox and the checkbox's label elements in the menu)
+        *         markers_array (array of google.maps.Marker objects)
+        *         icon (string with the url to the marker icon png)
+        * Creates an onChange eventlistener for the checkbox
+        * Checks if the checkbox's label has the "is-checked" class
+        * If the checkbox is checked -> put the markers in the markers_array on the map w/ the right icon image
+        * Else if the checkbox is not checked -> remove the markers from the markers_array from the map
+        */
+        function checkboxOnChange(slug, markers_array, icon){
+            $("#" + slug).change(function(){
+                if(!$("#" + slug + "Label").hasClass("is-checked")){
+                    //checkbox checked
+                    setMarkers(markers_array, icon); 
+                }
+                else{
+                    //checkbox unchecked
+                    removeMarkers(markers_array);
+                }
+            });
+        }
+
+        /*
+        * get() Param: ../Classes/Emergency_Phones/phones_json.php" (url to the php file that returns the json data this function needs)
+        * then() Param: response (the parsed JSON data that phones_json.php returned)
+        * 
+        * Asks to get data from php file, gets data from php file as parsed JSON, splits the JSON up into arrays that we need to make Markers
+        * Creates markers by calling createMarkers()
+        * Creates Checkbox eventlistener for Emergency Phones & hooks it up to the created google.maps.Marker object array 
+        * SelectAll checkbox eventlistener that sets/removes the Emergency Phones markers 
+        */
         get("../Classes/Emergency_Phones/phones_json.php").then(function(response){
             var titles = response.titles;
             var lat_arr = response.latitudes; //need to be converted to Number
             var lng_arr = response.longitudes; //need to be converted to Number
             var icon = response.icon;
-            var emergency_markers = [];
-        
-            titles.forEach(function(this_title, index){
-                emergency_markers[index] = new google.maps.Marker({
-                    position: {lat: Number(lat_arr[index]),lng: Number(lng_arr[index])},
-                    title: this_title
-                });
-            });
+            var checkbox_slug = "emergency";
+            var emergency_markers = createMarkers(titles, lat_arr, lng_arr);
 
+            checkboxOnChange(checkbox_slug, emergency_markers, icon);
             
-            
-            
-            $("#emergency").change(function(){
-                if( !$("#emergencyLabel").hasClass("is-checked")){
-                    //checked
-                    setMarkers(emergency_markers, icon);
-                }else{
-                    //unchecked
-                    removeMarkers(emergency_markers);
-                }
-            });
-
             $("#selectAllOne").change(function(){
                 if( !$("#selectAllOne").hasClass("is-checked") ){
                     //unchecked
