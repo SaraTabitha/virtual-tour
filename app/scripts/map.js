@@ -876,11 +876,24 @@ function initMap() {
             });
             
         })
-        
-        // allMarkers[a] = new google.maps.Marker({
-        //     position: allMarkersInfo[a].position, title: allMarkersInfo[a].title
-        // });
 
+        /*
+        * Parking Lots
+        *   -all lots
+        *   -accessible lots
+        */
+
+        /*
+        * Buildings 
+        *   -pre-defined categories:
+        *       -all buildings
+        *       -accessible entries
+        *       -sustainability points of interest
+        *       -gender neutral and family restrooms
+        * 
+        *   -categories that are pulled from the CMS
+        */
+        
         // setting sustainability markers
         function setSust(){
             //sust buildings: albee, alumni, blackhawk, biodigester, heating, horizon, reeve, sage, recreation
