@@ -877,13 +877,13 @@ function initMap() {
             
         })
 
-        /*
+        /*TODO
         * Parking Lots
         *   -all lots
         *   -accessible lots
         */
 
-        /*
+        /*TODO
         * Buildings 
         *   -pre-defined categories:
         *       -all buildings

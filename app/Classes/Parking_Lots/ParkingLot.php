@@ -39,5 +39,13 @@ class ParkingLot{
     function getLotTypes(){
         return $this->lotTypes;
     }
+
+    /*
+    * TODO lotTypes -> infoWindow
+    * document.elementById("#" + slug + "Hover")
+    * js:     infoWindowsAll[b] = new google.maps.InfoWindow({
+    *            content: document.getElementById(allMarkersInfo[b].shortHand + "Hover"),
+    *         });
+    */
 }
 ?>
