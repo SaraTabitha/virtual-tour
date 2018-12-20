@@ -872,6 +872,8 @@ function initMap() {
             var icon = response.icon;
 
             checkboxOnChange(checkbox_slug, markers_array, icon);
+
+            //TODO move selectAllOne to here?
         }
         /*
         * get() Param: ../Classes/Emergency_Phones/phones_json.php" (url to the php file that returns the json data this function needs)
