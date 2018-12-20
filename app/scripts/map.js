@@ -29,7 +29,8 @@ function get(url){
                 if(this.readyState == 4 && this.status == 200){
                     
                     //console.log(this.readyState + ", " + this.status);
-                    
+                    //console.log(this.responseText);
+                    //console.log(JSON.parse(this.responseText));
                     resolve(JSON.parse(this.responseText));
                     //resolve(this.responseText);
                 }
@@ -875,12 +876,15 @@ function initMap() {
                 }
             });
         })
-        
+
         /*TODO
         * Parking Lots
         *   -all lots
         *   -accessible lots
         */
+       get("../Classes/Parking_Lots/parking_json.php").then(function(response){
+            console.log(response);
+       })
 
         /*TODO
         * Buildings 

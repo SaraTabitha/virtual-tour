@@ -1,4 +1,6 @@
 <?php
+require_once(__DIR__ . "/Marker.php");
+
 /*
 * Sara Tabitha Mayhew
 * 11/11/18
@@ -34,6 +36,24 @@ class MarkerGroup{
         return $this->markersArray;
     }
 
+    function createMarkerJSONObject($array, $icon){
+        $object->titles = array();
+        $object->latitudes = array();
+        $object->longitudes = array();
+        $object->icon = $icon;
+        
+        foreach($array as $item){
+            $title = $item->getTitle();
+            $lat = $item->getLatitude();
+            $long = $item->getLongitude();
+
+            array_push($object->titles, $title);
+            array_push($object->latitudes, $lat);
+            array_push($object->longitudes, $long);
+        }
+
+        return $object;
+    }
     /* this needs to be in its own function & called in its own file bc otherwise create_emergencyphones' json sent to map.js gets screwed up :) */
     function style_checkboxes(){
     
