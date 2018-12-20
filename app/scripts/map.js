@@ -97,16 +97,16 @@ function initMap() {
         //Markers curtesy of Nick Pierson of the Reslife Arists Office in Gruenhagen!
         //first group: yellow, pink, red, teal, green, blue, lightpurple
         //second group: maroon, orange, darkgreen, lightblue, navy, darkpurple, brown
-        var pinkMarker = "images/markers/pink.png";
-        var pinkLot23 = "images/markers/parking/pink_lot23.png";
-        var pinkResidentMarker = "images/markers/parking/pink_resident.png";
-        var pinkCommuteMarker = "images/markers/parking/pink_commute.png";
-        var pinkRemoteMarker = "images/markers/parking/pink_remote.png";
-        var pinkResidentMarker = "images/markers/parking/pink_resident.png";
-        var pinkRestrictedMarker = "images/markers/parking/pink_restricted.png";
-        var pinkStaffMarker = "images/markers/parking/pink_staff.png";
-        var pinkVisitorMarker = "images/markers/parking/pink_visitor.png";
-        var pinkCommuterMarker = "images/markers/parking/pink_commuter.png";
+        //var pinkMarker = "images/markers/pink.png";
+        //var pinkLot23 = "images/markers/parking/pink_lot23.png";
+        //var pinkResidentMarker = "images/markers/parking/pink_resident.png";
+        //var pinkCommuteMarker = "images/markers/parking/pink_commute.png";
+        //var pinkRemoteMarker = "images/markers/parking/pink_remote.png";
+        //var pinkResidentMarker = "images/markers/parking/pink_resident.png";
+        //var pinkRestrictedMarker = "images/markers/parking/pink_restricted.png";
+        //var pinkStaffMarker = "images/markers/parking/pink_staff.png";
+        //var pinkVisitorMarker = "images/markers/parking/pink_visitor.png";
+        //var pinkCommuterMarker = "images/markers/parking/pink_commuter.png";
 
         var redMarker = "images/markers/red.png";
         var maroonMarker = "images/markers/maroon.png";
@@ -114,7 +114,7 @@ function initMap() {
         var yellowMarker = "images/markers/yellow.png";
         var greenMarker = "images/markers/green.png";
         var darkgreenMarker = "images/markers/darkgreen.png";
-        var tealMarker = "images/markers/teal.png";
+        //var tealMarker = "images/markers/teal.png";
         var lightblueMarker = "images/markers/lightblue.png";
         //var blueMarker = "images/markers/blue.png";
         var navyMarker = "images/markers/navy.png";
@@ -901,13 +901,20 @@ function initMap() {
         /*TODO
         * Parking Lots
         *   -all lots
-        *   -accessible lots
+        *   -accessible lots TODO
+        * 
+        * TODO infowindows
         */
        get("../Classes/Parking_Lots/parking_json.php").then(function(response){
-            console.log(response);
-            
+           //all parking
            var checkbox_slug = "parking";
-           hookupCheckboxesToMarkers(checkbox_slug, response);
+           var allParking = response.allParking;
+           hookupCheckboxesToMarkers(checkbox_slug, allParking);
+
+           //accessible parking
+           checkbox_slug = "accPar";
+           var accessibleParking = response.accessibleParking;
+           hookupCheckboxesToMarkers(checkbox_slug, accessibleParking);
 
             $("#selectAllOne").change(function(){
                 if( !$("#selectAllOne").hasClass("is-checked") ){
@@ -1661,10 +1668,10 @@ function initMap() {
                             closeAllHover();
                             removeAccEnt();
                             break;
-            case "accPar": 
-                            closeAllHover();
-                            removeAccPar();
-                            break;
+            //case "accPar": 
+            //                closeAllHover();
+             //               removeAccPar();
+             //               break;
             //case "emergency": 
              //               removeEmergencyPhones();
                             // emergency phones do not have any hovercards attached to their markers atm
