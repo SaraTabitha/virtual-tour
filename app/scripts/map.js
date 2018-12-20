@@ -849,14 +849,24 @@ function initMap() {
             });
         }
 
+        /*
+        * Params: response (parsed json object containing array of titles, array of latitudes, and an array of longitudes; also an icon string url)
+        * Converts object to an array of google.maps.Marker objects and returns the array for use in other methods
+        * Return: markers_array (an array of google.maps.Marker objects)
+        */
         function createMarkersFromResponse(response){
             var titles = response.titles;
             var lat_arr = response.latitudes; //need to be converted to Number
             var lng_arr = response.longitudes; //need to be converted to Number
-            var emergency_markers = createMarkers(titles, lat_arr, lng_arr);
+            var markers_array = createMarkers(titles, lat_arr, lng_arr);
 
-            return emergency_markers;
+            return markers_array;
         }
+        /*
+        * Params: checkbox_slug (string of id for checkbox)
+        *         response (parsed json object containing array of titles, latitudes, longitudes & a string for icon url)
+        * Stores marker array by calling createMarkersFromResponse and then passes it to a function that creates the Checkboxes event listener
+        */
         function hookupCheckboxesToMarkers(checkbox_slug, response){
             var markers_array = createMarkersFromResponse(response);
             var icon = response.icon;
