@@ -209,6 +209,7 @@
 
                                                 <?php
                                                         require_once('Classes/Emergency_Phones/create_emergencyphones.php');
+                                                        require_once('Classes/Parking_Lots/create_parkinglots.php');
                                                         require_once('Classes/Marker_Groups/style_checkboxes.php');
                                                 ?>
 

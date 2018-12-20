@@ -855,7 +855,7 @@ function initMap() {
         * Creates Checkbox eventlistener for Emergency Phones & hooks it up to the created google.maps.Marker object array 
         * SelectAll checkbox eventlistener that sets/removes the Emergency Phones markers 
         */
-        get("../Classes/Emergency_Phones/phones_json.php").then(function(response){
+       get("../Classes/Emergency_Phones/phones_json.php").then(function(response){
             var titles = response.titles;
             var lat_arr = response.latitudes; //need to be converted to Number
             var lng_arr = response.longitudes; //need to be converted to Number
@@ -874,9 +874,8 @@ function initMap() {
                     setMarkers(emergency_markers, icon);
                 }
             });
-            
         })
-
+        
         /*TODO
         * Parking Lots
         *   -all lots

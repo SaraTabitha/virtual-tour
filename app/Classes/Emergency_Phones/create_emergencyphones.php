@@ -37,6 +37,6 @@ foreach($emergencyPhones as $index=>$phone){
 
 $emergencyPhones = new MarkerGroup($slug, $checkboxColor, $markerIcon, $emergencyPhone_markers);
 
-//2nd half -> phones_json.php
-//3rd half -> style_checkboxes.php
+//part 2 -> phones_json.php
+//part 3-> style_checkboxes.php
 ?>
