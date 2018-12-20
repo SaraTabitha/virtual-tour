@@ -36,6 +36,12 @@ class MarkerGroup{
         return $this->markersArray;
     }
 
+    /*
+    * function for creating a json object for the marker info to be passed to map.js
+    * params: $array(array of marker objects) & $icon(string) have to be passed to this function
+    * otherwise a 500 error is thrown
+    * cannot use "$this->markersArray" or "$this->markerIcon" (I tried)
+    */
     function createMarkerJSONObject($array, $icon){
         $object->titles = array();
         $object->latitudes = array();
