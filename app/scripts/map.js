@@ -322,8 +322,8 @@ function initMap() {
             //44 webster
             {position: {lat: 44.025002, lng: -88.551681},title: "Webster Hall",shortHand: "webster",
             thumbnail:"images/campuspictures/webster.jpeg", fullImage:"images/campuspictures/websterFull.jpeg"
-            },
-            
+            }
+            /*
             //parking lots
             // [45] Lot 11
             {position: {lat: 44.030449, lng: -88.552415},title: "Lot 11",shortHand: "eleven"
@@ -438,7 +438,7 @@ function initMap() {
             },
             //[82] titan two lot
             { position: {lat: 44.023007, lng:  -88.564339},title: "Titan Two Lot",shortHand: "titanTwo"
-            }
+            }*/
 
             //emergency phones
             //[83] phonezero
@@ -522,7 +522,7 @@ function initMap() {
          //     content: hoverContentSelectors[0],
         // });
          //loop to take the info from hoverContentSelectors and make a new array of hover InfoWindows
-         for(b = 0; b < 83; b++){
+         for(b = 0; b < 45; b++){
             infoWindowsAll[b] = new google.maps.InfoWindow({
                  content: document.getElementById(allMarkersInfo[b].shortHand + "Hover"),
              });
@@ -555,6 +555,7 @@ function initMap() {
                 allMarkers[d].setMap(null);
             }
         }
+        /*
         // set parking lot markers
         function setParkingLots(){
             //parking ramp
@@ -652,7 +653,7 @@ function initMap() {
             for (f = 45; f < 83; f++){
                 allMarkers[f].setMap(null);
             }
-        }
+        }*/
         // accessible entries (buildings)
         function setAccEnt(){
             //accEnt buildings: albee, ac, blackhawk, equity, clow, dempsey, donner, kolf, nursing, scott, stewart, webster
@@ -725,6 +726,7 @@ function initMap() {
                 allMarkers[l].setMap(null);
             }
         }
+        /*
         // accessible parking set markers
         function setAccPar(){
             //accPar Lots: 11, 4, 4a, 16, 17, 29, 25, 33, 14a, 7a, 13, 34, 28, 23, womens center parking, 
@@ -780,7 +782,7 @@ function initMap() {
                 allMarkers[t].setMap(null);
             }
         }
-        
+        */
         
         /*
         * Params: titles_arr(array of strings containing titles for the markers)
@@ -847,6 +849,20 @@ function initMap() {
             });
         }
 
+        function createMarkersFromResponse(response){
+            var titles = response.titles;
+            var lat_arr = response.latitudes; //need to be converted to Number
+            var lng_arr = response.longitudes; //need to be converted to Number
+            var emergency_markers = createMarkers(titles, lat_arr, lng_arr);
+
+            return emergency_markers;
+        }
+        function hookupCheckboxesToMarkers(checkbox_slug, response){
+            var markers_array = createMarkersFromResponse(response);
+            var icon = response.icon;
+
+            checkboxOnChange(checkbox_slug, markers_array, icon);
+        }
         /*
         * get() Param: ../Classes/Emergency_Phones/phones_json.php" (url to the php file that returns the json data this function needs)
         * then() Param: response (the parsed JSON data that phones_json.php returned)
@@ -857,14 +873,9 @@ function initMap() {
         * SelectAll checkbox eventlistener that sets/removes the Emergency Phones markers 
         */
        get("../Classes/Emergency_Phones/phones_json.php").then(function(response){
-            var titles = response.titles;
-            var lat_arr = response.latitudes; //need to be converted to Number
-            var lng_arr = response.longitudes; //need to be converted to Number
-            var icon = response.icon;
-            var checkbox_slug = "emergency";
-            var emergency_markers = createMarkers(titles, lat_arr, lng_arr);
-
-            checkboxOnChange(checkbox_slug, emergency_markers, icon);
+           
+           var checkbox_slug = "emergency";
+           hookupCheckboxesToMarkers(checkbox_slug, response);
             
             $("#selectAllOne").change(function(){
                 if( !$("#selectAllOne").hasClass("is-checked") ){
@@ -884,6 +895,19 @@ function initMap() {
         */
        get("../Classes/Parking_Lots/parking_json.php").then(function(response){
             console.log(response);
+            
+           var checkbox_slug = "parking";
+           hookupCheckboxesToMarkers(checkbox_slug, response);
+
+            $("#selectAllOne").change(function(){
+                if( !$("#selectAllOne").hasClass("is-checked") ){
+                    //unchecked
+                    removeMarkers(parking_markers);
+                }else{
+                    //checked
+                    setMarkers(parking_markers, icon);
+                }
+            });
        })
 
         /*TODO
@@ -1207,7 +1231,7 @@ function initMap() {
         function closeAllHover(){
             //0 - 82 because only buildings and parking lots have infoWindows
             //goes through all of the infoWindows and closes them for all the markers they are attached to
-            for(w = 0; w < 83; w++){
+            for(w = 0; w < 45; w++){
                 infoWindowsAll[w].close(map, allMarkers[w]);
             }
         }
@@ -1566,12 +1590,12 @@ function initMap() {
       switch(name){
           case "buildings": setBuilding();
                             break;
-          case "parking": setParkingLots();
-                            break;
+          //case "parking": setParkingLots();
+          //                  break;
           case "accEnt": setAccEnt();
                             break;
-          case "accPar": setAccPar();
-                            break;
+          //case "accPar": setAccPar();
+          //                  break;
           //case "emergency" : setEmergencyPhones();
           //                  break;
           case "sust": setSust();
@@ -1619,10 +1643,10 @@ function initMap() {
                             // removes building markers
                             removeBuilding();
                             break;
-            case "parking": 
-                            closeAllHover();
-                            removeParkingLots();
-                            break;
+           // case "parking": 
+           //                 closeAllHover();
+           //                 removeParkingLots();
+           //                 break;
             case "accEnt": 
                             closeAllHover();
                             removeAccEnt();
