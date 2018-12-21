@@ -2744,6 +2744,8 @@
                         <!-- end hovers for buildings -->
                         <!-- start hovers for parkings lots -->
 
+                        <?php  require_once('Classes/Parking_Lots/create_parkingInfoWindows.php'); ?>
+
                         <!-- Lot 11 -->
                         <!-- <div id="elevenHover" class="parkingHover">
                                 <h1 class="parkingHeadHover text">Lot 11</h1><div class="parkingColorStaff"></div>
