@@ -862,6 +862,19 @@ function initMap() {
 
             return markers_array;
         }
+
+        function selectAllOneEventListener(markers_array, icon_url){
+            $("#selectAllOne").change(function(){
+                if( !$("#selectAllOne").hasClass("is-checked") ){
+                    //unchecked
+                    removeMarkers(markers_array);
+                }else{
+                    //checked
+                    setMarkers(markers_array, icon_url);
+                }
+            });
+        }
+
         /*
         * Params: checkbox_slug (string of id for checkbox)
         *         response (parsed json object containing array of titles, latitudes, longitudes & a string for icon url)
@@ -869,12 +882,15 @@ function initMap() {
         */
         function hookupCheckboxesToMarkers(checkbox_slug, response){
             var markers_array = createMarkersFromResponse(response);
-            var icon = response.icon;
+            var icon_url = response.icon;
 
-            checkboxOnChange(checkbox_slug, markers_array, icon);
-
+            checkboxOnChange(checkbox_slug, markers_array, icon_url);
+            
             //TODO move selectAllOne to here?
+            selectAllOneEventListener(markers_array, icon_url);
         }
+        
+
         /*
         * get() Param: ../Classes/Emergency_Phones/phones_json.php" (url to the php file that returns the json data this function needs)
         * then() Param: response (the parsed JSON data that phones_json.php returned)
@@ -888,8 +904,8 @@ function initMap() {
            
            var checkbox_slug = "emergency";
            hookupCheckboxesToMarkers(checkbox_slug, response);
-            
-            $("#selectAllOne").change(function(){
+
+            /*$("#selectAllOne").change(function(){
                 if( !$("#selectAllOne").hasClass("is-checked") ){
                     //unchecked
                     removeMarkers(emergency_markers);
@@ -897,7 +913,7 @@ function initMap() {
                     //checked
                     setMarkers(emergency_markers, icon);
                 }
-            });
+            });*/
         })
 
         /*TODO
@@ -918,7 +934,7 @@ function initMap() {
            var accessibleParking = response.accessibleParking;
            hookupCheckboxesToMarkers(checkbox_slug, accessibleParking);
 
-            $("#selectAllOne").change(function(){
+            /*$("#selectAllOne").change(function(){
                 if( !$("#selectAllOne").hasClass("is-checked") ){
                     //unchecked
                     removeMarkers(parking_markers);
@@ -926,7 +942,7 @@ function initMap() {
                     //checked
                     setMarkers(parking_markers, icon);
                 }
-            });
+            });*/
        })
 
         /*TODO
