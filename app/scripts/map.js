@@ -863,6 +863,12 @@ function initMap() {
             return markers_array;
         }
 
+        /*
+        * Params: marker_array (array of google.maps.Marker objects)
+        *         icon_url (string containing url for the marker icon image)
+        *  Sets up an event listener for the first Select All checkbox in the menu, adds the passed marker_array
+        *  to the set of markers that gets added & removed based on the Select All checkbox being checked/unchecked
+        */
         function selectAllOneEventListener(markers_array, icon_url){
             $("#selectAllOne").change(function(){
                 if( !$("#selectAllOne").hasClass("is-checked") ){
@@ -884,10 +890,8 @@ function initMap() {
             var markers_array = createMarkersFromResponse(response);
             var icon_url = response.icon;
 
-            checkboxOnChange(checkbox_slug, markers_array, icon_url);
-            
-            //TODO move selectAllOne to here?
-            selectAllOneEventListener(markers_array, icon_url);
+            checkboxOnChange(checkbox_slug, markers_array, icon_url); //individual checkbox
+            selectAllOneEventListener(markers_array, icon_url); //select all checkbox
         }
         
 
@@ -901,25 +905,15 @@ function initMap() {
         * SelectAll checkbox eventlistener that sets/removes the Emergency Phones markers 
         */
        get("../Classes/Emergency_Phones/phones_json.php").then(function(response){
-           
            var checkbox_slug = "emergency";
            hookupCheckboxesToMarkers(checkbox_slug, response);
 
-            /*$("#selectAllOne").change(function(){
-                if( !$("#selectAllOne").hasClass("is-checked") ){
-                    //unchecked
-                    removeMarkers(emergency_markers);
-                }else{
-                    //checked
-                    setMarkers(emergency_markers, icon);
-                }
-            });*/
         })
 
         /*TODO
         * Parking Lots
         *   -all lots
-        *   -accessible lots TODO
+        *   -accessible lots 
         * 
         * TODO infowindows
         */
@@ -933,16 +927,6 @@ function initMap() {
            checkbox_slug = "accPar";
            var accessibleParking = response.accessibleParking;
            hookupCheckboxesToMarkers(checkbox_slug, accessibleParking);
-
-            /*$("#selectAllOne").change(function(){
-                if( !$("#selectAllOne").hasClass("is-checked") ){
-                    //unchecked
-                    removeMarkers(parking_markers);
-                }else{
-                    //checked
-                    setMarkers(parking_markers, icon);
-                }
-            });*/
        })
 
         /*TODO
