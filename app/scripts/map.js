@@ -905,9 +905,13 @@ function initMap() {
         * SelectAll checkbox eventlistener that sets/removes the Emergency Phones markers 
         */
        get("../Classes/Emergency_Phones/phones_json.php").then(function(response){
-           var checkbox_slug = "emergency";
+           var checkbox_slug = "emergency"; //TODO: have this variable only be set in one place
            hookupCheckboxesToMarkers(checkbox_slug, response);
         })
+
+
+        //TODO rewrite allMarkers.forEach
+        //TODO rewrite markerOpenClose 
 
         /*TODO
         * Parking Lots
@@ -918,12 +922,13 @@ function initMap() {
         */
        get("../Classes/Parking_Lots/parking_json.php").then(function(response){
            //all parking
-           var checkbox_slug = "parking";
+           console.log(response);
+           var checkbox_slug = "parking"; //TODO: have this variable only be set in one place
            var allParking = response.allParking;
            hookupCheckboxesToMarkers(checkbox_slug, allParking);
 
            //accessible parking
-           checkbox_slug = "accPar";
+           checkbox_slug = "accPar"; //TODO: have this variable only be set in one place
            var accessibleParking = response.accessibleParking;
            hookupCheckboxesToMarkers(checkbox_slug, accessibleParking);
        })

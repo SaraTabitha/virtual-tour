@@ -43,16 +43,19 @@ class MarkerGroup{
     * cannot use "$this->markersArray" or "$this->markerIcon" (I tried)
     */
     function createMarkerJSONObject($array, $icon){
+        $object->slugs = array();
         $object->titles = array();
         $object->latitudes = array();
         $object->longitudes = array();
         $object->icon = $icon;
         
         foreach($array as $item){
+            $slug = $item->getSlug();
             $title = $item->getTitle();
             $lat = $item->getLatitude();
             $long = $item->getLongitude();
 
+            array_push($object->slugs, $slug);
             array_push($object->titles, $title);
             array_push($object->latitudes, $lat);
             array_push($object->longitudes, $long);

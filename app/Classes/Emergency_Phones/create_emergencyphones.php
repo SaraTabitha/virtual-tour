@@ -28,7 +28,7 @@ foreach($emergencyPhones as $index=>$phone){
     $latitude = $phone->location->latitude;
     $longitude = $phone->location->longitude;
 
-    $emergencyPhone_markers[$index] = new Marker($latitude, $longitude, $title);
+    $emergencyPhone_markers[$index] = new Marker($slug, $latitude, $longitude, $title);
 
    //$emergencyPhone_list[$index] = new EmergencyPhone($slug, $title, $emergencyPhone_markers[$index]);
     
