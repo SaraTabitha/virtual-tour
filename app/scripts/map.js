@@ -907,7 +907,6 @@ function initMap() {
        get("../Classes/Emergency_Phones/phones_json.php").then(function(response){
            var checkbox_slug = "emergency";
            hookupCheckboxesToMarkers(checkbox_slug, response);
-
         })
 
         /*TODO

@@ -2745,293 +2745,293 @@
                         <!-- start hovers for parkings lots -->
 
                         <!-- Lot 11 -->
-                        <div id="elevenHover" class="parkingHover">
+                        <!-- <div id="elevenHover" class="parkingHover">
                                 <h1 class="parkingHeadHover text">Lot 11</h1><div class="parkingColorStaff"></div>
                                 <p class="parkingTextHover text">Staff Lot</p>
                                 <a  id="elevenLink" class="text link hoverLink" href="https://parking.uwosh.edu/permits/" target="_blank">View Permits</a>
-                        </div>
+                        </div> -->
 
                         <!-- Lot 35 -->
-                        <div id="thirtyfiveHover" class="parkingHover">
+                        <!-- <div id="thirtyfiveHover" class="parkingHover">
                                 <h1 class="parkingHeadHover text">Lot 35</h1><div class="parkingColorRemote"></div>
                                 <p class="parkingTextHover text">Remote Lot</p>
                                 <a id="thirtyfiveLink" class="text link hoverLink" href="https://parking.uwosh.edu/permits/" target="_blank">View Permits</a>
-                        </div>
+                        </div> -->
 
                         <!-- Lot 27 -->
-                        <div id="twentysevenHover" class="parkingHover commuterHover">
+                        <!-- <div id="twentysevenHover" class="parkingHover commuterHover">
                                 <h1 class="parkingHeadHover text">Lot 27</h1><div class="parkingColorCommute"></div>
                                 <p class="parkingTextHover text">Employee Lot</p>
                                 <p class="parkingTextHover text">Commuter Lot</p>
                                 <p class="parkingTextHover text">Visitor Lot</p>
                                 <a  id="twentysevenLink" class="text link hoverLink" href="https://parking.uwosh.edu/permits/" target="_blank">View Permits</a>
-                        </div>
+                        </div> -->
 
                         <!-- Lot 21 -->
-                        <div id="twentyoneHover" class="parkingHover">
+                        <!-- <div id="twentyoneHover" class="parkingHover">
                                 <h1 class="parkingHeadHover text">Lot 21</h1><div class="parkingColorRestricted"></div>
                                 <p class="parkingTextHover text">Restricted Lot</p>
                                 <a  id="twentyoneLink" class="text link hoverLink" href="https://parking.uwosh.edu/permits/" target="_blank">View Permits</a>
-                        </div>
+                        </div> -->
 
                         <!-- lot 26 -->
-                        <div id="twentysixHover" class="parkingHover">
+                        <!-- <div id="twentysixHover" class="parkingHover">
                                 <h1 class="parkingHeadHover text">Lot 26</h1><div class="parkingColorRestricted"></div>
                                 <p class="parkingTextHover text">Restricted Lot</p>
                                 <a  id="twentysixLink" class="text link hoverLink" href="https://parking.uwosh.edu/permits/" target="_blank">View Permits</a>
-                        </div>
+                        </div> -->
 
                         <!-- Lot 4 -->
-                                <div id="fourHover" class="parkingHover">
+                                <!-- <div id="fourHover" class="parkingHover">
                                 <h1 class="parkingHeadHover text">Lot 4</h1><div class="parkingColorReserved"></div>
                                 <p class="parkingTextHover text">Reserved Lot</p>
                                 <a  id="fourLink" class="text link hoverLink" href="https://parking.uwosh.edu/permits/" target="_blank">View Permits</a>
-                        </div>
+                        </div> -->
 
                         <!-- Lot 4a -->
-                        <div id="fouraHover" class="parkingHover">
+                        <!-- <div id="fouraHover" class="parkingHover">
                                 <h1 class="parkingHeadHover text">Lot 4a</h1><div class="parkingColorReserved"></div>
                                 <p class="parkingTextHover text">Reserved Lot</p>
                                 <a  id="fouraLink" class="text link hoverLink" href="https://parking.uwosh.edu/permits/" target="_blank">View Permits</a>
-                        </div>
+                        </div> -->
 
                         <!-- Lot 16 -->
-                        <div id="sixteenHover" class="parkingHover">
+                        <!-- <div id="sixteenHover" class="parkingHover">
                                 <h1 class="parkingHeadHover text">Lot 16</h1><div class="parkingColorRestricted"></div>
                                 <p class="parkingTextHover text">Restricted Lot</p>
                                 <a  id="sixteenLink" class="text link hoverLink" href="https://parking.uwosh.edu/permits/" target="_blank">View Permits</a>
-                        </div>
+                        </div> -->
 
                         <!-- lot 17 -->
-                        <div id="seventeenHover" class="parkingHover commuterHover">
+                        <!-- <div id="seventeenHover" class="parkingHover commuterHover">
                                 <h1 class="parkingHeadHover text">Lot 17</h1><div class="parkingColorCommute"></div>
                                 <p class="parkingTextHover text">Employee Lot</p>
                                 <p class="parkingTextHover text">Commuter Lot</p>
                                 <p class="parkingTextHover text">Visitor Lot</p>
                                 <a  id="seventeenLink" class="text link hoverLink" href="https://parking.uwosh.edu/permits/" target="_blank">View Permits</a>
-                        </div>
+                        </div> -->
 
                         <!-- Lot 29 -->
-                        <div id="twentynineHover" class="parkingHover">
+                        <!-- <div id="twentynineHover" class="parkingHover">
                                 <h1 class="parkingHeadHover text">Lot 29</h1><div class="parkingColorCommuter"></div>
                                 <p class="parkingTextHover text">Commuter Lot</p>
                                 <a  id="twentynineLink" class="text link hoverLink" href="https://parking.uwosh.edu/permits/" target="_blank">View Permits</a>
-                        </div>
+                        </div> -->
 
                         <!-- lot 25 -->
-                        <div id="twentyfiveHover" class="parkingHover">
+                        <!-- <div id="twentyfiveHover" class="parkingHover">
                                 <h1 class="parkingHeadHover text">Lot 25</h1><div class="parkingColorStaff"></div>
                                 <p class="parkingTextHover text">Staff Lot</p>
                                 <a  id="twentyfiveLink" class="text link hoverLink" href="https://parking.uwosh.edu/permits/" target="_blank">View Permits</a>
-                        </div>
+                        </div> -->
 
                         <!-- Lot 8 -->
-                        <div id="eightHover" class="parkingHover commuterHover">
+                        <!-- <div id="eightHover" class="parkingHover commuterHover">
                                 <h1 class="parkingHeadHover text">Lot 8</h1><div class="parkingColorCommute"></div>
                                 <p class="parkingTextHover text">Employee Lot</p>
                                 <p class="parkingTextHover text">Commuter Lot</p>
                                 <p class="parkingTextHover text">Visitor Lot</p>
                                 <a  id="eightLink" class="text link hoverLink" href="https://parking.uwosh.edu/permits/" target="_blank">View Permits</a>
-                        </div>
+                        </div> -->
 
                         <!-- lot 33 -->
-                        <div id="thirtythreeHover" class="parkingHover commuterHover">
+                        <!-- <div id="thirtythreeHover" class="parkingHover commuterHover">
                                 <h1 class="parkingHeadHover text">Lot 33</h1><div class="parkingColorCommute"></div>
                                 <p class="parkingTextHover text">Employee Lot</p>
                                 <p class="parkingTextHover text">Commuter Lot</p>
                                 <p class="parkingTextHover text">Visitor Lot</p>
                                 <a  id="thirtythreeLink" class="text link hoverLink" href="https://parking.uwosh.edu/permits/" target="_blank">View Permits</a>
-                        </div>
+                        </div> -->
 
                         <!-- Lot 34 -->
-                        <div id="thirtyfourHover" class="parkingHover commuterHover">
+                        <!-- <div id="thirtyfourHover" class="parkingHover commuterHover">
                                 <h1 class="parkingHeadHover text">Lot 34</h1><div class="parkingColorCommute"></div>
                                 <p class="parkingTextHover text">Employee Lot</p>
                                 <p class="parkingTextHover text">Commuter Lot</p>
                                 <p class="parkingTextHover text">Visitor Lot</p>
                                 <a  id="thirtyfourLink" class="text link hoverLink" href="https://parking.uwosh.edu/permits/" target="_blank">View Permits</a>
-                        </div>
+                        </div> -->
 
                         <!-- Lot 28 -->
-                        <div id="twentyeightHover" class="parkingHover">
+                        <!-- <div id="twentyeightHover" class="parkingHover">
                                 <h1 class="parkingHeadHover text">Lot 28</h1><div class="parkingColorRestricted"></div>
                                 <p class="parkingTextHover text">Restricted Lot</p>
                                 <a  id="twentyeightLink" class="text link hoverLink" href="https://parking.uwosh.edu/permits/" target="_blank">View Permits</a>
-                        </div>
+                        </div> -->
 
                         <!-- Lot 23 -->
-                        <div id="twentythreeHover" class="parkingHover commuterHover">
+                        <!-- <div id="twentythreeHover" class="parkingHover commuterHover">
                                 <h1 class="parkingHeadHover text">Lot 23</h1>
                                 <p class="parkingTextHover text">Evans Hall Residents</p>
                                 <p class="parkingTextHover text">Stewart Hall Residents</p>
                                 <p class="parkingTextHover text">Fletcher Hall Residents</p>
                                 <a  id="twentythreeLink" class="text link hoverLink" href="https://parking.uwosh.edu/permits/" target="_blank">View Permits</a>
-                        </div>
+                        </div> -->
 
                         <!-- lot 14a -->
-                        <div id="fourteenaHover" class="parkingHover">
+                        <!-- <div id="fourteenaHover" class="parkingHover">
                                 <h1 class="parkingHeadHover text">Lot 14a</h1><div class="parkingColorStaff"></div>
                                 <p class="parkingTextHover text">Staff Lot</p>
                                 <a  id="fourteenaLink" class="text link hoverLink" href="https://parking.uwosh.edu/permits/" target="_blank">View Permits</a>
-                        </div>
+                        </div> -->
 
                         <!-- lot 14b -->
-                        <div id="fourteenbHover" class="parkingHover">
+                        <!-- <div id="fourteenbHover" class="parkingHover">
                                 <h1 class="parkingHeadHover text">Lot 14b</h1><div class="parkingColorStaff"></div>
                                 <p class="parkingTextHover text">Staff Lot</p>
                                 <a  id="fourteenbLink" class="text link hoverLink" href="https://parking.uwosh.edu/permits/" target="_blank">View Permits</a>
-                        </div>
+                        </div> -->
 
                         <!-- lot 14c -->
-                        <div id="fourteencHover" class="parkingHover">
+                        <!-- <div id="fourteencHover" class="parkingHover">
                                 <h1 class="parkingHeadHover text">Lot 14c</h1><div class="parkingColorStaff"></div>
                                 <p class="parkingTextHover text">Staff Lot</p>
                                 <a  id="fourteencLink" class="text link hoverLink" href="https://parking.uwosh.edu/permits/" target="_blank">View Permits</a>
-                        </div>
+                        </div> -->
 
                         <!-- Lot 7 -->
-                        <div id="sevenHover" class="parkingHover commuterHover">
+                        <!-- <div id="sevenHover" class="parkingHover commuterHover">
                                 <h1 class="parkingHeadHover text">Lot 7</h1><div class="parkingColorCommute"></div><div class="parkingColorReserved"></div>
                                 <p class="parkingTextHover text">Employee Lot</p>
                                 <p class="parkingTextHover text">Commuter Lot</p>
                                 <p class="parkingTextHover text">Visitor Lot</p>
                                 <p class="parkingTextHover text">One Reserved Row</p>
                                 <a  id="sevenLink" class="text link hoverLink" href="https://parking.uwosh.edu/permits/" target="_blank">View Permits</a>
-                        </div>
+                        </div> -->
 
                         <!-- lot 5a -->
-                        <div id="fiveaHover" class="parkingHover">
+                        <!-- <div id="fiveaHover" class="parkingHover">
                                 <h1 class="parkingHeadHover text">Lot 5a</h1><div class="parkingColorResident"></div>
                                 <p class="parkingTextHover text">Resident Lot</p>
                                 <a  id="fiveaLink" class="text link hoverLink" href="https://parking.uwosh.edu/permits/" target="_blank">View Permits</a>
-                        </div>
+                        </div> -->
 
                         <!-- Lot 5 -->
-                        <div id="fiveHover" class="parkingHover">
+                        <!-- <div id="fiveHover" class="parkingHover">
                                 <h1 class="parkingHeadHover text">Lot 5</h1><div class="parkingColorRestricted"></div>
                                 <p class="parkingTextHover text">Restricted Lot</p>
                                 <a  id="fiveLink" class="text link hoverLink" href="https://parking.uwosh.edu/permits/" target="_blank">View Permits</a>
-                        </div>
+                        </div> -->
 
                         <!-- lot 7a -->
-                        <div id="sevenaHover" class="parkingHover commuterHover">
+                        <!-- <div id="sevenaHover" class="parkingHover commuterHover">
                                 <h1 class="parkingHeadHover text">Lot 7a</h1><div class="parkingColorCommute"></div>
                                 <p class="parkingTextHover text">Employee Lot</p>
                                 <p class="parkingTextHover text">Commuter Lot</p>
                                 <p class="parkingTextHover text">Visitor Lot</p>
                                 <a  id="sevenaLink" class="text link hoverLink" href="https://parking.uwosh.edu/permits/" target="_blank">View Permits</a>
-                        </div>
+                        </div> -->
 
                         <!-- Lot 15-->
-                        <div id="fifteenHover" class="parkingHover">
+                        <!-- <div id="fifteenHover" class="parkingHover">
                                 <h1 class="parkingHeadHover text">Lot 15</h1><div class="parkingColorVisitor"></div>
                                 <p class="parkingTextHover text">Visitor Lot</p>
                                 <a  id="fifteenLink" class="text link hoverLink" href="https://parking.uwosh.edu/permits/" target="_blank">View Permits</a>
-                        </div>
+                        </div> -->
 
                         <!-- lot 32 -->
-                        <div id="thirtytwoHover" class="parkingHover">
+                        <!-- <div id="thirtytwoHover" class="parkingHover">
                                 <h1 class="parkingHeadHover text">Lot 32</h1><div class="parkingColorRestricted"></div>
                                 <p class="parkingTextHover text">Restricted Lot</p>
                                 <a  id="thirtytwoLink" class="text link hoverLink" href="https://parking.uwosh.edu/permits/" target="_blank">View Permits</a>
-                        </div>
+                        </div> -->
 
                         <!-- Lot 13 -->
-                        <div id="thirteenHover" class="parkingHover commuterHover">
+                        <!-- <div id="thirteenHover" class="parkingHover commuterHover">
                                 <h1 class="parkingHeadHover text">Lot 13</h1><div class="parkingColorCommute"></div>
                                 <p class="parkingTextHover text">Employee Lot</p>
                                 <p class="parkingTextHover text">Commuter Lot</p>
                                 <p class="parkingTextHover text">Visitor Lot</p>
                                 <a  id="thirteenLink" class="text link hoverLink" href="https://parking.uwosh.edu/permits/" target="_blank">View Permits</a>
-                        </div>
+                        </div> -->
 
                         <!-- lot 12 -->
-                        <div id="twelveHover" class="parkingHover">
+                        <!-- <div id="twelveHover" class="parkingHover">
                                 <h1 class="parkingHeadHover text">Lot 12</h1><div class="parkingColorRestricted"></div>
                                 <p class="parkingTextHover text">Restricted Lot</p>
                                 <a  id="twelveLink" class="text link hoverLink" href="https://parking.uwosh.edu/permits/" target="_blank">View Permits</a>
-                        </div>
+                        </div> -->
 
                         <!-- lot 6a -->
-                        <div id="sixaHover" class="parkingHover commuterHover">
+                        <!-- <div id="sixaHover" class="parkingHover commuterHover">
                                 <h1 class="parkingHeadHover text">Lot 6a</h1><div class="parkingColorCommute"></div>
                                 <p class="parkingTextHover text">Employee Lot</p>
                                 <p class="parkingTextHover text">Commuter Lot</p>
                                 <p class="parkingTextHover text">Visitor Lot</p>
                                 <a  id="sixaLink" class="text link hoverLink" href="https://parking.uwosh.edu/permits/" target="_blank">View Permits</a>
-                        </div>
+                        </div> -->
 
                         <!-- lot 6 -->
-                        <div id="sixHover" class="parkingHover commuterHover">
+                        <!-- <div id="sixHover" class="parkingHover commuterHover">
                                 <h1 class="parkingHeadHover text">Lot 6</h1><div class="parkingColorCommute"></div>
                                 <p class="parkingTextHover text">Employee Lot</p>
                                 <p class="parkingTextHover text">Commuter Lot</p>
                                 <p class="parkingTextHover text">Visitor Lot</p>
                                 <a id="sixLink" class="text link hoverLink" href="https://parking.uwosh.edu/permits/" target="_blank">View Permits</a>
-                        </div>
+                        </div> -->
 
                         <!-- lot 10 -->
-                        <div id="tenHover" class="parkingHover">
+                        <!-- <div id="tenHover" class="parkingHover">
                                 <h1 class="parkingHeadHover text">Lot 10</h1><div class="parkingColorRestricted"></div>
                                 <p class="parkingTextHover text">Restricted Lot</p>
                                 <a  id="tenLink" class="text link hoverLink" href="https://parking.uwosh.edu/permits/" target="_blank">View Permits</a>
-                        </div>
+                        </div> -->
 
                         <!-- lot 9a -->
-                        <div id="nineaHover" class="parkingHover">
+                        <!-- <div id="nineaHover" class="parkingHover">
                                 <h1 class="parkingHeadHover text">Lot 9a</h1><div class="parkingColorRestricted"></div>
                                 <p class="parkingTextHover text">Restricted Lot</p>
                                 <a  id="nineaLink" class="text link hoverLink" href="https://parking.uwosh.edu/permits/" target="_blank">View Permits</a>
-                        </div>
+                        </div> -->
 
                         <!-- Lot 9 -->
-                        <div id="nineHover" class="parkingHover">
+                        <!-- <div id="nineHover" class="parkingHover">
                                 <h1 class="parkingHeadHover text">Lot 9</h1><div class="parkingColorRestricted"></div>
                                 <p class="parkingTextHover text">Restricted Lot</p>
                                 <a  id="nineLink" class="text link hoverLink" href="https://parking.uwosh.edu/permits/" target="_blank">View Permits</a>
-                        </div>
+                        </div> -->
 
                         <!-- Lot 18 -->
-                        <div id="eighteenHover" class="parkingHover">
+                        <!-- <div id="eighteenHover" class="parkingHover">
                                 <h1 class="parkingHeadHover text">Lot 18</h1><div class="parkingColorResident"></div>
                                 <p class="parkingTextHover text">Resident Lot</p>
                                 <a  id="eighteenLink" class="text link hoverLink" href="https://parking.uwosh.edu/permits/" target="_blank">View Permits</a>
-                        </div>
+                        </div> -->
 
                         <!-- Lot 30 -->
-                        <div id="thirtyHover" class="parkingHover">
+                        <!-- <div id="thirtyHover" class="parkingHover">
                                 <h1 class="parkingHeadHover text">Lot 30</h1><div class="parkingColorResident"></div>
                                 <p class="parkingTextHover text">Resident Lot</p>
                                 <a  id="thirtyLink" class="text link hoverLink" href="https://parking.uwosh.edu/permits/" target="_blank">View Permits</a>
-                        </div>
+                        </div> -->
 
                         <!-- Lot 39 -->
-                        <div id="thirtynineHover" class="parkingHover commuterHover">
+                        <!-- <div id="thirtynineHover" class="parkingHover commuterHover">
                                 <h1 class="parkingHeadHover text">Lot 39</h1><div class="parkingColorCommute"></div><div class="parkingColorRemote"></div>
                                 <p class="parkingTextHover text">Employee Lot</p>
                                 <p class="parkingTextHover text">Commuter Lot</p>
                                 <p class="parkingTextHover text">Visitor Lot</p>
                                 <p class="parkingTextHover text">Remote Lot</p>
                                 <a  id="thirtynineLink" class="text link hoverLink" href="https://parking.uwosh.edu/permits/" target="_blank">View Permits</a>
-                        </div>
+                        </div> -->
 
                         <!-- womens center -->
-                        <div id="womensCenterHover" class="parkingHover">
+                        <!-- <div id="womensCenterHover" class="parkingHover">
                                 <h1 class="parkingHeadHover text">Women's Center</h1><div class="parkingColorRestricted"></div>
                                 <p class="parkingTextHover text">Women's Center Staff</p>
-                        </div>
+                        </div> -->
 
                         <!-- titan one  -->
-                                <div id="titanOneHover" class="parkingHover">
+                                <!-- <div id="titanOneHover" class="parkingHover">
                                 <h1 class="parkingHeadHover text">Titan Stadium Parking</h1>
                                 <p class="parkingTextHover text">Event Parking</p>
-                        </div>
+                        </div> -->
 
                         <!-- titan two -->
-                        <div id="titanTwoHover" class="parkingHover">
+                        <!-- <div id="titanTwoHover" class="parkingHover">
                                 <h1 class="parkingHeadHover text">Titan Stadium Parking</h1>
                                 <p class="parkingTextHover text">Event Parking</p>
-                        </div>
+                        </div> -->
 
 
                         <!-- end hovers for parking lots  -->
