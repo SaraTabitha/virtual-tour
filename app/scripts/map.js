@@ -892,6 +892,8 @@ function initMap() {
 
             checkboxOnChange(checkbox_slug, markers_array, icon_url); //individual checkbox
             selectAllOneEventListener(markers_array, icon_url); //select all checkbox
+        
+            return markers_array;
         }
         
 
@@ -911,9 +913,19 @@ function initMap() {
 
 
         //TODO rewrite allMarkers.forEach
+
+        function setMarkerClick(markers_array){
+            markers_array.forEach(function(this_marker){
+                this_marker.addListener('click', function(){
+                    console.log(this_marker.title);
+                });
+            });
+        }
+
         //TODO rewrite markerOpenClose 
 
-        /*TODO
+        /*
+        * TODO
         * Parking Lots
         *   -all lots
         *   -accessible lots 
@@ -923,14 +935,19 @@ function initMap() {
        get("../Classes/Parking_Lots/parking_json.php").then(function(response){
            //all parking
            console.log(response);
-           var checkbox_slug = "parking"; //TODO: have this variable only be set in one place
+           var checkbox_slug = "parking"; //TODO: have this variable only be set in one place (other is create_parkinglots.php)
            var allParking = response.allParking;
-           hookupCheckboxesToMarkers(checkbox_slug, allParking);
+           var all_parking_markers_array = hookupCheckboxesToMarkers(checkbox_slug, allParking);
+
+           setMarkerClick(all_parking_markers_array);
 
            //accessible parking
-           checkbox_slug = "accPar"; //TODO: have this variable only be set in one place
+           checkbox_slug = "accPar"; //TODO: have this variable only be set in one place (other is create_parkinglots.php)
            var accessibleParking = response.accessibleParking;
-           hookupCheckboxesToMarkers(checkbox_slug, accessibleParking);
+           var accessible_parking_markers_array = hookupCheckboxesToMarkers(checkbox_slug, accessibleParking);
+
+
+
        })
 
         /*TODO
