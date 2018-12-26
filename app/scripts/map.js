@@ -970,19 +970,16 @@ function initMap() {
         }
 
         /*
-        * TODO
         * Parking Lots
         *   -all lots
         *   -accessible lots 
-        * 
-        * TODO infowindows
         */
        get("../Classes/Parking_Lots/parking_json.php").then(function(response){
            //all parking
            var checkbox_slug = "parking"; //TODO: have this variable only be set in one place (other is create_parkinglots.php)
            var allParking = response.allParking;
-           var all_parking_markers_array = hookupCheckboxesToMarkers(checkbox_slug, allParking);
            var all_parking_slugs = response.allParking.slugs;
+           var all_parking_markers_array = hookupCheckboxesToMarkers(checkbox_slug, allParking);
            var all_parking_infoWindows = createInfoWindows(all_parking_slugs);
            setMarkerClick_openCloseInfo(all_parking_infoWindows, all_parking_markers_array);
 
@@ -990,11 +987,10 @@ function initMap() {
            checkbox_slug = "accPar"; //TODO: have this variable only be set in one place (other is create_parkinglots.php)
            var accessibleParking = response.accessibleParking;
            var accessible_parking_slugs = response.accessibleParking.slugs;
-           var accessible_parking_infoWindows = createInfoWindows(accessible_parking_slugs);
            var accessible_parking_markers_array = hookupCheckboxesToMarkers(checkbox_slug, accessibleParking);
+           var accessible_parking_infoWindows = createInfoWindows(accessible_parking_slugs);
            setMarkerClick_openCloseInfo(accessible_parking_infoWindows, accessible_parking_markers_array);
            
-
        })
 
         /*TODO
@@ -1004,6 +1000,9 @@ function initMap() {
         *       -accessible entries
         *       -sustainability points of interest
         *       -gender neutral and family restrooms
+        * 
+        *   TODO infowindows w/ thumbnail images
+        *   TODO popups
         * 
         *   -categories that are pulled from the CMS
         */

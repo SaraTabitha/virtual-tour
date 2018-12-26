@@ -155,18 +155,18 @@ border: #fccd32;
 
 /* parking */
 /* border outline */
-#parkingLabel.is-checked > span.mdl-checkbox__box-outline{
+/* #parkingLabel.is-checked > span.mdl-checkbox__box-outline{
   border: #ef92ac;
-}
+} */
   
   /* checkbox inner color */
-#parkingLabel.is-checked > span.mdl-checkbox__box-outline > span{
+/* #parkingLabel.is-checked > span.mdl-checkbox__box-outline > span{
     background: #ef92ac;
-}
+} */
   /* checkbox ripple effect color */
-#parkingLabel > span.mdl-checkbox__ripple-container.mdl-js-ripple-effect.mdl-ripple--center > span{
+/* #parkingLabel > span.mdl-checkbox__ripple-container.mdl-js-ripple-effect.mdl-ripple--center > span{
     background: #ef92ac;
-}
+} */
 
 /* accEnt */
 /* border outline */
@@ -185,33 +185,33 @@ border: #fccd32;
 
 /* accPar */
 /* border outline */
-#accParLabel.is-checked > span.mdl-checkbox__box-outline{
+/* #accParLabel.is-checked > span.mdl-checkbox__box-outline{
   border: #00a9a2;
 }
-  
+   */
   /* checkbox inner color */
-#accParLabel.is-checked > span.mdl-checkbox__box-outline > span{
+/* #accParLabel.is-checked > span.mdl-checkbox__box-outline > span{
     background: #00a9a2;
-}
+} */
   /* checkbox ripple effect color */
-#accParLabel > span.mdl-checkbox__ripple-container.mdl-js-ripple-effect.mdl-ripple--center > span{
+/* #accParLabel > span.mdl-checkbox__ripple-container.mdl-js-ripple-effect.mdl-ripple--center > span{
     background: #00a9a2;
-}
+} */
 
 /* emergency phones */
 /* border outline */
-#emergencyLabel.is-checked > span.mdl-checkbox__box-outline{
+/* #emergencyLabel.is-checked > span.mdl-checkbox__box-outline{
   border: #0085c8;
-}
+} */
   
   /* checkbox inner color */
-#emergencyLabel.is-checked > span.mdl-checkbox__box-outline > span{
+/* #emergencyLabel.is-checked > span.mdl-checkbox__box-outline > span{
     background: #0085c8;
-}
+} */
   /* checkbox ripple effect color */
-#emergencyLabel > span.mdl-checkbox__ripple-container.mdl-js-ripple-effect.mdl-ripple--center > span{
+/* #emergencyLabel > span.mdl-checkbox__ripple-container.mdl-js-ripple-effect.mdl-ripple--center > span{
     background: #0085c8;
-}
+} */
 
 /* sust */
 /* border outline */

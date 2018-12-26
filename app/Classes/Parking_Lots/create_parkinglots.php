@@ -52,7 +52,7 @@ $parkingLots = new MarkerGroup($slug, $checkboxColor, $markerIcon, $parkingLot_m
 * only accessible parking markers
 */
 $slug = "accPar";
-$checkboxColor = "#b3d4fc";
+$checkboxColor = "#00a9a2";
 $markerIcon = "images/markers/teal.png";
 $accessibleParkingLots = new MarkerGroup($slug, $checkboxColor, $markerIcon, $accessibleParking_markers);
 
