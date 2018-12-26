@@ -94,6 +94,7 @@ label.mdl-checkbox{
 /*grey for select all checkbox lines*/
 .mdl-checkbox__label.selectAll{
   color:  #d0cece;
+  bottom: 5px;
 }
 
 .options{
