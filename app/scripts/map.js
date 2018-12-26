@@ -924,20 +924,37 @@ function initMap() {
             return infoWindows_array;
         }
 
-        
+        function closeAllInfoWindows(infoWindows_array, markers_array){
+            infoWindows_array.forEach(function(this_infoWindow, index){
+                this_infoWindow.close(map, markers_array[index]);
+            });
+        }
 
         //TODO rewrite markerOpenClose 
-        function infoWindowOpenClose(infoWindow, marker){
-            infoWindow.open(map, marker);
-            console.log(marker.title + " opened");
-        }
+        // function infoWindowOpen(infoWindow, marker){
+        //     infoWindow.open(map, marker);
+        //     console.log(infoWindow.content.id + " opened");
+        // }
 
         //TODO rewrite allMarkers.forEach
         function setMarkerClick(infoWindows_array, markers_array){
             markers_array.forEach(function(this_marker, index){
                 this_marker.addListener('click', function(){
-                    console.log(this_marker.title + ", " + infoWindows_array[index].content);
-                    infoWindowOpenClose(infoWindows_array[index], this_marker);
+                    // closeAllInfoWindows(infoWindows_array, markers_array);
+                    // console.log(this_marker.title + ", " + infoWindows_array[index].content.id);
+                    // infoWindowOpen(infoWindows_array[index], this_marker);
+                    
+                    console.log(infoWindows_array[index].content.id);
+                    if(!$("#" + infoWindows_array[index].content.id).hasClass("hoverOpen")){
+                        closeAllInfoWindows(infoWindows_array, markers_array);
+                        infoWindows_array[index].open(map, this_marker);
+                        $("#" + infoWindows_array[index].content.id).addClass("hoverOpen");
+                    }
+                    else{
+                        $("#" + infoWindows_array[index].content.id).removeClass("hoverOpen");
+                        closeAllInfoWindows(infoWindows_array, markers_array);
+                    }
+               
                 });
             });
         }
