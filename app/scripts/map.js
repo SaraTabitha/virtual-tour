@@ -912,17 +912,35 @@ function initMap() {
         })
 
 
-        //TODO rewrite allMarkers.forEach
+        function createInfoWindows(slugs){
+            var infoWindows_array = [];
+            
+            slugs.forEach(function(this_slug, index){
+                infoWindows_array[index] = new google.maps.InfoWindow({
+                    content: document.getElementById(this_slug + "Hover")
+                });
+            });
 
-        function setMarkerClick(markers_array){
-            markers_array.forEach(function(this_marker){
+            return infoWindows_array;
+        }
+
+        
+
+        //TODO rewrite markerOpenClose 
+        function infoWindowOpenClose(infoWindow, marker){
+            infoWindow.open(map, marker);
+            console.log(marker.title + " opened");
+        }
+
+        //TODO rewrite allMarkers.forEach
+        function setMarkerClick(infoWindows_array, markers_array){
+            markers_array.forEach(function(this_marker, index){
                 this_marker.addListener('click', function(){
-                    console.log(this_marker.title);
+                    console.log(this_marker.title + ", " + infoWindows_array[index].content);
+                    infoWindowOpenClose(infoWindows_array[index], this_marker);
                 });
             });
         }
-
-        //TODO rewrite markerOpenClose 
 
         /*
         * TODO
@@ -938,15 +956,21 @@ function initMap() {
            var checkbox_slug = "parking"; //TODO: have this variable only be set in one place (other is create_parkinglots.php)
            var allParking = response.allParking;
            var all_parking_markers_array = hookupCheckboxesToMarkers(checkbox_slug, allParking);
+           var all_parking_slugs = response.allParking.slugs;
+           var all_parking_infoWindows = createInfoWindows(all_parking_slugs);
 
-           setMarkerClick(all_parking_markers_array);
+           console.log(all_parking_infoWindows);
+           //console.log(all_parking_slugs);
+           setMarkerClick(all_parking_infoWindows, all_parking_markers_array);
 
            //accessible parking
            checkbox_slug = "accPar"; //TODO: have this variable only be set in one place (other is create_parkinglots.php)
            var accessibleParking = response.accessibleParking;
+           var accessible_parking_slugs = response.accessibleParking.slugs;
+
            var accessible_parking_markers_array = hookupCheckboxesToMarkers(checkbox_slug, accessibleParking);
 
-
+           
 
        })
 
