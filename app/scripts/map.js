@@ -930,21 +930,9 @@ function initMap() {
             });
         }
 
-        //TODO rewrite markerOpenClose 
-        // function infoWindowOpen(infoWindow, marker){
-        //     infoWindow.open(map, marker);
-        //     console.log(infoWindow.content.id + " opened");
-        // }
-
-        //TODO rewrite allMarkers.forEach
         function setMarkerClick(infoWindows_array, markers_array){
             markers_array.forEach(function(this_marker, index){
                 this_marker.addListener('click', function(){
-                    // closeAllInfoWindows(infoWindows_array, markers_array);
-                    // console.log(this_marker.title + ", " + infoWindows_array[index].content.id);
-                    // infoWindowOpen(infoWindows_array[index], this_marker);
-                    
-                    console.log(infoWindows_array[index].content.id);
                     if(!$("#" + infoWindows_array[index].content.id).hasClass("hoverOpen")){
                         closeAllInfoWindows(infoWindows_array, markers_array);
                         infoWindows_array[index].open(map, this_marker);
@@ -969,24 +957,20 @@ function initMap() {
         */
        get("../Classes/Parking_Lots/parking_json.php").then(function(response){
            //all parking
-           console.log(response);
            var checkbox_slug = "parking"; //TODO: have this variable only be set in one place (other is create_parkinglots.php)
            var allParking = response.allParking;
            var all_parking_markers_array = hookupCheckboxesToMarkers(checkbox_slug, allParking);
            var all_parking_slugs = response.allParking.slugs;
            var all_parking_infoWindows = createInfoWindows(all_parking_slugs);
-
-           console.log(all_parking_infoWindows);
-           //console.log(all_parking_slugs);
            setMarkerClick(all_parking_infoWindows, all_parking_markers_array);
 
            //accessible parking
            checkbox_slug = "accPar"; //TODO: have this variable only be set in one place (other is create_parkinglots.php)
            var accessibleParking = response.accessibleParking;
            var accessible_parking_slugs = response.accessibleParking.slugs;
-
+           var accessible_parking_infoWindows = createInfoWindows(accessible_parking_slugs);
            var accessible_parking_markers_array = hookupCheckboxesToMarkers(checkbox_slug, accessibleParking);
-
+           setMarkerClick(accessible_parking_infoWindows, accessible_parking_markers_array);
            
 
        })
