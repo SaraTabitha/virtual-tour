@@ -911,7 +911,13 @@ function initMap() {
            hookupCheckboxesToMarkers(checkbox_slug, response);
         })
 
-
+        /*
+        * Params: slugs (array of strings of slugs for infoWindow ids)
+        * loops through slugs array and creates google.maps.InfoWindow objects from the divs made in create_parkingInfoWindows.php
+        * adds each new object to the infoWindows_array and returns that array
+        * 
+        * Return: infoWindows_array (an array filled with google.maps.InfoWindow objects)
+        */
         function createInfoWindows(slugs){
             var infoWindows_array = [];
             
@@ -924,21 +930,37 @@ function initMap() {
             return infoWindows_array;
         }
 
+        /*
+        * Params: infoWindows_array (an array of google.maps.InfoWindow objects)
+        *         markers_array (an array of google.maps.Marker objects)
+        *  Closes all infoWindows in the array
+        */
         function closeAllInfoWindows(infoWindows_array, markers_array){
             infoWindows_array.forEach(function(this_infoWindow, index){
                 this_infoWindow.close(map, markers_array[index]);
             });
         }
 
-        function setMarkerClick(infoWindows_array, markers_array){
+        /*
+        * Params: infoWindows_array (an array of google.maps.InfoWindow objects)
+        *         markers_array (an array of google.maps.Marker objects)
+        * 
+        * Loops through every marker and creates a click function for it; 
+        * When clicked: checks if the corresponding infoWindow is open or not (has "hoverOen" class) 
+        * if infoWindow is not open -> open it
+        * else infoWindow is open -> close it
+        */
+        function setMarkerClick_openCloseInfo(infoWindows_array, markers_array){
             markers_array.forEach(function(this_marker, index){
                 this_marker.addListener('click', function(){
                     if(!$("#" + infoWindows_array[index].content.id).hasClass("hoverOpen")){
+                        //if not open, open it
                         closeAllInfoWindows(infoWindows_array, markers_array);
                         infoWindows_array[index].open(map, this_marker);
                         $("#" + infoWindows_array[index].content.id).addClass("hoverOpen");
                     }
                     else{
+                        //if open, close it
                         $("#" + infoWindows_array[index].content.id).removeClass("hoverOpen");
                         closeAllInfoWindows(infoWindows_array, markers_array);
                     }
@@ -962,7 +984,7 @@ function initMap() {
            var all_parking_markers_array = hookupCheckboxesToMarkers(checkbox_slug, allParking);
            var all_parking_slugs = response.allParking.slugs;
            var all_parking_infoWindows = createInfoWindows(all_parking_slugs);
-           setMarkerClick(all_parking_infoWindows, all_parking_markers_array);
+           setMarkerClick_openCloseInfo(all_parking_infoWindows, all_parking_markers_array);
 
            //accessible parking
            checkbox_slug = "accPar"; //TODO: have this variable only be set in one place (other is create_parkinglots.php)
@@ -970,7 +992,7 @@ function initMap() {
            var accessible_parking_slugs = response.accessibleParking.slugs;
            var accessible_parking_infoWindows = createInfoWindows(accessible_parking_slugs);
            var accessible_parking_markers_array = hookupCheckboxesToMarkers(checkbox_slug, accessibleParking);
-           setMarkerClick(accessible_parking_infoWindows, accessible_parking_markers_array);
+           setMarkerClick_openCloseInfo(accessible_parking_infoWindows, accessible_parking_markers_array);
            
 
        })
