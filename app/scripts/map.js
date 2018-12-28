@@ -1009,6 +1009,8 @@ function initMap() {
         
        get("../Classes/Buildings/buildings_json.php").then(function(response){
             console.log(response);
+
+            //TODO: rest of the owl (create markers, infowindows, popups)
        })
         
         // setting sustainability markers
