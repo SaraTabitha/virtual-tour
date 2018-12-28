@@ -14,9 +14,6 @@ $lotTypes; //array of strings
 $latitude;
 $longitude;
 
-
-
-
 $parkingLot_list = array();
 $parkingLot_markers = array();
 
@@ -39,6 +36,7 @@ foreach($parkingLots as $index=>$lot){
         array_push($accessibleParking_markers, $parkingLot_markers[$index]);
     }
 }
+
 /*
 * all parking markers
 */
@@ -57,7 +55,7 @@ $markerIcon = "images/markers/teal.png";
 $accessibleParkingLots = new MarkerGroup($slug, $checkboxColor, $markerIcon, $accessibleParking_markers);
 
 //part 2 -> parking_json.php
-//part 3 -> style_checkboxes.php
+//part 3 -> Marker_Groups/style_checkboxes.php
 //part 4 -> create_parkingInfoWindows.php
 
 ?>

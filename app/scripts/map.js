@@ -1004,8 +1004,10 @@ function initMap() {
         *   TODO infowindows w/ thumbnail images
         *   TODO popups
         * 
-        *   -categories that are pulled from the CMS
+        *     -categories that are pulled from the CMS
         */
+        
+
         
         // setting sustainability markers
         function setSust(){
