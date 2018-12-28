@@ -1007,7 +1007,9 @@ function initMap() {
         *     -categories that are pulled from the CMS
         */
         
-
+       get("../Classes/Buildings/buildings_json.php").then(function(response){
+            console.log(response);
+       })
         
         // setting sustainability markers
         function setSust(){

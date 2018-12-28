@@ -1,6 +1,8 @@
 <?php
-require_once("Building.php");
-require_once("php/contactRestAPI.php");
+require_once(__DIR__ . "/../Marker_Groups/MarkerGroup.php");
+require_once(__DIR__ . "/../Marker_Groups/Marker.php");
+require_once(__DIR__ . "/Building.php");
+require_once(__DIR__ . "/../../php/contactRestAPI.php");
 
 $buildings = connectRestAPI("https://wwwtest.uwosh.edu/virtual-tour-cms/wp-json/wp/v2/buildings?per_page=100"); //per_page=100: this will return the first 100 results
 $media = connectRestAPI("https://wwwtest.uwosh.edu/virtual-tour-cms/wp-json/wp/v2/media?per_page=100");
