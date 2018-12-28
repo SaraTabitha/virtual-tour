@@ -22,6 +22,7 @@ class Building{
     private $building_categories; //array of Building Category titles (Strings not the BuildingCategory objects)
     private $marker;    //marker object (latitude, longitude)
 
+    private $about_tab_content;
     private $tour_tab_content; //string of html
     private $sustainability_tab_content; //string of html
     private $bathrooms_tab_content; //string of html
@@ -31,7 +32,7 @@ class Building{
     //building should have: $slug, $title, Marker marker, InfoWindow infowindow, $Tab_Array(array of tabs), Popup (holds all tabs)
 
     public function __construct($slug, $title, $isAccessible, $street, $city, $state, $zipcode, $full_image, $thumb_image, 
-    $building_categories, $marker, $tour_tab_content, $sustainability_tab_content, $bathrooms_tab_content, $dining_tab_content ){
+    $building_categories, $marker, $about_tab_content, $tour_tab_content, $sustainability_tab_content, $bathrooms_tab_content, $dining_tab_content ){
 
         $this->slug = $slug;
         $this->title = $title;
@@ -44,6 +45,7 @@ class Building{
         $this->thumb_image = $thumb_image;
         $this->building_categories = $building_categories;
         $this->marker = $marker;
+        $this->about_tab_content = $about_tab_content;
         $this->tour_tab_content = $tour_tab_content;
         $this->sustainability_tab_content = $sustainability_tab_content;
         $this->bathrooms_tab_content = $bathrooms_tab_content;
@@ -83,6 +85,9 @@ class Building{
     }
     public function getMarker(){
         return $this->marker;
+    }
+    public function getAboutTabContent(){
+        return $this->about_tab_content;
     }
     public function getTourTabContent(){
         return $this->tour_tab_content;
