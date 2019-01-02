@@ -131,198 +131,198 @@ function initMap() {
             //0 albee
             //position: lat, lng, title: are all used for creating the markers that go on the map
             //the shorthand is for html element selectors, ex "$("#albeeHover") can be accessed now with allMarkersInfo.shortHand[0] replacing "albee" in a loop
-            {position: {lat: 44.025729, lng: -88.550248}, title: "Albee Hall", shortHand: "albee",
-            //thumbnail is for the infowindow that pops up when you click on a marker, hoverSelector is the selector for the 
-            //html element in index.html that is the content for the infoWindow 
-            thumbnail: "images/campuspictures/albeehall.jpeg", fullImage: "images/campuspictures/albeehallFull.jpeg",
-            iFrame: "https://www.youtube.com/embed/AW5cpKVsXWA"
-            },
-            //1 baseball
-            {position: {lat: 44.023042, lng: -88.561892},title: "Alumni Baseball Stadium", shortHand: "baseball",
-            thumbnail:"images/campuspictures/baseball.jpg", fullImage:"images/campuspictures/baseballFull.jpg"
-            },
-            //2 alumni
-            {position: {lat: 44.020528, lng: -88.550432},title: "Alumni Welcome and Conference Center", shortHand: "alumni",
-            thumbnail: "images/campuspictures/awcc-building.jpg", fullImage: "images/campuspictures/awcc-buildingFull.jpg"
-            },
-            //3 ac
-            {position: {lat: 44.029640, lng: -88.552137},title: "Arts and Communications", shortHand: "ac",
-            thumbnail: "images/campuspictures/artscommunications.jpeg", fullImage:"images/campuspictures/artscommunicationsFull.jpeg"
-            },
-            //4 athletic
-            {position: {lat: 44.023077, lng: -88.561081},title: "Athletic Service Building", shortHand: "athletic",
-            thumbnail: "images/campuspictures/athleticservice.jpeg", fullImage:"images/campuspictures/athleticserviceFull.jpeg"
-            },
-            //5 blackhawk
-            {position: {lat: 44.023591, lng: -88.549157},title: "Blackhawk Commons", shortHand: "blackhawk",
-            thumbnail: "images/campuspictures/blackhawk.jpeg", fullImage:"images/campuspictures/blackhawkFull.jpeg",
-            diningImage:  "images/campuspictures/blackhawkGif.gif"
-            },
-            //6 biodigester
-            {position: {lat: 44.018897, lng: -88.558015},title: "Biodigester",shortHand: "biodigester",
-            thumbnail:"images/campuspictures/biodigester.jpg", fullImage:"images/campuspictures/biodigesterFull.jpg"
-            },
-            //7 buckstaff
-            { position: {lat: 44.028428, lng: -88.551581},title: "Buckstaff Planetarium", shortHand: "buckstaff",
-            thumbnail: "images/campuspictures/buckstaff.jpeg", fullImage:"images/campuspictures/buckstaffFull.jpeg"
-            },
-            //8 equity 
-            {position: {lat: 44.024655, lng: -88.547217},title: "Campus Center for Equity and Diversity",shortHand: "equity",
-            thumbnail: "images/campuspictures/centerforequity.jpeg", fullImage:"images/campuspictures/centerforequityFull.jpeg"
-            },
-            //9 campus services
-            {position: {lat: 44.017782, lng: -88.556446},title: "Campus Services", shortHand: "campus",
-            thumbnail: "images/campuspictures/campus-services.jpg", fullImage:"images/campuspictures/campus-servicesFull.jpg"
-            },
-            //10 ceramics
-            {position: {lat: 44.025559, lng: -88.555515},title: "Ceramics Laboratory",shortHand: "ceramics",
-            thumbnail: "images/campuspictures/ceramicslab.jpeg", fullImage:"images/campuspictures/ceramicslabFull.jpeg"
-            },
-            //11 clow
-            {position: {lat: 44.026306, lng: -88.552268},title: "Clow Social Sciences Center",shortHand: "clow",
-            thumbnail:"images/campuspictures/clow.jpeg", fullImage:"images/campuspictures/clowFull.jpeg",
-            diningImage: "images/campuspictures/clowGif.gif"
-            },
-            //12 gardens
-            {position: {lat: 44.015573, lng: -88.555929},title: "Community Gardens",shortHand: "gardens",
-            thumbnail:"images/campuspictures/community-gardens.jpg", fullImage:"images/campuspictures/community-gardensFull.jpg"
-            },
-            //13 dempsey
-            {position: {lat: 44.026603, lng: -88.550707},title: "Dempsey Hall",shortHand: "dempsey",
-            thumbnail:"images/campuspictures/dempsey.jpeg", fullImage:"images/campuspictures/dempseyFull.jpeg"
-            },
-            //14 donner
-            {position: {lat: 44.025420, lng: -88.552287}, title: "Donner Hall",shortHand: "donner",
-            thumbnail:"images/campuspictures/donner.jpeg", fullImage:"images/campuspictures/donnerFull.jpeg"
-             },
-            //15 east
-            {position: {lat: 44.031217, lng: -88.543806},title: "East Hall",shortHand: "east",
-            thumbnail: "images/campuspictures/easthall.jpg", fullImage:"images/campuspictures/easthallFull.jpg"
-            },
-            //16 environmental
-            { position: {lat: 44.023518, lng: -88.553851}, title: "Environmental Science and Research Center",shortHand: "environmental",
-            thumbnail:"images/campuspictures/aquaticstudiescenter.jpeg", fullImage:"images/campuspictures/aquaticstudiescenterFull.jpeg"
-            },
-            //17 evans
-            {position: {lat: 44.026168, lng: -88.547397},title: "Evans Hall",shortHand: "evans",
-            thumbnail:"images/campuspictures/evans.jpeg", fullImage:"images/campuspictures/evansFull.jpeg"
-             },
-            //18 fletcher
-            { position: {lat: 44.025332, lng: -88.547240}, title: "Fletcher Hall",shortHand: "fletcher",
-            thumbnail: "images/campuspictures/fletcher.jpeg", fullImage:"images/campuspictures/fletcherFull.jpeg"
-            },
-            //19 fredric
-            {position: {lat:  44.029000, lng:-88.552919},title: "Fredric March Theater",shortHand: "fredric",
-            thumbnail:"images/campuspictures/fredricmarch.jpeg", fullImage:"images/campuspictures/fredricmarchFull.jpeg"
-             },
-            //20 gruenhagen
-            { position: {lat: 44.022405, lng:  -88.548824}, title: "Gruenhagen Conference Center",shortHand: "gruenhagen",
-            thumbnail:"images/campuspictures/gruenhagen.jpeg", fullImage:"images/campuspictures/gruenhagenFull.jpeg"
-             },
-            //21 halsey
-            {position: {lat:  44.028497, lng: -88.551027},title: "Halsey Science Center",shortHand: "halsey",
-            thumbnail:"images/campuspictures/halsey.jpeg", fullImage:"images/campuspictures/halseyFull.jpeg",
-            diningImage: "images/campuspictures/halseyGif.gif"
-            },
-            //22 harrington
-            {position: {lat:  44.027736, lng: -88.550172}, title: "Harrington Hall",shortHand: "harrington",
-            thumbnail:"images/campuspictures/harrington.jpeg", fullImage:"images/campuspictures/harringtonFull.jpeg"
-             },
-            //23 heating 
-            {position: {lat: 44.028235, lng: -88.554312},title: "Heating Plant",shortHand: "heating",
-            thumbnail:"images/campuspictures/heatingplant.jpeg", fullImage:"images/campuspictures/heatingplantFull.jpeg"
-             },
-            //24 parking ramp
-            {position: {lat: 44.022960, lng: -88.549791},title: "High Avenue Parking Ramp",shortHand: "parkingRamp",
-            thumbnail:"images/campuspictures/parkingramp.jpeg", fullImage:"images/campuspictures/parkingrampFull.jpeg",
-            parkingImage: "images/campuspictures/parkingRamp.png"
-             },
-            //25 horizon
-            {position: {lat: 44.024363, lng: -88.547972},title: "Horizon Village",shortHand: "horizon",
-            thumbnail:"images/campuspictures/horizon.jpeg", fullImage:"images/campuspictures/horizonFull.jpeg"
-             },
-            //26 kolf
-            {position: {lat: 44.024323, lng: -88.552214},title: "Kolf Sports Center",shortHand: "kolf",
-            thumbnail:"images/campuspictures/kolf.jpeg", fullImage:"images/campuspictures/kolfFull.jpeg"
-             },
-            //27 lincoln
-            {position: {lat: 44.023204, lng: -88.546359},title: "Lincoln Hall",shortHand: "lincoln",
-            thumbnail:"images/campuspictures/lincoln-hall.jpg"
-            // , fullImage:"images/campuspictures/lincoln-hallFull.jpg"
-              },
-            //28 multicultural
-            { position: {lat: 44.024842, lng: -88.550613}, title: "Multicultural Education Center",shortHand: "multicultural",
-            thumbnail:"images/campuspictures/multiculturaleducation.jpeg", fullImage:"images/campuspictures/multiculturaleducationFull.jpeg"
-             },
-            //29 nursing
-            {position: {lat: 44.027051, lng: -88.552813},title: "Nursing and Education Building",shortHand: "nursing",
-            thumbnail:"images/campuspictures/nursingeducation.jpeg", fullImage:"images/campuspictures/nursingeducationFull.jpeg"
-             },
-            //30 oviatt
-            {position: {lat:  44.027156, lng: -88.551466},title: "Oviatt House",shortHand: "oviatt",
-            thumbnail:"images/campuspictures/oviatt.jpeg", fullImage:"images/campuspictures/oviattFull.jpeg"
-            },
-            //31 pollock
-            { position:  {lat: 44.025227, lng:  -88.551292},title: "Pollock House",shortHand: "pollock",
-            thumbnail:"images/campuspictures/pollock.jpeg", fullImage:"images/campuspictures/pollockFull.jpeg"
-              },
-            //32 polk
-            { position: {lat: 44.026379, lng: -88.549602}, title: "Polk Library",shortHand: "polk",
-            thumbnail:"images/campuspictures/polk.jpeg", fullImage:"images/campuspictures/polkFull.jpeg",
-            iFrame: "https://www.youtube.com/embed/iHPdc89AD_c"
-            },
-            //33 radford
-            { position: {lat: 44.025671, lng: -88.551561}, title: "Radford Hall and Student Health Center",shortHand: "radford",
-            thumbnail:"images/campuspictures/radford.jpeg", fullImage:"images/campuspictures/radfordFull.jpeg"
-            },
-            //34 reeve
-            { position: {lat: 44.024934, lng: -88.549448}, title: "Reeve Memorial Union",shortHand: "reeve",
-            thumbnail:"images/campuspictures/reeve.jpeg", fullImage:"images/campuspictures/reeveFull.jpeg",
-            iFrame: "https://www.youtube.com/embed/QAtW972K3cQ", diningImage: "images/campuspictures/reeveGif.gif"
-              },
-            //35 sage
-            { position: {lat: 44.025720, lng: -88.553770},  title: "Sage Hall",shortHand: "sage",
-            thumbnail:"images/campuspictures/sage.jpeg", fullImage:"images/campuspictures/sageFull.jpeg",
-            iFrame: "https://www.youtube.com/embed/DVRbh2fCCZ0", diningImage: "images/campuspictures/sageGif.gif"
-             },
-            //36 scott
-            {position: {lat: 44.022556, lng: -88.547344},title: "Scott Hall",shortHand: "scott",
-            thumbnail:"images/campuspictures/scott.jpeg", fullImage:"images/campuspictures/scottFull.jpeg",
-            diningImage:"images/campuspictures/scottGif.gif"
-             },
-            //37 stewart
-            {position: {lat: 44.026060, lng: -88.546952},title: "Stewart Hall",shortHand: "stewart",
-            thumbnail: "images/campuspictures/stewart.jpeg", fullImage:"images/campuspictures/stewartFull.jpeg"
-             },
-            //38 recreation
-            {position: {lat: 44.021752, lng: -88.551694},title: "Student Recreation and Wellness Center",shortHand: "recreation",
-            thumbnail:"images/campuspictures/srwc.jpeg", fullImage:"images/campuspictures/srwcFull.jpeg"
-             },
-            //39 success
-            { position: {lat: 44.026205, lng: -88.548163},  title: "Student Success Center",shortHand: "success",
-            thumbnail:"images/campuspictures/studentsuccess.jpeg", fullImage:"images/campuspictures/studentsuccessFull.jpeg",
-            iFrame: "https://www.youtube.com/embed/NjZjuqM7SBg"
-             },
-            //40 swart
-            { position: {lat:  44.027872, lng:  -88.551962}, title: "Swart Hall",shortHand: "swart",
-            thumbnail:"images/campuspictures/swart.jpeg", fullImage:"images/campuspictures/swartFull.jpeg"
-             },
-            //41 taylor
-            {position:  {lat: 44.024577, lng: -88.551215}, title: "Taylor Hall",shortHand: "taylor",
-            thumbnail:"images/campuspictures/taylor.jpeg", fullImage:"images/campuspictures/taylorFull.jpeg"
-             },
-            //42 titan
-            {position:  {lat: 44.023671, lng: -88.562917},title: "Titan Stadium",shortHand: "titan",
-            thumbnail:"images/campuspictures/titanstadium.jpeg", fullImage:"images/campuspictures/titanstadiumFull.jpeg"
-            },
-            //43 police
-            {position:  {lat: 44.023763, lng: -88.549972},title: "University Police",shortHand: "police",
-            thumbnail:"images/campuspictures/universitypolice.jpeg", fullImage:"images/campuspictures/universitypoliceFull.jpeg"
-            },
-            //44 webster
-            {position: {lat: 44.025002, lng: -88.551681},title: "Webster Hall",shortHand: "webster",
-            thumbnail:"images/campuspictures/webster.jpeg", fullImage:"images/campuspictures/websterFull.jpeg"
-            }
+            // {position: {lat: 44.025729, lng: -88.550248}, title: "Albee Hall", shortHand: "albee",
+            // //thumbnail is for the infowindow that pops up when you click on a marker, hoverSelector is the selector for the 
+            // //html element in index.html that is the content for the infoWindow 
+            // thumbnail: "images/campuspictures/albeehall.jpeg", fullImage: "images/campuspictures/albeehallFull.jpeg",
+            // iFrame: "https://www.youtube.com/embed/AW5cpKVsXWA"
+            // },
+            // //1 baseball
+            // {position: {lat: 44.023042, lng: -88.561892},title: "Alumni Baseball Stadium", shortHand: "baseball",
+            // thumbnail:"images/campuspictures/baseball.jpg", fullImage:"images/campuspictures/baseballFull.jpg"
+            // },
+            // //2 alumni
+            // {position: {lat: 44.020528, lng: -88.550432},title: "Alumni Welcome and Conference Center", shortHand: "alumni",
+            // thumbnail: "images/campuspictures/awcc-building.jpg", fullImage: "images/campuspictures/awcc-buildingFull.jpg"
+            // },
+            // //3 ac
+            // {position: {lat: 44.029640, lng: -88.552137},title: "Arts and Communications", shortHand: "ac",
+            // thumbnail: "images/campuspictures/artscommunications.jpeg", fullImage:"images/campuspictures/artscommunicationsFull.jpeg"
+            // },
+            // //4 athletic
+            // {position: {lat: 44.023077, lng: -88.561081},title: "Athletic Service Building", shortHand: "athletic",
+            // thumbnail: "images/campuspictures/athleticservice.jpeg", fullImage:"images/campuspictures/athleticserviceFull.jpeg"
+            // },
+            // //5 blackhawk
+            // {position: {lat: 44.023591, lng: -88.549157},title: "Blackhawk Commons", shortHand: "blackhawk",
+            // thumbnail: "images/campuspictures/blackhawk.jpeg", fullImage:"images/campuspictures/blackhawkFull.jpeg",
+            // diningImage:  "images/campuspictures/blackhawkGif.gif"
+            // },
+            // //6 biodigester
+            // {position: {lat: 44.018897, lng: -88.558015},title: "Biodigester",shortHand: "biodigester",
+            // thumbnail:"images/campuspictures/biodigester.jpg", fullImage:"images/campuspictures/biodigesterFull.jpg"
+            // },
+            // //7 buckstaff
+            // { position: {lat: 44.028428, lng: -88.551581},title: "Buckstaff Planetarium", shortHand: "buckstaff",
+            // thumbnail: "images/campuspictures/buckstaff.jpeg", fullImage:"images/campuspictures/buckstaffFull.jpeg"
+            // },
+            // //8 equity 
+            // {position: {lat: 44.024655, lng: -88.547217},title: "Campus Center for Equity and Diversity",shortHand: "equity",
+            // thumbnail: "images/campuspictures/centerforequity.jpeg", fullImage:"images/campuspictures/centerforequityFull.jpeg"
+            // },
+            // //9 campus services
+            // {position: {lat: 44.017782, lng: -88.556446},title: "Campus Services", shortHand: "campus",
+            // thumbnail: "images/campuspictures/campus-services.jpg", fullImage:"images/campuspictures/campus-servicesFull.jpg"
+            // },
+            // //10 ceramics
+            // {position: {lat: 44.025559, lng: -88.555515},title: "Ceramics Laboratory",shortHand: "ceramics",
+            // thumbnail: "images/campuspictures/ceramicslab.jpeg", fullImage:"images/campuspictures/ceramicslabFull.jpeg"
+            // },
+            // //11 clow
+            // {position: {lat: 44.026306, lng: -88.552268},title: "Clow Social Sciences Center",shortHand: "clow",
+            // thumbnail:"images/campuspictures/clow.jpeg", fullImage:"images/campuspictures/clowFull.jpeg",
+            // diningImage: "images/campuspictures/clowGif.gif"
+            // },
+            // //12 gardens
+            // {position: {lat: 44.015573, lng: -88.555929},title: "Community Gardens",shortHand: "gardens",
+            // thumbnail:"images/campuspictures/community-gardens.jpg", fullImage:"images/campuspictures/community-gardensFull.jpg"
+            // },
+            // //13 dempsey
+            // {position: {lat: 44.026603, lng: -88.550707},title: "Dempsey Hall",shortHand: "dempsey",
+            // thumbnail:"images/campuspictures/dempsey.jpeg", fullImage:"images/campuspictures/dempseyFull.jpeg"
+            // },
+            // //14 donner
+            // {position: {lat: 44.025420, lng: -88.552287}, title: "Donner Hall",shortHand: "donner",
+            // thumbnail:"images/campuspictures/donner.jpeg", fullImage:"images/campuspictures/donnerFull.jpeg"
+            //  },
+            // //15 east
+            // {position: {lat: 44.031217, lng: -88.543806},title: "East Hall",shortHand: "east",
+            // thumbnail: "images/campuspictures/easthall.jpg", fullImage:"images/campuspictures/easthallFull.jpg"
+            // },
+            // //16 environmental
+            // { position: {lat: 44.023518, lng: -88.553851}, title: "Environmental Science and Research Center",shortHand: "environmental",
+            // thumbnail:"images/campuspictures/aquaticstudiescenter.jpeg", fullImage:"images/campuspictures/aquaticstudiescenterFull.jpeg"
+            // },
+            // //17 evans
+            // {position: {lat: 44.026168, lng: -88.547397},title: "Evans Hall",shortHand: "evans",
+            // thumbnail:"images/campuspictures/evans.jpeg", fullImage:"images/campuspictures/evansFull.jpeg"
+            //  },
+            // //18 fletcher
+            // { position: {lat: 44.025332, lng: -88.547240}, title: "Fletcher Hall",shortHand: "fletcher",
+            // thumbnail: "images/campuspictures/fletcher.jpeg", fullImage:"images/campuspictures/fletcherFull.jpeg"
+            // },
+            // //19 fredric
+            // {position: {lat:  44.029000, lng:-88.552919},title: "Fredric March Theater",shortHand: "fredric",
+            // thumbnail:"images/campuspictures/fredricmarch.jpeg", fullImage:"images/campuspictures/fredricmarchFull.jpeg"
+            //  },
+            // //20 gruenhagen
+            // { position: {lat: 44.022405, lng:  -88.548824}, title: "Gruenhagen Conference Center",shortHand: "gruenhagen",
+            // thumbnail:"images/campuspictures/gruenhagen.jpeg", fullImage:"images/campuspictures/gruenhagenFull.jpeg"
+            //  },
+            // //21 halsey
+            // {position: {lat:  44.028497, lng: -88.551027},title: "Halsey Science Center",shortHand: "halsey",
+            // thumbnail:"images/campuspictures/halsey.jpeg", fullImage:"images/campuspictures/halseyFull.jpeg",
+            // diningImage: "images/campuspictures/halseyGif.gif"
+            // },
+            // //22 harrington
+            // {position: {lat:  44.027736, lng: -88.550172}, title: "Harrington Hall",shortHand: "harrington",
+            // thumbnail:"images/campuspictures/harrington.jpeg", fullImage:"images/campuspictures/harringtonFull.jpeg"
+            //  },
+            // //23 heating 
+            // {position: {lat: 44.028235, lng: -88.554312},title: "Heating Plant",shortHand: "heating",
+            // thumbnail:"images/campuspictures/heatingplant.jpeg", fullImage:"images/campuspictures/heatingplantFull.jpeg"
+            //  },
+            // //24 parking ramp
+            // {position: {lat: 44.022960, lng: -88.549791},title: "High Avenue Parking Ramp",shortHand: "parkingRamp",
+            // thumbnail:"images/campuspictures/parkingramp.jpeg", fullImage:"images/campuspictures/parkingrampFull.jpeg",
+            // parkingImage: "images/campuspictures/parkingRamp.png"
+            //  },
+            // //25 horizon
+            // {position: {lat: 44.024363, lng: -88.547972},title: "Horizon Village",shortHand: "horizon",
+            // thumbnail:"images/campuspictures/horizon.jpeg", fullImage:"images/campuspictures/horizonFull.jpeg"
+            //  },
+            // //26 kolf
+            // {position: {lat: 44.024323, lng: -88.552214},title: "Kolf Sports Center",shortHand: "kolf",
+            // thumbnail:"images/campuspictures/kolf.jpeg", fullImage:"images/campuspictures/kolfFull.jpeg"
+            //  },
+            // //27 lincoln
+            // {position: {lat: 44.023204, lng: -88.546359},title: "Lincoln Hall",shortHand: "lincoln",
+            // thumbnail:"images/campuspictures/lincoln-hall.jpg"
+            // // , fullImage:"images/campuspictures/lincoln-hallFull.jpg"
+            //   },
+            // //28 multicultural
+            // { position: {lat: 44.024842, lng: -88.550613}, title: "Multicultural Education Center",shortHand: "multicultural",
+            // thumbnail:"images/campuspictures/multiculturaleducation.jpeg", fullImage:"images/campuspictures/multiculturaleducationFull.jpeg"
+            //  },
+            // //29 nursing
+            // {position: {lat: 44.027051, lng: -88.552813},title: "Nursing and Education Building",shortHand: "nursing",
+            // thumbnail:"images/campuspictures/nursingeducation.jpeg", fullImage:"images/campuspictures/nursingeducationFull.jpeg"
+            //  },
+            // //30 oviatt
+            // {position: {lat:  44.027156, lng: -88.551466},title: "Oviatt House",shortHand: "oviatt",
+            // thumbnail:"images/campuspictures/oviatt.jpeg", fullImage:"images/campuspictures/oviattFull.jpeg"
+            // },
+            // //31 pollock
+            // { position:  {lat: 44.025227, lng:  -88.551292},title: "Pollock House",shortHand: "pollock",
+            // thumbnail:"images/campuspictures/pollock.jpeg", fullImage:"images/campuspictures/pollockFull.jpeg"
+            //   },
+            // //32 polk
+            // { position: {lat: 44.026379, lng: -88.549602}, title: "Polk Library",shortHand: "polk",
+            // thumbnail:"images/campuspictures/polk.jpeg", fullImage:"images/campuspictures/polkFull.jpeg",
+            // iFrame: "https://www.youtube.com/embed/iHPdc89AD_c"
+            // },
+            // //33 radford
+            // { position: {lat: 44.025671, lng: -88.551561}, title: "Radford Hall and Student Health Center",shortHand: "radford",
+            // thumbnail:"images/campuspictures/radford.jpeg", fullImage:"images/campuspictures/radfordFull.jpeg"
+            // },
+            // //34 reeve
+            // { position: {lat: 44.024934, lng: -88.549448}, title: "Reeve Memorial Union",shortHand: "reeve",
+            // thumbnail:"images/campuspictures/reeve.jpeg", fullImage:"images/campuspictures/reeveFull.jpeg",
+            // iFrame: "https://www.youtube.com/embed/QAtW972K3cQ", diningImage: "images/campuspictures/reeveGif.gif"
+            //   },
+            // //35 sage
+            // { position: {lat: 44.025720, lng: -88.553770},  title: "Sage Hall",shortHand: "sage",
+            // thumbnail:"images/campuspictures/sage.jpeg", fullImage:"images/campuspictures/sageFull.jpeg",
+            // iFrame: "https://www.youtube.com/embed/DVRbh2fCCZ0", diningImage: "images/campuspictures/sageGif.gif"
+            //  },
+            // //36 scott
+            // {position: {lat: 44.022556, lng: -88.547344},title: "Scott Hall",shortHand: "scott",
+            // thumbnail:"images/campuspictures/scott.jpeg", fullImage:"images/campuspictures/scottFull.jpeg",
+            // diningImage:"images/campuspictures/scottGif.gif"
+            //  },
+            // //37 stewart
+            // {position: {lat: 44.026060, lng: -88.546952},title: "Stewart Hall",shortHand: "stewart",
+            // thumbnail: "images/campuspictures/stewart.jpeg", fullImage:"images/campuspictures/stewartFull.jpeg"
+            //  },
+            // //38 recreation
+            // {position: {lat: 44.021752, lng: -88.551694},title: "Student Recreation and Wellness Center",shortHand: "recreation",
+            // thumbnail:"images/campuspictures/srwc.jpeg", fullImage:"images/campuspictures/srwcFull.jpeg"
+            //  },
+            // //39 success
+            // { position: {lat: 44.026205, lng: -88.548163},  title: "Student Success Center",shortHand: "success",
+            // thumbnail:"images/campuspictures/studentsuccess.jpeg", fullImage:"images/campuspictures/studentsuccessFull.jpeg",
+            // iFrame: "https://www.youtube.com/embed/NjZjuqM7SBg"
+            //  },
+            // //40 swart
+            // { position: {lat:  44.027872, lng:  -88.551962}, title: "Swart Hall",shortHand: "swart",
+            // thumbnail:"images/campuspictures/swart.jpeg", fullImage:"images/campuspictures/swartFull.jpeg"
+            //  },
+            // //41 taylor
+            // {position:  {lat: 44.024577, lng: -88.551215}, title: "Taylor Hall",shortHand: "taylor",
+            // thumbnail:"images/campuspictures/taylor.jpeg", fullImage:"images/campuspictures/taylorFull.jpeg"
+            //  },
+            // //42 titan
+            // {position:  {lat: 44.023671, lng: -88.562917},title: "Titan Stadium",shortHand: "titan",
+            // thumbnail:"images/campuspictures/titanstadium.jpeg", fullImage:"images/campuspictures/titanstadiumFull.jpeg"
+            // },
+            // //43 police
+            // {position:  {lat: 44.023763, lng: -88.549972},title: "University Police",shortHand: "police",
+            // thumbnail:"images/campuspictures/universitypolice.jpeg", fullImage:"images/campuspictures/universitypoliceFull.jpeg"
+            // },
+            // //44 webster
+            // {position: {lat: 44.025002, lng: -88.551681},title: "Webster Hall",shortHand: "webster",
+            // thumbnail:"images/campuspictures/webster.jpeg", fullImage:"images/campuspictures/websterFull.jpeg"
+            // }
             /*
             //parking lots
             // [45] Lot 11
@@ -503,18 +503,18 @@ function initMap() {
         //the list that will contain all of the buildingMarker objects made with "new google.maps.Marker"
         //has to be initiliazed outside of a function to use the list items with event listeners and other methods in any other functions
         var allMarkers = [];
-        //function for creating marker objects and adding them to the allMarkers list using the data from the buildingMarkerInfo array
-        for(a = 0, len = allMarkersInfo.length; a < len; a++){
-                    allMarkers[a] = new google.maps.Marker({
-                    position: allMarkersInfo[a].position, title: allMarkersInfo[a].title
-                });
-        }
+        // //function for creating marker objects and adding them to the allMarkers list using the data from the buildingMarkerInfo array
+        // for(a = 0, len = allMarkersInfo.length; a < len; a++){
+        //             allMarkers[a] = new google.maps.Marker({
+        //             position: allMarkersInfo[a].position, title: allMarkersInfo[a].title
+        //         });
+        // }
 
         
         
 
         // adding infoWindows for building markers 
-        var infoWindowsAll = [];
+       //var infoWindowsAll = [];
           //basic single object creation for all hover infoWindows that popup when a marker is clicked
          //ex of what it looks like to set the content for just one building
         // var albeeHover =  document.getElementById('albeeHover'); (these are now the "hoverSelector:" part of the allInfo array)
@@ -522,11 +522,11 @@ function initMap() {
          //     content: hoverContentSelectors[0],
         // });
          //loop to take the info from hoverContentSelectors and make a new array of hover InfoWindows
-         for(b = 0; b < 45; b++){
-            infoWindowsAll[b] = new google.maps.InfoWindow({
-                 content: document.getElementById(allMarkersInfo[b].shortHand + "Hover"),
-             });
-         }
+        //  for(b = 0; b < 45; b++){
+        //     infoWindowsAll[b] = new google.maps.InfoWindow({
+        //          content: document.getElementById(allMarkersInfo[b].shortHand + "Hover"),
+        //      });
+        //  }
          
         //example of original code that might be useful for understanding what is happening throughout
         //sets marker on the map:
@@ -541,20 +541,20 @@ function initMap() {
        
         //setting all markers /removing them from the map 
         //setting all buildings markers to the map and making them yellow
-        function setBuilding(){
-            for (c = 0; c < 45; c++){
-                allMarkers[c].setMap(map);
-                allMarkers[c].setIcon(yellowMarker);
-            }
-        }
+        // function setBuilding(){
+        //     for (c = 0; c < 45; c++){
+        //         allMarkers[c].setMap(map);
+        //         allMarkers[c].setIcon(yellowMarker);
+        //     }
+        // }
         // remove all buildings from the map
         //(problematic; if other checkboxes are selected they need to reset and color their markers 
         //(if they share common markers with this set))
-        function removeBuilding(){
-            for (d = 0; d < 45; d++){
-                allMarkers[d].setMap(null);
-            }
-        }
+        // function removeBuilding(){
+        //     for (d = 0; d < 45; d++){
+        //         allMarkers[d].setMap(null);
+        //     }
+        // }
         /*
         // set parking lot markers
         function setParkingLots(){
@@ -655,77 +655,77 @@ function initMap() {
             }
         }*/
         // accessible entries (buildings)
-        function setAccEnt(){
-            //accEnt buildings: albee, ac, blackhawk, equity, clow, dempsey, donner, kolf, nursing, scott, stewart, webster
-            //fletcher, fredric, gruenhagen, halsey, harrington, polk, radford, reeve, success, swart, taylor
-            allMarkers[0].setMap(map);
-            allMarkers[3].setMap(map);
-            allMarkers[5].setMap(map);
-            allMarkers[8].setMap(map);
-            allMarkers[11].setMap(map);
-            allMarkers[13].setMap(map);
-            allMarkers[14].setMap(map);
-            allMarkers[26].setMap(map);
-            allMarkers[29].setMap(map);
-            allMarkers[36].setMap(map);
-            allMarkers[37].setMap(map);
-            allMarkers[44].setMap(map);
-            allMarkers[0].setIcon(redMarker);
-            allMarkers[3].setIcon(redMarker);
-            allMarkers[5].setIcon(redMarker);
-            allMarkers[8].setIcon(redMarker);
-            allMarkers[11].setIcon(redMarker);
-            allMarkers[13].setIcon(redMarker);
-            allMarkers[14].setIcon(redMarker);
-            allMarkers[26].setIcon(redMarker);
-            allMarkers[29].setIcon(redMarker);
-            allMarkers[36].setIcon(redMarker);
-            allMarkers[37].setIcon(redMarker);
-            allMarkers[44].setIcon(redMarker);
-            //18-22
-            for(g = 18; g < 23; g++){
-                allMarkers[g].setMap(map);
-                allMarkers[g].setIcon(redMarker);
-            }
-            //32-34
-            for(h = 32; h < 35; h++){
-                allMarkers[h].setMap(map);
-                allMarkers[h].setIcon(redMarker);
-            }
-            //39-41
-            for (i = 39; i < 42; i++){
-                allMarkers[i].setMap(map);
-                allMarkers[i].setIcon(redMarker);
-            }
-        }
-        function removeAccEnt(){
-             //accEnt buildings: albee, ac, blackhawk, equity, clow, dempsey, donner, kolf, nursing, scott, stewart, webster
-            //fletcher, fredric, gruenhagen, halsey, harrington, polk, radford, reeve, success, swart, taylor
-            allMarkers[0].setMap(null);
-            allMarkers[3].setMap(null);
-            allMarkers[5].setMap(null);
-            allMarkers[8].setMap(null);
-            allMarkers[11].setMap(null);
-            allMarkers[13].setMap(null);
-            allMarkers[14].setMap(null);
-            allMarkers[26].setMap(null);
-            allMarkers[29].setMap(null);
-            allMarkers[36].setMap(null);
-            allMarkers[37].setMap(null);
-            allMarkers[44].setMap(null);
-            //18-22
-            for(j = 18; j < 23; j++){
-                allMarkers[j].setMap(null);
-            }
-            //32-34
-            for(k = 32; k < 35; k++){
-                allMarkers[k].setMap(null);
-            }
-            //39-41
-            for (l = 39; l< 42; l++){
-                allMarkers[l].setMap(null);
-            }
-        }
+        // function setAccEnt(){
+        //     //accEnt buildings: albee, ac, blackhawk, equity, clow, dempsey, donner, kolf, nursing, scott, stewart, webster
+        //     //fletcher, fredric, gruenhagen, halsey, harrington, polk, radford, reeve, success, swart, taylor
+        //     allMarkers[0].setMap(map);
+        //     allMarkers[3].setMap(map);
+        //     allMarkers[5].setMap(map);
+        //     allMarkers[8].setMap(map);
+        //     allMarkers[11].setMap(map);
+        //     allMarkers[13].setMap(map);
+        //     allMarkers[14].setMap(map);
+        //     allMarkers[26].setMap(map);
+        //     allMarkers[29].setMap(map);
+        //     allMarkers[36].setMap(map);
+        //     allMarkers[37].setMap(map);
+        //     allMarkers[44].setMap(map);
+        //     allMarkers[0].setIcon(redMarker);
+        //     allMarkers[3].setIcon(redMarker);
+        //     allMarkers[5].setIcon(redMarker);
+        //     allMarkers[8].setIcon(redMarker);
+        //     allMarkers[11].setIcon(redMarker);
+        //     allMarkers[13].setIcon(redMarker);
+        //     allMarkers[14].setIcon(redMarker);
+        //     allMarkers[26].setIcon(redMarker);
+        //     allMarkers[29].setIcon(redMarker);
+        //     allMarkers[36].setIcon(redMarker);
+        //     allMarkers[37].setIcon(redMarker);
+        //     allMarkers[44].setIcon(redMarker);
+        //     //18-22
+        //     for(g = 18; g < 23; g++){
+        //         allMarkers[g].setMap(map);
+        //         allMarkers[g].setIcon(redMarker);
+        //     }
+        //     //32-34
+        //     for(h = 32; h < 35; h++){
+        //         allMarkers[h].setMap(map);
+        //         allMarkers[h].setIcon(redMarker);
+        //     }
+        //     //39-41
+        //     for (i = 39; i < 42; i++){
+        //         allMarkers[i].setMap(map);
+        //         allMarkers[i].setIcon(redMarker);
+        //     }
+        // }
+        // function removeAccEnt(){
+        //      //accEnt buildings: albee, ac, blackhawk, equity, clow, dempsey, donner, kolf, nursing, scott, stewart, webster
+        //     //fletcher, fredric, gruenhagen, halsey, harrington, polk, radford, reeve, success, swart, taylor
+        //     allMarkers[0].setMap(null);
+        //     allMarkers[3].setMap(null);
+        //     allMarkers[5].setMap(null);
+        //     allMarkers[8].setMap(null);
+        //     allMarkers[11].setMap(null);
+        //     allMarkers[13].setMap(null);
+        //     allMarkers[14].setMap(null);
+        //     allMarkers[26].setMap(null);
+        //     allMarkers[29].setMap(null);
+        //     allMarkers[36].setMap(null);
+        //     allMarkers[37].setMap(null);
+        //     allMarkers[44].setMap(null);
+        //     //18-22
+        //     for(j = 18; j < 23; j++){
+        //         allMarkers[j].setMap(null);
+        //     }
+        //     //32-34
+        //     for(k = 32; k < 35; k++){
+        //         allMarkers[k].setMap(null);
+        //     }
+        //     //39-41
+        //     for (l = 39; l< 42; l++){
+        //         allMarkers[l].setMap(null);
+        //     }
+        // }
         /*
         // accessible parking set markers
         function setAccPar(){
@@ -1014,310 +1014,310 @@ function initMap() {
        })
         
         // setting sustainability markers
-        function setSust(){
-            //sust buildings: albee, alumni, blackhawk, biodigester, heating, horizon, reeve, sage, recreation
-            //success, taylor, titanStadium
-            allMarkers[0].setMap(map);
-            allMarkers[2].setMap(map);
-            allMarkers[5].setMap(map);
-            allMarkers[6].setMap(map);
-            allMarkers[23].setMap(map);
-            allMarkers[25].setMap(map);
-            allMarkers[34].setMap(map);
-            allMarkers[35].setMap(map);
-            allMarkers[38].setMap(map);
-            allMarkers[39].setMap(map);
-            allMarkers[41].setMap(map);
-            allMarkers[42].setMap(map);
-            allMarkers[0].setIcon(greenMarker);
-            allMarkers[2].setIcon(greenMarker);
-            allMarkers[5].setIcon(greenMarker);
-            allMarkers[6].setIcon(greenMarker);
-            allMarkers[23].setIcon(greenMarker);
-            allMarkers[25].setIcon(greenMarker);
-            allMarkers[34].setIcon(greenMarker);
-            allMarkers[35].setIcon(greenMarker);
-            allMarkers[38].setIcon(greenMarker);
-            allMarkers[39].setIcon(greenMarker);
-            allMarkers[41].setIcon(greenMarker);
-            allMarkers[42].setIcon(greenMarker);
+        // function setSust(){
+        //     //sust buildings: albee, alumni, blackhawk, biodigester, heating, horizon, reeve, sage, recreation
+        //     //success, taylor, titanStadium
+        //     allMarkers[0].setMap(map);
+        //     allMarkers[2].setMap(map);
+        //     allMarkers[5].setMap(map);
+        //     allMarkers[6].setMap(map);
+        //     allMarkers[23].setMap(map);
+        //     allMarkers[25].setMap(map);
+        //     allMarkers[34].setMap(map);
+        //     allMarkers[35].setMap(map);
+        //     allMarkers[38].setMap(map);
+        //     allMarkers[39].setMap(map);
+        //     allMarkers[41].setMap(map);
+        //     allMarkers[42].setMap(map);
+        //     allMarkers[0].setIcon(greenMarker);
+        //     allMarkers[2].setIcon(greenMarker);
+        //     allMarkers[5].setIcon(greenMarker);
+        //     allMarkers[6].setIcon(greenMarker);
+        //     allMarkers[23].setIcon(greenMarker);
+        //     allMarkers[25].setIcon(greenMarker);
+        //     allMarkers[34].setIcon(greenMarker);
+        //     allMarkers[35].setIcon(greenMarker);
+        //     allMarkers[38].setIcon(greenMarker);
+        //     allMarkers[39].setIcon(greenMarker);
+        //     allMarkers[41].setIcon(greenMarker);
+        //     allMarkers[42].setIcon(greenMarker);
 
-        }
+        // }
         // remove sustainability markers
-        function removeSust(){
-            //sust buildings: albee, alumni, blackhawk, biodigester, heating, horizon, reeve, sage, recreation
-            //success, taylor, titanStadium
-            allMarkers[0].setMap(null);
-            allMarkers[2].setMap(null);
-            allMarkers[5].setMap(null);
-            allMarkers[6].setMap(null);
-            allMarkers[23].setMap(null);
-            allMarkers[25].setMap(null);
-            allMarkers[34].setMap(null);
-            allMarkers[35].setMap(null);
-            allMarkers[38].setMap(null);
-            allMarkers[39].setMap(null);
-            allMarkers[41].setMap(null);
-            allMarkers[42].setMap(null);
-        }
+        // function removeSust(){
+        //     //sust buildings: albee, alumni, blackhawk, biodigester, heating, horizon, reeve, sage, recreation
+        //     //success, taylor, titanStadium
+        //     allMarkers[0].setMap(null);
+        //     allMarkers[2].setMap(null);
+        //     allMarkers[5].setMap(null);
+        //     allMarkers[6].setMap(null);
+        //     allMarkers[23].setMap(null);
+        //     allMarkers[25].setMap(null);
+        //     allMarkers[34].setMap(null);
+        //     allMarkers[35].setMap(null);
+        //     allMarkers[38].setMap(null);
+        //     allMarkers[39].setMap(null);
+        //     allMarkers[41].setMap(null);
+        //     allMarkers[42].setMap(null);
+        // }
        
        
         // setting gender markers
-        function setGender(){
-            //gender buildings: ac, blackhawk, campus, dempsey, halsey, harrington, nursing, reeve, sage
-            //recreation, success, swart, police
-            allMarkers[0].setMap(map);
-            allMarkers[5].setMap(map);
-            allMarkers[9].setMap(map);
-            allMarkers[13].setMap(map);
-            allMarkers[21].setMap(map);
-            allMarkers[22].setMap(map);
-            allMarkers[26].setMap(map);
-            allMarkers[29].setMap(map);
-            allMarkers[34].setMap(map);
-            allMarkers[35].setMap(map);
-            allMarkers[38].setMap(map);
-            allMarkers[39].setMap(map);
-            allMarkers[40].setMap(map);
-            allMarkers[43].setMap(map);
-            allMarkers[0].setIcon(lightpurpleMarker);
-            allMarkers[5].setIcon(lightpurpleMarker);
-            allMarkers[9].setIcon(lightpurpleMarker);
-            allMarkers[13].setIcon(lightpurpleMarker);
-            allMarkers[21].setIcon(lightpurpleMarker);
-            allMarkers[22].setIcon(lightpurpleMarker);
-            allMarkers[26].setIcon(lightpurpleMarker);
-            allMarkers[29].setIcon(lightpurpleMarker);
-            allMarkers[34].setIcon(lightpurpleMarker);
-            allMarkers[35].setIcon(lightpurpleMarker);
-            allMarkers[38].setIcon(lightpurpleMarker);
-            allMarkers[39].setIcon(lightpurpleMarker);
-            allMarkers[40].setIcon(lightpurpleMarker);
-            allMarkers[43].setIcon(lightpurpleMarker);
+        // function setGender(){
+        //     //gender buildings: ac, blackhawk, campus, dempsey, halsey, harrington, nursing, reeve, sage
+        //     //recreation, success, swart, police
+        //     allMarkers[0].setMap(map);
+        //     allMarkers[5].setMap(map);
+        //     allMarkers[9].setMap(map);
+        //     allMarkers[13].setMap(map);
+        //     allMarkers[21].setMap(map);
+        //     allMarkers[22].setMap(map);
+        //     allMarkers[26].setMap(map);
+        //     allMarkers[29].setMap(map);
+        //     allMarkers[34].setMap(map);
+        //     allMarkers[35].setMap(map);
+        //     allMarkers[38].setMap(map);
+        //     allMarkers[39].setMap(map);
+        //     allMarkers[40].setMap(map);
+        //     allMarkers[43].setMap(map);
+        //     allMarkers[0].setIcon(lightpurpleMarker);
+        //     allMarkers[5].setIcon(lightpurpleMarker);
+        //     allMarkers[9].setIcon(lightpurpleMarker);
+        //     allMarkers[13].setIcon(lightpurpleMarker);
+        //     allMarkers[21].setIcon(lightpurpleMarker);
+        //     allMarkers[22].setIcon(lightpurpleMarker);
+        //     allMarkers[26].setIcon(lightpurpleMarker);
+        //     allMarkers[29].setIcon(lightpurpleMarker);
+        //     allMarkers[34].setIcon(lightpurpleMarker);
+        //     allMarkers[35].setIcon(lightpurpleMarker);
+        //     allMarkers[38].setIcon(lightpurpleMarker);
+        //     allMarkers[39].setIcon(lightpurpleMarker);
+        //     allMarkers[40].setIcon(lightpurpleMarker);
+        //     allMarkers[43].setIcon(lightpurpleMarker);
 
-        }
+        // }
         // removing gender markers
-        function removeGender(){
-            //gender buildings: ac, blackhawk, campus, dempsey, halsey, harrington, nursing, reeve, sage
-            //recreation, success, swart, police
-            allMarkers[0].setMap(null);
-            allMarkers[5].setMap(null);
-            allMarkers[9].setMap(null);
-            allMarkers[13].setMap(null);
-            allMarkers[21].setMap(null);
-            allMarkers[22].setMap(null);
-            allMarkers[26].setMap(null);
-            allMarkers[29].setMap(null);
-            allMarkers[34].setMap(null);
-            allMarkers[35].setMap(null);
-            allMarkers[38].setMap(null);
-            allMarkers[39].setMap(null);
-            allMarkers[40].setMap(null);
-            allMarkers[43].setMap(null);
-        }
+        // function removeGender(){
+        //     //gender buildings: ac, blackhawk, campus, dempsey, halsey, harrington, nursing, reeve, sage
+        //     //recreation, success, swart, police
+        //     allMarkers[0].setMap(null);
+        //     allMarkers[5].setMap(null);
+        //     allMarkers[9].setMap(null);
+        //     allMarkers[13].setMap(null);
+        //     allMarkers[21].setMap(null);
+        //     allMarkers[22].setMap(null);
+        //     allMarkers[26].setMap(null);
+        //     allMarkers[29].setMap(null);
+        //     allMarkers[34].setMap(null);
+        //     allMarkers[35].setMap(null);
+        //     allMarkers[38].setMap(null);
+        //     allMarkers[39].setMap(null);
+        //     allMarkers[40].setMap(null);
+        //     allMarkers[43].setMap(null);
+        // }
         // functions for categories select/remove markers
-        function setAccaF(){
-            //accaF buildings: ac, albee, ceramics, clow, environmental, fredric, halsey, harrington, swart, nursing, polk, radford, sage
-            allMarkers[0].setMap(map);
-            allMarkers[3].setMap(map);
-            allMarkers[10].setMap(map);
-            allMarkers[11].setMap(map);
-            allMarkers[16].setMap(map);
-            allMarkers[19].setMap(map);
-            allMarkers[21].setMap(map);
-            allMarkers[22].setMap(map);
-            allMarkers[26].setMap(map);
-            allMarkers[29].setMap(map);
-            allMarkers[32].setMap(map);
-            allMarkers[33].setMap(map);
-            allMarkers[35].setMap(map);
-            allMarkers[40].setMap(map);
-            allMarkers[0].setIcon(maroonMarker);
-            allMarkers[3].setIcon(maroonMarker);
-            allMarkers[10].setIcon(maroonMarker);
-            allMarkers[11].setIcon(maroonMarker);
-            allMarkers[16].setIcon(maroonMarker);
-            allMarkers[19].setIcon(maroonMarker);
-            allMarkers[21].setIcon(maroonMarker);
-            allMarkers[22].setIcon(maroonMarker);
-            allMarkers[26].setIcon(maroonMarker);
-            allMarkers[29].setIcon(maroonMarker);
-            allMarkers[32].setIcon(maroonMarker);
-            allMarkers[33].setIcon(maroonMarker);
-            allMarkers[35].setIcon(maroonMarker);
-            allMarkers[40].setIcon(maroonMarker);
+        // function setAccaF(){
+        //     //accaF buildings: ac, albee, ceramics, clow, environmental, fredric, halsey, harrington, swart, nursing, polk, radford, sage
+        //     allMarkers[0].setMap(map);
+        //     allMarkers[3].setMap(map);
+        //     allMarkers[10].setMap(map);
+        //     allMarkers[11].setMap(map);
+        //     allMarkers[16].setMap(map);
+        //     allMarkers[19].setMap(map);
+        //     allMarkers[21].setMap(map);
+        //     allMarkers[22].setMap(map);
+        //     allMarkers[26].setMap(map);
+        //     allMarkers[29].setMap(map);
+        //     allMarkers[32].setMap(map);
+        //     allMarkers[33].setMap(map);
+        //     allMarkers[35].setMap(map);
+        //     allMarkers[40].setMap(map);
+        //     allMarkers[0].setIcon(maroonMarker);
+        //     allMarkers[3].setIcon(maroonMarker);
+        //     allMarkers[10].setIcon(maroonMarker);
+        //     allMarkers[11].setIcon(maroonMarker);
+        //     allMarkers[16].setIcon(maroonMarker);
+        //     allMarkers[19].setIcon(maroonMarker);
+        //     allMarkers[21].setIcon(maroonMarker);
+        //     allMarkers[22].setIcon(maroonMarker);
+        //     allMarkers[26].setIcon(maroonMarker);
+        //     allMarkers[29].setIcon(maroonMarker);
+        //     allMarkers[32].setIcon(maroonMarker);
+        //     allMarkers[33].setIcon(maroonMarker);
+        //     allMarkers[35].setIcon(maroonMarker);
+        //     allMarkers[40].setIcon(maroonMarker);
 
-        }
-        function removeAccaF(){
-             //accaF buildings: ac, albee, ceramics, clow, environmental, fredric, halsey, harrington, swart, nursing, polk, radford, sage
-             allMarkers[0].setMap(null);
-             allMarkers[3].setMap(null);
-             allMarkers[10].setMap(null);
-             allMarkers[11].setMap(null);
-             allMarkers[16].setMap(null);
-             allMarkers[19].setMap(null);
-             allMarkers[21].setMap(null);
-             allMarkers[22].setMap(null);
-             allMarkers[26].setMap(null);
-             allMarkers[29].setMap(null);
-             allMarkers[32].setMap(null);
-             allMarkers[33].setMap(null);
-             allMarkers[35].setMap(null);
-             allMarkers[40].setMap(null);
-        }
-        function setAth(){
-            //ath buildings: albee, athletic, baseball, east, kolf, titanstadium
-            allMarkers[0].setMap(map);
-            allMarkers[1].setMap(map);
-            allMarkers[4].setMap(map);
-            allMarkers[15].setMap(map);
-            allMarkers[26].setMap(map);
-            allMarkers[42].setMap(map);
-            allMarkers[0].setIcon(orangeMarker);
-            allMarkers[1].setIcon(orangeMarker);
-            allMarkers[4].setIcon(orangeMarker);
-            allMarkers[15].setIcon(orangeMarker);
-            allMarkers[26].setIcon(orangeMarker);
-            allMarkers[42].setIcon(orangeMarker);
-        }
-        function removeAth(){
-            //ath buildings: albee, athletic, baseball, east, kolf, titanstadium
-            allMarkers[0].setMap(null);
-            allMarkers[1].setMap(null);
-            allMarkers[4].setMap(null);
-            allMarkers[15].setMap(null);
-            allMarkers[26].setMap(null);
-            allMarkers[42].setMap(null);
-        }
+        // }
+        // function removeAccaF(){
+        //      //accaF buildings: ac, albee, ceramics, clow, environmental, fredric, halsey, harrington, swart, nursing, polk, radford, sage
+        //      allMarkers[0].setMap(null);
+        //      allMarkers[3].setMap(null);
+        //      allMarkers[10].setMap(null);
+        //      allMarkers[11].setMap(null);
+        //      allMarkers[16].setMap(null);
+        //      allMarkers[19].setMap(null);
+        //      allMarkers[21].setMap(null);
+        //      allMarkers[22].setMap(null);
+        //      allMarkers[26].setMap(null);
+        //      allMarkers[29].setMap(null);
+        //      allMarkers[32].setMap(null);
+        //      allMarkers[33].setMap(null);
+        //      allMarkers[35].setMap(null);
+        //      allMarkers[40].setMap(null);
+        // }
+        // function setAth(){
+        //     //ath buildings: albee, athletic, baseball, east, kolf, titanstadium
+        //     allMarkers[0].setMap(map);
+        //     allMarkers[1].setMap(map);
+        //     allMarkers[4].setMap(map);
+        //     allMarkers[15].setMap(map);
+        //     allMarkers[26].setMap(map);
+        //     allMarkers[42].setMap(map);
+        //     allMarkers[0].setIcon(orangeMarker);
+        //     allMarkers[1].setIcon(orangeMarker);
+        //     allMarkers[4].setIcon(orangeMarker);
+        //     allMarkers[15].setIcon(orangeMarker);
+        //     allMarkers[26].setIcon(orangeMarker);
+        //     allMarkers[42].setIcon(orangeMarker);
+        // }
+        // function removeAth(){
+        //     //ath buildings: albee, athletic, baseball, east, kolf, titanstadium
+        //     allMarkers[0].setMap(null);
+        //     allMarkers[1].setMap(null);
+        //     allMarkers[4].setMap(null);
+        //     allMarkers[15].setMap(null);
+        //     allMarkers[26].setMap(null);
+        //     allMarkers[42].setMap(null);
+        // }
         // set/remove AccaS
-        function setAccaS(){
-            //accaS buildings: equity, nursing, success, swart
-            allMarkers[8].setMap(map);
-            allMarkers[29].setMap(map);
-            allMarkers[39].setMap(map);
-            allMarkers[40].setMap(map);
-            allMarkers[8].setIcon(brownMarker);
-            allMarkers[29].setIcon(brownMarker);
-            allMarkers[39].setIcon(brownMarker);
-            allMarkers[40].setIcon(brownMarker);
+        // function setAccaS(){
+        //     //accaS buildings: equity, nursing, success, swart
+        //     allMarkers[8].setMap(map);
+        //     allMarkers[29].setMap(map);
+        //     allMarkers[39].setMap(map);
+        //     allMarkers[40].setMap(map);
+        //     allMarkers[8].setIcon(brownMarker);
+        //     allMarkers[29].setIcon(brownMarker);
+        //     allMarkers[39].setIcon(brownMarker);
+        //     allMarkers[40].setIcon(brownMarker);
 
-        }
-        function removeAccaS(){
-            //accaS buildings: equity, nursing, success, swart
-            allMarkers[8].setMap(null);
-            allMarkers[29].setMap(null);
-            allMarkers[39].setMap(null);
-            allMarkers[40].setMap(null);
+        // }
+        // function removeAccaS(){
+        //     //accaS buildings: equity, nursing, success, swart
+        //     allMarkers[8].setMap(null);
+        //     allMarkers[29].setMap(null);
+        //     allMarkers[39].setMap(null);
+        //     allMarkers[40].setMap(null);
 
-        }
-        function setCampS(){
-            //campS buildings: equity, campus, dempsey, multicultural, pollock, recreation, radford, reeve, success
-            allMarkers[8].setMap(map);
-            allMarkers[9].setMap(map);
-            allMarkers[13].setMap(map);
-            allMarkers[28].setMap(map);
-            allMarkers[31].setMap(map);
-            allMarkers[38].setMap(map);
-            allMarkers[33].setMap(map);
-            allMarkers[34].setMap(map);
-            allMarkers[39].setMap(map);
-            allMarkers[8].setIcon(darkgreenMarker);
-            allMarkers[9].setIcon(darkgreenMarker);
-            allMarkers[13].setIcon(darkgreenMarker);
-            allMarkers[28].setIcon(darkgreenMarker);
-            allMarkers[31].setIcon(darkgreenMarker);
-            allMarkers[38].setIcon(darkgreenMarker);
-            allMarkers[33].setIcon(darkgreenMarker);
-            allMarkers[34].setIcon(darkgreenMarker);
-            allMarkers[39].setIcon(darkgreenMarker);
+        // }
+        // function setCampS(){
+        //     //campS buildings: equity, campus, dempsey, multicultural, pollock, recreation, radford, reeve, success
+        //     allMarkers[8].setMap(map);
+        //     allMarkers[9].setMap(map);
+        //     allMarkers[13].setMap(map);
+        //     allMarkers[28].setMap(map);
+        //     allMarkers[31].setMap(map);
+        //     allMarkers[38].setMap(map);
+        //     allMarkers[33].setMap(map);
+        //     allMarkers[34].setMap(map);
+        //     allMarkers[39].setMap(map);
+        //     allMarkers[8].setIcon(darkgreenMarker);
+        //     allMarkers[9].setIcon(darkgreenMarker);
+        //     allMarkers[13].setIcon(darkgreenMarker);
+        //     allMarkers[28].setIcon(darkgreenMarker);
+        //     allMarkers[31].setIcon(darkgreenMarker);
+        //     allMarkers[38].setIcon(darkgreenMarker);
+        //     allMarkers[33].setIcon(darkgreenMarker);
+        //     allMarkers[34].setIcon(darkgreenMarker);
+        //     allMarkers[39].setIcon(darkgreenMarker);
 
-        }
-        function removeCampS(){
-             //campS buildings: equity, campus, dempsey, multicultural, pollock, recreation, radford, reeve, success
-             allMarkers[8].setMap(null);
-             allMarkers[9].setMap(null);
-             allMarkers[13].setMap(null);
-             allMarkers[28].setMap(null);
-             allMarkers[31].setMap(null);
-             allMarkers[38].setMap(null);
-             allMarkers[33].setMap(null);
-             allMarkers[34].setMap(null);
-             allMarkers[39].setMap(null);
-        }
+        // }
+        // function removeCampS(){
+        //      //campS buildings: equity, campus, dempsey, multicultural, pollock, recreation, radford, reeve, success
+        //      allMarkers[8].setMap(null);
+        //      allMarkers[9].setMap(null);
+        //      allMarkers[13].setMap(null);
+        //      allMarkers[28].setMap(null);
+        //      allMarkers[31].setMap(null);
+        //      allMarkers[38].setMap(null);
+        //      allMarkers[33].setMap(null);
+        //      allMarkers[34].setMap(null);
+        //      allMarkers[39].setMap(null);
+        // }
         // ResH set/remove
-        function setResH(){
-            //resH buildings: donner, evans, fletcher, gruenhagen, horizon, stewart, scott, taylor, webster
-            allMarkers[14].setMap(map);
-            allMarkers[17].setMap(map);
-            allMarkers[18].setMap(map);
-            allMarkers[20].setMap(map);
-            allMarkers[25].setMap(map);
-            allMarkers[37].setMap(map);
-            allMarkers[36].setMap(map);
-            allMarkers[41].setMap(map);
-            allMarkers[44].setMap(map);
-            allMarkers[14].setIcon(lightblueMarker);
-            allMarkers[17].setIcon(lightblueMarker);
-            allMarkers[18].setIcon(lightblueMarker);
-            allMarkers[20].setIcon(lightblueMarker);
-            allMarkers[25].setIcon(lightblueMarker);
-            allMarkers[37].setIcon(lightblueMarker);
-            allMarkers[36].setIcon(lightblueMarker);
-            allMarkers[41].setIcon(lightblueMarker);
-            allMarkers[44].setIcon(lightblueMarker);
+        // function setResH(){
+        //     //resH buildings: donner, evans, fletcher, gruenhagen, horizon, stewart, scott, taylor, webster
+        //     allMarkers[14].setMap(map);
+        //     allMarkers[17].setMap(map);
+        //     allMarkers[18].setMap(map);
+        //     allMarkers[20].setMap(map);
+        //     allMarkers[25].setMap(map);
+        //     allMarkers[37].setMap(map);
+        //     allMarkers[36].setMap(map);
+        //     allMarkers[41].setMap(map);
+        //     allMarkers[44].setMap(map);
+        //     allMarkers[14].setIcon(lightblueMarker);
+        //     allMarkers[17].setIcon(lightblueMarker);
+        //     allMarkers[18].setIcon(lightblueMarker);
+        //     allMarkers[20].setIcon(lightblueMarker);
+        //     allMarkers[25].setIcon(lightblueMarker);
+        //     allMarkers[37].setIcon(lightblueMarker);
+        //     allMarkers[36].setIcon(lightblueMarker);
+        //     allMarkers[41].setIcon(lightblueMarker);
+        //     allMarkers[44].setIcon(lightblueMarker);
 
-        }
-        function removeResH(){
-            //resH buildings: donner, evans, fletcher, gruenhagen, horizon, stewart, scott, taylor, webster
-            allMarkers[14].setMap(null);
-            allMarkers[17].setMap(null);
-            allMarkers[18].setMap(null);
-            allMarkers[20].setMap(null);
-            allMarkers[25].setMap(null);
-            allMarkers[37].setMap(null);
-            allMarkers[36].setMap(null);
-            allMarkers[41].setMap(null);
-            allMarkers[44].setMap(null);
-        }
+        // }
+        // function removeResH(){
+        //     //resH buildings: donner, evans, fletcher, gruenhagen, horizon, stewart, scott, taylor, webster
+        //     allMarkers[14].setMap(null);
+        //     allMarkers[17].setMap(null);
+        //     allMarkers[18].setMap(null);
+        //     allMarkers[20].setMap(null);
+        //     allMarkers[25].setMap(null);
+        //     allMarkers[37].setMap(null);
+        //     allMarkers[36].setMap(null);
+        //     allMarkers[41].setMap(null);
+        //     allMarkers[44].setMap(null);
+        // }
         // set/remove dining
-        function setDining(){
-            //dining buildings: blackhawk, clow, halsey, reeve, sage, scott
-            allMarkers[5].setMap(map);
-            allMarkers[11].setMap(map);
-            allMarkers[21].setMap(map);
-            allMarkers[34].setMap(map);
-            allMarkers[35].setMap(map);
-            allMarkers[36].setMap(map);
-            allMarkers[5].setIcon(navyMarker);
-            allMarkers[11].setIcon(navyMarker);
-            allMarkers[21].setIcon(navyMarker);
-            allMarkers[34].setIcon(navyMarker);
-            allMarkers[35].setIcon(navyMarker);
-            allMarkers[36].setIcon(navyMarker);
+        // function setDining(){
+        //     //dining buildings: blackhawk, clow, halsey, reeve, sage, scott
+        //     allMarkers[5].setMap(map);
+        //     allMarkers[11].setMap(map);
+        //     allMarkers[21].setMap(map);
+        //     allMarkers[34].setMap(map);
+        //     allMarkers[35].setMap(map);
+        //     allMarkers[36].setMap(map);
+        //     allMarkers[5].setIcon(navyMarker);
+        //     allMarkers[11].setIcon(navyMarker);
+        //     allMarkers[21].setIcon(navyMarker);
+        //     allMarkers[34].setIcon(navyMarker);
+        //     allMarkers[35].setIcon(navyMarker);
+        //     allMarkers[36].setIcon(navyMarker);
 
-        }
-        function removeDining(){
-            //dining buildings: blackhawk, clow, halsey, reeve, sage, scott
-            allMarkers[5].setMap(null);
-            allMarkers[11].setMap(null);
-            allMarkers[21].setMap(null);
-            allMarkers[34].setMap(null);
-            allMarkers[35].setMap(null);
-            allMarkers[36].setMap(null);
-        }
+        // }
+        // function removeDining(){
+        //     //dining buildings: blackhawk, clow, halsey, reeve, sage, scott
+        //     allMarkers[5].setMap(null);
+        //     allMarkers[11].setMap(null);
+        //     allMarkers[21].setMap(null);
+        //     allMarkers[34].setMap(null);
+        //     allMarkers[35].setMap(null);
+        //     allMarkers[36].setMap(null);
+        // }
         // StuR set/remove
-        function setStuR(){
-            //buildings stuR: reeve, recreation
-            allMarkers[34].setMap(map);
-            allMarkers[38].setMap(map);
-            allMarkers[34].setIcon(darkpurpleMarker);
-            allMarkers[38].setIcon(darkpurpleMarker);
-        }
-        function removeStuR(){
-            //buildings stuR: reeve, recreation
-            allMarkers[34].setMap(null);
-            allMarkers[38].setMap(null);
-        }
+        // function setStuR(){
+        //     //buildings stuR: reeve, recreation
+        //     allMarkers[34].setMap(map);
+        //     allMarkers[38].setMap(map);
+        //     allMarkers[34].setIcon(darkpurpleMarker);
+        //     allMarkers[38].setIcon(darkpurpleMarker);
+        // }
+        // function removeStuR(){
+        //     //buildings stuR: reeve, recreation
+        //     allMarkers[34].setMap(null);
+        //     allMarkers[38].setMap(null);
+        // }
 
         // close all hover cards (infowindows)
         function closeAllHover(){
@@ -1632,85 +1632,85 @@ function initMap() {
 
      // triggerCheck and triggerUncheck check and uncheck the checkboxes
      //primarily should only be needed for the selectall functions
-  function triggerCheck(name){
-    // fancy schmancy method Material Design already gives for checking le checkbox
-    //(sets class on checkbox)
-    document.getElementById(name + "Label").MaterialCheckbox.check();
-    checkboxMarkersandCards(name);
-  }
+//   function triggerCheck(name){
+//     // fancy schmancy method Material Design already gives for checking le checkbox
+//     //(sets class on checkbox)
+//     document.getElementById(name + "Label").MaterialCheckbox.check();
+//     checkboxMarkersandCards(name);
+//   }
 
-  function triggerUncheck(name){
-    // fancy schmancy method Material Design already gives for unchecking le checkbox
-    //(removes class on checkbox)
-    document.getElementById(name + "Label").MaterialCheckbox.uncheck();
-    uncheckMarkersandCards(name);
-  }
-  var checkboxes = [
+//   function triggerUncheck(name){
+//     // fancy schmancy method Material Design already gives for unchecking le checkbox
+//     //(removes class on checkbox)
+//     document.getElementById(name + "Label").MaterialCheckbox.uncheck();
+//     uncheckMarkersandCards(name);
+//   }
+  //var checkboxes = [
       //0
-      "buildings",
+      //"buildings",
       //1
-      "parking",
+      //"parking",
       //2
-      "accEnt",
+      //"accEnt",
       //3
-      "accPar",
+      //"accPar",
       //4
-      "emergency",
+      //"emergency",
       //5
-      "sust",
+      //"sust",
       //6
-      "gender",
+      //"gender",
       //7
-      "accaF",
-      //8
-      "ath",
-      //9
-      "accS",
-      //10
-      "campS",
-      //11
-      "resH",
-      //12
-      "dining",
-      //13
-      "stuR"
-  ]
+//       "accaF",
+//       //8
+//       "ath",
+//       //9
+//       "accS",
+//       //10
+//       "campS",
+//       //11
+//       "resH",
+//       //12
+//       "dining",
+//       //13
+//       "stuR"
+//   ]
   //the following functions handle setting/removing markers and hover cards when checkboxes are checked or unchecked
 
   //checks if name corresponds with specific ids and sets the buildings & their markers accordingly
-  function checkboxMarkersandCards(name){
-      switch(name){
-          case "buildings": setBuilding();
-                            break;
+//   function checkboxMarkersandCards(name){
+//       switch(name){
+        //   case "buildings": setBuilding();
+        //                     break;
           //case "parking": setParkingLots();
           //                  break;
-          case "accEnt": setAccEnt();
-                            break;
+        //   case "accEnt": setAccEnt();
+        //                     break;
           //case "accPar": setAccPar();
           //                  break;
           //case "emergency" : setEmergencyPhones();
           //                  break;
-          case "sust": setSust();
-                            break;
-          case "gender": setGender();
-                            break;
-          case "accaF": setAccaF();
-                            break;
-          case "ath": setAth();
-                            break;
-          case "accS": setAccaS();
-                            break;
-          case "campS": setCampS();
-                            break;
-          case "resH":  setResH();
-                             break;
-          case "dining": setDining();
-                             break;
-          case "stuR": setStuR();
-                             break;
-        }
+        //   case "sust": setSust();
+        //                     break;
+        //   case "gender": setGender();
+        //                     break;
+    //       case "accaF": setAccaF();
+    //                         break;
+    //       case "ath": setAth();
+    //                         break;
+    //       case "accS": setAccaS();
+    //                         break;
+    //       case "campS": setCampS();
+    //                         break;
+    //       case "resH":  setResH();
+    //                          break;
+    //       case "dining": setDining();
+    //                          break;
+    //       case "stuR": setStuR();
+    //                          break;
+    //     }
         
-    }
+    // }
     function catchMarkers(name){
         //when a marker is unchecked, go through and look at the checkboxes, if they are checked
                 //reset their markers 
@@ -1725,24 +1725,24 @@ function initMap() {
                 }
     }
     //checks if name corresponds with specific ids and sets the buildings & their markers accordingly
-   function uncheckMarkersandCards(name){
+   //function uncheckMarkersandCards(name){
        
-        switch(name){
-            case "buildings":
-                            // removes hoverpopups (not markers, the white popups after you click markers)
-                            // must come before markers are removed
-                            closeAllHover();
-                            // removes building markers
-                            removeBuilding();
-                            break;
+    //    switch(name){
+            // case "buildings":
+            //                 // removes hoverpopups (not markers, the white popups after you click markers)
+            //                 // must come before markers are removed
+            //                 closeAllHover();
+            //                 // removes building markers
+            //                 removeBuilding();
+            //                 break;
            // case "parking": 
            //                 closeAllHover();
            //                 removeParkingLots();
            //                 break;
-            case "accEnt": 
-                            closeAllHover();
-                            removeAccEnt();
-                            break;
+            // case "accEnt": 
+            //                 closeAllHover();
+            //                 removeAccEnt();
+            //                 break;
             //case "accPar": 
             //                closeAllHover();
              //               removeAccPar();
@@ -1751,45 +1751,45 @@ function initMap() {
              //               removeEmergencyPhones();
                             // emergency phones do not have any hovercards attached to their markers atm
              //               break;
-            case "sust": 
-                            closeAllHover();
-                            removeSust();
-                            break;
-            case "gender": closeAllHover();
-                           removeGender();
-                           break;
-            case "accaF": 
-                            closeAllHover();
-                            removeAccaF();
-                            break;
-            case "ath": 
-                            closeAllHover();
-                            removeAth();
-                            break;
-            case "accS":
-                            closeAllHover();
-                            removeAccaS();
-                            break;
-            case "campS": 
-                            closeAllHover();
-                            removeCampS();
-                            break;
-            case "resH":  
-                            closeAllHover();
-                            removeResH();
-                            break;
-            case "dining": 
-                            closeAllHover();
-                            removeDining();
-                            break;
-            case "stuR": 
-                            closeAllHover();
-                            removeStuR();
-                            break;
+            // case "sust": 
+            //                 closeAllHover();
+            //                 removeSust();
+            //                 break;
+            // case "gender": closeAllHover();
+            //                removeGender();
+            //                break;
+    //         case "accaF": 
+    //                         closeAllHover();
+    //                         removeAccaF();
+    //                         break;
+    //         case "ath": 
+    //                         closeAllHover();
+    //                         removeAth();
+    //                         break;
+    //         case "accS":
+    //                         closeAllHover();
+    //                         removeAccaS();
+    //                         break;
+    //         case "campS": 
+    //                         closeAllHover();
+    //                         removeCampS();
+    //                         break;
+    //         case "resH":  
+    //                         closeAllHover();
+    //                         removeResH();
+    //                         break;
+    //         case "dining": 
+    //                         closeAllHover();
+    //                         removeDining();
+    //                         break;
+    //         case "stuR": 
+    //                         closeAllHover();
+    //                         removeStuR();
+    //                         break;
         
-            }
-            catchMarkers(name);
-    }
+    //         }
+    //         catchMarkers(name);
+    // }
 
     
     // watches for change event on checkbox, checks if it has class is-checked and then sets the markers and hover cards accordingly
@@ -1807,46 +1807,46 @@ function initMap() {
     }
 
     //right away trigger buildings to be checked (easier for first time users to see how to use the site)
-    function triggerBuildings(){
-        $("#buildings").trigger("click");
-        setBuilding();
-    }
-    triggerBuildings();
+    // function triggerBuildings(){
+    //     $("#buildings").trigger("click");
+    //     setBuilding();
+    // }
+    // triggerBuildings();
     
     // all onchange functions for the checkboxes
 
     // checks if the checkbox is checked or not and then sets markers/hover cards accordingly
     // to work: buildings needs to be added to functions: "checkboxMarkersandCards" and "uncheckMarkersandCards"
     // selector for .change function should use the id for the input element 
-    checkboxes.forEach(function(thisOne){
-        var index = checkboxes.indexOf(thisOne);
-        $("#" + checkboxes[index]).change(function(){
-             // sets up parameter as string
-             checkIfChecked(checkboxes[index]);
-        })
-    });
+    // checkboxes.forEach(function(thisOne){
+    //     var index = checkboxes.indexOf(thisOne);
+    //     $("#" + checkboxes[index]).change(function(){
+    //          // sets up parameter as string
+    //          checkIfChecked(checkboxes[index]);
+    //     })
+    // });
 
-        $("#selectAllOne").change(function(){
-                if( !$("#selectAllOne").hasClass("is-checked") ){
-                    //if select all is unchecked, all others should be unchecked
-                    //  uncheck: unchecks checkbox and removes markers and hover cards
+        // $("#selectAllOne").change(function(){
+        //         if( !$("#selectAllOne").hasClass("is-checked") ){
+        //             //if select all is unchecked, all others should be unchecked
+        //             //  uncheck: unchecks checkbox and removes markers and hover cards
                     
-                    // HAS TO COME BEFORE UNCHECK IS TRIGGERED
-                    closeAllHover();
-                    catchMarkers(name);
-                    for (gg = 0; gg < 7; gg++){
-                        triggerUncheck(checkboxes[gg]);
-                    }
+        //             // HAS TO COME BEFORE UNCHECK IS TRIGGERED
+        //             closeAllHover();
+        //             catchMarkers(name);
+        //             for (gg = 0; gg < 7; gg++){
+        //                 triggerUncheck(checkboxes[gg]);
+        //             }
                     
-                }else{
-                    //if selectall is checked, all others should be checked
-                    //  check: checks checkbox and sets markers 
-                    for (gg = 0; gg < 7; gg++){
-                        triggerCheck(checkboxes[gg]);
-                    }
+        //         }else{
+        //             //if selectall is checked, all others should be checked
+        //             //  check: checks checkbox and sets markers 
+        //             for (gg = 0; gg < 7; gg++){
+        //                 triggerCheck(checkboxes[gg]);
+        //             }
                     
-                }
-        });
+        //         }
+        // });
 
         // $("#selectAllTwo").change(function(){
 
