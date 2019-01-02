@@ -784,6 +784,50 @@ function initMap() {
         }
         */
         
+        
+        /*
+        * get() Param: ../Classes/Emergency_Phones/phones_json.php" (url to the php file that returns the json data this function needs)
+        * then() Param: response (the parsed JSON data that phones_json.php returned)
+        * 
+        * Asks to get data from php file, gets data from php file as parsed JSON, splits the JSON up into arrays that we need to make Markers
+        * Creates markers by calling createMarkers()
+        * Creates Checkbox eventlistener for Emergency Phones & hooks it up to the created google.maps.Marker object array 
+        * SelectAll checkbox eventlistener that sets/removes the Emergency Phones markers 
+        */
+       get("../Classes/Emergency_Phones/phones_json.php").then(function(response){
+           var checkbox_slug = "emergency"; //TODO: have this variable only be set in one place
+           hookupCheckboxesToMarkers(checkbox_slug, response);
+        })
+
+        /*
+        * Params: checkbox_slug (string of id for checkbox)
+        *         response (parsed json object containing array of titles, latitudes, longitudes & a string for icon url)
+        * Stores marker array by calling createMarkersFromResponse and then passes it to a function that creates the Checkboxes event listener
+        */
+        function hookupCheckboxesToMarkers(checkbox_slug, response){
+            var markers_array = createMarkersFromResponse(response);
+            var icon_url = response.icon;
+
+            checkboxOnChange(checkbox_slug, markers_array, icon_url); //individual checkbox
+            selectAllOneEventListener(markers_array, icon_url); //select all checkbox
+        
+            return markers_array;
+        }
+
+        /*
+        * Params: response (parsed json object containing array of titles, array of latitudes, and an array of longitudes; also an icon string url)
+        * Converts object to an array of google.maps.Marker objects and returns the array for use in other methods
+        * Return: markers_array (an array of google.maps.Marker objects)
+        */
+        function createMarkersFromResponse(response){
+            var titles = response.titles;
+            var lat_arr = response.latitudes; //need to be converted to Number
+            var lng_arr = response.longitudes; //need to be converted to Number
+            var markers_array = createMarkers(titles, lat_arr, lng_arr);
+
+            return markers_array;
+        }
+
         /*
         * Params: titles_arr(array of strings containing titles for the markers)
         *         lat_arr(array of strings of the latitudes for the markers)
@@ -804,27 +848,6 @@ function initMap() {
             });
 
             return markers_array;
-        }
-
-        /*
-        * Params: markers_array (array of google.maps.Marker objects)
-        *         icon (string with the url to the marker icon png)
-        * loops through the markers_array and displays all of the markers on the map and also sets the icon image for each marker
-        */
-        function setMarkers(markers_array, icon){
-            markers_array.forEach(function(this_marker){
-                this_marker.setMap(map); //display on map
-                this_marker.setIcon(icon); //display with this icon image
-            });
-        }
-        /*
-        * Params: markers_array(array of google.maps.Marker objects)
-        * loops through the markers_array and removes all markers from the map
-        */
-        function removeMarkers(markers_array){
-            markers_array.forEach(function(this_marker){
-                this_marker.setMap(null); //remove from map
-            });
         }
 
         /*
@@ -850,17 +873,24 @@ function initMap() {
         }
 
         /*
-        * Params: response (parsed json object containing array of titles, array of latitudes, and an array of longitudes; also an icon string url)
-        * Converts object to an array of google.maps.Marker objects and returns the array for use in other methods
-        * Return: markers_array (an array of google.maps.Marker objects)
+        * Params: markers_array (array of google.maps.Marker objects)
+        *         icon (string with the url to the marker icon png)
+        * loops through the markers_array and displays all of the markers on the map and also sets the icon image for each marker
         */
-        function createMarkersFromResponse(response){
-            var titles = response.titles;
-            var lat_arr = response.latitudes; //need to be converted to Number
-            var lng_arr = response.longitudes; //need to be converted to Number
-            var markers_array = createMarkers(titles, lat_arr, lng_arr);
-
-            return markers_array;
+        function setMarkers(markers_array, icon){
+            markers_array.forEach(function(this_marker){
+                this_marker.setMap(map); //display on map
+                this_marker.setIcon(icon); //display with this icon image
+            });
+        }
+        /*
+        * Params: markers_array(array of google.maps.Marker objects)
+        * loops through the markers_array and removes all markers from the map
+        */
+        function removeMarkers(markers_array){
+            markers_array.forEach(function(this_marker){
+                this_marker.setMap(null); //remove from map
+            });
         }
 
         /*
@@ -882,35 +912,28 @@ function initMap() {
         }
 
         /*
-        * Params: checkbox_slug (string of id for checkbox)
-        *         response (parsed json object containing array of titles, latitudes, longitudes & a string for icon url)
-        * Stores marker array by calling createMarkersFromResponse and then passes it to a function that creates the Checkboxes event listener
+        * Parking Lots
+        *   -all lots
+        *   -accessible lots 
         */
-        function hookupCheckboxesToMarkers(checkbox_slug, response){
-            var markers_array = createMarkersFromResponse(response);
-            var icon_url = response.icon;
+       get("../Classes/Parking_Lots/parking_json.php").then(function(response){
+           //all parking
+           var checkbox_slug = "parking"; //TODO: have this variable only be set in one place (other is create_parkinglots.php)
+           var allParking = response.allParking;
+           var all_parking_slugs = response.allParking.slugs;
+           var all_parking_markers_array = hookupCheckboxesToMarkers(checkbox_slug, allParking);
+           var all_parking_infoWindows = createInfoWindows(all_parking_slugs);
+           setMarkerClick_openCloseInfo(all_parking_infoWindows, all_parking_markers_array);
 
-            checkboxOnChange(checkbox_slug, markers_array, icon_url); //individual checkbox
-            selectAllOneEventListener(markers_array, icon_url); //select all checkbox
-        
-            return markers_array;
-        }
-        
-
-        /*
-        * get() Param: ../Classes/Emergency_Phones/phones_json.php" (url to the php file that returns the json data this function needs)
-        * then() Param: response (the parsed JSON data that phones_json.php returned)
-        * 
-        * Asks to get data from php file, gets data from php file as parsed JSON, splits the JSON up into arrays that we need to make Markers
-        * Creates markers by calling createMarkers()
-        * Creates Checkbox eventlistener for Emergency Phones & hooks it up to the created google.maps.Marker object array 
-        * SelectAll checkbox eventlistener that sets/removes the Emergency Phones markers 
-        */
-       get("../Classes/Emergency_Phones/phones_json.php").then(function(response){
-           var checkbox_slug = "emergency"; //TODO: have this variable only be set in one place
-           hookupCheckboxesToMarkers(checkbox_slug, response);
-        })
-
+           //accessible parking
+           checkbox_slug = "accPar"; //TODO: have this variable only be set in one place (other is create_parkinglots.php)
+           var accessibleParking = response.accessibleParking;
+           var accessible_parking_slugs = response.accessibleParking.slugs;
+           var accessible_parking_markers_array = hookupCheckboxesToMarkers(checkbox_slug, accessibleParking);
+           var accessible_parking_infoWindows = createInfoWindows(accessible_parking_slugs);
+           setMarkerClick_openCloseInfo(accessible_parking_infoWindows, accessible_parking_markers_array);
+           
+       })
         /*
         * Params: slugs (array of strings of slugs for infoWindow ids)
         * loops through slugs array and creates google.maps.InfoWindow objects from the divs made in create_parkingInfoWindows.php
@@ -928,17 +951,6 @@ function initMap() {
             });
 
             return infoWindows_array;
-        }
-
-        /*
-        * Params: infoWindows_array (an array of google.maps.InfoWindow objects)
-        *         markers_array (an array of google.maps.Marker objects)
-        *  Closes all infoWindows in the array
-        */
-        function closeAllInfoWindows(infoWindows_array, markers_array){
-            infoWindows_array.forEach(function(this_infoWindow, index){
-                this_infoWindow.close(map, markers_array[index]);
-            });
         }
 
         /*
@@ -968,31 +980,19 @@ function initMap() {
                 });
             });
         }
-
+        
         /*
-        * Parking Lots
-        *   -all lots
-        *   -accessible lots 
+        * Params: infoWindows_array (an array of google.maps.InfoWindow objects)
+        *         markers_array (an array of google.maps.Marker objects)
+        *  Closes all infoWindows in the array
         */
-       get("../Classes/Parking_Lots/parking_json.php").then(function(response){
-           //all parking
-           var checkbox_slug = "parking"; //TODO: have this variable only be set in one place (other is create_parkinglots.php)
-           var allParking = response.allParking;
-           var all_parking_slugs = response.allParking.slugs;
-           var all_parking_markers_array = hookupCheckboxesToMarkers(checkbox_slug, allParking);
-           var all_parking_infoWindows = createInfoWindows(all_parking_slugs);
-           setMarkerClick_openCloseInfo(all_parking_infoWindows, all_parking_markers_array);
+        function closeAllInfoWindows(infoWindows_array, markers_array){
+            infoWindows_array.forEach(function(this_infoWindow, index){
+                this_infoWindow.close(map, markers_array[index]);
+            });
+        }
 
-           //accessible parking
-           checkbox_slug = "accPar"; //TODO: have this variable only be set in one place (other is create_parkinglots.php)
-           var accessibleParking = response.accessibleParking;
-           var accessible_parking_slugs = response.accessibleParking.slugs;
-           var accessible_parking_markers_array = hookupCheckboxesToMarkers(checkbox_slug, accessibleParking);
-           var accessible_parking_infoWindows = createInfoWindows(accessible_parking_slugs);
-           setMarkerClick_openCloseInfo(accessible_parking_infoWindows, accessible_parking_markers_array);
-           
-       })
-
+        
         /*TODO
         * Buildings 
         *   -pre-defined categories:
