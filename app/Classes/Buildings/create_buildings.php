@@ -9,11 +9,18 @@ $media = connectRestAPI("https://wwwtest.uwosh.edu/virtual-tour-cms/wp-json/wp/v
 
 
 $building_list = array();
-$building_markers = array();
 
+//arrays for storing marker objects
+$building_markers = array();
 $accessibleBuilding_markers = array();
 $sustainableBuilding_markers = array();
 $bathroomBuilding_markers = array();
+
+//arrays for storing thumbnail urls (to be sent to buildings_json and then to map.js)
+$building_thumb_url_array = array();
+$accessibleBuilding_thumb_url_array = array();
+$sustainableBuilding_thumb_url_array = array();
+$bathroomBuilding_thumb_url_array = array();
 
 function getImageURL($id){
     global $media;
@@ -42,8 +49,8 @@ foreach($buildings as $index=>$item){
     $longitude = $item->location->longitude; //turn into marker
     $about_tab_content = $item->content->rendered;
     $tour_tab_content = $item->tour;
-    $sustainability_tab_content = $item->bathrooms;
-    $bathrooms_tab_content = $item->sustainability;
+    $sustainability_tab_content = $item->sustainability;
+    $bathrooms_tab_content = $item->bathrooms;
     $dining_tab_content = $item->dining;
 
     $building_markers[$index] = new Marker($slug, $latitude, $longitude, $title);
@@ -52,19 +59,22 @@ foreach($buildings as $index=>$item){
     $full_image = getImageURL($full_image_id);
     $thumb_image = getImageURL($thumb_image_id);
 
-    
+    array_push($building_thumb_url_array, $thumb_image);
 
     //markers for accessible entry markergroup
     if($isAccessible){
         array_push($accessibleBuilding_markers, $building_markers[$index]);
+        array_push($accessibleBuilding_thumb_url_array, $thumb_image);
     }
     //markers for sustainability points of interest markergroup
-    if($tour_tab_content != null){
+    if($sustainability_tab_content != null){
         array_push($sustainableBuilding_markers, $building_markers[$index]);
+        array_push($sustainableBuilding_thumb_url_array, $thumb_image);
     }
     //markers for genderneutral&family bathroom markergroup
     if($bathrooms_tab_content != null){
         array_push($bathroomBuilding_markers, $building_markers[$index]);
+        array_push($bathroomBuilding_thumb_url_array, $thumb_image);
     }
 
     /*
@@ -86,7 +96,7 @@ foreach($buildings as $index=>$item){
         $dining_tab_content = false;
     }
 
-    $building_list = new Building($slug, $title, $isAccessible, $street, $city, $state, $zipcode, $full_image, $thumb_image,
+    $building_list[$index] = new Building($slug, $title, $isAccessible, $street, $city, $state, $zipcode, $full_image, $thumb_image,
     $building_categories, $building_markers[$index], $about_tab_content, $tour_tab_content, $sustainability_tab_content, $bathrooms_tab_content, $dining_tab_content);
 }
 

@@ -1020,8 +1020,8 @@ function initMap() {
             var all_building_slugs = response.allBuildings.slugs;
             var all_building_markers_array = hookupCheckboxesToMarkers(checkbox_slug, allBuildings);
             setMarkers(all_building_markers_array, response.allBuildings.icon);
-            //var all_building_infoWindows = createInfoWindows(all_building_slugs);
-            //setMarkerClick_openCloseInfo(all_building_infoWindows, all_building_markers_array);
+            var all_building_infoWindows = createInfoWindows(all_building_slugs);
+            setMarkerClick_openCloseInfo(all_building_infoWindows, all_building_markers_array);
 
             //accessible entrance buildings
             //checkbox_slug = "accEnt";

@@ -2252,9 +2252,9 @@
                         <div id="map"></div>
 
                         <!-- hover boxes for when markers are clicked -->
-                        <div id="albeeHover" class="generalHover">
+                        <!-- <div id="albeeHover" class="generalHover"> -->
                                 <!-- src loads when clicked (in map.js) -->
-                                <img class="imageHover" src="">
+                                <!-- <img class="imageHover" src="">
                                 <div class="hoverDiv">
                                         <h1 class="headHover text">Albee Hall</h1>
                                         <p class="paraHover text"> 776 Algoma Boulevard</p>
@@ -2264,9 +2264,9 @@
                                 </div>
                         </div>
 
-                        <div id="baseballHover" class="generalHover">
+                        <div id="baseballHover" class="generalHover"> -->
                                 <!-- does not have an image -->
-                                <img class="imageHover" src="">
+                                <!-- <img class="imageHover" src="">
                                 <div class="hoverDiv">
                                         <h1 class="headHover text">Alumni Baseball Stadium</h1>
                                         <p class="paraHover text"> 450 Josslyn Street</p>
@@ -2274,9 +2274,9 @@
                                         <br class="hoverBreak">
                                         <a href="#" id="baseballLink" class="text link hoverLink">Click for more info</a>
                                 </div>
-                        </div>
+                        </div> -->
 
-                        <div id="alumniHover" class="generalHover">
+                        <!-- <div id="alumniHover" class="generalHover">
 
                                 <img class="imageHover" src="">
                                 <div class="hoverDiv">
@@ -2739,12 +2739,15 @@
                                         <br class="hoverBreak">
                                         <a href="#" id="websterLink" class="text link hoverLink">Click for more info</a>
                                 </div>
-                        </div>
+                        </div> -->
 
                         <!-- end hovers for buildings -->
                         <!-- start hovers for parkings lots -->
 
-                        <?php  require_once('Classes/Parking_Lots/create_parkingInfoWindows.php'); ?>
+                        <?php  
+                          require_once('Classes/Parking_Lots/create_parkingInfoWindows.php'); 
+                          require_once('Classes/Buildings/create_buildingInfoWindows.php');
+                        ?>
 
                         <!-- Lot 11 -->
                         <!-- <div id="elevenHover" class="parkingHover">
