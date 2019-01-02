@@ -964,7 +964,7 @@ function initMap() {
         * if infoWindow is not open -> open it
         * else infoWindow is open -> close it
         */
-        function setMarkerClick_openCloseInfo(infoWindows_array, markers_array){
+        function setMarkerClick_openCloseInfo(infoWindows_array, markers_array, thumbnail_array){
             markers_array.forEach(function(this_marker, index){
                 this_marker.addListener('click', function(){
                     if(!$("#" + infoWindows_array[index].content.id).hasClass("hoverOpen")){
@@ -972,13 +972,13 @@ function initMap() {
                         closeAllInfoWindows(infoWindows_array, markers_array);
                         infoWindows_array[index].open(map, this_marker);
                         $("#" + infoWindows_array[index].content.id).addClass("hoverOpen");
+                        setThumbnailSrc(infoWindows_array[index].content.id, thumbnail_array[index]);
                     }
                     else{
                         //if open, close it
                         $("#" + infoWindows_array[index].content.id).removeClass("hoverOpen");
                         closeAllInfoWindows(infoWindows_array, markers_array);
                     }
-                    
                 });
             });
         }
@@ -991,6 +991,7 @@ function initMap() {
         function closeAllInfoWindows(infoWindows_array, markers_array){
             infoWindows_array.forEach(function(this_infoWindow, index){
                 this_infoWindow.close(map, markers_array[index]);
+                clearThumbnailSrc(this_infoWindow.content.id);
             });
         }
 
@@ -1023,7 +1024,7 @@ function initMap() {
             var all_building_markers_array = hookupCheckboxesToMarkers(checkbox_slug, allBuildings);
             setMarkers(all_building_markers_array, response.allBuildings.icon);
             var all_building_infoWindows = createInfoWindows(all_building_slugs);
-            setMarkerClick_openCloseInfo(all_building_infoWindows, all_building_markers_array);
+            setMarkerClick_openCloseInfo(all_building_infoWindows, all_building_markers_array, all_building_thumb_urls);
 
             //accessible entrance buildings
             //checkbox_slug = "accEnt";
@@ -1041,16 +1042,15 @@ function initMap() {
        })
 
        //TODO use in marker click if building infowindow...
-
-       //if generalHover -> infoWindow is for a building; parkingHover -> infowindow is for a parking lot
-       //infoWindows_array[index].content.id requires infoWindows_array
-       //$("#" + infoWindows_array[index].content.id + "Hover").hasClass("generalHover");
-       //but... url for setThumbSrc requires thumbnail url
-       function setThumbnailSrc(){
-
+       function setThumbnailSrc(infoWindow_id, this_thumbnail_url){
+            if($("#" + infoWindow_id).hasClass("generalHover")){
+                $("#" + infoWindow_id + "Thumbnail").attr("src", this_thumbnail_url);
+            }
        }
-       function clearThumbnailSrc(){
-
+       function clearThumbnailSrc(infoWindow_id){
+            if($("#" + infoWindow_id).hasClass("generalHover")){
+                $("#" + infoWindow_id + "Thumbnail").attr("src", "#");
+            }
        }
         
         // setting sustainability markers

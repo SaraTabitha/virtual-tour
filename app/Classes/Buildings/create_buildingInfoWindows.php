@@ -25,12 +25,11 @@
         $city = $item->getCity();
         $state = $item->getState();
         $zip = $item->getZipcode();
-        $thumb = $item->getThumbImage();
 
 
         ?>
             <div id="<?php echo $slug; ?>Hover" class="generalHover">
-                <img class="imageHover" src="<?php echo $thumb; ?>">
+                <img class="imageHover" id="<?php echo $slug; ?>HoverThumbnail" src="#">
                 <div class="hoverDiv">
                     <h1 class="headHover text"> <?php echo $title; ?></h1>
                     <p class="paraHover text"><?php echo $street; ?></p>
