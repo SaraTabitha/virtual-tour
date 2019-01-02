@@ -899,6 +899,8 @@ function initMap() {
         *  Sets up an event listener for the first Select All checkbox in the menu, adds the passed marker_array
         *  to the set of markers that gets added & removed based on the Select All checkbox being checked/unchecked
         */
+
+        //TODO: fix this so it checks/unchecks all checkboxes as well
         function selectAllOneEventListener(markers_array, icon_url){
             $("#selectAllOne").change(function(){
                 if( !$("#selectAllOne").hasClass("is-checked") ){
@@ -1017,6 +1019,7 @@ function initMap() {
             var allBuildings = response.allBuildings;
             var all_building_slugs = response.allBuildings.slugs;
             var all_building_markers_array = hookupCheckboxesToMarkers(checkbox_slug, allBuildings);
+            setMarkers(all_building_markers_array, response.allBuildings.icon);
             //var all_building_infoWindows = createInfoWindows(all_building_slugs);
             //setMarkerClick_openCloseInfo(all_building_infoWindows, all_building_markers_array);
 
