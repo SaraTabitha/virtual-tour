@@ -980,7 +980,7 @@ function initMap() {
                 });
             });
         }
-        
+
         /*
         * Params: infoWindows_array (an array of google.maps.InfoWindow objects)
         *         markers_array (an array of google.maps.Marker objects)
@@ -1004,13 +1004,35 @@ function initMap() {
         *   TODO infowindows w/ thumbnail images
         *   TODO popups
         * 
-        *     -categories that are pulled from the CMS
+        *   TODO  -categories that are pulled from the CMS
         */
         
        get("../Classes/Buildings/buildings_json.php").then(function(response){
             console.log(response);
 
             //TODO: rest of the owl (create markers, infowindows, popups)
+
+            //all buildings
+            var checkbox_slug = "buildings";
+            var allBuildings = response.allBuildings;
+            var all_building_slugs = response.allBuildings.slugs;
+            var all_building_markers_array = hookupCheckboxesToMarkers(checkbox_slug, allBuildings);
+            //var all_building_infoWindows = createInfoWindows(all_building_slugs);
+            //setMarkerClick_openCloseInfo(all_building_infoWindows, all_building_markers_array);
+
+            //accessible entrance buildings
+            //checkbox_slug = "accEnt";
+
+
+            //sustainable buildings
+            //checkbox_slug = "sust";
+
+
+            //gender neutral & family bathroom buildings
+            //checkbox_slug = "gender";
+
+
+            //TODO categories
        })
         
         // setting sustainability markers
