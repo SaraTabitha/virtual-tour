@@ -113,7 +113,7 @@ $accessibleBuildings = new MarkerGroup($slug, $checkboxColor, $markerIcon, $acce
 $slug = "sust";
 $checkboxColor = "#b3d143";
 $markerIcon = "images/markers/green.png";
-$sustainableBuildings = new MarkerGroup($slug, $checkboxColor, $markerIcon, $sustainabilityBuilding_markers);;
+$sustainableBuildings = new MarkerGroup($slug, $checkboxColor, $markerIcon, $sustainableBuilding_markers);;
 
 $slug = "gender";
 $checkboxColor = "#c1a3cb";
