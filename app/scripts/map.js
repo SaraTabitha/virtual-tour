@@ -978,7 +978,7 @@ function initMap() {
                         $("#" + infoWindows_array[index].content.id).removeClass("hoverOpen");
                         closeAllInfoWindows(infoWindows_array, markers_array);
                     }
-               
+                    
                 });
             });
         }
@@ -1041,6 +1041,11 @@ function initMap() {
        })
 
        //TODO use in marker click if building infowindow...
+
+       //if generalHover -> infoWindow is for a building; parkingHover -> infowindow is for a parking lot
+       //infoWindows_array[index].content.id requires infoWindows_array
+       //$("#" + infoWindows_array[index].content.id + "Hover").hasClass("generalHover");
+       //but... url for setThumbSrc requires thumbnail url
        function setThumbnailSrc(){
 
        }
