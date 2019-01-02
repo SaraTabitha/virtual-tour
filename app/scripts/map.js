@@ -1018,6 +1018,8 @@ function initMap() {
             var checkbox_slug = "buildings";
             var allBuildings = response.allBuildings;
             var all_building_slugs = response.allBuildings.slugs;
+            var all_building_thumb_urls = response.allBuildings.thumbnail_urls;
+
             var all_building_markers_array = hookupCheckboxesToMarkers(checkbox_slug, allBuildings);
             setMarkers(all_building_markers_array, response.allBuildings.icon);
             var all_building_infoWindows = createInfoWindows(all_building_slugs);
@@ -1037,6 +1039,14 @@ function initMap() {
 
             //TODO categories
        })
+
+       //TODO use in marker click if building infowindow...
+       function setThumbnailSrc(){
+
+       }
+       function clearThumbnailSrc(){
+
+       }
         
         // setting sustainability markers
         // function setSust(){
