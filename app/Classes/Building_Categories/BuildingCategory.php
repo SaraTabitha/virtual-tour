@@ -78,7 +78,7 @@ class BuildingCategory{
                  <h2 class="mdl-card__title-text color666 text"><?php echo $this->title ?></h2>
             </div>
             <div>
-                <iframe id="<?php echo $this->slug ?>iframe" width="560" height="315" src="<?php echo $this->media ?>" frameborder="0" allowfullscreen></iframe>
+                <iframe id="<?php echo $this->slug ?>iframe" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
             </div>
             <div class="mdl-card__supporting-text categoryText color666 text">
                 <?php echo $this->content ?>

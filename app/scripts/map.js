@@ -785,7 +785,7 @@ function initMap() {
             xmlhttp.send(); 
             });
         }
-        
+
         /*
         * get() Param: ../Classes/Emergency_Phones/phones_json.php" (url to the php file that returns the json data this function needs)
         * then() Param: response (the parsed JSON data that phones_json.php returned)
@@ -1050,21 +1050,7 @@ function initMap() {
             }
        }
         
-       get('../Classes/Building_Categories/categories_json.php').then(function(response){
-            console.log(response);
-       })
-
-       function categoryLinkClick_setClearMedia(){
-            $("#" + slug + "Text").click(function(){
-
-            });
-       }
-       function setMedia(url, slug){
-            $("#" + slug + "iframe").attr("src", url);
-       }
-       function clearMedia(slug){
-            $("#" + slug + "iframe").attr("src", "#");
-       }
+       
         // setting sustainability markers
         // function setSust(){
         //     //sust buildings: albee, alumni, blackhawk, biodigester, heating, horizon, reeve, sage, recreation
