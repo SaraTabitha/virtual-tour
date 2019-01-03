@@ -1036,13 +1036,15 @@ function initMap() {
             building_setMarkerInfoWindowPopup(checkbox_slug, sustainableBuildings);
 
             //gender neutral & family bathroom buildings
-            //checkbox_slug = "gender";
+            checkbox_slug = "gender";
+            var bathroomBuildings = response.bathroomBuildings;
+            building_setMarkerInfoWindowPopup(checkbox_slug, bathroomBuildings);
 
             //TODO categories
        })
        function building_setMarkerInfoWindowPopup(checkbox_slug, building_json){
             var slugs_array = building_json.slugs;
-            var thumb_urls = building_json.thumnail_urls;
+            var thumb_urls = building_json.thumbnail_urls;
 
             var markers_array = hookupCheckboxesToMarkers(checkbox_slug, building_json);
             var infoWindows_array = createInfoWindows(slugs_array);
