@@ -1038,7 +1038,14 @@ function initMap() {
             setMarkerClick_openCloseInfo(accessible_building_infoWindows, accessible_building_markers_array, accessible_building_thumb_urls);
             
             //sustainable buildings
-            //checkbox_slug = "sust";
+            checkbox_slug = "sust";
+            var sustainableBuildings = response.sustainableBuildings;
+            var sustainable_building_slugs = response.sustainableBuildings.slugs;
+            var sustainable_building_thumb_urls = response.sustainableBuildings.thumbnail_urls;
+
+            var sustainable_building_markers_array = hookupCheckboxesToMarkers(checkbox_slug, sustainableBuildings);
+            var sustainable_building_infoWindows = createInfoWindows(sustainable_building_slugs);
+            setMarkerClick_openCloseInfo(sustainable_building_infoWindows, sustainable_building_markers_array, sustainable_building_thumb_urls);
 
             //gender neutral & family bathroom buildings
             //checkbox_slug = "gender";
