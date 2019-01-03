@@ -1019,40 +1019,50 @@ function initMap() {
             //all buildings
             var checkbox_slug = "buildings";
             var allBuildings = response.allBuildings;
-            var all_building_slugs = response.allBuildings.slugs;
-            var all_building_thumb_urls = response.allBuildings.thumbnail_urls;
+            building_setMarkerInfoWindowPopup(checkbox_slug, allBuildings);
+            // var all_building_slugs = response.allBuildings.slugs;
+            // var all_building_thumb_urls = response.allBuildings.thumbnail_urls;
 
             var all_building_markers_array = hookupCheckboxesToMarkers(checkbox_slug, allBuildings);
             setMarkers(all_building_markers_array, response.allBuildings.icon);
-            var all_building_infoWindows = createInfoWindows(all_building_slugs);
-            setMarkerClick_openCloseInfo(all_building_infoWindows, all_building_markers_array, all_building_thumb_urls);
+            // var all_building_infoWindows = createInfoWindows(all_building_slugs);
+            // setMarkerClick_openCloseInfo(all_building_infoWindows, all_building_markers_array, all_building_thumb_urls);
 
             //accessible entrance buildings
             checkbox_slug = "accEnt";
             var accessibleBuildings = response.accessibleBuildings;
-            var accessible_building_slugs = response.accessibleBuildings.slugs;
-            var accessible_building_thumb_urls = response.accessibleBuildings.thumbnail_urls;
+            building_setMarkerInfoWindowPopup(checkbox_slug, accessibleBuildings);
+            // var accessible_building_slugs = response.accessibleBuildings.slugs;
+            // var accessible_building_thumb_urls = response.accessibleBuildings.thumbnail_urls;
 
-            var accessible_building_markers_array = hookupCheckboxesToMarkers(checkbox_slug, accessibleBuildings);
-            var accessible_building_infoWindows = createInfoWindows(accessible_building_slugs);
-            setMarkerClick_openCloseInfo(accessible_building_infoWindows, accessible_building_markers_array, accessible_building_thumb_urls);
+            // var accessible_building_markers_array = hookupCheckboxesToMarkers(checkbox_slug, accessibleBuildings);
+            // var accessible_building_infoWindows = createInfoWindows(accessible_building_slugs);
+            // setMarkerClick_openCloseInfo(accessible_building_infoWindows, accessible_building_markers_array, accessible_building_thumb_urls);
             
             //sustainable buildings
             checkbox_slug = "sust";
             var sustainableBuildings = response.sustainableBuildings;
-            var sustainable_building_slugs = response.sustainableBuildings.slugs;
-            var sustainable_building_thumb_urls = response.sustainableBuildings.thumbnail_urls;
+            building_setMarkerInfoWindowPopup(checkbox_slug, sustainableBuildings);
+            // var sustainable_building_slugs = response.sustainableBuildings.slugs;
+            // var sustainable_building_thumb_urls = response.sustainableBuildings.thumbnail_urls;
 
-            var sustainable_building_markers_array = hookupCheckboxesToMarkers(checkbox_slug, sustainableBuildings);
-            var sustainable_building_infoWindows = createInfoWindows(sustainable_building_slugs);
-            setMarkerClick_openCloseInfo(sustainable_building_infoWindows, sustainable_building_markers_array, sustainable_building_thumb_urls);
+            // var sustainable_building_markers_array = hookupCheckboxesToMarkers(checkbox_slug, sustainableBuildings);
+            // var sustainable_building_infoWindows = createInfoWindows(sustainable_building_slugs);
+            // setMarkerClick_openCloseInfo(sustainable_building_infoWindows, sustainable_building_markers_array, sustainable_building_thumb_urls);
 
             //gender neutral & family bathroom buildings
             //checkbox_slug = "gender";
 
             //TODO categories
        })
+       function building_setMarkerInfoWindowPopup(checkbox_slug, building_json){
+            var slugs_array = building_json.slugs;
+            var thumb_urls = building_json.thumnail_urls;
 
+            var markers_array = hookupCheckboxesToMarkers(checkbox_slug, building_json);
+            var infoWindows_array = createInfoWindows(slugs_array);
+            setMarkerClick_openCloseInfo(infoWindows_array, markers_array, thumb_urls);
+       }
        function setThumbnailSrc(infoWindow_id, this_thumbnail_url){
             if($("#" + infoWindow_id).hasClass("generalHover")){
                 $("#" + infoWindow_id + "Thumbnail").attr("src", this_thumbnail_url);
