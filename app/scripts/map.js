@@ -862,13 +862,15 @@ function initMap() {
         */
         function checkboxOnChange(slug, markers_array, icon){
             $("#" + slug).change(function(){
-                if(!$("#" + slug + "Label").hasClass("is-checked")){
+                if($("#" + slug + "Label").hasClass("is-checked")){
                     //checkbox checked
                     setMarkers(markers_array, icon); 
+                    console.log("label has class is-checked?: " + $("#" + slug + "Label").hasClass("is-checked"));
                 }
                 else{
                     //checkbox unchecked
                     removeMarkers(markers_array);
+                    console.log("label has class is-checked?: " + $("#" + slug + "Label").hasClass("is-checked"));
                 }
             });
         }
