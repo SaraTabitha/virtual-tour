@@ -1028,8 +1028,15 @@ function initMap() {
             setMarkerClick_openCloseInfo(all_building_infoWindows, all_building_markers_array, all_building_thumb_urls);
 
             //accessible entrance buildings
-            //checkbox_slug = "accEnt";
+            checkbox_slug = "accEnt";
+            var accessibleBuildings = response.accessibleBuildings;
+            var accessible_building_slugs = response.accessibleBuildings.slugs;
+            var accessible_building_thumb_urls = response.accessibleBuildings.thumbnail_urls;
 
+            var accessible_building_markers_array = hookupCheckboxesToMarkers(checkbox_slug, accessibleBuildings);
+            var accessible_building_infoWindows = createInfoWindows(accessible_building_slugs);
+            setMarkerClick_openCloseInfo(accessible_building_infoWindows, accessible_building_markers_array, accessible_building_thumb_urls);
+            
             //sustainable buildings
             //checkbox_slug = "sust";
 

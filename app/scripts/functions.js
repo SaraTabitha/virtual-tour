@@ -52,7 +52,7 @@ get('../Classes/Building_Categories/categories_json.php').then(function(response
         create_x_button_clickEvent(category_slug);
     });
 
-    console.log(category_youtube_urls);
+    //console.log(category_youtube_urls);
 })
 
 /*
