@@ -12,36 +12,7 @@
 
 
 
-/*
-* Promise: https://developers.google.com/web/fundamentals/primers/promises
-* "Promisifying XMLHttpRequest"
-*/
-/*
-* NOTE: url = a php file that cannot contain or link/require any files that have html/css/js embedded otherwise it breaks the responseText
-*/
-function get(url){
-    
-     return new Promise(function(resolve, reject){
-        var xmlhttp = new XMLHttpRequest();
-        xmlhttp.open("GET", url, true); 
 
-        xmlhttp.onreadystatechange = function(){
-                if(this.readyState == 4 && this.status == 200){
-                    
-                    //console.log(this.readyState + ", " + this.status);
-                    //console.log(this.responseText);
-                    //console.log(JSON.parse(this.responseText));
-                    resolve(JSON.parse(this.responseText));
-                    //resolve(this.responseText);
-                }
-                
-        };
-        xmlhttp.onerror = function(){
-            reject(Error("Network Error"));
-        };
-        xmlhttp.send(); 
-     });
-}
 /*
 * TESTS
 */
@@ -783,7 +754,37 @@ function initMap() {
             }
         }
         */
-        
+
+        /*
+        * Promise: https://developers.google.com/web/fundamentals/primers/promises
+        * "Promisifying XMLHttpRequest"
+        */
+        /*
+        * NOTE: url = a php file that cannot contain or link/require any files that have html/css/js embedded otherwise it breaks the responseText
+        */
+        function get(url){
+            
+            return new Promise(function(resolve, reject){
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.open("GET", url, true); 
+
+            xmlhttp.onreadystatechange = function(){
+                    if(this.readyState == 4 && this.status == 200){
+                        
+                        //console.log(this.readyState + ", " + this.status);
+                        //console.log(this.responseText);
+                        //console.log(JSON.parse(this.responseText));
+                        resolve(JSON.parse(this.responseText));
+                        //resolve(this.responseText);
+                    }
+                    
+            };
+            xmlhttp.onerror = function(){
+                reject(Error("Network Error"));
+            };
+            xmlhttp.send(); 
+            });
+        }
         
         /*
         * get() Param: ../Classes/Emergency_Phones/phones_json.php" (url to the php file that returns the json data this function needs)
@@ -1029,19 +1030,15 @@ function initMap() {
             //accessible entrance buildings
             //checkbox_slug = "accEnt";
 
-
             //sustainable buildings
             //checkbox_slug = "sust";
-
 
             //gender neutral & family bathroom buildings
             //checkbox_slug = "gender";
 
-
             //TODO categories
        })
 
-       //TODO use in marker click if building infowindow...
        function setThumbnailSrc(infoWindow_id, this_thumbnail_url){
             if($("#" + infoWindow_id).hasClass("generalHover")){
                 $("#" + infoWindow_id + "Thumbnail").attr("src", this_thumbnail_url);
@@ -1053,6 +1050,21 @@ function initMap() {
             }
        }
         
+       get('../Classes/Building_Categories/categories_json.php').then(function(response){
+            console.log(response);
+       })
+
+       function categoryLinkClick_setClearMedia(){
+            $("#" + slug + "Text").click(function(){
+
+            });
+       }
+       function setMedia(url, slug){
+            $("#" + slug + "iframe").attr("src", url);
+       }
+       function clearMedia(slug){
+            $("#" + slug + "iframe").attr("src", "#");
+       }
         // setting sustainability markers
         // function setSust(){
         //     //sust buildings: albee, alumni, blackhawk, biodigester, heating, horizon, reeve, sage, recreation

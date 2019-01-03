@@ -88,6 +88,3 @@ $.each(category_slug_array, function(i, category_slug){
 });
 
 
-/*
-*   Functions for 
-*/

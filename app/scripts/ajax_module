@@ -1,0 +1,30 @@
+/*
+* Promise: https://developers.google.com/web/fundamentals/primers/promises
+* "Promisifying XMLHttpRequest"
+*/
+/*
+* NOTE: url = a php file that cannot contain or link/require any files that have html/css/js embedded otherwise it breaks the responseText
+*/
+export function get(url){
+    
+    return new Promise(function(resolve, reject){
+       var xmlhttp = new XMLHttpRequest();
+       xmlhttp.open("GET", url, true); 
+
+       xmlhttp.onreadystatechange = function(){
+               if(this.readyState == 4 && this.status == 200){
+                   
+                   //console.log(this.readyState + ", " + this.status);
+                   //console.log(this.responseText);
+                   //console.log(JSON.parse(this.responseText));
+                   resolve(JSON.parse(this.responseText));
+                   //resolve(this.responseText);
+               }
+               
+       };
+       xmlhttp.onerror = function(){
+           reject(Error("Network Error"));
+       };
+       xmlhttp.send(); 
+    });
+}

@@ -3054,7 +3054,7 @@
         <!-- <script id="headless_wordpress" src="scripts/api-interface.js"></script> -->
         
         <!-- our javascript -->
-        <script src="scripts/functions.js"></script>
+        <script  src="scripts/functions.js"></script>
 
         <!-- VR view  -->
         <script src="vrview-master/build/vrview.js"></script>

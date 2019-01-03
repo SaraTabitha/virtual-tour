@@ -1,7 +1,7 @@
 <?php
 
-    require_once('BuildingCategory.php');
-    require_once('php/contactRestAPI.php');
+    require_once(__DIR__ . '/BuildingCategory.php');
+    require_once(__DIR__ . '/../../php/contactRestAPI.php');
 
     //get the building-categories
     $categories = connectRestAPI("https://wwwtest.uwosh.edu/virtual-tour-cms/wp-json/wp/v2/building-categories");

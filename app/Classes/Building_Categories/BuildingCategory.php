@@ -8,19 +8,19 @@
 *   also has a MarkerGroup associated with them which appear/disappear when the BuildingCategory checkbox 
 *   is checked. 
 */
-require_once('Classes/Marker_Groups/MarkerGroup.php');
+require_once(__DIR__ . '/../../Classes/Marker_Groups/MarkerGroup.php');
 class BuildingCategory{
 
     private $slug;
     private $title;
-    private $media;
+    private $media; //youtube video url
     private $content;
     private $learnMoreURL;
     private $markerGroup; //MarkerGroup object
 
     public function __construct($slug, $title, $media, $content, $learnMoreURL){
       
-        //js doesn't like - bc it throws console errors :)
+        //js doesn't like the character - bc it throws console errors :)
         $slug = str_replace("-", "_", $slug);
         $this->slug = $slug;
 
@@ -34,6 +34,24 @@ class BuildingCategory{
         $this->learnMoreURL = $learnMoreURL;
 
         
+    }
+    function getSlug(){
+        return $this->slug;
+    }
+    function getTitle(){
+        return $this->title;
+    }
+    function getMedia(){
+        return $this->media;
+    }
+    function getContent(){
+        return $this->content;
+    }
+    function getLearnMoreURL(){
+        return $this->learnMoreURL;
+    }
+    function getMarkerGroup(){
+        return $this->markerGroup;
     }
 
     //creates the list item that appears on the menu w/ a checkbox
