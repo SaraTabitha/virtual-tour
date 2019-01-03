@@ -865,12 +865,10 @@ function initMap() {
                 if($("#" + slug + "Label").hasClass("is-checked")){
                     //checkbox checked
                     setMarkers(markers_array, icon); 
-                    console.log("label has class is-checked?: " + $("#" + slug + "Label").hasClass("is-checked"));
                 }
                 else{
                     //checkbox unchecked
                     removeMarkers(markers_array);
-                    console.log("label has class is-checked?: " + $("#" + slug + "Label").hasClass("is-checked"));
                 }
             });
         }
@@ -1051,7 +1049,6 @@ function initMap() {
                 $("#" + infoWindow_id + "Thumbnail").attr("src", "#");
             }
        }
-        
        
         // setting sustainability markers
         // function setSust(){
