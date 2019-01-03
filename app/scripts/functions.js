@@ -19,6 +19,7 @@ $("#selectAllTwo").change(function(){
     });
 });
 
+//slug: string, id of category
 function isChecked(slug){
     if( $("#" + slug).hasClass("is-checked") ){
         return true;
@@ -27,18 +28,18 @@ function isChecked(slug){
         return false;
     }
 }
-
+//slug: string, id of category
 function checkCheckbox(slug){
     //can only use javascript selector apparently for MaterialCheckbox.function()
     document.getElementById( slug + "Label").MaterialCheckbox.check();
 }
-
+//slug: string, id of category
 function uncheckCheckbox(slug){
     //can only use javascript selector apparently for MaterialCheckbox.function()
     document.getElementById( slug + "Label").MaterialCheckbox.uncheck();
 }
 
-
+//response: json object containing array of category slugs & an array of corresponding youtube_urls
 get('../Classes/Building_Categories/categories_json.php').then(function(response){
    
     category_slug_array = response.buildingCategories.slugs;
@@ -80,6 +81,11 @@ function get(url){
     });
 }
 
+//category_slug: string of category id
+//youtube_url: string of corresponding youtube_url for the category
+//this function sets up a click event for when the text of the category is clicked in the virtual tour menu
+//a corresponding card slides out & the youtube video for that card gets set/cleared when the user is viewing
+//that particular category information
 function create_menu_link_ClickEvent(category_slug, youtube_url){
     $("#" + category_slug + "Text").click(function(){
         isOpen = isCardOpen(category_slug);
@@ -94,18 +100,7 @@ function create_menu_link_ClickEvent(category_slug, youtube_url){
         }
     });
 }
-
-function isCardOpen(category_slug){
-    var hasClass = $("#" + category_slug + "Card").hasClass("cardOpen");
-    return hasClass;
-}
-function closeAllCards(category_slug_array){
-    $.each(category_slug_array, function(i, category_slug){
-        closeCategoryCard(category_slug);
-        clearMedia(category_slug);
-    });
-}
-
+//click event for when the x button on the category card (which slides out from under the menu when the category link is clicked)
 function create_x_button_clickEvent(category_slug){
     $("#" + category_slug + "Close").click(function(){
        closeCategoryCard(category_slug);
@@ -113,19 +108,44 @@ function create_x_button_clickEvent(category_slug){
     });
 }
 
+//checks if the category's card is open or not
+function isCardOpen(category_slug){
+    var hasClass = $("#" + category_slug + "Card").hasClass("cardOpen");
+    return hasClass;
+}
+
+//close all cards that are open
+function closeAllCards(category_slug_array){
+    $.each(category_slug_array, function(i, category_slug){
+        closeCategoryCard(category_slug);
+        clearMedia(category_slug);
+    });
+}
+//set the src url for the youtube video for the category
+//url: youtube url
+//slug: category id 
 function setMedia(url, slug){
     $("#" + slug + "iframe").attr("src", url);
 }
+//url: youtube url
+//slug: category id
+//clears the src url for the youtube video for the category
 function clearMedia(slug){
     $("#" + slug + "iframe").attr("src", "");
 }
 
+//adds class to open category card (transition slide-out from under menu)
 function openCategoryCard(category_slug){
     $("#" + category_slug + "Card").addClass("cardOpen");
 }
+//removes class to open category card (transition hide beneath menu)
 function closeCategoryCard(category_slug){
     $("#" + category_slug + "Card").removeClass("cardOpen");
 }
+
+
+
+
 
 
 
