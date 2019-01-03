@@ -810,7 +810,7 @@ function initMap() {
             var icon_url = response.icon;
 
             checkboxOnChange(checkbox_slug, markers_array, icon_url); //individual checkbox
-            selectAllOneEventListener(markers_array, icon_url); //select all checkbox
+            selectAllOneEventListener(checkbox_slug, markers_array, icon_url); //select all checkbox
         
             return markers_array;
         }
@@ -902,14 +902,16 @@ function initMap() {
         */
 
         //TODO: fix this so it checks/unchecks all checkboxes as well
-        function selectAllOneEventListener(markers_array, icon_url){
+        function selectAllOneEventListener(checkbox_slug, markers_array, icon_url){
             $("#selectAllOne").change(function(){
                 if( !$("#selectAllOne").hasClass("is-checked") ){
                     //unchecked
                     removeMarkers(markers_array);
+                    document.getElementById(checkbox_slug + "Label").MaterialCheckbox.uncheck();
                 }else{
                     //checked
                     setMarkers(markers_array, icon_url);
+                    document.getElementById(checkbox_slug + "Label").MaterialCheckbox.check();
                 }
             });
         }
