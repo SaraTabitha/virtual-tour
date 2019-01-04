@@ -33,5 +33,7 @@
         $index++;
     }
 
-    //TODO markers & marker groups 
+    //part 2 -> categories_json.php 
+    //part 3 -> categories_checkbox.php
+    //part 4 -> /Buildings/buildings_json.php
 ?>

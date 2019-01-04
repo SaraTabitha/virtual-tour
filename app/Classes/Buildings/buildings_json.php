@@ -21,6 +21,9 @@
     $object->bathroomBuildings = $bathroomBuildings->createMarkerJSONObject($bathroom_buildings, $icon);
     $object->bathroomBuildings->thumbnail_urls = $bathroomBuilding_thumb_url_array;
 
+    $object->categories->titles = $category_titles[0];
+    $object->categories->testmatch = $$buildings_that_have_this_category;
+
     $json = json_encode($object);
     echo $json;
 

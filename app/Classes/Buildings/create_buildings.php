@@ -3,6 +3,7 @@ require_once(__DIR__ . "/../Marker_Groups/MarkerGroup.php");
 require_once(__DIR__ . "/../Marker_Groups/Marker.php");
 require_once(__DIR__ . "/Building.php");
 require_once(__DIR__ . "/../../php/contactRestAPI.php");
+require_once(__DIR__ . "/../Building_Categories/create_categories.php");
 
 $buildings = connectRestAPI("https://wwwtest.uwosh.edu/virtual-tour-cms/wp-json/wp/v2/buildings?per_page=100"); //per_page=100: this will return the first 100 results
 $media = connectRestAPI("https://wwwtest.uwosh.edu/virtual-tour-cms/wp-json/wp/v2/media?per_page=100");
@@ -119,6 +120,50 @@ $slug = "gender";
 $checkboxColor = "#c1a3cb";
 $markerIcon = "images/markers/lightpurple.png";
 $bathroomBuildings = new MarkerGroup($slug, $checkboxColor, $markerIcon, $bathroomBuilding_markers);;
+
+
+
+/*
+* categories
+*/
+$category_list; //array of BuildingCategory objects
+//BuildingCategory "titles" match up to the "building_categories (array item)" in the Building 
+//for each category -> get buildings which have a building_category that matches the title -> make marker group for that
+//will need an array of MarkerGroups to pass to JSON...
+//how to decide checkbox colors ? markerIcons? aasdlkfjaskfjksdajf
+$category_titles = array();
+foreach($category_list as $building_category){
+    array_push($category_titles, $building_category->getTitle());
+}   
+
+
+$buildings_that_have_this_category = array();
+
+$category_titles[0]; //"student recreation"
+
+
+$buildings_that_have_this_category = array_filter($building_list, "hasStuRec");
+
+function hasStuRec($building){
+    $categories_from_building = $building->getBuildingCategories();
+    foreach($categories_from_building as $this_category){
+        if(strcmp($this_category, "Student Recreation") == 0){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+}
+
+//what i'm trying to accomplish here
+//find all buildings where their categories match the total categories_list
+//x = all categories; a = buildings, b = categories of that particular building
+//i want all a's where x == b
+
+//array_filter(); might help?
+//already looked into querying/filtering rest api url (seems to be deprecated?)
+//pffsshhhhh
 
 //part 2 -> buildings_json.php
 //part 3 -> Marker_Groups/style_checkboxes.php
