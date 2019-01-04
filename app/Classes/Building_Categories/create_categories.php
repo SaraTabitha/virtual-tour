@@ -33,5 +33,5 @@
         $index++;
     }
 
-
+    //TODO markers & marker groups 
 ?>
