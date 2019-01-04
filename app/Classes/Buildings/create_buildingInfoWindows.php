@@ -1,19 +1,6 @@
 <?php
     require_once(__DIR__ . "/create_buildings.php");
 
-    //example from html
-    // <div id="albeeHover" class="generalHover">
-    //    <!-- src loads when clicked (in map.js) -->
-    //    <img class="imageHover" src="">
-    //    <div class="hoverDiv">
-    //         <h1 class="headHover text">Albee Hall</h1>
-    //         <p class="paraHover text"> 776 Algoma Boulevard</p>
-    //         <p class="paraHover text"> Oshkosh, WI 54901</p>
-    //         <br class="hoverBreak">
-    //         <a href="#" id="albeeLink" class="text link hoverLink">Click for more info</a>
-    //    </div>
-    // </div>
-
     $building_list; //array of Building objects
 
 

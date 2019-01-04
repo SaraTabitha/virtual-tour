@@ -1021,11 +1021,8 @@ function initMap() {
             //all buildings
             var checkbox_slug = "buildings";
             var allBuildings = response.allBuildings;
-            building_setMarkerInfoWindowPopup(checkbox_slug, allBuildings);
-            //set building markers on page load
-            var all_building_markers_array = hookupCheckboxesToMarkers(checkbox_slug, allBuildings);
-            setMarkers(all_building_markers_array, response.allBuildings.icon);
-            document.getElementById("buildingsLabel").MaterialCheckbox.check();
+            var all_building_markers_array = building_setMarkerInfoWindowPopup(checkbox_slug, allBuildings);
+            
 
             //accessible entrance buildings
             checkbox_slug = "accEnt";
@@ -1043,6 +1040,11 @@ function initMap() {
             building_setMarkerInfoWindowPopup(checkbox_slug, bathroomBuildings);
 
             //TODO categories
+
+
+            //set building markers on page load
+            setMarkers(all_building_markers_array, response.allBuildings.icon);
+            document.getElementById("buildingsLabel").MaterialCheckbox.check();
        })
        function building_setMarkerInfoWindowPopup(checkbox_slug, building_json){
             var slugs_array = building_json.slugs;
@@ -1051,6 +1053,8 @@ function initMap() {
             var markers_array = hookupCheckboxesToMarkers(checkbox_slug, building_json);
             var infoWindows_array = createInfoWindows(slugs_array);
             setMarkerClick_openCloseInfo(infoWindows_array, markers_array, thumb_urls);
+
+            return markers_array;
        }
        function setThumbnailSrc(infoWindow_id, this_thumbnail_url){
             if($("#" + infoWindow_id).hasClass("generalHover")){
