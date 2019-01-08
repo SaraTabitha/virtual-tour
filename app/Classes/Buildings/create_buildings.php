@@ -126,12 +126,18 @@ $bathroomBuildings = new MarkerGroup($slug, $checkboxColor, $markerIcon, $bathro
 /*
 * categories
 * spoiler: possibly the most confusing, headache inducing portion of this site?
+* necessary information:
+    know the difference between:
+        - BuildingCategories (objects for the menu items for categories)
+        - Buildings (objects for all building info)
+            -instance variable building_categories (array of strings for the categories that this building falls under)
+*
 */
 
 $category_list; //array of BuildingCategory objects
 
-$category_titles = array(); //strings of category Titles
-$category_slugs = array(); //strings of category Slugs
+$category_titles = array(); //strings of BuildingCategory Titles
+$category_slugs = array(); //strings of BuildingCategory Slugs
 foreach($category_list as $building_category){
     array_push($category_titles, $building_category->getTitle());
     array_push($category_slugs, $building_category->getSlug());
@@ -162,6 +168,10 @@ $category_titles[0]; //"student recreation"
 * params: 
     this_category (string title of BuildingCategory)
     building_list (complete array of Building objects)
+
+* filters through the Building objects and looks through their instance variable "building_categories" for matches to the specified BuildingCategory title
+* return:
+     $buildings_that_have_this_category (array of Building objects that match the BuildingCategory)
 */
 function getBuildingsForThisCategory($this_BuildingCategory_title, $building_list){
     
