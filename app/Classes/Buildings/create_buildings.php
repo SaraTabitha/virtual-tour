@@ -158,13 +158,20 @@ foreach($category_titles as $this_category_title){
 }
 
 //$buildings_that_have_this_category = getBuildingsForThisCategory($category_titles[0], $building_list);
-$marker_array_stuRec = getMarkersForBuildings($array_of_arrays_of_buildings[0]);
+
+$category_markerGroups = array();
+
+foreach($array_of_arrays_of_buildings as $index=>$array_of_buildings){
+    global $category_slugs;
+
+    $markers_for_category = getMarkersForBuildings($array_of_buildings);
+    array_push($category_markerGroups, new MarkerGroup($category_slugs[$index], $checkboxColor, $markerIcon, $markers_for_category));
+    //TODO $checkboxColor array
+    ///TODO $markerIcon array
+}
 
 
-$slug = $category_titles[0];
-$stuRec = new MarkerGroup($checkbox_slug, $checkboxColor, $markerIcon, $marker_array_stuRec);
-//var_dump($marker_array_stuRec);
-
+$stuRec = $category_markerGroups[0];
 
 /*
 * params: 
