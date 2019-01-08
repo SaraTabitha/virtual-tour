@@ -141,22 +141,40 @@ $category_titles[0]; //"student recreation"
 
 
 //loops through each category by Title (need title to compare each category in a building against)
-foreach($category_titles as $this_category_title){
+// foreach($category_titles as $this_category_title){
 
-}
+// }
 
 //array_filter -> returns filtered array
-$buildings_that_have_this_category = array_filter($building_list, function($element){
-    global $category_titles;
-    $categories_from_building = $element->getBuildingCategories();
+// $buildings_that_have_this_category = array_filter($building_list, function($element){
+//     global $category_titles;
+//     $categories_from_building = $element->getBuildingCategories();
 
-    foreach($categories_from_building as $this_category){
+//     foreach($categories_from_building as $this_category){
     
        
-        return checkCategoryMatch($this_category,  $category_titles[0]);
+//         return checkCategoryMatch($this_category,  $category_titles[0]);
  
-    }
-});
+//     }
+// });
+
+/*
+* params: 
+    this_category (string title of BuildingCategory)
+    building_list (complete array of Building objects)
+*/
+function getBuildingsForThisCategory($this_BuildingCategory_title, $building_list){
+    
+    $buildings_that_have_this_category = array_filter($building_list, function($element) use($this_BuildingCategory_title){
+        $categories_from_building = $element->getBuildingCategories();
+
+        foreach($categories_from_building as $this_category){
+            return checkCategoryMatch($this_category, $this_BuildingCategory_title);
+        }
+    });
+    
+    return $buildings_that_have_this_category;
+}
 
 /*
 * param:
@@ -176,6 +194,12 @@ function checkCategoryMatch($category_item_being_checked, $original_category){
         return false;
     }
 }
+
+
+$buildings_that_have_this_category = getBuildingsForThisCategory($category_titles[0], $building_list);
+
+
+
 
 $marker_array_stuRec = array();
 //var_dump($buildings_that_have_this_category); //building objects
