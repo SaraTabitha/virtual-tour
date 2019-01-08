@@ -23,6 +23,12 @@ $accessibleBuilding_thumb_url_array = array();
 $sustainableBuilding_thumb_url_array = array();
 $bathroomBuilding_thumb_url_array = array();
 
+
+//searches for the url of the media using the given id #
+/*
+*param: id (number for the id of the media on the media page)
+*return url (string of url for media that matches the id)
+*/
 function getImageURL($id){
     global $media;
     $url; 
@@ -35,6 +41,9 @@ function getImageURL($id){
     return $url;
 }
 
+/*
+* goes through the JSON string of Buildings and constructs Marker and Building objects from it
+*/
 foreach($buildings as $index=>$item){
     $slug = $item->slug;
     $title = $item->title->rendered;
@@ -79,7 +88,7 @@ foreach($buildings as $index=>$item){
     }
 
     /*
-    * constructor breaks if given a null value
+    * note: constructor breaks if given a null value
     */
     if($about_tab_content == NULL){
         $about_tab_content = false;
@@ -101,6 +110,10 @@ foreach($buildings as $index=>$item){
     $building_categories, $building_markers[$index], $about_tab_content, $tour_tab_content, $sustainability_tab_content, $bathrooms_tab_content, $dining_tab_content);
 }
 
+/*
+* making all of the corresponding MarkerGroups necessary for the first section of building checkboxes on the site menu
+* these markerGroups are utilised in buildings_json.php
+*/
 $slug = "buildings";
 $checkboxColor = "#fccd32";
 $markerIcon = "images/markers/yellow.png";
@@ -121,10 +134,8 @@ $checkboxColor = "#c1a3cb";
 $markerIcon = "images/markers/lightpurple.png";
 $bathroomBuildings = new MarkerGroup($slug, $checkboxColor, $markerIcon, $bathroomBuilding_markers);;
 
-
-
 /*
-* categories
+* C A T E G O R I E S
 * spoiler: possibly the most confusing, headache inducing portion of this site?
 * necessary information:
     know the difference between:
@@ -133,7 +144,6 @@ $bathroomBuildings = new MarkerGroup($slug, $checkboxColor, $markerIcon, $bathro
             -instance variable building_categories (array of strings for the categories that this building falls under)
 *
 */
-
 
 $category_titles = array(); //strings of BuildingCategory Titles
 $category_slugs = array(); //strings of BuildingCategory Slugs
@@ -167,7 +177,6 @@ foreach($category_titles as $this_category_title){
      $buildings_that_have_this_category (array of Building objects that match the BuildingCategory)
 */
 function getBuildingsForThisCategory($this_BuildingCategory_title, $building_list){
-    
     $buildings_that_have_this_category = array_filter($building_list, function($element) use($this_BuildingCategory_title){
         $categories_from_building = $element->getBuildingCategories();
 
@@ -198,13 +207,17 @@ function checkCategoryMatch($category_item_being_checked, $original_category){
     }
 }
 
+
+/*
+* note: category_markerGroups used in buildings_json.php
+*/
 $category_markerGroups = array();
 //creates marker groups for each BuildingCategory, also creates marker arrays from the building arrays for MarkerGroup parameter
 foreach($array_of_arrays_of_buildings as $index=>$array_of_buildings){
     $markers_for_category = getMarkersForBuildings($array_of_buildings);
     array_push($category_markerGroups, new MarkerGroup($category_slugs[$index], $checkboxColor, $markerIcon, $markers_for_category));
     //TODO $checkboxColor array
-    ///TODO $markerIcon array
+    //TODO $markerIcon array
 }
 
 
