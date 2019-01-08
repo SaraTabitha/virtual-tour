@@ -145,28 +145,6 @@ $test_array = array();
 $category_titles[0]; //"student recreation"
 
 
-/*$buildings_that_have_this_category = array_filter($building_list, "hasStuRec");
-
-function hasStuRec($building){
-    $categories_from_building = $building->getBuildingCategories();
-    foreach($categories_from_building as $this_category){
-        array_push($test_array, $this_category); //this is coming up empty
-
-        if(strcmp($this_category, "Student Recreation") == 0){
-        //if($this_category == $category_titles[0]){
-
-            
-           // array_push($test_array, $building->getTitle());
-           
-            return true;
-            
-        }
-        else{
-            return false;
-        }
-    }
-}*/
-
 
 //array_filter -> returns filtered array
 $buildings_that_have_this_category = array_filter($building_list, function($element){
@@ -196,27 +174,6 @@ $stuRec = new MarkerGroup($checkbox_slug, $checkboxColor, $markerIcon, $marker_a
 //var_dump($marker_array_stuRec);
 
 
-/*
-foreach($building_list as $index=>$this_building){
-    $this_building_categories = $this_building->getBuildingCategories();
-    foreach($this_building_categories as $index=>$this_category){
-        if(strcmp($this_category, $category_titles[0])){
-            array_push($test_array, $this_building->getTitle());
-        }
-        else{}
-    }
-}   /*
-//$first_categories_array = $building[0]->getBuildingCategories();
-
-
-//what i'm trying to accomplish here
-//find all buildings where their categories match the total categories_list
-//x = all categories; a = buildings, b = categories of that particular building
-//i want all a's where x == b
-
-//array_filter(); might help?
-//already looked into querying/filtering rest api url (seems to be deprecated?)
-//pffsshhhhh
 
 //part 2 -> buildings_json.php
 //part 3 -> Marker_Groups/style_checkboxes.php
