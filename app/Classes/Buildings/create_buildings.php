@@ -125,43 +125,57 @@ $bathroomBuildings = new MarkerGroup($slug, $checkboxColor, $markerIcon, $bathro
 
 /*
 * categories
+* spoiler: possibly the most confusing, headache inducing portion of this site?
 */
 
-
 $category_list; //array of BuildingCategory objects
-//BuildingCategory "titles" match up to the "building_categories (array item)" in the Building 
-//for each category -> get buildings which have a building_category that matches the title -> make marker group for that
-//will need an array of MarkerGroups to pass to JSON...
-//how to decide checkbox colors ? markerIcons? aasdlkfjaskfjksdajf
-$category_titles = array();
-$category_slugs = array();
+
+$category_titles = array(); //strings of category Titles
+$category_slugs = array(); //strings of category Slugs
 foreach($category_list as $building_category){
     array_push($category_titles, $building_category->getTitle());
     array_push($category_slugs, $building_category->getSlug());
 }   
 
-$buildings_that_have_this_category = array();
-$test_array = array();
 $category_titles[0]; //"student recreation"
 
 
+//loops through each category by Title (need title to compare each category in a building against)
+foreach($category_titles as $this_category_title){
+
+}
 
 //array_filter -> returns filtered array
 $buildings_that_have_this_category = array_filter($building_list, function($element){
+    global $category_titles;
     $categories_from_building = $element->getBuildingCategories();
+
     foreach($categories_from_building as $this_category){
-        array_push($test_array, $this_category); //this is coming up empty
-
-        if(strcmp($this_category, "Student Recreation") == 0){
-
-            return true;
-            
-        }
-        else{
-            return false;
-        }
+    
+       
+        return checkCategoryMatch($this_category,  $category_titles[0]);
+ 
     }
 });
+
+/*
+* param:
+    category_item_being_checked (string of a category title from the list of "building_categories" inside of a Building object)
+    original_category (string of the title of a BuildingCategory object)
+
+* function to check if the building category inside of a Building matches up to the particular category being checked fors
+*/
+function checkCategoryMatch($category_item_being_checked, $original_category){
+    if(strcmp($category_item_being_checked, $original_category) == 0){
+        //match
+        return true;
+        
+    }
+    else{
+        //does not match
+        return false;
+    }
+}
 
 $marker_array_stuRec = array();
 //var_dump($buildings_that_have_this_category); //building objects

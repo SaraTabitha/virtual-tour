@@ -25,8 +25,10 @@
 
     $stu_Rec_markers = $stuRec->getMarkersArray();
     $icon = $stuRec->getMarkerIcon();
-    $object->categories->stuRec = $stuRec->createMarkerJSONObject($stu_Rec_markers, $icon);
-    $object->categories->checkbox_slugs = $category_slugs;
+    //$object->categories->stuRec = $stuRec->createMarkerJSONObject($stu_Rec_markers, $icon);
+    $object->checkbox_slugs = $category_slugs;
+    $object->categories = array();
+    array_push($object->categories, $stuRec->createMarkerJSONObject($stu_Rec_markers, $icon));
 
     $json = json_encode($object);
     echo $json;

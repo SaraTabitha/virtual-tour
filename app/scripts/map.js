@@ -1000,7 +1000,7 @@ function initMap() {
 
 
             //TODO categories
-            checkbox_slug = response.categories.checkbox_slugs[0]; //student_recreation
+            checkbox_slug = response.checkbox_slugs[0]; //student_recreation
 
             //set building markers on page load
             setMarkers(all_building_markers_array, response.allBuildings.icon);
