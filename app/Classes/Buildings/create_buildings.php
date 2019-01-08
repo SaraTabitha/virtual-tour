@@ -199,7 +199,7 @@ function checkCategoryMatch($category_item_being_checked, $original_category){
 }
 
 $category_markerGroups = array();
-
+//creates marker groups for each BuildingCategory, also creates marker arrays from the building arrays for MarkerGroup parameter
 foreach($array_of_arrays_of_buildings as $index=>$array_of_buildings){
     $markers_for_category = getMarkersForBuildings($array_of_buildings);
     array_push($category_markerGroups, new MarkerGroup($category_slugs[$index], $checkboxColor, $markerIcon, $markers_for_category));
