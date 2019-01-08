@@ -972,7 +972,6 @@ function initMap() {
         * 
         *   TODO  -categories that are pulled from the CMS
         */
-        
        get("../Classes/Buildings/buildings_json.php").then(function(response){
             console.log(response);
 
@@ -1007,6 +1006,7 @@ function initMap() {
             setMarkers(all_building_markers_array, response.allBuildings.icon);
             document.getElementById("buildingsLabel").MaterialCheckbox.check();
        })
+
        function building_setMarkerInfoWindowPopup(checkbox_slug, building_json){
             var slugs_array = building_json.slugs;
             var thumb_urls = building_json.thumbnail_urls;
@@ -1017,11 +1017,13 @@ function initMap() {
 
             return markers_array;
        }
+       
        function setThumbnailSrc(infoWindow_id, this_thumbnail_url){
             if($("#" + infoWindow_id).hasClass("generalHover")){
                 $("#" + infoWindow_id + "Thumbnail").attr("src", this_thumbnail_url);
             }
        }
+
        function clearThumbnailSrc(infoWindow_id){
             if($("#" + infoWindow_id).hasClass("generalHover")){
                 $("#" + infoWindow_id + "Thumbnail").attr("src", "#");
