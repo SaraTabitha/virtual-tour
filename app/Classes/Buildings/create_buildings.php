@@ -157,22 +157,6 @@ foreach($category_titles as $this_category_title){
     array_push($array_of_arrays_of_buildings, $buildings_that_have_this_category);
 }
 
-//$buildings_that_have_this_category = getBuildingsForThisCategory($category_titles[0], $building_list);
-
-$category_markerGroups = array();
-
-foreach($array_of_arrays_of_buildings as $index=>$array_of_buildings){
-    global $category_slugs;
-
-    $markers_for_category = getMarkersForBuildings($array_of_buildings);
-    array_push($category_markerGroups, new MarkerGroup($category_slugs[$index], $checkboxColor, $markerIcon, $markers_for_category));
-    //TODO $checkboxColor array
-    ///TODO $markerIcon array
-}
-
-
-$stuRec = $category_markerGroups[0];
-
 /*
 * params: 
     this_category (string title of BuildingCategory)
@@ -214,6 +198,17 @@ function checkCategoryMatch($category_item_being_checked, $original_category){
     }
 }
 
+$category_markerGroups = array();
+
+foreach($array_of_arrays_of_buildings as $index=>$array_of_buildings){
+    global $category_slugs;
+
+    $markers_for_category = getMarkersForBuildings($array_of_buildings);
+    array_push($category_markerGroups, new MarkerGroup($category_slugs[$index], $checkboxColor, $markerIcon, $markers_for_category));
+    //TODO $checkboxColor array
+    ///TODO $markerIcon array
+}
+
 
 /*
 * param: 
@@ -232,6 +227,10 @@ function getMarkersForBuildings($array_of_buildings){
     return $array_of_markers;
 }
 
+
+
+//to be deleted
+$stuRec = $category_markerGroups[0];
 
 //part 2 -> buildings_json.php
 //part 3 -> Marker_Groups/style_checkboxes.php
