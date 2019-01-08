@@ -153,7 +153,7 @@ $array_of_arrays_of_buildings = array(); //array-ception
 //for that category -> adds the array of buildings for that category to the array_of_arrays_of_buildings massive array 
 // (are you confused? i'm sorry, i'm confusing myself)
 foreach($category_titles as $this_category_title){
-    $buildings_that_have_this_category = getBuildingsForThisCategory($category_titles[0], $building_list);
+    $buildings_that_have_this_category = getBuildingsForThisCategory($this_category_title, $building_list);
     array_push($array_of_arrays_of_buildings, $buildings_that_have_this_category);
 }
 
@@ -201,8 +201,6 @@ function checkCategoryMatch($category_item_being_checked, $original_category){
 $category_markerGroups = array();
 
 foreach($array_of_arrays_of_buildings as $index=>$array_of_buildings){
-    global $category_slugs;
-
     $markers_for_category = getMarkersForBuildings($array_of_buildings);
     array_push($category_markerGroups, new MarkerGroup($category_slugs[$index], $checkboxColor, $markerIcon, $markers_for_category));
     //TODO $checkboxColor array
@@ -226,7 +224,6 @@ function getMarkersForBuildings($array_of_buildings){
     }
     return $array_of_markers;
 }
-
 
 
 //to be deleted
