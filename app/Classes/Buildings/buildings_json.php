@@ -23,12 +23,18 @@
 
     $object->categories->titles = $category_titles[0];
 
-    $stu_Rec_markers = $stuRec->getMarkersArray();
-    $icon = $stuRec->getMarkerIcon();
+    //$stu_Rec_markers = $stuRec->getMarkersArray();
+    //$icon = $stuRec->getMarkerIcon();
     //$object->categories->stuRec = $stuRec->createMarkerJSONObject($stu_Rec_markers, $icon);
     $object->checkbox_slugs = $category_slugs;
+    
     $object->categories = array();
-    array_push($object->categories, $stuRec->createMarkerJSONObject($stu_Rec_markers, $icon));
+    foreach($category_markerGroups as $this_category_markerGroup){
+        $icon = $this_category_markerGroup->getMarkerIcon();
+        $markers_array = $this_category_markerGroup->getMarkersArray();
+        array_push($object->categories, $this_category_markerGroup->createMarkerJSONObject($markers_array, $icon));
+    }
+    //array_push($object->categories, $stuRec->createMarkerJSONObject($stu_Rec_markers, $icon));
 
     $json = json_encode($object);
     echo $json;

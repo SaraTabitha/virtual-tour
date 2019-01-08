@@ -230,7 +230,7 @@ function getMarkersForBuildings($array_of_buildings){
 
 
 //to be deleted
-$stuRec = $category_markerGroups[0];
+//$stuRec = $category_markerGroups[0];
 
 //part 2 -> buildings_json.php
 //part 3 -> Marker_Groups/style_checkboxes.php
