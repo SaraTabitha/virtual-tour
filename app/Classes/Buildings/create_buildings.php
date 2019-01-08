@@ -126,35 +126,88 @@ $bathroomBuildings = new MarkerGroup($slug, $checkboxColor, $markerIcon, $bathro
 /*
 * categories
 */
+
+
 $category_list; //array of BuildingCategory objects
 //BuildingCategory "titles" match up to the "building_categories (array item)" in the Building 
 //for each category -> get buildings which have a building_category that matches the title -> make marker group for that
 //will need an array of MarkerGroups to pass to JSON...
 //how to decide checkbox colors ? markerIcons? aasdlkfjaskfjksdajf
 $category_titles = array();
+$category_slugs = array();
 foreach($category_list as $building_category){
     array_push($category_titles, $building_category->getTitle());
+    array_push($category_slugs, $building_category->getSlug());
 }   
 
-
 $buildings_that_have_this_category = array();
-
+$test_array = array();
 $category_titles[0]; //"student recreation"
 
 
-$buildings_that_have_this_category = array_filter($building_list, "hasStuRec");
+/*$buildings_that_have_this_category = array_filter($building_list, "hasStuRec");
 
 function hasStuRec($building){
     $categories_from_building = $building->getBuildingCategories();
     foreach($categories_from_building as $this_category){
+        array_push($test_array, $this_category); //this is coming up empty
+
         if(strcmp($this_category, "Student Recreation") == 0){
+        //if($this_category == $category_titles[0]){
+
+            
+           // array_push($test_array, $building->getTitle());
+           
             return true;
+            
         }
         else{
             return false;
         }
     }
+}*/
+
+
+//array_filter -> returns filtered array
+$buildings_that_have_this_category = array_filter($building_list, function($element){
+    $categories_from_building = $element->getBuildingCategories();
+    foreach($categories_from_building as $this_category){
+        array_push($test_array, $this_category); //this is coming up empty
+
+        if(strcmp($this_category, "Student Recreation") == 0){
+
+            return true;
+            
+        }
+        else{
+            return false;
+        }
+    }
+});
+
+$marker_array_stuRec = array();
+//var_dump($buildings_that_have_this_category); //building objects
+foreach($buildings_that_have_this_category as $this_building){
+    array_push($marker_array_stuRec, $this_building->getMarker());
 }
+
+$slug = $category_titles[0];
+$stuRec = new MarkerGroup($checkbox_slug, $checkboxColor, $markerIcon, $marker_array_stuRec);
+//var_dump($marker_array_stuRec);
+
+
+/*
+foreach($building_list as $index=>$this_building){
+    $this_building_categories = $this_building->getBuildingCategories();
+    foreach($this_building_categories as $index=>$this_category){
+        if(strcmp($this_category, $category_titles[0])){
+            array_push($test_array, $this_building->getTitle());
+        }
+        else{}
+    }
+}   /*
+//$first_categories_array = $building[0]->getBuildingCategories();
+
 
 //what i'm trying to accomplish here
 //find all buildings where their categories match the total categories_list

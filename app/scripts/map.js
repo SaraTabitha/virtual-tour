@@ -10,52 +10,6 @@
 //
 
 
-
-
-
-/*
-* TESTS
-*/
-// var test = get("../Classes/Emergency_Phones/phones_json.php");
-// console.log("test1: " + test);
-
-// //2
-// get("../Classes/Emergency_Phones/phones_json.php").then(function(response){
-//     console.log("test2: " + response);
-// })
-
-// //3
-// get("../Classes/Emergency_Phones/phones_json.php").then(function(response){
-//     return JSON.parse(response);
-// }).then(function(response){
-//     console.log("test3: " + response);
-// })
-
-// //4
-// function getJSON(url){
-//     return get(url).then(JSON.parse);
-// }
-// var phones = getJSON("../Classes/Emergency_Phones/phones_json.php");
-// console.log("test4: "  + phones);
-
-// //5
-// var title1; 
-// get("../Classes/Emergency_Phones/phones_json.php").then(function(response){
-//      var parsed = JSON.parse(response);
-//      console.log("inside-5-parsed: " + parsed);
-//      console.log("inside-5-titles: " + parsed.titles);
-//      title1 = parsed.titles[0];
-//      console.log("inside-5-title[0]: " + title1);
-// })
-// console.log("outside-test5: " + title1);
-
-/*
-*   Scope PLAN:
-*   -> because "reponse" values only load inside .then(), put get(url).then() inside of initMap for all of the markers...
-*   -> and do all marker things in the "all markers" array 
-*   hope: get(url).then() chaining can make/return a massive AllMarkersInfo object/array ?
-*/
-
 // function for intitial map load (what appears when the page first loads)
 function initMap() {
         // center of map (UWO coordinates)
@@ -884,6 +838,7 @@ function initMap() {
                 this_marker.setIcon(icon); //display with this icon image
             });
         }
+
         /*
         * Params: markers_array(array of google.maps.Marker objects)
         * loops through the markers_array and removes all markers from the map
@@ -975,7 +930,10 @@ function initMap() {
                         closeAllInfoWindows(infoWindows_array, markers_array);
                         infoWindows_array[index].open(map, this_marker);
                         $("#" + infoWindows_array[index].content.id).addClass("hoverOpen");
-                        setThumbnailSrc(infoWindows_array[index].content.id, thumbnail_array[index]);
+
+                        if($("#" + infoWindows_array[index].content.id).hasClass("generalHover")){
+                            setThumbnailSrc(infoWindows_array[index].content.id, thumbnail_array[index]);
+                        }
                     }
                     else{
                         //if open, close it
@@ -994,7 +952,10 @@ function initMap() {
         function closeAllInfoWindows(infoWindows_array, markers_array){
             infoWindows_array.forEach(function(this_infoWindow, index){
                 this_infoWindow.close(map, markers_array[index]);
-                clearThumbnailSrc(this_infoWindow.content.id);
+
+                if($("#" + infoWindows_array[index].content.id).hasClass("generalHover")){
+                    clearThumbnailSrc(this_infoWindow.content.id);
+                }
             });
         }
 
@@ -1007,7 +968,6 @@ function initMap() {
         *       -sustainability points of interest
         *       -gender neutral and family restrooms
         * 
-        *   TODO infowindows w/ thumbnail images
         *   TODO popups
         * 
         *   TODO  -categories that are pulled from the CMS
@@ -1039,8 +999,9 @@ function initMap() {
             var bathroomBuildings = response.bathroomBuildings;
             building_setMarkerInfoWindowPopup(checkbox_slug, bathroomBuildings);
 
-            //TODO categories
 
+            //TODO categories
+            checkbox_slug = response.categories.checkbox_slugs[0]; //student_recreation
 
             //set building markers on page load
             setMarkers(all_building_markers_array, response.allBuildings.icon);
