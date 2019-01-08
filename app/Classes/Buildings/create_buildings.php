@@ -134,35 +134,37 @@ $bathroomBuildings = new MarkerGroup($slug, $checkboxColor, $markerIcon, $bathro
 *
 */
 
-$category_list; //array of BuildingCategory objects
 
 $category_titles = array(); //strings of BuildingCategory Titles
 $category_slugs = array(); //strings of BuildingCategory Slugs
+
+//category_list -> array of all BuildingCategory objects
+//loops through an extracts all of the slugs & titles of the categories for the menu
 foreach($category_list as $building_category){
     array_push($category_titles, $building_category->getTitle());
     array_push($category_slugs, $building_category->getSlug());
 }   
 
-$category_titles[0]; //"student recreation"
+//this is a stupidly large array which contains the array of buildings that correspond to each BuildingCategory
+$array_of_arrays_of_buildings = array(); //array-ception 
 
 
-//loops through each category by Title (need title to compare each category in a building against)
-// foreach($category_titles as $this_category_title){
+//loops through each category by Title (need title to compare each category in a building against) and gets all of the buildings
+//for that category -> adds the array of buildings for that category to the array_of_arrays_of_buildings massive array 
+// (are you confused? i'm sorry, i'm confusing myself)
+foreach($category_titles as $this_category_title){
+    $buildings_that_have_this_category = getBuildingsForThisCategory($category_titles[0], $building_list);
+    array_push($array_of_arrays_of_buildings, $buildings_that_have_this_category);
+}
 
-// }
+//$buildings_that_have_this_category = getBuildingsForThisCategory($category_titles[0], $building_list);
+$marker_array_stuRec = getMarkersForBuildings($array_of_arrays_of_buildings[0]);
 
-//array_filter -> returns filtered array
-// $buildings_that_have_this_category = array_filter($building_list, function($element){
-//     global $category_titles;
-//     $categories_from_building = $element->getBuildingCategories();
 
-//     foreach($categories_from_building as $this_category){
-    
-       
-//         return checkCategoryMatch($this_category,  $category_titles[0]);
- 
-//     }
-// });
+$slug = $category_titles[0];
+$stuRec = new MarkerGroup($checkbox_slug, $checkboxColor, $markerIcon, $marker_array_stuRec);
+//var_dump($marker_array_stuRec);
+
 
 /*
 * params: 
@@ -206,21 +208,22 @@ function checkCategoryMatch($category_item_being_checked, $original_category){
 }
 
 
-$buildings_that_have_this_category = getBuildingsForThisCategory($category_titles[0], $building_list);
-
-
-
-
-$marker_array_stuRec = array();
-//var_dump($buildings_that_have_this_category); //building objects
-foreach($buildings_that_have_this_category as $this_building){
-    array_push($marker_array_stuRec, $this_building->getMarker());
+/*
+* param: 
+    array_of_buildings (Building objects)
+* 
+* goes through an array of buildings, gets all of their markers, and returns an array of that markers
+*
+* return: 
+    array_of_markers (Marker objects)
+*/
+function getMarkersForBuildings($array_of_buildings){
+    $array_of_markers = array();
+    foreach($array_of_buildings as $this_building){
+        array_push($array_of_markers, $this_building->getMarker());
+    }
+    return $array_of_markers;
 }
-
-$slug = $category_titles[0];
-$stuRec = new MarkerGroup($checkbox_slug, $checkboxColor, $markerIcon, $marker_array_stuRec);
-//var_dump($marker_array_stuRec);
-
 
 
 //part 2 -> buildings_json.php
