@@ -180,26 +180,15 @@ function getBuildingsForThisCategory($this_BuildingCategory_title, $building_lis
     $buildings_that_have_this_category = array_filter($building_list, function($this_building) use($this_BuildingCategory_title){
         $categories_from_building = $this_building->getBuildingCategories();
 
-        //var_dump($this_building);
-       // var_dump($categories_from_building);
-
         $matches = false;
         foreach($categories_from_building as $this_category){
-            
-
-           // var_dump($this_category);
-           // var_dump($this_BuildingCategory_title);
-           // var_dump(checkCategoryMatch($this_category, $this_BuildingCategory_title));
-            
-            //TODO needs to ensure it goes through the entire list of categories before returning otherwise it returns "false" on the first value
-           // return checkCategoryMatch($this_category, $this_BuildingCategory_title);
+           
             if(checkCategoryMatch($this_category, $this_BuildingCategory_title)){
                 $matches = true;
             }
         }
-        return $matches;
+        return $matches; //needs to return only after it goes through and checks the entire building_category array
     });
-   // var_dump($buildings_that_have_this_category);
     return $buildings_that_have_this_category;
 }
 
