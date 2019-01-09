@@ -177,14 +177,29 @@ foreach($category_titles as $this_category_title){
      $buildings_that_have_this_category (array of Building objects that match the BuildingCategory)
 */
 function getBuildingsForThisCategory($this_BuildingCategory_title, $building_list){
-    $buildings_that_have_this_category = array_filter($building_list, function($element) use($this_BuildingCategory_title){
-        $categories_from_building = $element->getBuildingCategories();
+    $buildings_that_have_this_category = array_filter($building_list, function($this_building) use($this_BuildingCategory_title){
+        $categories_from_building = $this_building->getBuildingCategories();
 
+        //var_dump($this_building);
+       // var_dump($categories_from_building);
+
+        $matches = false;
         foreach($categories_from_building as $this_category){
-            return checkCategoryMatch($this_category, $this_BuildingCategory_title);
+            
+
+           // var_dump($this_category);
+           // var_dump($this_BuildingCategory_title);
+           // var_dump(checkCategoryMatch($this_category, $this_BuildingCategory_title));
+            
+            //TODO needs to ensure it goes through the entire list of categories before returning otherwise it returns "false" on the first value
+           // return checkCategoryMatch($this_category, $this_BuildingCategory_title);
+            if(checkCategoryMatch($this_category, $this_BuildingCategory_title)){
+                $matches = true;
+            }
         }
+        return $matches;
     });
-    
+   // var_dump($buildings_that_have_this_category);
     return $buildings_that_have_this_category;
 }
 
@@ -238,9 +253,6 @@ function getMarkersForBuildings($array_of_buildings){
     return $array_of_markers;
 }
 
-
-//to be deleted
-//$stuRec = $category_markerGroups[0];
 
 //part 2 -> buildings_json.php
 //part 3 -> Marker_Groups/style_checkboxes.php
