@@ -244,6 +244,6 @@ function getMarkersForBuildings($array_of_buildings){
 
 
 //part 2 -> buildings_json.php
-//part 3 -> Marker_Groups/style_checkboxes.php
+//part 3 -> Marker_Groups/style_checkboxes.php (TODO set up styling for category checkboxes)
 //part 4 -> create_buildingInfoWindows.php ( TODO decide if create infowindows & popups should be in one file )
 ?>

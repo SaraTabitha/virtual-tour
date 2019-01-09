@@ -751,7 +751,8 @@ function initMap() {
         */
        get("../Classes/Emergency_Phones/phones_json.php").then(function(response){
            var checkbox_slug = "emergency"; //TODO: have this variable only be set in one place
-           hookupCheckboxesToMarkers(checkbox_slug, response);
+           var markers_array = hookupCheckboxesToMarkers(checkbox_slug, response);
+           selectAllOneEventListener(checkbox_slug, markers_array, response.icon); 
         })
 
         /*
@@ -764,7 +765,7 @@ function initMap() {
             var icon_url = response.icon;
 
             checkboxOnChange(checkbox_slug, markers_array, icon_url); //individual checkbox
-            selectAllOneEventListener(checkbox_slug, markers_array, icon_url); //select all checkbox
+            //selectAllOneEventListener(checkbox_slug, markers_array, icon_url); //select all checkbox
         
             return markers_array;
         }
@@ -882,6 +883,7 @@ function initMap() {
            var allParking = response.allParking;
            var all_parking_slugs = response.allParking.slugs;
            var all_parking_markers_array = hookupCheckboxesToMarkers(checkbox_slug, allParking);
+           selectAllOneEventListener(checkbox_slug, all_parking_markers_array, allParking.icon);
            var all_parking_infoWindows = createInfoWindows(all_parking_slugs);
            setMarkerClick_openCloseInfo(all_parking_infoWindows, all_parking_markers_array);
 
@@ -890,6 +892,7 @@ function initMap() {
            var accessibleParking = response.accessibleParking;
            var accessible_parking_slugs = response.accessibleParking.slugs;
            var accessible_parking_markers_array = hookupCheckboxesToMarkers(checkbox_slug, accessibleParking);
+           selectAllOneEventListener(checkbox_slug, accessible_parking_markers_array, accessibleParking.icon);
            var accessible_parking_infoWindows = createInfoWindows(accessible_parking_slugs);
            setMarkerClick_openCloseInfo(accessible_parking_infoWindows, accessible_parking_markers_array);
            
@@ -981,26 +984,34 @@ function initMap() {
             var checkbox_slug = "buildings";
             var allBuildings = response.allBuildings;
             var all_building_markers_array = building_setMarkerInfoWindowPopup(checkbox_slug, allBuildings);
+            selectAllOneEventListener(checkbox_slug, all_building_markers_array, allBuildings.icon);
             
 
             //accessible entrance buildings
             checkbox_slug = "accEnt";
             var accessibleBuildings = response.accessibleBuildings;
-            building_setMarkerInfoWindowPopup(checkbox_slug, accessibleBuildings);
-            
+            var accessible_building_markers_array = building_setMarkerInfoWindowPopup(checkbox_slug, accessibleBuildings);
+            selectAllOneEventListener(checkbox_slug, accessible_building_markers_array, accessibleBuildings.icon);
+
             //sustainable buildings
             checkbox_slug = "sust";
             var sustainableBuildings = response.sustainableBuildings;
-            building_setMarkerInfoWindowPopup(checkbox_slug, sustainableBuildings);
+            var sustainable_buildings_marker_array = building_setMarkerInfoWindowPopup(checkbox_slug, sustainableBuildings);
+            selectAllOneEventListener(checkbox_slug, sustainable_buildings_marker_array, sustainableBuildings.icon);
 
             //gender neutral & family bathroom buildings
             checkbox_slug = "gender";
             var bathroomBuildings = response.bathroomBuildings;
-            building_setMarkerInfoWindowPopup(checkbox_slug, bathroomBuildings);
+            var gender_buildings_marker_array = building_setMarkerInfoWindowPopup(checkbox_slug, bathroomBuildings);
+            selectAllOneEventListener(checkbox_slug, gender_buildings_marker_array, bathroomBuildings.icon);
 
-
-            //TODO categories
-            checkbox_slug = response.checkbox_slugs[0]; //student_recreation
+            //categories
+            //TODO set up selectAllTwo
+            response.categories.forEach(function(this_category, index){
+                checkbox_slug = response.checkbox_slugs[index];
+                building_setMarkerInfoWindowPopup(checkbox_slug, this_category);
+                
+            });
 
             //set building markers on page load
             setMarkers(all_building_markers_array, response.allBuildings.icon);
