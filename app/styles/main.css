@@ -215,33 +215,33 @@ border: #fccd32;
 
 /* sust */
 /* border outline */
-#sustLabel.is-checked > span.mdl-checkbox__box-outline{
+/* #sustLabel.is-checked > span.mdl-checkbox__box-outline{
   border: #b3d143;
 }
   
   /* checkbox inner color */
-#sustLabel.is-checked > span.mdl-checkbox__box-outline > span{
+/* #sustLabel.is-checked > span.mdl-checkbox__box-outline > span{
     background: #b3d143;
-}
+} */
   /* checkbox ripple effect color */
-#sustLabel > span.mdl-checkbox__ripple-container.mdl-js-ripple-effect.mdl-ripple--center > span{
+/* #sustLabel > span.mdl-checkbox__ripple-container.mdl-js-ripple-effect.mdl-ripple--center > span{
     background: #b3d143;
-}
+}  */
 
 /* gender */
 /* border outline */
-#genderLabel.is-checked > span.mdl-checkbox__box-outline{
+/* #genderLabel.is-checked > span.mdl-checkbox__box-outline{
   border: #c1a3cb;
 }
-  
+   */
   /* checkbox inner color */
-#genderLabel.is-checked > span.mdl-checkbox__box-outline > span{
+/* #genderLabel.is-checked > span.mdl-checkbox__box-outline > span{
     background: #c1a3cb;
-}
+} */
   /* checkbox ripple effect color */
-#genderLabel > span.mdl-checkbox__ripple-container.mdl-js-ripple-effect.mdl-ripple--center > span{
+/* #genderLabel > span.mdl-checkbox__ripple-container.mdl-js-ripple-effect.mdl-ripple--center > span{
     background: #c1a3cb;
-}
+} */
 
 /* selectAllTwo */
 /* border outline */
