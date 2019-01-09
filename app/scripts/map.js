@@ -753,9 +753,8 @@ function initMap() {
        get("../Classes/Emergency_Phones/phones_json.php").then(function(response){
            //var select_checkbox_id = "selectAllOne";
            var checkbox_slug = "emergency"; //TODO: have this variable only be set in one place
-           var markers_array = hookupCheckboxesToMarkers(select_checkbox_id, checkbox_slug, response);
-           //selectAllOneEventListener(checkbox_slug, markers_array, response.icon); 
-           //hookupCheckboxesToMarkers(select_checkbox_id, checkbox_slug, response);
+           hookupCheckboxesToMarkers(select_checkbox_id, checkbox_slug, response);
+          
         })
 
         /*
@@ -988,29 +987,23 @@ function initMap() {
             var checkbox_slug = "buildings";
             var allBuildings = response.allBuildings;
             var all_building_markers_array = building_setMarkerInfoWindowPopup(select_checkbox_id, checkbox_slug, allBuildings);
-            //selectAllOneEventListener(checkbox_slug, all_building_markers_array, allBuildings.icon);
             
-
             //accessible entrance buildings
             checkbox_slug = "accEnt";
             var accessibleBuildings = response.accessibleBuildings;
-            var accessible_building_markers_array = building_setMarkerInfoWindowPopup(select_checkbox_id, checkbox_slug, accessibleBuildings);
-            //selectAllOneEventListener(checkbox_slug, accessible_building_markers_array, accessibleBuildings.icon);
+            building_setMarkerInfoWindowPopup(select_checkbox_id, checkbox_slug, accessibleBuildings);
 
             //sustainable buildings
             checkbox_slug = "sust";
             var sustainableBuildings = response.sustainableBuildings;
-            var sustainable_buildings_marker_array = building_setMarkerInfoWindowPopup(select_checkbox_id, checkbox_slug, sustainableBuildings);
-            //selectAllOneEventListener(checkbox_slug, sustainable_buildings_marker_array, sustainableBuildings.icon);
+            building_setMarkerInfoWindowPopup(select_checkbox_id, checkbox_slug, sustainableBuildings);
 
             //gender neutral & family bathroom buildings
             checkbox_slug = "gender";
             var bathroomBuildings = response.bathroomBuildings;
-            var gender_buildings_marker_array = building_setMarkerInfoWindowPopup(select_checkbox_id, checkbox_slug, bathroomBuildings);
-            //selectAllOneEventListener(checkbox_slug, gender_buildings_marker_array, bathroomBuildings.icon);
+            building_setMarkerInfoWindowPopup(select_checkbox_id, checkbox_slug, bathroomBuildings);
 
             //categories
-            //TODO set up selectAllTwo
             response.categories.forEach(function(this_category, index){
                 checkbox_slug = response.checkbox_slugs[index];
                 building_setMarkerInfoWindowPopup(select2_checkbox_id, checkbox_slug, this_category);
