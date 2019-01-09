@@ -739,7 +739,8 @@ function initMap() {
             xmlhttp.send(); 
             });
         }
-
+        var select_checkbox_id = "selectAllOne";
+        var select2_checkbox_id = "selectAllTwo";
         /*
         * get() Param: ../Classes/Emergency_Phones/phones_json.php" (url to the php file that returns the json data this function needs)
         * then() Param: response (the parsed JSON data that phones_json.php returned)
@@ -750,9 +751,11 @@ function initMap() {
         * SelectAll checkbox eventlistener that sets/removes the Emergency Phones markers 
         */
        get("../Classes/Emergency_Phones/phones_json.php").then(function(response){
+           //var select_checkbox_id = "selectAllOne";
            var checkbox_slug = "emergency"; //TODO: have this variable only be set in one place
-           var markers_array = hookupCheckboxesToMarkers(checkbox_slug, response);
-           selectAllOneEventListener(checkbox_slug, markers_array, response.icon); 
+           var markers_array = hookupCheckboxesToMarkers(select_checkbox_id, checkbox_slug, response);
+           //selectAllOneEventListener(checkbox_slug, markers_array, response.icon); 
+           //hookupCheckboxesToMarkers(select_checkbox_id, checkbox_slug, response);
         })
 
         /*
@@ -760,12 +763,12 @@ function initMap() {
         *         response (parsed json object containing array of titles, latitudes, longitudes & a string for icon url)
         * Stores marker array by calling createMarkersFromResponse and then passes it to a function that creates the Checkboxes event listener
         */
-        function hookupCheckboxesToMarkers(checkbox_slug, response){
+        function hookupCheckboxesToMarkers(select_checkbox_id, checkbox_slug, response){
             var markers_array = createMarkersFromResponse(response);
             var icon_url = response.icon;
 
+            selectAllEventListener(select_checkbox_id, checkbox_slug, markers_array, icon_url);
             checkboxOnChange(checkbox_slug, markers_array, icon_url); //individual checkbox
-            //selectAllOneEventListener(checkbox_slug, markers_array, icon_url); //select all checkbox
         
             return markers_array;
         }
@@ -858,9 +861,9 @@ function initMap() {
         */
 
         //TODO: fix this so it checks/unchecks all checkboxes as well
-        function selectAllOneEventListener(checkbox_slug, markers_array, icon_url){
-            $("#selectAllOne").change(function(){
-                if( !$("#selectAllOne").hasClass("is-checked") ){
+        function selectAllEventListener(select_checkbox_id, checkbox_slug, markers_array, icon_url){
+            $("#" + select_checkbox_id).change(function(){
+                if( !$("#" + select_checkbox_id).hasClass("is-checked") ){
                     //unchecked
                     removeMarkers(markers_array);
                     document.getElementById(checkbox_slug + "Label").MaterialCheckbox.uncheck();
@@ -878,12 +881,13 @@ function initMap() {
         *   -accessible lots 
         */
        get("../Classes/Parking_Lots/parking_json.php").then(function(response){
+           //var select_checkbox_id = "selectAllOne";
            //all parking
            var checkbox_slug = "parking"; //TODO: have this variable only be set in one place (other is create_parkinglots.php)
            var allParking = response.allParking;
            var all_parking_slugs = response.allParking.slugs;
-           var all_parking_markers_array = hookupCheckboxesToMarkers(checkbox_slug, allParking);
-           selectAllOneEventListener(checkbox_slug, all_parking_markers_array, allParking.icon);
+           var all_parking_markers_array = hookupCheckboxesToMarkers(select_checkbox_id, checkbox_slug, allParking);
+           
            var all_parking_infoWindows = createInfoWindows(all_parking_slugs);
            setMarkerClick_openCloseInfo(all_parking_infoWindows, all_parking_markers_array);
 
@@ -891,8 +895,8 @@ function initMap() {
            checkbox_slug = "accPar"; //TODO: have this variable only be set in one place (other is create_parkinglots.php)
            var accessibleParking = response.accessibleParking;
            var accessible_parking_slugs = response.accessibleParking.slugs;
-           var accessible_parking_markers_array = hookupCheckboxesToMarkers(checkbox_slug, accessibleParking);
-           selectAllOneEventListener(checkbox_slug, accessible_parking_markers_array, accessibleParking.icon);
+           var accessible_parking_markers_array = hookupCheckboxesToMarkers(select_checkbox_id, checkbox_slug, accessibleParking);
+          
            var accessible_parking_infoWindows = createInfoWindows(accessible_parking_slugs);
            setMarkerClick_openCloseInfo(accessible_parking_infoWindows, accessible_parking_markers_array);
            
@@ -983,33 +987,33 @@ function initMap() {
             //all buildings
             var checkbox_slug = "buildings";
             var allBuildings = response.allBuildings;
-            var all_building_markers_array = building_setMarkerInfoWindowPopup(checkbox_slug, allBuildings);
-            selectAllOneEventListener(checkbox_slug, all_building_markers_array, allBuildings.icon);
+            var all_building_markers_array = building_setMarkerInfoWindowPopup(select_checkbox_id, checkbox_slug, allBuildings);
+            //selectAllOneEventListener(checkbox_slug, all_building_markers_array, allBuildings.icon);
             
 
             //accessible entrance buildings
             checkbox_slug = "accEnt";
             var accessibleBuildings = response.accessibleBuildings;
-            var accessible_building_markers_array = building_setMarkerInfoWindowPopup(checkbox_slug, accessibleBuildings);
-            selectAllOneEventListener(checkbox_slug, accessible_building_markers_array, accessibleBuildings.icon);
+            var accessible_building_markers_array = building_setMarkerInfoWindowPopup(select_checkbox_id, checkbox_slug, accessibleBuildings);
+            //selectAllOneEventListener(checkbox_slug, accessible_building_markers_array, accessibleBuildings.icon);
 
             //sustainable buildings
             checkbox_slug = "sust";
             var sustainableBuildings = response.sustainableBuildings;
-            var sustainable_buildings_marker_array = building_setMarkerInfoWindowPopup(checkbox_slug, sustainableBuildings);
-            selectAllOneEventListener(checkbox_slug, sustainable_buildings_marker_array, sustainableBuildings.icon);
+            var sustainable_buildings_marker_array = building_setMarkerInfoWindowPopup(select_checkbox_id, checkbox_slug, sustainableBuildings);
+            //selectAllOneEventListener(checkbox_slug, sustainable_buildings_marker_array, sustainableBuildings.icon);
 
             //gender neutral & family bathroom buildings
             checkbox_slug = "gender";
             var bathroomBuildings = response.bathroomBuildings;
-            var gender_buildings_marker_array = building_setMarkerInfoWindowPopup(checkbox_slug, bathroomBuildings);
-            selectAllOneEventListener(checkbox_slug, gender_buildings_marker_array, bathroomBuildings.icon);
+            var gender_buildings_marker_array = building_setMarkerInfoWindowPopup(select_checkbox_id, checkbox_slug, bathroomBuildings);
+            //selectAllOneEventListener(checkbox_slug, gender_buildings_marker_array, bathroomBuildings.icon);
 
             //categories
             //TODO set up selectAllTwo
             response.categories.forEach(function(this_category, index){
                 checkbox_slug = response.checkbox_slugs[index];
-                building_setMarkerInfoWindowPopup(checkbox_slug, this_category);
+                building_setMarkerInfoWindowPopup(select2_checkbox_id, checkbox_slug, this_category);
                 
             });
 
@@ -1018,11 +1022,11 @@ function initMap() {
             document.getElementById("buildingsLabel").MaterialCheckbox.check();
        })
 
-       function building_setMarkerInfoWindowPopup(checkbox_slug, building_json){
+       function building_setMarkerInfoWindowPopup(select_checkbox_id, checkbox_slug, building_json){
             var slugs_array = building_json.slugs;
             var thumb_urls = building_json.thumbnail_urls;
 
-            var markers_array = hookupCheckboxesToMarkers(checkbox_slug, building_json);
+            var markers_array = hookupCheckboxesToMarkers(select_checkbox_id, checkbox_slug, building_json);
             var infoWindows_array = createInfoWindows(slugs_array);
             setMarkerClick_openCloseInfo(infoWindows_array, markers_array, thumb_urls);
 
