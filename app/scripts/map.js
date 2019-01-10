@@ -34,18 +34,18 @@ function initMap() {
         //var pinkCommuterMarker = "images/markers/parking/pink_commuter.png";
 
         //var redMarker = "images/markers/red.png";
-        var maroonMarker = "images/markers/maroon.png";
-        var orangeMarker = "images/markers/orange.png";
+        //var maroonMarker = "images/markers/maroon.png";
+        //var orangeMarker = "images/markers/orange.png";
         //var yellowMarker = "images/markers/yellow.png";
         //var greenMarker = "images/markers/green.png";
-        var darkgreenMarker = "images/markers/darkgreen.png";
+        //var darkgreenMarker = "images/markers/darkgreen.png";
         //var tealMarker = "images/markers/teal.png";
-        var lightblueMarker = "images/markers/lightblue.png";
+        //var lightblueMarker = "images/markers/lightblue.png";
         //var blueMarker = "images/markers/blue.png";
-        var navyMarker = "images/markers/navy.png";
+        //var navyMarker = "images/markers/navy.png";
         //var lightpurpleMarker = "images/markers/lightpurple.png";
-        var darkpurpleMarker = "images/markers/darkpurple.png";
-        var brownMarker = "images/markers/brown.png";
+        //var darkpurpleMarker = "images/markers/darkpurple.png";
+        //var brownMarker = "images/markers/brown.png";
 
         
         //list of all the things you could possibly need for buildings/parking lots/phones

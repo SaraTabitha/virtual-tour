@@ -216,12 +216,12 @@ function checkCategoryMatch($category_item_being_checked, $original_category){
 * note: category_markerGroups used in buildings_json.php
 */
 $category_markerGroups = array();
+$category_checkboxColors = ["#981d23", "#f17844", "#875547", "#0e5846", "#8dd4e2", "#282a72", "#5f318f"];
+$category_markerIcons = ["images/markers/maroon.png", "images/markers/orange.png", "images/markers/brown.png", "images/markers/darkgreen.png", "images/markers/lightblue.png", "images/markers/navy.png", "images/markers/darkpurple.png"];
 //creates marker groups for each BuildingCategory, also creates marker arrays from the building arrays for MarkerGroup parameter
 foreach($array_of_arrays_of_buildings as $index=>$array_of_buildings){
     $markers_for_category = getMarkersForBuildings($array_of_buildings);
-    array_push($category_markerGroups, new MarkerGroup($category_slugs[$index], $checkboxColor, $markerIcon, $markers_for_category));
-    //TODO $checkboxColor array
-    //TODO $markerIcon array
+    array_push($category_markerGroups, new MarkerGroup($category_slugs[$index], $category_checkboxColors[$index], $category_markerIcons[$index], $markers_for_category));
 }
 
 
