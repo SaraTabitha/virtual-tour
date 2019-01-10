@@ -92,5 +92,92 @@
     //         </div>
     // </div>
 
-    
+    $building_list; //array of all Building objects
+
+    foreach($building_list as $item){
+        $slug = $item->getSlug();
+        $title = $item->getTitle();
+        $street = $item->getStreet();
+        $city = $item->getCity();
+        $state = $item->getState();
+        $zipcode = $item->getZipcode();
+        $full_image = $item->getFullImage();
+
+        $about_tab_content = $item->getAboutTabContent();
+        $tour_tab_content = $item->getTourTabContent();
+        $sustainability_tab_content = $item->getSustainabilityTabContent();
+        $bathroom_tab_content = $item->getBathroomTabContent();
+        $dining_tab_content = $item->getDiningTabContent();
+
+
+        ?>
+            <!-- start popup -->
+            <div id="<?php echo $slug; ?>Popup" class="popup">
+                <!-- start close button & title -->
+                <div class="popupBlack">
+                             <button id="<?php echo $slug; ?>PopupClose" class="closeButton mdl-color-text--white mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
+                                    <i  class="material-icons">close</i>
+                             </button>
+                    <h1 class="text yellow "><?php echo $title; ?></h1>
+                </div>
+                <!-- end close button & title -->
+                <!-- start nav -->
+                <nav class="popupNav five mdl-shadow--3dp">
+                    <ul id="popupNav">
+                             <li id="<?php echo $slug; ?>AboutLi" class="about"> About</li>
+                             <?php
+                             //if tabs have content -> show link in nav for that tab's tab
+                             if(tabHasContent($tour_tab_content)){
+                                ?>
+                                    <li id="<?php echo $slug; ?>TourLi"> Tour</li>
+                                <?php
+                             }
+                             if(tabHasContent($sustainability_tab_content)){
+                                ?>
+                                    <li id="<?php echo $slug; ?>SustainabilityLi"> Sustainability</li>
+                                <?php
+                             }
+                             if(tabHasContent($bathroom_tab_content)){
+                                ?>
+                                    <li id="<?php echo $slug; ?>BathroomsLi"> Bathrooms</li>
+                                <?php
+                             }
+                             if(tabHasContent($dining_tab_content)){
+                                ?>
+                                    <li id="<?php echo $slug; ?>DiningLi"> Dining</li>
+                                <?php
+                             }
+                             ?>
+                    </ul>
+                </nav>
+                <!-- end nav -->
+                <!-- start tabs  container-->
+                <div class="infoContainer">
+                        <!-- start about tab -->
+                        <div id="<?php echo $slug;?>AboutImage"class="imagePopup">
+                                <img  src="">
+                                <p class="address text"><?php echo $street . ", " . $city . ", " . $state . ", " . $zipcode; ?></p>
+                        </div>
+                        <div id="<?php echo $slug;?>AboutText" class="popupText">
+                                <h5 class="heading">About this Building</h5>
+                                <p class=" subText text"> <?php echo $about_tab_content; ?></p>
+                        </div>
+                        <!-- end about tab -->
+                             
+                </div>
+                <!-- end tabs container -->
+            </div>
+            <!-- end popup -->
+        <?php
+
+    }
+
+    function tabHasContent($tab_content){
+        if($tab_content == false){
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
 ?>
