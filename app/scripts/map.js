@@ -724,12 +724,7 @@ function initMap() {
 
             xmlhttp.onreadystatechange = function(){
                     if(this.readyState == 4 && this.status == 200){
-                        
-                        //console.log(this.readyState + ", " + this.status);
-                        //console.log(this.responseText);
-                        //console.log(JSON.parse(this.responseText));
                         resolve(JSON.parse(this.responseText));
-                        //resolve(this.responseText);
                     }
                     
             };
@@ -837,7 +832,7 @@ function initMap() {
         */
         function setMarkers(markers_array, icon){
             markers_array.forEach(function(this_marker){
-                this_marker.setMap(map); //display on map
+                this_marker.setMap(map); //display on map @ lat/lng
                 this_marker.setIcon(icon); //display with this icon image
             });
         }
@@ -858,8 +853,6 @@ function initMap() {
         *  Sets up an event listener for the first Select All checkbox in the menu, adds the passed marker_array
         *  to the set of markers that gets added & removed based on the Select All checkbox being checked/unchecked
         */
-
-        //TODO: fix this so it checks/unchecks all checkboxes as well
         function selectAllEventListener(select_checkbox_id, checkbox_slug, markers_array, icon_url){
             $("#" + select_checkbox_id).change(function(){
                 if( !$("#" + select_checkbox_id).hasClass("is-checked") ){
@@ -880,7 +873,6 @@ function initMap() {
         *   -accessible lots 
         */
        get("../Classes/Parking_Lots/parking_json.php").then(function(response){
-           //var select_checkbox_id = "selectAllOne";
            //all parking
            var checkbox_slug = "parking"; //TODO: have this variable only be set in one place (other is create_parkinglots.php)
            var allParking = response.allParking;
@@ -976,7 +968,6 @@ function initMap() {
         * 
         *   TODO popups
         * 
-        *   TODO  -categories that are pulled from the CMS
         */
        get("../Classes/Buildings/buildings_json.php").then(function(response){
             console.log(response);
@@ -1014,7 +1005,16 @@ function initMap() {
             setMarkers(all_building_markers_array, response.allBuildings.icon);
             document.getElementById("buildingsLabel").MaterialCheckbox.check();
        })
-
+       /*
+       * params: 
+            select_checkbox_id (string id for which "selectAll" checkbox the markergroup is under)
+            checkbox_slug (string slug for the id of the checkbox the markergroup is attached to)
+            building_json (array of marker info)
+       * this function creates google.maps.Marker objects & attaches them to the appropriate checkbox (and the selectAll checkbox), 
+       * creates the infoWindows for those markers and sets up the click functions for opening/closing them
+       * returns: 
+            markers_array (array of google.maps.Marker objects)
+       */
        function building_setMarkerInfoWindowPopup(select_checkbox_id, checkbox_slug, building_json){
             var slugs_array = building_json.slugs;
             var thumb_urls = building_json.thumbnail_urls;
@@ -1025,13 +1025,25 @@ function initMap() {
 
             return markers_array;
        }
-       
+       /*
+       * params:
+            infoWindow_id (string id of the html infoWindow (not the google.maps.InfoWindow))
+            this_thumbnail_url (string url of the thumnbnail image for the html infoWindow)
+
+        * if the infowindow is for a building(has "generalHover" class, as opposed to a "parkingHover"),
+        * set the url for the img's src attribute so the thumbnail shows up on the infoWindow
+       */
        function setThumbnailSrc(infoWindow_id, this_thumbnail_url){
             if($("#" + infoWindow_id).hasClass("generalHover")){
                 $("#" + infoWindow_id + "Thumbnail").attr("src", this_thumbnail_url);
             }
        }
-
+       /*
+       * params:
+            infoWindow_id (string id of the html infoWindow (not the google.maps.InfoWindow))
+       * if the infowindow is for a building(has "generalHover" class, as opposed to a "parkingHover"),
+       * clear the img's src attribute (so the page isn't super slow from loading a ton of images) 
+       */
        function clearThumbnailSrc(infoWindow_id){
             if($("#" + infoWindow_id).hasClass("generalHover")){
                 $("#" + infoWindow_id + "Thumbnail").attr("src", "#");
@@ -1736,19 +1748,19 @@ function initMap() {
     //     }
         
     // }
-    function catchMarkers(name){
-        //when a marker is unchecked, go through and look at the checkboxes, if they are checked
-                //reset their markers 
-                //for ex. if buildings is unchecked it removes the markers for buildings but it may also remove
-                //markers that overlap with that category and another checkbox's grouping of markers 
-                for(ff = 0; ff < 14; ff++){
-                    //make sure that the one being checked is not the checkbox being unchecked (otherwise it will still see it as checked
-                    // and reset the markers i.e. never remove the markers for that checkbox)
-                    if((checkboxes[ff] != name) && ($("#" + checkboxes[ff] + "Label").hasClass("is-checked"))){
-                        checkboxMarkersandCards(checkboxes[ff]);
-                    }
-                }
-    }
+    // function catchMarkers(name){
+    //     //when a marker is unchecked, go through and look at the checkboxes, if they are checked
+    //             //reset their markers 
+    //             //for ex. if buildings is unchecked it removes the markers for buildings but it may also remove
+    //             //markers that overlap with that category and another checkbox's grouping of markers 
+    //             for(ff = 0; ff < 14; ff++){
+    //                 //make sure that the one being checked is not the checkbox being unchecked (otherwise it will still see it as checked
+    //                 // and reset the markers i.e. never remove the markers for that checkbox)
+    //                 if((checkboxes[ff] != name) && ($("#" + checkboxes[ff] + "Label").hasClass("is-checked"))){
+    //                     checkboxMarkersandCards(checkboxes[ff]);
+    //                 }
+    //             }
+    // }
     //checks if name corresponds with specific ids and sets the buildings & their markers accordingly
    //function uncheckMarkersandCards(name){
        
@@ -1818,18 +1830,18 @@ function initMap() {
 
     
     // watches for change event on checkbox, checks if it has class is-checked and then sets the markers and hover cards accordingly
-    function checkIfChecked(name){
-        // debugger;
-             if(!$("#" + name + "Label").hasClass("is-checked")){
-                 //  if checkbox is checked, set markers
-                 checkboxMarkersandCards(name);
-             } else {
-                //  if checkbox is unchecked, remove markers and hover cards
-                uncheckMarkersandCards(name);
+    // function checkIfChecked(name){
+    //     // debugger;
+    //          if(!$("#" + name + "Label").hasClass("is-checked")){
+    //              //  if checkbox is checked, set markers
+    //              checkboxMarkersandCards(name);
+    //          } else {
+    //             //  if checkbox is unchecked, remove markers and hover cards
+    //             uncheckMarkersandCards(name);
                 
-             }
+    //          }
         
-    }
+    // }
 
     //right away trigger buildings to be checked (easier for first time users to see how to use the site)
     // function triggerBuildings(){

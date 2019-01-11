@@ -140,18 +140,18 @@ label.mdl-checkbox{
 
 /* buildings */
 /* border outline */
-#buildingsLabel.is-checked > span.mdl-checkbox__box-outline{
+/* #buildingsLabel.is-checked > span.mdl-checkbox__box-outline{
 border: #fccd32;
-}
+} */
 
 /* checkbox inner color */
-#buildingsLabel.is-checked > span.mdl-checkbox__box-outline > span{
+/* #buildingsLabel.is-checked > span.mdl-checkbox__box-outline > span{
   background: #fccd32;
-}
+} */
 /* checkbox ripple effect color */
-#buildingsLabel > span.mdl-checkbox__ripple-container.mdl-js-ripple-effect.mdl-ripple--center > span{
+/* #buildingsLabel > span.mdl-checkbox__ripple-container.mdl-js-ripple-effect.mdl-ripple--center > span{
   background: #fccd32;
-}
+} */
 
 /* parking */
 /* border outline */
@@ -170,18 +170,18 @@ border: #fccd32;
 
 /* accEnt */
 /* border outline */
-#accEntLabel.is-checked > span.mdl-checkbox__box-outline{
+/* #accEntLabel.is-checked > span.mdl-checkbox__box-outline{
   border: #eb212e;
-}
+} */
   
   /* checkbox inner color */
-#accEntLabel.is-checked > span.mdl-checkbox__box-outline > span{
+/* #accEntLabel.is-checked > span.mdl-checkbox__box-outline > span{
     background: #eb212e;
-}
+} */
   /* checkbox ripple effect color */
-#accEntLabel > span.mdl-checkbox__ripple-container.mdl-js-ripple-effect.mdl-ripple--center > span{
+/* #accEntLabel > span.mdl-checkbox__ripple-container.mdl-js-ripple-effect.mdl-ripple--center > span{
     background: #eb212e;
-}
+} */
 
 /* accPar */
 /* border outline */
@@ -477,86 +477,86 @@ p.parkingTextHover{
   font-size: 12px;
   margin:0px;
 }
-.parkingColorStaff{
+/* .parkingColorStaff{
   height: 10px;
-  width: 10px;
+  width: 10px; */
   /* staff blue */
-  background-color: #324597;
-  border-radius: 100px;
+  /* background-color: #324597;
+  border-radius: 100px; */
   /* display: inline-block; */
-  position: relative;
+  /* position: relative;
   float: right;
-}
-.parkingColorRemote{
+} */
+/* .parkingColorRemote{
   height: 10px;
-  width: 10px;
+  width: 10px; */
   /* remote orange*/
-  background-color: #f17e21;
-  border-radius: 100px;
+  /* background-color: #f17e21;
+  border-radius: 100px; */
   /* display: inline-block; */
-  position: relative;
+  /* position: relative;
   float: right;
 }
 .parkingColorCommute{
   height: 10px;
-  width: 10px;
+  width: 10px; */
   /* remote yellow*/
-  background-color: #fbe200;
-  border-radius: 100px;
+  /* background-color: #fbe200;
+  border-radius: 100px; */
   /* display: inline-block; */
-  position: relative;
+  /* position: relative;
   float: right;
 }
 .parkingColorRestricted{
   height: 10px;
-  width: 10px;
+  width: 10px; */
   /* remote grey*/
-  background-color: #9e9fa2;
-  border-radius: 100px;
+  /* background-color: #9e9fa2;
+  border-radius: 100px; */
   /* display: inline-block; */
-  position: relative;
+  /* position: relative;
   float: right;
 }
 .parkingColorReserved{
   height: 10px;
-  width: 10px;
+  width: 10px; */
   /* remote pink*/
-  background-color: #f298bf;
-  border-radius: 100px;
+  /* background-color: #f298bf;
+  border-radius: 100px; */
   /* display: inline-block; */
-  position: relative;
+  /* position: relative;
   float: right;
-}
-.parkingColorCommuter{
+} */
+/* .parkingColorCommuter{
   height: 10px;
-  width: 10px;
+  width: 10px; */
   /* commuter red*/
-  background-color: #ec2024;
-  border-radius: 100px;
+  /* background-color: #ec2024;
+  border-radius: 100px; */
   /* display: inline-block; */
-  position: relative;
+  /* position: relative;
   float: right;
-}
-.parkingColorResident{
+} */
+/* .parkingColorResident{
   height: 10px;
-  width: 10px;
+  width: 10px; */
   /* resident green*/
-  background-color: #6fbd46;
-  border-radius: 100px;
+  /* background-color: #6fbd46;
+  border-radius: 100px; */
   /* display: inline-block; */
-  position: relative;
+  /* position: relative;
   float: right;
-}
-.parkingColorVisitor{
+} */
+/* .parkingColorVisitor{
   height: 10px;
-  width: 10px;
+  width: 10px; */
   /* visitor peach*/
-  background-color: #ffdc9d;
-  border-radius: 100px;
+  /* background-color: #ffdc9d;
+  border-radius: 100px; */
   /* display: inline-block; */
-  position: relative;
+  /* position: relative;
   float: right;
-}
+} */
 #overlay{
   position: fixed;
   width: 100%;
