@@ -162,7 +162,7 @@
                         <div id="<?php echo $slug;?>AboutText" class="popupText">
                                 <h5 class="heading">About this Building</h5>
                                 <!-- this is going to be a paragraph inside of a paragraph -_- -->
-                                <p class=" subText text"> <?php echo $about_tab_content; ?></p>
+                                <p class="subText text"> <?php echo $about_tab_content; ?></p>
                         </div>
                         <!-- end about tab -->
                         <?php
@@ -183,7 +183,7 @@
                             ?>
                                 <!-- start sustainability tab -->
                                 <div id="<?php echo $slug; ?>Sustainability" class="popupTextNoImage">
-                                    <h5 class="sustHeading"> Sustainability Point of Interest</h5>
+                                    <h5 class="sustHeading">Sustainability Point of Interest</h5>
                                     <p class="subText text"><?php echo $sustainability_tab_content; ?></p>
                                 </div>
                                 <!-- end sustainability tab -->
@@ -193,7 +193,7 @@
                             ?>
                                 <!-- start bathroom tab -->
                                 <div id="<?php echo $slug; ?>Bathrooms" class="popupTextNoImage">
-                                    <h5 class="sustHeading"> Gender Neutral Bathrooms and Family Restrooms</h5>
+                                    <h5 class="sustHeading">Gender Neutral Bathrooms and Family Restrooms</h5>
                                     <p class="subText text"><?php echo $bathroom_tab_content; ?></p>
                                 </div>
                                 <!-- end bathroom tab -->
@@ -206,7 +206,8 @@
                                     <img  src="">
                                 </div>
                                 <div id="<?php echo $slug; ?>DiningText" class="popupText">
-                                        <p class=" subText text"><?php echo $dining_tab_content; ?></p>
+                                    <h5 class="sustHeading">Dining</h5>
+                                    <p class="subText text"><?php echo $dining_tab_content; ?></p>
                                 </div>
                                 <!-- end dining tab -->
                             <?php
@@ -227,5 +228,13 @@
         else{
             return true;
         }
+    }
+
+    function tabHasMedia(){
+        //can be [embed] or <img />...but...embed/url -> iframe or img 
+    }
+
+    function extractTabMedia(){
+
     }
 ?>

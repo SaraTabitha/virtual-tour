@@ -375,15 +375,13 @@
 
 
         <main id="mainWeb" class="mdl-layout__content">
-                <?php
-                        require_once('Classes/Buildings/create_buildings.php');
-                ?>
                 <div class="page-content">
+                
                         <!-- POPUPS START -->
                         <!--  -->
 
                         <!--  ALBEE POPUP-->
-                        <div id="albeePopup" class="popup">
+                        <!-- <div id="albeePopup" class="popup">
                                 <div class="popupBlack">
                                          <button id="albeePopupClose" class="closeButton mdl-color-text--white mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
                                                  <i  class="material-icons">close</i>
@@ -396,9 +394,9 @@
                                                 <li id="albeeTourLi"> Tour</li>
                                                 <li id="albeeSustainabilityLi">Sustainability </li>
                                         </ul>
-                                </nav>
+                                </nav> -->
                                 <!-- Albee About Content -->
-                                <div class="infoContainer">
+                                <!-- <div class="infoContainer">
                                         <div id="albeeAboutImage" class="imagePopup">
                                                 <img  src="">
                                                 <p class="address text">
@@ -411,9 +409,9 @@
                                                 one of two physical education buildings on campus.
                                                 It houses a swimming pool, diving pool, weight-lifting
                                                 center, women's athletic coaches offices and a few classrooms.</p>
-                                        </div>
+                                        </div> -->
                                         <!-- Albee Tour Contents -->
-                                        <div id="albeeTourText" class="tourText">
+                                        <!-- <div id="albeeTourText" class="tourText">
                                                 <h5 class="heading">Tour Snapshot</h5>
                                                 <p class="subText text">Nick takes us through Albee Hall and even takes a quick swim in the pool. </p>
                                                 <p class="subText text">Find more information here: </p>
@@ -421,29 +419,29 @@
                                         </div>
                                         <div id="albeeTourVideo"class="videoPopup">
                                                 <iframe id="albeeiframe" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
-                                        </div>
+                                        </div> -->
                                         <!-- Albee Sustainability Contents -->
-                                        <div id="albeeSustainability" class="popupTextNoImage">
+                                        <!-- <div id="albeeSustainability" class="popupTextNoImage">
                                                 <h5 class="sustHeading"> Sustainability Point of Interest</h5>
                                                 <p class="subText text">Albee Hall houses the University pool which uses 64 solar thermal panels producing an estimated 7,692 therms annually to generate hot water.</p>
                                         </div>
                                 </div>
-                        </div>
+                        </div> -->
 
                         <!-- BASEBALL POPUP -->
-                        <div id="baseballPopup" class="popup">
+                        <!-- <div id="baseballPopup" class="popup">
                                 <div class="popupBlack mdl-shadow--3dp">
                                                 <button id="baseballPopupClose" class="closeButton mdl-color-text--white mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
                                                                 <i  class="material-icons">close</i>
                                                                 </button>
                                         <h1 class="text yellow ">Alumni Baseball Stadium </h1>
-                                </div>
+                                </div> -->
                                 <!-- <nav class="popupNav mdl-shadow--3dp">
                                 <ul id="popupNav">
                                 <li class="about"> About</li>
                                 </ul>
                                 </nav> -->
-                                <div class="infoContainer">
+                                <!-- <div class="infoContainer">
                                         <div id="baseballAboutImage" class="imagePopup">
                                                 <img  src="">
                                                 <p class="address text">
@@ -457,10 +455,10 @@
                                                 of the Fox River.</p>
                                         </div>
                                 </div>
-                        </div>
+                        </div> -->
 
                         <!-- ALUMNI WELCOME AND CONFERENCE CENTER POPUP -->
-                        <div id="alumniPopup" class="popup">
+                        <!-- <div id="alumniPopup" class="popup">
                                 <div class="popupBlack">
                                                 <button id="alumniPopupClose" class="closeButton mdl-color-text--white mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
                                                                 <i  class="material-icons">close</i>
@@ -472,9 +470,9 @@
                                                 <li id="alumniAboutLi" class="about"> About</li>
                                                 <li id="alumniSustainabilityLi">Sustainability </li>
                                         </ul>
-                                </nav>
+                                </nav> -->
                                 <!-- ALUMNI About Content -->
-                                <div class="infoContainer">
+                                <!-- <div class="infoContainer">
                                         <div id="alumniAboutImage" class="imagePopup">
                                                 <img  src="">
                                                 <p class="address text">
@@ -489,17 +487,17 @@
                                                 offices, a visitor’s concierge and a high-quality conference center.
                                                 The AWCC is located on the Fox River and includes a ballroom, board
                                                  room and breakout rooms.</p>
-                                        </div>
+                                        </div> -->
                                         <!-- ALUMNI Sustainability Contents -->
-                                        <div id="alumniSustainability" class="popupTextNoImage">
+                                        <!-- <div id="alumniSustainability" class="popupTextNoImage">
                                                 <h5 class="sustHeading"> Sustainability Point of Interest</h5>
                                                 <p class="subText text">The Alumni Welcome and Conference Center was built to LEED certification standards and opened in 2014.</p>
                                         </div>
                                 </div>
-                        </div>
+                        </div> -->
 
                         <!-- Arts & Communications Center POPUP -->
-                        <div id="acPopup" class="popup">
+                        <!-- <div id="acPopup" class="popup">
                                 <div class="popupBlack ">
                                                 <button id="acPopupClose" class="closeButton mdl-color-text--white mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
                                                                 <i  class="material-icons">close</i>
@@ -511,9 +509,9 @@
                                                 <li id="acAboutLi" class="about"> About</li>
                                                 <li id="acBathroomsLi">Bathrooms</li>
                                         </ul>
-                                </nav>
+                                </nav> -->
                                 <!-- Arts & Communications Center About Content -->
-                                <div class="infoContainer">
+                                <!-- <div class="infoContainer">
                                         <div id="acAboutImage" class="imagePopup">
                                                 <img  src="">
                                                 <p class="address text">
@@ -529,29 +527,29 @@
                                                 Religious Studies and Anthropology. Also located in the North-South
                                                 building are the Music Hall, Preibe Art Gallery and 90.3 WRST-FM
                                                 Oshkosh, the University's radio station.</p>
-                                        </div>
+                                        </div> -->
                                         <!-- Arts & Communications Center Bathrooms Contents -->
-                                        <div id="acBathrooms" class="popupTextNoImage">
+                                        <!-- <div id="acBathrooms" class="popupTextNoImage">
                                                 <h5 class="sustHeading"> Gender Neutral Bathrooms and Family Restrooms</h5>
                                                 <p class="subText text">Two gender neutral bathrooms: rooms N201 (with changing table) and N203 (with changing table)</p>
                                         </div>
                                 </div>
-                        </div>
+                        </div> -->
 
                         <!-- Athletic Service Building Popup -->
-                        <div id="athleticPopup" class="popup">
+                        <!-- <div id="athleticPopup" class="popup">
                                 <div class="popupBlack mdl-shadow--3dp">
                                                 <button id="athleticPopupClose" class="closeButton mdl-color-text--white mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
                                                                 <i  class="material-icons">close</i>
                                                         </button>
                                         <h1 class="text yellow ">Athletic Service Building </h1>
-                                </div>
+                                </div> -->
                                 <!-- <nav class="popupNav mdl-shadow--3dp">
                                 <ul id="popupNav">
                                 <li class="about"> About</li>
                                 </ul>
                                 </nav> -->
-                                <div class="infoContainer">
+                                <!-- <div class="infoContainer">
                                         <div id="athleticAboutImage" class="imagePopup">
                                                         <img  src="">
                                                         <p class="address text">
@@ -565,10 +563,10 @@
                                                 is east of Titan Stadium and was built in 1988.</p>
                                         </div>
                                 </div>
-                        </div>
+                        </div> -->
 
                         <!-- Blackhawk Commons popup -->
-                        <div id="blackhawkPopup" class="popup">
+                        <!-- <div id="blackhawkPopup" class="popup">
                                 <div class="popupBlack">
                                                 <button id="blackhawkPopupClose" class="closeButton mdl-color-text--white mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
                                                                 <i  class="material-icons">close</i>
@@ -582,9 +580,9 @@
                                                 <li id="blackhawkBathroomsLi">Bathrooms</li>
                                                 <li id="blackhawkDiningLi">Dining</li>
                                         </ul>
-                                </nav>
+                                </nav> -->
                                 <!-- Blackhawk Commons About Content -->
-                                <div class="infoContainer">
+                                <!-- <div class="infoContainer">
                                         <div id="blackhawkAboutImage" class="imagePopup">
                                                 <img  src="">
                                                 <p class="address text">
@@ -599,19 +597,19 @@
                                                  and Sodexo, the University's contracted food service. If you are looking
                                                   for on-campus employment, dining services at UW Oshkosh has positions
                                                  open to students every school year.</p>
-                                        </div>
+                                        </div> -->
                                         <!-- Blackhawk Commons Sustainability Contents -->
-                                        <div id="blackhawkSustainability" class="popupTextNoImage">
+                                        <!-- <div id="blackhawkSustainability" class="popupTextNoImage">
                                                 <h5 class="sustHeading"> Sustainability Point of Interest</h5>
                                                 <p class="subText text">Fair Trade coffee and tea is featured daily and trayless dining has reduced food waste by 17 percent and the waste that remains is sent to the University’s biodigester. Energy Star electrical equipment reduces energy use by 20 percent and a trash compactor reduces the frequency of waste pick-up. The 24 rooftop solar thermal panels produces an estimated 1,878 therms annually to heat water for the kitchens.</p>
-                                        </div>
+                                        </div> -->
                                         <!-- Blackhawk Commons bathrooms  Contents -->
-                                        <div id="blackhawkBathrooms" class="popupTextNoImage">
+                                        <!-- <div id="blackhawkBathrooms" class="popupTextNoImage">
                                                 <h5 class="sustHeading"> Gender Neutral Bathrooms and Family Restrooms</h5>
                                                 <p class="subText text">Two gender neutral bathrooms: rooms 009 and 010.</p>
-                                        </div>
+                                        </div> -->
                                         <!-- Blackhawk Commons dining content -->
-                                        <div id="blackhawkDiningImage" class="imagePopup">
+                                        <!-- <div id="blackhawkDiningImage" class="imagePopup">
                                                 <img  src="">
                                         </div>
                                         <div id="blackhawkDiningText" class="popupText">
@@ -634,22 +632,22 @@
                                                 <p> Learn More: <a class="link" href="https://uwoshkosh.sodexomyway.com/dining-choices/blackhawkcommons.html" target="_blank">Blackhawk Commons</a><p>
                                         </div>
                                 </div>
-                        </div>
+                        </div> -->
 
                         <!-- Biodigester popup -->
-                        <div id="biodigesterPopup" class="popup">
+                        <!-- <div id="biodigesterPopup" class="popup">
                                 <div class="popupBlack mdl-shadow--3dp">
                                                 <button id="biodigesterPopupClose" class="closeButton mdl-color-text--white mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
                                                                 <i  class="material-icons">close</i>
                                                         </button>
                                         <h1 class="text yellow ">Biodigester </h1>
-                                </div>
+                                </div> -->
                                 <!-- <nav class="popupNav mdl-shadow--3dp">
                                 <ul id="popupNav">
                                 <li class="about"> About</li>
                                 </ul>
                                 </nav> -->
-                                <div id="biodigesterAboutText" class="infoContainer">
+                                <!-- <div id="biodigesterAboutText" class="infoContainer">
                                         <div id= "biodigesterAboutImage" class="imagePopup">
                                                 <img  src="">
                                                 <p class="address text">
@@ -663,22 +661,22 @@
                                                 Americas.</p>
                                         </div>
                                 </div>
-                        </div>
+                        </div> -->
 
                         <!-- Buckstaff Planetarium popup -->
-                        <div id="buckstaffPopup" class="popup">
+                        <!-- <div id="buckstaffPopup" class="popup">
                                 <div class="popupBlack mdl-shadow--3dp">
                                                 <button id="buckstaffPopupClose" class="closeButton mdl-color-text--white mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
                                                                 <i  class="material-icons">close</i>
                                                         </button>
                                         <h1 class="text yellow ">Buckstaff Planetarium </h1>
-                                </div>
+                                </div> -->
                                 <!-- <nav class="popupNav mdl-shadow--3dp">
                                 <ul id="popupNav">
                                 <li class="about"> About</li>
                                 </ul>
                                 </nav> -->
-                                <div id="buckstaffAboutText" class="infoContainer">
+                                <!-- <div id="buckstaffAboutText" class="infoContainer">
                                         <div id= "buckstaffAboutImage" class="imagePopup">
                                                 <img  src="">
                                                 <p class="address text">
@@ -695,10 +693,10 @@
                                                 trips in coordination with local schools’ curricula.</p>
                                         </div>
                                 </div>
-                        </div>
+                        </div> -->
 
                         <!-- Campus Center for Equity & Diversity popup -->
-                        <div id="equityPopup" class="popup">
+                        <!-- <div id="equityPopup" class="popup">
                                 <div class="popupBlack">
                                                 <button id="equityPopupClose" class="closeButton mdl-color-text--white mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
                                                                 <i  class="material-icons">close</i>
@@ -710,9 +708,9 @@
                                                 <li id="equityAboutLi" class="about"> About</li>
                                                 <li id="equityBathroomsLi">Bathrooms</li>
                                         </ul>
-                                </nav>
+                                </nav> -->
                                 <!-- Campus Center for Equity & Diversity About Content -->
-                                <div class="infoContainer">
+                                <!-- <div class="infoContainer">
                                         <div id="equityAboutImage" class="imagePopup">
                                                 <img  src="">
                                                 <p class="address text">
@@ -723,29 +721,29 @@
                                                 <p class=" subText text">The Center for Equity and
                                                 Diversity houses the Women's Center, the LGBTQ
                                                 Resource Center and the Division of Academic Support.</p>
-                                        </div>
+                                        </div> -->
                                         <!-- Campus Center for Equity & Diversity Bathrooms Contents -->
-                                        <div id="equityBathrooms" class="popupTextNoImage">
+                                        <!-- <div id="equityBathrooms" class="popupTextNoImage">
                                                 <h5 class="sustHeading"> Gender Neutral Bathrooms and Family Restrooms</h5>
                                                 <p class="subText text">Two gender neutral bathrooms: rooms 020B (with changing table) and 020F</p>
                                         </div>
                                 </div>
-                        </div>
+                        </div> -->
 
                         <!-- Campus Services popup -->
-                        <div id="campusPopup" class="popup">
+                        <!-- <div id="campusPopup" class="popup">
                                 <div class="popupBlack mdl-shadow--3dp">
                                                 <button id="campusPopupClose" class="closeButton mdl-color-text--white mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
                                                                 <i  class="material-icons">close</i>
                                                                 </button>
                                         <h1 class="text yellow ">Campus Services  </h1>
-                                </div>
+                                </div> -->
                                 <!-- <nav class="popupNav mdl-shadow--3dp">
                                 <ul id="popupNav">
                                 <li class="about"> About</li>
                                 </ul>
                                 </nav> -->
-                                <div class="infoContainer">
+                                <!-- <div class="infoContainer">
                                         <div id="campusAboutImage" class="imagePopup">
                                                 <img  src="">
                                                 <p class="address text">
@@ -760,22 +758,22 @@
                                                 Central Stores and Receiving and the Fleet Vehicles departments.</p>
                                         </div>
                                 </div>
-                        </div>
+                        </div> -->
 
                         <!-- Ceramics Laboratory popup -->
-                        <div id="ceramicsPopup" class="popup">
+                        <!-- <div id="ceramicsPopup" class="popup">
                                 <div class="popupBlack mdl-shadow--3dp">
                                                 <button id="ceramicsPopupClose" class="closeButton mdl-color-text--white mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
                                                                 <i  class="material-icons">close</i>
                                                         </button>
                                         <h1 class="text yellow ">Ceramics Laboratory  </h1>
-                                </div>
+                                </div> -->
                                 <!-- <nav class="popupNav mdl-shadow--3dp">
                                 <ul id="popupNav">
                                 <li class="about"> About</li>
                                 </ul>
                                 </nav> -->
-                                <div class="infoContainer">
+                                <!-- <div class="infoContainer">
                                         <div id="ceramicsAboutImage" class="imagePopup">
                                                 <img  src="">
                                                 <p class="address text">
@@ -789,10 +787,10 @@
                                                 largest being 24 cubic feet.</p>
                                         </div>
                                 </div>
-                        </div>
+                        </div> -->
 
                         <!-- CLOW POPUP -->
-                        <div id="clowPopup" class="popup">
+                        <!-- <div id="clowPopup" class="popup">
                                 <div class="popupBlack">
                                                 <button id="clowPopupClose" class="closeButton mdl-color-text--white mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
                                                                 <i  class="material-icons">close</i>
@@ -831,22 +829,22 @@
                                                 <p> Learn More: <a class="link" href="https://uwoshkosh.sodexomyway.com/dining-choices/academic/index.html" target="_blank">Caf&#233; Clow</a><p>
                                         </div>
                                 </div>
-                        </div>
+                        </div> -->
 
                         <!-- Community Gardens popup -->
-                        <div id="gardensPopup" class="popup">
+                        <!-- <div id="gardensPopup" class="popup">
                                 <div class="popupBlack mdl-shadow--3dp">
                                                 <button id="gardensPopupClose" class="closeButton mdl-color-text--white mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
                                                                 <i  class="material-icons">close</i>
                                                         </button>
                                         <h1 class="text yellow ">Community Gardens </h1>
-                                </div>
+                                </div> -->
                                 <!-- <nav class="popupNav mdl-shadow--3dp">
                                 <ul id="popupNav">
                                 <li class="about"> About</li>
                                 </ul>
                                 </nav> -->
-                                <div class="infoContainer">
+                                <!-- <div class="infoContainer">
                                         <div id="gardensAboutImage" class="imagePopup">
                                                 <img  src="">
                                                 <p class="address text">
@@ -864,10 +862,10 @@
                                                 find in the city.</p>
                                         </div>
                                 </div>
-                        </div>
+                        </div> -->
 
                         <!-- Dempsey Hall popup -->
-                        <div id="dempseyPopup" class="popup">
+                        <!-- <div id="dempseyPopup" class="popup">
                                 <div class="popupBlack">
                                                 <button id="dempseyPopupClose" class="closeButton mdl-color-text--white mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
                                                                 <i  class="material-icons">close</i>
@@ -879,9 +877,9 @@
                                                 <li id="dempseyAboutLi" class="about"> About</li>
                                                 <li id="dempseyBathroomsLi">Bathrooms</li>
                                         </ul>
-                                </nav>
+                                </nav> -->
                                 <!--  Dempsey Hall About Content -->
-                                <div class="infoContainer">
+                                <!-- <div class="infoContainer">
                                         <div id="dempseyAboutImage" class="imagePopup">
                                                 <img  src="">
                                                 <p class="address text">
@@ -898,29 +896,29 @@
                                                 Veterans Resource Center, Disability Services, Integrated Marketing
                                                 and Communications, Sustainability Office, Renewable Energy Institute
                                                 and more.</p>
-                                        </div>
+                                        </div> -->
                                         <!--  Dempsey Hall Bathrooms Contents -->
-                                        <div id="dempseyBathrooms" class="popupTextNoImage">
+                                        <!-- <div id="dempseyBathrooms" class="popupTextNoImage">
                                                 <h5 class="sustHeading"> Gender Neutral Bathrooms and Family Restrooms</h5>
                                                 <p class="subText text">Three gender neutral bathrooms: rooms 004, 005 and 107 (with changing table)</p>
                                         </div>
                                 </div>
-                        </div>
+                        </div> -->
 
                         <!-- Donner Hall popup -->
-                        <div id="donnerPopup" class="popup">
+                        <!-- <div id="donnerPopup" class="popup">
                                 <div class="popupBlack mdl-shadow--3dp">
                                                 <button id="donnerPopupClose" class="closeButton mdl-color-text--white mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
                                                                 <i  class="material-icons">close</i>
                                                         </button>
                                         <h1 class="text yellow ">Donner Hall </h1>
-                                </div>
+                                </div> -->
                                 <!-- <nav class="popupNav mdl-shadow--3dp">
                                 <ul id="popupNav">
                                 <li class="about"> About</li>
                                 </ul>
                                 </nav> -->
-                                <div class="infoContainer">
+                                <!-- <div class="infoContainer">
                                         <div id="donnerAboutImage" class="imagePopup">
                                                 <img  src="">
                                                 <p class="address text">
@@ -936,22 +934,22 @@
                                                 service front desk.</p>
                                         </div>
                                 </div>
-                        </div>
+                        </div> -->
 
                         <!-- East Hall popup -->
-                        <div id="eastPopup" class="popup">
+                        <!-- <div id="eastPopup" class="popup">
                                 <div class="popupBlack mdl-shadow--3dp">
                                                 <button id="eastPopupClose" class="closeButton mdl-color-text--white mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
                                                                 <i  class="material-icons">close</i>
                                                         </button>
                                         <h1 class="text yellow ">East Hall </h1>
-                                </div>
+                                </div> -->
                                 <!-- <nav class="popupNav mdl-shadow--3dp">
                                 <ul id="popupNav">
                                 <li class="about"> About</li>
                                 </ul>
                                 </nav> -->
-                                <div class="infoContainer">
+                                <!-- <div class="infoContainer">
                                         <div id="eastAboutImage" class="imagePopup">
                                                 <img  src="">
                                                 <p class="address text">
@@ -964,22 +962,22 @@
                                                 to a number of Intramural sports and sport clubs.</p>
                                         </div>
                                 </div>
-                        </div>
+                        </div> -->
 
                         <!-- Environmental Research and Innovation Center popup -->
-                        <div id="environmentalPopup" class="popup">
+                        <!-- <div id="environmentalPopup" class="popup">
                                 <div class="popupBlack mdl-shadow--3dp">
                                                 <button id="environmentalPopupClose" class="closeButton mdl-color-text--white mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
                                                                 <i  class="material-icons">close</i>
                                                         </button>
                                         <h1 class="text yellow ">Environmental Research and Innovation Center </h1>
-                                </div>
+                                </div> -->
                                 <!-- <nav class="popupNav mdl-shadow--3dp">
                                 <ul id="popupNav">
                                 <li class="about"> About</li>
                                 </ul>
                                 </nav> -->
-                                <div class="infoContainer">
+                                <!-- <div class="infoContainer">
                                         <div id="environmentalAboutImage" class="imagePopup">
                                                 <img  src="">
                                                 <p class="address text">
@@ -995,22 +993,22 @@
                                                 analysis services to the surrounding community.</p>
                                         </div>
                                 </div>
-                        </div>
+                        </div> -->
 
                         <!-- evans hall popup -->
-                        <div id="evansPopup" class="popup">
+                        <!-- <div id="evansPopup" class="popup">
                                 <div class="popupBlack mdl-shadow--3dp">
                                                 <button id="evansPopupClose" class="closeButton mdl-color-text--white mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
                                                                 <i  class="material-icons">close</i>
                                                         </button>
                                         <h1 class="text yellow ">Evans Hall </h1>
-                                </div>
+                                </div> -->
                                 <!-- <nav class="popupNav mdl-shadow--3dp">
                                 <ul id="popupNav">
                                 <li class="about"> About</li>
                                 </ul>
                                 </nav> -->
-                                <div class="infoContainer">
+                                <!-- <div class="infoContainer">
                                         <div id="evansAboutImage" class="imagePopup">
                                                 <img  src="">
                                                 <p class="address text">
@@ -1029,22 +1027,22 @@
                                                 and campus resources.</p>
                                         </div>
                                 </div>
-                        </div>
+                        </div> -->
 
                         <!-- fletcher popup -->
-                        <div id="fletcherPopup" class="popup">
+                        <!-- <div id="fletcherPopup" class="popup">
                                 <div class="popupBlack mdl-shadow--3dp">
                                                 <button id="fletcherPopupClose" class="closeButton mdl-color-text--white mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
                                                                 <i  class="material-icons">close</i>
                                                         </button>
                                         <h1 class="text yellow ">Fletcher Hall  </h1>
-                                </div>
+                                </div> -->
                                 <!-- <nav class="popupNav mdl-shadow--3dp">
                                 <ul id="popupNav">
                                 <li class="about"> About</li>
                                 </ul>
                                 </nav> -->
-                                <div class="infoContainer">
+                                <!-- <div class="infoContainer">
                                         <div id="fletcherAboutImage" class="imagePopup">
                                                 <img  src="">
                                                 <p class="address text">
@@ -1064,18 +1062,18 @@
                                                 of Fletcher Hall.</p>
                                         </div>
                                 </div>
-                        </div>
+                        </div> -->
 
                         <!-- Fredric March Theatre popup -->
-                        <div id="fredricPopup" class="popup">
+                        <!-- <div id="fredricPopup" class="popup">
                                 <div class="popupBlack">
                                                 <button id="fredricPopupClose" class="closeButton mdl-color-text--white mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
                                                                 <i  class="material-icons">close</i>
                                                         </button>
                                         <h1 class="text yellow ">Fredric March Theatre </h1>
-                                </div>
+                                </div> -->
                                 <!-- Campus Center for Equity & Diversity About Content -->
-                                <div class="infoContainer">
+                                <!-- <div class="infoContainer">
                                         <div id="fredricAboutImage" class="imagePopup">
                                                 <img  src="">
                                                 <p class="address text">
@@ -1094,22 +1092,22 @@
                                                 and a fully functional fly system.</p>
                                         </div>
                                 </div>
-                        </div>
+                        </div> -->
 
                         <!--  GRUENHAGEN POPUP-->
-                        <div id="gruenhagenPopup" class="popup">
+                        <!-- <div id="gruenhagenPopup" class="popup">
                                 <div class="popupBlack mdl-shadow--3dp">
                                                 <button id="gruenhagenPopupClose" class="closeButton mdl-color-text--white mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
                                                                 <i  class="material-icons">close</i>
                                                         </button>
                                         <h1 class="text yellow ">Gruenhagen Conference Center </h1>
-                                </div>
+                                </div> -->
                                 <!-- <nav class="popupNav mdl-shadow--3dp">
                                 <ul id="popupNav">
                                 <li class="about"> About</li>
                                 </ul>
                                 </nav> -->
-                                <div class="infoContainer">
+                                <!-- <div class="infoContainer">
                                         <div id="gruenhagenAboutImage" class="imagePopup">
                                                 <img  src="">
                                                 <p class="address text">
@@ -1127,10 +1125,10 @@
                                                 staff dedicated to providing the best possible service to its patrons.</p>
                                         </div>
                                 </div>
-                        </div>
+                        </div> -->
 
                         <!-- HALSEY POPUP  -->
-                        <div id="halseyPopup" class="popup">
+                        <!-- <div id="halseyPopup" class="popup">
                                 <div class="popupBlack">
                                                 <button id="halseyPopupClose" class="closeButton mdl-color-text--white mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
                                                                 <i  class="material-icons">close</i>
@@ -1143,9 +1141,9 @@
                                                 <li id="halseyBathroomsLi">Bathrooms</li>
                                                 <li id="halseyDiningLi">Dining<li>
                                         </ul>
-                                </nav>
+                                </nav> -->
                                 <!--  Halsey Science Center About Content -->
-                                <div class="infoContainer">
+                                <!-- <div class="infoContainer">
                                         <div id="halseyAboutImage" class="imagePopup">
                                                 <img  src="">
                                                 <p class="address text">
@@ -1162,14 +1160,14 @@
                                                 astronomy, computer science, medical technology
                                                 and geography, as well as the Science Outreach
                                                 and Women in Science programs.</p>
-                                        </div>
+                                        </div> -->
                                         <!--  Halsey Science Center  Bathrooms Contents -->
-                                        <div id="halseyBathrooms" class="popupTextNoImage">
+                                        <!-- <div id="halseyBathrooms" class="popupTextNoImage">
                                                 <h5 class="sustHeading"> Gender Neutral Bathrooms and Family Restrooms</h5>
                                                 <p class="subText text">Seven gender neutral bathrooms: rooms S048 (with changing table), 101H, 101J, S162 (with changing table), S257 (with changing table), S357 (with changing table) and S458 (with changing table)</p>
-                                        </div>
+                                        </div> -->
                                         <!-- halsey dining content -->
-                                        <div id="halseyDiningImage" class="imagePopup">
+                                        <!-- <div id="halseyDiningImage" class="imagePopup">
                                                 <img  src="">
                                         </div>
                                         <div id="halseyDiningText" class="popupText">
@@ -1178,10 +1176,10 @@
                                                 <p> Learn More: <a class="link" href="https://uwoshkosh.sodexomyway.com/dining-choices/academic/halzeymitaza.html" target="_blank">Mi Taza To-Go</a><p>
                                         </div>
                                 </div>
-                        </div>
+                        </div> -->
 
                         <!-- HARRINGTON POPUP -->
-                        <div id="harringtonPopup" class="popup">
+                        <!-- <div id="harringtonPopup" class="popup">
                                 <div class="popupBlack">
                                                 <button id="harringtonPopupClose" class="closeButton mdl-color-text--white mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
                                                                 <i  class="material-icons">close</i>
@@ -1193,9 +1191,9 @@
                                                 <li id="harringtonAboutLi" class="about"> About</li>
                                                 <li id="harringtonBathroomsLi">Bathrooms</li>
                                         </ul>
-                                </nav>
+                                </nav> -->
                                 <!--  Harrington Hall About Content -->
-                                <div class="infoContainer">
+                                <!-- <div class="infoContainer">
                                         <div id="harringtonAboutImage" class="imagePopup">
                                                 <img  src="">
                                                 <p class="address text">
@@ -1211,17 +1209,17 @@
                                                 and chemistry departments, numerous laboratories,
                                                 hundreds of mineral samples, and topographical and
                                                 history maps of locations in and around Oshkosh.</p>
-                                        </div>
+                                        </div> -->
                                         <!--  Harrington Hall Bathrooms Contents -->
-                                        <div id="harringtonBathrooms" class="popupTextNoImage">
+                                        <!-- <div id="harringtonBathrooms" class="popupTextNoImage">
                                                 <h5 class="sustHeading"> Gender Neutral Bathrooms and Family Restrooms</h5>
                                                 <p class="subText text">Two gender neutral bathrooms: rooms 105 (with changing table) and 110</p>
                                         </div>
                                 </div>
-                        </div>
+                        </div> -->
 
                         <!--  heating plant popup -->
-                        <div id="heatingPopup" class="popup">
+                        <!-- <div id="heatingPopup" class="popup">
                                 <div class="popupBlack">
                                                 <button id="heatingPopupClose" class="closeButton mdl-color-text--white mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
                                                                 <i  class="material-icons">close</i>
@@ -1233,9 +1231,9 @@
                                                 <li id="heatingAboutLi" class="about"> About</li>
                                                 <li id="heatingSustainabilityLi">Sustainability </li>
                                         </ul>
-                                </nav>
+                                </nav> -->
                                 <!-- Heating Plant About Content -->
-                                <div class="infoContainer">
+                                <!-- <div class="infoContainer">
                                         <div id="heatingAboutImage" class="imagePopup">
                                                 <img  src="">
                                                 <p class="address text">
@@ -1249,9 +1247,9 @@
                                                 that provides chilled water to cool some of
                                                 the campus buildings. The Heating Plant contains
                                                 four boilers that consume natural gas, coal or oil.</p>
-                                        </div>
+                                        </div> -->
                                         <!-- Heating Plant Sustainability Contents -->
-                                        <div id="heatingSustainability" class="popupTextNoImage">
+                                        <!-- <div id="heatingSustainability" class="popupTextNoImage">
                                                 <h5 class="sustHeading"> Sustainability Point of Interest</h5>
                                                 <p class="subText text">The coal/natural gas plant provides
                                                 steam to heat campus buildings, with natural gas (methane)
@@ -1262,10 +1260,10 @@
                                                 panels producing an annual 1,910 therms.</p>
                                         </div>
                                 </div>
-                        </div>
+                        </div> -->
 
                         <!-- High Avenue Parking Ramp popup -->
-                        <div id="parkingRampPopup" class="popup">
+                        <!-- <div id="parkingRampPopup" class="popup">
                                 <div class="popupBlack">
                                                 <button id="parkingRampPopupClose" class="closeButton mdl-color-text--white mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
                                                                 <i  class="material-icons">close</i>
@@ -1303,10 +1301,10 @@
                                         <div id="parkingRampParkingText" class="popupText">
                                         </div>
                                 </div>
-                        </div>
+                        </div> -->
 
                         <!-- Horizon Village -->
-                        <div id="horizonPopup" class="popup">
+                        <!-- <div id="horizonPopup" class="popup">
                                 <div class="popupBlack">
                                                 <button id="horizonPopupClose" class="closeButton mdl-color-text--white mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
                                                                 <i  class="material-icons">close</i>
@@ -1318,9 +1316,9 @@
                                                 <li id="horizonAboutLi" class="about"> About</li>
                                                 <li id="horizonSustainabilityLi">Sustainability </li>
                                         </ul>
-                                </nav>
+                                </nav> -->
                                 <!-- Horizon Village About Content -->
-                                <div class="infoContainer">
+                                <!-- <div class="infoContainer">
                                         <div id="horizonAboutImage" class="imagePopup">
                                                 <img  src="">
                                                 <p class="address text">
@@ -1342,9 +1340,9 @@
                                                 in the building for all residents of the building
                                                 to use. These will be located on all floors of the
                                                 building.</p>
-                                        </div>
+                                        </div> -->
                                         <!-- Horizon Village Sustainability Contents -->
-                                        <div id="horizonSustainability" class="popupTextNoImage">
+                                        <!-- <div id="horizonSustainability" class="popupTextNoImage">
                                                 <h5 class="sustHeading"> Sustainability Point of Interest</h5>
                                                 <p class="subText text">The first of its kind in the Western
                                                 hemisphere, our dry fermentation anaerobic digester converts
@@ -1354,10 +1352,10 @@
                                                 percent of UW Oshkosh’s electricity.</p>
                                         </div>
                                 </div>
-                        </div>
+                        </div> -->
 
                         <!-- Kolf Sports Center popup -->
-                        <div id="kolfPopup" class="popup">
+                        <!-- <div id="kolfPopup" class="popup">
                                 <div class="popupBlack">
                                                 <button id="kolfPopupClose" class="closeButton mdl-color-text--white mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
                                                                 <i  class="material-icons">close</i>
@@ -1369,9 +1367,9 @@
                                                 <li id="kolfAboutLi" class="about"> About</li>
                                                 <li id="kolfBathroomsLi">Bathrooms</li>
                                         </ul>
-                                </nav>
+                                </nav> -->
                                 <!-- Kolf Sports Center About Content -->
-                                <div class="infoContainer">
+                                <!-- <div class="infoContainer">
                                         <div id="kolfAboutImage" class="imagePopup">
                                                 <img  src="">
                                                 <p class="address text">
@@ -1386,24 +1384,24 @@
                                                 as well as intramural sports, concerts, commencement
                                                 and classes in military science, physical education
                                                 and dance.</p>
-                                        </div>
+                                        </div> -->
                                         <!--  Kolf Sports Center Bathrooms Contents -->
-                                        <div id="kolfBathrooms" class="popupTextNoImage">
+                                        <!-- <div id="kolfBathrooms" class="popupTextNoImage">
                                                 <h5 class="sustHeading"> Gender Neutral Bathrooms and Family Restrooms</h5>
                                                 <p class="subText text">One gender neutral bathroom: room 169N (with changing table)</p>
                                         </div>
                                 </div>
-                        </div>
+                        </div> -->
 
                         <!-- Lincoln Hall popup -->
-                        <div id="lincolnPopup" class="popup">
+                        <!-- <div id="lincolnPopup" class="popup">
                                 <div class="popupBlack mdl-shadow--3dp">
                                                 <button id="lincolnPopupClose" class="closeButton mdl-color-text--white mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
                                                                 <i  class="material-icons">close</i>
                                                         </button>
-                                        <h1 id="lincoln-hall-title" class="text yellow "></h1>
+                                        <h1 id="lincoln-hall-title" class="text yellow "></h1> -->
                                         <!-- <h1 class="text yellow ">Lincoln Hall</h1> -->
-                                </div>
+                                <!-- </div> -->
 
                                 <!-- <nav class="popupNav mdl-shadow--3dp">
                                 <ul id="popupNav">
@@ -1411,14 +1409,14 @@
                                 </ul>
                                 </nav> -->
 
-                                <div class="infoContainer">
+                                <!-- <div class="infoContainer">
                                         <div id="lincolnAboutImage" class="imagePopup">
                                                 <img  src="">
-                                                <p id="lincoln_address" class="address text">
+                                                <p id="lincoln_address" class="address text"> -->
                                                 <!-- 608 Algoma Blvd., Oshkosh, WI, 54901 -->
-                                                </p>
+                                                <!-- </p>
                                         </div>
-                                        <div id="lincoln_text" class="popupText">
+                                        <div id="lincoln_text" class="popupText"> -->
                                                 <!-- <h5 class="heading">About This Building</h5>
                                                 <p class="text">Remodeled in 2014, Lincoln Hall
                                                 houses the Division of Lifelong Learning and
@@ -1426,19 +1424,19 @@
                                                 Learning and Care Center. Lincoln Hall is also
                                                  home to the UW Oshkosh Learning in Retirement group.</p> -->
                                                 
-                                        </div>
+                                        <!-- </div>
                                         
                                 </div>
-                        </div>
+                        </div> -->
 
                         <!-- Multicultural Education Center popup -->
-                        <div id="multiculturalPopup" class="popup">
+                        <!-- <div id="multiculturalPopup" class="popup">
                                 <div class="popupBlack mdl-shadow--3dp">
                                                 <button id="multiculturalPopupClose" class="closeButton mdl-color-text--white mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
                                                                 <i  class="material-icons">close</i>
                                                         </button>
                                         <h1 class="text yellow ">Multicultural Education Center </h1>
-                                </div>
+                                </div> -->
 
                                 <!-- <nav class="popupNav mdl-shadow--3dp">
                                 <ul id="popupNav">
@@ -1446,7 +1444,7 @@
                                 </ul>
                                 </nav> -->
 
-                                <div class="infoContainer">
+                                <!-- <div class="infoContainer">
                                         <div id="multiculturalAboutImage" class="imagePopup">
                                                 <img  src="">
                                                 <p class="address text">
@@ -1463,10 +1461,10 @@
                                                 cultural differences.</p>
                                         </div>
                                 </div>
-                        </div>
+                        </div> -->
 
                         <!-- Nursing & Education Building popup -->
-                        <div id="nursingPopup" class="popup">
+                        <!-- <div id="nursingPopup" class="popup">
                                 <div class="popupBlack">
                                                 <button id="nursingPopupClose" class="closeButton mdl-color-text--white mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
                                                                 <i  class="material-icons">close</i>
@@ -1478,9 +1476,9 @@
                                                 <li id="nursingAboutLi" class="about"> About</li>
                                                 <li id="nursingBathroomsLi">Bathrooms</li>
                                         </ul>
-                                </nav>
+                                </nav> -->
                                 <!-- Nursing & Education Building About Content -->
-                                <div class="infoContainer">
+                                <!-- <div class="infoContainer">
                                         <div id="nursingAboutImage"class="imagePopup">
                                                 <img  src="">
                                                 <p class="address text">
@@ -1494,29 +1492,29 @@
                                                 floor of this center features a clinical training
                                                 facility for nursing students, which includes the
                                                 latest technology.</p>
-                                        </div>
+                                        </div> -->
                                         <!--  Nursing & Education Building Bathrooms Contents -->
-                                        <div id="nursingBathrooms" class="popupTextNoImage">
+                                        <!-- <div id="nursingBathrooms" class="popupTextNoImage">
                                                 <h5 class="sustHeading"> Gender Neutral Bathrooms and Family Restrooms</h5>
                                                 <p class="subText text">One gender neutral bathroom: room 020F</p>
                                         </div>
                                 </div>
-                        </div>
+                        </div> -->
 
                         <!-- Oviatt House popup -->
-                        <div id="oviattPopup" class="popup">
+                        <!-- <div id="oviattPopup" class="popup">
                                 <div class="popupBlack mdl-shadow--3dp">
                                                 <button id="oviattPopupClose" class="closeButton mdl-color-text--white mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
                                                                 <i  class="material-icons">close</i>
                                                         </button>
                                         <h1 class="text yellow ">Oviatt House </h1>
-                                </div>
+                                </div> -->
                                 <!-- <nav class="popupNav mdl-shadow--3dp">
                                 <ul id="popupNav">
                                 <li class="about"> About</li>
                                 </ul>
                                 </nav> -->
-                                <div class="infoContainer">
+                                <!-- <div class="infoContainer">
                                         <div id="oviattAboutImage" class="imagePopup">
                                                 <img  src="">
                                                 <p class="address text">
@@ -1538,22 +1536,22 @@
                                                 The Oviatt House is on the National Register of Historic Homes.</p>
                                         </div>
                                 </div>
-                        </div>
+                        </div> -->
 
                         <!-- Pollock Alumni House popup -->
-                        <div id="pollockPopup" class="popup">
+                        <!-- <div id="pollockPopup" class="popup">
                                 <div class="popupBlack mdl-shadow--3dp">
                                                 <button id="pollockPopupClose" class="closeButton mdl-color-text--white mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
                                                                 <i  class="material-icons">close</i>
                                                         </button>
                                         <h1 class="text yellow ">Pollock Alumni House </h1>
-                                </div>
+                                </div> -->
                                 <!-- <nav class="popupNav mdl-shadow--3dp">
                                 <ul id="popupNav">
                                 <li class="about"> About</li>
                                 </ul>
                                 </nav> -->
-                                <div class="infoContainer">
+                                <!-- <div class="infoContainer">
                                         <div id="pollockAboutImage" class="imagePopup">
                                                 <img  src="">
                                                 <p class="address text">
@@ -1578,10 +1576,10 @@
                                                 </p>
                                         </div>
                                 </div>
-                        </div>
+                        </div> -->
 
                         <!--  POLK POPUP -->
-                        <div id="polkPopup" class="popup">
+                        <!-- <div id="polkPopup" class="popup">
                                 <div class="popupBlack">
                                                 <button id="polkPopupClose" class="closeButton mdl-color-text--white mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
                                                                 <i  class="material-icons">close</i>
@@ -1593,9 +1591,9 @@
                                                 <li id="polkAboutLi" class="about"> About</li>
                                                 <li id="polkTourLi"> Tour</li>
                                         </ul>
-                                </nav>
+                                </nav> -->
                                 <!-- POLK  About Content -->
-                                <div class="infoContainer">
+                                <!-- <div class="infoContainer">
                                         <div id="polkAboutImage"class="imagePopup">
                                                 <img  src="">
                                                 <p class="address text">
@@ -1610,9 +1608,9 @@
                                               information. Over 13,500 students come to use the
                                               library's resources during the 100 hours that Polk
                                               Library is open a week.</p>
-                                        </div>
+                                        </div> -->
                                         <!-- POLK Tour Contents -->
-                                        <div id="polkTourText" class="tourText">
+                                        <!-- <div id="polkTourText" class="tourText">
                                         <h5 class="heading">Tour Snapshot</h5>
                                         <p class="subText text">For more information on Polk Library at UW Oshkosh, visit: </p>
                                                 <a class="subText link" href="https://www.uwosh.edu/library" target="_blank">Polk Library</a>
@@ -1621,23 +1619,23 @@
                                                 <iframe id="polkiframe" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
                                         </div>
                                 </div>
-                        </div>
+                        </div> -->
 
 
                         <!-- Radford Hall popup-->
-                        <div id="radfordPopup" class="popup">
+                        <!-- <div id="radfordPopup" class="popup">
                                 <div class="popupBlack mdl-shadow--3dp">
                                                 <button id="radfordPopupClose" class="closeButton mdl-color-text--white mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
                                                                 <i  class="material-icons">close</i>
                                                         </button>
                                         <h1 class="text yellow ">Radford Hall </h1>
-                                </div>
+                                </div> -->
                                 <!-- <nav class="popupNav mdl-shadow--3dp">
                                 <ul id="popupNav">
                                 <li class="about"> About</li>
                                 </ul>
                                 </nav> -->
-                                <div class="infoContainer">
+                                <!-- <div class="infoContainer">
                                         <div id="radfordAboutImage" class="imagePopup">
                                                 <img  src="">
                                                 <p class="address text">
@@ -1653,10 +1651,10 @@
                                                 of English, foreign languages and literatures.</p>
                                         </div>
                                 </div>
-                        </div>
+                        </div> -->
 
                         <!-- Reeve Memorial Union popup -->
-                        <div id="reevePopup" class="popup">
+                        <!-- <div id="reevePopup" class="popup">
                                 <div class="popupBlack">
                                                 <button id="reevePopupClose" class="closeButton mdl-color-text--white mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
                                                                 <i  class="material-icons">close</i>
@@ -1671,9 +1669,9 @@
                                                 <li id="reeveBathroomsLi"> Bathrooms</li>
                                                 <li id="reeveDiningLi"> Dining</li>
                                         </ul>
-                                </nav>
+                                </nav> -->
                                 <!-- Reeve Memorial Union About Content -->
-                                <div class="infoContainer">
+                                <!-- <div class="infoContainer">
                                         <div id="reeveAboutImage"class="imagePopup">
                                                 <img  src="">
                                                 <p class="address text">
@@ -1687,9 +1685,9 @@
                                                 as well as a copy center, art galleries, a food court, coffee
                                                 shop, convenience store, movie theater, University Books &amp; More, the
                                                 UW Credit Union and the Involvement Center.</p>
-                                        </div>
+                                        </div> -->
                                         <!-- Reeve Memorial Union Tour Contents -->
-                                        <div id="reeveTourText" class="tourText">
+                                        <!-- <div id="reeveTourText" class="tourText">
                                                 <h5 class="heading">Tour Snapshot</h5>
                                                 <p class="subText text">Taylor talks a little bit about what you can find at Reeve Union.</p>
                                                 <p class="subText text">For more information visit:  </p>
@@ -1697,9 +1695,9 @@
                                         </div>
                                         <div id="reeveTourVideo"class="videoPopup">
                                                 <iframe id="reeveiframe" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
-                                        </div>
+                                        </div> -->
                                         <!-- Reeve Memorial Union Sustainability Contents -->
-                                        <div id="reeveSustainability" class="popupTextNoImage">
+                                        <!-- <div id="reeveSustainability" class="popupTextNoImage">
                                                 <h5 class="sustHeading"> Sustainability Point of Interest</h5>
                                                 <p class="subText text">Reeve Memorial Union was renovated in 2000,
                                                 with the south side of the building completely constructed with
@@ -1707,14 +1705,14 @@
                                                 winter. In the summer, trees shade the area reducing air conditioning
                                                 needs. Fair Trade coffee, chocolate, handcrafts and jewelry are sold
                                                 in Reeve.</p>
-                                        </div>
+                                        </div> -->
                                         <!-- Reeve Memorial Union Bathrooms Contents -->
-                                        <div id="reeveBathrooms" class="popupTextNoImage">
+                                        <!-- <div id="reeveBathrooms" class="popupTextNoImage">
                                                   <h5 class="sustHeading"> Gender Neutral Bathrooms and Family Restrooms</h5>
                                                   <p class="subText text">Two gender neutral bathrooms: rooms 028 (with changing table) and 034 (with changing table)</p>
-                                        </div>
+                                        </div> -->
                                         <!-- reeve dining content -->
-                                        <div id="reeveDiningImage" class="imagePopup">
+                                        <!-- <div id="reeveDiningImage" class="imagePopup">
                                                 <img  src="">
                                                 <ul>
                                                         <li><a class="link" href="https://uwoshkosh.sodexomyway.com/dining-choices/reeve/blackandgold.html" target="_blank">Black &#38; Gold Grill</a></li>
@@ -1744,10 +1742,10 @@
                                                 <p> Learn More: <a class="link" href="https://reeve.uwosh.edu/dining/dining-locations" target="_blank">Reeve Dining</a><p>
                                         </div>
                                 </div>
-                        </div>
+                        </div> -->
 
                         <!-- Sage Hall popup -->
-                        <div id="sagePopup" class="popup">
+                        <!-- <div id="sagePopup" class="popup">
                                 <div class="popupBlack">
                                                 <button id="sagePopupClose" class="closeButton mdl-color-text--white mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
                                                                 <i  class="material-icons">close</i>
@@ -1762,9 +1760,9 @@
                                                 <li id="sageBathroomsLi"> Bathrooms</li>
                                                 <li id="sageDiningLi"> Dining</li>
                                         </ul>
-                                </nav>
+                                </nav> -->
                                 <!-- Sage Hall About Content -->
-                                <div class="infoContainer">
+                                <!-- <div class="infoContainer">
                                         <div id="sageAboutImage"class="imagePopup">
                                                 <img  src="">
                                                 <p class="address text">
@@ -1779,17 +1777,17 @@
                                                 annually. The four-story, 191,000-square-foot building contains
                                                 27 state-of-the-art classrooms, two lecture halls, 23 labs,
                                                 dozens of breakout/study rooms, and more.</p>
-                                        </div>
+                                        </div> -->
                                         <!-- Sage Hall Tour Contents -->
-                                        <div id="sageTourText" class="tourText">
+                                        <!-- <div id="sageTourText" class="tourText">
                                                 <h5 class="heading">Tour Snapshot</h5>
                                                 <p class="subText text">Alissa talks about the newest academic building: Sage Hall. She points out a few of the locations and features in the building.</p>
                                         </div>
                                         <div id="sageTourVideo"class="videoPopup">
                                                 <iframe id="sageiframe" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
-                                        </div>
+                                        </div> -->
                                         <!-- Sage Hall Sustainability Contents -->
-                                        <div id="sageSustainability" class="popupTextNoImage">
+                                        <!-- <div id="sageSustainability" class="popupTextNoImage">
                                                 <h5 class="sustHeading"> Sustainability Point of Interest</h5>
                                                 <p class="subText text">Sage Hall (LEED Gold certified) has an
                                                 estimated energy savings of 41 percent compared to standard
@@ -1802,14 +1800,14 @@
                                                 annual 48,167 kWh of electricity or 6 percent of its electrical needs.
                                                 A 5,203 sq. ft. green roof, which can hold 6,192 gallons of water adds
                                                 insulation while filtering rainwater and slowing runoff.</p>
-                                        </div>
+                                        </div> -->
                                         <!-- Sage Hall Bathrooms Contents -->
-                                        <div id="sageBathrooms" class="popupTextNoImage">
+                                        <!-- <div id="sageBathrooms" class="popupTextNoImage">
                                                 <h5 class="sustHeading"> Gender Neutral Bathrooms and Family Restrooms</h5>
                                                 <p class="subText text">Every floor has a gender neutral bathroom.</p>
-                                        </div>
+                                        </div> -->
                                         <!-- sage dining content -->
-                                        <div id="sageDiningImage" class="imagePopup">
+                                        <!-- <div id="sageDiningImage" class="imagePopup">
                                                 <img  src="">
                                         </div>
                                         <div id="sageDiningText" class="popupText">
@@ -1823,11 +1821,11 @@
                                                 <p> Learn More: <a class="link" href="https://uwoshkosh.sodexomyway.com/dining-choices/academic/sage.html" target="_blank">Sage Caf&#233;</a><p>
                                         </div>
                                 </div>
-                        </div>
+                        </div> -->
 
 
                         <!-- Scott Hall popup -->
-                        <div id="scottPopup" class="popup">
+                        <!-- <div id="scottPopup" class="popup">
                                 <div class="popupBlack">
                                                 <button id="scottPopupClose" class="closeButton mdl-color-text--white mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
                                                                 <i  class="material-icons">close</i>
@@ -1857,9 +1855,9 @@
                                                 grand piano and ping-pong, foosball and pool tables.
                                                 The main desk provides many items including games, kitchen
                                                 equipment and a change machine.</p>
-                                        </div>
+                                        </div> -->
                                         <!-- scott dining content -->
-                                        <div id="scottDiningImage" class="imagePopup">
+                                        <!-- <div id="scottDiningImage" class="imagePopup">
                                                 <img  src="">
                                         </div>
                                         <div id="scottDiningText" class="popupText">
@@ -1873,22 +1871,22 @@
                                                 <p> Learn More: <a class="link" href="https://uwoshkosh.sodexomyway.com/dining-choices/Scottys.html" target="_blank">Scotty&#39;s</a><p>
                                         </div>
                                 </div>
-                        </div>
+                        </div> -->
 
                         <!-- Stewart Hall popup -->
-                        <div id="stewartPopup" class="popup">
+                        <!-- <div id="stewartPopup" class="popup">
                                 <div class="popupBlack mdl-shadow--3dp">
                                                 <button id="stewartPopupClose" class="closeButton mdl-color-text--white mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
                                                                 <i  class="material-icons">close</i>
                                                         </button>
                                         <h1 class="text yellow ">Stewart Hall </h1>
-                                </div>
+                                </div> -->
                                 <!-- <nav class="popupNav mdl-shadow--3dp">
                                 <ul id="popupNav">
                                 <li class="about"> About</li>
                                 </ul>
                                 </nav> -->
-                                <div class="infoContainer">
+                                <!-- <div class="infoContainer">
                                         <div id="stewartAboutImage" class="imagePopup">
                                                 <img  src="">
                                                 <p class="address text">
@@ -1904,10 +1902,10 @@
                                                 next to Fletcher and Evans halls.</p>
                                         </div>
                                 </div>
-                        </div>
+                        </div> -->
 
                         <!-- Student Recreation & Wellness Center popup -->
-                        <div id="recreationPopup" class="popup">
+                        <!-- <div id="recreationPopup" class="popup">
                                 <div class="popupBlack">
                                                 <button id="recreationPopupClose" class="closeButton mdl-color-text--white mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
                                                                 <i  class="material-icons">close</i>
@@ -1920,9 +1918,9 @@
                                                 <li id="recreationSustainabilityLi"> Sustainability</li>
                                                 <li id="recreationBathroomsLi"> Bathrooms</li>
                                         </ul>
-                                </nav>
+                                </nav> -->
                                 <!-- Student Recreation & Wellness Center About Content -->
-                                <div class="infoContainer">
+                                <!-- <div class="infoContainer">
                                         <div id="recreationAboutImage"class="imagePopup">
                                                 <img  src="">
                                                 <p class="address text">
@@ -1939,9 +1937,9 @@
                                                 group exercise classes, wellness programs, massage therapy
                                                 and day or weekend trips. Due to segregated University fees,
                                                 use of this facility is free to all students.</p>
-                                                </div>
+                                                </div> -->
                                         <!-- Student Recreation & Wellness Center Sustainability Contents -->
-                                        <div id="recreationSustainability" class="popupTextNoImage">
+                                        <!-- <div id="recreationSustainability" class="popupTextNoImage">
                                                 <h5 class="sustHeading"> Sustainability Point of Interest</h5>
                                                 <p class="subText text">The Student Recreation and Wellness Center
                                                 (SRWC) uses locally sourced building materials. Features include
@@ -1950,17 +1948,17 @@
                                                 energy efficiency. There is one pole-mounted photovoltaic tracker
                                                 system at the tennis courts producing an estimated annual 4,719
                                                 kWh.</p>
-                                        </div>
+                                        </div> -->
                                         <!-- Student Recreation & Wellness Center Bathrooms Contents -->
-                                        <div id="recreationBathrooms" class="popupTextNoImage">
+                                        <!-- <div id="recreationBathrooms" class="popupTextNoImage">
                                                 <h5 class="sustHeading"> Gender Neutral Bathrooms and Family Restrooms</h5>
                                                 <p class="subText text">One gender neutral bathroom: room 127 (with changing table)</p>
                                         </div>
                                 </div>
-                        </div>
+                        </div> -->
 
                         <!-- Student Success Center popup -->
-                        <div id="successPopup" class="popup">
+                        <!-- <div id="successPopup" class="popup">
                                 <div class="popupBlack">
                                                 <button id="successPopupClose" class="closeButton mdl-color-text--white mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
                                                                 <i  class="material-icons">close</i>
@@ -1974,9 +1972,9 @@
                                                 <li id="successSustainabilityLi"> Sustainability</li>
                                                 <li id="successBathroomsLi"> Bathrooms</li>
                                         </ul>
-                                </nav>
+                                </nav> -->
                                 <!-- Student Success Center About Content -->
-                                <div class="infoContainer">
+                                <!-- <div class="infoContainer">
                                         <div id="successAboutImage"class="imagePopup">
                                                 <img  src="">
                                                 <p class="address text">
@@ -1995,9 +1993,9 @@
                                                 technology, including a geothermal heat field, which
                                                 takes advantage of moderate temperatures in the earth
                                                 to provide heat in the winter and coolant in the summer.</p>
-                                        </div>
+                                        </div> -->
                                         <!-- Student Success Center Tour Contents -->
-                                        <div id="successTourText" class="tourText">
+                                        <!-- <div id="successTourText" class="tourText">
                                                 <h5 class="heading">Tour Snapshot</h5>
                                                 <p class="subText text">Lue takes us around the Student Success Center at UW Oshkosh, detailing resources such as the UARC, CAR and Counseling Center.</p>
                                                 <p class="subText text">Resources:</p>
@@ -2011,26 +2009,26 @@
                                         </div>
                                         <div id="successTourVideo"class="videoPopup">
                                                 <iframe id="successiframe"width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
-                                        </div>
+                                        </div> -->
                                         <!-- Student Success Center Sustainability Contents -->
-                                        <div id="successSustainability" class="popupTextNoImage">
+                                        <!-- <div id="successSustainability" class="popupTextNoImage">
                                                 <h5 class="sustHeading"> Sustainability Point of Interest</h5>
                                                 <p class="subText text">The Student Success Center (LEED Silver
                                                 certified) features a ground source geothermal system that
                                                 makes heating and cooling 70 percent more efficient. 84
                                                 photovoltaic panels on the roof generate an estimated annual
                                                 23,973 kWh of electricity.</p>
-                                        </div>
+                                        </div> -->
                                         <!-- Student Success Center Bathrooms Contents -->
-                                        <div id="successBathrooms" class="popupTextNoImage">
+                                        <!-- <div id="successBathrooms" class="popupTextNoImage">
                                                 <h5 class="sustHeading"> Gender Neutral Bathrooms and Family Restrooms</h5>
                                                 <p class="subText text">One gender neutral bathroom: room 115 (with changing table)</p>
                                         </div>
                                 </div>
-                        </div>
+                        </div> -->
 
                         <!-- Swart Hall popup -->
-                        <div id="swartPopup" class="popup">
+                        <!-- <div id="swartPopup" class="popup">
                                 <div class="popupBlack">
                                                 <button id="swartPopupClose" class="closeButton mdl-color-text--white mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
                                                                 <i  class="material-icons">close</i>
@@ -2042,9 +2040,9 @@
                                                 <li id="swartAboutLi" class="about"> About</li>
                                                 <li id="swartBathroomsLi">Bathrooms</li>
                                         </ul>
-                                </nav>
+                                </nav> -->
                                 <!-- Nursing & Education Building About Content -->
-                                <div class="infoContainer">
+                                <!-- <div class="infoContainer">
                                         <div id="swartAboutImage"class="imagePopup">
                                                 <img  src="">
                                                 <p class="address text">
@@ -2059,18 +2057,18 @@
                                                 instructing kindergarden through ninth grade. Swart
                                                 Hall is now home to the economics, mathematics, and
                                                 sociology departments.</p>
-                                        </div>
+                                        </div> -->
                                         <!--  Nursing & Education Building Bathrooms Contents -->
-                                        <div id="swartBathrooms" class="popupTextNoImage">
+                                        <!-- <div id="swartBathrooms" class="popupTextNoImage">
                                                 <h5 class="sustHeading"> Gender Neutral Bathrooms and Family Restrooms</h5>
                                                 <p class="subText text">Two gender neutral bathrooms: rooms 130 (with changing table) and 132</p>
                                         </div>
                                 </div>
-                        </div>
+                        </div> -->
 
 
                         <!-- Taylor Hall popup -->
-                        <div id="taylorPopup" class="popup">
+                        <!-- <div id="taylorPopup" class="popup">
                                 <div class="popupBlack">
                                                 <button id="taylorPopupClose" class="closeButton mdl-color-text--white mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
                                                                 <i  class="material-icons">close</i>
@@ -2082,9 +2080,9 @@
                                                 <li id="taylorAboutLi" class="about"> About</li>
                                                 <li id="taylorSustainabilityLi"> Sustainability</li>
                                         </ul>
-                                </nav>
+                                </nav> -->
                                 <!-- Taylor Hall About Content -->
-                                <div class="infoContainer">
+                                <!-- <div class="infoContainer">
                                         <div id="taylorAboutImage"class="imagePopup">
                                                 <img  src="">
                                                 <p class="address text">
@@ -2103,9 +2101,9 @@
                                                 large study area. The lobby has been designed as
                                                 a gathering place for hall residents and fosters
                                                 healthy interaction among community members.</p>
-                                        </div>
+                                        </div> -->
                                         <!-- Taylor Hall Contents -->
-                                        <div id="taylorSustainability" class="popupTextNoImage">
+                                        <!-- <div id="taylorSustainability" class="popupTextNoImage">
                                                 <h5 class="sustHeading"> Sustainability Point of Interest</h5>
                                                 <p class="subText text">Taylor Hall's green features include
                                                 energy efficient windows, extra thick insulation, an
@@ -2115,11 +2113,11 @@
                                                 heat water.</p>
                                         </div>
                                 </div>
-                        </div>
+                        </div> -->
 
 
                         <!-- Titan Stadium popup -->
-                        <div id="titanPopup" class="popup">
+                        <!-- <div id="titanPopup" class="popup">
                                 <div class="popupBlack">
                                                 <button id="titanPopupClose" class="closeButton mdl-color-text--white mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
                                                                 <i  class="material-icons">close</i>
@@ -2131,9 +2129,9 @@
                                                 <li id="titanAboutLi" class="about"> About</li>
                                                 <li id="titanSustainabilityLi"> Sustainability</li>
                                         </ul>
-                                </nav>
+                                </nav> -->
                                 <!-- Titan Stadium About Content -->
-                                <div class="infoContainer">
+                                <!-- <div class="infoContainer">
                                         <div id="titanAboutImage"class="imagePopup">
                                                 <img  src="">
                                                 <p class="address text">
@@ -2148,19 +2146,19 @@
                                                 baseball, men and women’s soccer, and men and women’s
                                                 track and field teams as well as local high school
                                                 teams.</p>
-                                        </div>
+                                        </div> -->
                                         <!-- Titan Stadium Sustainability Contents -->
-                                        <div id="titanSustainability" class="popupTextNoImage">
+                                        <!-- <div id="titanSustainability" class="popupTextNoImage">
                                                 <h5 class="sustHeading"> Sustainability Point of Interest</h5>
                                                 <p class="subText text">In 2004, the grass football field was
                                                 replaced with artificial turf, resulting in an estimated savings
                                                 of 850,000 gallons of water per year for irrigation.</p>
                                         </div>
                                 </div>
-                        </div>
+                        </div> -->
 
                         <!-- University Police popup -->
-                        <div id="policePopup" class="popup">
+                        <!-- <div id="policePopup" class="popup">
                                 <div class="popupBlack">
                                                 <button id="policePopupClose" class="closeButton mdl-color-text--white mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
                                                                 <i  class="material-icons">close</i>
@@ -2172,9 +2170,9 @@
                                                 <li id="policeAboutLi" class="about"> About</li>
                                                 <li id="policeBathroomsLi">Bathrooms</li>
                                         </ul>
-                                </nav>
+                                </nav> -->
                                 <!-- University Police About Content -->
-                                <div class="infoContainer">
+                                <!-- <div class="infoContainer">
                                         <div id="policeAboutImage"class="imagePopup">
                                                 <img  src="">
                                                 <p class="address text">
@@ -2190,30 +2188,30 @@
                                                 week. The police department also oversees community
                                                 service officers, trained student employees who patrol
                                                 campus and serve as police dispatchers.</p>
-                                        </div>
+                                        </div> -->
                                         <!--  University Police Bathrooms Contents -->
-                                        <div id="policeBathrooms" class="popupTextNoImage">
+                                        <!-- <div id="policeBathrooms" class="popupTextNoImage">
                                                 <h5 class="sustHeading"> Gender Neutral Bathrooms and Family Restrooms</h5>
                                                 <p class="subText text">Two gender neutral bathrooms: rooms 102B and 107</p>
                                         </div>
                                 </div>
-                        </div>
+                        </div> -->
 
 
                         <!-- Webster Hall popup -->
-                        <div id="websterPopup" class="popup">
+                        <!-- <div id="websterPopup" class="popup">
                                 <div class="popupBlack mdl-shadow--3dp">
                                                 <button id="websterPopupClose" class="closeButton mdl-color-text--white mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
                                                                 <i  class="material-icons">close</i>
                                                         </button>
                                         <h1 class="text yellow ">Webster Hall </h1>
-                                </div>
+                                </div> -->
                                 <!-- <nav class="popupNav mdl-shadow--3dp">
                                 <ul id="popupNav">
                                 <li class="about"> About</li>
                                 </ul>
                                 </nav> -->
-                                <div class="infoContainer">
+                                <!-- <div class="infoContainer">
                                         <div id="websterAboutImage" class="imagePopup">
                                                 <img  src="">
                                                 <p class="address text">
@@ -2231,7 +2229,7 @@
                                                  lounge areas.</p>
                                         </div>
                                 </div>
-                        </div>
+                        </div> -->
                         <!--  -->
                         <!-- POPUPS END -->
                         
@@ -2250,6 +2248,13 @@
                         <!-- google map!! (meat of it in map.js)-->
 
                         <div id="map"></div>
+
+                        <?php
+                        require_once('Classes/Parking_Lots/create_parkingInfoWindows.php'); 
+                        require_once('Classes/Buildings/create_buildingInfoWindows.php');
+
+                        require_once('Classes/Buildings/create_buildingPopups.php');
+                        ?>
 
                         <!-- hover boxes for when markers are clicked -->
                         <!-- <div id="albeeHover" class="generalHover"> -->
@@ -2744,10 +2749,7 @@
                         <!-- end hovers for buildings -->
                         <!-- start hovers for parkings lots -->
 
-                        <?php  
-                          require_once('Classes/Parking_Lots/create_parkingInfoWindows.php'); 
-                          require_once('Classes/Buildings/create_buildingInfoWindows.php');
-                        ?>
+                        
 
                         <!-- Lot 11 -->
                         <!-- <div id="elevenHover" class="parkingHover">
