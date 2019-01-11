@@ -103,6 +103,7 @@
         $zipcode = $item->getZipcode();
         $full_image = $item->getFullImage();
 
+        // each tab's contents could have media embedded into it
         $about_tab_content = $item->getAboutTabContent();
         $tour_tab_content = $item->getTourTabContent();
         $sustainability_tab_content = $item->getSustainabilityTabContent();
@@ -160,10 +161,57 @@
                         </div>
                         <div id="<?php echo $slug;?>AboutText" class="popupText">
                                 <h5 class="heading">About this Building</h5>
+                                <!-- this is going to be a paragraph inside of a paragraph -_- -->
                                 <p class=" subText text"> <?php echo $about_tab_content; ?></p>
                         </div>
                         <!-- end about tab -->
-                             
+                        <?php
+                        if(tabHasContent($tour_tab_content)){
+                            ?>
+                                <!-- start tour tab -->
+                                <div id="<?php echo $slug; ?>TourText" class="tourText">
+                                    <h5 class="heading">Tour Snapshot</h5>
+                                    <p class="subText text"><?php echo $tour_tab_content; ?></p>
+                                </div>
+                                <div id="<?php echo $slug; ?>TourVideo"class="videoPopup">
+                                    <iframe id="<?php echo $slug; ?>iframe" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+                                </div>
+                                <!-- end tour tab -->
+                            <?php
+                         }
+                         if(tabHasContent($sustainability_tab_content)){
+                            ?>
+                                <!-- start sustainability tab -->
+                                <div id="<?php echo $slug; ?>Sustainability" class="popupTextNoImage">
+                                    <h5 class="sustHeading"> Sustainability Point of Interest</h5>
+                                    <p class="subText text"><?php echo $sustainability_tab_content; ?></p>
+                                </div>
+                                <!-- end sustainability tab -->
+                            <?php
+                         }
+                         if(tabHasContent($bathroom_tab_content)){
+                            ?>
+                                <!-- start bathroom tab -->
+                                <div id="<?php echo $slug; ?>Bathrooms" class="popupTextNoImage">
+                                    <h5 class="sustHeading"> Gender Neutral Bathrooms and Family Restrooms</h5>
+                                    <p class="subText text"><?php echo $bathroom_tab_content; ?></p>
+                                </div>
+                                <!-- end bathroom tab -->
+                            <?php
+                         }
+                         if(tabHasContent($dining_tab_content)){
+                            ?>
+                                <!-- start dining tab -->
+                                <div id="<?php echo $slug; ?>DiningImage" class="imagePopup">
+                                    <img  src="">
+                                </div>
+                                <div id="<?php echo $slug; ?>DiningText" class="popupText">
+                                        <p class=" subText text"><?php echo $dining_tab_content; ?></p>
+                                </div>
+                                <!-- end dining tab -->
+                            <?php
+                         }
+                        ?>
                 </div>
                 <!-- end tabs container -->
             </div>
