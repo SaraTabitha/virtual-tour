@@ -2250,10 +2250,10 @@
                         <div id="map"></div>
 
                         <?php
-                        require_once('Classes/Parking_Lots/create_parkingInfoWindows.php'); 
-                        require_once('Classes/Buildings/create_buildingInfoWindows.php');
+                                require_once('Classes/Parking_Lots/create_parkingInfoWindows.php'); 
+                                require_once('Classes/Buildings/create_buildingInfoWindows.php');
 
-                        require_once('Classes/Buildings/create_buildingPopups.php');
+                                require_once('Classes/Buildings/create_buildingPopups.php');
                         ?>
 
                         <!-- hover boxes for when markers are clicked -->

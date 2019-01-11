@@ -122,36 +122,44 @@
                     <h1 class="text yellow "><?php echo $title; ?></h1>
                 </div>
                 <!-- end close button & title -->
-                <!-- start nav -->
-                <nav class="popupNav five mdl-shadow--3dp">
-                    <ul id="popupNav">
-                             <li id="<?php echo $slug; ?>AboutLi" class="about"> About</li>
-                             <?php
-                             //if tabs have content -> show link in nav for that tab's tab
-                             if(tabHasContent($tour_tab_content)){
-                                ?>
-                                    <li id="<?php echo $slug; ?>TourLi"> Tour</li>
-                                <?php
-                             }
-                             if(tabHasContent($sustainability_tab_content)){
-                                ?>
-                                    <li id="<?php echo $slug; ?>SustainabilityLi"> Sustainability</li>
-                                <?php
-                             }
-                             if(tabHasContent($bathroom_tab_content)){
-                                ?>
-                                    <li id="<?php echo $slug; ?>BathroomsLi"> Bathrooms</li>
-                                <?php
-                             }
-                             if(tabHasContent($dining_tab_content)){
-                                ?>
-                                    <li id="<?php echo $slug; ?>DiningLi"> Dining</li>
-                                <?php
-                             }
-                             ?>
-                    </ul>
-                </nav>
-                <!-- end nav -->
+                
+                <?php 
+                    if(tabHasContent($tour_tab_content) || tabHasContent($sustainability_tab_content) || tabHasContent($bathroom_tab_content) || tabHasContent($dining_tab_content)){
+                        //only show nav if popup has extra tabs than "about"
+                        ?>
+                        <!-- start nav -->
+                        <nav class="popupNav five mdl-shadow--3dp">
+                            <ul id="popupNav">
+                                    <li id="<?php echo $slug; ?>AboutLi" class="about"> About</li>
+                                    <?php
+                                    //if tabs have content -> show link in nav for that tab's tab
+                                    if(tabHasContent($tour_tab_content)){
+                                        ?>
+                                            <li id="<?php echo $slug; ?>TourLi"> Tour</li>
+                                        <?php
+                                    }
+                                    if(tabHasContent($sustainability_tab_content)){
+                                        ?>
+                                            <li id="<?php echo $slug; ?>SustainabilityLi"> Sustainability</li>
+                                        <?php
+                                    }
+                                    if(tabHasContent($bathroom_tab_content)){
+                                        ?>
+                                            <li id="<?php echo $slug; ?>BathroomsLi"> Bathrooms</li>
+                                        <?php
+                                    }
+                                    if(tabHasContent($dining_tab_content)){
+                                        ?>
+                                            <li id="<?php echo $slug; ?>DiningLi"> Dining</li>
+                                        <?php
+                                    }
+                                    ?>
+                            </ul>
+                        </nav>
+                         <!-- end nav -->
+                        <?php
+                    }
+                ?>
                 <!-- start tabs  container-->
                 <div class="infoContainer">
                         <!-- start about tab -->
