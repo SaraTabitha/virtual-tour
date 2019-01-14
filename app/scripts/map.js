@@ -1022,6 +1022,8 @@ function initMap() {
             var markers_array = hookupCheckboxesToMarkers(select_checkbox_id, checkbox_slug, building_json);
             var infoWindows_array = createInfoWindows(slugs_array);
             setMarkerClick_openCloseInfo(infoWindows_array, markers_array, thumb_urls);
+            moreInfoLinkClickEvent(slugs_array);
+            popupCloseButtonClickEvent(slugs_array);
 
             return markers_array;
        }
@@ -1048,6 +1050,39 @@ function initMap() {
             if($("#" + infoWindow_id).hasClass("generalHover")){
                 $("#" + infoWindow_id + "Thumbnail").attr("src", "#");
             }
+       }
+
+       function moreInfoLinkClickEvent(slugs_array){
+           slugs_array.forEach(function(this_slug){
+                $("#" + this_slug + "Link").click(function(){
+                    //todo -> open popup
+                    openPopup(this_slug);
+                });
+           });
+       }
+
+       function popupCloseButtonClickEvent(slugs_array){
+            slugs_array.forEach(function(this_slug){
+                $("#" + this_slug + "PopupClose").click(function(){
+                    closePopup(this_slug);
+                })
+            });
+       }
+
+       function openPopup(slug){
+            $("#overlay").css('visiibility', 'visible');
+            $("#overlay").animate({"opacity": "0.3"}, "slow");
+
+            $("#" + slug + "Popup").css('visibility', 'visible');
+            $("#" + slug + "Popup").animate({'opacity': "1"}, "slow");
+       }
+
+       function closePopup(slug){
+            $("#overlay").animate({'opacity': '0'}, "slow");
+            $("#overlay").css('visibility', "hidden");
+
+            $("#" + slug + "Popup").animate({"opacity": "0"}, "slow");
+            $("#" + slug + "Popup").css("visibility", "hidden");
        }
        
         // setting sustainability markers
@@ -1357,53 +1392,53 @@ function initMap() {
         // }
 
         // close all hover cards (infowindows)
-        function closeAllHover(){
-            //0 - 82 because only buildings and parking lots have infoWindows
-            //goes through all of the infoWindows and closes them for all the markers they are attached to
-            for(w = 0; w < 45; w++){
-                infoWindowsAll[w].close(map, allMarkers[w]);
-            }
-        }
+        // function closeAllHover(){
+        //     //0 - 82 because only buildings and parking lots have infoWindows
+        //     //goes through all of the infoWindows and closes them for all the markers they are attached to
+        //     for(w = 0; w < 45; w++){
+        //         infoWindowsAll[w].close(map, allMarkers[w]);
+        //     }
+        // }
         //one function for all open/close
         //for the hover (infowindows) not the popups
         //set images to the thumbnails of the places
-        function markerOpenClose(name, index){
-           //if it is a building (0-44) check if it is being opened:
-                if(!$("#" + name + "Hover").hasClass("hoverOpen")){
-                    //close all infowindows from previously opened 
-                    closeAllHover();
-                    //open the infoWindow attached to the marker
-                    infoWindowsAll[index].open(map, allMarkers[index]);
-                    if(index < 45){
-                       //set the thumbnail image for the infoWindow
-                        $("#" + name + "Hover > img").attr("src", allMarkersInfo[index].thumbnail);
-                    }
-                    // add the open class
-                    $("#" + name + "Hover").addClass("hoverOpen");
-                } else {
-                 //if marker is not clicked/clicked to close, then change src of image to empty, remove class and close all infowindows
-                     if(index < 45){
-                            $("#" + name + "Hover > img").attr("src", "");
-                     }
-                    $("#" + name + "Hover").removeClass("hoverOpen");
-                    closeAllHover();
-                }
-        }
+        // function markerOpenClose(name, index){
+        //    //if it is a building (0-44) check if it is being opened:
+        //         if(!$("#" + name + "Hover").hasClass("hoverOpen")){
+        //             //close all infowindows from previously opened 
+        //             closeAllHover();
+        //             //open the infoWindow attached to the marker
+        //             infoWindowsAll[index].open(map, allMarkers[index]);
+        //             if(index < 45){
+        //                //set the thumbnail image for the infoWindow
+        //                 $("#" + name + "Hover > img").attr("src", allMarkersInfo[index].thumbnail);
+        //             }
+        //             // add the open class
+        //             $("#" + name + "Hover").addClass("hoverOpen");
+        //         } else {
+        //          //if marker is not clicked/clicked to close, then change src of image to empty, remove class and close all infowindows
+        //              if(index < 45){
+        //                     $("#" + name + "Hover > img").attr("src", "");
+        //              }
+        //             $("#" + name + "Hover").removeClass("hoverOpen");
+        //             closeAllHover();
+        //         }
+        // }
        
-        allMarkers.forEach(function(thisOne){
-            //thisOne will return the object itself, so we need to get the index of that object in the array
-            //using the index, add an event listener for allMarkers
-            thisOne.addListener('click', function(){
-                var index = allMarkers.indexOf(thisOne);
-               // console.log("foreach index: " + index);
-                var shortHand = allMarkersInfo[index].shortHand;
-                //console.log(shortHand);
-                //if it is not an emergency phone->open infowindow etc.
-                if(index < 83){
-                    markerOpenClose(shortHand, index);
-                }
-            })
-        });
+        // allMarkers.forEach(function(thisOne){
+        //     //thisOne will return the object itself, so we need to get the index of that object in the array
+        //     //using the index, add an event listener for allMarkers
+        //     thisOne.addListener('click', function(){
+        //         var index = allMarkers.indexOf(thisOne);
+        //        // console.log("foreach index: " + index);
+        //         var shortHand = allMarkersInfo[index].shortHand;
+        //         //console.log(shortHand);
+        //         //if it is not an emergency phone->open infowindow etc.
+        //         if(index < 83){
+        //             markerOpenClose(shortHand, index);
+        //         }
+        //     })
+        // });
         
         
         // when "click for more info" is selected,
