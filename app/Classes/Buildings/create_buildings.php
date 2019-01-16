@@ -224,11 +224,11 @@ function checkCategoryMatch($category_item_being_checked, $original_category){
 function getThumbnailsForTheseBuildings($array_of_buildings){
     $array_of_media = array();
     foreach($array_of_buildings as $this_building){
-        $media_id = $this_building->getThumbImage();
-        $media_url = getImageURL($media_id);
+        $media_url = $this_building->getThumbImage();
         array_push($array_of_media, $media_url);
     }
     return $array_of_media;
+    
 }
 
 /*

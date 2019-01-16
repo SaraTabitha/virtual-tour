@@ -30,6 +30,7 @@
         array_push($object->categories, $this_category_markerGroup->createMarkerJSONObject($markers_array, $icon));
     }
     //todo: get thumbnail_urls for categories
+    $object->categoryThumbnails = $array_of_arrays_of_buildings_thumbnail_urls;
 
     $json = json_encode($object);
     echo $json;
