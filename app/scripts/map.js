@@ -966,13 +966,10 @@ function initMap() {
         *       -sustainability points of interest
         *       -gender neutral and family restrooms
         * 
-        *   TODO popups
         * 
         */
        get("../Classes/Buildings/buildings_json.php").then(function(response){
             console.log(response);
-
-            //TODO:  popups
 
             //all buildings
             var checkbox_slug = "buildings";
@@ -1055,7 +1052,6 @@ function initMap() {
        function moreInfoLinkClickEvent(slugs_array){
            slugs_array.forEach(function(this_slug){
                 $("#" + this_slug + "Link").click(function(){
-                    //todo -> open popup
                     openPopup(this_slug);
                 });
            });
@@ -1068,6 +1064,8 @@ function initMap() {
                 })
             });
        }
+
+       // TODO: ugh tabs
 
        function openPopup(slug){
             $("#overlay").css('visiibility', 'visible');

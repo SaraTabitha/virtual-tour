@@ -25,7 +25,7 @@
                     //titles that are too long makes the info window scroll if the <br> element is added...
                     //temporary fix, there is probably a better way of doing this but for now this is a quick fix...
                     //if you're reading this it means that i never went back and changed this to a better fix
-                    if(strlen($title) < 20){
+                    if(strlen($title) < 25){
                         ?>
                         <br class="hoverBreak">
                         <?php

@@ -24,23 +24,6 @@ $sustainableBuilding_thumb_url_array = array();
 $bathroomBuilding_thumb_url_array = array();
 
 
-//searches for the url of the media using the given id #
-/*
-*param: id (number for the id of the media on the media page)
-*return url (string of url for media that matches the id)
-*/
-function getImageURL($id){
-    global $media;
-    $url; 
-
-    foreach($media as $image){
-        if($image->id == $id){
-            $url = $image->guid->rendered;
-        }
-    }
-    return $url;
-}
-
 /*
 * goes through the JSON string of Buildings and constructs Marker and Building objects from it
 */
@@ -110,6 +93,24 @@ foreach($buildings as $index=>$item){
     $building_categories, $building_markers[$index], $about_tab_content, $tour_tab_content, $sustainability_tab_content, $bathrooms_tab_content, $dining_tab_content);
 }
 
+//searches for the url of the media using the given id #
+/*
+*param: id_of_wanted_image (number for the id of the media on the media page)
+*global $media (json string of all media in the CMS)
+*return url (string of url for media that matches the id)
+*/
+function getImageURL($id_of_wanted_image){
+    global $media;
+    $url; 
+
+    foreach($media as $image){
+        if($image->id == $id_of_wanted_image){
+            $url = $image->guid->rendered;
+        }
+    }
+    return $url;
+}
+
 /*
 * making all of the corresponding MarkerGroups necessary for the first section of building checkboxes on the site menu
 * these markerGroups are utilised in buildings_json.php
@@ -144,7 +145,6 @@ $bathroomBuildings = new MarkerGroup($slug, $checkboxColor, $markerIcon, $bathro
             -instance variable building_categories (array of strings for the categories that this building falls under)
 *
 */
-
 $category_titles = array(); //strings of BuildingCategory Titles
 $category_slugs = array(); //strings of BuildingCategory Slugs
 
@@ -157,14 +157,18 @@ foreach($category_list as $building_category){
 
 //this is a stupidly large array which contains the array of buildings that correspond to each BuildingCategory
 $array_of_arrays_of_buildings = array(); //array-ception 
-
+//array of all of the thumbnail image urls for the arrays of buildings that correspond to each BuildingCategory
+$array_of_arrays_of_buildings_thumbnail_urls = array();
 
 //loops through each category by Title (need title to compare each category in a building against) and gets all of the buildings
 //for that category -> adds the array of buildings for that category to the array_of_arrays_of_buildings massive array 
 // (are you confused? i'm sorry, i'm confusing myself)
+//also gets all of the thumbnail urls for these arrays and puts them into a mega-array of arrays containing thumbnail urls for these building arrays
 foreach($category_titles as $this_category_title){
     $buildings_that_have_this_category = getBuildingsForThisCategory($this_category_title, $building_list);
+    $thumbnails_for_buildings_that_have_this_category = getThumbnailsForTheseBuildings($buildings_that_have_this_category);
     array_push($array_of_arrays_of_buildings, $buildings_that_have_this_category);
+    array_push($array_of_arrays_of_buildings_thumbnail_urls, $thumbnails_for_buildings_that_have_this_category);
 }
 
 /*
@@ -172,7 +176,7 @@ foreach($category_titles as $this_category_title){
     this_category (string title of BuildingCategory)
     building_list (complete array of Building objects)
 
-* filters through the Building objects and looks through their instance variable "building_categories" for matches to the specified BuildingCategory title
+* filters through the Building objects and looks through their instance variable "building_categories" for matches to the specified BuildingCategory object title
 * return:
      $buildings_that_have_this_category (array of Building objects that match the BuildingCategory)
 */
@@ -182,7 +186,6 @@ function getBuildingsForThisCategory($this_BuildingCategory_title, $building_lis
 
         $matches = false;
         foreach($categories_from_building as $this_category){
-           
             if(checkCategoryMatch($this_category, $this_BuildingCategory_title)){
                 $matches = true;
             }
@@ -211,6 +214,22 @@ function checkCategoryMatch($category_item_being_checked, $original_category){
     }
 }
 
+/*
+* param: 
+    array_of_buildings (array of Building objects)
+* loops through array_of_buildings and finds the image url for the thumbnail of the buildings and puts them into their own array
+* return:
+    array_of_media (array of thumbnail urls)
+*/
+function getThumbnailsForTheseBuildings($array_of_buildings){
+    $array_of_media = array();
+    foreach($array_of_buildings as $this_building){
+        $media_id = $this_building->getThumbImage();
+        $media_url = getImageURL($media_id);
+        array_push($array_of_media, $media_url);
+    }
+    return $array_of_media;
+}
 
 /*
 * note: category_markerGroups used in buildings_json.php

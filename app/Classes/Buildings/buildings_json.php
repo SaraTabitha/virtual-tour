@@ -29,6 +29,7 @@
         $markers_array = $this_category_markerGroup->getMarkersArray();
         array_push($object->categories, $this_category_markerGroup->createMarkerJSONObject($markers_array, $icon));
     }
+    //todo: get thumbnail_urls for categories
 
     $json = json_encode($object);
     echo $json;
