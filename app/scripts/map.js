@@ -974,27 +974,27 @@ function initMap() {
             //all buildings
             var checkbox_slug = "buildings";
             var allBuildings = response.allBuildings;
-            var all_building_markers_array = building_setMarkerInfoWindowPopup(select_checkbox_id, checkbox_slug, allBuildings);
+            var all_building_markers_array = building_setMarkerInfoWindowPopup(select_checkbox_id, checkbox_slug, allBuildings, allBuildings.slugs, allBuildings.thumbnail_urls);
             
             //accessible entrance buildings
             checkbox_slug = "accEnt";
             var accessibleBuildings = response.accessibleBuildings;
-            building_setMarkerInfoWindowPopup(select_checkbox_id, checkbox_slug, accessibleBuildings);
+            building_setMarkerInfoWindowPopup(select_checkbox_id, checkbox_slug, accessibleBuildings, accessibleBuildings.slugs, accessibleBuildings.thumbnail_urls);
 
             //sustainable buildings
             checkbox_slug = "sust";
             var sustainableBuildings = response.sustainableBuildings;
-            building_setMarkerInfoWindowPopup(select_checkbox_id, checkbox_slug, sustainableBuildings);
+            building_setMarkerInfoWindowPopup(select_checkbox_id, checkbox_slug, sustainableBuildings, sustainableBuildings.slugs, sustainableBuildings.thumbnail_urls);
 
             //gender neutral & family bathroom buildings
             checkbox_slug = "gender";
             var bathroomBuildings = response.bathroomBuildings;
-            building_setMarkerInfoWindowPopup(select_checkbox_id, checkbox_slug, bathroomBuildings);
+            building_setMarkerInfoWindowPopup(select_checkbox_id, checkbox_slug, bathroomBuildings, bathroomBuildings.slugs, bathroomBuildings.thumbnail_urls);
 
             //categories
             response.categories.forEach(function(this_category, index){
                 checkbox_slug = response.checkbox_slugs[index];
-                building_setMarkerInfoWindowPopup(select2_checkbox_id, checkbox_slug, this_category);
+                building_setMarkerInfoWindowPopup(select2_checkbox_id, checkbox_slug, this_category, this_category.slugs, response.categoryThumbnails[index]);
                 
             });
 
@@ -1002,28 +1002,29 @@ function initMap() {
             setMarkers(all_building_markers_array, response.allBuildings.icon);
             document.getElementById("buildingsLabel").MaterialCheckbox.check();
        })
+
        /*
        * params: 
             select_checkbox_id (string id for which "selectAll" checkbox the markergroup is under)
             checkbox_slug (string slug for the id of the checkbox the markergroup is attached to)
             building_json (array of marker info)
+            slugs_array (array of string slugs from the building_json array)
+            thumb_urls (array of thumbnail urls that pair with the building_json array buildings)
        * this function creates google.maps.Marker objects & attaches them to the appropriate checkbox (and the selectAll checkbox), 
        * creates the infoWindows for those markers and sets up the click functions for opening/closing them
        * returns: 
             markers_array (array of google.maps.Marker objects)
        */
-       function building_setMarkerInfoWindowPopup(select_checkbox_id, checkbox_slug, building_json){
-            var slugs_array = building_json.slugs;
-            var thumb_urls = building_json.thumbnail_urls;
-
+       function building_setMarkerInfoWindowPopup(select_checkbox_id, checkbox_slug, building_json, slugs_array, thumb_urls){
             var markers_array = hookupCheckboxesToMarkers(select_checkbox_id, checkbox_slug, building_json);
             var infoWindows_array = createInfoWindows(slugs_array);
-            setMarkerClick_openCloseInfo(infoWindows_array, markers_array, thumb_urls);
+            setMarkerClick_openCloseInfo(infoWindows_array, markers_array, thumb_urls); //all arrays of the same size & order
             moreInfoLinkClickEvent(slugs_array);
             popupCloseButtonClickEvent(slugs_array);
 
             return markers_array;
        }
+
        /*
        * params:
             infoWindow_id (string id of the html infoWindow (not the google.maps.InfoWindow))
