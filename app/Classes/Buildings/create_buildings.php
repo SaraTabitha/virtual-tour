@@ -24,6 +24,9 @@ $building_thumb_url_array = array();
 // $bathroomBuilding_thumb_url_array = array();
 
 $accessible_building_indices = array();
+$sustainable_building_indices = array();
+$bathroom_building_indices = array();
+
 /*
 * goes through the JSON string of Buildings and constructs Marker and Building objects from it
 */
@@ -66,11 +69,13 @@ foreach($buildings as $index=>$item){
     if($sustainability_tab_content != null){
         // array_push($sustainableBuilding_markers, $building_markers[$index]);
         // array_push($sustainableBuilding_thumb_url_array, $thumb_image);
+        array_push($sustainable_building_indices, $index);
     }
     //markers for genderneutral&family bathroom markergroup
     if($bathrooms_tab_content != null){
         // array_push($bathroomBuilding_markers, $building_markers[$index]);
         // array_push($bathroomBuilding_thumb_url_array, $thumb_image);
+        array_push($bathroom_building_indices, $index);
     }
 
     /*
@@ -121,22 +126,22 @@ function getImageURL($id_of_wanted_image){
 $slug = "buildings";
 $checkboxColor = "#fccd32";
 $markerIcon = "images/markers/yellow.png";
-$allBuildings = new MarkerGroup($slug, $checkboxColor, $markerIcon, $building_markers);
+//$allBuildings = new MarkerGroup($slug, $checkboxColor, $markerIcon, $building_markers);
 
 $slug = "accEnt";
 $checkboxColor = "#eb212e";
 $markerIcon = "images/markers/red.png";
-$accessibleBuildings = new MarkerGroup($slug, $checkboxColor, $markerIcon, $accessibleBuilding_markers);;
+//$accessibleBuildings = new MarkerGroup($slug, $checkboxColor, $markerIcon, $accessibleBuilding_markers);
 
 $slug = "sust";
 $checkboxColor = "#b3d143";
 $markerIcon = "images/markers/green.png";
-$sustainableBuildings = new MarkerGroup($slug, $checkboxColor, $markerIcon, $sustainableBuilding_markers);;
+//$sustainableBuildings = new MarkerGroup($slug, $checkboxColor, $markerIcon, $sustainableBuilding_markers);
 
 $slug = "gender";
 $checkboxColor = "#c1a3cb";
 $markerIcon = "images/markers/lightpurple.png";
-$bathroomBuildings = new MarkerGroup($slug, $checkboxColor, $markerIcon, $bathroomBuilding_markers);;
+//$bathroomBuildings = new MarkerGroup($slug, $checkboxColor, $markerIcon, $bathroomBuilding_markers);
 
 /*
 * C A T E G O R I E S
@@ -161,7 +166,7 @@ $bathroomBuildings = new MarkerGroup($slug, $checkboxColor, $markerIcon, $bathro
 //this is a stupidly large array which contains the array of buildings that correspond to each BuildingCategory
 $array_of_arrays_of_buildings = array(); //array-ception 
 //array of all of the thumbnail image urls for the arrays of buildings that correspond to each BuildingCategory
-$array_of_arrays_of_buildings_thumbnail_urls = array();
+//$array_of_arrays_of_buildings_thumbnail_urls = array();
 
 //loops through each category by Title (need title to compare each category in a building against) and gets all of the buildings
 //for that category -> adds the array of buildings for that category to the array_of_arrays_of_buildings massive array 
@@ -169,9 +174,9 @@ $array_of_arrays_of_buildings_thumbnail_urls = array();
 //also gets all of the thumbnail urls for these arrays and puts them into a mega-array of arrays containing thumbnail urls for these building arrays
 foreach($category_titles as $this_category_title){
     $buildings_that_have_this_category = getBuildingsForThisCategory($this_category_title, $building_list);
-    $thumbnails_for_buildings_that_have_this_category = getThumbnailsForTheseBuildings($buildings_that_have_this_category);
+    //$thumbnails_for_buildings_that_have_this_category = getThumbnailsForTheseBuildings($buildings_that_have_this_category);
     array_push($array_of_arrays_of_buildings, $buildings_that_have_this_category);
-    array_push($array_of_arrays_of_buildings_thumbnail_urls, $thumbnails_for_buildings_that_have_this_category);
+    //array_push($array_of_arrays_of_buildings_thumbnail_urls, $thumbnails_for_buildings_that_have_this_category);
 }
 
 /*
@@ -224,27 +229,27 @@ function checkCategoryMatch($category_item_being_checked, $original_category){
 * return:
     array_of_media (array of thumbnail urls)
 */
-function getThumbnailsForTheseBuildings($array_of_buildings){
-    $array_of_media = array();
-    foreach($array_of_buildings as $this_building){
-        $media_url = $this_building->getThumbImage();
-        array_push($array_of_media, $media_url);
-    }
-    return $array_of_media;
+// function getThumbnailsForTheseBuildings($array_of_buildings){
+//     $array_of_media = array();
+//     foreach($array_of_buildings as $this_building){
+//         $media_url = $this_building->getThumbImage();
+//         array_push($array_of_media, $media_url);
+//     }
+//     return $array_of_media;
     
-}
+// }
 
 /*
 * note: category_markerGroups used in buildings_json.php
 */
-$category_markerGroups = array();
+//$category_markerGroups = array();
 $category_checkboxColors = ["#981d23", "#f17844", "#875547", "#0e5846", "#8dd4e2", "#282a72", "#5f318f"];
 $category_markerIcons = ["images/markers/maroon.png", "images/markers/orange.png", "images/markers/brown.png", "images/markers/darkgreen.png", "images/markers/lightblue.png", "images/markers/navy.png", "images/markers/darkpurple.png"];
 //creates marker groups for each BuildingCategory, also creates marker arrays from the building arrays for MarkerGroup parameter
-foreach($array_of_arrays_of_buildings as $index=>$array_of_buildings){
-    $markers_for_category = getMarkersForBuildings($array_of_buildings);
-    array_push($category_markerGroups, new MarkerGroup($category_slugs[$index], $category_checkboxColors[$index], $category_markerIcons[$index], $markers_for_category));
-}
+// foreach($array_of_arrays_of_buildings as $index=>$array_of_buildings){
+//     $markers_for_category = getMarkersForBuildings($array_of_buildings);
+//     //array_push($category_markerGroups, new MarkerGroup($category_slugs[$index], $category_checkboxColors[$index], $category_markerIcons[$index], $markers_for_category));
+// }
 
 
 /*
@@ -256,13 +261,13 @@ foreach($array_of_arrays_of_buildings as $index=>$array_of_buildings){
 * return: 
     array_of_markers (Marker objects)
 */
-function getMarkersForBuildings($array_of_buildings){
-    $array_of_markers = array();
-    foreach($array_of_buildings as $this_building){
-        array_push($array_of_markers, $this_building->getMarker());
-    }
-    return $array_of_markers;
-}
+// function getMarkersForBuildings($array_of_buildings){
+//     $array_of_markers = array();
+//     foreach($array_of_buildings as $this_building){
+//         array_push($array_of_markers, $this_building->getMarker());
+//     }
+//     return $array_of_markers;
+// }
 
 
 //part 2 -> buildings_json.php

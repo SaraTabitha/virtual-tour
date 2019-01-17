@@ -1003,6 +1003,7 @@ function initMap() {
 
             //accessible entrance buildings
             checkbox_slug = "accEnt";
+            var accessibleBuilding_indices = response.indices.accessibleBuildings;
             //var accessibleBuildings = response.accessibleBuildings;
            // building_setMarkerInfoWindowPopup(select_checkbox_id, checkbox_slug, accessibleBuildings, accessibleBuildings.slugs, accessibleBuildings.thumbnail_urls);
 
@@ -1016,19 +1017,22 @@ function initMap() {
             //console.log("marker of match: " + all_building_markers_array[0][index_of_matched_slug]);
             //console.log("infoWindow of match: " + all_building_markers_array[1][index_of_matched_slug]);
 
-            var accessibleBuilding_indices; 
-
+            
             // response.accessibleBuilding_indices.forEach(function(this_index){
             //     console.log("from indices: " + all_building_slugs[this_index]);
             // });
 
             //sustainable buildings
             checkbox_slug = "sust";
+            var sustainableBuilding_indices = response.indices.sustainableBuildings;
             //var sustainableBuildings = response.sustainableBuildings;
             //building_setMarkerInfoWindowPopup(select_checkbox_id, checkbox_slug, sustainableBuildings, sustainableBuildings.slugs, sustainableBuildings.thumbnail_urls);
 
             //gender neutral & family bathroom buildings
             checkbox_slug = "gender";
+            var bathroomBuilding_indices = response.indices.bathroomBuildings;
+
+            
             //var bathroomBuildings = response.bathroomBuildings;
             //building_setMarkerInfoWindowPopup(select_checkbox_id, checkbox_slug, bathroomBuildings, bathroomBuildings.slugs, bathroomBuildings.thumbnail_urls);
 
@@ -1056,19 +1060,19 @@ function initMap() {
        * returns: 
             map_objects (array of google.maps.Marker objects [0], and google.maps.InfoWindow objects [1])
        */
-       function building_setMarkerInfoWindowPopup(select_checkbox_id, checkbox_slug, building_json, slugs_array, thumb_urls){
-            var markers_array = hookupCheckboxesToMarkers(select_checkbox_id, checkbox_slug, building_json);
-            var infoWindows_array = createInfoWindows(slugs_array);
+    //    function building_setMarkerInfoWindowPopup(select_checkbox_id, checkbox_slug, building_json, slugs_array, thumb_urls){
+    //         var markers_array = hookupCheckboxesToMarkers(select_checkbox_id, checkbox_slug, building_json);
+    //         var infoWindows_array = createInfoWindows(slugs_array);
 
-            /* separate */
-            setMarkerClick_openCloseInfo(infoWindows_array, markers_array, thumb_urls); //all arrays of the same size & order
-            moreInfoLinkClickEvent(slugs_array);
-            popupCloseButtonClickEvent(slugs_array);
-            /* separate */
+    //         /* separate */
+    //         setMarkerClick_openCloseInfo(infoWindows_array, markers_array, thumb_urls); //all arrays of the same size & order
+    //         moreInfoLinkClickEvent(slugs_array);
+    //         popupCloseButtonClickEvent(slugs_array);
+    //         /* separate */
 
-            var map_objects = [markers_array, infoWindows_array];
-            return map_objects;
-       }
+    //         var map_objects = [markers_array, infoWindows_array];
+    //         return map_objects;
+    //    }
 
        function building_createMarkersAndInfoWindows(select_checkbox_id, checkbox_slug, building_json, slugs_array){
             var markers_array = hookupCheckboxesToMarkers(select_checkbox_id, checkbox_slug, building_json);

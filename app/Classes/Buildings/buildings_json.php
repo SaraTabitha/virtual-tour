@@ -32,7 +32,9 @@
     $object->categoryThumbnails = $array_of_arrays_of_buildings_thumbnail_urls;
 
     //W O R K S 
-    $object->accessibleBuilding_indices = $accessible_building_indices;
+    $object->indices->accessibleBuildings = $accessible_building_indices;
+    $object->indices->sustainableBuildings = $sustainable_building_indices;
+    $object->indices->bathroomBuildings = $bathroom_building_indices;
 
     $json = json_encode($object);
     echo $json;
