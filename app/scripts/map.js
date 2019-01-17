@@ -976,11 +976,25 @@ function initMap() {
             //all buildings
             var checkbox_slug = "buildings";
             var allBuildings = response.allBuildings;
-            var all_building_markers_array = building_setMarkerInfoWindowPopup(select_checkbox_id, checkbox_slug, allBuildings, allBuildings.slugs, allBuildings.thumbnail_urls);
+            //var all_building_markers_array = building_setMarkerInfoWindowPopup(select_checkbox_id, checkbox_slug, allBuildings, allBuildings.slugs, allBuildings.thumbnail_urls);
             
-            console.log(all_building_markers_array);
-            console.log(all_building_markers_array[0]); //allbuilding_markers
-            console.log(all_building_markers_array[1]); //allbuilding_infowindows
+            /* testing new way of setting up markers & infowindows*/
+            var all_building_markers_array = building_createMarkersAndInfoWindows(select_checkbox_id, checkbox_slug, allBuildings, allBuildings.slugs);
+            var all_building_slugs = allBuildings.slugs;
+
+
+            console.log(all_building_markers_array); // markers[0], infoWindows[1]
+
+            var all_markers_array = all_building_markers_array[0];
+            var all_infoWindows_array = all_building_markers_array[1];
+
+            //idea: somehow only make "all_building" markers & infowindows once
+            //keep references of which buildings go into each category/building checkbox and reuse markers & infowindows
+            // (reduce amount of markers & infowindows that are being remade)
+
+            //really just need: (for each building: slugs, icon, thumbnail_url ), (for each group:  checkbox_slug), (for categories categories, (each building in category: slugs, checkbox slug, icon))
+
+            // where slugs match -> use this marker/infowindow/popup
 
             //TODO pull back -> create markers & infowindows into one function
             // return all markers & infowindows -> create one large array of all of them
@@ -989,25 +1003,41 @@ function initMap() {
 
             //accessible entrance buildings
             checkbox_slug = "accEnt";
-            var accessibleBuildings = response.accessibleBuildings;
-            building_setMarkerInfoWindowPopup(select_checkbox_id, checkbox_slug, accessibleBuildings, accessibleBuildings.slugs, accessibleBuildings.thumbnail_urls);
+            //var accessibleBuildings = response.accessibleBuildings;
+           // building_setMarkerInfoWindowPopup(select_checkbox_id, checkbox_slug, accessibleBuildings, accessibleBuildings.slugs, accessibleBuildings.thumbnail_urls);
+
+            //test
+            //console.log("original: " + accessibleBuildings.slugs);
+
+            //var slug_to_match = accessible_building_slugs[0];
+            //var index_of_matched_slug = getIndexOfBuildingSlugMatch(all_building_slugs, slug_to_match);
+            //console.log("accessible building slug [0]: " + slug_to_match);
+            //console.log("index: " + index_of_matched_slug);
+            //console.log("marker of match: " + all_building_markers_array[0][index_of_matched_slug]);
+            //console.log("infoWindow of match: " + all_building_markers_array[1][index_of_matched_slug]);
+
+            var accessibleBuilding_indices; 
+
+            // response.accessibleBuilding_indices.forEach(function(this_index){
+            //     console.log("from indices: " + all_building_slugs[this_index]);
+            // });
 
             //sustainable buildings
             checkbox_slug = "sust";
-            var sustainableBuildings = response.sustainableBuildings;
-            building_setMarkerInfoWindowPopup(select_checkbox_id, checkbox_slug, sustainableBuildings, sustainableBuildings.slugs, sustainableBuildings.thumbnail_urls);
+            //var sustainableBuildings = response.sustainableBuildings;
+            //building_setMarkerInfoWindowPopup(select_checkbox_id, checkbox_slug, sustainableBuildings, sustainableBuildings.slugs, sustainableBuildings.thumbnail_urls);
 
             //gender neutral & family bathroom buildings
             checkbox_slug = "gender";
-            var bathroomBuildings = response.bathroomBuildings;
-            building_setMarkerInfoWindowPopup(select_checkbox_id, checkbox_slug, bathroomBuildings, bathroomBuildings.slugs, bathroomBuildings.thumbnail_urls);
+            //var bathroomBuildings = response.bathroomBuildings;
+            //building_setMarkerInfoWindowPopup(select_checkbox_id, checkbox_slug, bathroomBuildings, bathroomBuildings.slugs, bathroomBuildings.thumbnail_urls);
 
             //categories
-            response.categories.forEach(function(this_category, index){
-                checkbox_slug = response.checkbox_slugs[index];
-                building_setMarkerInfoWindowPopup(select2_checkbox_id, checkbox_slug, this_category, this_category.slugs, response.categoryThumbnails[index]);
+            // response.categories.forEach(function(this_category, index){
+            //     checkbox_slug = response.checkbox_slugs[index];
+            //     building_setMarkerInfoWindowPopup(select2_checkbox_id, checkbox_slug, this_category, this_category.slugs, response.categoryThumbnails[index]);
                 
-            });
+            // });
 
             //set building markers on page load
             setMarkers(all_building_markers_array[0], response.allBuildings.icon);
@@ -1029,14 +1059,26 @@ function initMap() {
        function building_setMarkerInfoWindowPopup(select_checkbox_id, checkbox_slug, building_json, slugs_array, thumb_urls){
             var markers_array = hookupCheckboxesToMarkers(select_checkbox_id, checkbox_slug, building_json);
             var infoWindows_array = createInfoWindows(slugs_array);
+
+            /* separate */
             setMarkerClick_openCloseInfo(infoWindows_array, markers_array, thumb_urls); //all arrays of the same size & order
             moreInfoLinkClickEvent(slugs_array);
             popupCloseButtonClickEvent(slugs_array);
+            /* separate */
 
             var map_objects = [markers_array, infoWindows_array];
-
             return map_objects;
        }
+
+       function building_createMarkersAndInfoWindows(select_checkbox_id, checkbox_slug, building_json, slugs_array){
+            var markers_array = hookupCheckboxesToMarkers(select_checkbox_id, checkbox_slug, building_json);
+            var infoWindows_array = createInfoWindows(slugs_array);
+
+            var map_objects = [markers_array, infoWindows_array];
+            return map_objects;
+       }
+
+
 
        /*
        * params:
@@ -1098,6 +1140,15 @@ function initMap() {
             $("#" + slug + "Popup").css("visibility", "hidden");
        }
        
+       function getIndexOfBuildingSlugMatch(all_building_slugs, slug_to_match){
+           var slug_index = -1; 
+            all_building_slugs.forEach(function(this_slug, index){
+                if(this_slug == slug_to_match){
+                    slug_index = index;
+                }
+            });
+            return slug_index;
+       }
         // setting sustainability markers
         // function setSust(){
         //     //sust buildings: albee, alumni, blackhawk, biodigester, heating, horizon, reeve, sage, recreation

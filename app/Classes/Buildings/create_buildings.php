@@ -13,17 +13,17 @@ $building_list = array();
 
 //arrays for storing marker objects
 $building_markers = array();
-$accessibleBuilding_markers = array();
-$sustainableBuilding_markers = array();
-$bathroomBuilding_markers = array();
+// $accessibleBuilding_markers = array();
+// $sustainableBuilding_markers = array();
+// $bathroomBuilding_markers = array();
 
 //arrays for storing thumbnail urls (to be sent to buildings_json and then to map.js)
 $building_thumb_url_array = array();
-$accessibleBuilding_thumb_url_array = array();
-$sustainableBuilding_thumb_url_array = array();
-$bathroomBuilding_thumb_url_array = array();
+// $accessibleBuilding_thumb_url_array = array();
+// $sustainableBuilding_thumb_url_array = array();
+// $bathroomBuilding_thumb_url_array = array();
 
-
+$accessible_building_indices = array();
 /*
 * goes through the JSON string of Buildings and constructs Marker and Building objects from it
 */
@@ -56,18 +56,21 @@ foreach($buildings as $index=>$item){
 
     //markers for accessible entry markergroup
     if($isAccessible){
-        array_push($accessibleBuilding_markers, $building_markers[$index]);
-        array_push($accessibleBuilding_thumb_url_array, $thumb_image);
+        // array_push($accessibleBuilding_markers, $building_markers[$index]);
+        // array_push($accessibleBuilding_thumb_url_array, $thumb_image);
+
+        //$accessible_building_indices
+        array_push($accessible_building_indices, $index);
     }
     //markers for sustainability points of interest markergroup
     if($sustainability_tab_content != null){
-        array_push($sustainableBuilding_markers, $building_markers[$index]);
-        array_push($sustainableBuilding_thumb_url_array, $thumb_image);
+        // array_push($sustainableBuilding_markers, $building_markers[$index]);
+        // array_push($sustainableBuilding_thumb_url_array, $thumb_image);
     }
     //markers for genderneutral&family bathroom markergroup
     if($bathrooms_tab_content != null){
-        array_push($bathroomBuilding_markers, $building_markers[$index]);
-        array_push($bathroomBuilding_thumb_url_array, $thumb_image);
+        // array_push($bathroomBuilding_markers, $building_markers[$index]);
+        // array_push($bathroomBuilding_thumb_url_array, $thumb_image);
     }
 
     /*
@@ -145,15 +148,15 @@ $bathroomBuildings = new MarkerGroup($slug, $checkboxColor, $markerIcon, $bathro
             -instance variable building_categories (array of strings for the categories that this building falls under)
 *
 */
-$category_titles = array(); //strings of BuildingCategory Titles
-$category_slugs = array(); //strings of BuildingCategory Slugs
+//$category_titles = array(); //strings of BuildingCategory Titles
+//$category_slugs = array(); //strings of BuildingCategory Slugs
 
 //category_list -> array of all BuildingCategory objects
 //loops through an extracts all of the slugs & titles of the categories for the menu
-foreach($category_list as $building_category){
-    array_push($category_titles, $building_category->getTitle());
-    array_push($category_slugs, $building_category->getSlug());
-}   
+// foreach($category_list as $building_category){
+//     array_push($category_titles, $building_category->getTitle());
+//     array_push($category_slugs, $building_category->getSlug());
+// }   
 
 //this is a stupidly large array which contains the array of buildings that correspond to each BuildingCategory
 $array_of_arrays_of_buildings = array(); //array-ception 
