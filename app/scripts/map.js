@@ -958,7 +958,7 @@ function initMap() {
         }
 
         
-        /*TODO
+        /*
         * Buildings 
         *   -pre-defined categories:
         *       -all buildings
@@ -966,7 +966,9 @@ function initMap() {
         *       -sustainability points of interest
         *       -gender neutral and family restrooms
         * 
-        * 
+        * Categories
+        *   -all Building Categories submit to the CMS
+        *       -building attached to each category is defined by checking them in the categories list when a building is created/edited in the CMS
         */
        get("../Classes/Buildings/buildings_json.php").then(function(response){
             console.log(response);
