@@ -758,7 +758,7 @@ function initMap() {
         * Stores marker array by calling createMarkersFromResponse and then passes it to a function that creates the Checkboxes event listener
         */
         function hookupCheckboxesToMarkers(select_checkbox_id, checkbox_slug, response){
-            var markers_array = createMarkersFromResponse(response);
+           // var markers_array = createMarkersFromResponse(response); //TODO move create markers step outside of this & add the marker_array as a paramater
             var icon_url = response.icon;
 
             selectAllEventListener(select_checkbox_id, checkbox_slug, markers_array, icon_url);
