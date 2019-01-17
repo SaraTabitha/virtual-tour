@@ -978,6 +978,15 @@ function initMap() {
             var allBuildings = response.allBuildings;
             var all_building_markers_array = building_setMarkerInfoWindowPopup(select_checkbox_id, checkbox_slug, allBuildings, allBuildings.slugs, allBuildings.thumbnail_urls);
             
+            console.log(all_building_markers_array);
+            console.log(all_building_markers_array[0]); //allbuilding_markers
+            console.log(all_building_markers_array[1]); //allbuilding_infowindows
+
+            //TODO pull back -> create markers & infowindows into one function
+            // return all markers & infowindows -> create one large array of all of them
+            // set open/close & click events on one group?
+            //...redundancy...buildings are repeated in each category
+
             //accessible entrance buildings
             checkbox_slug = "accEnt";
             var accessibleBuildings = response.accessibleBuildings;
@@ -1001,7 +1010,7 @@ function initMap() {
             });
 
             //set building markers on page load
-            setMarkers(all_building_markers_array, response.allBuildings.icon);
+            setMarkers(all_building_markers_array[0], response.allBuildings.icon);
             document.getElementById("buildingsLabel").MaterialCheckbox.check();
        })
 
@@ -1010,12 +1019,12 @@ function initMap() {
             select_checkbox_id (string id for which "selectAll" checkbox the markergroup is under)
             checkbox_slug (string slug for the id of the checkbox the markergroup is attached to)
             building_json (array of marker info)
-            slugs_array (array of string slugs from the building_json array)
-            thumb_urls (array of thumbnail urls that pair with the building_json array buildings)
+            slugs_array (array of string slugs from the building_json array; ex. building_json.slugs)
+            thumb_urls (array of thumbnail urls)
        * this function creates google.maps.Marker objects & attaches them to the appropriate checkbox (and the selectAll checkbox), 
        * creates the infoWindows for those markers and sets up the click functions for opening/closing them
        * returns: 
-            markers_array (array of google.maps.Marker objects)
+            map_objects (array of google.maps.Marker objects [0], and google.maps.InfoWindow objects [1])
        */
        function building_setMarkerInfoWindowPopup(select_checkbox_id, checkbox_slug, building_json, slugs_array, thumb_urls){
             var markers_array = hookupCheckboxesToMarkers(select_checkbox_id, checkbox_slug, building_json);
@@ -1024,7 +1033,9 @@ function initMap() {
             moreInfoLinkClickEvent(slugs_array);
             popupCloseButtonClickEvent(slugs_array);
 
-            return markers_array;
+            var map_objects = [markers_array, infoWindows_array];
+
+            return map_objects;
        }
 
        /*
@@ -1040,6 +1051,7 @@ function initMap() {
                 $("#" + infoWindow_id + "Thumbnail").attr("src", this_thumbnail_url);
             }
        }
+
        /*
        * params:
             infoWindow_id (string id of the html infoWindow (not the google.maps.InfoWindow))
