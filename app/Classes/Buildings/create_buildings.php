@@ -270,6 +270,8 @@ $category_markerIcons = ["images/markers/maroon.png", "images/markers/orange.png
 // }
 
 
+//TODO: simplify MarkerGroups (emergencyPhones & parking lots use them; buildings/categories may not need them to the same extent)
+
 //part 2 -> buildings_json.php
 //part 3 -> Marker_Groups/style_checkboxes.php (TODO set up styling for category checkboxes)
 //part 4 -> create_buildingInfoWindows.php ( TODO decide if create infowindows & popups should be in one file )
