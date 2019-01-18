@@ -971,7 +971,33 @@ function initMap() {
         */
         get("../Classes/Buildings/buildings_json.php").then(function(response){
             console.log(response);
+
+            //all buildings
+            var checkbox_slug = "buildings";
+            var allBuildings = response.allBuildings;
+            var all_building_markers_array = building_createMarkersAndInfoWindows(allBuildings, allBuildings.slugs);
+
+
+            //set building markers on page load
+            setMarkers(all_building_markers_array[0], response.allBuildings.icon);
+            document.getElementById("buildingsLabel").MaterialCheckbox.check();
         })
+
+        /*
+        * params:
+        *   building_json (json string of allbuilding info for markers)
+        *   slugs_array (array of strings of all of the building slugs)
+        * this function creates a group for google.maps.Marker & google.maps.InfoWindow objects from the params it is passed
+        * return: 
+        *   map_objects (2d array of google.maps.Marker[0] & google.maps.InfoWindow[1] object arrays)
+        */
+        function building_createMarkersAndInfoWindows(building_json, slugs_array){
+            var markers_array = createMarkersFromResponse(building_json);
+            var infoWindows_array = createInfoWindows(slugs_array);
+    
+            var map_objects = [markers_array, infoWindows_array];
+            return map_objects;
+       }
         
         // setting sustainability markers
         // function setSust(){
