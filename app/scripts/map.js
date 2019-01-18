@@ -882,14 +882,8 @@ function initMap() {
             var all_parking_infoWindows = createInfoWindows(allParking.slugs);
             setMarkerClick_openCloseInfo(all_parking_infoWindows, all_parking_markers_array);
 
-            console.log(response);
-
             var accessibleParking = response.accessibleParking;
             var accessibleParking_markers = getAllMarkersForTheseIndices(accessibleParking.indices, all_parking_markers_array);
-
-            setMarkers(all_parking_markers_array, allParking.icon);
-            setMarkers(accessibleParking_markers, accessibleParking.marker_icon);
-
             hookupCheckboxesToMarkers(select_checkbox_id, accessibleParking.checkbox_slug, accessibleParking_markers, accessibleParking.marker_icon);
         })
 
