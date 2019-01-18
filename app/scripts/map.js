@@ -749,19 +749,21 @@ function initMap() {
         get("../Classes/Emergency_Phones/phones_json.php").then(function(response){
             //var select_checkbox_id = "selectAllOne";
             var checkbox_slug = "emergency"; //TODO: have this variable only be set in one place
-            hookupCheckboxesToMarkers(select_checkbox_id, checkbox_slug, response);
+            var emergencyPhones_markers_array = createMarkersFromResponse(response);
+            var emergencyPhones_icon_url = response.icon;
+            hookupCheckboxesToMarkers(select_checkbox_id, checkbox_slug, emergencyPhones_markers_array, emergencyPhones_icon_url);
         
         })
 
         /*
-        * Params: checkbox_slug (string of id for checkbox)
-        *         response (parsed json object containing array of titles, latitudes, longitudes & a string for icon url)
+        * Params: 
+            select_checkbox_id (string id for the selectAll checkbox this checkbox will be attached to)
+            checkbox_slug (string id for the checkbox these markers should be attached to)
+            markers_array (array of google.maps.Marker objects)
+            icon_url (string url of an icon image for the markers)
         * Stores marker array by calling createMarkersFromResponse and then passes it to a function that creates the Checkboxes event listener
         */
-        function hookupCheckboxesToMarkers(select_checkbox_id, checkbox_slug, response){
-            var markers_array = createMarkersFromResponse(response); //TODO move create markers step outside of this & add the marker_array as a paramater
-            var icon_url = response.icon;
-
+        function hookupCheckboxesToMarkers(select_checkbox_id, checkbox_slug, markers_array, icon_url){
             selectAllEventListener(select_checkbox_id, checkbox_slug, markers_array, icon_url);
             checkboxOnChange(checkbox_slug, markers_array, icon_url); //individual checkbox
         
@@ -873,12 +875,19 @@ function initMap() {
         *   -all lots
         *   -accessible lots 
         */
+
+    //    var emergencyPhones_markers_array = createMarkersFromResponse(response);
+    //    var emergencyPhones_icon_url = response.icon;
+    //    hookupCheckboxesToMarkers(select_checkbox_id, checkbox_slug, emergencyPhones_markers_array, emergencyPhones_icon_url);
         get("../Classes/Parking_Lots/parking_json.php").then(function(response){
             //all parking
             var checkbox_slug = "parking"; //TODO: have this variable only be set in one place (other is create_parkinglots.php)
             var allParking = response.allParking;
             var all_parking_slugs = response.allParking.slugs;
-            var all_parking_markers_array = hookupCheckboxesToMarkers(select_checkbox_id, checkbox_slug, allParking);
+
+            var all_parking_markers_array = createMarkersFromResponse(allParking);
+            var all_parking_icon_url = allParking.icon;
+            hookupCheckboxesToMarkers(select_checkbox_id, checkbox_slug, all_parking_markers_array, all_parking_icon_url);
             
             var all_parking_infoWindows = createInfoWindows(all_parking_slugs);
             setMarkerClick_openCloseInfo(all_parking_infoWindows, all_parking_markers_array);
@@ -887,10 +896,16 @@ function initMap() {
             checkbox_slug = "accPar"; //TODO: have this variable only be set in one place (other is create_parkinglots.php)
             var accessibleParking = response.accessibleParking;
             var accessible_parking_slugs = response.accessibleParking.slugs;
-            var accessible_parking_markers_array = hookupCheckboxesToMarkers(select_checkbox_id, checkbox_slug, accessibleParking);
+
+
+            //TODO parking markers/infowindows only make once -> get indices for accessible parking
+
+            // var accessible_parking_markers_array = createMarkersFromResponse(accessibleParking);
+            // var accessible_parking_icon_url = accessibleParking.icon;
+            // hookupCheckboxesToMarkers(select_checkbox_id, checkbox_slug, accessible_parking_markers_array, accessible_parking_icon_url);
         
-            var accessible_parking_infoWindows = createInfoWindows(accessible_parking_slugs);
-            setMarkerClick_openCloseInfo(accessible_parking_infoWindows, accessible_parking_markers_array);
+            // var accessible_parking_infoWindows = createInfoWindows(accessible_parking_slugs);
+            // setMarkerClick_openCloseInfo(accessible_parking_infoWindows, accessible_parking_markers_array);
             
         })
         /*
@@ -975,11 +990,22 @@ function initMap() {
             //all buildings
             var checkbox_slug = "buildings";
             var allBuildings = response.allBuildings;
-            var all_building_markers_array = building_createMarkersAndInfoWindows(allBuildings, allBuildings.slugs);
+            var buildingsCheckbox_icon = response.allBuildings.icon;
+            var building_slugs_array = allBuildings.slugs;
 
+            var building_map_objects = building_createMarkersAndInfoWindows(allBuildings, building_slugs_array);
+
+            var building_markers_array = building_map_objects[0];
+            var building_infoWindows_array = building_map_objects[1];
+            var building_thumbnail_array = response.allBuildings.thumbnail_urls;
+           
+            //if google.maps.Marker is clicked -> open corresponding google.maps.InfoWindow
+            setMarkerClick_openCloseInfo(building_infoWindows_array, building_markers_array, building_thumbnail_array);
+            
+            console.log(building_map_objects);
 
             //set building markers on page load
-            setMarkers(all_building_markers_array[0], response.allBuildings.icon);
+            setMarkers(building_markers_array, buildingsCheckbox_icon);
             document.getElementById("buildingsLabel").MaterialCheckbox.check();
         })
 
@@ -998,6 +1024,32 @@ function initMap() {
             var map_objects = [markers_array, infoWindows_array];
             return map_objects;
        }
+
+       /*
+        * params:
+                infoWindow_id (string id of the html infoWindow (not the google.maps.InfoWindow))
+                this_thumbnail_url (string url of the thumnbnail image for the html infoWindow)
+
+            * if the infowindow is for a building(has "generalHover" class, as opposed to a "parkingHover"),
+            * set the url for the img's src attribute so the thumbnail shows up on the infoWindow
+        */
+        function setThumbnailSrc(infoWindow_id, this_thumbnail_url){
+            if($("#" + infoWindow_id).hasClass("generalHover")){
+                $("#" + infoWindow_id + "Thumbnail").attr("src", this_thumbnail_url);
+            }
+        }
+
+        /*
+        * params:
+            infoWindow_id (string id of the html infoWindow (not the google.maps.InfoWindow))
+        * if the infowindow is for a building(has "generalHover" class, as opposed to a "parkingHover"),
+        * clear the img's src attribute (so the page isn't super slow from loading a ton of images) 
+        */
+        function clearThumbnailSrc(infoWindow_id){
+            if($("#" + infoWindow_id).hasClass("generalHover")){
+                $("#" + infoWindow_id + "Thumbnail").attr("src", "#");
+            }
+        }
         
         // setting sustainability markers
         // function setSust(){
