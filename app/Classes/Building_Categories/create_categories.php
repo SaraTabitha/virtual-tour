@@ -19,7 +19,7 @@
 
     //the array the BuildingCategory objects will be stored in
     $category_list = array();
-    $index = 0;
+    
 
     //creates each BuildingCategory to correspond with the categories added to the CMS
     foreach($categories as $item){
@@ -29,8 +29,7 @@
         $content = $item->content->rendered;
         $learnMoreURL = $item->learn_more_url[0]; //url comes from an array
 
-        $category_list[$index] = new BuildingCategory($slug, $title, $media, $content, $learnMoreURL);
-        $index++;
+        array_push($category_list, new BuildingCategory($slug, $title, $media, $content, $learnMoreURL));
     }
 
     //part 2 -> categories_json.php 

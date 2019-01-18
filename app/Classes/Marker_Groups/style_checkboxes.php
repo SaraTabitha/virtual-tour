@@ -12,8 +12,10 @@
     require_once(__DIR__ . '/../Buildings/create_buildings.php');
 
     //emergency phones, parking lots and buildings for first section of menu
-    $markerGroups = array($emergencyPhones, $parkingLots, $accessibleParkingLots, $allBuildings, 
-                          $accessibleBuildings, $sustainableBuildings, $bathroomBuildings);
+    // $markerGroups = array($emergencyPhones, $parkingLots, $accessibleParkingLots, $allBuildings, 
+    //                       $accessibleBuildings, $sustainableBuildings, $bathroomBuildings);
+
+    $markerGroups = array($emergencyPhones, $parkingLots, $accessibleParkingLots, $allBuildings);                      
     foreach($markerGroups as $group){
         $group->style_checkboxes();
     }
