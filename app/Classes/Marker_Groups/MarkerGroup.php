@@ -14,7 +14,7 @@ class MarkerGroup{
     private $markersArray;
 
     public function __construct($slug, $checkboxColor, $markerIcon, $markersArray){
-        $this->slug = $slug . "Label";
+        $this->slug = $slug;
 
         $this->checkboxColor = $checkboxColor;
         $this->markerIcon = $markerIcon;
@@ -63,21 +63,30 @@ class MarkerGroup{
 
         return $object;
     }
+
+    function createIndicesJSONObject(){
+        $object->indices = $this->getMarkersArray();
+        $object->checkbox_slug = $this->getSlug();
+        $object->marker_icon = $this->getMarkerIcon();
+
+        return $object;
+    }
+
     /* this needs to be in its own function & called in its own file bc otherwise create_emergencyphones' json sent to map.js gets screwed up :) */
     function style_checkboxes(){
-    
+        $slugLabel = $this->slug . "Label";
         ?>
         <style>
             /* border outline */
-            #<?php echo $this->slug ?>.is-checked > span.mdl-checkbox__box-outline{
+            #<?php echo $slugLabel ?>.is-checked > span.mdl-checkbox__box-outline{
                 border: 2px solid <?php echo $this->checkboxColor ?>;
             }
 
             /* checkbox inner color + ripple effect color */
-            #<?php echo $this->slug ?>.is-checked > span.mdl-checkbox__box-outline > span{
+            #<?php echo $slugLabel ?>.is-checked > span.mdl-checkbox__box-outline > span{
                 background: <?php echo $this->checkboxColor ?>;
             }
-            #<?php echo $this->slug ?> > span.mdl-checkbox__ripple-container.mdl-js-ripple-effect.mdl-ripple--center > span{
+            #<?php echo $slugLabel ?> > span.mdl-checkbox__ripple-container.mdl-js-ripple-effect.mdl-ripple--center > span{
                 background: <?php echo $this->checkboxColor ?>;
             }
 

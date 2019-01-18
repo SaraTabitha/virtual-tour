@@ -116,4 +116,19 @@ $slug = "buildings";
 $checkboxColor = "#fccd32";
 $markerIcon = "images/markers/yellow.png";
 $allBuildings = new MarkerGroup($slug, $checkboxColor, $markerIcon, $building_markers);
+
+$slug = "accEnt";
+$checkboxColor = "#eb212e";
+$markerIcon = "images/markers/red.png";
+$accessibleBuildings = new MarkerGroup($slug, $checkboxColor, $markerIcon, $accessible_building_indices);
+
+$slug = "sust";
+$checkboxColor = "#b3d143";
+$markerIcon = "images/markers/green.png";
+$sustainableBuildings = new MarkerGroup($slug, $checkboxColor, $markerIcon, $sustainable_building_indices);
+
+$slug = "gender";
+$checkboxColor = "#c1a3cb";
+$markerIcon = "images/markers/lightpurple.png";
+$bathroomBuildings = new MarkerGroup($slug, $checkboxColor, $markerIcon, $bathroom_building_indices);
 ?>

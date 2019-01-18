@@ -766,8 +766,6 @@ function initMap() {
         function hookupCheckboxesToMarkers(select_checkbox_id, checkbox_slug, markers_array, icon_url){
             selectAllEventListener(select_checkbox_id, checkbox_slug, markers_array, icon_url);
             checkboxOnChange(checkbox_slug, markers_array, icon_url); //individual checkbox
-        
-            return markers_array;
         }
 
         /*
@@ -879,23 +877,22 @@ function initMap() {
             //all parking
             var checkbox_slug = "parking"; 
             var allParking = response.allParking;
-            var all_parking_slugs = response.allParking.slugs;
             var all_parking_markers_array = createMarkersFromResponse(allParking);
-            var all_parking_icon_url = allParking.icon;
-            hookupCheckboxesToMarkers(select_checkbox_id, checkbox_slug, all_parking_markers_array, all_parking_icon_url);
-            var all_parking_infoWindows = createInfoWindows(all_parking_slugs);
+            hookupCheckboxesToMarkers(select_checkbox_id, checkbox_slug, all_parking_markers_array, allParking.icon);
+            var all_parking_infoWindows = createInfoWindows(allParking.slugs);
             setMarkerClick_openCloseInfo(all_parking_infoWindows, all_parking_markers_array);
 
-            
+            console.log(response);
 
             var accessibleParking = response.accessibleParking;
-            var accessibleParking_indices = accessibleParking.indices;
-            var accessibleParking_icon = accessibleParking.markerIcon;
-            var accessibleParking_checkboxSlug = accessibleParking.checkbox_slug;
-            var accessibleParking_markers = getAllMarkersForTheseIndices(accessibleParking_indices, all_parking_markers_array);
-            hookupCheckboxesToMarkers(select_checkbox_id, accessibleParking_checkboxSlug, accessibleParking_markers, accessibleParking_icon);
+            var accessibleParking_markers = getAllMarkersForTheseIndices(accessibleParking.indices, all_parking_markers_array);
+
+            setMarkers(all_parking_markers_array, allParking.icon);
+            setMarkers(accessibleParking_markers, accessibleParking.marker_icon);
+
+            hookupCheckboxesToMarkers(select_checkbox_id, accessibleParking.checkbox_slug, accessibleParking_markers, accessibleParking.marker_icon);
         })
-        
+
         /*
         * Params: slugs (array of strings of slugs for infoWindow ids)
         * loops through slugs array and creates google.maps.InfoWindow objects from the divs made in create_parkingInfoWindows.php

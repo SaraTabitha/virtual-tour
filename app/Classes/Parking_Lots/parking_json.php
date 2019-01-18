@@ -5,10 +5,7 @@
     $icon = $parkingLots->getMarkerIcon();
     $object->allParking = $parkingLots->createMarkerJSONObject($lots, $icon);
 
-    $object->accessibleParking->indices = $accessibleParking_indices;
-    $object->accessibleParking->checkbox_slug = $slug;
-    $object->accessibleParking->checkbox_color = $checkboxColor;
-    $object->accessibleParking->markerIcon = $markerIcon;
+    $object->accessibleParking = $accessibleParkingLots->createIndicesJSONObject();
     
     $json = json_encode($object);
     echo $json;
