@@ -875,39 +875,27 @@ function initMap() {
         *   -all lots
         *   -accessible lots 
         */
-
-    //    var emergencyPhones_markers_array = createMarkersFromResponse(response);
-    //    var emergencyPhones_icon_url = response.icon;
-    //    hookupCheckboxesToMarkers(select_checkbox_id, checkbox_slug, emergencyPhones_markers_array, emergencyPhones_icon_url);
         get("../Classes/Parking_Lots/parking_json.php").then(function(response){
             //all parking
-            var checkbox_slug = "parking"; //TODO: have this variable only be set in one place (other is create_parkinglots.php)
+            var checkbox_slug = "parking"; 
             var allParking = response.allParking;
             var all_parking_slugs = response.allParking.slugs;
-
             var all_parking_markers_array = createMarkersFromResponse(allParking);
             var all_parking_icon_url = allParking.icon;
             hookupCheckboxesToMarkers(select_checkbox_id, checkbox_slug, all_parking_markers_array, all_parking_icon_url);
-            
             var all_parking_infoWindows = createInfoWindows(all_parking_slugs);
             setMarkerClick_openCloseInfo(all_parking_infoWindows, all_parking_markers_array);
 
-            //accessible parking
-            checkbox_slug = "accPar"; //TODO: have this variable only be set in one place (other is create_parkinglots.php)
-            var accessibleParking = response.accessibleParking;
-            var accessible_parking_slugs = response.accessibleParking.slugs;
-
-
-            //TODO parking markers/infowindows only make once -> get indices for accessible parking
-
-            // var accessible_parking_markers_array = createMarkersFromResponse(accessibleParking);
-            // var accessible_parking_icon_url = accessibleParking.icon;
-            // hookupCheckboxesToMarkers(select_checkbox_id, checkbox_slug, accessible_parking_markers_array, accessible_parking_icon_url);
-        
-            // var accessible_parking_infoWindows = createInfoWindows(accessible_parking_slugs);
-            // setMarkerClick_openCloseInfo(accessible_parking_infoWindows, accessible_parking_markers_array);
             
+
+            var accessibleParking = response.accessibleParking;
+            var accessibleParking_indices = accessibleParking.indices;
+            var accessibleParking_icon = accessibleParking.markerIcon;
+            var accessibleParking_checkboxSlug = accessibleParking.checkbox_slug;
+            var accessibleParking_markers = getAllMarkersForTheseIndices(accessibleParking_indices, all_parking_markers_array);
+            hookupCheckboxesToMarkers(select_checkbox_id, accessibleParking_checkboxSlug, accessibleParking_markers, accessibleParking_icon);
         })
+        
         /*
         * Params: slugs (array of strings of slugs for infoWindow ids)
         * loops through slugs array and creates google.maps.InfoWindow objects from the divs made in create_parkingInfoWindows.php
@@ -972,6 +960,17 @@ function initMap() {
                 }
             });
         }
+
+        function getAllMarkersForTheseIndices(indices_array, all_markers_array){
+            var all_markers_for_these_indices = [];
+
+            indices_array.forEach(function(this_index){
+                all_markers_for_these_indices.push(all_markers_array[this_index]);
+            });
+
+            return all_markers_for_these_indices;
+        }
+
          /*
         * Buildings 
         *   -pre-defined categories:

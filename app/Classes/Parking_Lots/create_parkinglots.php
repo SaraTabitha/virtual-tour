@@ -17,7 +17,9 @@ $longitude;
 $parkingLot_list = array();
 $parkingLot_markers = array();
 
-$accessibleParking_markers = array();
+//$accessibleParking_markers = array();
+
+$accessibleParking_indices = array();
 
 foreach($parkingLots as $index=>$lot){
     $slug = $lot->slug;
@@ -33,7 +35,8 @@ foreach($parkingLots as $index=>$lot){
     $parkingLot_list[$index] = new ParkingLot($slug, $title, $parkingLot_markers[$index], $isAccesible, $lotTypes);
     
     if($isAccessible){
-        array_push($accessibleParking_markers, $parkingLot_markers[$index]);
+        //array_push($accessibleParking_markers, $parkingLot_markers[$index]);
+        array_push($accessibleParking_indices, $index);
     }
 }
 
@@ -52,7 +55,7 @@ $parkingLots = new MarkerGroup($slug, $checkboxColor, $markerIcon, $parkingLot_m
 $slug = "accPar";
 $checkboxColor = "#00a9a2";
 $markerIcon = "images/markers/teal.png";
-$accessibleParkingLots = new MarkerGroup($slug, $checkboxColor, $markerIcon, $accessibleParking_markers);
+$accessibleParkingLots = new MarkerGroup($slug, $checkboxColor, $markerIcon, $accessibleParking_indices);
 
 //part 2 -> parking_json.php
 //part 3 -> Marker_Groups/style_checkboxes.php

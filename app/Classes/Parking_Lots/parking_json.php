@@ -6,11 +6,17 @@
 
     $object->allParking = $parkingLots->createMarkerJSONObject($lots, $icon);
 
-    $accessible_lots = $accessibleParkingLots->getMarkersArray();
-    $accessible_icon = $accessibleParkingLots->getMarkerIcon();
+    //$accessible_lots = $accessibleParkingLots->getMarkersArray();
+    //$accessible_icon = $accessibleParkingLots->getMarkerIcon();
 
-    $object->accessibleParking = $accessibleParkingLots->createMarkerJSONObject($accessible_lots, $accessible_icon);
+    //$object->accessibleParking = $accessibleParkingLots->createMarkerJSONObject($accessible_lots, $accessible_icon);
+    $object->accessibleParking->indices = $accessibleParking_indices;
+    $object->accessibleParking->checkbox_slug = $slug;
+    $object->accessibleParking->checkbox_color = $checkboxColor;
+    $object->accessibleParking->markerIcon = $markerIcon;
     
+    
+
     $json = json_encode($object);
     echo $json;
     //this ends up in map.js @ get("../Classes/Parking_Lots/parking_json.php").then(function...
