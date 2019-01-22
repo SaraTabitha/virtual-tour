@@ -6,6 +6,10 @@
     $object->allBuildings = $allBuildings->createMarkerJSONObject($buildings_marker_array, $icon);
     $object->allBuildings->thumbnail_urls = $building_thumb_url_array;
 
+    $object->accessibleBuildings = $accessibleBuildings->createIndicesJSONObject();
+    $object->sustainableBuildings = $sustainableBuildings->createIndicesJSONObject();
+    $object->bathroomBuildings = $bathroomBuildings->createIndicesJSONObject();
+
     $json = json_encode($object);
     echo $json;
 

@@ -980,7 +980,6 @@ function initMap() {
             //all buildings
             var checkbox_slug = "buildings";
             var allBuildings = response.allBuildings;
-            var buildingsCheckbox_icon = response.allBuildings.icon;
             var building_slugs_array = allBuildings.slugs;
 
             var building_map_objects = building_createMarkersAndInfoWindows(allBuildings, building_slugs_array);
@@ -988,6 +987,8 @@ function initMap() {
             var building_markers_array = building_map_objects[0];
             var building_infoWindows_array = building_map_objects[1];
             var building_thumbnail_array = response.allBuildings.thumbnail_urls;
+            hookupCheckboxesToMarkers(select_checkbox_id,checkbox_slug, building_markers_array, allBuildings.icon);
+
            
             //if google.maps.Marker is clicked -> open corresponding google.maps.InfoWindow
             setMarkerClick_openCloseInfo(building_infoWindows_array, building_markers_array, building_thumbnail_array);
@@ -995,8 +996,21 @@ function initMap() {
             console.log(building_map_objects);
 
             //set building markers on page load
-            setMarkers(building_markers_array, buildingsCheckbox_icon);
+            setMarkers(building_markers_array, allBuildings.icon);
             document.getElementById("buildingsLabel").MaterialCheckbox.check();
+
+            //accessible, sustainable and bathroom Buildings
+            var accessibleBuildings = response.accessibleBuildings;
+            var accessibleBuilding_markers = getAllMarkersForTheseIndices(accessibleBuildings.indices, building_markers_array);
+            hookupCheckboxesToMarkers(select_checkbox_id, accessibleBuildings.checkbox_slug, accessibleBuilding_markers, accessibleBuildings.marker_icon);
+        
+            var sustainableBuildings = response.sustainableBuildings;
+            var sustainableBuildings_markers = getAllMarkersForTheseIndices(sustainableBuildings.indices, building_markers_array);
+            hookupCheckboxesToMarkers(select_checkbox_id, sustainableBuildings.checkbox_slug, sustainableBuildings_markers, sustainableBuildings.marker_icon);
+       
+            var bathroomBuildings = response.bathroomBuildings;
+            var bathroomBuildings_markers = getAllMarkersForTheseIndices(bathroomBuildings.indices, building_markers_array);
+            hookupCheckboxesToMarkers(select_checkbox_id, bathroomBuildings.checkbox_slug, bathroomBuildings_markers, bathroomBuildings.marker_icon);
         })
 
         /*
