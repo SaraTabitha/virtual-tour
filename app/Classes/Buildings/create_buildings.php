@@ -163,28 +163,13 @@ foreach($category_titles as $this_category_title){
 
 /*
 * params: 
-    this_category (string title of BuildingCategory)
-    building_list (complete array of Building objects)
-
-* filters through the Building objects and looks through their instance variable "building_categories" for matches to the specified BuildingCategory object title
-* return:
-     $buildings_that_have_this_category (array of Building objects that match the BuildingCategory)
+    this_BuildingCategory_title (string for BuildingCategory title)
+    building_list (array of all Building objects)
+* loops through all of the Building objects and checks their category array (instance variable) for whether or not the building
+* matches the this_BuildingCategory_title parameter
+* return: 
+    indices_of_buildings_that_have_this_category (array of ints for indices of the buildings that match the specified category)
 */
-// function getBuildingsForThisCategory($this_BuildingCategory_title, $building_list){
-//     $buildings_that_have_this_category = array_filter($building_list, function($this_building) use ($this_BuildingCategory_title){
-//         $categories_from_building = $this_building->getBuildingCategories();
-
-//         $matches = false;
-//         foreach($categories_from_building as $this_category){
-//             if(checkCategoryMatch($this_category, $this_BuildingCategory_title)){
-//                 $matches = true;
-//             }
-//         }
-//         return $matches;
-//     });
-//     return $buildings_that_have_this_category;
-// }
-
 function getIndicesOfBuildingsForThisCategory($this_BuildingCategory_title, $building_list){
     $indices_of_buildings_that_have_this_category = array();
     foreach($building_list as $index=>$this_building){
