@@ -156,10 +156,9 @@ $array_of_arrays_of_indices = array();
 
 //loops through each category and gets an array of buildings that belong in the category
 foreach($category_titles as $this_category_title){
-    $buildings_that_have_this_category = getBuildingsForThisCategory($this_category_title, $building_list);
-
+    $buildings_that_have_this_category = getIndicesOfBuildingsForThisCategory($this_category_title, $building_list);
     //TODO get indices for these buildings -> push indices array
-    //array_push($array_of_arrays_of_buildings, $buildings_that_have_this_category);
+    array_push($array_of_arrays_of_indices, $buildings_that_have_this_category);
 }
 
 /*
@@ -171,19 +170,32 @@ foreach($category_titles as $this_category_title){
 * return:
      $buildings_that_have_this_category (array of Building objects that match the BuildingCategory)
 */
-function getBuildingsForThisCategory($this_BuildingCategory_title, $building_list){
-    $buildings_that_have_this_category = array_filter($building_list, function($this_building) use ($this_BuildingCategory_title){
-        $categories_from_building = $this_building->getBuildingCategories();
+// function getBuildingsForThisCategory($this_BuildingCategory_title, $building_list){
+//     $buildings_that_have_this_category = array_filter($building_list, function($this_building) use ($this_BuildingCategory_title){
+//         $categories_from_building = $this_building->getBuildingCategories();
 
-        $matches = false;
+//         $matches = false;
+//         foreach($categories_from_building as $this_category){
+//             if(checkCategoryMatch($this_category, $this_BuildingCategory_title)){
+//                 $matches = true;
+//             }
+//         }
+//         return $matches;
+//     });
+//     return $buildings_that_have_this_category;
+// }
+
+function getIndicesOfBuildingsForThisCategory($this_BuildingCategory_title, $building_list){
+    $indices_of_buildings_that_have_this_category = array();
+    foreach($building_list as $index=>$this_building){
+        $categories_from_building = $this_building->getBuildingCategories();
         foreach($categories_from_building as $this_category){
             if(checkCategoryMatch($this_category, $this_BuildingCategory_title)){
-                $matches = true;
+               array_push($indices_of_buildings_that_have_this_category, $index);
             }
         }
-        return $matches;
-    });
-    return $buildings_that_have_this_category;
+    }
+    return $indices_of_buildings_that_have_this_category;
 }
 
 /*
@@ -204,8 +216,6 @@ function checkCategoryMatch($category_item_being_checked, $original_category){
         return false;
     }
 }
-
-
 
 
 ?>
