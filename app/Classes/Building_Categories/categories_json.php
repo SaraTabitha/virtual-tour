@@ -10,7 +10,6 @@
         array_push($object->buildingCategories->slugs, $item->getSlug());
         array_push($object->buildingCategories->youtube_urls, $item->getMedia());
     }
-    //TODO pass marker/markergroup data to json
 
     //$object = "hello";
     $json = json_encode($object);

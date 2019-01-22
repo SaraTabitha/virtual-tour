@@ -3,8 +3,6 @@
 
     $building_list; //array of Building objects
 
-
-    //TODO change $thumb url to load only when the marker is clicked (in map.js)
     foreach($building_list as $item){
         $slug = $item->getSlug();
         $title = $item->getTitle();

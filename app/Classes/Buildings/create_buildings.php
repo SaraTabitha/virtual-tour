@@ -160,7 +160,6 @@ $array_of_arrays_of_indices = array();
 //loops through each category and gets an array of buildings that belong in the category
 foreach($category_titles as $this_category_title){
     $buildings_that_have_this_category = getIndicesOfBuildingsForThisCategory($this_category_title, $building_list);
-    //TODO get indices for these buildings -> push indices array
     array_push($array_of_arrays_of_indices, $buildings_that_have_this_category);
 }
 
