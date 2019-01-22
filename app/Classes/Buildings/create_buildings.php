@@ -131,4 +131,81 @@ $slug = "gender";
 $checkboxColor = "#c1a3cb";
 $markerIcon = "images/markers/lightpurple.png";
 $bathroomBuildings = new MarkerGroup($slug, $checkboxColor, $markerIcon, $bathroom_building_indices);
+
+
+/*
+*  C A T E G O R I E S
+* necessary information:
+    know the difference between:
+        - BuildingCategories (objects for the menu items for categories)
+        - Buildings (objects for all building info)
+            -instance variable building_categories (array of strings for the categories that this building falls under)
+*
+*/
+
+$category_titles = array(); //array of BuildingCategory Titles
+
+//category_list -> array of all BuildingCategory objects
+//loops through an extracts all of the titles of the categories for the menu
+foreach($category_list as $building_category){
+    array_push($category_titles, $building_category->getTitle());
+} 
+
+//array of indices arrays that correspond to each BuildingCategory
+$array_of_arrays_of_indices = array();
+
+//loops through each category and gets an array of buildings that belong in the category
+foreach($category_titles as $this_category_title){
+    $buildings_that_have_this_category = getBuildingsForThisCategory($this_category_title, $building_list);
+
+    //TODO get indices for these buildings -> push indices array
+    //array_push($array_of_arrays_of_buildings, $buildings_that_have_this_category);
+}
+
+/*
+* params: 
+    this_category (string title of BuildingCategory)
+    building_list (complete array of Building objects)
+
+* filters through the Building objects and looks through their instance variable "building_categories" for matches to the specified BuildingCategory object title
+* return:
+     $buildings_that_have_this_category (array of Building objects that match the BuildingCategory)
+*/
+function getBuildingsForThisCategory($this_BuildingCategory_title, $building_list){
+    $buildings_that_have_this_category = array_filter($building_list, function($this_building) use ($this_BuildingCategory_title){
+        $categories_from_building = $this_building->getBuildingCategories();
+
+        $matches = false;
+        foreach($categories_from_building as $this_category){
+            if(checkCategoryMatch($this_category, $this_BuildingCategory_title)){
+                $matches = true;
+            }
+        }
+        return $matches;
+    });
+    return $buildings_that_have_this_category;
+}
+
+/*
+* param:
+    category_item_being_checked (string of a category title from the list of "building_categories" inside of a Building object)
+    original_category (string of the title of a BuildingCategory object)
+
+* function to check if the building category inside of a Building matches up to the particular category being checked fors
+*/
+function checkCategoryMatch($category_item_being_checked, $original_category){
+    if(strcmp($category_item_being_checked, $original_category) == 0){
+        //match
+        return true;
+        
+    }
+    else{
+        //does not match
+        return false;
+    }
+}
+
+
+
+
 ?>
