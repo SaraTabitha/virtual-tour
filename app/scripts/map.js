@@ -1013,12 +1013,10 @@ function initMap() {
             hookupCheckboxesToMarkers(select_checkbox_id, bathroomBuildings.checkbox_slug, bathroomBuildings_markers, bathroomBuildings.marker_icon);
         
             var categories = response.categories;
-            //var array_of_category_markers = [];
             categories.forEach(function(this_category){
                 var category_markers = getAllMarkersForTheseIndices(this_category.indices, building_markers_array);
                 hookupCheckboxesToMarkers(select2_checkbox_id, this_category.checkbox_slug, category_markers, this_category.marker_icon);
             });
-            //console.log(array_of_category_markers);
             
         })
 
