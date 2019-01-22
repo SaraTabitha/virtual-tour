@@ -822,6 +822,17 @@ function initMap() {
                 else{
                     //checkbox unchecked
                     removeMarkers(markers_array);
+
+                    //TODO -> upon uncheck, check if checkboxes in this group are still checked (reset markers on map so they don't disappear)
+                
+                }
+            });
+        }
+
+        function reset_checkedMarkers(markerGroups_array, group_slugs, group_icons){
+            group_slugs.forEach(function(this_slug, index){
+                if($("#" + slug + "Label").hasClass("is-checked")){
+                    setMarkers(markers_array[index], icon[index]); 
                 }
             });
         }

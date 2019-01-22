@@ -649,7 +649,7 @@ ul#popupNav li:hover{
   position: relative;
 }
 
-#reeveDiningText p{
+/* #reeveDiningText p{
   margin-bottom: 4px;
 }
 #reeveDiningImage ul{
@@ -690,8 +690,8 @@ ul#popupNav li:hover{
 #blackhawkDiningText p{
   margin: 0px;
   padding: 0px;
-}
-#albeeTourVideo{
+} */
+/* #albeeTourVideo{
   display: none;
 }
 #albeeTourText{
@@ -837,7 +837,7 @@ ul#popupNav li:hover{
 }
 #policeBathrooms{
   display: none;
-}
+} */
 
 
 
@@ -959,7 +959,7 @@ ul#popupNav li:hover{
       font-size: 10px;
       color: black;
   }
-  .parkingColorStaff{
+  /* .parkingColorStaff{
     top: -10px;
   }
   .parkingColorRemote{
@@ -985,7 +985,7 @@ ul#popupNav li:hover{
   }
   .parkingColorVisitor{
       top: -10px;
-  }
+  } */
 
   /*styling google vr*/
   .vr{
@@ -1150,7 +1150,7 @@ ul#popupNav li:hover{
 
 
 
-  #twentythreeHover{
+  /* #twentythreeHover{
     width: 130px;
   }
   #sevenHover{
@@ -1183,7 +1183,7 @@ ul#popupNav li:hover{
   }
   #horizonPopup{
     height: 515px;
-  }
+  } */
 
   /*popup stuff continued*/
 
@@ -1197,7 +1197,7 @@ ul#popupNav li:hover{
   h1.text.yellow{
     margin: 0px;
   }
-  #parkingRampParkingImage{
+  /* #parkingRampParkingImage{
     width: 715px;
     padding: 10px;
 
@@ -1205,7 +1205,7 @@ ul#popupNav li:hover{
   #parkingRampParkingImage img{
     display: block;
     margin: 0 auto;
-  }
+  } */
 
   a.address{
     position: relative;
@@ -1430,13 +1430,7 @@ ul#popupNav li:hover{
     top: 70px !important;
     transition: top .3s cubic-bezier(0.0, 0.0, 0.2, 1);
     }
-    .cardOpen{
-      /*-webkit-transition-duration: .2s;
-      transition-duration: .2s;
-      -webkit-transition-timing-function: cubic-bezier(.4,0,.2,1);
-      transition-timing-function: cubic-bezier(.4,0,.2,1);
-      -webkit-transition-property: -webkit-transform;
-      transition-property: transform;*/
+    .cardOpen{ 
       z-index: 2 !important;
       /*curve for slide out/in*/
 
@@ -1642,7 +1636,7 @@ ul#popupNav li:hover{
         height: 80px;
         width: 160px;
     }
-    #equityHover, #recreationHover{
+    /* #equityHover, #recreationHover{
     width: 185px;
     }
     #equityHover h1.headHover, #recreationHover h1.headHover{
@@ -1656,7 +1650,7 @@ ul#popupNav li:hover{
     }
     #environmentalHover{
         height: 100px;
-    }
+    } */
     .imageHover{
     display: none;
     }
@@ -1691,7 +1685,7 @@ ul#popupNav li:hover{
     .parkingHover{
     height: 60px;
     }
-    .commuterHover{
+    /* .commuterHover{
     height: 110px;
     }
     #twentythreeHover {
@@ -1706,14 +1700,14 @@ ul#popupNav li:hover{
     }
     #womensCenterHover{
         height: 70px;
-    }
+    } */
 
     h1.parkingHeadHover{
     font-size: 10px;
     color: black;
     }
 
-    .parkingColorStaff{
+    /* .parkingColorStaff{
     top: -10px;
 
     }
@@ -1744,7 +1738,7 @@ ul#popupNav li:hover{
 
     .parkingColorVisitor{
         top: -10px;
-    }
+    } */
 
 
 
@@ -2187,12 +2181,7 @@ ul#popupNav li:hover{
         overflow-y:  scroll;
     }
 }
-/*when window shrinks under a certain size the category page becomes scrollable*/
-/* @media screen and (max-width: 400px) {
-    #stuRCard{
-        overflow-y:  scroll;
-    }
-} */
+
 /*popup styling under 500px width*/
 @media screen and (max-width: 500px){
     ul#popupNav {
