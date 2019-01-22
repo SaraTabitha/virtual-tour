@@ -10,9 +10,11 @@
     $object->sustainableBuildings = $sustainableBuildings->createIndicesJSONObject();
     $object->bathroomBuildings = $bathroomBuildings->createIndicesJSONObject();
 
-    $object->categories = $array_of_arrays_of_indices;
+    $object->categories = array();
+    foreach($category_markerGroups as $this_category_markerGroup){
+        array_push($object->categories, $this_category_markerGroup->createIndicesJSONObject());
+    }   
 
-    
     $json = json_encode($object);
     echo $json;
 

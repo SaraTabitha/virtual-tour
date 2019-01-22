@@ -144,11 +144,14 @@ $bathroomBuildings = new MarkerGroup($slug, $checkboxColor, $markerIcon, $bathro
 */
 
 $category_titles = array(); //array of BuildingCategory Titles
+$category_slugs = array(); //strings of BuildingCategory Slugs
 
 //category_list -> array of all BuildingCategory objects
-//loops through an extracts all of the titles of the categories for the menu
+//loops through an extracts all of the titles & slugs of the categories for the menu
 foreach($category_list as $building_category){
     array_push($category_titles, $building_category->getTitle());
+    array_push($category_slugs, $building_category->getSlug());
+
 } 
 
 //array of indices arrays that correspond to each BuildingCategory
@@ -200,6 +203,15 @@ function checkCategoryMatch($category_item_being_checked, $original_category){
         //does not match
         return false;
     }
+}
+
+$category_checkboxColors = ["#981d23", "#f17844", "#875547", "#0e5846", "#8dd4e2", "#282a72", "#5f318f"];
+$category_markerIcons = ["images/markers/maroon.png", "images/markers/orange.png", "images/markers/brown.png", "images/markers/darkgreen.png", "images/markers/lightblue.png", "images/markers/navy.png", "images/markers/darkpurple.png"];
+$category_markerGroups = array();
+
+//creates marker groups for each BuildingCategory
+foreach($array_of_arrays_of_indices as $index=>$indices_for_this_category){
+    array_push($category_markerGroups, new MarkerGroup($category_slugs[$index], $category_checkboxColors[$index], $category_markerIcons[$index], $indices_for_this_category));
 }
 
 
