@@ -748,7 +748,7 @@ function initMap() {
         */
         get("../Classes/Emergency_Phones/phones_json.php").then(function(response){
             //var select_checkbox_id = "selectAllOne";
-            var checkbox_slug = "emergency"; //TODO: have this variable only be set in one place
+            var checkbox_slug = "emergency"; 
             var emergencyPhones_markers_array = createMarkersFromResponse(response);
             var emergencyPhones_icon_url = response.icon;
             hookupCheckboxesToMarkers(select_checkbox_id, checkbox_slug, emergencyPhones_markers_array, emergencyPhones_icon_url);
