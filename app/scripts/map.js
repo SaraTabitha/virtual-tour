@@ -763,9 +763,14 @@ function initMap() {
             icon_url (string url of an icon image for the markers)
         * Stores marker array by calling createMarkersFromResponse and then passes it to a function that creates the Checkboxes event listener
         */
-        function hookupCheckboxesToMarkers(select_checkbox_id, checkbox_slug, markers_array, icon_url){
+        function hookupCheckboxesToMarkers(select_checkbox_id, checkbox_slug, markers_array, icon_url, markerGroups_array, group_slugs, group_icons){
+
             selectAllEventListener(select_checkbox_id, checkbox_slug, markers_array, icon_url);
-            checkboxOnChange(checkbox_slug, markers_array, icon_url); //individual checkbox
+
+            //todo params: group[index]
+           // checkboxOnChange(checkbox_slug, markers_array, icon_url); //individual checkbox
+           checkboxCheck(checkbox_slug, markers_array, icon_url);
+           checkboxUncheck(checkbox_slug, markers_array,  markerGroups_array, group_slugs, group_icons)
         }
 
         /*
@@ -781,7 +786,7 @@ function initMap() {
 
             return markers_array;
         }
-
+ 
         /*
         * Params: titles_arr(array of strings containing titles for the markers)
         *         lat_arr(array of strings of the latitudes for the markers)
@@ -813,18 +818,37 @@ function initMap() {
         * If the checkbox is checked -> put the markers in the markers_array on the map w/ the right icon image
         * Else if the checkbox is not checked -> remove the markers from the markers_array from the map
         */
-        function checkboxOnChange(slug, markers_array, icon){
+        // function checkboxOnChange(slug, markers_array, icon){
+        //     $("#" + slug).change(function(){
+        //         if($("#" + slug + "Label").hasClass("is-checked")){
+        //             //checkbox checked
+        //             setMarkers(markers_array, icon); 
+        //         }
+        //         else{
+        //             //checkbox unchecked
+        //             removeMarkers(markers_array);
+
+        //             //TODO -> upon uncheck, check if checkboxes in this group are still checked (reset markers on map so they don't disappear)
+                
+        //         }
+        //     });
+        // }
+
+        function checkboxCheck(slug, markers_array, icon){
             $("#" + slug).change(function(){
                 if($("#" + slug + "Label").hasClass("is-checked")){
-                    //checkbox checked
-                    setMarkers(markers_array, icon); 
+                    setMarkers(markers_array, icon);
                 }
-                else{
-                    //checkbox unchecked
-                    removeMarkers(markers_array);
+            });
+        }
 
-                    //TODO -> upon uncheck, check if checkboxes in this group are still checked (reset markers on map so they don't disappear)
-                
+        function checkboxUncheck(this_slug, this_markers_array,  markerGroups_array, group_slugs, group_icons){
+            $("#" + this_slug).change(function(){
+                if(!$("#" + this_slug + "Label").hasClass("is-checked")){
+                    removeMarkers(this_markers_array);
+                    if(markerGroups_array!=null && group_slugs!=null && group_icons!=null){
+                        reset_checkedMarkers(markerGroups_array, group_slugs, group_icons);
+                    }
                 }
             });
         }
@@ -832,7 +856,7 @@ function initMap() {
         function reset_checkedMarkers(markerGroups_array, group_slugs, group_icons){
             group_slugs.forEach(function(this_slug, index){
                 if($("#" + slug + "Label").hasClass("is-checked")){
-                    setMarkers(markers_array[index], icon[index]); 
+                    setMarkers(markerGroups_array[index], group_icons[index]); 
                 }
             });
         }
@@ -896,6 +920,9 @@ function initMap() {
             var accessibleParking = response.accessibleParking;
             var accessibleParking_markers = getAllMarkersForTheseIndices(accessibleParking.indices, all_parking_markers_array);
             hookupCheckboxesToMarkers(select_checkbox_id, accessibleParking.checkbox_slug, accessibleParking_markers, accessibleParking.marker_icon);
+        
+        
+           // hookupCheckboxesToMarkers(select_checkbox_id, checkbox_slug, markers_array, icon_url, markerGroups_array, group_slugs, group_icons)
         })
 
         /*
