@@ -816,24 +816,8 @@ function initMap() {
         * Creates an onChange eventlistener for the checkbox
         * Checks if the checkbox's label has the "is-checked" class
         * If the checkbox is checked -> put the markers in the markers_array on the map w/ the right icon image
-        * Else if the checkbox is not checked -> remove the markers from the markers_array from the map
+        
         */
-        // function checkboxOnChange(slug, markers_array, icon){
-        //     $("#" + slug).change(function(){
-        //         if($("#" + slug + "Label").hasClass("is-checked")){
-        //             //checkbox checked
-        //             setMarkers(markers_array, icon); 
-        //         }
-        //         else{
-        //             //checkbox unchecked
-        //             removeMarkers(markers_array);
-
-        //             //TODO -> upon uncheck, check if checkboxes in this group are still checked (reset markers on map so they don't disappear)
-                
-        //         }
-        //     });
-        // }
-
         function checkboxCheck(slug, markers_array, icon){
             $("#" + slug).change(function(){
                 if($("#" + slug + "Label").hasClass("is-checked")){
@@ -842,6 +826,10 @@ function initMap() {
             });
         }
 
+        /*
+        //TODO comment
+        * Else if the checkbox is not checked -> remove the markers from the markers_array from the map
+        */
         function checkboxUncheck(this_slug, this_markers_array,  markerGroups_array, group_slugs, group_icons){
             $("#" + this_slug).change(function(){
                 if(!$("#" + this_slug + "Label").hasClass("is-checked")){
@@ -852,7 +840,7 @@ function initMap() {
                 }
             });
         }
-
+        //TODO comment
         function reset_checkedMarkers(markerGroups_array, group_slugs, group_icons){
             group_slugs.forEach(function(this_slug, index){
                 if($("#" + this_slug + "Label").hasClass("is-checked")){
@@ -913,14 +901,12 @@ function initMap() {
             var checkbox_slug = "parking"; 
             var allParking = response.allParking;
             var all_parking_markers_array = createMarkersFromResponse(allParking);
-            //hookupCheckboxesToMarkers(select_checkbox_id, checkbox_slug, all_parking_markers_array, allParking.icon);
 
             var all_parking_infoWindows = createInfoWindows(allParking.slugs);
             setMarkerClick_openCloseInfo(all_parking_infoWindows, all_parking_markers_array);
 
             var accessibleParking = response.accessibleParking;
             var accessibleParking_markers = getAllMarkersForTheseIndices(accessibleParking.indices, all_parking_markers_array);
-            //hookupCheckboxesToMarkers(select_checkbox_id, accessibleParking.checkbox_slug, accessibleParking_markers, accessibleParking.marker_icon);
 
             var markerGroups_array = [all_parking_markers_array, accessibleParking_markers];
             var group_slugs = [checkbox_slug, accessibleParking.checkbox_slug];
