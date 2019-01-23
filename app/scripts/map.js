@@ -855,7 +855,7 @@ function initMap() {
 
         function reset_checkedMarkers(markerGroups_array, group_slugs, group_icons){
             group_slugs.forEach(function(this_slug, index){
-                if($("#" + slug + "Label").hasClass("is-checked")){
+                if($("#" + this_slug + "Label").hasClass("is-checked")){
                     setMarkers(markerGroups_array[index], group_icons[index]); 
                 }
             });
@@ -913,16 +913,21 @@ function initMap() {
             var checkbox_slug = "parking"; 
             var allParking = response.allParking;
             var all_parking_markers_array = createMarkersFromResponse(allParking);
-            hookupCheckboxesToMarkers(select_checkbox_id, checkbox_slug, all_parking_markers_array, allParking.icon);
+            //hookupCheckboxesToMarkers(select_checkbox_id, checkbox_slug, all_parking_markers_array, allParking.icon);
+
             var all_parking_infoWindows = createInfoWindows(allParking.slugs);
             setMarkerClick_openCloseInfo(all_parking_infoWindows, all_parking_markers_array);
 
             var accessibleParking = response.accessibleParking;
             var accessibleParking_markers = getAllMarkersForTheseIndices(accessibleParking.indices, all_parking_markers_array);
-            hookupCheckboxesToMarkers(select_checkbox_id, accessibleParking.checkbox_slug, accessibleParking_markers, accessibleParking.marker_icon);
-        
-        
-           // hookupCheckboxesToMarkers(select_checkbox_id, checkbox_slug, markers_array, icon_url, markerGroups_array, group_slugs, group_icons)
+            //hookupCheckboxesToMarkers(select_checkbox_id, accessibleParking.checkbox_slug, accessibleParking_markers, accessibleParking.marker_icon);
+
+            var markerGroups_array = [all_parking_markers_array, accessibleParking_markers];
+            var group_slugs = [checkbox_slug, accessibleParking.checkbox_slug];
+            var group_icons = [allParking.icon, accessibleParking.marker_icon];
+            hookupCheckboxesToMarkers(select_checkbox_id, checkbox_slug, all_parking_markers_array, allParking.icon, markerGroups_array, group_slugs, group_icons)
+            hookupCheckboxesToMarkers(select_checkbox_id, accessibleParking.checkbox_slug, accessibleParking_markers, accessibleParking.marker_icon, markerGroups_array, group_slugs, group_icons)
+
         })
 
         /*
