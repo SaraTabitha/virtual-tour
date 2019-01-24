@@ -1088,6 +1088,9 @@ function initMap() {
         function building_createMarkersAndInfoWindows(building_json, slugs_array){
             var markers_array = createMarkersFromResponse(building_json);
             var infoWindows_array = createInfoWindows(slugs_array);
+
+            moreInfoLinkClickEvent(slugs_array);
+            popupCloseButtonClickEvent(slugs_array);
     
             var map_objects = [markers_array, infoWindows_array];
             return map_objects;
@@ -1117,6 +1120,42 @@ function initMap() {
             if($("#" + infoWindow_id).hasClass("generalHover")){
                 $("#" + infoWindow_id + "Thumbnail").attr("src", "#");
             }
+        }
+
+        //TODO comment
+        function moreInfoLinkClickEvent(slugs_array){
+            slugs_array.forEach(function(this_slug){
+                 $("#" + this_slug + "Link").click(function(){
+                     openPopup(this_slug);
+                 });
+            });
+        }
+        //TODO comment
+        function popupCloseButtonClickEvent(slugs_array){
+             slugs_array.forEach(function(this_slug){
+                 $("#" + this_slug + "PopupClose").click(function(){
+                     closePopup(this_slug);
+                 })
+             });
+        }
+     
+        // TODO: ugh tabs
+
+        //TODO comment
+        function openPopup(slug){
+             $("#overlay").css('visiibility', 'visible');
+             $("#overlay").animate({"opacity": "0.3"}, "slow");
+     
+             $("#" + slug + "Popup").css('visibility', 'visible');
+             $("#" + slug + "Popup").animate({'opacity': "1"}, "slow");
+        }
+        //TODO comment
+        function closePopup(slug){
+             $("#overlay").animate({'opacity': '0'}, "slow");
+             $("#overlay").css('visibility', "hidden");
+     
+             $("#" + slug + "Popup").animate({"opacity": "0"}, "slow");
+             $("#" + slug + "Popup").css("visibility", "hidden");
         }
         
         // setting sustainability markers
