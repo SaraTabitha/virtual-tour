@@ -95,7 +95,6 @@
                                 -no media tab template-
                             }
                             */
-                            }
                             ?>
                                 <!-- start tour tab -->
                                 <div id="<?php echo $slug; ?>TourText" class="tourText">
@@ -178,5 +177,6 @@
     function noMediaTabTemplate($slug, $tab_text){
 
     }
+    
     //TODO... how to mark tabs that have media/no media, video/image -> to be set/removed from src/url in javascript (map.js)
 ?>
