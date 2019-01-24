@@ -767,10 +767,8 @@ function initMap() {
 
             selectAllEventListener(select_checkbox_id, checkbox_slug, markers_array, icon_url);
 
-            //todo params: group[index]
-           // checkboxOnChange(checkbox_slug, markers_array, icon_url); //individual checkbox
-           checkboxCheck(checkbox_slug, markers_array, icon_url);
-           checkboxUncheck(checkbox_slug, markers_array,  markerGroups_array, group_slugs, group_icons)
+            checkboxCheck(checkbox_slug, markers_array, icon_url);
+            checkboxUncheck(checkbox_slug, markers_array,  markerGroups_array, group_slugs, group_icons);
         }
 
         /*
@@ -816,7 +814,6 @@ function initMap() {
         * Creates an onChange eventlistener for the checkbox
         * Checks if the checkbox's label has the "is-checked" class
         * If the checkbox is checked -> put the markers in the markers_array on the map w/ the right icon image
-        
         */
         function checkboxCheck(slug, markers_array, icon){
             $("#" + slug).change(function(){
@@ -1008,7 +1005,7 @@ function initMap() {
             return all_markers_for_these_indices;
         }
 
-         /*
+        /*
         * Buildings 
         *   -pre-defined categories:
         *       -all buildings
@@ -1021,8 +1018,6 @@ function initMap() {
         *       -building attached to each category is defined by checking them in the categories list when a building is created/edited in the CMS
         */
         get("../Classes/Buildings/buildings_json.php").then(function(response){
-            console.log(response);
-
             //all buildings
             var checkbox_slug = "buildings";
             var allBuildings = response.allBuildings;
@@ -1033,13 +1028,12 @@ function initMap() {
             var building_markers_array = building_map_objects[0];
             var building_infoWindows_array = building_map_objects[1];
             var building_thumbnail_array = response.allBuildings.thumbnail_urls;
-            hookupCheckboxesToMarkers(select_checkbox_id,checkbox_slug, building_markers_array, allBuildings.icon);
+            //hookupCheckboxesToMarkers(select_checkbox_id,checkbox_slug, building_markers_array, allBuildings.icon);
 
            
             //if google.maps.Marker is clicked -> open corresponding google.maps.InfoWindow
             setMarkerClick_openCloseInfo(building_infoWindows_array, building_markers_array, building_thumbnail_array);
             
-            console.log(building_map_objects);
 
             //set building markers on page load
             setMarkers(building_markers_array, allBuildings.icon);
@@ -1048,22 +1042,41 @@ function initMap() {
             //accessible, sustainable and bathroom Buildings
             var accessibleBuildings = response.accessibleBuildings;
             var accessibleBuilding_markers = getAllMarkersForTheseIndices(accessibleBuildings.indices, building_markers_array);
-            hookupCheckboxesToMarkers(select_checkbox_id, accessibleBuildings.checkbox_slug, accessibleBuilding_markers, accessibleBuildings.marker_icon);
+            //hookupCheckboxesToMarkers(select_checkbox_id, accessibleBuildings.checkbox_slug, accessibleBuilding_markers, accessibleBuildings.marker_icon);
         
             var sustainableBuildings = response.sustainableBuildings;
             var sustainableBuildings_markers = getAllMarkersForTheseIndices(sustainableBuildings.indices, building_markers_array);
-            hookupCheckboxesToMarkers(select_checkbox_id, sustainableBuildings.checkbox_slug, sustainableBuildings_markers, sustainableBuildings.marker_icon);
+           // hookupCheckboxesToMarkers(select_checkbox_id, sustainableBuildings.checkbox_slug, sustainableBuildings_markers, sustainableBuildings.marker_icon);
        
             var bathroomBuildings = response.bathroomBuildings;
             var bathroomBuildings_markers = getAllMarkersForTheseIndices(bathroomBuildings.indices, building_markers_array);
-            hookupCheckboxesToMarkers(select_checkbox_id, bathroomBuildings.checkbox_slug, bathroomBuildings_markers, bathroomBuildings.marker_icon);
+            //hookupCheckboxesToMarkers(select_checkbox_id, bathroomBuildings.checkbox_slug, bathroomBuildings_markers, bathroomBuildings.marker_icon);
         
+
+            var markerGroups_array = [building_markers_array, accessibleBuilding_markers, sustainableBuildings_markers, bathroomBuildings_markers];
+            var group_slugs = [checkbox_slug, accessibleBuildings.checkbox_slug, sustainableBuildings.checkbox_slug, bathroomBuildings.checkbox_slug];
+            var group_icons = [allBuildings.icon, accessibleBuildings.marker_icon, sustainableBuildings.marker_icon, bathroomBuildings.marker_icon];
+
             var categories = response.categories;
+            var category_markers_array = [];
             categories.forEach(function(this_category){
                 var category_markers = getAllMarkersForTheseIndices(this_category.indices, building_markers_array);
-                hookupCheckboxesToMarkers(select2_checkbox_id, this_category.checkbox_slug, category_markers, this_category.marker_icon);
+                category_markers_array.push(category_markers);
+                markerGroups_array.push(category_markers);
+                group_slugs.push(this_category.checkbox_slug);
+                group_icons.push(this_category.marker_icon);
+               // hookupCheckboxesToMarkers(select2_checkbox_id, this_category.checkbox_slug, category_markers, this_category.marker_icon);
             });
-            
+
+            hookupCheckboxesToMarkers(select_checkbox_id,checkbox_slug, building_markers_array, allBuildings.icon, markerGroups_array, group_slugs, group_icons);
+            hookupCheckboxesToMarkers(select_checkbox_id, accessibleBuildings.checkbox_slug, accessibleBuilding_markers, accessibleBuildings.marker_icon, markerGroups_array, group_slugs, group_icons);
+            hookupCheckboxesToMarkers(select_checkbox_id, sustainableBuildings.checkbox_slug, sustainableBuildings_markers, sustainableBuildings.marker_icon, markerGroups_array, group_slugs, group_icons);
+            hookupCheckboxesToMarkers(select_checkbox_id, bathroomBuildings.checkbox_slug, bathroomBuildings_markers, bathroomBuildings.marker_icon, markerGroups_array, group_slugs, group_icons);
+
+            categories.forEach(function(this_category, index){
+                hookupCheckboxesToMarkers(select2_checkbox_id, this_category.checkbox_slug, category_markers_array[index], this_category.marker_icon, markerGroups_array, group_slugs, group_icons);
+
+            });
         })
 
         /*
