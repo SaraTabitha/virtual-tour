@@ -765,7 +765,7 @@ function initMap() {
         */
         function hookupCheckboxesToMarkers(select_checkbox_id, checkbox_slug, markers_array, icon_url, markerGroups_array, group_slugs, group_icons){
 
-            selectAllEventListener(select_checkbox_id, checkbox_slug, markers_array, icon_url);
+            selectAllEventListener(select_checkbox_id, checkbox_slug, markers_array, icon_url, markerGroups_array, group_slugs, group_icons);
 
             checkboxCheck(checkbox_slug, markers_array, icon_url);
             checkboxUncheck(checkbox_slug, markers_array,  markerGroups_array, group_slugs, group_icons);
@@ -891,12 +891,16 @@ function initMap() {
         *  Sets up an event listener for the first Select All checkbox in the menu, adds the passed marker_array
         *  to the set of markers that gets added & removed based on the Select All checkbox being checked/unchecked
         */
-        function selectAllEventListener(select_checkbox_id, checkbox_slug, markers_array, icon_url){
+        function selectAllEventListener(select_checkbox_id, checkbox_slug, markers_array, icon_url, markerGroups_array, group_slugs, group_icons){
             $("#" + select_checkbox_id).change(function(){
                 if( !$("#" + select_checkbox_id).hasClass("is-checked") ){
                     //unchecked
                     removeMarkers(markers_array);
                     document.getElementById(checkbox_slug + "Label").MaterialCheckbox.uncheck();
+                    
+                    if(markerGroups_array!=null && group_slugs!=null && group_icons!=null){
+                        reset_checkedMarkers(markerGroups_array, group_slugs, group_icons);
+                    }
                 }else{
                     //checked
                     setMarkers(markers_array, icon_url);
