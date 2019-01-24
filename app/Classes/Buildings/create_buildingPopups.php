@@ -79,11 +79,23 @@
                         <div id="<?php echo $slug;?>AboutText" class="popupText">
                                 <h5 class="heading">About this Building</h5>
                                 <!-- this is going to be a paragraph inside of a paragraph -_- -->
-                                <p class="subText text"> <?php echo $about_tab_content; ?></p>
+                                <p class="subText text"><?php echo $about_tab_content; ?></p>
                         </div>
                         <!-- end about tab -->
                         <?php
                         if(tabHasContent($tour_tab_content)){
+
+                            /*if(tabHasMedia){
+                                if(mediaIsVideo){
+                                    -video tab template-
+                                }else if(mediaIsImage){
+                                    -image tab template-
+                                }
+                            }else{
+                                -no media tab template-
+                            }
+                            */
+                            }
                             ?>
                                 <!-- start tour tab -->
                                 <div id="<?php echo $slug; ?>TourText" class="tourText">
