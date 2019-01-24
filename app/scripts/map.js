@@ -827,8 +827,16 @@ function initMap() {
         }
 
         /*
-        //TODO comment
+        * params:
+            this_slug (string slug for the checkbox id)
+            this_markers_array (array of markers for the one checkbox)
+            markerGroups_array (array of all marker groups related to the group of checkboxes that this checkbox is related to)
+            group_slugs (array of slugs related to the group of checkboxes that this checkbox is related to)
+            group_icons (array of icons for the markers in the groups of the other checkboxes)
         * Else if the checkbox is not checked -> remove the markers from the markers_array from the map
+        * also if this checkbox belongs to a group of checkboxes make sure that when this checkbox is unchecked the markers
+        * for the other groups are reset
+        * note: the reset_checkedMarkers is a fix for markers disappearing from other groups when one checkbox is unchecked
         */
         function checkboxUncheck(this_slug, this_markers_array,  markerGroups_array, group_slugs, group_icons){
             $("#" + this_slug).change(function(){
@@ -840,7 +848,16 @@ function initMap() {
                 }
             });
         }
-        //TODO comment
+        
+        /*
+        * params:
+            markerGroups_array (array of groups of markers)
+            group_slugs (array of slugs for a checkbox group)
+            group_icons (array of marker icon urls for the checkbox group)
+        * when a checkbox is unchecked it may result in markers disappearing from other checkbox markerGroups that are shown, 
+        * to prevent this when a checkbox is unchecked this function goes through the group of shared markers and resets the marker
+        * groups so that any missing markers are no longer missing
+        */
         function reset_checkedMarkers(markerGroups_array, group_slugs, group_icons){
             group_slugs.forEach(function(this_slug, index){
                 if($("#" + this_slug + "Label").hasClass("is-checked")){
