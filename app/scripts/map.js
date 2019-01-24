@@ -885,7 +885,7 @@ function initMap() {
             });
         }
 
-        /*
+        /*TODO update comments
         * Params: marker_array (array of google.maps.Marker objects)
         *         icon_url (string containing url for the marker icon image)
         *  Sets up an event listener for the first Select All checkbox in the menu, adds the passed marker_array
@@ -897,7 +897,7 @@ function initMap() {
                     //unchecked
                     removeMarkers(markers_array);
                     document.getElementById(checkbox_slug + "Label").MaterialCheckbox.uncheck();
-                    
+
                     if(markerGroups_array!=null && group_slugs!=null && group_icons!=null){
                         reset_checkedMarkers(markerGroups_array, group_slugs, group_icons);
                     }
@@ -1032,8 +1032,6 @@ function initMap() {
             var building_markers_array = building_map_objects[0];
             var building_infoWindows_array = building_map_objects[1];
             var building_thumbnail_array = response.allBuildings.thumbnail_urls;
-            //hookupCheckboxesToMarkers(select_checkbox_id,checkbox_slug, building_markers_array, allBuildings.icon);
-
            
             //if google.maps.Marker is clicked -> open corresponding google.maps.InfoWindow
             setMarkerClick_openCloseInfo(building_infoWindows_array, building_markers_array, building_thumbnail_array);
@@ -1046,15 +1044,12 @@ function initMap() {
             //accessible, sustainable and bathroom Buildings
             var accessibleBuildings = response.accessibleBuildings;
             var accessibleBuilding_markers = getAllMarkersForTheseIndices(accessibleBuildings.indices, building_markers_array);
-            //hookupCheckboxesToMarkers(select_checkbox_id, accessibleBuildings.checkbox_slug, accessibleBuilding_markers, accessibleBuildings.marker_icon);
         
             var sustainableBuildings = response.sustainableBuildings;
             var sustainableBuildings_markers = getAllMarkersForTheseIndices(sustainableBuildings.indices, building_markers_array);
-           // hookupCheckboxesToMarkers(select_checkbox_id, sustainableBuildings.checkbox_slug, sustainableBuildings_markers, sustainableBuildings.marker_icon);
        
             var bathroomBuildings = response.bathroomBuildings;
             var bathroomBuildings_markers = getAllMarkersForTheseIndices(bathroomBuildings.indices, building_markers_array);
-            //hookupCheckboxesToMarkers(select_checkbox_id, bathroomBuildings.checkbox_slug, bathroomBuildings_markers, bathroomBuildings.marker_icon);
         
 
             var markerGroups_array = [building_markers_array, accessibleBuilding_markers, sustainableBuildings_markers, bathroomBuildings_markers];
@@ -1069,7 +1064,6 @@ function initMap() {
                 markerGroups_array.push(category_markers);
                 group_slugs.push(this_category.checkbox_slug);
                 group_icons.push(this_category.marker_icon);
-               // hookupCheckboxesToMarkers(select2_checkbox_id, this_category.checkbox_slug, category_markers, this_category.marker_icon);
             });
 
             hookupCheckboxesToMarkers(select_checkbox_id,checkbox_slug, building_markers_array, allBuildings.icon, markerGroups_array, group_slugs, group_icons);
