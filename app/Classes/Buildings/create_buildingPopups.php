@@ -166,4 +166,17 @@
     function extractTabMedia(){
 
     }
+
+    function videoTabTemplate($slug, $tab_text){
+
+    }
+
+    function imageTabTemplate($slug, $tab_text){
+
+    }
+
+    function noMediaTabTemplate($slug, $tab_text){
+
+    }
+    //TODO... how to mark tabs that have media/no media, video/image -> to be set/removed from src/url in javascript (map.js)
 ?>
