@@ -10,27 +10,32 @@ class Tab{
     private $title;
     private $content;
     private $media;
+    
+    private $hasVideo = false;
+    private $hasImage = false;
 
     public function __construct($slug, $title, $content){
         $this->title = $title;
         $this->content = $content;
 
-        if(extractMedia($this->content) !== false){
+        if(hasMedia($this->content) == 1){
+            $this->hasVideo = true;
+        }
+        else if(hasMedia($this->content) == 2){
+            $this->hasImage = true;
+        }
+
+        if(($this->hasVideo == true) ||  ($this->hasImage == true)){
             $this->media = extractMedia($this->content);
         }
         
     }
 
     function extractMedia($content){
-        if(hasMedia($content) !== false){
-            $start = getStringStart($content);
-            $length = getStringLength($content);
+        $start = getStringStart($content);
+        $length = getStringLength($content);
 
-            return substr($content, $start, $length);
-        }
-        else{
-            return false;
-        }
+        return substr($content, $start, $length);
     }
 
     function hasMedia($string){
@@ -46,10 +51,10 @@ class Tab{
     }
 
     function getStringStart($string){
-        if(hasMedia($string) == 1){
+        if($this->hasVideo){
             return strpos($string, "[embed]");
         }
-        else if(hasMedia($string) == 2){
+        else if($this->hasImage){
             return strpos($string, "<img");
         }
         else{
@@ -57,10 +62,10 @@ class Tab{
         }
     }
     function getStringEnd($string){
-        if(hasMedia($string) == 1){
+        if($this->hasVideo){
             return strpos($string, "[/embed]");
         }
-        else if(hasMedia($string) == 2){
+        else if($this->hasImage){
             return strpos($string, "/>");
         }
         else{

@@ -53,7 +53,6 @@ class Building{
         $this->thumb_image = $thumb_image;
         $this->building_categories = $building_categories;
         $this->marker = $marker;
-
         $this->about_tab_content = $about_tab_content;
 
         $this->tour_tab_content = $tour_tab_content;
