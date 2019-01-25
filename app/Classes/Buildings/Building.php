@@ -7,6 +7,8 @@
 *   All of that information is stored in this classes instance variables, including info 
 *   stored in instantiated objects of Markers, InfoWindows & Popups. 
 */
+require_once(__DIR__ . "/Tab.php");
+
 class Building{
 
     private $slug; //string
@@ -28,6 +30,10 @@ class Building{
     private $bathrooms_tab_content; //string of html
     private $dining_tab_content; //string of html
 
+    private $tour_tab; //tab object
+    private $sustainability_tab; //tab object
+    private $bathroom_tab; //tab object
+    private $dining_tab; //tab object
 
     //building should have: $slug, $title, Marker marker, InfoWindow infowindow, $Tab_Array(array of tabs), Popup (holds all tabs)
 
@@ -45,12 +51,19 @@ class Building{
         $this->thumb_image = $thumb_image;
         $this->building_categories = $building_categories;
         $this->marker = $marker;
+
         $this->about_tab_content = $about_tab_content;
+
         $this->tour_tab_content = $tour_tab_content;
         $this->sustainability_tab_content = $sustainability_tab_content;
         $this->bathrooms_tab_content = $bathrooms_tab_content;
         $this->dining_tab_content = $dining_tab_content;
 
+        $this->tour_tab = new Tab($this->slug, "Tour", $this->tour_tab_content);
+        $this->sustainability_tab = new Tab($this->slug, "Sustainability", $this->sustainability_tab_content);
+        $this->bathroom_tab = new Tab($this->slug, "Gender Neutral and Family Bathrooms", $this->bathroom_tab_content);
+        $this->dining_tab = new Tab($this->slug, "Dining", $this->dining_tab_content);
+        
     }
 
     public function getSlug(){
