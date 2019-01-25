@@ -88,7 +88,6 @@ class BuildingCategory{
             </div>
         </div>
 
-    <!-- pre-CMS era styling -->
     <style>
         /* mobile styling for the category cards */
             @media screen and (max-width: 1024px){

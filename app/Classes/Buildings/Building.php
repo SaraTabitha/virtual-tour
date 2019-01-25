@@ -128,5 +128,28 @@ class Building{
         
     }
 
+
+    function tabHasContent($tab_content){
+        if($tab_content == false){
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
+
+    function tabHasMedia($tab_content){
+        if((strpos($tab_content, "[embed]") != false ) || (strpos($tab_content, "<img") != false)){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+    function extractTabMedia(){
+
+    }
+
 }
 ?>

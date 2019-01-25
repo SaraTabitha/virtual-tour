@@ -19,9 +19,8 @@
         $bathroom_tab_content = $item->getBathroomTabContent();
         $dining_tab_content = $item->getDiningTabContent();
 
-
+        //start popup
         ?>
-            <!-- start popup -->
             <div id="<?php echo $slug; ?>Popup" class="popup">
                 <!-- start close button & title -->
                 <div class="popupBlack">
@@ -144,27 +143,13 @@
                 </div>
                 <!-- end tabs container -->
             </div>
-            <!-- end popup -->
         <?php
-
+        //end popup
     }
 
-    function tabHasContent($tab_content){
-        if($tab_content == false){
-            return false;
-        }
-        else{
-            return true;
-        }
-    }
 
-    function tabHasMedia(){
-        //can be [embed] or <img />...but...embed/url -> iframe or img 
-    }
 
-    function extractTabMedia(){
-
-    }
+    //can be [embed] or <img />...but...embed/url -> iframe or img 
 
     function videoTabTemplate($slug, $tab_text){
 
