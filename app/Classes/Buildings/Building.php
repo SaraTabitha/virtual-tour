@@ -64,8 +64,12 @@ class Building{
         $bathroom_tab; //tab object
         $dining_tab; //tab object
 
+        $this->test();
+
         //TODO fix tabHasContent function
-                
+        //tabHasContent(false);
+        
+
         // if(tabHasContent($this->tour_tab_content)){
             
         //     $tour_tab = new Tab($this->slug, "Tour", $this->tour_tab_content);
@@ -138,8 +142,11 @@ class Building{
         return $this->dining_tab_content;
     }
 
+    public function test(){
+        return 2+2;
+    }
 
-    function fillTabArray(){
+    public function fillTabArray(){
         $potentialTabs = array("Tour"=>$this->$tourContent, 
                                "Sustainability"=>$this->sustainabilityContent,
                                "Bathrooms"=>$this->bathroomsContent, 
@@ -152,7 +159,7 @@ class Building{
         }
 
     }
-    function createTab($tabTitle, $tabContent){
+    public function createTab($tabTitle, $tabContent){
         if($tabContent !== null){
             $tabSlug = $this->slug . $tabTitle;
             
@@ -165,7 +172,7 @@ class Building{
     }
 
 
-    function tabHasContent($tab_content){
+    public function tabHasContent($tab_content){
         if($tab_content == false){
             return false;
         }
@@ -174,7 +181,9 @@ class Building{
         }
     }
 
-    function tabHasMedia($tab_content){
+    
+
+    public function tabHasMedia($tab_content){
         if((strpos($tab_content, "[embed]") != false ) || (strpos($tab_content, "<img") != false)){
             return true;
         }
@@ -183,9 +192,9 @@ class Building{
         }
     }
 
-    function extractTabMedia(){
+    // public function extractTabMedia(){
 
-    }
+    // }
 
 }
 ?>
