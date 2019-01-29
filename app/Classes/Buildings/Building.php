@@ -30,10 +30,7 @@ class Building{
     private $bathrooms_tab_content; //string of html
     private $dining_tab_content; //string of html
 
-    private $tour_tab; //tab object
-    private $sustainability_tab; //tab object
-    private $bathroom_tab; //tab object
-    private $dining_tab; //tab object
+    
 
     private $tabs = array();
 
@@ -60,21 +57,34 @@ class Building{
         $this->bathrooms_tab_content = $bathrooms_tab_content;
         $this->dining_tab_content = $dining_tab_content;
 
+        $tab_array = array(); 
+
+        $tour_tab; //tab object
+        $sustainability_tab; //tab object
+        $bathroom_tab; //tab object
+        $dining_tab; //tab object
+
+        //TODO fix tabHasContent function
+                
         // if(tabHasContent($this->tour_tab_content)){
-        //     $this->tour_tab = new Tab($this->slug, "Tour", $this->tour_tab_content);
-        //     array_push($tabs, $this->tour_tab);
+            
+        //     $tour_tab = new Tab($this->slug, "Tour", $this->tour_tab_content);
+        //     array_push($tab_array, $tour_tab);
         // }
         // if(tabHasContent($this->sustainability_tab_content)){
-        //     $this->sustainability_tab = new Tab($this->slug, "Sustainability", $this->sustainability_tab_content);
-        //     array_push($tabs, $this->sustainability_tab);
+            
+        //     $sustainability_tab = new Tab($this->slug, "Sustainability", $this->sustainability_tab_content);
+        //     array_push($tab_array, $sustainability_tab);
         // }
         // if(tabHasContent($this->bathroom_tab_content)){
-        //     $this->bathroom_tab = new Tab($this->slug, "Gender Neutral and Family Bathrooms", $this->bathroom_tab_content);
-        //     array_push($tabs, $this->bathroom_tab);
+            
+        //     $bathroom_tab = new Tab($this->slug, "Gender Neutral and Family Bathrooms", $this->bathroom_tab_content);
+        //     array_push($tab_array, $bathroom_tab);
         // }
         // if(tabHasContent($this->dining_tab_content)){
-        //     $this->dining_tab = new Tab($this->slug, "Dining", $this->dining_tab_content);
-        //     array_push($tabs, $this->dining_tab);
+            
+        //     $dining_tab = new Tab($this->slug, "Dining", $this->dining_tab_content);
+        //     array_push($tab_array, $dining_tab);
         // }
         
     }
