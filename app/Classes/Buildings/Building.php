@@ -30,7 +30,10 @@ class Building{
     private $bathrooms_tab_content; //string of html
     private $dining_tab_content; //string of html
 
-    
+    private $tour_tab; //tab object
+    private $sustainability_tab; //tab object
+    private $bathroom_tab; //tab object
+    private $dining_tab; //tab object
 
     private $tabs = array();
 
@@ -56,40 +59,24 @@ class Building{
         $this->sustainability_tab_content = $sustainability_tab_content;
         $this->bathrooms_tab_content = $bathrooms_tab_content;
         $this->dining_tab_content = $dining_tab_content;
-
-        $tab_array = array(); 
-
-        $tour_tab; //tab object
-        $sustainability_tab; //tab object
-        $bathroom_tab; //tab object
-        $dining_tab; //tab object
-
-        $this->test();
-
-        //TODO fix tabHasContent function
-        //tabHasContent(false);
         
 
-        // if(tabHasContent($this->tour_tab_content)){
-            
-        //     $tour_tab = new Tab($this->slug, "Tour", $this->tour_tab_content);
-        //     array_push($tab_array, $tour_tab);
-        // }
-        // if(tabHasContent($this->sustainability_tab_content)){
-            
-        //     $sustainability_tab = new Tab($this->slug, "Sustainability", $this->sustainability_tab_content);
-        //     array_push($tab_array, $sustainability_tab);
-        // }
-        // if(tabHasContent($this->bathroom_tab_content)){
-            
-        //     $bathroom_tab = new Tab($this->slug, "Gender Neutral and Family Bathrooms", $this->bathroom_tab_content);
-        //     array_push($tab_array, $bathroom_tab);
-        // }
-        // if(tabHasContent($this->dining_tab_content)){
-            
-        //     $dining_tab = new Tab($this->slug, "Dining", $this->dining_tab_content);
-        //     array_push($tab_array, $dining_tab);
-        // }
+        if($this->tabHasContent($this->tour_tab_content)){
+            $this->tour_tab = new Tab($this->slug, "Tour", $this->tour_tab_content);
+            array_push($this->tabs, $this->tour_tab);
+        }
+        if($this->tabHasContent($this->sustainability_tab_content)){
+            $this->sustainability_tab = new Tab($this->slug, "Sustainability", $this->sustainability_tab_content);
+            array_push($this->tabs, $this->sustainability_tab);
+        }
+        if($this->tabHasContent($this->bathroom_tab_content)){
+            $this->bathroom_tab = new Tab($this->slug, "Gender Neutral and Family Bathrooms", $this->bathroom_tab_content);
+            array_push($this->tabs, $this->bathroom_tab);
+        }
+        if($this->tabHasContent($this->dining_tab_content)){
+            $this->dining_tab = new Tab($this->slug, "Dining", $this->dining_tab_content);
+            array_push($this->tabs, $this->dining_tab);
+        }
         
     }
 
@@ -142,9 +129,6 @@ class Building{
         return $this->dining_tab_content;
     }
 
-    public function test(){
-        return 2+2;
-    }
 
     public function fillTabArray(){
         $potentialTabs = array("Tour"=>$this->$tourContent, 

@@ -15,19 +15,23 @@ class Tab{
     private $hasImage = false;
 
     public function __construct($slug, $title, $content){
+        $this->slug = $slug;
         $this->title = $title;
         $this->content = $content;
 
-        if(hasMedia($this->content) == 1){
-            $this->hasVideo = true;
-        }
-        else if(hasMedia($this->content) == 2){
-            $this->hasImage = true;
-        }
+        //TODO fix whatever is going wrong here 
 
-        if(($this->hasVideo == true) ||  ($this->hasImage == true)){
-            $this->media = extractMedia($this->content);
-        }
+        
+        // if(hasMedia($this->content) == 1){
+        //     $this->hasVideo = true;
+        // }
+        // else if(hasMedia($this->content) == 2){
+        //     $this->hasImage = true;
+        // }
+
+        // if(($this->hasVideo == true) ||  ($this->hasImage == true)){
+        //     $this->media = extractMedia($this->content);
+        // }
         
     }
 
