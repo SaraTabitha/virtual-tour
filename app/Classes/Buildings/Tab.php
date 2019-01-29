@@ -61,6 +61,7 @@ class Tab{
             return false;
         }
     }
+
     function getStringEnd($string){
         if($this->hasVideo){
             return strpos($string, "[/embed]");
@@ -72,6 +73,7 @@ class Tab{
             return false;
         }
     }
+
     function getStringLength($string){
         $start = getStringStart($string);
         $end = getStringEnd($string);

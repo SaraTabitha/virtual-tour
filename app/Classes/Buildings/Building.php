@@ -60,22 +60,22 @@ class Building{
         $this->bathrooms_tab_content = $bathrooms_tab_content;
         $this->dining_tab_content = $dining_tab_content;
 
-        if(tabHasContent($this->tour_tab_content)){
-            $this->tour_tab = new Tab($this->slug, "Tour", $this->tour_tab_content);
-            array_push($tabs, $this->tour_tab);
-        }
-        if(tabHasContent($this->sustainability_tab_content)){
-            $this->sustainability_tab = new Tab($this->slug, "Sustainability", $this->sustainability_tab_content);
-            array_push($tabs, $this->sustainability_tab);
-        }
-        if(tabHasContent($this->bathroom_tab_content)){
-            $this->bathroom_tab = new Tab($this->slug, "Gender Neutral and Family Bathrooms", $this->bathroom_tab_content);
-            array_push($tabs, $this->bathroom_tab);
-        }
-        if(tabHasContent($this->dining_tab_content)){
-            $this->dining_tab = new Tab($this->slug, "Dining", $this->dining_tab_content);
-            array_push($tabs, $this->dining_tab);
-        }
+        // if(tabHasContent($this->tour_tab_content)){
+        //     $this->tour_tab = new Tab($this->slug, "Tour", $this->tour_tab_content);
+        //     array_push($tabs, $this->tour_tab);
+        // }
+        // if(tabHasContent($this->sustainability_tab_content)){
+        //     $this->sustainability_tab = new Tab($this->slug, "Sustainability", $this->sustainability_tab_content);
+        //     array_push($tabs, $this->sustainability_tab);
+        // }
+        // if(tabHasContent($this->bathroom_tab_content)){
+        //     $this->bathroom_tab = new Tab($this->slug, "Gender Neutral and Family Bathrooms", $this->bathroom_tab_content);
+        //     array_push($tabs, $this->bathroom_tab);
+        // }
+        // if(tabHasContent($this->dining_tab_content)){
+        //     $this->dining_tab = new Tab($this->slug, "Dining", $this->dining_tab_content);
+        //     array_push($tabs, $this->dining_tab);
+        // }
         
     }
 
