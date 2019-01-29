@@ -20,14 +20,13 @@ class Tab{
         $this->content = $content;
 
         //TODO fix whatever is going wrong here 
-
         
-        // if(hasMedia($this->content) == 1){
-        //     $this->hasVideo = true;
-        // }
-        // else if(hasMedia($this->content) == 2){
-        //     $this->hasImage = true;
-        // }
+        if($this->hasMedia($this->content) == 1){
+            $this->hasVideo = true;
+        }
+        else if($this->hasMedia($this->content) == 2){
+            $this->hasImage = true;
+        }
 
         // if(($this->hasVideo == true) ||  ($this->hasImage == true)){
         //     $this->media = extractMedia($this->content);
