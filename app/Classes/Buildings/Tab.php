@@ -19,7 +19,7 @@ class Tab{
         $this->title = $title;
         $this->content = $content;
 
-        //TODO fix whatever is going wrong here 
+        //note to self: remember to put $this-> in front of methods you want to use
         
         if($this->hasMedia($this->content) == 1){
             $this->hasVideo = true;
@@ -28,20 +28,38 @@ class Tab{
             $this->hasImage = true;
         }
 
-        // if(($this->hasVideo == true) ||  ($this->hasImage == true)){
-        //     $this->media = extractMedia($this->content);
-        // }
+        if(($this->hasVideo == true) ||  ($this->hasImage == true)){
+            $this->media = $this->extractMedia($this->content);
+            var_dump($this->media);
+        }
         
     }
+    //TODO comment
+    public function extractMedia($content){
+         $start = $this->getStringStart($content);
+         $length = $this->getStringLength($content);
 
-    function extractMedia($content){
-        $start = getStringStart($content);
-        $length = getStringLength($content);
-
-        return substr($content, $start, $length);
+        if($this->hasVideo == true){
+            return substr($content, $start, $length);
+        }
+        else if ($this->hasImage == true){
+            $substring = substr($content, $start, $length);
+            $image_src = $this->getImageSrc($substring);
+            return $image_src;
+        }
     }
-
-    function hasMedia($string){
+    //TODO comment
+    public function getImageSrc($substring){
+        $src_start = strpos($substring, "src=");
+        $src_start = $src_start + 5;
+        $length = strlen($substring);
+        $image_src = substr($substring, $src_start, $length);
+        $quote_start = strpos($image_src, '"');
+        $image_src = substr($image_src, 0, $quote_start);
+        return $image_src;
+    }
+    //TODO comment
+    public function hasMedia($string){
         if( strpos($string, "[embed]") !== false ){
             return 1; //1 = has video
         }
@@ -52,10 +70,10 @@ class Tab{
             return false;
         }
     }
-
-    function getStringStart($string){
+    //TODO comment
+    public function getStringStart($string){
         if($this->hasVideo){
-            return strpos($string, "[embed]");
+            return strpos($string, "[embed]") + 7;
         }
         else if($this->hasImage){
             return strpos($string, "<img");
@@ -64,8 +82,8 @@ class Tab{
             return false;
         }
     }
-
-    function getStringEnd($string){
+    //TODO comment
+    public function getStringEnd($string){
         if($this->hasVideo){
             return strpos($string, "[/embed]");
         }
@@ -77,9 +95,10 @@ class Tab{
         }
     }
 
-    function getStringLength($string){
-        $start = getStringStart($string);
-        $end = getStringEnd($string);
+    //TODO comment
+    public function getStringLength($string){
+        $start = $this->getStringStart($string);
+        $end = $this->getStringEnd($string);
 
         return $end - $start;
     }
