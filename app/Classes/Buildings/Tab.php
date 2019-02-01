@@ -30,8 +30,12 @@ class Tab{
 
         if(($this->hasVideo == true) ||  ($this->hasImage == true)){
             $this->media = $this->extractMedia($this->content);
+            $this->removeMediaFromContent($this->content);
+
             var_dump($this->media);
+            var_dump($this->content);
         }
+        
         
     }
 
@@ -55,6 +59,12 @@ class Tab{
     }
 
     //TODO comment
+    public function removeMediaFromContent($content){
+        $start = $this->getStringStart($content);
+        $this->content = substr($content, 0, $start);
+    }
+
+    //TODO comment
     public function extractMedia($content){
          $start = $this->getStringStart($content);
          $length = $this->getStringLength($content);
@@ -68,6 +78,7 @@ class Tab{
             return $image_src;
         }
     }
+
     //TODO comment
     public function getImageSrc($substring){
         $src_start = strpos($substring, "src=");
@@ -78,6 +89,7 @@ class Tab{
         $image_src = substr($image_src, 0, $quote_start);
         return $image_src;
     }
+
     //TODO comment
     public function hasMedia($string){
         if( strpos($string, "[embed]") !== false ){
@@ -90,6 +102,7 @@ class Tab{
             return false;
         }
     }
+
     //TODO comment
     public function getStringStart($string){
         if($this->hasVideo){
@@ -102,6 +115,7 @@ class Tab{
             return false;
         }
     }
+    
     //TODO comment
     public function getStringEnd($string){
         if($this->hasVideo){
