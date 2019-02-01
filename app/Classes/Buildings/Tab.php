@@ -6,8 +6,8 @@
 * Description: Tabs are the individual sections of a Popup that a user can click between via the nav of the Popup.
 */
 class Tab{
-    private $slug;
-    private $title;
+    private $slug; //what tab it is
+    private $title; //title featured as the Heading above the Tab content
     private $content;
     private $media;
     

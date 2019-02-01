@@ -62,19 +62,19 @@ class Building{
         
 
         if($this->tabHasContent($this->tour_tab_content)){
-            $this->tour_tab = new Tab($this->slug, "Tour", $this->tour_tab_content);
+            $this->tour_tab = new Tab("Tour", "Tour Snapshot", $this->tour_tab_content);
             array_push($this->tabs, $this->tour_tab);
         }
         if($this->tabHasContent($this->sustainability_tab_content)){
-            $this->sustainability_tab = new Tab($this->slug, "Sustainability", $this->sustainability_tab_content);
+            $this->sustainability_tab = new Tab("Sustainability", "Sustainability Point of Interest", $this->sustainability_tab_content);
             array_push($this->tabs, $this->sustainability_tab);
         }
         if($this->tabHasContent($this->bathroom_tab_content)){
-            $this->bathroom_tab = new Tab($this->slug, "Gender Neutral and Family Bathrooms", $this->bathroom_tab_content);
+            $this->bathroom_tab = new Tab("Bathrooms",  "Gender Neutral and Family Restrooms", $this->bathroom_tab_content);
             array_push($this->tabs, $this->bathroom_tab);
         }
         if($this->tabHasContent($this->dining_tab_content)){
-            $this->dining_tab = new Tab($this->slug, "Dining", $this->dining_tab_content);
+            $this->dining_tab = new Tab("Dining", "Dining", $this->dining_tab_content);
             array_push($this->tabs, $this->dining_tab);
         }
         
@@ -165,6 +165,44 @@ class Building{
         }
     }
 
+    //TODO comment 
+    public function createPopup(){
 
+    }
+
+    public function videoTabTemplate($tab){
+        ?>
+            <div id="<?php echo $this->slug . $tab->getSlug(); ?>Text" class="tourText">
+                <h5 class="heading"><?php echo $tab->getTitle(); ?></h5>
+                <p class="subText text"><?php echo $tab->getContent(); ?></p>
+            </div>
+            <div id="<?php echo $this->slug . $tab->getSlug(); ?>Video" class="videoPopup">
+                <iframe id="<?php echo $this->slug; ?>iframe" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+            </div>
+        <?php
+    }
+
+    //TODO comment 
+    public function imageTabTemplate($tab){
+        ?>
+            <div id="<?php echo $this->slug . $tab->getSlug(); ?>Image" class="imagePopup">
+                <img src=""/>
+            </div>
+            <div id="<?php echo $this->slug . $tab->getSlug(); ?>Text" class="popupText">
+                <h5 class="heading"><?php echo $tab->getTitle(); ?></h5>
+                <p class="subText text"><?php echo $tab->getContent(); ?></p>
+            </div>
+        <?php
+    }
+
+    //TODO comment 
+    public function noMedaiTabTemplate($tab){
+        ?>
+            <div id="<?php echo $this->slug . $tab->getSlug(); ?>" class="popupTextNoImage">
+                <h5 class="heading"><?php echo $tab->getTitle(); ?></h5>
+                <p class="subText text"><?php $tab->getContent(); ?></p>
+            </div>
+        <?php
+    }
 }
 ?>
