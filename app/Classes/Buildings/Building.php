@@ -37,8 +37,6 @@ class Building{
 
     private $tabs = array();
 
-    //building should have: $slug, $title, Marker marker, InfoWindow infowindow, $Tab_Array(array of tabs), Popup (holds all tabs)
-
     public function __construct($slug, $title, $isAccessible, $street, $city, $state, $zipcode, $full_image, $thumb_image, 
     $building_categories, $marker, $about_tab_content, $tour_tab_content, $sustainability_tab_content, $bathrooms_tab_content, $dining_tab_content ){
 
@@ -129,7 +127,7 @@ class Building{
         return $this->dining_tab_content;
     }
 
-
+    //TODO comment
     public function fillTabArray(){
         $potentialTabs = array("Tour"=>$this->$tourContent, 
                                "Sustainability"=>$this->sustainabilityContent,
@@ -143,6 +141,8 @@ class Building{
         }
 
     }
+
+    //TODO comment
     public function createTab($tabTitle, $tabContent){
         if($tabContent !== null){
             $tabSlug = $this->slug . $tabTitle;
@@ -155,7 +155,7 @@ class Building{
         
     }
 
-
+    //TODO comment 
     public function tabHasContent($tab_content){
         if($tab_content == false){
             return false;
@@ -167,7 +167,39 @@ class Building{
 
     //TODO comment 
     public function createPopup(){
-
+        ?>
+            <div id="<?php echo $this->slug; ?>Popup" class="popup">
+                <!-- start close button & title -->
+                <div class="popupBlack">
+                    <button id="<?php echo $this->slug; ?>PopupClose" class="closeButton mdl-color-text--white mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
+                        <i class="material-icons">close</i>
+                    </button>
+                    <h1 class="text yellow"><?php echo $this->title; ?></h1>
+                </div>
+                <!-- end close button & title -->
+                <?php 
+                if(($this->tabHasContent($this->tour_tab_content)) || ($this->tabHasContent($this->sustainability_tab_content)) || ($this->tabHasContent($this->bathroom_tab_content)) || ($this->tabHasContent($this->dining_tab_content))  ){
+                    //only show nav if popup has extra tabs than "about"
+                    ?>
+                    <!-- start nav -->
+                    <nav>
+                        <li id="<?php echo $this->slug; ?>AboutLi" class="about">About</li>
+                        <?php 
+                            foreach($this->tabs as $tab){
+                                if($this->tabHasContent($tab)){
+                                    ?>
+                                        <li id="<?php echo $this->slug . $tab->getSlug(); ?>Li"><?php echo $tab->getSlug(); ?></li>
+                                    <?php
+                                }
+                            }
+                        ?>
+                    </nav>
+                    <!-- end nav -->
+                    <?php
+                }
+                ?>
+            </div>
+        <?php
     }
 
     public function videoTabTemplate($tab){
