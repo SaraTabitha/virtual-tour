@@ -31,9 +31,6 @@ class Tab{
         if(($this->hasVideo == true) ||  ($this->hasImage == true)){
             $this->media = $this->extractMedia($this->content);
             $this->removeMediaFromContent($this->content);
-
-            var_dump($this->media);
-            var_dump($this->content);
         }
         
     }

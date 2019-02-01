@@ -182,22 +182,54 @@ class Building{
                     //only show nav if popup has extra tabs than "about"
                     ?>
                     <!-- start nav -->
-                    <nav>
-                        <li id="<?php echo $this->slug; ?>AboutLi" class="about">About</li>
-                        <?php 
-                            foreach($this->tabs as $tab){
-                                if($this->tabHasContent($tab)){
-                                    ?>
-                                        <li id="<?php echo $this->slug . $tab->getSlug(); ?>Li"><?php echo $tab->getSlug(); ?></li>
-                                    <?php
+                    <nav class="popupNav five mdl-shadow--3dp">
+                        <ul id="popupNav" >
+                            <li id="<?php echo $this->slug; ?>AboutLi" class="about">About</li>
+                            <?php 
+                                foreach($this->tabs as $tab){
+                                    if($this->tabHasContent($tab)){
+                                        ?>
+                                            <li id="<?php echo $this->slug . $tab->getSlug(); ?>Li"><?php echo $tab->getSlug(); ?></li>
+                                        <?php
+                                    }
                                 }
-                            }
-                        ?>
+                            ?>
+                        </ul>
                     </nav>
                     <!-- end nav -->
                     <?php
                 }
                 ?>
+                <!-- start tabs  container-->
+                <div class="infoContainer">
+                    <!-- start about tab -->
+                    <div id="<?php echo $this->slug; ?>AboutImage" class="imagePopup">
+                        <img src="">
+                        <p class="address text"><?php echo $this->street . ", " . $this->city . ", " . $this->state . ", " . $this->zipcode; ?></p>
+                    </div>
+                    <div id="<?php echo $this->slug; ?>AboutText" class="popupText">
+                        <h5 class="heading">About This Building</h5>
+                        <p class="subText text"><?php echo $this->about_tab_content; ?></p>
+                    </div>
+                    <!-- end about tab -->
+                    <?php 
+                        //all other tabs
+                        foreach($this->tabs as $tab){
+                            if($this->tabHasContent($tab)){
+                                if($tab->getHasVide()){
+                                    $this->videoTabTemplate($tab);
+                                }
+                                else if($tab->getHasImage()){
+                                    $this->imageTabTemplate($tab);
+                                }
+                                else{
+                                    $this->noMediaTabTemplate($tab);
+                                }
+                            }
+                        }
+                    ?>
+                </div>
+                <!-- end tabs  container-->
             </div>
         <?php
     }
@@ -228,7 +260,7 @@ class Building{
     }
 
     //TODO comment 
-    public function noMedaiTabTemplate($tab){
+    public function noMediaTabTemplate($tab){
         ?>
             <div id="<?php echo $this->slug . $tab->getSlug(); ?>" class="popupTextNoImage">
                 <h5 class="heading"><?php echo $tab->getTitle(); ?></h5>
