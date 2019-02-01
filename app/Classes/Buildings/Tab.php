@@ -34,6 +34,26 @@ class Tab{
         }
         
     }
+
+    public function getSlug(){
+        return $this->slug;
+    }
+    public function getTitle(){
+        return $this->title;
+    }
+    public function getContent(){
+        return $this->content;
+    }
+    public function getMedia(){
+        return $this->media;
+    }
+    public function getHasVideo(){
+        return $this->hasVideo;
+    }
+    public function getHasImage(){
+        return $this->hasImage;
+    }
+
     //TODO comment
     public function extractMedia($content){
          $start = $this->getStringStart($content);
