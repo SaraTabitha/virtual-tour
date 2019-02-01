@@ -165,20 +165,6 @@ class Building{
         }
     }
 
-    
-
-    public function tabHasMedia($tab_content){
-        if((strpos($tab_content, "[embed]") != false ) || (strpos($tab_content, "<img") != false)){
-            return true;
-        }
-        else{
-            return false;
-        }
-    }
-
-    // public function extractTabMedia(){
-
-    // }
 
 }
 ?>

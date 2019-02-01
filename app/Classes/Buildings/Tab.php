@@ -36,7 +36,6 @@ class Tab{
             var_dump($this->content);
         }
         
-        
     }
 
     public function getSlug(){
