@@ -57,7 +57,8 @@ class Building{
         $this->sustainability_tab_content = $sustainability_tab_content;
         $this->bathrooms_tab_content = $bathrooms_tab_content;
         $this->dining_tab_content = $dining_tab_content;
-        
+
+        //TODO $about_tab -> new Tab();
 
         if($this->tabHasContent($this->tour_tab_content)){
             $this->tour_tab = new Tab("Tour", "Tour Snapshot", $this->tour_tab_content);
@@ -178,6 +179,7 @@ class Building{
                 </div>
                 <!-- end close button & title -->
                 <?php 
+                $this->aboutTabTemplate($about_tab);
                 if(($this->tabHasContent($this->tour_tab_content)) || ($this->tabHasContent($this->sustainability_tab_content)) || ($this->tabHasContent($this->bathroom_tab_content)) || ($this->tabHasContent($this->dining_tab_content))  ){
                     //only show nav if popup has extra tabs than "about"
                     ?>
@@ -202,16 +204,7 @@ class Building{
                 ?>
                 <!-- start tabs  container-->
                 <div class="infoContainer">
-                    <!-- start about tab -->
-                    <div id="<?php echo $this->slug; ?>AboutImage" class="imagePopup">
-                        <img src="">
-                        <p class="address text"><?php echo $this->street . ", " . $this->city . ", " . $this->state . ", " . $this->zipcode; ?></p>
-                    </div>
-                    <div id="<?php echo $this->slug; ?>AboutText" class="popupText">
-                        <h5 class="heading">About This Building</h5>
-                        <p class="subText text"><?php echo $this->about_tab_content; ?></p>
-                    </div>
-                    <!-- end about tab -->
+                    
                     <?php 
                         //all other tabs
                         foreach($this->tabs as $tab){
@@ -234,8 +227,24 @@ class Building{
         <?php
     }
 
+    public function aboutTabTemplate($tab){
+        ?>
+            <!-- start about tab -->
+            <div id="<?php echo $this->slug; ?>AboutImage" class="imagePopup">
+                <img src="">
+                <p class="address text"><?php echo $this->street . ", " . $this->city . ", " . $this->state . ", " . $this->zipcode; ?></p>
+            </div>
+            <div id="<?php echo $this->slug; ?>AboutText" class="popupText">
+                <h5 class="heading">About This Building</h5>
+                <p class="subText text"><?php echo $tab->getContent();?></p>
+            </div>
+            <!-- end about tab -->
+        <?php
+    }
+
     public function videoTabTemplate($tab){
         ?>
+            <!-- tab has video -->
             <div id="<?php echo $this->slug . $tab->getSlug(); ?>Text" class="tourText">
                 <h5 class="heading"><?php echo $tab->getTitle(); ?></h5>
                 <p class="subText text"><?php echo $tab->getContent(); ?></p>
@@ -249,6 +258,7 @@ class Building{
     //TODO comment 
     public function imageTabTemplate($tab){
         ?>
+            <!-- tab has image -->
             <div id="<?php echo $this->slug . $tab->getSlug(); ?>Image" class="imagePopup">
                 <img src=""/>
             </div>
@@ -262,6 +272,7 @@ class Building{
     //TODO comment 
     public function noMediaTabTemplate($tab){
         ?>
+            <!-- tab has no media -->
             <div id="<?php echo $this->slug . $tab->getSlug(); ?>" class="popupTextNoImage">
                 <h5 class="heading"><?php echo $tab->getTitle(); ?></h5>
                 <p class="subText text"><?php $tab->getContent(); ?></p>
