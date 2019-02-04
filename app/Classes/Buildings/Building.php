@@ -216,7 +216,7 @@ class Building{
                         //all other tabs
                         foreach($this->tabs as $tab){
                             if($this->tabHasContent($tab)){
-                                if($tab->getHasVide()){
+                                if($tab->getHasVideo()){
                                     $this->videoTabTemplate($tab);
                                 }
                                 else if($tab->getHasImage()){

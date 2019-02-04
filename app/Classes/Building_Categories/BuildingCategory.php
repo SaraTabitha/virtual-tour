@@ -1,4 +1,5 @@
 <?php
+
 /*
 * Sara Tabitha Mayhew
 * 11/11/18
@@ -9,6 +10,7 @@
 *   is checked. 
 */
 require_once(__DIR__ . '/../../Classes/Marker_Groups/MarkerGroup.php');
+
 class BuildingCategory{
 
     private $slug;
