@@ -30,6 +30,7 @@ class Building{
     private $bathrooms_tab_content; //string of html
     private $dining_tab_content; //string of html
 
+    //private $about_tab;
     private $tour_tab; //tab object
     private $sustainability_tab; //tab object
     private $bathroom_tab; //tab object
@@ -59,6 +60,7 @@ class Building{
         $this->dining_tab_content = $dining_tab_content;
 
         //TODO $about_tab -> new Tab();
+        $this->about_tab = new Tab("About", "About This Building", $this->about_tab_content);
 
         if($this->tabHasContent($this->tour_tab_content)){
             $this->tour_tab = new Tab("Tour", "Tour Snapshot", $this->tour_tab_content);
@@ -179,7 +181,7 @@ class Building{
                 </div>
                 <!-- end close button & title -->
                 <?php 
-                $this->aboutTabTemplate($about_tab);
+                $this->aboutTabTemplate($this->about_tab);
                 if(($this->tabHasContent($this->tour_tab_content)) || ($this->tabHasContent($this->sustainability_tab_content)) || ($this->tabHasContent($this->bathroom_tab_content)) || ($this->tabHasContent($this->dining_tab_content))  ){
                     //only show nav if popup has extra tabs than "about"
                     ?>
@@ -228,6 +230,7 @@ class Building{
     }
 
     public function aboutTabTemplate($tab){
+        $tab->removeParagraphTags();
         ?>
             <!-- start about tab -->
             <div id="<?php echo $this->slug; ?>AboutImage" class="imagePopup">
@@ -236,7 +239,7 @@ class Building{
             </div>
             <div id="<?php echo $this->slug; ?>AboutText" class="popupText">
                 <h5 class="heading">About This Building</h5>
-                <p class="subText text"><?php echo $tab->getContent();?></p>
+                <p class="subText text"><?php echo $tab->getContent(); var_dump($tab->getContent());?></p>
             </div>
             <!-- end about tab -->
         <?php

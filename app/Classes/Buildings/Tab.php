@@ -55,6 +55,12 @@ class Tab{
     }
 
     //TODO comment
+    public function removeParagraphTags(){
+        $this->content = substr($this->content, 3, strlen($this->content));
+        $this->content = substr($this->content, 0, strpos($this->content, "</p>"));
+    }
+
+    //TODO comment
     public function removeMediaFromContent($content){
         $start = $this->getStringStart($content);
         $this->content = substr($content, 0, $start);
