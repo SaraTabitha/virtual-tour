@@ -181,7 +181,6 @@ class Building{
                 </div>
                 <!-- end close button & title -->
                 <?php 
-                $this->aboutTabTemplate($this->about_tab);
                 if(($this->tabHasContent($this->tour_tab_content)) || ($this->tabHasContent($this->sustainability_tab_content)) || ($this->tabHasContent($this->bathroom_tab_content)) || ($this->tabHasContent($this->dining_tab_content))  ){
                     //only show nav if popup has extra tabs than "about"
                     ?>
@@ -206,8 +205,9 @@ class Building{
                 ?>
                 <!-- start tabs  container-->
                 <div class="infoContainer">
-                    
                     <?php 
+                        $this->aboutTabTemplate($this->about_tab);
+
                         //all other tabs
                         foreach($this->tabs as $tab){
                             if($this->tabHasContent($tab)){
