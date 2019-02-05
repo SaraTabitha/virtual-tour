@@ -239,7 +239,7 @@ class Building{
             </div>
             <div id="<?php echo $this->slug; ?>AboutText" class="popupText">
                 <h5 class="heading">About This Building</h5>
-                <p class="subText text"><?php echo $tab->getContent(); var_dump($tab->getContent());?></p>
+                <p class="subText text"><?php echo $tab->getContent();?></p>
             </div>
             <!-- end about tab -->
         <?php
@@ -278,7 +278,7 @@ class Building{
             <!-- tab has no media -->
             <div id="<?php echo $this->slug . $tab->getSlug(); ?>" class="popupTextNoImage">
                 <h5 class="heading"><?php echo $tab->getTitle(); ?></h5>
-                <p class="subText text"><?php $tab->getContent(); ?></p>
+                <p class="subText text"><?php echo $tab->getContent(); ?></p>
             </div>
         <?php
     }
