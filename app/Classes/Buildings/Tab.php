@@ -72,7 +72,7 @@ class Tab{
          $length = $this->getStringLength($content);
 
         if($this->hasVideo == true){
-            return substr($content, $start, $length);
+            return substr($content, $start + 7, $length);
         }
         else if ($this->hasImage == true){
             $substring = substr($content, $start, $length);
@@ -108,7 +108,7 @@ class Tab{
     //TODO comment
     public function getStringStart($string){
         if($this->hasVideo){
-            return strpos($string, "[embed]") + 7;
+            return strpos($string, "[embed]");
         }
         else if($this->hasImage){
             return strpos($string, "<img");
