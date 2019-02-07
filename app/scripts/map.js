@@ -1127,14 +1127,17 @@ function initMap() {
             slugs_array.forEach(function(this_slug){
                  $("#" + this_slug + "Link").click(function(){
                      openPopup(this_slug);
+                     //TODO set media (tabs)
                  });
             });
         }
+        
         //TODO comment
         function popupCloseButtonClickEvent(slugs_array){
              slugs_array.forEach(function(this_slug){
                  $("#" + this_slug + "PopupClose").click(function(){
                      closePopup(this_slug);
+                     //TODO remove media (tabs)
                  })
              });
         }
@@ -1158,7 +1161,6 @@ function initMap() {
              $("#" + slug + "Popup").css("visibility", "hidden");
         }
 
-        //TODO closeAllPopup function?
         
         // setting sustainability markers
         // function setSust(){
