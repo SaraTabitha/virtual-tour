@@ -1143,7 +1143,7 @@ function initMap() {
 
         //TODO comment
         function openPopup(slug){
-             $("#overlay").css('visiibility', 'visible');
+             $("#overlay").css('visibility', 'visible');
              $("#overlay").animate({"opacity": "0.3"}, "slow");
      
              $("#" + slug + "Popup").css('visibility', 'visible');
@@ -1157,6 +1157,8 @@ function initMap() {
              $("#" + slug + "Popup").animate({"opacity": "0"}, "slow");
              $("#" + slug + "Popup").css("visibility", "hidden");
         }
+
+        //TODO closeAllPopup function?
         
         // setting sustainability markers
         // function setSust(){
@@ -1585,24 +1587,24 @@ function initMap() {
         }
         //for each marker that is a building, there is a link for "more info", when clicked it should open an information popup
         //about the building; also each popup has a close button that should close each time it is clicked
-        allMarkers.forEach(function(thisOne){
-             var index = allMarkers.indexOf(thisOne);
-            // console.log("Index: " + index);
-            if (index < 45){
-                var shortHand = allMarkersInfo[index].shortHand;
-                //console.log("shorthand before click: " + shortHand)
-                //event listener for clicks of the More Info link on the InfoWindows
-                $("#" + shortHand + "Link").click(function(){
-                    //debugger;
-                    //console.log("clicked: " + shortHand);
-                    popupOpen(shortHand);
-                });
-                //event listener for the x button on the popups (not the x on the infoWindows)
-                $("#" + shortHand + "PopupClose").click(function(){
-                    popupClose(shortHand);
-                });
-            }
-        });
+        // allMarkers.forEach(function(thisOne){
+        //      var index = allMarkers.indexOf(thisOne);
+        //     // console.log("Index: " + index);
+        //     if (index < 45){
+        //         var shortHand = allMarkersInfo[index].shortHand;
+        //         //console.log("shorthand before click: " + shortHand)
+        //         //event listener for clicks of the More Info link on the InfoWindows
+        //         $("#" + shortHand + "Link").click(function(){
+        //             //debugger;
+        //             //console.log("clicked: " + shortHand);
+        //             popupOpen(shortHand);
+        //         });
+        //         //event listener for the x button on the popups (not the x on the infoWindows)
+        //         $("#" + shortHand + "PopupClose").click(function(){
+        //             popupClose(shortHand);
+        //         });
+        //     }
+        // });
 
         /* possible new objects for the popup tab info ? 
             {   
