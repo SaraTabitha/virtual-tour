@@ -59,7 +59,6 @@ class Building{
         $this->bathrooms_tab_content = $bathrooms_tab_content;
         $this->dining_tab_content = $dining_tab_content;
 
-        //TODO $about_tab -> new Tab();
         $this->about_tab = new Tab("About", "About This Building", $this->about_tab_content);
 
         if($this->tabHasContent($this->tour_tab_content)){

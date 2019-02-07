@@ -1604,6 +1604,12 @@ function initMap() {
             }
         });
 
+        /* possible new objects for the popup tab info ? 
+            {   
+                slug: "buildingslug", aboutTabMedia: "", tourTab: nomedia/image/video/false, sustainabilityTab: nomedia/image/video/false, bathroomsTab: nomedia/image/video/false, diningTab: nomedia/image/video/false,
+                tourMedia: "", sustainabilityMedia: "", bathroomsMedia: "", diningMedia: ""
+            }
+        */
         //array for each building with multiple tabs; true = it has that tab, false = it does not have that tab
         //(tabs for the popups)
         var buildingsTabs = [
