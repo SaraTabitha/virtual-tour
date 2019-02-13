@@ -21,7 +21,6 @@ $markerIcon = "images/markers/blue.png";
 
 //create all Emergency Phone objects & their markers
 foreach($emergencyPhones as $index=>$phone){
-
     $slug = $phone->slug;
     $title = $phone->title->rendered;
 
@@ -29,10 +28,6 @@ foreach($emergencyPhones as $index=>$phone){
     $longitude = $phone->location->longitude;
 
     $emergencyPhone_markers[$index] = new Marker($slug, $latitude, $longitude, $title);
-
-   //$emergencyPhone_list[$index] = new EmergencyPhone($slug, $title, $emergencyPhone_markers[$index]);
-    
-
 }
 
 $emergencyPhones = new MarkerGroup($slug, $checkboxColor, $markerIcon, $emergencyPhone_markers);

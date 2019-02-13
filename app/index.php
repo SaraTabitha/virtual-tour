@@ -377,7 +377,6 @@
         <main id="mainWeb" class="mdl-layout__content">
                 <div class="page-content">
                         
-                        <!-- <p id="vrCloseButton">x</p> -->
                         <button id="vrCloseButton" class="cardCloseButton mdl-color-text--white mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect text">
                                         <i  class="material-icons">close</i>
                         </button>

@@ -4,7 +4,6 @@
     $building_list; //array of all Building objects
 
     foreach($building_list as $item){
-        //TODO createPopup function call
         $item->createPopup();
     }
 

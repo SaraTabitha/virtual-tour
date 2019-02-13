@@ -19,7 +19,8 @@ function initMap() {
             center: uwo
         });
         
-        //Markers curtesy of Nick Pierson of the Reslife Arists Office in Gruenhagen!
+        //Marker icons curtesy of Nick Pierson of the Reslife Arists Office in Gruenhagen!
+        
         //first group: yellow, pink, red, teal, green, blue, lightpurple
         //second group: maroon, orange, darkgreen, lightblue, navy, darkpurple, brown
         //var pinkMarker = "images/markers/pink.png";
@@ -1131,7 +1132,7 @@ function initMap() {
                  });
             });
         }
-        
+
         //TODO comment
         function popupCloseButtonClickEvent(slugs_array){
              slugs_array.forEach(function(this_slug){
