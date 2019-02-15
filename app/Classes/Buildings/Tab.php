@@ -54,6 +54,14 @@ class Tab{
         return $this->hasImage;
     }
 
+
+    //TODO comment
+    public function setAboutTabDetails($building_image){
+        $this->hasImage = true;
+        $this->hasVideo = false;
+        $this->media = $building_image;
+    }
+
     //TODO comment
     public function removeParagraphTags(){
         $this->content = substr($this->content, 3, strlen($this->content));
@@ -139,5 +147,25 @@ class Tab{
         return $end - $start;
     }
 
+    //TODO comment
+    public function createTabJSONObject(){
+        $object->tabSlug = $this->getSlug();
+
+        if($this->getHasVideo() == true){
+            $object->tabType = "video";
+            $object->media = $this->getMedia();
+        }
+        else if($this->getHasImage() == true){
+            $object->tabType = "image";
+            $object->media = $this->getMedia();
+        }
+        else{
+            //both false
+            $object->tabType = "noMedia";
+            $object->media = false;
+        }
+
+        return $object;
+    }
 }
 ?>

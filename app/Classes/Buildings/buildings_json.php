@@ -15,6 +15,13 @@
         array_push($object->categories, $this_category_markerGroup->createIndicesJSONObject());
     }   
 
+    $object->popups = array();
+    
+    foreach($building_list as $building){
+        //array_push($object->popups, $building->createPopupJSONObject());
+        array_push($object->popups, $building->createPopupJSONObject());
+    }
+
     $json = json_encode($object);
     echo $json;
 

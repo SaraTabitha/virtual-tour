@@ -1023,6 +1023,8 @@ function initMap() {
         *       -building attached to each category is defined by checking them in the categories list when a building is created/edited in the CMS
         */
         get("../Classes/Buildings/buildings_json.php").then(function(response){
+            console.log(response);
+
             //all buildings
             var checkbox_slug = "buildings";
             var allBuildings = response.allBuildings;
@@ -1153,6 +1155,7 @@ function initMap() {
              $("#" + slug + "Popup").css('visibility', 'visible');
              $("#" + slug + "Popup").animate({'opacity': "1"}, "slow");
         }
+
         //TODO comment
         function closePopup(slug){
              $("#overlay").animate({'opacity': '0'}, "slow");

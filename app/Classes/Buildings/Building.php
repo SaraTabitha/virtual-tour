@@ -30,7 +30,7 @@ class Building{
     private $bathrooms_tab_content; //string of html
     private $dining_tab_content; //string of html
 
-    //private $about_tab;
+    private $about_tab; //tab object
     private $tour_tab; //tab object
     private $sustainability_tab; //tab object
     private $bathroom_tab; //tab object
@@ -60,6 +60,7 @@ class Building{
         $this->dining_tab_content = $dining_tab_content;
 
         $this->about_tab = new Tab("About", "About This Building", $this->about_tab_content);
+        $this->about_tab->setAboutTabDetails($full_image);
 
         if($this->tabHasContent($this->tour_tab_content)){
             $this->tour_tab = new Tab("Tour", "Tour Snapshot", $this->tour_tab_content);
@@ -127,6 +128,12 @@ class Building{
     }
     public function getDiningTabContent(){
         return $this->dining_tab_content;
+    }
+    public function getTabs(){
+        return $this->tabs;
+    }
+    public function getAboutTab(){
+        return $this->about_tab;
     }
 
     //TODO comment
@@ -280,6 +287,27 @@ class Building{
                 <p class="subText text"><?php echo $tab->getContent(); ?></p>
             </div>
         <?php
+    }
+
+    //TODO comment
+    public function createPopupJSONObject(){
+       // $object->
+       //slug: "buildingslug", aboutTabMedia: "", tourTab: nomedia/image/video/false, sustainabilityTab: nomedia/image/video/false, bathroomsTab: nomedia/image/video/false, diningTab: nomedia/image/video/false,
+       //tourMedia: "", sustainabilityMedia: "", bathroomsMedia: "", diningMedia: ""
+
+       //building slug
+       //Tab Slug
+       //tabType: noMedia, image, video
+       //media
+
+        $object->buildingSlug = $this->getSlug();
+        $object->tabs = array();
+        array_push($object->tabs, $this->getAboutTab()->createTabJSONObject());
+        foreach($this->getTabs() as $this_tab){
+            array_push($object->tabs, $this_tab->createTabJSONObject());
+        }
+
+        return $object;
     }
 }
 ?>
