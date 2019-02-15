@@ -80,7 +80,7 @@ class Tab{
          $length = $this->getStringLength($content);
 
         if($this->hasVideo == true){
-            return substr($content, $start + 7, $length);
+            return substr($content, $start + 7, $length - 7);
         }
         else if ($this->hasImage == true){
             $substring = substr($content, $start, $length);
