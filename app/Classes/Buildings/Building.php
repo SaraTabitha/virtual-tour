@@ -291,15 +291,6 @@ class Building{
 
     //TODO comment
     public function createPopupJSONObject(){
-       // $object->
-       //slug: "buildingslug", aboutTabMedia: "", tourTab: nomedia/image/video/false, sustainabilityTab: nomedia/image/video/false, bathroomsTab: nomedia/image/video/false, diningTab: nomedia/image/video/false,
-       //tourMedia: "", sustainabilityMedia: "", bathroomsMedia: "", diningMedia: ""
-
-       //building slug
-       //Tab Slug
-       //tabType: noMedia, image, video
-       //media
-
         $object->buildingSlug = $this->getSlug();
         $object->tabs = array();
         array_push($object->tabs, $this->getAboutTab()->createTabJSONObject());

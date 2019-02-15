@@ -1509,7 +1509,7 @@ ul#popupNav li:hover{
     color: white;
     }
 
-    #accFCard{
+    /* #accFCard{
     width: 100%;
     }
 
@@ -1518,47 +1518,47 @@ ul#popupNav li:hover{
     position: relative;
     top: 2%;
     right: 2%;
-    }
+    } */
 
     /*iframe video*/
-    #accFCard > div:nth-child(3){
+    /* #accFCard > div:nth-child(3){
         padding-left: 2%;
         padding-right: 2%;
-    }
+    } */
 
     /*text*/
     .categoryText{
         text-align: center;
         margin: 0 auto;
     }
-    #athCard{
+    /* #athCard{
     width: 100%;
-    }
+    } */
 
-    #athClose{
+    /* #athClose{
     float: right;
     position: relative;
     top: 2%;
     right: 2%;
-    }
+    } */
     /*iframe video*/
-    #athCard > div:nth-child(3){
+    /* #athCard > div:nth-child(3){
         padding-left: 2%;
         padding-right: 2%;
     }
     #accSCard{
     width: 100%;
-    }
+    } */
 
-    #accSClose{
+    /* #accSClose{
     float: right;
     position: relative;
     top: 2%;
     right: 2%;
-    }
+    } */
 
     /*iframe video*/
-    #accSCard > div:nth-child(3){
+    /* #accSCard > div:nth-child(3){
         padding-left: 2%;
         padding-right: 2%;
     }
@@ -1572,10 +1572,10 @@ ul#popupNav li:hover{
     position: relative;
     top: 2%;
     right: 2%;
-    }
+    } */
 
     /*iframe video*/
-    #campSCard > div:nth-child(3){
+    /* #campSCard > div:nth-child(3){
         padding-left: 2%;
         padding-right: 2%;
     }
@@ -1589,10 +1589,10 @@ ul#popupNav li:hover{
     position: relative;
     top: 2%;
     right: 2%;
-    }
+    } */
 
     /*iframe video*/
-    #resHCard > div:nth-child(3){
+    /* #resHCard > div:nth-child(3){
         padding-left: 2%;
         padding-right: 2%;
     }
@@ -1606,13 +1606,13 @@ ul#popupNav li:hover{
     position: relative;
     top: 2%;
     right: 2%;
-    }
+    } */
 
     /*iframe video*/
-    #diningCard > div:nth-child(3){
+    /* #diningCard > div:nth-child(3){
         padding-left: 2%;
         padding-right: 2%;
-    }
+    } */
 
     /* #stuRCard{
     width: 100%;
@@ -2147,7 +2147,7 @@ ul#popupNav li:hover{
     }
 }
 /*when window shrinks under a certain size the category page becomes scrollable*/
-@media screen and (max-width: 400px) {
+/* @media screen and (max-width: 400px) {
     #accFCard{
         overflow-y:  scroll;
     }
@@ -2156,31 +2156,31 @@ ul#popupNav li:hover{
     #athCard{
         overflow-y:  scroll;
     }
-}
+} */
 /*when window shrinks under a certain size the category page becomes scrollable*/
-@media screen and (max-width: 400px) {
+/* @media screen and (max-width: 400px) {
     #accSCard{
         overflow-y:  scroll;
     }
-}
+} */
 /*when window shrinks under a certain size the category page becomes scrollable*/
-@media screen and (max-width: 400px) {
+/* @media screen and (max-width: 400px) {
     #campSCard{
         overflow-y:  scroll;
     }
-}
+} */
 /*when window shrinks under a certain size the category page becomes scrollable*/
-@media screen and (max-width: 400px) {
+/* @media screen and (max-width: 400px) {
     #resHCard{
         overflow-y:  scroll;
     }
-}
+} */
 /*when window shrinks under a certain size the category page becomes scrollable*/
-@media screen and (max-width: 400px) {
+/* @media screen and (max-width: 400px) {
     #diningCard{
         overflow-y:  scroll;
     }
-}
+} */
 
 /*popup styling under 500px width*/
 @media screen and (max-width: 500px){

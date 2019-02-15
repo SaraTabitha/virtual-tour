@@ -1059,6 +1059,9 @@ function initMap() {
             var group_slugs = [checkbox_slug, accessibleBuildings.checkbox_slug, sustainableBuildings.checkbox_slug, bathroomBuildings.checkbox_slug];
             var group_icons = [allBuildings.icon, accessibleBuildings.marker_icon, sustainableBuildings.marker_icon, bathroomBuildings.marker_icon];
 
+            /*
+                categories
+            */
             var categories = response.categories;
             var category_markers_array = [];
             categories.forEach(function(this_category){
@@ -1078,6 +1081,14 @@ function initMap() {
                 hookupCheckboxesToMarkers(select2_checkbox_id, this_category.checkbox_slug, category_markers_array[index], this_category.marker_icon, markerGroups_array, group_slugs, group_icons);
 
             });
+
+            /*
+                building popups
+            */
+           //tabs array size of 1 => only has About tab (doesn't have nav w/ Li links)
+           //only needs function for hiding & showing the building image
+
+           //>1 tab -> need navigation click functions/ more complex media+text hiding/showing 
         })
 
         /*
@@ -1612,12 +1623,7 @@ function initMap() {
         //     }
         // });
 
-        /* possible new objects for the popup tab info ? 
-            {   
-                slug: "buildingslug", aboutTabMedia: "", tourTab: nomedia/image/video/false, sustainabilityTab: nomedia/image/video/false, bathroomsTab: nomedia/image/video/false, diningTab: nomedia/image/video/false,
-                tourMedia: "", sustainabilityMedia: "", bathroomsMedia: "", diningMedia: ""
-            }
-        */
+       
         //array for each building with multiple tabs; true = it has that tab, false = it does not have that tab
         //(tabs for the popups)
         var buildingsTabs = [
