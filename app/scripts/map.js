@@ -1183,6 +1183,7 @@ function initMap() {
                  $("#" + this_slug + "PopupClose").click(function(){
                      closePopup(this_slug);
                      //TODO remove media (tabs)
+                     $("#" + this_slug + "AboutImage > img").attr("src", "");
                  })
              });
         }
