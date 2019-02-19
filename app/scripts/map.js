@@ -1023,14 +1023,20 @@ function initMap() {
         *       -building attached to each category is defined by checking them in the categories list when a building is created/edited in the CMS
         */
         get("../Classes/Buildings/buildings_json.php").then(function(response){
-            console.log(response);
+            //console.log(response);
 
             //all buildings
             var checkbox_slug = "buildings";
             var allBuildings = response.allBuildings;
             var building_slugs_array = allBuildings.slugs;
 
-            var building_map_objects = building_createMarkersAndInfoWindows(allBuildings, building_slugs_array);
+            /* for about tab media */
+            var popups = response.popups;
+            console.log(popups);
+            var politos =  response.popups[0]; //tabs.length = 2
+            var campus_services = response.popups[1]; //tabs.length = 1
+            
+            var building_map_objects = building_createMarkersAndInfoWindows(allBuildings, building_slugs_array, popups);
 
             var building_markers_array = building_map_objects[0];
             var building_infoWindows_array = building_map_objects[1];
@@ -1081,7 +1087,6 @@ function initMap() {
                 hookupCheckboxesToMarkers(select2_checkbox_id, this_category.checkbox_slug, category_markers_array[index], this_category.marker_icon, markerGroups_array, group_slugs, group_icons);
 
             });
-
             /*
                 building popups
             */
@@ -1089,6 +1094,29 @@ function initMap() {
            //only needs function for hiding & showing the building image
 
            //>1 tab -> need navigation click functions/ more complex media+text hiding/showing 
+
+           
+
+           //has 2 tabs
+           if(politos.tabs.length > 1){
+                //greater than 1
+                //has nav, needs hide/show for all li -> media type matters/complicates things
+
+
+           }
+
+           //has 1 tab
+                //only 1 (just the About tab -> no navigation)
+                //only needs function for hiding & showing the building image
+
+                //more info link click -> add image src
+                //x button -> remove image src
+
+           /* ALL POPUPS HAVE AN ABOUT TAB -> therefore the media for the full_image on that tab should be included in the 
+           building_createMarkersAndInfoWindows function for the moreInfoLinkClickEvent function & popupCloseButtonClickEvent function
+           */
+
+
         })
 
         /*
@@ -1099,12 +1127,12 @@ function initMap() {
         * return: 
         *   map_objects (2d array of google.maps.Marker[0] & google.maps.InfoWindow[1] object arrays)
         */
-        function building_createMarkersAndInfoWindows(building_json, slugs_array){
+        function building_createMarkersAndInfoWindows(building_json, slugs_array, popups){
             var markers_array = createMarkersFromResponse(building_json);
             var infoWindows_array = createInfoWindows(slugs_array);
 
-            moreInfoLinkClickEvent(slugs_array);
-            popupCloseButtonClickEvent(slugs_array);
+            moreInfoLinkClickEvent(slugs_array, popups);
+            popupCloseButtonClickEvent(slugs_array, popups);
     
             var map_objects = [markers_array, infoWindows_array];
             return map_objects;
@@ -1137,11 +1165,14 @@ function initMap() {
         }
 
         //TODO comment
-        function moreInfoLinkClickEvent(slugs_array){
-            slugs_array.forEach(function(this_slug){
+        function moreInfoLinkClickEvent(slugs_array, popups){
+            slugs_array.forEach(function(this_slug, index){
+                var about_image_src = popups[index].tabs[0].media;
                  $("#" + this_slug + "Link").click(function(){
                      openPopup(this_slug);
                      //TODO set media (tabs)
+                     $("#" + this_slug + "AboutImage > img").attr("src", about_image_src);
+                     //popups[index].tabs[0].media; 
                  });
             });
         }
@@ -1555,7 +1586,7 @@ function initMap() {
                              break;
                     case 21: $("#halseyDiningImage > img").attr("src", allMarkersInfo[21].diningImage);
                              break;
-                    case 24: $("#parkingRampParkingImage> img").attr("src", allMarkersInfo[24].parkingImage);
+                    case 24: $("#parkingRampParkingImage > img").attr("src", allMarkersInfo[24].parkingImage);
                              break;
                     case 32: $('#polkiframe').attr('src',allMarkersInfo[32].iFrame);
                              break;
