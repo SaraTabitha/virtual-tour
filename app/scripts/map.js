@@ -1101,25 +1101,26 @@ function initMap() {
                 //greater than 1
                 //has nav, needs hide/show for all li -> media type matters/complicates things
 
-                //hidealltab data
+                //hideAllTabs(politos);
+
+                //each li -> click event
                 // politos.tabs.forEach(function(this_tab){
-                //     switch(this_tab.tabType){
-                //         case "noMedia":
-                //             $("#" + politos.buildingSlug + this_tab.tabSlug).css("display", "none");
-                //         break;
-                //         case "image":
-                //             $("#" + politos.buildingSlug + this_tab.tabSlug + "Image").css("display", "none");
-                //             $("#" + politos.buildingSlug + this_tab.tabSlug + "Text").css("display", "none");
-                //         break;
-                //         case "video":
-                //             $("#" + politos.buildingSlug + this_tab.tabSlug + "Video").css("display", "none");
-                //             $("#" + politos.buildingSlug + this_tab.tabSlug + "Text").css("display", "none");
-                //     }
+                //     $("#" + politos.buildingSlug + this_tab.tabSlug + "Li").click(function(){
+                //         hideAllTabs(politos);
+                //         showThisTab(politos, this_tab);
+                //     });
                 // });
                 hideAllTabs(politos);
+                showThisTab(politos, politos.tabs[0]); //show about tab 
+                popupLiClickEvents(politos);
 
+                //moreInfo click => show About tab 
+                //x button click => hide all tabs
 
            }
+
+           
+
 
         })
 
@@ -1212,6 +1213,31 @@ function initMap() {
              $("#" + slug + "Popup").css("visibility", "hidden");
         }
 
+        function popupLiClickEvents(popup){
+            popup.tabs.forEach(function(this_tab){
+                $("#" + popup.buildingSlug + this_tab.tabSlug + "Li").click(function(){
+                    hideAllTabs(popup);
+                    showThisTab(popup, this_tab);
+                });
+            });
+
+        }
+
+        //TODO comment
+        function showThisTab(popup, tab){
+            switch(tab.tabType){
+                case "noMedia":
+                    $("#" + popup.buildingSlug + tab.tabSlug).css("display", "initial");
+                break;
+                case "image":
+                    $("#" + popup.buildingSlug + tab.tabSlug + "Image").css("display", "block");
+                    $("#" + popup.buildingSlug + tab.tabSlug + "Text").css("display", "initial");
+                break;
+                case "video":
+                    $("#" + popup.buildingSlug + tab.tabSlug + "Video").css("display", "initial");
+                    $("#" + popup.buildingSlug + tab.tabSlug + "Text").css("display", "initial");
+            }
+        }
         //TODO comment
         function hideAllTabs(popup){
             popup.tabs.forEach(function(this_tab){
