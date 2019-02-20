@@ -1033,8 +1033,16 @@ function initMap() {
             /* for about tab media */
             var popups = response.popups;
             console.log(popups);
-            var politos =  response.popups[0]; //tabs.length = 2
-            var campus_services = response.popups[1]; //tabs.length = 1
+            // var politos =  response.popups[0]; //tabs.length = 2
+            // var campus_services = response.popups[1]; //tabs.length = 1
+
+            popups.forEach(function(this_popup){
+                if(this_popup.tabs.length > 1){
+                    hideAllTabs(this_popup);
+                    showThisTab(this_popup, this_popup.tabs[0]); //show about tab 
+                    popupLiClickEvents(this_popup);
+                }
+            });
             
             var building_map_objects = building_createMarkersAndInfoWindows(allBuildings, building_slugs_array, popups);
 
@@ -1097,27 +1105,27 @@ function initMap() {
 
            
            //has 2 tabs
-           if(politos.tabs.length > 1){
-                //greater than 1
-                //has nav, needs hide/show for all li -> media type matters/complicates things
+        //    if(politos.tabs.length > 1){
+        //         //greater than 1
+        //         //has nav, needs hide/show for all li -> media type matters/complicates things
 
-                //hideAllTabs(politos);
+        //         //hideAllTabs(politos);
 
-                //each li -> click event
-                // politos.tabs.forEach(function(this_tab){
-                //     $("#" + politos.buildingSlug + this_tab.tabSlug + "Li").click(function(){
-                //         hideAllTabs(politos);
-                //         showThisTab(politos, this_tab);
-                //     });
-                // });
-                hideAllTabs(politos);
-                showThisTab(politos, politos.tabs[0]); //show about tab 
-                popupLiClickEvents(politos);
+        //         //each li -> click event
+        //         // politos.tabs.forEach(function(this_tab){
+        //         //     $("#" + politos.buildingSlug + this_tab.tabSlug + "Li").click(function(){
+        //         //         hideAllTabs(politos);
+        //         //         showThisTab(politos, this_tab);
+        //         //     });
+        //         // });
+        //         hideAllTabs(politos);
+        //         showThisTab(politos, politos.tabs[0]); //show about tab 
+        //         popupLiClickEvents(politos);
 
-                //moreInfo click => show About tab 
-                //x button click => hide all tabs
+        //         //moreInfo click => show About tab 
+        //         //x button click => hide all tabs
 
-           }
+        //    }
 
            
 
@@ -1230,10 +1238,12 @@ function initMap() {
                     $("#" + popup.buildingSlug + tab.tabSlug).css("display", "initial");
                 break;
                 case "image":
+                    $("#" + popup.buildingSlug + tab.tabSlug + "Image > img").attr("src", tab.media);
                     $("#" + popup.buildingSlug + tab.tabSlug + "Image").css("display", "block");
                     $("#" + popup.buildingSlug + tab.tabSlug + "Text").css("display", "initial");
                 break;
                 case "video":
+                    $("#" + popup.buildingSlug + "iframe").attr("src", tab.media);
                     $("#" + popup.buildingSlug + tab.tabSlug + "Video").css("display", "initial");
                     $("#" + popup.buildingSlug + tab.tabSlug + "Text").css("display", "initial");
             }
@@ -1246,10 +1256,12 @@ function initMap() {
                         $("#" + popup.buildingSlug + this_tab.tabSlug).css("display", "none");
                     break;
                     case "image":
+                        $("#" + popup.buildingSlug + this_tab.tabSlug + "Image > img").attr("src", "");
                         $("#" + popup.buildingSlug + this_tab.tabSlug + "Image").css("display", "none");
                         $("#" + popup.buildingSlug + this_tab.tabSlug + "Text").css("display", "none");
                     break;
                     case "video":
+                        $("#" + popup.buildingSlug + "iframe").attr("src", "");
                         $("#" + popup.buildingSlug + this_tab.tabSlug + "Video").css("display", "none");
                         $("#" + popup.buildingSlug + this_tab.tabSlug + "Text").css("display", "none");
                 }
