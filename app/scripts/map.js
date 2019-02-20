@@ -1096,26 +1096,30 @@ function initMap() {
            //>1 tab -> need navigation click functions/ more complex media+text hiding/showing 
 
            
-
            //has 2 tabs
            if(politos.tabs.length > 1){
                 //greater than 1
                 //has nav, needs hide/show for all li -> media type matters/complicates things
 
+                //hidealltab data
+                // politos.tabs.forEach(function(this_tab){
+                //     switch(this_tab.tabType){
+                //         case "noMedia":
+                //             $("#" + politos.buildingSlug + this_tab.tabSlug).css("display", "none");
+                //         break;
+                //         case "image":
+                //             $("#" + politos.buildingSlug + this_tab.tabSlug + "Image").css("display", "none");
+                //             $("#" + politos.buildingSlug + this_tab.tabSlug + "Text").css("display", "none");
+                //         break;
+                //         case "video":
+                //             $("#" + politos.buildingSlug + this_tab.tabSlug + "Video").css("display", "none");
+                //             $("#" + politos.buildingSlug + this_tab.tabSlug + "Text").css("display", "none");
+                //     }
+                // });
+                hideAllTabs(politos);
+
 
            }
-
-           //has 1 tab
-                //only 1 (just the About tab -> no navigation)
-                //only needs function for hiding & showing the building image
-
-                //more info link click -> add image src
-                //x button -> remove image src
-
-           /* ALL POPUPS HAVE AN ABOUT TAB -> therefore the media for the full_image on that tab should be included in the 
-           building_createMarkersAndInfoWindows function for the moreInfoLinkClickEvent function & popupCloseButtonClickEvent function
-           */
-
 
         })
 
@@ -1123,6 +1127,7 @@ function initMap() {
         * params:
         *   building_json (json string of allbuilding info for markers)
         *   slugs_array (array of strings of all of the building slugs)
+        *   popups (array of all popup data -> how many tabs, images/video srcs)
         * this function creates a group for google.maps.Marker & google.maps.InfoWindow objects from the params it is passed
         * return: 
         *   map_objects (2d array of google.maps.Marker[0] & google.maps.InfoWindow[1] object arrays)
@@ -1132,7 +1137,7 @@ function initMap() {
             var infoWindows_array = createInfoWindows(slugs_array);
 
             moreInfoLinkClickEvent(slugs_array, popups);
-            popupCloseButtonClickEvent(slugs_array, popups);
+            popupCloseButtonClickEvent(slugs_array);
     
             var map_objects = [markers_array, infoWindows_array];
             return map_objects;
@@ -1170,9 +1175,8 @@ function initMap() {
                 var about_image_src = popups[index].tabs[0].media;
                  $("#" + this_slug + "Link").click(function(){
                      openPopup(this_slug);
-                     //TODO set media (tabs)
+                     //sets about image
                      $("#" + this_slug + "AboutImage > img").attr("src", about_image_src);
-                     //popups[index].tabs[0].media; 
                  });
             });
         }
@@ -1182,7 +1186,7 @@ function initMap() {
              slugs_array.forEach(function(this_slug){
                  $("#" + this_slug + "PopupClose").click(function(){
                      closePopup(this_slug);
-                     //TODO remove media (tabs)
+                     //removes about image
                      $("#" + this_slug + "AboutImage > img").attr("src", "");
                  })
              });
@@ -1208,6 +1212,23 @@ function initMap() {
              $("#" + slug + "Popup").css("visibility", "hidden");
         }
 
+        //TODO comment
+        function hideAllTabs(popup){
+            popup.tabs.forEach(function(this_tab){
+                switch(this_tab.tabType){
+                    case "noMedia":
+                        $("#" + popup.buildingSlug + this_tab.tabSlug).css("display", "none");
+                    break;
+                    case "image":
+                        $("#" + popup.buildingSlug + this_tab.tabSlug + "Image").css("display", "none");
+                        $("#" + popup.buildingSlug + this_tab.tabSlug + "Text").css("display", "none");
+                    break;
+                    case "video":
+                        $("#" + popup.buildingSlug + this_tab.tabSlug + "Video").css("display", "none");
+                        $("#" + popup.buildingSlug + this_tab.tabSlug + "Text").css("display", "none");
+                }
+            });
+        }
         
         // setting sustainability markers
         // function setSust(){
