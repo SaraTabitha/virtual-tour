@@ -6,11 +6,11 @@
 // each InfoWindow for a Building has a thumbnail and a link that says "click here" which opens a Popup that has all of the information about 
 // the building and tabs for things like bathrooms, sustainability etc. 
 // all of this is handled in this file!
-// recap: Markers, InfoWindows(might be referred to as Hover or Hovercards), and Popups
+// recap: Markers, InfoWindows(might be referred to as Hover), and Popups
 //
 
 
-// function for intitial map load (what appears when the page first loads)
+// function for intitial map load 
 function initMap() {
         // center of map (UWO coordinates)
         var uwo = {lat: 44.025098, lng: -88.554610};
@@ -537,6 +537,9 @@ function initMap() {
             });
         }
         
+        /*
+        O L D   C O D E   B E L O W
+        */
          //start of code for search that needs to interact with the infoWindows and Popups here in map.js
          $( "#searchInput" ).keyup(function() {
             //takes the length of the value of the string in

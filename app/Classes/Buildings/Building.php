@@ -212,21 +212,24 @@ class Building{
                 <!-- start tabs  container-->
                 <div class="infoContainer">
                     <?php 
-                        $this->aboutTabTemplate($this->about_tab);
-
+                       // $this->aboutTabTemplate($this->about_tab);
+                        $this->about_tab->createAboutTab($this->slug, $this->street, $this->city, $this->state, $this->zipcode);
                         //all other tabs
                         foreach($this->tabs as $tab){
                             if($this->tabHasContent($tab)){
-                                if($tab->getHasVideo()){
-                                    $this->videoTabTemplate($tab);
-                                }
-                                else if($tab->getHasImage()){
-                                    $this->imageTabTemplate($tab);
-                                }
-                                else{
-                                    $this->noMediaTabTemplate($tab);
-                                }
+                                $tab->getTabTemplate($this->slug);
                             }
+                            // if($this->tabHasContent($tab)){
+                            //     if($tab->getHasVideo()){
+                            //         $this->videoTabTemplate($tab);
+                            //     }
+                            //     else if($tab->getHasImage()){
+                            //         $this->imageTabTemplate($tab);
+                            //     }
+                            //     else{
+                            //         $this->noMediaTabTemplate($tab);
+                            //     }
+                            // }
                         }
                     ?>
                 </div>
@@ -235,59 +238,7 @@ class Building{
         <?php
     }
 
-    public function aboutTabTemplate($tab){
-        $tab->removeParagraphTags();
-        ?>
-            <!-- start about tab -->
-            <div id="<?php echo $this->slug; ?>AboutImage" class="imagePopup">
-                <img src="">
-                <p class="address text"><?php echo $this->street . ", " . $this->city . ", " . $this->state . ", " . $this->zipcode; ?></p>
-            </div>
-            <div id="<?php echo $this->slug; ?>AboutText" class="popupText">
-                <h5 class="heading">About This Building</h5>
-                <p class="subText text"><?php echo $tab->getContent();?></p>
-            </div>
-            <!-- end about tab -->
-        <?php
-    }
-
-    public function videoTabTemplate($tab){
-        ?>
-            <!-- tab has video -->
-            <div id="<?php echo $this->slug . $tab->getSlug(); ?>Text" class="tourText">
-                <h5 class="heading"><?php echo $tab->getTitle(); ?></h5>
-                <p class="subText text"><?php echo $tab->getContent(); ?></p>
-            </div>
-            <div id="<?php echo $this->slug . $tab->getSlug(); ?>Video" class="videoPopup">
-                <iframe id="<?php echo $this->slug; ?>iframe" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
-            </div>
-        <?php
-    }
-
-    //TODO comment 
-    public function imageTabTemplate($tab){
-        ?>
-            <!-- tab has image -->
-            <div id="<?php echo $this->slug . $tab->getSlug(); ?>Image" class="imagePopup">
-                <img src=""/>
-            </div>
-            <div id="<?php echo $this->slug . $tab->getSlug(); ?>Text" class="popupText">
-                <h5 class="heading"><?php echo $tab->getTitle(); ?></h5>
-                <p class="subText text"><?php echo $tab->getContent(); ?></p>
-            </div>
-        <?php
-    }
-
-    //TODO comment 
-    public function noMediaTabTemplate($tab){
-        ?>
-            <!-- tab has no media -->
-            <div id="<?php echo $this->slug . $tab->getSlug(); ?>" class="popupTextNoImage">
-                <h5 class="heading"><?php echo $tab->getTitle(); ?></h5>
-                <p class="subText text"><?php echo $tab->getContent(); ?></p>
-            </div>
-        <?php
-    }
+    
 
     //TODO comment
     public function createPopupJSONObject(){

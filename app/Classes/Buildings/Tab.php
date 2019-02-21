@@ -167,5 +167,77 @@ class Tab{
 
         return $object;
     }
+
+    public function getTabTemplate($building_slug){
+        if($this->getHasVideo()){
+            $this->createVideoTab($building_slug);
+        }
+        else if ($this->getHasImage()){
+            $this->createImageTab($building_slug);
+        }
+        // else if($this->getTitle() == "About"){
+        //     $this->createAboutTab($building_slug, $street, $city, $state, $zipcode);
+        // }
+        else{
+            $this->createNoMediaTab($building_slug);
+        }
+    }
+
+    //TODO comment
+    public function createVideoTab($building_slug){
+        ?>
+            <!-- tab has video -->
+            <div id="<?php echo $building_slug . $this->getSlug(); ?>Text" class="tourText">
+                <h5 class="heading"><?php echo $this->getTitle(); ?></h5>
+                <p class="subText text"><?php echo $this->getContent(); ?></p>
+            </div>
+            <div id="<?php echo $building_slug . $this->getSlug(); ?>Video" class="videoPopup">
+                <iframe id="<?php echo $building_slug; ?>iframe" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+            </div>
+        <?php
+    }
+
+    //TODO comment
+    public function createImageTab($building_slug){
+        ?>
+            <!-- tab has image -->
+            <div id="<?php echo $building_slug . $this->getSlug(); ?>Image" class="imagePopup">
+                <img src=""/>
+            </div>
+            <div id="<?php echo $building_slug . $this->getSlug(); ?>Text" class="popupText">
+                <h5 class="heading"><?php echo $this->getTitle(); ?></h5>
+                <p class="subText text"><?php echo $this->getContent(); ?></p>
+            </div>
+        <?php
+    }
+
+    //TODO comment
+    public function createAboutTab($building_slug, $street, $city, $state, $zipcode){
+        $this->removeParagraphTags();
+        ?>
+            <!-- start about tab -->
+            <div id="<?php echo $building_slug; ?>AboutImage" class="imagePopup">
+                <img src="">
+                <p class="address text"><?php echo $street . ", " . $city . ", " . $state . ", " . $zipcode; ?></p>
+            </div>
+            <div id="<?php echo $building_slug; ?>AboutText" class="popupText">
+                <h5 class="heading">About This Building</h5>
+                <p class="subText text"><?php echo $this->getContent();?></p>
+            </div>
+            <!-- end about tab -->
+        <?php
+    }
+
+    //TODO comment
+    public function createNoMediaTab($building_slug){
+        ?>
+            <!-- tab has no media -->
+            <div id="<?php echo $building_slug . $this->getSlug(); ?>" class="popupTextNoImage">
+                <h5 class="heading"><?php echo $this->getTitle(); ?></h5>
+                <p class="subText text"><?php echo $this->getContent(); ?></p>
+            </div>
+        <?php
+    }
+
 }
 ?>
