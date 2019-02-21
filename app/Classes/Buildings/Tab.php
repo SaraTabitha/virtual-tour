@@ -32,6 +32,9 @@ class Tab{
             $this->media = $this->extractMedia($this->content);
             $this->removeMediaFromContent($this->content);
         }
+        if($this->title() == "About"){
+            $this->removeParagraphTags();
+        }
         
     }
 
@@ -218,10 +221,9 @@ class Tab{
             </div>
         <?php
     }
-    
+
     //TODO comment
     public function createAboutTab($building_slug, $street, $city, $state, $zipcode){
-        $this->removeParagraphTags();
         ?>
             <!-- start about tab -->
             <div id="<?php echo $building_slug; ?>AboutImage" class="imagePopup">
