@@ -175,9 +175,6 @@ class Tab{
         else if ($this->getHasImage()){
             $this->createImageTab($building_slug);
         }
-        // else if($this->getTitle() == "About"){
-        //     $this->createAboutTab($building_slug, $street, $city, $state, $zipcode);
-        // }
         else{
             $this->createNoMediaTab($building_slug);
         }
@@ -212,6 +209,17 @@ class Tab{
     }
 
     //TODO comment
+    public function createNoMediaTab($building_slug){
+        ?>
+            <!-- tab has no media -->
+            <div id="<?php echo $building_slug . $this->getSlug(); ?>" class="popupTextNoImage">
+                <h5 class="heading"><?php echo $this->getTitle(); ?></h5>
+                <p class="subText text"><?php echo $this->getContent(); ?></p>
+            </div>
+        <?php
+    }
+    
+    //TODO comment
     public function createAboutTab($building_slug, $street, $city, $state, $zipcode){
         $this->removeParagraphTags();
         ?>
@@ -225,17 +233,6 @@ class Tab{
                 <p class="subText text"><?php echo $this->getContent();?></p>
             </div>
             <!-- end about tab -->
-        <?php
-    }
-
-    //TODO comment
-    public function createNoMediaTab($building_slug){
-        ?>
-            <!-- tab has no media -->
-            <div id="<?php echo $building_slug . $this->getSlug(); ?>" class="popupTextNoImage">
-                <h5 class="heading"><?php echo $this->getTitle(); ?></h5>
-                <p class="subText text"><?php echo $this->getContent(); ?></p>
-            </div>
         <?php
     }
 

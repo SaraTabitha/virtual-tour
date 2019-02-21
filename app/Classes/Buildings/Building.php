@@ -212,24 +212,12 @@ class Building{
                 <!-- start tabs  container-->
                 <div class="infoContainer">
                     <?php 
-                       // $this->aboutTabTemplate($this->about_tab);
                         $this->about_tab->createAboutTab($this->slug, $this->street, $this->city, $this->state, $this->zipcode);
                         //all other tabs
                         foreach($this->tabs as $tab){
                             if($this->tabHasContent($tab)){
                                 $tab->getTabTemplate($this->slug);
                             }
-                            // if($this->tabHasContent($tab)){
-                            //     if($tab->getHasVideo()){
-                            //         $this->videoTabTemplate($tab);
-                            //     }
-                            //     else if($tab->getHasImage()){
-                            //         $this->imageTabTemplate($tab);
-                            //     }
-                            //     else{
-                            //         $this->noMediaTabTemplate($tab);
-                            //     }
-                            // }
                         }
                     ?>
                 </div>
@@ -237,8 +225,6 @@ class Building{
             </div>
         <?php
     }
-
-    
 
     //TODO comment
     public function createPopupJSONObject(){
