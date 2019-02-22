@@ -27,15 +27,13 @@ class Tab{
         else if($this->hasMedia($this->content) == 2){
             $this->hasImage = true;
         }
-
         if(($this->hasVideo == true) ||  ($this->hasImage == true)){
             $this->media = $this->extractMedia($this->content);
             $this->removeMediaFromContent($this->content);
         }
-        if($this->title() == "About"){
+        if($this->title == "About"){
             $this->removeParagraphTags();
         }
-        
     }
 
     public function getSlug(){
@@ -238,5 +236,6 @@ class Tab{
         <?php
     }
 
+    //TODO pagination relation station creation
 }
 ?>
