@@ -27,10 +27,12 @@ class Tab{
         else if($this->hasMedia($this->content) == 2){
             $this->hasImage = true;
         }
+
         if(($this->hasVideo == true) ||  ($this->hasImage == true)){
             $this->media = $this->extractMedia($this->content);
             $this->removeMediaFromContent($this->content);
         }
+
         if($this->title == "About"){
             $this->removeParagraphTags();
         }
@@ -75,10 +77,12 @@ class Tab{
         $this->content = substr($content, 0, $start);
     }
 
+    
+
     //TODO comment
     public function extractMedia($content){
-         $start = $this->getStringStart($content);
-         $length = $this->getStringLength($content);
+        $start = $this->getStringStart($content);
+        $length = $this->getStringLength($content);
 
         if($this->hasVideo == true){
             return substr($content, $start + 7, $length - 7);
@@ -222,18 +226,37 @@ class Tab{
 
     //TODO comment
     public function createAboutTab($building_slug, $street, $city, $state, $zipcode){
+        //if(strlen($this->getContent()) > 450)
         ?>
             <!-- start about tab -->
             <div id="<?php echo $building_slug; ?>AboutImage" class="imagePopup">
                 <img src="">
                 <p class="address text"><?php echo $street . ", " . $city . ", " . $state . ", " . $zipcode; ?></p>
             </div>
-            <div id="<?php echo $building_slug; ?>AboutText" class="popupText">
-                <h5 class="heading">About This Building</h5>
-                <p class="subText text"><?php echo $this->getContent();?></p>
-            </div>
+            <?php 
+                if(strlen($this->getContent()) < 450){
+                    //< 450
+                    ?>
+                    <div id="<?php echo $building_slug; ?>AboutText" class="popupText">
+                        <h5 class="heading">About This Building</h5>
+                        <p class="subText text"><?php echo $this->getContent();?></p>
+                    </div>
+                    <?php
+                }else{
+                    // > 450
+                    ?>
+                    <div id="<?php echo $building_slug; ?>AboutText" class="popupText tabContentScroll">
+                        <h5 class="heading">About This Building</h5>
+                        <p class="subText text"><?php echo $this->getContent();?></p>
+                    </div>
+                    <?php
+                }
+            
+            ?>
             <!-- end about tab -->
         <?php
+
+
     }
 
     //TODO pagination relation station creation

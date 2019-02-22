@@ -1098,6 +1098,15 @@ ul#popupNav li:hover{
     cursor: pointer;
   }
 
+  .tabContentScroll{
+    height: 274px;
+    overflow: hidden scroll;
+  }
+  /* only hides scrollbar for these areas */
+  .tabContentScroll::-webkit-scrollbar{
+    width: 0px;
+  }
+
   /*yellow portion of header*/
   .mdl-layout__header-row.main {
     height: 109px;

@@ -24,7 +24,7 @@ class Building{
     private $building_categories; //array of Building Category titles (Strings not the BuildingCategory objects)
     private $marker;    //marker object (latitude, longitude)
 
-    private $about_tab_content;
+    private $about_tab_content; //string of html
     private $tour_tab_content; //string of html
     private $sustainability_tab_content; //string of html
     private $bathrooms_tab_content; //string of html
@@ -212,6 +212,7 @@ class Building{
                 <!-- start tabs  container-->
                 <div class="infoContainer">
                     <?php 
+                        
                         $this->about_tab->createAboutTab($this->slug, $this->street, $this->city, $this->state, $this->zipcode);
                         //all other tabs
                         foreach($this->tabs as $tab){
@@ -234,7 +235,6 @@ class Building{
         foreach($this->getTabs() as $this_tab){
             array_push($object->tabs, $this_tab->createTabJSONObject());
         }
-
         return $object;
     }
 }
