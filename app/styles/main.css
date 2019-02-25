@@ -74,7 +74,7 @@ a.link{
 }
 
 /* replacing .text on the p children of popups */
-.popupText > p{
+.popupText > .subText{
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -629,7 +629,7 @@ ul#popupNav li:hover{
 
 /* popup p text */
 /* replacing .text and .subText for popup text*/
-.popupText > p{
+.popupText > .subText{
   font-family: "open-sans", sans-serif;
 
 }
@@ -1069,6 +1069,7 @@ ul#popupNav li:hover{
     text-align: center;
     margin: 0px;
     color: black;
+    padding-top:5px;
   }
   .tourText{
     width: 300px;
@@ -1086,7 +1087,7 @@ ul#popupNav li:hover{
   }
 
   /* replacing .subText for popup text */
-  .popupText > p{
+  .popupText > .subText{
     position: relative;
     padding-top: 10px;
     color: black;
@@ -1099,12 +1100,16 @@ ul#popupNav li:hover{
   }
 
   .tabContentScroll{
-    height: 274px;
+    height: 250px;
     overflow: hidden scroll;
   }
   /* only hides scrollbar for these areas */
   .tabContentScroll::-webkit-scrollbar{
     width: 0px;
+  }
+  .scrollText{
+    padding-top: 3px;
+    text-align: center;
   }
 
   /*yellow portion of header*/
@@ -1201,6 +1206,7 @@ ul#popupNav li:hover{
     float: right;
     width: 300px;
     color: black;
+    text-align: justify;
   }
 
   h1.text.yellow{
@@ -1843,7 +1849,7 @@ ul#popupNav li:hover{
     }
 
     /* replacing .subText for popup text */
-    .popupText > p{
+    .popupText > .subText{
       margin-top: 10px;
       text-align: justify;
     }

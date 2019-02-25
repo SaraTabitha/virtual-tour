@@ -57,7 +57,6 @@ class Tab{
         return $this->hasImage;
     }
 
-
     //TODO comment
     public function setAboutTabDetails($building_image){
         $this->hasImage = true;
@@ -76,8 +75,6 @@ class Tab{
         $start = $this->getStringStart($content);
         $this->content = substr($content, 0, $start);
     }
-
-    
 
     //TODO comment
     public function extractMedia($content){
@@ -234,8 +231,7 @@ class Tab{
                 <p class="address text"><?php echo $street . ", " . $city . ", " . $state . ", " . $zipcode; ?></p>
             </div>
             <?php 
-                if(strlen($this->getContent()) < 450){
-                    //< 450
+                if(strlen($this->getContent()) < 430){
                     ?>
                     <div id="<?php echo $building_slug; ?>AboutText" class="popupText">
                         <h5 class="heading">About This Building</h5>
@@ -243,20 +239,19 @@ class Tab{
                     </div>
                     <?php
                 }else{
-                    // > 450
                     ?>
-                    <div id="<?php echo $building_slug; ?>AboutText" class="popupText tabContentScroll">
+                    <div id="<?php echo $building_slug; ?>AboutText" class="popupText">
+                        <div class="tabContentScroll">
                         <h5 class="heading">About This Building</h5>
                         <p class="subText text"><?php echo $this->getContent();?></p>
+                        </div>
+                        <p class="scrollText text "><em>scroll ⇕</em></p>
                     </div>
                     <?php
                 }
-            
             ?>
             <!-- end about tab -->
         <?php
-
-
     }
 
     //TODO pagination relation station creation
