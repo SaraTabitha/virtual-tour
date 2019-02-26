@@ -94,6 +94,33 @@ class Tab{
         }
     }
 
+    /* 
+    *
+    *
+    */
+    //TODO -> finish function
+    public function removeImageFromContent(){
+        //extract image src & set media to image url
+        $embedOpenStart = strpos($this->content, "<img"); //index of the <
+        $embedEndStart = strpos($this->content, "/>") + 1; //index of the >
+        
+        //remove image embed from content string (front, middle or end)
+        if($embedOpenStart == 0){
+            //$length = $embedEndStart - $embedOpenStart;
+            $this->content = substr($this->content, $embedEndStart, strlen($this->content));
+        }
+    }    
+    /* 
+    *
+    *
+    */
+    //TODO -> make removeVideoFromContent()
+    /* 
+    *
+    *
+    */
+
+
     //TODO comment
     public function getImageSrc($substring){
         $src_start = strpos($substring, "src=");
@@ -188,7 +215,7 @@ class Tab{
     //TODO comment
     public function createVideoTab($building_slug){
         ?>
-            <!-- tab has video -->
+        <!-- tab has video -->
         <?php
             if(strlen($this->getContent()) < 430){
                 ?>
@@ -218,7 +245,7 @@ class Tab{
     //TODO comment
     public function createImageTab($building_slug){
         ?>
-            <!-- tab has image -->
+        <!-- tab has image -->
             <div id="<?php echo $building_slug . $this->getSlug(); ?>Image" class="imagePopup">
                 <img src=""/>
             </div>
@@ -247,7 +274,7 @@ class Tab{
     //TODO comment
     public function createNoMediaTab($building_slug){
         ?>
-            <!-- tab has no media -->
+        <!-- tab has no media -->
         <?php
         if(strlen($this->getContent()) < 1100){
             ?>
