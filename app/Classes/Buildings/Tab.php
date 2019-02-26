@@ -23,6 +23,8 @@ class Tab{
         
         if($this->hasMedia($this->content) == 1){
             $this->hasVideo = true;
+            $this->content = str_replace("watch?v=", "embed/", $this->content);
+
         }
         else if($this->hasMedia($this->content) == 2){
             $this->hasImage = true;
@@ -31,6 +33,7 @@ class Tab{
         if(($this->hasVideo == true) ||  ($this->hasImage == true)){
             $this->media = $this->extractMedia($this->content);
             $this->removeMediaFromContent($this->content);
+            
         }
 
         if($this->title == "About"){
@@ -219,11 +222,26 @@ class Tab{
             <div id="<?php echo $building_slug . $this->getSlug(); ?>Image" class="imagePopup">
                 <img src=""/>
             </div>
+            
+        <?php
+        if(strlen($this->getContent()) < 430){
+            ?>
             <div id="<?php echo $building_slug . $this->getSlug(); ?>Text" class="popupText">
                 <h5 class="heading"><?php echo $this->getTitle(); ?></h5>
                 <p class="subText text"><?php echo $this->getContent(); ?></p>
             </div>
-        <?php
+            <?php
+        }else{
+            ?>
+            <div id="<?php echo $building_slug . $this->getSlug(); ?>Text" class="popupText">
+                <div class="tabContentScroll">
+                    <h5 class="heading"><?php echo $this->getTitle(); ?></h5>
+                    <p class="subText text"><?php echo $this->getContent(); ?></p>
+                </div>
+                <p class="scrollText text "><em>scroll ⇕</em></p>
+            </div>
+            <?php
+        }
     }
 
     //TODO comment
