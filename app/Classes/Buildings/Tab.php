@@ -248,11 +248,25 @@ class Tab{
     public function createNoMediaTab($building_slug){
         ?>
             <!-- tab has no media -->
+        <?php
+        if(strlen($this->getContent()) < 1100){
+            ?>
             <div id="<?php echo $building_slug . $this->getSlug(); ?>" class="popupTextNoImage">
                 <h5 class="heading"><?php echo $this->getTitle(); ?></h5>
                 <p class="subText text"><?php echo $this->getContent(); ?></p>
             </div>
-        <?php
+            <?php
+        }else{
+            ?>
+            <div id="<?php echo $building_slug . $this->getSlug(); ?>" class="popupTextNoImage">
+                <div class="tabContentScroll">
+                    <h5 class="heading"><?php echo $this->getTitle(); ?></h5>
+                    <p class="subText text"><?php echo $this->getContent(); ?></p>
+                </div>
+                <p class="scrollText text "><em>scroll ⇕</em></p>
+            </div>
+            <?php
+        }
     }
 
     //TODO comment
