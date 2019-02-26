@@ -186,13 +186,29 @@ class Tab{
     public function createVideoTab($building_slug){
         ?>
             <!-- tab has video -->
-            <div id="<?php echo $building_slug . $this->getSlug(); ?>Text" class="tourText">
-                <h5 class="heading"><?php echo $this->getTitle(); ?></h5>
-                <p class="subText text"><?php echo $this->getContent(); ?></p>
-            </div>
-            <div id="<?php echo $building_slug . $this->getSlug(); ?>Video" class="videoPopup">
-                <iframe id="<?php echo $building_slug; ?>iframe" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
-            </div>
+        <?php
+            if(strlen($this->getContent()) < 430){
+                ?>
+                <div id="<?php echo $building_slug . $this->getSlug(); ?>Text" class="tourText">
+                    <h5 class="heading"><?php echo $this->getTitle(); ?></h5>
+                    <p class="subText text"><?php echo $this->getContent(); ?></p>
+                </div>
+                <?php
+            }else{
+                ?>
+                <div id="<?php echo $building_slug . $this->getSlug(); ?>Text" class="tourText">
+                    <div class="tabContentScroll">
+                        <h5 class="heading"><?php echo $this->getTitle(); ?></h5>
+                        <p class="subText text"><?php echo $this->getContent(); ?></p>
+                    </div>
+                    <p class="scrollText text "><em>scroll ⇕</em></p>
+                </div>
+                <?php
+            }
+        ?>
+        <div id="<?php echo $building_slug . $this->getSlug(); ?>Video" class="videoPopup">
+            <iframe id="<?php echo $building_slug; ?>iframe" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+        </div>
         <?php
     }
 
@@ -242,8 +258,8 @@ class Tab{
                     ?>
                     <div id="<?php echo $building_slug; ?>AboutText" class="popupText">
                         <div class="tabContentScroll">
-                        <h5 class="heading">About This Building</h5>
-                        <p class="subText text"><?php echo $this->getContent();?></p>
+                            <h5 class="heading">About This Building</h5>
+                            <p class="subText text"><?php echo $this->getContent();?></p>
                         </div>
                         <p class="scrollText text "><em>scroll ⇕</em></p>
                     </div>

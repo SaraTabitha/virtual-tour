@@ -1110,6 +1110,7 @@ ul#popupNav li:hover{
   .scrollText{
     padding-top: 3px;
     text-align: center;
+    color: black;
   }
 
   /*yellow portion of header*/
