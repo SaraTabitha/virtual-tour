@@ -28,13 +28,14 @@ class Tab{
         }
         else if($this->hasMedia($this->content) == 2){
             $this->hasImage = true;
+            $this->removeImageFromContent();
         }
 
-        if(($this->hasVideo == true) ||  ($this->hasImage == true)){
-            $this->media = $this->extractMedia($this->content);
-            $this->removeMediaFromContent($this->content);
+        // if(($this->hasVideo == true) ||  ($this->hasImage == true)){
+        //     //$this->media = $this->extractMedia($this->content);
+        //     //$this->removeMediaFromContent($this->content);
             
-        }
+        // }
 
         if($this->title == "About"){
             $this->removeParagraphTags();
@@ -74,25 +75,25 @@ class Tab{
     }
 
     //TODO comment
-    public function removeMediaFromContent($content){
-        $start = $this->getStringStart($content);
-        $this->content = substr($content, 0, $start);
-    }
+    // public function removeMediaFromContent($content){
+    //     $start = $this->getStringStart($content);
+    //     $this->content = substr($content, 0, $start);
+    // }
 
     //TODO comment
-    public function extractMedia($content){
-        $start = $this->getStringStart($content);
-        $length = $this->getStringLength($content);
+    // public function extractMedia($content){
+    //     $start = $this->getStringStart($content);
+    //     $length = $this->getStringLength($content);
 
-        if($this->hasVideo == true){
-            return substr($content, $start + 7, $length - 7);
-        }
-        else if ($this->hasImage == true){
-            $substring = substr($content, $start, $length);
-            $image_src = $this->getImageSrc($substring);
-            return $image_src;
-        }
-    }
+    //     if($this->hasVideo == true){
+    //         return substr($content, $start + 7, $length - 7);
+    //     }
+    //     else if ($this->hasImage == true){
+    //         $substring = substr($content, $start, $length);
+    //         $image_src = $this->getImageSrc($substring);
+    //         return $image_src;
+    //     }
+    // }
 
     /* 
     *
@@ -102,12 +103,29 @@ class Tab{
     public function removeImageFromContent(){
         //extract image src & set media to image url
         $embedOpenStart = strpos($this->content, "<img"); //index of the <
-        $embedEndStart = strpos($this->content, "/>") + 1; //index of the >
+        $embedEndStart = strpos($this->content, "/>") + 2; //index of the >
         
         //remove image embed from content string (front, middle or end)
         if($embedOpenStart == 0){
-            //$length = $embedEndStart - $embedOpenStart;
-            $this->content = substr($this->content, $embedEndStart, strlen($this->content));
+            //image is at beginning of string
+            $this->content = substr($this->content, $embedEndStart, strlen($this->content)) . "dog";
+        }
+        else if($embedEndStart == (strlen($this->content))){
+            //image is at end of string
+            $this->content = substr($this->content, 0, $embedOpenStart);
+        }
+        else{
+            //image is somewhere in the middle
+            $firstHalfStart = 0;
+            $firstHalfEnd = $embedOpenStart;
+
+            $secondHalfStart = $embedEndStart;
+            $secondHalfEnd = strlen($this->content);
+
+            $contentFirstHalf = substr($this->content, $firstHalfStart, ($firstHalfEnd - $firstHalfStart));
+            $contentSecondHalf = substr($this->content, ($secondHalfStart), ($secondHalfEnd - $secondHalfStart));
+
+            $this->content = $contentFirstHalf . " purple " .  $contentSecondHalf . "beach";
         }
     }    
     /* 
@@ -122,15 +140,15 @@ class Tab{
 
 
     //TODO comment
-    public function getImageSrc($substring){
-        $src_start = strpos($substring, "src=");
-        $src_start = $src_start + 5;
-        $length = strlen($substring);
-        $image_src = substr($substring, $src_start, $length);
-        $quote_start = strpos($image_src, '"');
-        $image_src = substr($image_src, 0, $quote_start);
-        return $image_src;
-    }
+    // public function getImageSrc($substring){
+    //     $src_start = strpos($substring, "src=");
+    //     $src_start = $src_start + 5;
+    //     $length = strlen($substring);
+    //     $image_src = substr($substring, $src_start, $length);
+    //     $quote_start = strpos($image_src, '"');
+    //     $image_src = substr($image_src, 0, $quote_start);
+    //     return $image_src;
+    // }
 
     //TODO comment
     public function hasMedia($string){
@@ -146,38 +164,38 @@ class Tab{
     }
 
     //TODO comment
-    public function getStringStart($string){
-        if($this->hasVideo){
-            return strpos($string, "[embed]");
-        }
-        else if($this->hasImage){
-            return strpos($string, "<img");
-        }
-        else{
-            return false;
-        }
-    }
+    // public function getStringStart($string){
+    //     if($this->hasVideo){
+    //         return strpos($string, "[embed]");
+    //     }
+    //     else if($this->hasImage){
+    //         return strpos($string, "<img");
+    //     }
+    //     else{
+    //         return false;
+    //     }
+    // }
     
     //TODO comment
-    public function getStringEnd($string){
-        if($this->hasVideo){
-            return strpos($string, "[/embed]");
-        }
-        else if($this->hasImage){
-            return strpos($string, "/>");
-        }
-        else{
-            return false;
-        }
-    }
+    // public function getStringEnd($string){
+    //     if($this->hasVideo){
+    //         return strpos($string, "[/embed]");
+    //     }
+    //     else if($this->hasImage){
+    //         return strpos($string, "/>");
+    //     }
+    //     else{
+    //         return false;
+    //     }
+    // }
 
     //TODO comment
-    public function getStringLength($string){
-        $start = $this->getStringStart($string);
-        $end = $this->getStringEnd($string);
+    // public function getStringLength($string){
+    //     $start = $this->getStringStart($string);
+    //     $end = $this->getStringEnd($string);
 
-        return $end - $start;
-    }
+    //     return $end - $start;
+    // }
 
     //TODO comment
     public function createTabJSONObject(){
