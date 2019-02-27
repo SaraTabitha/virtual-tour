@@ -24,6 +24,7 @@ class Tab{
         if($this->hasMedia($this->content) == 1){
             $this->hasVideo = true;
             $this->content = str_replace("watch?v=", "embed/", $this->content);
+            $this->removeVideoFromContent();
 
         }
         else if($this->hasMedia($this->content) == 2){
@@ -135,6 +136,12 @@ class Tab{
     *
     */
     //TODO -> make removeVideoFromContent()
+    public function removeVideoFromContent(){
+        $embedOpenStart = strpos($this->content, "[embed]"); //index of [
+        $embedEndStart = strpos($this->content, "[/embed]") + 8; //index of ]
+        $this->media = substr($this->content, $embedOpenStart + 7, (($embedEndStart - 8) - ($embedOpenStart + 7)));
+        
+    }
     /* 
     *
     *
