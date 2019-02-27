@@ -104,7 +104,9 @@ class Tab{
         //extract image src & set media to image url
         $embedOpenStart = strpos($this->content, "<img"); //index of the <
         $embedEndStart = strpos($this->content, "/>") + 2; //index of the >
-        
+        $image = substr($this->content, $embedOpenStart, ($embedEndStart - $embedOpenStart));
+        $this->media = $this->getImageSrc($image);
+
         //remove image embed from content string (front, middle or end)
         if($embedOpenStart == 0){
             //image is at beginning of string
@@ -140,15 +142,15 @@ class Tab{
 
 
     //TODO comment
-    // public function getImageSrc($substring){
-    //     $src_start = strpos($substring, "src=");
-    //     $src_start = $src_start + 5;
-    //     $length = strlen($substring);
-    //     $image_src = substr($substring, $src_start, $length);
-    //     $quote_start = strpos($image_src, '"');
-    //     $image_src = substr($image_src, 0, $quote_start);
-    //     return $image_src;
-    // }
+    public function getImageSrc($substring){
+        $src_start = strpos($substring, "src=");
+        $src_start = $src_start + 5;
+        $length = strlen($substring);
+        $image_src = substr($substring, $src_start, $length);
+        $quote_start = strpos($image_src, '"');
+        $image_src = substr($image_src, 0, $quote_start);
+        return $image_src;
+    }
 
     //TODO comment
     public function hasMedia($string){
