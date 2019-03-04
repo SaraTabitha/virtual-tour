@@ -1084,6 +1084,7 @@ ul#popupNav li:hover{
     color: black;
     margin-bottom: 0px;
     text-align: justify;
+    overflow-wrap: break-word;
   }
 
   /* replacing .subText for popup text */
