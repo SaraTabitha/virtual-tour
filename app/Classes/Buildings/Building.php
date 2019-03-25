@@ -42,7 +42,7 @@ class Building{
     $building_categories, $marker, $about_tab_content, $tour_tab_content, $sustainability_tab_content, $bathrooms_tab_content, $dining_tab_content ){
 
         $this->slug = $slug;
-        $this->title = $title;
+        $this->title = htmlspecialchars_decode($title, ENT_HTML5);
         $this->isAccessible = $isAccessible;
         $this->street = $street;
         $this->city = $city;

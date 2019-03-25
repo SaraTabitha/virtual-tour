@@ -110,11 +110,20 @@ function initMap() {
             titles_arr.forEach(function(this_title, index){
                 markers_array[index] = new google.maps.Marker({
                     position: {lat: Number(lat_arr[index]), lng: Number(lng_arr[index])}, //converting strings to Numbers
-                    title: this_title
+                    title: decodeHTML(this_title)
                 });
             });
 
             return markers_array;
+        }
+
+        /*
+        * https://stackoverflow.com/questions/7394748/whats-the-right-way-to-decode-a-string-that-has-special-html-entities-in-it/7394787
+        */
+        function decodeHTML(html) {
+            var txt = document.createElement("textarea");
+            txt.innerHTML = html;
+            return txt.value;
         }
 
         /*
@@ -556,14 +565,14 @@ function initMap() {
                 //if there are is no input: clear the search result list 
                 $("#searchResults").html("<ul><li id='noResults' class='text'></li></ul>");
             } else if ( characters >= 3 ) {
-                  callAjax();
+                callAjax();
                   
             }
          });
          
         
 
-         //function for closing all of the popups (making them invisible)
+        //function for closing all of the popups (making them invisible)
         // function closeAllPopup(){
         //   //debugger;
         //      for(cc = 0; cc < 45; cc++){

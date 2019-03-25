@@ -32,7 +32,7 @@ class Tab{
             $this->removeImageFromContent();
         }
 
-        if($this->title == "About"){
+        if($this->title == "About" || $this->hasMedia($this->content) == false){
             $this->removeParagraphTags();
         }
     }
@@ -65,8 +65,88 @@ class Tab{
 
     //TODO comment
     public function removeParagraphTags(){
-        $this->content = substr($this->content, 3, strlen($this->content));
-        $this->content = substr($this->content, 0, strpos($this->content, "</p>"));
+       //change to only removing <p> from the very beginning (0)
+       //and </p> from the end of the string
+       //(eliminates while loop change of infinite loop & limits cases...)
+
+        //TODO figure out why it's never entering the while loop...
+        //while((strpos($this->content, "<p>") != false) || (strpos($this->content, "</p>") != false)){
+        //     var_dump($this->content);
+        //     var_dump(strpos($this->content, "<p>"));
+        //     if( strpos($this->content, "<p>") === 0 || strpos($this->content, "<p>") != false){ 
+        //         //<p>
+        //         var_dump("entered: <p>");
+        //         $start_p = strpos($this->content, "<p>"); 
+        //         $end_p = $start_p + 3;
+        //         $this->removeTag($start_p, $end_p); //<p> removing properly now
+        //     }
+        //     var_dump(strpos($this->content, "</p>"));
+        //     if(strpos($this->content, "</p>") != false){
+        //         //</p>
+        //         var_dump("entered: </p>");
+        //         $start_p = strpos($this->content, "</p>");
+        //         $end_p = $start_p + 4;
+        //         $this->removeTag($start_p, $end_p); //</p> remove not working...
+        //     } 
+        //     //var_dump($this->content);     
+        //    // $this->content = " ";
+            
+        // //}  //infinite loop (some are not getting their <p> or </p> removed => never breaks out of while loop)
+        // var_dump($this->content);
+        
+        // if(strpos($this->content, "<p>") === 0){
+
+        // }
+
+        //var_dump(strpos($this->content, "<p>"));
+        //var_dump(strpos($this->content, "</p>"));
+        // if(strpos($this->content, "</p>") + 5 == strlen($this->content)){
+        //     //if </p> is at the end of the string
+        //     var_dump(true);
+        // }
+        // else{
+        //     var_dump(false);
+        // }
+
+        //var_dump(strpos("<p>") == 0);
+        //var_dump(strpos($this->content, "</p>") + 5 == strlen($this->content));
+        if((strpos("<p>") == 0) && ( strpos($this->content, "</p>") + 5 == strlen($this->content) )){
+            //<p> is at the very beginning, and </p> is at the very end
+            $this->content = substr($this->content, 3, (strpos($this->content, "</p>") - 3));
+        }
+        else if(!(strpos("<p>")) && !(strpos("</p>"))){
+            var_dump("no p tags");
+            var_dump($this->content);
+        }
+        else{
+            var_dump(false);
+            var_dump($this->content);
+        }
+
+        //var_dump($this->content); //includes length
+
+    }
+
+    public function removeTag($start, $end){
+        //substr recap (string, start, length)
+        if($start == 0){
+            //beginning of content
+            //content = <end of tag> -> end of content
+            $this->content = substr($this->content, $end, (strlen($this->content) - $end));
+        }
+        else if($end == strlen($this->content)){
+            //end of content
+            //content = beginning of content -> start of tag
+            $this->content = substr($this->content, 0, $start);
+        }
+        else{
+            //middle
+            //content 1st half = beginning of content -> start of tag
+            //content 2nd half = end of tag -> end of content
+            $content_first = substr($this->content, 0, $start);
+            $content_second = substr($this->content, $end, (strlen($this->content) - $end));
+
+        }
     }
 
     //TODO -> finish function
