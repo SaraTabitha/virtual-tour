@@ -93,38 +93,28 @@ class Tab{
             
         // //}  //infinite loop (some are not getting their <p> or </p> removed => never breaks out of while loop)
         // var_dump($this->content);
-        
-        // if(strpos($this->content, "<p>") === 0){
-
-        // }
-
-        //var_dump(strpos($this->content, "<p>"));
-        //var_dump(strpos($this->content, "</p>"));
-        // if(strpos($this->content, "</p>") + 5 == strlen($this->content)){
-        //     //if </p> is at the end of the string
-        //     var_dump(true);
-        // }
-        // else{
-        //     var_dump(false);
-        // }
+       
 
         //var_dump(strpos("<p>") == 0);
         //var_dump(strpos($this->content, "</p>") + 5 == strlen($this->content));
-        if((strpos("<p>") == 0) && ( strpos($this->content, "</p>") + 5 == strlen($this->content) )){
+        if((strpos($this->content, "<p>") == 0) && ( strpos($this->content, "</p>") + 5 == strlen($this->content) )){
             //<p> is at the very beginning, and </p> is at the very end
+            var_dump("<p> is at the very beginning, and </p> is at the very end");
+            var_dump($this->content);
             $this->content = substr($this->content, 3, (strpos($this->content, "</p>") - 3));
         }
-        else if(!(strpos("<p>")) && !(strpos("</p>"))){
+        else if(!(strpos($this->content, "<p>")) && !(strpos($this->content, "</p>"))){
+            //no <p> or </p> tags
             var_dump("no p tags");
             var_dump($this->content);
         }
         else{
+            //has some janky extra case (examples: more than one set of p tags, or p tags somewhere in the middle of the content string)
             var_dump(false);
             var_dump($this->content);
         }
 
         //var_dump($this->content); //includes length
-
     }
 
     public function removeTag($start, $end){
